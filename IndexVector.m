@@ -1,5 +1,5 @@
 function [iK, jK] = IndexVector(elements)
-% Computation of the row/column indices of the sparse matrix K (VECTOR)
+% Row/column indices of the lower triangular sparse matrix K (VECTOR)
 elements = uint32(elements);        % Converts the precision data
 nel = size(elements,1);             % Number of FEs
 iK  = zeros(300*nel,1,'uint32');    % Store row indices
@@ -13,6 +13,6 @@ for e = 1:nel
             iK(idx) = n(i);
             jK(idx) = n(j);
         end
-        temp = temp + i-j;
+        temp = temp + i - j;
     end
 end

@@ -1,5 +1,5 @@
 function D = MaterialMatrix(E,u)
-% Material matrix for the VECTOR problem
+% Isotropic material matrix for the VECTOR problem
 a = 1 + u;
 b = 1 - 2*u;
 c = 1 - u;

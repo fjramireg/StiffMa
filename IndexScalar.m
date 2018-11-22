@@ -16,29 +16,3 @@ for e = 1:nel
         temp = temp + i - j;
     end
 end
-
-% for e = 1:nel
-%     n = elements(e,:);
-%     temp = 0;
-%     for j = 1:8
-%         for i = j:8
-%             idx = temp + i + 36*(e-1);
-%             iK(idx) = n(i);
-%             jK(idx) = n(j);
-%         end
-%         temp = temp + i-j;
-%     end
-% end
-
-% for e = 1:nel
-%     n = elements(e,:);
-%     temp = 0;
-%     for i = 1:8
-%         for j = 1:i
-%             idx = temp + j + 36*(e-1);
-%             iK(idx) = n(i);
-%             jK(idx) = n(j);
-%         end
-%         temp = temp + j;
-%     end
-% end
