@@ -41,23 +41,33 @@ zlabel(axh,'z','FontSize',17,'FontWeight','bold');
 view(3);
 axis equal;
 axis tight;
-alpha(0.3);
+alpha(0.5);
 
 if pnodes == 1
-    hold on;
-    plot3(nodes(:,1),nodes(:,2),nodes(:,3),'MarkerFaceColor',[0 0 0],'Marker','o','LineStyle','none');
-    % node = strcat('  N',num2str([1:length(Mesh.ncoord)]'));
-    n = strcat(num2str([1:length(nodes)]'));
-    text(nodes(:,1),nodes(:,2),nodes(:,3),n,'fontsize',8,'color','k');
-    hold off;
+    PlotNodeNumbers3D(nodes)
 end
 if nelement == 1
-    hold on;
-    for i = 1:size(elements,1)
-        X = nodes(elements(i,:),1);
-        Y = nodes(elements(i,:),2);
-        Z = nodes(elements(i,:),3);
-        text(sum(X)/8,sum(Y)/8,sum(Z)/8,int2str(i),'fontsize',10,'color','w','BackgroundColor',[0 0 0]);
-    end
-    hold off;
+    PlotElementNumbers3D(Mesh)
 end
+
+
+%%
+function PlotNodeNumbers3D(nodes)
+hold on;
+plot3(nodes(:,1),nodes(:,2),nodes(:,3),'MarkerFaceColor',[0 0 0],'Marker','o','LineStyle','none');
+% node = strcat('  N',num2str([1:length(Mesh.ncoord)]'));
+n = strcat(num2str([1:length(nodes)]'));
+text(nodes(:,1),nodes(:,2),nodes(:,3),n,'fontsize',8,'color','k');
+hold off;
+
+
+%%
+function PlotElementNumbers3D(Mesh)
+hold on;
+for i = 1:length(Mesh.conect)
+    X = Mesh.ncoord(1,Mesh.conect(:,i));
+    Y = Mesh.ncoord(2,Mesh.conect(:,i));
+    Z = Mesh.ncoord(3,Mesh.conect(:,i));
+    text(sum(X)/8,sum(Y)/8,sum(Z)/8,int2str(i),'fontsize',10,'color','w','BackgroundColor',[0 0 0]);
+end
+hold off;
