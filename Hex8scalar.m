@@ -1,10 +1,10 @@
 function ke = Hex8scalar(X,c)
-% Element stiffnes matrix ke for a SCALAR problem
+% Element stiffness matrix ke for a SCALAR problem
 p = 1/sqrt(3);                  % Gauss points
 r = [p,-p,p,-p,p,-p,p,-p];      % Points through r-coordinate
 s = [p,p,-p,-p,p,p,-p,-p];      % Points through s-coordinate
 t = [p,p,p,p,-p,-p,-p,-p];      % Points through t-coordinate
-ke = zeros(8,8);                % Initialize the element stiffness matrix
+ke = zeros(8,8);                % Initializes the element stiffness matrix
 for i=1:8                       % Loop over numerical integration
     ri = r(i); si = s(i); ti = t(i);
     %  Shape function derivatives with respect to r,s,t

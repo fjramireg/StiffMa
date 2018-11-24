@@ -1,24 +1,29 @@
 /*=========================================================================
  *
- ** Hex8scalarSymGPU - element stiffness matrix computation (only lower symmetry part) for a scalar porblem
+ ** Hex8scalarSymGPU - lower symmetry part of the element stiffness matrix (SCALAR-DOUBLE)
  *
  *
  * DATA INPUT
- * 			elements[8][nel]      // Conectivity matrix of the mesh
- *			ncoord[3][nnod]       // Nodal coordinates
+ * 			elements[8][nel]      // Conectivity matrix of the mesh [gpuArray(uint32(elements))]
+ *			ncoord[3][nnod]       // Nodal coordinates [gpuArray(nodes)]
  *			nel                   // Number of finite elements in the mesh
  *			nnod                  // Number of nodes in the mesh
- *			L[8][3][8]            // Shape function derivatives for 8-node brick element
+ *			L[3][8][8]            // Shape function derivatives for 8-node brick element
  *			c                     // Isotropic material property
  *
  ** DATA OUTPUT
- *			ke[36*nel]           // Lower-triangular part of ke as a vector (symetric part)
+ *			ke[36*nel]           // Lower-triangular part of ke
  *
- ** COMPILATION
- *			setenv('MW_NVCC_PATH','/usr/local/CUDA/bin')
+ *** COMPILATION LINUX (Terminal)
+ *          sudo nano ~/.bashrc
+ *          export PATH=/usr/local/cuda-9.2/bin${PATH:+:${PATH}}
  * 			nvcc -ptx Hex8scalarSymGPU.cu
  *
- ** MATLAB KERNEL CREATION
+ ** COMPILATION WINDOWS (Terminal)
+ * 			setenv('MW_NVCC_PATH','/usr/local/CUDA/bin')
+ * 			nvcc -ptx Hex8scalarSymGPU.cu
+ *
+ ** MATLAB KERNEL CREATION (inside MATLAB)
  *			kernel = parallel.gpu.CUDAKernel('Hex8scalarSymGPU.ptx', 'Hex8scalarSymGPU.cu');
  *
  ** MATLAB KERNEL CONFIGURATION
@@ -27,91 +32,68 @@
  *
  ** MATLAB CALL
  *			Out = feval(kernel, DATA INPUT + DATA OUTPUT);
- *          KE = feval(kernel, elements, ncoord, nel, nnod, L, c, gpuArray.zeros(36*nel,1,'double'));
+ *          KE = feval(kernel, elements, nodes, nel, nnod, L, c, gpuArray.zeros(36*nel,1,'double'));
  *
  ** TRANSFER DATA FROM CPU TO GPU MEMORY (if necessary)
  *			Out_cpu = gather(Out);
  *
  ** This function was developed by:
- *          Francisco Javier Ram\'irez-Gil
- *          Universidad Nacional de Colombia - Medell\'in
+ *          Francisco Javier Ramirez-Gil
+ *          Universidad Nacional de Colombia - Medellin
  *          Department of Mechanical Engineering
  *
  ** Please cite this code as:
  *
  ** Date & version
- *      30/06/2013.
+ *      23/11/2018.
  *      V 1.0
  *
  * ==========================================================================*/
 
-__global__ void Hex8scalarSymGPU(
-        const unsigned int *elements,
-        const double *ncoord,
-        const unsigned int nel,
-        const unsigned int nnod,
-        const double *L,
-        const double c,
-        double *ke  )
-{
-    // Initialization and declarations
-    int tid = blockDim.x * blockIdx.x + threadIdx.x;    // Thread ID
-    unsigned int i, j, k, l, p, temp, n[8];
-    double x[8], y[8], z[8], J[9], detJ, iJ, invJ[9], B[24];
+__global__ void Hex8scalarSymGPU(const unsigned int *elements, const double *nodes, 
+                                 const unsigned int nel, const unsigned int nnod,
+                                 const double *L, const double c, double *ke ) {
+    // CUDA kernel to compute tril(ke) (SCALAR-DOUBLE)
     
-    if (tid < nel)	{
+    int tid = blockDim.x * blockIdx.x + threadIdx.x;                // Thread ID
+    unsigned int i, j, k, l, temp, n[8];                            // General indices
+    double x[8], y[8], z[8], detJ, iJ, invJ[9], B[24], dNdr, dNds, dNdt;// Temporal matrices
+    
+    if (tid < nel)	{                                               // Parallel computation
         
-        // Extract the global dof associated with element e (=tid)
-        for (i=0;i<8;i++){n[i] = elements[i+8*tid];}
+        // Extract the nodes (DOFs) associated with element 'e' (=tid)
+        for (i=0; i<8; i++) {n[i] = elements[i+8*tid];}
         
-        // Extract the nodal coordinates from element e (=tid)
-        for (i=0;i<8;i++){
-            x[i] = ncoord[3*n[k]-3];
-            y[i] = ncoord[3*n[k]-2];
-            z[i] = ncoord[3*n[k]-1];  }
+        // Extract the nodal coordinates of element 'e' (=tid)      // x-y-z-coordinate of node i
+        for (i=0; i<8; i++) {x[i] = nodes[3*n[i]-3]; y[i] = nodes[3*n[i]-2]; z[i] = nodes[3*n[i]-1];}
         
-        // Numeric integration over 8 Gauss integration points
-        for (i=0;i<8;i++)
-        {
-            // Jacobian
-            double J[9]={0, 0, 0, 0, 0, 0, 0, 0, 0};
-            for (j=0;j<8;j++) {
-                dNdr = L[j+24*i]; dNds = L[8+j+24*i]; dNdt = L[16+j+24*i];
+        for (i=0; i<8; i++) {         // Numerical integration over the 8 Gauss integration points
+            
+            double J[9] = {0, 0, 0, 0, 0, 0, 0, 0, 0};
+            for (j=0; j<8; j++) {                                    // Jacobian matrix
+                dNdr = L[3*j+24*i]; dNds = L[3*j+24*i+1]; dNdt = L[3*j+24*i+2];
                 J[0] += dNdr*x[j];  J[3] += dNdr*y[j];	J[6] += dNdr*z[j];
                 J[1] += dNds*x[j];	J[4] += dNds*y[j];	J[7] += dNds*z[j];
-                J[2] += dNdt*x[j];	J[5] += dNdt*y[j];	J[8] += dNdt*z[j];
-            }
+                J[2] += dNdt*x[j];	J[5] += dNdt*y[j];	J[8] += dNdt*z[j]; }
             
-            // Jacobian	determinant
+            // Jacobian's determinant
             detJ =  J[0]*J[4]*J[8] + J[3]*J[7]*J[2] + J[6]*J[1]*J[5] - J[6]*J[4]*J[2] - J[3]*J[1]*J[8] - J[0]*J[7]*J[5];
             
-            // Jacobian inverse
+            // Jacobian's inverse
             iJ = 1/detJ;
             invJ[0] = iJ*(J[4]*J[8]-J[7]*J[5]);  invJ[3] = iJ*(J[6]*J[5]-J[3]*J[8]);  invJ[6] = iJ*(J[3]*J[7]-J[6]*J[4]);
             invJ[1] = iJ*(J[7]*J[2]-J[1]*J[8]);  invJ[4] = iJ*(J[0]*J[8]-J[6]*J[2]);  invJ[7] = iJ*(J[6]*J[1]-J[0]*J[7]);
             invJ[2] = iJ*(J[1]*J[5]-J[4]*J[2]);  invJ[5] = iJ*(J[3]*J[2]-J[0]*J[5]);  invJ[8] = iJ*(J[0]*J[4]-J[3]*J[1]);
             
-            // Gradient matrix B
-            for (j=0;j<8;j++) {
-                for (k=0;k<3;k++) {
+            for (j=0; j<8; j++) {                                    // Matrix B
+                for (k=0; k<3; k++) {
                     B[k+3*j] = 0.0;
-                    for (l=0;l<3;l++) {
-                        B[k+3*j] += invJ[k+3*l]*L[j+8*l+24*i];
-                    }
-                }
-            }
+                    for (l=0; l<3; l++) {B[k+3*j] += invJ[k+3*l] * L[l+3*j+24*i]; } } }
             
-            // Element stiffness matrix: Symmetry --> lower-triangular part of ke as a vector ke
+            // Element stiffness matrix: Symmetry --> lower-triangular part of ke
             temp = 0;
-            for (j=0;j<8;j++) {
-                for (k=j;k<8;k++) {
-                    for (l=0;l<3;l++){
-                        ke[temp+k+36*tid] += c*detJ*B[l+3*j]*B[l+3*k];
-                    }
-                }
-                temp += k-j-1;
-            }
-            
-        }
-    }
-}
+            for (j=0; j<8; j++) {
+                for (k=j; k<8; k++) {
+                    for (l=0; l<3; l++){
+                        ke[temp+k+36*tid] += c * detJ * B[l+3*j] * B[l+3*k]; }}
+                temp += k-j-1;  } } } }

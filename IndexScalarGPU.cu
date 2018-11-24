@@ -1,21 +1,24 @@
 /*=========================================================================
  *
- ** IndexScalarGPU - Global indices of element stiffness matrix (only lower symmetry part)
+ ** IndexScalarGPU - Row/column indices of the lower triangular sparse matrix K (SCALAR)
  *
  *
  ** DATA INPUT
  * 			elements[8][nel]      // Conectivity matrix of the mesh [gpuArray(uint32(elements))]
  *
  ** DATA OUTPUT
- *			iK[36*nel]            // Row indices of lower-triangular part of ke as a vector
- *			jK[36*nel]            // Colummn indices of lower-triangular part of ke as a vector
+ *			iK[36*nel]            // Row indices of the lower-triangular part of ke
+ *			jK[36*nel]            // Colummn indices of the lower-triangular part of ke
  *
- ** COMPILATION
+ ** COMPILATION LINUX (Terminal)
  *          sudo nano ~/.bashrc
  *          export PATH=/usr/local/cuda-9.2/bin${PATH:+:${PATH}}
- * 			nvcc -ptx IndexScalarGPU.cu     (only once outside MATLAB)
+ * 			nvcc -ptx IndexScalarGPU.cu 
  *
- ** MATLAB KERNEL CREATION
+ ** COMPILATION WINDOWS (Terminal)
+ * 			nvcc -ptx IndexScalarGPU.cu 
+ *
+ ** MATLAB KERNEL CREATION (inside MATLAB)
  *			kernel = parallel.gpu.CUDAKernel('IndexScalarGPU.ptx', 'IndexScalarGPU.cu');
  *
  ** MATLAB KERNEL CONFIGURATION
@@ -30,41 +33,35 @@
  *			Out_cpu = gather(Out);
  *
  ** This function was developed by:
- *          Francisco Javier Ram\'irez-Gil
- *          Universidad Nacional de Colombia - Medell\'in
+ *          Francisco Javier Ramirez-Gil
+ *          Universidad Nacional de Colombia - Medellin
  *          Department of Mechanical Engineering
  *
  ** Please cite this code as:
  *
  ** Date & version
- *      27/06/2013.
+ *      22/11/2018.
  *      V 1.0
  *
  * ======================================================================*/
 
-__global__ void IndexScalarGPU(
-        const unsigned int *elements,
-        const unsigned int nel,
-        unsigned int *iK,
-        unsigned int *jK         )
-{
-    // Initialization and declarations
-    int tid = blockDim.x * blockIdx.x + threadIdx.x;    // Thread ID
-    unsigned int i, j, temp, idx, n[8];              // General indices
+__global__ void IndexScalarGPU(const unsigned int *elements,
+                               const unsigned int nel,
+                               unsigned int *iK, unsigned int *jK){
+    // CUDA kernel to compute row/column indices of tril(K) (SCALAR)
     
-    if (tid < nel)	{
+    int tid = blockDim.x * blockIdx.x + threadIdx.x;    // Thread ID
+    unsigned int i, j, temp, idx, n[8];                 // General indices
+    
+    if (tid < nel){                                     // Parallel computation
         
-        // Extract the global dof associated with element e (=tid)
-        for (i=0;i<8;i++){n[i] = elements[i+8*tid];}
+        // Extract the nodes (DOFs) associated with element 'e' (=tid)
+        for (i=0; i<8; i++) {n[i] = elements[i+8*tid];}
         
         temp = 0;
-        for (j=0;j<8;j++){
-            for (i=j;i<8;i++){
-                idx = temp+i + 36*tid;
+        for (j=0; j<8; j++){
+            for (i=j; i<8; i++){
+                idx = temp + i + 36*tid;
                 iK[idx] = n[i];
-                jK[idx] = n[j];
-            }
-            temp += i-j-1;
-        }
-    }
-}
+                jK[idx] = n[j];}
+            temp += i-j-1;   }}}

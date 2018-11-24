@@ -1,0 +1,4 @@
+X = rand(8,3);
+L = dNdrst;
+D = MaterialMatrix(1,0.3);
+ke = Hex8vectorSym(X,D,L);

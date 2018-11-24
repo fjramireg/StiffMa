@@ -1,21 +1,14 @@
 function L = dNdrst
-% Computes and stores the shape functions derivatives with respect to r,s,t
-
-% Gauss points table
-p = 1/sqrt(3);
-r = [p,-p,p,-p,p,-p,p,-p];
-s = [p,p,-p,-p,p,p,-p,-p];
-t = [p,p,p,p,-p,-p,-p,-p];
-
-% Shape functions derivatives
-L = zeros(3,8,8);
+% Computes the shape functions derivatives with respect to r,s,t
+p = 1/sqrt(3);              % Gauss points
+r = [p,-p,p,-p,p,-p,p,-p];  % Points through r-coordinate
+s = [p,p,-p,-p,p,p,-p,-p];  % Points through s-coordinate
+t = [p,p,p,p,-p,-p,-p,-p];  % Points through t-coordinate
+L = zeros(3,8,8);           % Initialize the matrix L
 for i=1:8
     ri = r(i); si = s(i); ti = t(i);
-    L(:,:,i) = (0.125)*[...
-        -(1-si)*(1-ti),  (1-si)*(1-ti), (1+si)*(1-ti), -(1+si)*(1-ti),...
-        -(1-si)*(1+ti),  (1-si)*(1+ti), (1+si)*(1+ti), -(1+si)*(1+ti);...
-        -(1-ri)*(1-ti), -(1+ri)*(1-ti), (1+ri)*(1-ti),  (1-ri)*(1-ti),...
-        -(1-ri)*(1+ti), -(1+ri)*(1+ti), (1+ri)*(1+ti),  (1-ri)*(1+ti);...
-        -(1-ri)*(1-si), -(1+ri)*(1-si),-(1+ri)*(1+si), -(1-ri)*(1+si),...
-        (1-ri)*(1-si),  (1+ri)*(1-si), (1+ri)*(1+si),  (1-ri)*(1+si)];
+    a = 1-ri; b = 1+ri; c = 1-si; d = 1+si; e = 1-ti; f = 1+ti;
+    L(:,:,i) = (0.125)*[-c*e, c*e, d*e, -d*e, -c*f, c*f, d*f, -d*f;... % dNdr
+                        -a*e, -b*e, b*e, a*e, -a*f, -b*f, b*f, a*f;... % dNds
+                        -a*c, -b*c, -b*d, -a*d, a*c, b*c, b*d, a*d];   % dNdt
 end
