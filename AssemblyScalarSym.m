@@ -1,5 +1,5 @@
 function K = AssemblyScalarSym(elements,nodes,c)
-% Construction of the global stiffness matrix K (SCALAR-SYMMETRIC-DOUBLE)
+% Construction of the global stiffness matrix K (SCALAR-SYMMETRIC-DOUBLE-SPARSE)
 N = size(nodes,1);                  % Total number of nodes
 L = dNdrst;                         % Shape functions derivatives
 nel = size(elements,1);             % Total number of elements
@@ -10,4 +10,4 @@ for e = 1:nel                       % Loop over elements
     Ke(:,e) = Hex8scalarSym(X,c,L); % Symmetric part of ke
 end
 [iK, jK] = IndexScalar(elements);   % Row/column indices of tril(K)
-K = sparse(double(iK), double(jK), Ke(:)); % Assembly of global K
+K = sparse(double(iK), double(jK), Ke(:), N, N); % Assembly of global K

@@ -1,9 +1,10 @@
-function KE = Hex8scalarSymGPU(elements,nodes,c,L)
+function KE = Hex8scalarSymGPU(elements,nodes,c)
 % Symmetric part of the element stiffness matrix ke (SCALAR-DOUBLE)
 
 % INITIALIZATION OF GPU VARIABLES
 elements = gpuArray(uint32(elements));   % Converts the data precision and transfer it to GPU
 nodes = gpuArray(nodes);                 % Transfer to GPU memory
+L = gpuArray(dNdrst);                    % % Transfer to GPU memory
 nel = size(elements,1);                  % Number of elements
 nnod = size(nodes,1);                    % Number of nodes
 KE = gpuArray.zeros(36*nel,1,'double');  % Stores ke entries (initialized directly on GPU)

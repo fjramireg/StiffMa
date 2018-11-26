@@ -69,8 +69,13 @@ __global__ void IndexScalarGPU(const unsigned int *elements,
         for (j=0; j<24; j++){
             for (i=j; i<24; i++){
                 idx = temp + i + 300*tid;
-                iK[idx] = dof[i];
-                jK[idx] = dof[j];
+                if (dof[i] > dof[j]){
+                    iK[idx] = dof[i];
+                    jK[idx] = dof[j]; }
+                else {
+                    iK[idx] = dof[j];
+                    jK[idx] = dof[i];
+                }
             }
             temp += i-j-1;
         }
