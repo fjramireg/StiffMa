@@ -16,7 +16,7 @@ for i=1:8               % Loop over numerical integration points
     for j=1:24           % Loops to compute the symmetric part of ke
         for k=j:24
             idx = temp + k;
-            ke(idx) = ke(idx) + (B(:,j)'*D*B(:,k))*detJ;
+            ke(idx) = ke(idx) + (B(:,k)'*D*B(:,j))*detJ;
         end
         temp = temp + k - j;
     end
