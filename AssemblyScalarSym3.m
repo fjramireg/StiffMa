@@ -1,0 +1,15 @@
+function K = AssemblyScalarSym3(elements,nodes,c)
+% Construction of the global stiffness matrix K (SCALAR-SYMMETRIC-SINGLE-SPARSE-ACCUMARRAY)
+N = size(nodes,1);                  % Total number of nodes
+L = dNdrst;                         % Shape functions derivatives
+nel = size(elements,1);             % Total number of elements
+Ke = zeros(36,nel,'single');        % Stores the NNZ values
+for e = 1:nel                       % Loop over elements
+    n = elements(e,:);              % Nodes of the element 'e'
+    X = nodes(n,:);                 % Nodal coordinates of the element 'e'
+    Ke(:,e) = Hex8scalarSym(X,c,L); % Symmetric part of ke
+end
+[iK, jK] = IndexScalar(elements);   % Row/column indices of tril(K)
+% K = accumarray([iK,jK], Ke(:), [N,N], [], [], 1); % Assembly of global K
+% K = accumarray([iK,jK], Ke(:), [N,N], @sum, [], 1); % Assembly of global K
+K = accumarray([iK,jK], Ke(:), [N,N], @(x) sum(x,'native'), [], 1); % Assembly of global K
