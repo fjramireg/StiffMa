@@ -40,20 +40,22 @@
  ** Please cite this code as:
  *
  ** Date & version
- *      22/11/2018.
- *      V 1.1
+ *      30/11/2018.
+ *      V 1.2
  *
  * ======================================================================*/
 
-__global__ void IndexScalarGPU(const unsigned int *elements, 
-                               const unsigned int nel, 
-                               unsigned int *iK, unsigned int *jK){
+template <typename dType>                               // Data type
+__global__ void IndexScalarGPU(const dType *elements, const dType nel, dType *iK, dType *jK){
+// __global__ void IndexScalarGPU(const unsigned int *elements, 
+//                                const unsigned int nel, 
+//                                unsigned int *iK, unsigned int *jK){
     // CUDA kernel to compute row/column indices of tril(K) (SCALAR)
     
-    int tid = blockDim.x * blockIdx.x + threadIdx.x; // Thread ID
-    unsigned int i, j, temp, idx, n[8];              // General indices
+    int tid = blockDim.x * blockIdx.x + threadIdx.x;    // Thread ID
+    dType i, j, temp, idx, n[8];                        // General indices
     
-    if (tid < nel){                                  // Parallel computation
+    if (tid < nel){                                     // Parallel computation
         
         // Extract the nodes (DOFs) associated with element 'e' (=tid)
         for (i=0; i<8; i++) {n[i] = elements[i+8*tid];}
@@ -69,3 +71,6 @@ __global__ void IndexScalarGPU(const unsigned int *elements,
                     iK[idx] = n[j];
                     jK[idx] = n[i];}}
             temp += i-j-1;   }}}
+
+template __global__ void IndexScalarGPU<unsigned int>(const unsigned int *, const unsigned int, unsigned int *, unsigned int *);
+template __global__ void IndexScalarGPU<unsigned long>(const unsigned long *, const unsigned long, unsigned long *, unsigned long *);

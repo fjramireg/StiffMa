@@ -1,3 +1,17 @@
+%  * ====================================================================*/
+% ** This function was developed by:
+%  *          Francisco Javier Ramirez-Gil
+%  *          Universidad Nacional de Colombia - Medellin
+%  *          Department of Mechanical Engineering
+%  *
+%  ** Please cite this code as:
+%  *
+%  ** Date & version
+%  *      30/11/2018.
+%  *      V 1.2
+%  *
+%  * ====================================================================*/
+
 function PlotMesh3D(elements,nodes,pnodes,nelement)
 % PlotMesh3D: Plot a structured grid in 3D with 8 node brick elements
 %

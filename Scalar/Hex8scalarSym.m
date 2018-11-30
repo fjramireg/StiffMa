@@ -1,3 +1,17 @@
+%  * ====================================================================*/
+% ** This function was developed by:
+%  *          Francisco Javier Ramirez-Gil
+%  *          Universidad Nacional de Colombia - Medellin
+%  *          Department of Mechanical Engineering
+%  *
+%  ** Please cite this code as:
+%  *
+%  ** Date & version
+%  *      30/11/2018.
+%  *      V 1.2
+%  *
+%  * ====================================================================*/
+
 function ke = Hex8scalarSym(X,c,L)
 % Symmetric part of the element stiffness matrix ke for a SCALAR problem
 ke = zeros(36,1);       % Initializes the element stiffness matrix
