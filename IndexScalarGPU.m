@@ -1,5 +1,5 @@
 function [iK, jK] = IndexScalarGPU(elements)
-% Row/column indices of the lower triangular sparse matrix K (SCALAR)
+% Row/column indices of the lower triangular part of the sparse stiffness matrix K (SCALAR)
 
 % INITIALIZATION OF GPU VARIABLES
 elements = gpuArray(uint32(elements));   % Converts the data precision and transfer it to GPU

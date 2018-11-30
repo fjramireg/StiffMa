@@ -1,6 +1,6 @@
 function K = AssemblyScalar(elements,nodes,c)
 % Construction of the global stiffness matrix K for a SCALAR problem
-N = size(nodes,1);                  % Total number of nodes
+N = size(nodes,1);                  % Total number of nodes (DOFs)
 nel = size(elements,1);             % Total number of elements
 iK = zeros(8,8,nel,'double');       % Stores the rows' indices
 jK = zeros(8,8,nel,'double');       % Stores the columns' indices

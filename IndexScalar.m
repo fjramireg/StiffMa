@@ -1,9 +1,9 @@
 function [iK, jK] = IndexScalar(elements)
-% Row/column indices of the lower triangular sparse matrix K (SCALAR)
-elements = uint32(elements);        % Converts the precision data
-nel = size(elements,1);             % Number of elements
-iK  = zeros(36*nel,1,'uint32');     % Stores row indices
-jK  = zeros(36*nel,1,'uint32');     % Stores column indices
+% Row/column indices of tril(K) (SCALAR)
+elements = uint32(elements);
+nel = size(elements,1);
+iK  = zeros(36*nel,1,'uint32');
+jK  = zeros(36*nel,1,'uint32');
 for e = 1:nel
     n = elements(e,:);
     temp = 0;
