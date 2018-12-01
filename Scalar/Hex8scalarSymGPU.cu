@@ -45,18 +45,26 @@
  ** Please cite this code as:
  *
  ** Date & version
- *      30/11/2018.
- *      V 1.2
+ *      01/12/2018.
+ *      V 1.3
  *
  * ==========================================================================*/
 
-__global__ void Hex8scalar(const unsigned int *elements, const double *nodes,
-        const unsigned int nel, const unsigned int nnod, const double c, const double *L, double *ke ) {
+// declared this variable globally (shape function derivative in natural coordinates)
+__constant__ double L[3*8*8];                                       // Declare constant memory
+__constant__ double nel;
+__constant__ double nnod;
+__constant__ double c;
+
+template <typename floatT, typename intT>
+        __global__ void Hex8scalar(const intT *elements, const floatT *nodes, floatT *ke ) {
+//         __global__ void Hex8scalar(const intT *elements, const floatT *nodes,
+//         const intT nel, const intT nnod, const floatT c, floatT *ke ) {
     // CUDA kernel to compute tril(ke) (SCALAR)
     
     int tid = blockDim.x * blockIdx.x + threadIdx.x;                // Thread ID
-    unsigned int i, j, k, l, temp, n[8];                            // General indices
-    double x[8], y[8], z[8], detJ, iJ, invJ[9], B[24], dNdr, dNds, dNdt;// Temporal matrices
+    intT i, j, k, l, temp, n[8];                                    // General indices
+    floatT x[8], y[8], z[8], detJ, iJ, invJ[9], B[24], dNdr, dNds, dNdt;// Temporal matrices
     
     if (tid < nel)	{                                               // Parallel computation
         
@@ -96,3 +104,8 @@ __global__ void Hex8scalar(const unsigned int *elements, const double *nodes,
                     for (l=0; l<3; l++){
                         ke[temp+k+36*tid] += c * detJ * B[l+3*j] * B[l+3*k]; }}
                 temp += k-j-1;  } } } }
+
+template __global__ void Hex8scalar<float,unsigned int>(const unsigned int *, const float *, float *);     // NNZ:'single'-Ind:'uint32'
+template __global__ void Hex8scalar<double,unsigned int>(const unsigned int *, const double *, double *);  // NNZ:'double'-Ind:'uint32'
+template __global__ void Hex8scalar<float,unsigned long>(const unsigned long *, const float *, float *);   // NNZ:'single'-Ind:'uint64'
+template __global__ void Hex8scalar<double,unsigned long>(const unsigned long *, const double *, double *);// NNZ:'double'-Ind:'uint64'
