@@ -50,13 +50,17 @@
  *
  * ==========================================================================*/
 
-__global__ void Hex8scalar(const unsigned int *elements, const double *nodes,
-        const unsigned int nel, const unsigned int nnod, const double c, const double *L, double *ke ) {
+// declared this variable globally (shape function derivative in natural coordinates)
+__constant__ double L[3*8*8];                                       // Declare constant memory
+
+template <typename floatT>
+        __global__ void Hex8scalar(const unsigned int *elements, const floatT *nodes,
+        const unsigned int nel, const unsigned int nnod, const floatT c, floatT *ke ) {
     // CUDA kernel to compute tril(ke) (SCALAR)
     
     int tid = blockDim.x * blockIdx.x + threadIdx.x;                // Thread ID
     unsigned int i, j, k, l, temp, n[8];                            // General indices
-    double x[8], y[8], z[8], detJ, iJ, invJ[9], B[24], dNdr, dNds, dNdt;// Temporal matrices
+    floatT x[8], y[8], z[8], detJ, iJ, invJ[9], B[24], dNdr, dNds, dNdt;// Temporal matrices
     
     if (tid < nel)	{                                               // Parallel computation
         
@@ -96,3 +100,6 @@ __global__ void Hex8scalar(const unsigned int *elements, const double *nodes,
                     for (l=0; l<3; l++){
                         ke[temp+k+36*tid] += c * detJ * B[l+3*j] * B[l+3*k]; }}
                 temp += k-j-1;  } } } }
+
+template __global__ void Hex8scalar<float>(const unsigned int *, const float *, const unsigned int, const unsigned int, const float, float *);    // NNZ: 'single'
+template __global__ void Hex8scalar<double>(const unsigned int *, const double *, const unsigned int, const unsigned int, const double, double *);// NNZ: 'double'
