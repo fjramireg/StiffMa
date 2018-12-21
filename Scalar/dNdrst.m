@@ -13,7 +13,7 @@
 %  * ====================================================================*/
 
 function L = dNdrst
-% Computes the shape functions derivatives with respect to r,s,t
+% Computes the shape functions derivatives with respect to r,s,t (Hex8)
 p = 1/sqrt(3);              % Gauss points
 r = [p,-p,p,-p,p,-p,p,-p];  % Points through r-coordinate
 s = [p,p,-p,-p,p,p,-p,-p];  % Points through s-coordinate

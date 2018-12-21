@@ -14,10 +14,10 @@
 
 function [iK, jK] = IndexScalarSym(elements)
 % Row/column indices of tril(K) (SCALAR)
-elements = uint32(elements);
-nel = size(elements,1);
-iK  = zeros(36*nel,1,'uint32');
-jK  = zeros(36*nel,1,'uint32');
+nel = size(elements,1);         % # of elements
+dType = class(elements);        % Data type
+iK  = zeros(36*nel, 1, dType);  % Row indices
+jK  = zeros(36*nel, 1, dType);  % Column indices
 for e = 1:nel
     n = elements(e,:);
     temp = 0;

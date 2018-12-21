@@ -18,6 +18,10 @@
  *          sudo nano ~/.bashrc
  *          export PATH=/usr/local/cuda-9.2/bin${PATH:+:${PATH}}
  * 			nvcc -ptx Hex8scalarSymGPU.cu
+ * Within MATLAB
+ *          setenv('PATH',[getenv('PATH') ':/usr/local/cuda-10.0/bin'])
+ *          getenv('PATH')
+ *          system('nvcc -ptx Hex8scalarSymGPU.cu')
  *
  ** COMPILATION WINDOWS (Terminal)
  * 			setenv('MW_NVCC_PATH','/usr/local/CUDA/bin')
@@ -45,67 +49,63 @@
  ** Please cite this code as:
  *
  ** Date & version
- *      01/12/2018.
+ *      13/12/2018.
  *      V 1.3
  *
  * ==========================================================================*/
 
-// declared this variable globally (shape function derivative in natural coordinates)
-__constant__ double L[3*8*8];                                       // Declare constant memory
-__constant__ double nel;
-__constant__ double nnod;
-__constant__ double c;
 
-template <typename floatT, typename intT>
-        __global__ void Hex8scalar(const intT *elements, const floatT *nodes, floatT *ke ) {
-//         __global__ void Hex8scalar(const intT *elements, const floatT *nodes,
-//         const intT nel, const intT nnod, const floatT c, floatT *ke ) {
-    // CUDA kernel to compute tril(ke) (SCALAR)
+__constant__ double L[3*8*8], nel, nnod, c;          // Declares constant memory
+template <typename floatT, typename intT>            // Defines template
+__global__ void Hex8scalar(const intT *elements, const floatT *nodes, floatT *ke ) {
+    // CUDA kernel to compute the NNZ entries or all tril(ke) (SCALAR)
     
-    int tid = blockDim.x * blockIdx.x + threadIdx.x;                // Thread ID
-    intT i, j, k, l, temp, n[8];                                    // General indices
+    int tid = blockDim.x * blockIdx.x + threadIdx.x; // Thread ID
+    unsigned int i, j, k, l, temp;                   // General indices
+    unsigned long n[8];                              // Nodes (DOFs)
     floatT x[8], y[8], z[8], detJ, iJ, invJ[9], B[24], dNdr, dNds, dNdt;// Temporal matrices
     
-    if (tid < nel)	{                                               // Parallel computation
+    if (tid < nel) {                                 // Parallel computation
         
-        // Extract the nodes (DOFs) associated with element 'e' (=tid)
-        for (i=0; i<8; i++) {n[i] = elements[i+8*tid];}
+        for (i=0; i<8; i++) {n[i] = elements[i+8*tid];}// Extracts nodes (DOFs) of element 'e'
         
-        // Extract the nodal coordinates of element 'e' (=tid)      // x-y-z-coordinate of node i
-        for (i=0; i<8; i++) {x[i] = nodes[3*n[i]-3]; y[i] = nodes[3*n[i]-2]; z[i] = nodes[3*n[i]-1];}
+        for (i=0; i<8; i++) {                        // Extracts x-y-z-coordinate of node i
+            x[i] = nodes[3*n[i]-3]; y[i] = nodes[3*n[i]-2]; z[i] = nodes[3*n[i]-1];}
         
-        for (i=0; i<8; i++) {         // Numerical integration over the 8 Gauss integration points
+        for (i=0; i<8; i++) { // Numerical integration over the 8 Gauss integration points
             
-            double J[9] = {0, 0, 0, 0, 0, 0, 0, 0, 0};
-            for (j=0; j<8; j++) {                                    // Jacobian matrix
-                dNdr = L[3*j+24*i]; dNds = L[3*j+24*i+1]; dNdt = L[3*j+24*i+2];
-                J[0] += dNdr*x[j];  J[3] += dNdr*y[j];	J[6] += dNdr*z[j];
-                J[1] += dNds*x[j];	J[4] += dNds*y[j];	J[7] += dNds*z[j];
-                J[2] += dNdt*x[j];	J[5] += dNdt*y[j];	J[8] += dNdt*z[j]; }
+            floatT J[9] = {0, 0, 0, 0, 0, 0, 0, 0, 0};                // Jacobian matrix
+            for (j=0; j<8; j++) { dNdr=L[3*j+24*i]; dNds=L[3*j+24*i+1]; dNdt=L[3*j+24*i+2];
+            J[0] += dNdr*x[j];  J[3] += dNdr*y[j];	J[6] += dNdr*z[j];
+            J[1] += dNds*x[j];	J[4] += dNds*y[j];	J[7] += dNds*z[j];
+            J[2] += dNdt*x[j];	J[5] += dNdt*y[j];	J[8] += dNdt*z[j]; }
             
-            // Jacobian's determinant
-            detJ =  J[0]*J[4]*J[8] + J[3]*J[7]*J[2] + J[6]*J[1]*J[5] - J[6]*J[4]*J[2] - J[3]*J[1]*J[8] - J[0]*J[7]*J[5];
+            detJ =  J[0]*J[4]*J[8] + J[3]*J[7]*J[2] + J[6]*J[1]*J[5] -
+                    J[6]*J[4]*J[2] - J[3]*J[1]*J[8] - J[0]*J[7]*J[5]; // Jacobian determinant
             
-            // Jacobian's inverse
-            iJ = 1/detJ;
-            invJ[0] = iJ*(J[4]*J[8]-J[7]*J[5]);  invJ[3] = iJ*(J[6]*J[5]-J[3]*J[8]);  invJ[6] = iJ*(J[3]*J[7]-J[6]*J[4]);
-            invJ[1] = iJ*(J[7]*J[2]-J[1]*J[8]);  invJ[4] = iJ*(J[0]*J[8]-J[6]*J[2]);  invJ[7] = iJ*(J[6]*J[1]-J[0]*J[7]);
-            invJ[2] = iJ*(J[1]*J[5]-J[4]*J[2]);  invJ[5] = iJ*(J[3]*J[2]-J[0]*J[5]);  invJ[8] = iJ*(J[0]*J[4]-J[3]*J[1]);
+            iJ = 1/detJ;   invJ[0] = iJ*(J[4]*J[8]-J[7]*J[5]);        // Jacobian inverse
+            invJ[1] = iJ*(J[7]*J[2]-J[1]*J[8]);   invJ[2] = iJ*(J[1]*J[5]-J[4]*J[2]);
+            invJ[3] = iJ*(J[6]*J[5]-J[3]*J[8]);   invJ[4] = iJ*(J[0]*J[8]-J[6]*J[2]);
+            invJ[5] = iJ*(J[3]*J[2]-J[0]*J[5]);   invJ[6] = iJ*(J[3]*J[7]-J[6]*J[4]);
+            invJ[7] = iJ*(J[6]*J[1]-J[0]*J[7]);   invJ[8] = iJ*(J[0]*J[4]-J[3]*J[1]);
             
-            for (j=0; j<8; j++) {                                    // Matrix B
-                for (k=0; k<3; k++) {
-                    B[k+3*j] = 0.0;
+            for (j=0; j<8; j++) {                                     // Matrix B
+                for (k=0; k<3; k++) { B[k+3*j] = 0.0;
                     for (l=0; l<3; l++) {B[k+3*j] += invJ[k+3*l] * L[l+3*j+24*i]; } } }
             
-            // Element stiffness matrix: Symmetry --> lower-triangular part of ke
             temp = 0;
-            for (j=0; j<8; j++) {
+            for (j=0; j<8; j++) {   // Symmetry part of element stiffness matrix (tril(ke))
                 for (k=j; k<8; k++) {
                     for (l=0; l<3; l++){
                         ke[temp+k+36*tid] += c * detJ * B[l+3*j] * B[l+3*k]; }}
                 temp += k-j-1;  } } } }
 
-template __global__ void Hex8scalar<float,unsigned int>(const unsigned int *, const float *, float *);     // NNZ:'single'-Ind:'uint32'
-template __global__ void Hex8scalar<double,unsigned int>(const unsigned int *, const double *, double *);  // NNZ:'double'-Ind:'uint32'
-template __global__ void Hex8scalar<float,unsigned long>(const unsigned long *, const float *, float *);   // NNZ:'single'-Ind:'uint64'
-template __global__ void Hex8scalar<double,unsigned long>(const unsigned long *, const double *, double *);// NNZ:'double'-Ind:'uint64'
+// NNZ of type 'single' and indices 'int32', 'uint32'
+template __global__ void Hex8scalar<float,int>(const int *, const float *, float *);
+template __global__ void Hex8scalar<float,unsigned int>(const unsigned int *, const float *, float *);
+// NNZ of type 'double' and indices 'int32', 'uint32', 'int64', 'uint64', 'double'
+template __global__ void Hex8scalar<double,int>(const int *, const double *, double *);
+template __global__ void Hex8scalar<double,unsigned int>(const unsigned int*, const double*, double*);
+template __global__ void Hex8scalar<double,long>(const long *, const double *, double *);
+template __global__ void Hex8scalar<double,unsigned long>(const unsigned long*,const double*,double*);
+template __global__ void Hex8scalar<double,double>(const double *, const double *, double *);
