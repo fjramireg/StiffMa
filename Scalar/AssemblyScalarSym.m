@@ -7,8 +7,8 @@
 %  ** Please cite this code as:
 %  *
 %  ** Date & version
-%  *      13/12/2018.
-%  *      V 1.2
+%  *      Created: 10/12/2018. Last modified: 21/01/2019
+%  *      V 1.3
 %  *
 %  * ====================================================================*/
 
@@ -28,6 +28,6 @@ end
 % Assembly of global sparse matrix K
 if ( isa(elements,'double') && isa(nodes,'double') )
     K = sparse(iK, jK, Ke(:), N, N);
-else 
+else
     K = accumarray([iK,jK], Ke(:), [N,N], [], [], 1);
 end

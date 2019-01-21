@@ -7,8 +7,8 @@
 %  ** Please cite this code as:
 %  *
 %  ** Date & version
-%  *      13/12/2018.
-%  *      V 1.2
+%  *      Created: 13/12/2018. Last modified: 21/01/2019
+%  *      V 1.3
 %  *
 %  * ====================================================================*/
 
@@ -42,7 +42,7 @@ Ke = Hex8scalarSymGPU(elements,nodes,c);   	% Entries of tril(K)
 
 %% Assembly of global sparse matrix on GPU
 if ( strcmp(dTE,'double') && strcmp(dTN,'double') )
-    K = sparse(iK, jK, Ke, N, N);        
+    K = sparse(iK, jK, Ke, N, N);
 else
     K = accumarray([iK,jK], Ke, [N,N], [], [], 1);
 end

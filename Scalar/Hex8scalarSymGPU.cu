@@ -14,17 +14,18 @@
  ** DATA OUTPUT
  *			ke[36*nel]            // Lower-triangular part of ke
  *
- *** COMPILATION LINUX (Terminal)
+ ** COMPILATION LINUX (Terminal)
  *          sudo nano ~/.bashrc
  *          export PATH=/usr/local/cuda-10.0/bin${PATH:+:${PATH}}
  * 			nvcc -ptx Hex8scalarSymGPU.cu
- * Within MATLAB
- *          setenv('PATH',[getenv('PATH') ':/usr/local/cuda-10.0/bin'])
- *          system('nvcc -ptx Hex8scalarSymGPU.cu')
  *
  ** COMPILATION WINDOWS (Terminal)
- * 			setenv('MW_NVCC_PATH','/usr/local/CUDA/bin')
  * 			nvcc -ptx Hex8scalarSymGPU.cu
+ *
+ ** COMPILATION Within MATLAB
+ * 			setenv('MW_NVCC_PATH','/usr/local/cuda-10.0/bin')
+ *          setenv('PATH',[getenv('PATH') ':/usr/local/cuda-10.0/bin'])
+ *          system('nvcc -ptx Hex8scalarSymGPU.cu')
  *
  ** MATLAB KERNEL CREATION (inside MATLAB)
  *			kernel = parallel.gpu.CUDAKernel('Hex8scalarSymGPU.ptx', 'Hex8scalarSymGPU.cu');
@@ -35,7 +36,8 @@
  *
  ** MATLAB CALL
  *			Out = feval(kernel, DATA INPUT + DATA OUTPUT);
- *          KE = feval(kernel, elements, nodes, nel, nnod, L, c, gpuArray.zeros(36*nel,1,'double'));
+ *          setConstantMemory(ker,'L',L,'nel',nel,'nnod',nnod,'c',c);
+ *          KE = feval(kernel, elements, nodes, zeros(36*nel,1,dType,'gpuArray'));
  *
  ** TRANSFER DATA FROM CPU TO GPU MEMORY (if necessary)
  *			Out_cpu = gather(Out);
@@ -48,8 +50,8 @@
  ** Please cite this code as:
  *
  ** Date & version
- *      13/12/2018.
- *      V 1.2
+ *      Created: 13/12/2018. Last modified: 21/01/2019
+ *      V 1.3
  *
  * ==========================================================================*/
 
@@ -90,7 +92,7 @@ __global__ void Hex8scalar(const intT *elements, const floatT *nodes, floatT *ke
             
             for (j=0; j<8; j++) {                                     // Matrix B
                 for (k=0; k<3; k++) { B[k+3*j] = 0.0;
-                    for (l=0; l<3; l++) {B[k+3*j] += invJ[k+3*l] * L[l+3*j+24*i]; } } }
+                for (l=0; l<3; l++) {B[k+3*j] += invJ[k+3*l] * L[l+3*j+24*i]; } } }
             
             temp = 0;
             for (j=0; j<8; j++) {   // Symmetry part of element stiffness matrix (tril(ke))

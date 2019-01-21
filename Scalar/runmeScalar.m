@@ -1,4 +1,5 @@
 % run the whole assembly code on the CPU
+addpath('../Common');
 
 %% Mesh generation
 nelx = 3;           % Number of elements on X-direction
@@ -13,5 +14,11 @@ PlotN = 0;          % Plot the nodes and their numbers (1 to plot)
 %% Material properties
 c = 1;              % Conductivity (homogeneous, linear, isotropic material)
 
-%% Global stiffness matrix creation
-K_h = AssemblyScalarSym(elements,nodes,c);  % Assembly on the CPU
+%% Creation of global stiffness matrix on CPU
+K_h = AssemblyScalar(elements,nodes,c);             % Assembly on CPU
+K_s = AssemblyScalarSym(elements,nodes,c);          % Assembly on CPU (symmetric)
+
+%% Creation of global stiffness matrix on GPU
+elementsGPU = gpuArray(elements');                  % Transfer to GPU memory
+nodesGPU    = gpuArray(nodes');                     % Transfer to GPU memory
+K_d = AssemblyScalarSymGPU(elementsGPU,nodesGPU,c); % Assembly on GPU (symmetric)

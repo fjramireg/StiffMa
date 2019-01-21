@@ -12,14 +12,16 @@
  *
  ** COMPILATION LINUX (Terminal)
  *          sudo nano ~/.bashrc
- *          export PATH=/usr/local/cuda-9.2/bin${PATH:+:${PATH}}
+ *          export PATH=/usr/local/cuda-10.0/bin${PATH:+:${PATH}}
  * 			nvcc -ptx IndexVectorGPU.cu
- ** Within MATLAB
- *          setenv('PATH',[getenv('PATH') ':/usr/local/cuda-10.0/bin'])
- *          system('nvcc -ptx IndexVectorGPU.cu')
  *
  ** COMPILATION WINDOWS (Terminal)
  * 			nvcc -ptx IndexVectorGPU.cu
+ *
+ ** COMPILATION Within MATLAB
+ * 			setenv('MW_NVCC_PATH','/usr/local/cuda-10.0/bin')
+ *          setenv('PATH',[getenv('PATH') ':/usr/local/cuda-10.0/bin'])
+ *          system('nvcc -ptx IndexVectorGPU.cu')
  *
  ** MATLAB KERNEL CREATION
  *			kernel = parallel.gpu.CUDAKernel('IndexVectorGPU.ptx', 'IndexVectorGPU.cu');
@@ -43,13 +45,13 @@
  ** Please cite this code as:
  *
  ** Date & version
- *      17/01/2019.
- *      V 1.2
+ *      Created: 17/01/2019. Last modified: 21/01/2019
+ *      V 1.3
  *
  * ======================================================================*/
 
 template <typename dType>
-__global__ void IndexVectorGPU(const dType *elements, const dType nel, dType *iK, dType *jK ) {
+        __global__ void IndexVectorGPU(const dType *elements, const dType nel, dType *iK, dType *jK ) {
     // CUDA kernel to compute row/column indices of tril(K) (VECOTR)
     
     int tid = blockDim.x * blockIdx.x + threadIdx.x;    // Thread ID

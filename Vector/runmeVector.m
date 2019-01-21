@@ -1,4 +1,5 @@
-% run the whole assembly code on the CPU
+% run the whole assembly code on the CPU and GPU
+addpath('../Common');
 
 %% Mesh generation
 nelx = 3;           % Number of elements on X-direction
@@ -14,6 +15,11 @@ PlotN = 0;          % Plot the nodes and their numbers (1 to plot)
 E = 200e9;          % Elastic modulus (homogeneous, linear, isotropic material)
 nu = 0.3;           % Poisson ratio
 
-%% Global stiffness matrix creation
-K_h = AssemblyVector(elements,nodes,E,nu);      % Assembly on the CPU
-K_s = AssemblyVectorSym(elements,nodes,E,nu);   % Assembly on the CPU (Symmetric matrix)
+%% Creation of global stiffness matrix on CPU
+K_h = AssemblyVector(elements,nodes,E,nu);              % Assembly on CPU
+K_s = AssemblyVectorSym(elements,nodes,E,nu);           % Assembly on CPU (symmetric)
+
+%% Creation of global stiffness matrix on GPU
+elementsGPU = gpuArray(elements');                      % Transfer to GPU memory
+nodesGPU    = gpuArray(nodes');                         % Transfer to GPU memory
+K_d = AssemblyVectorSymGPU(elementsGPU,nodesGPU,E,nu);  % Assembly on GPU (symmetric)

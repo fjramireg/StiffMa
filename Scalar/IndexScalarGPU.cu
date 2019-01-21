@@ -4,7 +4,7 @@
  *
  *
  ** DATA INPUT
- * 			elements[8][nel]      // Conectivity matrix of the mesh [gpuArray(elements)]
+ * 			elements[8][nel]      // Conectivity matrix of the mesh
  *
  ** DATA OUTPUT
  *			iK[36*nel]            // Row indices of the lower-triangular part of ke
@@ -12,11 +12,16 @@
  *
  ** COMPILATION LINUX (Terminal)
  *          sudo nano ~/.bashrc
- *          export PATH=/usr/local/cuda-9.1/bin${PATH:+:${PATH}}
+ *          export PATH=/usr/local/cuda-10.0/bin${PATH:+:${PATH}}
  * 			nvcc -ptx IndexScalarGPU.cu
  *
  ** COMPILATION WINDOWS (Terminal)
  * 			nvcc -ptx IndexScalarGPU.cu
+ *
+ ** COMPILATION Within MATLAB
+ * 			setenv('MW_NVCC_PATH','/usr/local/cuda-10.0/bin')
+ *          setenv('PATH',[getenv('PATH') ':/usr/local/cuda-10.0/bin'])
+ *          system('nvcc -ptx IndexScalarGPU.cu')
  *
  ** MATLAB KERNEL CREATION (inside MATLAB)
  *			kernel = parallel.gpu.CUDAKernel('IndexScalarGPU.ptx', 'IndexScalarGPU.cu');
@@ -39,9 +44,9 @@
  *
  ** Please cite this code as:
  *
- ** Date & version
- *      30/11/2018.
- *      V 1.2
+ *** Date & version
+ *      Created: 30/11/2018. Last modified: 21/01/2019
+ *      V 1.3
  *
  * ======================================================================*/
 

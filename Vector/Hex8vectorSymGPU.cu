@@ -14,16 +14,18 @@
  ** DATA OUTPUT
  *			ke[300*nel]           // Lower-triangular part of ke
  *
- *** COMPILATION LINUX (Terminal)
+ ** COMPILATION LINUX (Terminal)
  *          sudo nano ~/.bashrc
  *          export PATH=/usr/local/cuda-10.0/bin${PATH:+:${PATH}}
  * 			nvcc -ptx Hex8vectorSymGPU.cu
- * Within MATLAB
- *          setenv('PATH',[getenv('PATH') ':/usr/local/cuda-10.0/bin'])
- *          system('nvcc -ptx Hex8vectorSymGPU.cu')
  *
  ** COMPILATION WINDOWS (Terminal)
  * 			nvcc -ptx Hex8vectorSymGPU.cu
+ *
+ ** COMPILATION Within MATLAB
+ * 			setenv('MW_NVCC_PATH','/usr/local/cuda-10.0/bin')
+ *          setenv('PATH',[getenv('PATH') ':/usr/local/cuda-10.0/bin'])
+ *          system('nvcc -ptx Hex8vectorSymGPU.cu')
  *
  ** MATLAB KERNEL CREATION (inside MATLAB)
  *			kernel = parallel.gpu.CUDAKernel('Hex8vectorSymGPU.ptx', 'Hex8vectorSymGPU.cu');
@@ -47,8 +49,8 @@
  ** Please cite this code as:
  *
  ** Date & version
- *      17/01/2019.
- *      V 1.2
+ *      Created: 17/01/2019. Last modified: 21/01/2019
+ *      V 1.3
  *
  * ==========================================================================*/
 
@@ -102,14 +104,6 @@ template <typename floatT, typename intT>                           // Defines t
                     }
                 }
             }
-//             for (j=0; j<3; j++) {
-//                 for (k=0; k<8; k++) {
-//                     dNdxyz[j+3*k] = 0.0;
-//                     for (l=0; l<3; l++) {
-//                         dNdxyz[j+3*k] += invJ[j+3*l] * L[l+3*k+24*i];
-//                     }
-//                 }
-//             }
             
             for (j=0; j<8; j++){                                    // Matrix B
                 B[0+18*j] 	 = dNdxyz[0+3*j]; 	// B(1,1:3:24) = dNdxyz(1,:);

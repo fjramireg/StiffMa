@@ -1,3 +1,17 @@
+%  * ====================================================================*/
+% ** This function was developed by:
+%  *          Francisco Javier Ramirez-Gil
+%  *          Universidad Nacional de Colombia - Medellin
+%  *          Department of Mechanical Engineering
+%  *
+%  ** Please cite this code as:
+%  *
+%  ** Date & version
+%  *      Created: 17/01/2019. Last modified: 21/01/2019
+%  *      V 1.3
+%  *
+%  * ====================================================================*/
+
 function [iK, jK] = IndexVectorSym(elements)
 % Row/column indices of the lower triangular sparse matrix K (VECTOR)
 dType = class(elements);         % Data type
