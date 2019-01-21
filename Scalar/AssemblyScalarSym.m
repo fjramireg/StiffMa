@@ -15,7 +15,7 @@
 function K = AssemblyScalarSym(elements,nodes,c)
 % Construction of the global stiffness matrix K (SCALAR-SYMMETRIC)
 N = size(nodes,1);                  % Total number of nodes (DOFs)
-L = dNdrst;                         % Shape functions derivatives
+L = dNdrst(class(nodes));           % Shape functions derivatives
 nel = size(elements,1);             % Total number of elements
 Ke = zeros(36, nel, class(nodes));  % Stores the NNZ values
 for e = 1:nel                       % Loop over elements

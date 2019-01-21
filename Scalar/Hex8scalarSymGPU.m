@@ -20,7 +20,7 @@ dTypeE = classUnderlying(elements);   % Data precision of "elements"
 dTypeN = classUnderlying(nodes);      % Data precision of "nodes"
 nel = size(elements,2);               % Number of elements
 nnod = size(nodes,2);                 % Number of nodes
-L = dNdrst;                           % Shape functions derivatives in natural coord.
+L = dNdrst(dType);                    % Shape functions derivatives in natural coord.
 
 % Check the data type to create the proper CUDA kernel object
 if ( strcmp(dTypeE,'int32') && strcmp(dTypeN,'single') )        % Indices: 'int32'. NNZ: 'single'

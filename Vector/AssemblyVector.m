@@ -1,8 +1,22 @@
+%  * ====================================================================*/
+% ** This function was developed by:
+%  *          Francisco Javier Ramirez-Gil
+%  *          Universidad Nacional de Colombia - Medellin
+%  *          Department of Mechanical Engineering
+%  *
+%  ** Please cite this code as:
+%  *
+%  ** Date & version
+%  *      16/01/2019.
+%  *      V 1.2
+%  *
+%  * ====================================================================*/
+
 function K = AssemblyVector(elements,nodes,E,nu)
 % Construction of the global stiffness matrix K for a VECTOR problem
 N = size(nodes,1);                  % Total number of nodes
 nel = size(elements,1);             % Total number of elements
-D = MaterialMatrix(E,nu);           % Material matrix (isotropic)
+D = MaterialMatrix(E,nu,'double');  % Material matrix (isotropic)
 iK = zeros(24,24,nel,'double');     % Stores the rows' indices
 jK = zeros(24,24,nel,'double');     % Stores the columns' indices
 Ke = zeros(24,24,nel,'double');     % Stores the NNZ values

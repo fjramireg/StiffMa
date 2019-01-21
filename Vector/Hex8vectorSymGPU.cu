@@ -1,14 +1,14 @@
 /*=========================================================================
  *
- ** Hex8vectorSymGPU - lower symmetry part of the element stiffness matrix (VECTOR-DOUBLE)
+ ** Hex8vectorSymGPU - lower symmetry part of the element stiffness matrix (VECTOR)
  *
  *
  * DATA INPUT
- * 			elements[8][nel]      // Conectivity matrix of the mesh [gpuArray(uint32(elements))]
- *			ncoord[3][nnod]       // Nodal coordinates [gpuArray(nodes)]
+ * 			elements[8][nel]      // Conectivity matrix of the mesh
+ *			ncoord[3][nnod]       // Nodal coordinates
  *			nel                   // Number of finite elements in the mesh
  *			nnod                  // Number of nodes in the mesh
- *			L[3][8][8]            // Shape function derivatives for 8-node brick element (=dNdrst)
+ *			L[3][8][8]            // Shape function derivatives for 8-node brick element
  *			D[6][6]               // Isotropic material MATRIX
  *
  ** DATA OUTPUT
@@ -16,11 +16,13 @@
  *
  *** COMPILATION LINUX (Terminal)
  *          sudo nano ~/.bashrc
- *          export PATH=/usr/local/cuda-9.2/bin${PATH:+:${PATH}}
+ *          export PATH=/usr/local/cuda-10.0/bin${PATH:+:${PATH}}
  * 			nvcc -ptx Hex8vectorSymGPU.cu
+ * Within MATLAB
+ *          setenv('PATH',[getenv('PATH') ':/usr/local/cuda-10.0/bin'])
+ *          system('nvcc -ptx Hex8vectorSymGPU.cu')
  *
  ** COMPILATION WINDOWS (Terminal)
- * 			setenv('MW_NVCC_PATH','/usr/local/CUDA/bin')
  * 			nvcc -ptx Hex8vectorSymGPU.cu
  *
  ** MATLAB KERNEL CREATION (inside MATLAB)
@@ -45,52 +47,51 @@
  ** Please cite this code as:
  *
  ** Date & version
- *      24/11/2018.
- *      V 1.0
+ *      17/01/2019.
+ *      V 1.2
  *
  * ==========================================================================*/
 
-__global__ void Hex8scalarSymGPU(const unsigned int *elements, const double *nodes, 
-                                 const unsigned int nel, const unsigned int nnod,
-                                 const double *L, const double *D, double *ke ) {
-    // CUDA kernel to compute tril(ke) (VECTOR-DOUBLE)
+__constant__ double L[3*8*8], D[6*6], nel, nnod;                    // Declares constant memory
+template <typename floatT, typename intT>                           // Defines template
+        __global__ void Hex8vector(const intT *elements, const floatT *nodes, floatT *ke ) {
+    // CUDA kernel to compute the NNZ entries or all tril(ke) (VECTOR)
     
     int tid = blockDim.x * blockIdx.x + threadIdx.x;                // Thread ID
-    unsigned int i, j, k, l, m, temp, n[8];                         // General indices
-    double detJ, iJ, BDB, DB, dNdr, dNds, dNdt;                     // Temporal scalars
-    double x[8], y[8], z[8], invJ[9], B[6*24], dNdxyz[3*8*8];       // Temporal matrices
+    unsigned int i, j, k, l, m, temp;                               // General indices
+    unsigned long n[8];                                             // Nodes indices
+    floatT detJ, iJ, BDB, DB, dNdr, dNds, dNdt;                     // Temporal scalars
+    floatT x[8], y[8], z[8], invJ[9], B[6*24], dNdxyz[3*8];         // Temporal matrices
     
     if (tid < nel)	{                                               // Parallel computation
         
-        // Extract the nodes associated with element 'e' (=tid)
-        for (i=0; i<8; i++) {n[i] = elements[i+8*tid];}
+        for (i=0; i<8; i++) {n[i] = elements[i+8*tid];}             // Extract the nodes of 'e'
         
-        // Extract the nodal coordinates of element 'e' (=tid)
-        for (i=0; i<8; i++) {
+        for (i=0; i<8; i++) {                                       // Extract the nodal coord. of 'e'
             x[i] = nodes[3*n[i]-3];                                 // x-coordinate of node i
             y[i] = nodes[3*n[i]-2];                                 // y-coordinate of node i
             z[i] = nodes[3*n[i]-1];                                 // z-coordinate of node i
         }
         
-        for (i=0; i<144; i++){ B[k] = 0.0; }                        // Initializes the matrix B
+        for (i=0; i<6*24; i++){ B[i] = 0.0; }                       // Initializes the matrix B
         
-        for (i=0; i<8; i++) {         // Numerical integration over the 8 Gauss integration points
+        for (i=0; i<8; i++) {                                       // Numerical integration (8 Gauss integration points)
             
-            double J[9] = {0, 0, 0, 0, 0, 0, 0, 0, 0};
-            for (j=0; j<8; j++) {                                    // Jacobian matrix
+            floatT J[9] = {0, 0, 0, 0, 0, 0, 0, 0, 0};              // Jacobian matrix
+            for (j=0; j<8; j++) {
                 dNdr = L[3*j+24*i]; dNds = L[3*j+24*i+1]; dNdt = L[3*j+24*i+2];
                 J[0] += dNdr*x[j];  J[3] += dNdr*y[j];	J[6] += dNdr*z[j];
                 J[1] += dNds*x[j];	J[4] += dNds*y[j];	J[7] += dNds*z[j];
                 J[2] += dNdt*x[j];	J[5] += dNdt*y[j];	J[8] += dNdt*z[j]; }
             
-            // Jacobian's determinant
-            detJ =  J[0]*J[4]*J[8] + J[3]*J[7]*J[2] + J[6]*J[1]*J[5] - J[6]*J[4]*J[2] - J[3]*J[1]*J[8] - J[0]*J[7]*J[5];
+            detJ =  J[0]*J[4]*J[8] + J[3]*J[7]*J[2] + J[6]*J[1]*J[5] -
+                    J[6]*J[4]*J[2] - J[3]*J[1]*J[8] - J[0]*J[7]*J[5];// Jacobian determinant
             
-            // Jacobian's inverse
-            iJ = 1/detJ;
-            invJ[0] = iJ*(J[4]*J[8]-J[7]*J[5]);  invJ[3] = iJ*(J[6]*J[5]-J[3]*J[8]);  invJ[6] = iJ*(J[3]*J[7]-J[6]*J[4]);
-            invJ[1] = iJ*(J[7]*J[2]-J[1]*J[8]);  invJ[4] = iJ*(J[0]*J[8]-J[6]*J[2]);  invJ[7] = iJ*(J[6]*J[1]-J[0]*J[7]);
-            invJ[2] = iJ*(J[1]*J[5]-J[4]*J[2]);  invJ[5] = iJ*(J[3]*J[2]-J[0]*J[5]);  invJ[8] = iJ*(J[0]*J[4]-J[3]*J[1]);
+            iJ = 1/detJ;   invJ[0] = iJ*(J[4]*J[8]-J[7]*J[5]);       // Jacobian inverse
+            invJ[1] = iJ*(J[7]*J[2]-J[1]*J[8]);   invJ[2] = iJ*(J[1]*J[5]-J[4]*J[2]);
+            invJ[3] = iJ*(J[6]*J[5]-J[3]*J[8]);   invJ[4] = iJ*(J[0]*J[8]-J[6]*J[2]);
+            invJ[5] = iJ*(J[3]*J[2]-J[0]*J[5]);   invJ[6] = iJ*(J[3]*J[7]-J[6]*J[4]);
+            invJ[7] = iJ*(J[6]*J[1]-J[0]*J[7]);   invJ[8] = iJ*(J[0]*J[4]-J[3]*J[1]);
             
             // Shape function derivatives with respect to x,y,z
             for (j=0; j<8; j++) {
@@ -101,9 +102,16 @@ __global__ void Hex8scalarSymGPU(const unsigned int *elements, const double *nod
                     }
                 }
             }
+//             for (j=0; j<3; j++) {
+//                 for (k=0; k<8; k++) {
+//                     dNdxyz[j+3*k] = 0.0;
+//                     for (l=0; l<3; l++) {
+//                         dNdxyz[j+3*k] += invJ[j+3*l] * L[l+3*k+24*i];
+//                     }
+//                 }
+//             }
             
-            // Matrix B
-            for (j=0; j<8; j++){
+            for (j=0; j<8; j++){                                    // Matrix B
                 B[0+18*j] 	 = dNdxyz[0+3*j]; 	// B(1,1:3:24) = dNdxyz(1,:);
                 B[6+1+18*j]  = dNdxyz[1+3*j];	// B(2,2:3:24) = dNdxyz(2,:);
                 B[2+12+18*j] = dNdxyz[2+3*j];	// B(3,3:3:24) = dNdxyz(3,:);
@@ -134,3 +142,13 @@ __global__ void Hex8scalarSymGPU(const unsigned int *elements, const double *nod
         }
     }
 }
+
+// NNZ of type 'single' and indices 'int32', 'uint32'
+template __global__ void Hex8vector<float,int>(const int *, const float *, float *);
+template __global__ void Hex8vector<float,unsigned int>(const unsigned int *, const float *, float *);
+// NNZ of type 'double' and indices 'int32', 'uint32', 'int64', 'uint64', 'double'
+template __global__ void Hex8vector<double,int>(const int *, const double *, double *);
+template __global__ void Hex8vector<double,unsigned int>(const unsigned int*, const double*, double*);
+template __global__ void Hex8vector<double,long>(const long *, const double *, double *);
+template __global__ void Hex8vector<double,unsigned long>(const unsigned long*,const double*,double*);
+template __global__ void Hex8vector<double,double>(const double *, const double *, double *);

@@ -1,12 +1,24 @@
-function D = MaterialMatrix(E,u)
+%  * ====================================================================*/
+% ** This function was developed by:
+%  *          Francisco Javier Ramirez-Gil
+%  *          Universidad Nacional de Colombia - Medellin
+%  *          Department of Mechanical Engineering
+%  *
+%  ** Please cite this code as:
+%  *
+%  ** Date & version
+%  *      16/01/2019.
+%  *      V 1.2
+%  *
+%  * ====================================================================*/
+
+function D = MaterialMatrix(E,nu,dType)
 % Isotropic material matrix for the VECTOR problem
-a = 1 + u;
-b = 1 - 2*u;
-c = 1 - u;
-d = E/(a*b);
-D = d*[c u u 0 0 0;
-       u c u 0 0 0;
-       u u c 0 0 0;
-       0 0 0 b/2 0 0;
-       0 0 0 0 b/2 0;
-       0 0 0 0 0 b/2];
+D = zeros(6,6,dType);               % Initialize D in the correct data type
+D(:,:) = (E/((1 + nu)* (1 - 2*nu)))*...  % Fills the matix
+    [1 - nu, nu, nu, 0, 0, 0;
+    nu, 1 - nu, nu, 0, 0, 0;
+    nu, nu, 1 - nu, 0, 0, 0;
+    0, 0, 0, (1 - 2*nu)/2, 0, 0;
+    0, 0, 0, 0, (1 - 2*nu)/2, 0;
+    0, 0, 0, 0, 0, (1 - 2*nu)/2];

@@ -62,7 +62,7 @@ __global__ void IndexScalarGPU(const dType *elements, const dType nel, dType *iK
         for (j=0; j<8; j++){
             for (i=j; i<8; i++){
                 idx = temp + i + 36*tid;
-                if (n[i] > n[j]){
+                if (n[i] >= n[j]){
                     iK[idx] = n[i];
                     jK[idx] = n[j];}
                 else{

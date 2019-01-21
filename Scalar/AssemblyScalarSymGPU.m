@@ -13,7 +13,7 @@
 %  * ====================================================================*/
 
 function K = AssemblyScalarSymGPU(elements,nodes,c)
-% Construction of the global stiffness matrix K (SCALAR-SYMMETRIC)
+% Construction of the global stiffness matrix K (SCALAR-SYMMETRIC-GPU)
 
 %% General declarations
 dTE = classUnderlying(elements);            % "elements" data precision. Defines data type of [iK,jK]
@@ -40,9 +40,9 @@ end
 %% Element matrix computation
 Ke = Hex8scalarSymGPU(elements,nodes,c);   	% Entries of tril(K)
 
-%% Assembly of global sparse matrix
+%% Assembly of global sparse matrix on GPU
 if ( strcmp(dTE,'double') && strcmp(dTN,'double') )
-    K = sparse(iK, jK, Ke, N, N);           % Assembly of K on GPU
+    K = sparse(iK, jK, Ke, N, N);        
 else
     K = accumarray([iK,jK], Ke, [N,N], [], [], 1);
 end

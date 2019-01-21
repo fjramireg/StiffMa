@@ -12,7 +12,7 @@
 %  *
 %  * ====================================================================*/
 
-function ke = Hex8vector(X,D)
+function ke = Hex8vector2(X,D)
 % Element stiffness matrix ke for a VECTOR problem
 p = 1/sqrt(3);              % Gauss points
 r = [p,-p,p,-p,p,-p,p,-p];  % Points through r-coordinate
@@ -29,16 +29,24 @@ for i=1:8                   % Loop over numerical integration
         -(1-ri)*(1+ti), -(1+ri)*(1+ti), (1+ri)*(1+ti),  (1-ri)*(1+ti)];
     dNdt = (1/8)*[-(1-ri)*(1-si), -(1+ri)*(1-si),-(1+ri)*(1+si), -(1-ri)*(1+si),...
         (1-ri)*(1-si),  (1+ri)*(1-si), (1+ri)*(1+si),  (1-ri)*(1+si)];
-    L = [dNdr; dNds; dNdt]; % L matrix
-    Jac  = L*X;             % Jacobian matrix
-    detJ = det(Jac);        % Jacobian's determinant
-    dNdX = Jac\L;           % Shape function derivatives with respect to x,y,z
-    % Matrix B
-    B(1,1:3:24) = dNdX(1,:);
-    B(2,2:3:24) = dNdX(2,:);
-    B(3,3:3:24) = dNdX(3,:);
-    B(4,1:3:24) = dNdX(2,:);  B(4,2:3:24) = dNdX(1,:);
-    B(5,2:3:24) = dNdX(3,:);  B(5,3:3:24) = dNdX(2,:);
-    B(6,1:3:24) = dNdX(3,:);  B(6,3:3:24) = dNdX(1,:);
+
+    % Jacobian
+    Jacobian = [dNdr ; dNds; dNdt]*X;
+    detJ = det(Jacobian);
+    R = inv(Jacobian);
+    
+    %  Shape Function Derivates with respect to x,y,z
+    dNdx = R(1,1)*dNdr + R(1,2)*dNds + R(1,3)*dNdt;
+    dNdy = R(2,1)*dNdr + R(2,2)*dNds + R(2,3)*dNdt;
+    dNdz = R(3,1)*dNdr + R(3,2)*dNds + R(3,3)*dNdt;
+    
+    % Gradient matrix
+    B(1,1:3:24) = dNdx;
+    B(2,2:3:24) = dNdy;
+    B(3,3:3:24) = dNdz;
+    B(4,1:3:24) = dNdy; B(4,2:3:24) = dNdx;
+    B(5,2:3:24) = dNdz; B(5,3:3:24) = dNdy;
+    B(6,1:3:24) = dNdz; B(6,3:3:24) = dNdx;
+    
     ke = ke + B'*D*B*detJ;  % Element stiffness matrix
 end

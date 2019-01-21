@@ -14,7 +14,7 @@
 
 function ke = Hex8scalarSym(X,c,L)
 % Symmetric part of the element stiffness matrix ke for a SCALAR problem
-ke = zeros(36,1);       % Initializes the element stiffness matrix
+ke = zeros(36,1,class(X));% Initializes the element stiffness matrix
 for i=1:8               % Loop over numerical integration
     Li = L(:,:,i);      % Matrix L in point i
     Jac  = Li*X;        % Jacobian matrix

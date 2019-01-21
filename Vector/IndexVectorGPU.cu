@@ -4,7 +4,7 @@
  *
  *
  ** DATA INPUT
- * 			elements[8][nel]      // Conectivity matrix of the mesh [gpuArray(uint32(elements))]
+ * 			elements[8][nel]      // Conectivity matrix of the mesh [gpuArray(elements)]
  *
  ** DATA OUTPUT
  *			iK[300*nel]           // Row indices of the lower-triangular part of ke
@@ -13,10 +13,13 @@
  ** COMPILATION LINUX (Terminal)
  *          sudo nano ~/.bashrc
  *          export PATH=/usr/local/cuda-9.2/bin${PATH:+:${PATH}}
- * 			nvcc -ptx IndexVectorGPU.cu 
+ * 			nvcc -ptx IndexVectorGPU.cu
+ ** Within MATLAB
+ *          setenv('PATH',[getenv('PATH') ':/usr/local/cuda-10.0/bin'])
+ *          system('nvcc -ptx IndexVectorGPU.cu')
  *
  ** COMPILATION WINDOWS (Terminal)
- * 			nvcc -ptx IndexVectorGPU.cu 
+ * 			nvcc -ptx IndexVectorGPU.cu
  *
  ** MATLAB KERNEL CREATION
  *			kernel = parallel.gpu.CUDAKernel('IndexVectorGPU.ptx', 'IndexVectorGPU.cu');
@@ -40,25 +43,25 @@
  ** Please cite this code as:
  *
  ** Date & version
- *      22/11/2018.
- *      V 1.0
+ *      17/01/2019.
+ *      V 1.2
  *
  * ======================================================================*/
 
-__global__ void IndexScalarGPU(const unsigned int *elements,
-                               const unsigned int nel,
-                               unsigned int *iK, unsigned int *jK ){
+template <typename dType>
+__global__ void IndexVectorGPU(const dType *elements, const dType nel, dType *iK, dType *jK ) {
     // CUDA kernel to compute row/column indices of tril(K) (VECOTR)
     
     int tid = blockDim.x * blockIdx.x + threadIdx.x;    // Thread ID
-    unsigned int i, j, temp, idx, n[8], dof[24];        // General indices
+    unsigned int i, j, temp, idx;                       // General indices
+    dType n[8], dof[24];                                // DOFs
     
-    if (tid < nel)	{                                   // Parallel computation
+    if (tid < nel) {                                    // Parallel computation
         
         // Extract the nodes associated with element 'e' (=tid)
         for (i=0; i<8; i++) {n[i] = elements[i+8*tid];}
         
-        // Extract the global dof associated with element 'e' (=tid)
+        // Extract the global DOFs associated with element 'e' (=tid)
         for (i=0; i<8; i++) {
             dof[3*i  ] = 3*n[i] - 2;
             dof[3*i+1] = 3*n[i] - 1;
@@ -69,7 +72,7 @@ __global__ void IndexScalarGPU(const unsigned int *elements,
         for (j=0; j<24; j++){
             for (i=j; i<24; i++){
                 idx = temp + i + 300*tid;
-                if (dof[i] > dof[j]){
+                if (dof[i] >= dof[j]){
                     iK[idx] = dof[i];
                     jK[idx] = dof[j];
                 }
@@ -82,3 +85,9 @@ __global__ void IndexScalarGPU(const unsigned int *elements,
         }
     }
 }
+
+template __global__ void IndexVectorGPU<int>(const int *, const int, int *, int *);                                                     // Indices of data type 'int32'
+template __global__ void IndexVectorGPU<unsigned int>(const unsigned int *, const unsigned int, unsigned int *, unsigned int *);        // Indices of data type 'uint32'
+template __global__ void IndexVectorGPU<long>(const long *, const long, long *, long *);                                                // Indices of data type 'int64'
+template __global__ void IndexVectorGPU<unsigned long>(const unsigned long *, const unsigned long, unsigned long *, unsigned long *);   // Indices of data type 'uint64'
+template __global__ void IndexVectorGPU<double>(const double *, const double, double *, double *);                                      // Indices of data type 'double'

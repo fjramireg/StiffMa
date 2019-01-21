@@ -16,11 +16,10 @@
  *
  *** COMPILATION LINUX (Terminal)
  *          sudo nano ~/.bashrc
- *          export PATH=/usr/local/cuda-9.2/bin${PATH:+:${PATH}}
+ *          export PATH=/usr/local/cuda-10.0/bin${PATH:+:${PATH}}
  * 			nvcc -ptx Hex8scalarSymGPU.cu
  * Within MATLAB
  *          setenv('PATH',[getenv('PATH') ':/usr/local/cuda-10.0/bin'])
- *          getenv('PATH')
  *          system('nvcc -ptx Hex8scalarSymGPU.cu')
  *
  ** COMPILATION WINDOWS (Terminal)
@@ -50,7 +49,7 @@
  *
  ** Date & version
  *      13/12/2018.
- *      V 1.3
+ *      V 1.2
  *
  * ==========================================================================*/
 
