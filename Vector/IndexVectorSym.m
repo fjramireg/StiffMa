@@ -1,19 +1,21 @@
-%  * ====================================================================*/
-% ** This function was developed by:
-%  *          Francisco Javier Ramirez-Gil
-%  *          Universidad Nacional de Colombia - Medellin
-%  *          Department of Mechanical Engineering
-%  *
-%  ** Please cite this code as:
-%  *
-%  ** Date & version
-%  *      Created: 17/01/2019. Last modified: 21/01/2019
-%  *      V 1.3
-%  *
-%  * ====================================================================*/
-
 function [iK, jK] = IndexVectorSym(elements)
-% Row/column indices of the lower triangular sparse matrix K (VECTOR)
+% INDEXVECTORSYM Compute the row and column indices of lower symmetric
+% part of global stiffness matrix for a VECTOR problem.
+%   INDEXVECTORSYM(elements) returns the rows "iK" and columns "jK" position
+%   of all element stiffness matrices in the global system for a finite
+%   element analysis of a vector problem in a three-dimensional domain
+%   taking advantage of symmetry, where "elements" is the connectivity
+%   matrix.
+%
+%   See also ASSEMBLYVECTORSYM, ASSEMBLYVECTORSYMGPU, INDEXVECTORSYMGPU
+%
+%   For more information, see <a href="matlab:
+%   web('https://github.com/fjramireg/MatGen')">the MatGen Web site</a>.
+
+%   Written by Francisco Javier Ramirez-Gil, fjramireg@gmail.com
+%   Universidad Nacional de Colombia - Medellin
+%   Created: 16/01/2019. Modified: 21/01/2019. Version: 1.3
+
 dType = class(elements);         % Data type
 nel = size(elements,1);          % Number of elements
 iK  = zeros(300*nel,1,dType);    % Stores row indices

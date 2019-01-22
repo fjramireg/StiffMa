@@ -1,17 +1,3 @@
-%  * ====================================================================*/
-% ** This function was developed by:
-%  *          Francisco Javier Ramirez-Gil
-%  *          Universidad Nacional de Colombia - Medellin
-%  *          Department of Mechanical Engineering
-%  *
-%  ** Please cite this code as:
-%  *
-%  ** Date & version
-%  *      03/12/2018.
-%  *      V 1.2
-%  *
-%  * ====================================================================*/
-
 function [elements, nodes] = CreateMesh(nelx,nely,nelz,dTypeE,dTypeN,PlotE,PlotN)
 % Simple mesher of a unit cubic with configurable and structured discretization [Hex8]
 %  INPUT:
@@ -24,6 +10,15 @@ function [elements, nodes] = CreateMesh(nelx,nely,nelz,dTypeE,dTypeN,PlotE,PlotN
 %  OUTPUT:
 %   elements:           Conectivty matrix of the elements [nelx8]
 %   nodes:              X,Y,Z coordinates of the nodes [nnodx3]
+%
+%   See also ASSEMBLYSCALAR, ASSEMBLYVECTOR
+%
+%   For more information, see <a href="matlab:
+%   web('https://github.com/fjramireg/MatGen')">the MatGen Web site</a>.
+
+%   Written by Francisco Javier Ramirez-Gil, fjramireg@gmail.com
+%   Universidad Nacional de Colombia - Medellin
+%   Created: 30/11/2018. Modified: 21/01/2019. Version: 1.3
 
 %% INPUTS CHECK
 if ~( mod(nelx,1)==0 && mod(nely,1)==0 && mod(nelz,1)==0 )   % Check if inputs "nel" are integers

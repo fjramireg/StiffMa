@@ -1,19 +1,20 @@
-%  * ====================================================================*/
-% ** This function was developed by:
-%  *          Francisco Javier Ramirez-Gil
-%  *          Universidad Nacional de Colombia - Medellin
-%  *          Department of Mechanical Engineering
-%  *
-%  ** Please cite this code as:
-%  *
-%  ** Date & version
-%  *      Created: 13/12/2018. Last modified: 21/01/2019
-%  *      V 1.3
-%  *
-%  * ====================================================================*/
-
 function K = AssemblyScalarSymGPU(elements,nodes,c)
-% Construction of the global stiffness matrix K (SCALAR-SYMMETRIC-GPU)
+% ASSEMBLYSCALARSYMGPU Create the global stiffness matrix for a SCALAR
+% problem taking advantage of simmetry and GPU computing.
+%   ASSEMBLYSCALARSYMGPU(elements,nodes,c) returns the lower-triangle of a
+%   sparse matrix K from finite element analysis of scalar problems in a
+%   three-dimensional domain taking advantage of simmetry and GPU computing,
+%   where "elements" is the connectivity matrix, "nodes" the nodal coordinates,
+%   and "c" the material property for an isotropic material.
+%
+%   See also SPARSE, ACCUMARRAY, ASSEMBLYSCALAR, ASSEMBLYSCALARSYM
+%
+%   For more information, see <a href="matlab:
+%   web('https://github.com/fjramireg/MatGen')">the MatGen Web site</a>.
+
+%   Written by Francisco Javier Ramirez-Gil, fjramireg@gmail.com
+%   Universidad Nacional de Colombia - Medellin
+%   Created: 13/12/2018. Modified: 21/01/2019. Version: 1.3
 
 %% General declarations
 dTE = classUnderlying(elements);            % "elements" data precision. Defines data type of [iK,jK]

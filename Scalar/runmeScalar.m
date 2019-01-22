@@ -1,5 +1,6 @@
-% run the whole assembly code on the CPU
+% run the whole assembly code on the CPU and GPU
 addpath('../Common');
+addpath('../Utils');
 
 %% Mesh generation
 nelx = 3;           % Number of elements on X-direction

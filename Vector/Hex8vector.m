@@ -1,19 +1,19 @@
-%  * ====================================================================*/
-% ** This function was developed by:
-%  *          Francisco Javier Ramirez-Gil
-%  *          Universidad Nacional de Colombia - Medellin
-%  *          Department of Mechanical Engineering
-%  *
-%  ** Please cite this code as:
-%  *
-%  ** Date & version
-%  *      Created: 16/01/2019. Last modified: 21/01/2019
-%  *      V 1.3
-%  *
-%  * ====================================================================*/
-
 function ke = Hex8vector(X,D)
-% Element stiffness matrix ke for a VECTOR problem
+% HEX8VECTOR Compute the element stiffness matrix for a VECTOR problem.
+%   HEX8VECTOR(X,D) returns the element stiffness matrix "ke" from finite
+%   element analysis of vector problems in a three-dimensional domain 
+%   where "X" is the nodal coordinates of element "e" and "D" the material
+%   property matrix for an isotropic material. 
+% 
+%   See also ASSEMBLYVECTOR, HEX8VECTORSYM, HEX8VECTORSYMGPU
+% 
+%   For more information, see <a href="matlab: 
+%   web('https://github.com/fjramireg/MatGen')">the MatGen Web site</a>.
+
+%   Written by Francisco Javier Ramirez-Gil, fjramireg@gmail.com
+%   Universidad Nacional de Colombia - Medellin
+%   Created: 16/01/2019. Modified: 21/01/2019. Version: 1.3  
+
 p = 1/sqrt(3);              % Gauss points
 r = [p,-p,p,-p,p,-p,p,-p];  % Points through r-coordinate
 s = [p,p,-p,-p,p,p,-p,-p];  % Points through s-coordinate

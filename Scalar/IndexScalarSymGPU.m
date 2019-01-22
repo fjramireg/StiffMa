@@ -1,19 +1,21 @@
-%  * ====================================================================*/
-% ** This function was developed by:
-%  *          Francisco Javier Ramirez-Gil
-%  *          Universidad Nacional de Colombia - Medellin
-%  *          Department of Mechanical Engineering
-%  *
-%  ** Please cite this code as:
-%  *
-%  ** Date & version
-%  *      Created: 30/11/2018. Last modified: 21/01/2019
-%  *      V 1.3
-%  *
-%  * ====================================================================*/
-
 function [iK, jK] = IndexScalarSymGPU(elements)
-% Row/column indices of the lower triangular part of the sparse stiffness matrix K (SCALAR)
+% INDEXSCALARSYMGPU Compute the row and column indices of lower symmetric
+% part of global stiffness matrix for a SCALAR problem taking advantage of
+% GPU computing. 
+%   INDEXSCALARSYMGPU(elements) returns the rows "iK" and columns "jK" position
+%   of all element stiffness matrices in the global system for a finite
+%   element analysis of a scalar problem in a three-dimensional domain
+%   taking advantage of symmetry and GPU computing, where "elements" is the
+%   connectivity matrix.
+%
+%   See also ASSEMBLYSCALARSYM, ASSEMBLYSCALARSYMGPU, INDEXSCALARSYM
+%
+%   For more information, see <a href="matlab:
+%   web('https://github.com/fjramireg/MatGen')">the MatGen Web site</a>.
+
+%   Written by Francisco Javier Ramirez-Gil, fjramireg@gmail.com
+%   Universidad Nacional de Colombia - Medellin
+%   Created: 30/11/2018. Modified: 21/01/2019. Version: 1.3
 
 dType = classUnderlying(elements);          % Data type (int32, uint32, int64, uint64, double)
 nel = size(elements,2);                     % Number of elements

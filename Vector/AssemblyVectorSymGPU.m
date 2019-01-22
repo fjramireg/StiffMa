@@ -1,19 +1,21 @@
-%  * ====================================================================*/
-% ** This function was developed by:
-%  *          Francisco Javier Ramirez-Gil
-%  *          Universidad Nacional de Colombia - Medellin
-%  *          Department of Mechanical Engineering
-%  *
-%  ** Please cite this code as:
-%  *
-%  ** Date & version
-%  *      Created: 17/01/2018. Last modified: 21/01/2019
-%  *      V 1.3
-%  *
-%  * ====================================================================*/
-
 function K = AssemblyVectorSymGPU(elements,nodes,E,nu)
-% Construction of the global stiffness matrix K (VECTOR-SYMMETRIC-GPU)
+% ASSEMBLYVECTORSYMGPU Create the global stiffness matrix for a VECTOR
+% problem taking advantage of simmetry and GPU computing.
+%   ASSEMBLYVECTORSYMGPU(elements,nodes,E,nu) returns the lower-triangle of
+%   a sparse matrix K from finite element analysis of vector problems in a
+%   three-dimensional domain taking advantage of simmetry and GPU
+%   computing, where "elements" is the connectivity matrix, "nodes" the
+%   nodal coordinates, and "E" (Young's modulus) and "nu" (Poisson ratio)
+%   the material property for an isotropic material.
+%
+%   See also SPARSE, ACCUMARRAY, ASSEMBLYVECTOR, ASSEMBLYVECTORSYM
+%
+%   For more information, see <a href="matlab:
+%   web('https://github.com/fjramireg/MatGen')">the MatGen Web site</a>.
+
+%   Written by Francisco Javier Ramirez-Gil, fjramireg@gmail.com
+%   Universidad Nacional de Colombia - Medellin
+%   Created: 16/01/2019. Modified: 21/01/2019. Version: 1.3
 
 %% General declarations
 dTE = classUnderlying(elements);            % "elements" data precision. Defines data type of [iK,jK]

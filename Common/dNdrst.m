@@ -1,19 +1,18 @@
-%  * ====================================================================*/
-% ** This function was developed by:
-%  *          Francisco Javier Ramirez-Gil
-%  *          Universidad Nacional de Colombia - Medellin
-%  *          Department of Mechanical Engineering
-%  *
-%  ** Please cite this code as:
-%  *
-%  ** Date & version
-%  *      16/01/2019.
-%  *      V 1.2
-%  *
-%  * ====================================================================*/
-
 function L = dNdrst(dType)
-% Computes the shape functions derivatives with respect to r,s,t (Hex8)
+% DNDRST Compute the shape functions derivatives with respect to r,s,t (Hex8)
+%   DNDRST(dType) Returns a matrix "L" of size [3*8*8] with all shape
+%   function derivatives in natural coordinates. As input it requieres the
+%   data type "dType" as single or double
+%
+%   See also HEX8SCALAR, HEX8VECTOR
+%
+%   For more information, see <a href="matlab:
+%   web('https://github.com/fjramireg/MatGen')">the MatGen Web site</a>.
+
+%   Written by Francisco Javier Ramirez-Gil, fjramireg@gmail.com
+%   Universidad Nacional de Colombia - Medellin
+%   Created: 30/11/2018. Modified: 21/01/2019. Version: 1.3
+
 p = zeros(1,dType);         % Initialize p in the correct data type
 p(1) = 1/sqrt(3);           % Gauss point value
 r = [p,-p,p,-p,p,-p,p,-p];  % Points through r-coordinate
