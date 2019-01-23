@@ -1,11 +1,11 @@
-function K = AssemblyScalar(elements,nodes,c)
-% ASSEMBLYSCALAR Create the global stiffness matrix for a SCALAR problem.
-%   ASSEMBLYSCALAR(elements,nodes,c) returns a sparse matrix K from finite
+function K = StiffMatGenSc(elements,nodes,c)
+% STIFFMATGENSC Create the global stiffness matrix for a SCALAR problem.
+%   STIFFMATGENSC(elements,nodes,c) returns a sparse matrix K from finite
 %   element analysis of scalar problems in a three-dimensional domain,
 %   where "elements" is the connectivity matrix, "nodes" the nodal
 %   coordinates, and "c" the material property for an isotropic material.
 %
-%   See also SPARSE, ASSEMBLYSCALARSYM, ASSEMBLYSCALARSYMGPU
+%   See also SPARSE, STIFFMATGENSCSYM, STIFFMATGENSCSYMGPU
 %
 %   For more information, see <a href="matlab:
 %   web('https://github.com/fjramireg/MatGen')">the MatGen Web site</a>.

@@ -1,13 +1,13 @@
-function K = AssemblyScalarSymGPU(elements,nodes,c)
-% ASSEMBLYSCALARSYMGPU Create the global stiffness matrix for a SCALAR
+function K = StiffMatGenScSymGPU(elements,nodes,c)
+% STIFFMATGENSCSYMGPU Create the global stiffness matrix for a SCALAR
 % problem taking advantage of simmetry and GPU computing.
-%   ASSEMBLYSCALARSYMGPU(elements,nodes,c) returns the lower-triangle of a
+%   STIFFMATGENSCSYMGPU(elements,nodes,c) returns the lower-triangle of a
 %   sparse matrix K from finite element analysis of scalar problems in a
 %   three-dimensional domain taking advantage of simmetry and GPU computing,
 %   where "elements" is the connectivity matrix, "nodes" the nodal coordinates,
 %   and "c" the material property for an isotropic material.
 %
-%   See also SPARSE, ACCUMARRAY, ASSEMBLYSCALAR, ASSEMBLYSCALARSYM
+%   See also SPARSE, ACCUMARRAY, STIFFMATGENSC, STIFFMATGENSCSYMCPU
 %
 %   For more information, see <a href="matlab:
 %   web('https://github.com/fjramireg/MatGen')">the MatGen Web site</a>.
@@ -42,8 +42,4 @@ end
 Ke = Hex8scalarSymGPU(elements,nodes,c);   	% Entries of tril(K)
 
 %% Assembly of global sparse matrix on GPU
-if ( strcmp(dTE,'double') && strcmp(dTN,'double') )
-    K = sparse(iK, jK, Ke, N, N);
-else
-    K = accumarray([iK,jK], Ke, [N,N], [], [], 1);
-end
+K = AssemblyStiffMat(iK,jK,Ke,N,dTE,dTN);

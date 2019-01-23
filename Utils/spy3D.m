@@ -1,8 +1,11 @@
 function spy3D(S)
 %SPY3D Visualize sparsity pattern with 3D bars.
-%   SPY3D(S) plots the sparsity pattern of the matrix S.
+%   SPY3D(S) plots the sparsity pattern of the matrix S in a
+%   three-dimensional (3D) domain with matrix entries represented as bars
+%   that are colored according to their value (height) and using a
+%   colorbar.
 %
-%   See also SPY, BAR3.
+%   See also SPY, BAR3 COLORBAR.
 %
 %   For more information, see <a href="matlab:
 %   web('https://github.com/fjramireg/MatGen')">the MatGen Web site</a>.

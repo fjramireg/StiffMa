@@ -2,7 +2,7 @@
 % stiffness matrices from finite element analysis of vector problems like
 % structural phenomena. 
 % Version 1.3 21-Jan-2019
-
+% 
 % Files
 %   AssemblyVector       - Create the global stiffness matrix for a VECTOR problem.
 %   AssemblyVectorSym    - Create the global stiffness matrix for a VECTOR problem

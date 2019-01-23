@@ -2,14 +2,14 @@ function KE = Hex8scalarSymGPU(elements,nodes,c)
 % HEX8SCALARSYMGPU Compute the lower symmetric part of all the element
 % stiffness matrices for a SCALAR problem taking advantage of simmetry and
 % GPU computing.
-%   HEX8SCALARSYMGPU(elements,nodes,c) returns the element stiffness matrix 
+%   HEX8SCALARSYMGPU(elements,nodes,c) returns the element stiffness matrix
 %   "ke" for all elements in a finite element analysis of a scalar problem
-%   in a three-dimensional domain taking advantage of symmetry and GPU 
+%   in a three-dimensional domain taking advantage of symmetry and GPU
 %   computing, where "elements" is the connectivity matrix, "nodes" the
 %   nodal coordinates, and "c" the material property for an isotropic
-%   material. 
+%   material.
 %
-%   See also ASSEMBLYSCALARSYM, HEX8SCALAR, HEX8SCALARSYM, ASSEMBLYSCALARSYMGPU
+%   See also HEX8SCALAR, HEX8SCALARSYM, HEX8SCALARSYMCPU, STIFFMATGENSCSYMGPU
 %
 %   For more information, see <a href="matlab:
 %   web('https://github.com/fjramireg/MatGen')">the MatGen Web site</a>.

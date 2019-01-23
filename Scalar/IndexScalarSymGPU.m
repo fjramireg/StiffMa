@@ -1,14 +1,14 @@
 function [iK, jK] = IndexScalarSymGPU(elements)
 % INDEXSCALARSYMGPU Compute the row and column indices of lower symmetric
 % part of global stiffness matrix for a SCALAR problem taking advantage of
-% GPU computing. 
+% GPU computing.
 %   INDEXSCALARSYMGPU(elements) returns the rows "iK" and columns "jK" position
 %   of all element stiffness matrices in the global system for a finite
 %   element analysis of a scalar problem in a three-dimensional domain
 %   taking advantage of symmetry and GPU computing, where "elements" is the
 %   connectivity matrix.
 %
-%   See also ASSEMBLYSCALARSYM, ASSEMBLYSCALARSYMGPU, INDEXSCALARSYM
+%   See also INDEXSCALARSYMCPU, STIFFMATGENSCSYMGPU
 %
 %   For more information, see <a href="matlab:
 %   web('https://github.com/fjramireg/MatGen')">the MatGen Web site</a>.

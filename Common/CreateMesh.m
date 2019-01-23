@@ -53,8 +53,8 @@ for elz= 1:nelz
         end
     end
 end
-fprintf('\nThe mesh was created successfully with %u Hex8 elements and %u nodes! \n\n\n',...
-    el,size(nodes,1));
+% fprintf('\nThe mesh was created successfully with %u Hex8 elements and %u nodes! \n\n\n',...
+%     el,size(nodes,1));
 
 %% PLOTS
 if ( PlotE==1 || PlotN==1 )

@@ -1,13 +1,13 @@
-function [iK, jK] = IndexScalarSym(elements)
-% INDEXSCALARSYM Compute the row and column indices of lower symmetric
+function [iK, jK] = IndexScalarSymCPU(elements)
+% INDEXSCALARSYMCPU Compute the row and column indices of lower symmetric
 % part of global stiffness matrix for a SCALAR problem.
-%   INDEXSCALARSYM(elements) returns the rows "iK" and columns "jK" position
+%   INDEXSCALARSYMCPU(elements) returns the rows "iK" and columns "jK" position
 %   of all element stiffness matrices in the global system for a finite
 %   element analysis of a scalar problem in a three-dimensional domain
 %   taking advantage of symmetry, where "elements" is the connectivity
 %   matrix.
 %
-%   See also ASSEMBLYSCALARSYM, ASSEMBLYSCALARSYMGPU, INDEXSCALARSYMGPU
+%   See also STIFFMATGENSCSYM, STIFFMATGENSCSYMGPU
 %
 %   For more information, see <a href="matlab:
 %   web('https://github.com/fjramireg/MatGen')">the MatGen Web site</a>.

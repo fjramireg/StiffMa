@@ -1,13 +1,13 @@
 function ke = Hex8scalarSym(X,c,L)
 % HEX8SCALARSYM Compute the lower symmetric part of the element stiffness
 % matrix for a SCALAR problem taking advantage of simmetry.
-%   HEX8SCALARSYM(X,c,L) returns the element stiffness matrix "ke" from finite
-%   element analysis of scalar problems in a three-dimensional domain
-%   taking advantage of symmetry, where "X" is the nodal coordinates of
-%   element "e", "c" the material property for an isotropic material, and
-%   "L" the shape function derivatives for the HEX8 elements.
+%   HEX8SCALARSYM(X,c,L) returns the element stiffness matrix "ke" from
+%   finite element analysis of scalar problems in a three-dimensional
+%   domain taking advantage of symmetry, where "X" is the nodal coordinates
+%   of element "e", "c" the material property for an isotropic material,
+%   and "L" the shape function derivatives for the HEX8 elements.
 %
-%   See also ASSEMBLYSCALAR, ASSEMBLYSCALARSYM, HEX8SCALAR, HEX8SCALARSYMGPU
+%   See also STIFFMATGENSCSYM, HEX8SCALAR, HEX8SCALARSYMGPU
 %
 %   For more information, see <a href="matlab:
 %   web('https://github.com/fjramireg/MatGen')">the MatGen Web site</a>.
