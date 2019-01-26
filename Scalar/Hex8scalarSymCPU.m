@@ -26,3 +26,4 @@ for e = 1:nel                       % Loop over elements
     X = nodes(n,:);                 % Nodal coordinates of the element 'e'
     Ke(:,e) = Hex8scalarSym(X,c,L); % Symmetric part of ke
 end
+Ke = Ke(:);
