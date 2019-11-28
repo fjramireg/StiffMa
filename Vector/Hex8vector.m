@@ -5,7 +5,7 @@ function ke = Hex8vector(X,D)
 %   where "X" is the nodal coordinates of element "e" and "D" the material
 %   property matrix for an isotropic material. 
 % 
-%   See also ASSEMBLYVECTOR, HEX8VECTORSYM, HEX8VECTORSYMGPU
+%   See also STIFFMATGENVC, STIFFMATGENVCSYMCPU, STIFFMATGENVCSYMCPUP
 % 
 %   For more information, see <a href="matlab: 
 %   web('https://github.com/fjramireg/MatGen')">the MatGen Web site</a>.

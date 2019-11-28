@@ -1,7 +1,7 @@
 function Ke = Hex8scalarSymCPU(elements,nodes,c)
 % HEX8SCALARSYMCPU Compute the lower symmetric part of all the element
 % stiffness matrices for a SCALAR problem taking advantage of simmetry on
-% CPU by a serial code.
+% the CPU by using a serial code.
 %   HEX8SCALARSYMCPU(elements,nodes,c) returns the element stiffness
 %   matrix "ke" for all elements in a finite element analysis of scalar
 %   problems in a three-dimensional domain taking advantage of symmetry but
@@ -9,7 +9,7 @@ function Ke = Hex8scalarSymCPU(elements,nodes,c)
 %   matrix, "nodes" the nodal coordinates, and "c" the material property
 %   for an isotropic material.
 %
-%   See also STIFFMATGENSCSYM, HEX8SCALAR, HEX8SCALARSYM, HEX8SCALARSYMGPU
+%   See also STIFFMATGENSCSYMCPU, HEX8SCALAR, HEX8SCALARSYM, HEX8SCALARSYMGPU
 %
 %   For more information, see <a href="matlab:
 %   web('https://github.com/fjramireg/MatGen')">the MatGen Web site</a>.

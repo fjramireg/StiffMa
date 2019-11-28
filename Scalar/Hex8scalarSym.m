@@ -7,7 +7,7 @@ function ke = Hex8scalarSym(X,c,L)
 %   of element "e", "c" the material property for an isotropic material,
 %   and "L" the shape function derivatives for the HEX8 elements.
 %
-%   See also STIFFMATGENSCSYM, HEX8SCALAR, HEX8SCALARSYMGPU
+%   See also STIFFMATGENSCSYMCPU, HEX8SCALAR, HEX8SCALARSYMCPU, HEX8SCALARSYMCPUp
 %
 %   For more information, see <a href="matlab:
 %   web('https://github.com/fjramireg/MatGen')">the MatGen Web site</a>.

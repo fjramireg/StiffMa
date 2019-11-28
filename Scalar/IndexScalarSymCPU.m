@@ -7,7 +7,7 @@ function [iK, jK] = IndexScalarSymCPU(elements)
 %   taking advantage of symmetry, where "elements" is the connectivity
 %   matrix.
 %
-%   See also STIFFMATGENSCSYM, STIFFMATGENSCSYMGPU
+%   See also STIFFMATGENSCSYMCPU, STIFFMATGENSCSYMGPU
 %
 %   For more information, see <a href="matlab:
 %   web('https://github.com/fjramireg/MatGen')">the MatGen Web site</a>.

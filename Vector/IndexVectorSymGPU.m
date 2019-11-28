@@ -8,7 +8,7 @@ function [iK, jK] = IndexVectorSymGPU(elements)
 %   domain taking advantage of symmetry and GPU computing, where "elements"
 %   is the connectivity matrix. 
 %
-%   See also ASSEMBLYVECTORSYM, ASSEMBLYVECTORSYMGPU, INDEXVECTORSYM
+%   See also STIFFMATGENVCSYMGPU, INDEXVECTORSYMCPU, INDEXVECTORSYMCPUP
 %
 %   For more information, see <a href="matlab:
 %   web('https://github.com/fjramireg/MatGen')">the MatGen Web site</a>.

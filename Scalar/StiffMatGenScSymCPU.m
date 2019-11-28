@@ -7,7 +7,7 @@ function K = StiffMatGenScSymCPU(elements,nodes,c)
 %   is the connectivity matrix, "nodes" the nodal coordinates, and "c" the
 %   material property for an isotropic material.
 %
-%   See also SPARSE, ACCUMARRAY, STIFFMATGENSC, STIFFMATGENSCSYMGPU
+%   See also SPARSE, ACCUMARRAY, STIFFMATGENSC, STIFFMATGENSCSYMCPUP
 %
 %   For more information, see <a href="matlab:
 %   web('https://github.com/fjramireg/MatGen')">the MatGen Web site</a>.

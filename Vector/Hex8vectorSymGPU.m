@@ -9,14 +9,14 @@ function KE = Hex8vectorSymGPU(elements,nodes,E,nu)
 %   nodal coordinates, and "E" (Young's modulus) and "nu" (Poisson ratio)
 %   the material property for an isotropic material.
 %
-%   See also ASSEMBLYVECTOR, HEX8VECTOR, HEX8VECTORSYM
+%   See also HEX8VECTOR, HEX8VECTORSYM, STIFFMATGENVCSYMGPU
 %
 %   For more information, see <a href="matlab:
 %   web('https://github.com/fjramireg/MatGen')">the MatGen Web site</a>.
 
 %   Written by Francisco Javier Ramirez-Gil, fjramireg@gmail.com
 %   Universidad Nacional de Colombia - Medellin
-%   Created: 16/01/2019. Modified: 21/01/2019. Version: 1.3
+%   Created: 16/01/2019. Modified: 28/01/2019. Version: 1.3
 
 % General variables
 dTypeE = classUnderlying(elements);     % Data precision of "elements"

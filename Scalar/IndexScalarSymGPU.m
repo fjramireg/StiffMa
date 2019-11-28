@@ -8,7 +8,7 @@ function [iK, jK] = IndexScalarSymGPU(elements)
 %   taking advantage of symmetry and GPU computing, where "elements" is the
 %   connectivity matrix.
 %
-%   See also INDEXSCALARSYMCPU, STIFFMATGENSCSYMGPU
+%   See also INDEXSCALARSYMCPU, INDEXSCALARSYMCPUP, STIFFMATGENSCSYMGPU
 %
 %   For more information, see <a href="matlab:
 %   web('https://github.com/fjramireg/MatGen')">the MatGen Web site</a>.

@@ -5,7 +5,7 @@ function ke = Hex8scalar(X,c)
 %   where "X" is the nodal coordinates of element "e" and "c" the material
 %   property for an isotropic material.
 %
-%   See also STIFFMATGENSC, STIFFMATGENSCSYM, HEX8SCALARSYM, HEX8SCALARSYMGPU
+%   See also STIFFMATGENSC, HEX8SCALARSYM, HEX8SCALARSYMGPU
 %
 %   For more information, see <a href="matlab:
 %   web('https://github.com/fjramireg/MatGen')">the MatGen Web site</a>.

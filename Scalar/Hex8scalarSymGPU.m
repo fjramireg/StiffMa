@@ -9,7 +9,7 @@ function KE = Hex8scalarSymGPU(elements,nodes,c)
 %   nodal coordinates, and "c" the material property for an isotropic
 %   material.
 %
-%   See also HEX8SCALAR, HEX8SCALARSYM, HEX8SCALARSYMCPU, STIFFMATGENSCSYMGPU
+%   See also HEX8SCALARSYMCPU, HEX8SCALARSYMCPUP, STIFFMATGENSCSYMGPU
 %
 %   For more information, see <a href="matlab:
 %   web('https://github.com/fjramireg/MatGen')">the MatGen Web site</a>.

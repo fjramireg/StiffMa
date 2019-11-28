@@ -1,0 +1,4188 @@
+
+                            < M A T L A B (R) >
+                  Copyright 1984-2018 The MathWorks, Inc.
+                  R2018b (9.5.0.944444) 64-bit (glnxa64)
+                              August 28, 2018
+
+ 
+For online documentation, see https://www.mathworks.com/support
+For product information, visit www.mathworks.com.
+ 
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 10x10x10 (1000)
+Date type for 'elements': 'int32'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Type of code: 'GPU'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_S_GPU
+........
+================================================================================
+perftestLNX_S_GPU/TransferToGPUMemory was filtered.
+    Test Diagnostic: The MeasuredTime should not be too close to the precision of the framework.
+================================================================================
+.. .......... .....
+Done perftestLNX_S_GPU
+__________
+
+Failure Summary:
+
+     Name                                   Failed  Incomplete  Reason(s)
+    ====================================================================================
+     perftestLNX_S_GPU/TransferToGPUMemory              X       Filtered by assumption.
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 10x10x10 (1000)
+Date type for 'elements': 'int32'
+Date type for 'nodes': 'single'
+Problem type: 'Vector'
+Type of code: 'GPU'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_V_GPU
+........
+================================================================================
+perftestLNX_V_GPU/TransferToGPUMemory was filtered.
+    Test Diagnostic: The MeasuredTime should not be too close to the precision of the framework.
+================================================================================
+.. .......... ....
+Done perftestLNX_V_GPU
+__________
+
+Failure Summary:
+
+     Name                                   Failed  Incomplete  Reason(s)
+    ====================================================================================
+     perftestLNX_V_GPU/TransferToGPUMemory              X       Filtered by assumption.
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 10x10x10 (1000)
+Date type for 'elements': 'int32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Type of code: 'GPU'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_S_GPU
+........
+================================================================================
+perftestLNX_S_GPU/TransferToGPUMemory was filtered.
+    Test Diagnostic: The MeasuredTime should not be too close to the precision of the framework.
+================================================================================
+.. .......... .......... ..
+================================================================================
+perftestLNX_S_GPU/AssemblyOfGlobalSparseMatrixOnGPU was filtered.
+    Test Diagnostic: The MeasuredTime should not be too close to the precision of the framework.
+================================================================================
+
+Done perftestLNX_S_GPU
+__________
+
+Failure Summary:
+
+     Name                                                 Failed  Incomplete  Reason(s)
+    ==================================================================================================
+     perftestLNX_S_GPU/TransferToGPUMemory                            X       Filtered by assumption.
+    --------------------------------------------------------------------------------------------------
+     perftestLNX_S_GPU/AssemblyOfGlobalSparseMatrixOnGPU              X       Filtered by assumption.
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 10x10x10 (1000)
+Date type for 'elements': 'int32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Type of code: 'GPU'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_V_GPU
+........
+================================================================================
+perftestLNX_V_GPU/TransferToGPUMemory was filtered.
+    Test Diagnostic: The MeasuredTime should not be too close to the precision of the framework.
+================================================================================
+.. .......... .......... ..
+================================================================================
+perftestLNX_V_GPU/AssemblyOfGlobalSparseMatrixOnGPU was filtered.
+    Test Diagnostic: The MeasuredTime should not be too close to the precision of the framework.
+================================================================================
+
+Done perftestLNX_V_GPU
+__________
+
+Failure Summary:
+
+     Name                                                 Failed  Incomplete  Reason(s)
+    ==================================================================================================
+     perftestLNX_V_GPU/TransferToGPUMemory                            X       Filtered by assumption.
+    --------------------------------------------------------------------------------------------------
+     perftestLNX_V_GPU/AssemblyOfGlobalSparseMatrixOnGPU              X       Filtered by assumption.
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 10x10x10 (1000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Type of code: 'GPU'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_S_GPU
+........
+================================================================================
+perftestLNX_S_GPU/TransferToGPUMemory was filtered.
+    Test Diagnostic: The MeasuredTime should not be too close to the precision of the framework.
+================================================================================
+.. .......... ....
+Done perftestLNX_S_GPU
+__________
+
+Failure Summary:
+
+     Name                                   Failed  Incomplete  Reason(s)
+    ====================================================================================
+     perftestLNX_S_GPU/TransferToGPUMemory              X       Filtered by assumption.
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 10x10x10 (1000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Vector'
+Type of code: 'GPU'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_V_GPU
+........
+================================================================================
+perftestLNX_V_GPU/TransferToGPUMemory was filtered.
+    Test Diagnostic: The MeasuredTime should not be too close to the precision of the framework.
+================================================================================
+.. .......... ....
+Done perftestLNX_V_GPU
+__________
+
+Failure Summary:
+
+     Name                                   Failed  Incomplete  Reason(s)
+    ====================================================================================
+     perftestLNX_V_GPU/TransferToGPUMemory              X       Filtered by assumption.
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 10x10x10 (1000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Type of code: 'GPU'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_S_GPU
+........
+================================================================================
+perftestLNX_S_GPU/TransferToGPUMemory was filtered.
+    Test Diagnostic: The MeasuredTime should not be too close to the precision of the framework.
+================================================================================
+.. .......... .......... ....
+================================================================================
+perftestLNX_S_GPU/AssemblyOfGlobalSparseMatrixOnGPU was filtered.
+    Test Diagnostic: The MeasuredTime should not be too close to the precision of the framework.
+================================================================================
+
+Done perftestLNX_S_GPU
+__________
+
+Failure Summary:
+
+     Name                                                 Failed  Incomplete  Reason(s)
+    ==================================================================================================
+     perftestLNX_S_GPU/TransferToGPUMemory                            X       Filtered by assumption.
+    --------------------------------------------------------------------------------------------------
+     perftestLNX_S_GPU/AssemblyOfGlobalSparseMatrixOnGPU              X       Filtered by assumption.
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 10x10x10 (1000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Type of code: 'GPU'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_V_GPU
+........
+================================================================================
+perftestLNX_V_GPU/TransferToGPUMemory was filtered.
+    Test Diagnostic: The MeasuredTime should not be too close to the precision of the framework.
+================================================================================
+.. .......... .......... ..
+================================================================================
+perftestLNX_V_GPU/AssemblyOfGlobalSparseMatrixOnGPU was filtered.
+    Test Diagnostic: The MeasuredTime should not be too close to the precision of the framework.
+================================================================================
+
+Done perftestLNX_V_GPU
+__________
+
+Failure Summary:
+
+     Name                                                 Failed  Incomplete  Reason(s)
+    ==================================================================================================
+     perftestLNX_V_GPU/TransferToGPUMemory                            X       Filtered by assumption.
+    --------------------------------------------------------------------------------------------------
+     perftestLNX_V_GPU/AssemblyOfGlobalSparseMatrixOnGPU              X       Filtered by assumption.
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 10x10x10 (1000)
+Date type for 'elements': 'int64'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Type of code: 'GPU'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_S_GPU
+........
+================================================================================
+perftestLNX_S_GPU/TransferToGPUMemory was filtered.
+    Test Diagnostic: The MeasuredTime should not be too close to the precision of the framework.
+================================================================================
+.. .......... .......... ..
+================================================================================
+perftestLNX_S_GPU/AssemblyOfGlobalSparseMatrixOnGPU was filtered.
+    Test Diagnostic: The MeasuredTime should not be too close to the precision of the framework.
+================================================================================
+
+Done perftestLNX_S_GPU
+__________
+
+Failure Summary:
+
+     Name                                                 Failed  Incomplete  Reason(s)
+    ==================================================================================================
+     perftestLNX_S_GPU/TransferToGPUMemory                            X       Filtered by assumption.
+    --------------------------------------------------------------------------------------------------
+     perftestLNX_S_GPU/AssemblyOfGlobalSparseMatrixOnGPU              X       Filtered by assumption.
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 10x10x10 (1000)
+Date type for 'elements': 'int64'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Type of code: 'GPU'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_V_GPU
+........
+================================================================================
+perftestLNX_V_GPU/TransferToGPUMemory was filtered.
+    Test Diagnostic: The MeasuredTime should not be too close to the precision of the framework.
+================================================================================
+.. .......... .......... ..
+================================================================================
+perftestLNX_V_GPU/AssemblyOfGlobalSparseMatrixOnGPU was filtered.
+    Test Diagnostic: The MeasuredTime should not be too close to the precision of the framework.
+================================================================================
+
+Done perftestLNX_V_GPU
+__________
+
+Failure Summary:
+
+     Name                                                 Failed  Incomplete  Reason(s)
+    ==================================================================================================
+     perftestLNX_V_GPU/TransferToGPUMemory                            X       Filtered by assumption.
+    --------------------------------------------------------------------------------------------------
+     perftestLNX_V_GPU/AssemblyOfGlobalSparseMatrixOnGPU              X       Filtered by assumption.
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 10x10x10 (1000)
+Date type for 'elements': 'uint64'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Type of code: 'GPU'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_S_GPU
+........
+================================================================================
+perftestLNX_S_GPU/TransferToGPUMemory was filtered.
+    Test Diagnostic: The MeasuredTime should not be too close to the precision of the framework.
+================================================================================
+.. .......... .......... ..
+================================================================================
+perftestLNX_S_GPU/AssemblyOfGlobalSparseMatrixOnGPU was filtered.
+    Test Diagnostic: The MeasuredTime should not be too close to the precision of the framework.
+================================================================================
+
+Done perftestLNX_S_GPU
+__________
+
+Failure Summary:
+
+     Name                                                 Failed  Incomplete  Reason(s)
+    ==================================================================================================
+     perftestLNX_S_GPU/TransferToGPUMemory                            X       Filtered by assumption.
+    --------------------------------------------------------------------------------------------------
+     perftestLNX_S_GPU/AssemblyOfGlobalSparseMatrixOnGPU              X       Filtered by assumption.
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 10x10x10 (1000)
+Date type for 'elements': 'uint64'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Type of code: 'GPU'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_V_GPU
+........
+================================================================================
+perftestLNX_V_GPU/TransferToGPUMemory was filtered.
+    Test Diagnostic: The MeasuredTime should not be too close to the precision of the framework.
+================================================================================
+.. .......... .......... ..
+================================================================================
+perftestLNX_V_GPU/AssemblyOfGlobalSparseMatrixOnGPU was filtered.
+    Test Diagnostic: The MeasuredTime should not be too close to the precision of the framework.
+================================================================================
+
+Done perftestLNX_V_GPU
+__________
+
+Failure Summary:
+
+     Name                                                 Failed  Incomplete  Reason(s)
+    ==================================================================================================
+     perftestLNX_V_GPU/TransferToGPUMemory                            X       Filtered by assumption.
+    --------------------------------------------------------------------------------------------------
+     perftestLNX_V_GPU/AssemblyOfGlobalSparseMatrixOnGPU              X       Filtered by assumption.
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 10x10x10 (1000)
+Date type for 'elements': 'double'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Type of code: 'GPU'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_S_GPU
+........
+================================================================================
+perftestLNX_S_GPU/TransferToGPUMemory was filtered.
+    Test Diagnostic: The MeasuredTime should not be too close to the precision of the framework.
+================================================================================
+.. .......... .......... ..
+================================================================================
+perftestLNX_S_GPU/AssemblyOfGlobalSparseMatrixOnGPU was filtered.
+    Test Diagnostic: The MeasuredTime should not be too close to the precision of the framework.
+================================================================================
+
+Done perftestLNX_S_GPU
+__________
+
+Failure Summary:
+
+     Name                                                 Failed  Incomplete  Reason(s)
+    ==================================================================================================
+     perftestLNX_S_GPU/TransferToGPUMemory                            X       Filtered by assumption.
+    --------------------------------------------------------------------------------------------------
+     perftestLNX_S_GPU/AssemblyOfGlobalSparseMatrixOnGPU              X       Filtered by assumption.
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 10x10x10 (1000)
+Date type for 'elements': 'double'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Type of code: 'GPU'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_V_GPU
+........
+================================================================================
+perftestLNX_V_GPU/TransferToGPUMemory was filtered.
+    Test Diagnostic: The MeasuredTime should not be too close to the precision of the framework.
+================================================================================
+.. .......... .......... ..
+================================================================================
+perftestLNX_V_GPU/AssemblyOfGlobalSparseMatrixOnGPU was filtered.
+    Test Diagnostic: The MeasuredTime should not be too close to the precision of the framework.
+================================================================================
+
+Done perftestLNX_V_GPU
+__________
+
+Failure Summary:
+
+     Name                                                 Failed  Incomplete  Reason(s)
+    ==================================================================================================
+     perftestLNX_V_GPU/TransferToGPUMemory                            X       Filtered by assumption.
+    --------------------------------------------------------------------------------------------------
+     perftestLNX_V_GPU/AssemblyOfGlobalSparseMatrixOnGPU              X       Filtered by assumption.
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 20x20x20 (8000)
+Date type for 'elements': 'int32'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Type of code: 'GPU'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_S_GPU
+........
+================================================================================
+perftestLNX_S_GPU/TransferToGPUMemory was filtered.
+    Test Diagnostic: The MeasuredTime should not be too close to the precision of the framework.
+================================================================================
+.. .......... .....
+Done perftestLNX_S_GPU
+__________
+
+Failure Summary:
+
+     Name                                   Failed  Incomplete  Reason(s)
+    ====================================================================================
+     perftestLNX_S_GPU/TransferToGPUMemory              X       Filtered by assumption.
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 20x20x20 (8000)
+Date type for 'elements': 'int32'
+Date type for 'nodes': 'single'
+Problem type: 'Vector'
+Type of code: 'GPU'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_V_GPU
+........
+================================================================================
+perftestLNX_V_GPU/TransferToGPUMemory was filtered.
+    Test Diagnostic: The MeasuredTime should not be too close to the precision of the framework.
+================================================================================
+.. .......... ....
+Done perftestLNX_V_GPU
+__________
+
+Failure Summary:
+
+     Name                                   Failed  Incomplete  Reason(s)
+    ====================================================================================
+     perftestLNX_V_GPU/TransferToGPUMemory              X       Filtered by assumption.
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 20x20x20 (8000)
+Date type for 'elements': 'int32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Type of code: 'GPU'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_S_GPU
+........
+================================================================================
+perftestLNX_S_GPU/TransferToGPUMemory was filtered.
+    Test Diagnostic: The MeasuredTime should not be too close to the precision of the framework.
+================================================================================
+.. .......... .......... ..
+================================================================================
+perftestLNX_S_GPU/AssemblyOfGlobalSparseMatrixOnGPU was filtered.
+    Test Diagnostic: The MeasuredTime should not be too close to the precision of the framework.
+================================================================================
+
+Done perftestLNX_S_GPU
+__________
+
+Failure Summary:
+
+     Name                                                 Failed  Incomplete  Reason(s)
+    ==================================================================================================
+     perftestLNX_S_GPU/TransferToGPUMemory                            X       Filtered by assumption.
+    --------------------------------------------------------------------------------------------------
+     perftestLNX_S_GPU/AssemblyOfGlobalSparseMatrixOnGPU              X       Filtered by assumption.
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 20x20x20 (8000)
+Date type for 'elements': 'int32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Type of code: 'GPU'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_V_GPU
+........
+================================================================================
+perftestLNX_V_GPU/TransferToGPUMemory was filtered.
+    Test Diagnostic: The MeasuredTime should not be too close to the precision of the framework.
+================================================================================
+.. .......... .......... ..
+Done perftestLNX_V_GPU
+__________
+
+Failure Summary:
+
+     Name                                   Failed  Incomplete  Reason(s)
+    ====================================================================================
+     perftestLNX_V_GPU/TransferToGPUMemory              X       Filtered by assumption.
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 20x20x20 (8000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Type of code: 'GPU'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_S_GPU
+........
+================================================================================
+perftestLNX_S_GPU/TransferToGPUMemory was filtered.
+    Test Diagnostic: The MeasuredTime should not be too close to the precision of the framework.
+================================================================================
+.. .......... ....
+Done perftestLNX_S_GPU
+__________
+
+Failure Summary:
+
+     Name                                   Failed  Incomplete  Reason(s)
+    ====================================================================================
+     perftestLNX_S_GPU/TransferToGPUMemory              X       Filtered by assumption.
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 20x20x20 (8000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Vector'
+Type of code: 'GPU'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_V_GPU
+........
+================================================================================
+perftestLNX_V_GPU/TransferToGPUMemory was filtered.
+    Test Diagnostic: The MeasuredTime should not be too close to the precision of the framework.
+================================================================================
+.. .......... ....
+Done perftestLNX_V_GPU
+__________
+
+Failure Summary:
+
+     Name                                   Failed  Incomplete  Reason(s)
+    ====================================================================================
+     perftestLNX_V_GPU/TransferToGPUMemory              X       Filtered by assumption.
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 20x20x20 (8000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Type of code: 'GPU'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_S_GPU
+........
+================================================================================
+perftestLNX_S_GPU/TransferToGPUMemory was filtered.
+    Test Diagnostic: The MeasuredTime should not be too close to the precision of the framework.
+================================================================================
+.. .......... .......... ..
+================================================================================
+perftestLNX_S_GPU/AssemblyOfGlobalSparseMatrixOnGPU was filtered.
+    Test Diagnostic: The MeasuredTime should not be too close to the precision of the framework.
+================================================================================
+
+Done perftestLNX_S_GPU
+__________
+
+Failure Summary:
+
+     Name                                                 Failed  Incomplete  Reason(s)
+    ==================================================================================================
+     perftestLNX_S_GPU/TransferToGPUMemory                            X       Filtered by assumption.
+    --------------------------------------------------------------------------------------------------
+     perftestLNX_S_GPU/AssemblyOfGlobalSparseMatrixOnGPU              X       Filtered by assumption.
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 20x20x20 (8000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Type of code: 'GPU'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_V_GPU
+........
+================================================================================
+perftestLNX_V_GPU/TransferToGPUMemory was filtered.
+    Test Diagnostic: The MeasuredTime should not be too close to the precision of the framework.
+================================================================================
+.. .......... .......... ..
+Done perftestLNX_V_GPU
+__________
+
+Failure Summary:
+
+     Name                                   Failed  Incomplete  Reason(s)
+    ====================================================================================
+     perftestLNX_V_GPU/TransferToGPUMemory              X       Filtered by assumption.
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 20x20x20 (8000)
+Date type for 'elements': 'int64'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Type of code: 'GPU'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_S_GPU
+........
+================================================================================
+perftestLNX_S_GPU/TransferToGPUMemory was filtered.
+    Test Diagnostic: The MeasuredTime should not be too close to the precision of the framework.
+================================================================================
+.. .......... .......... ....
+================================================================================
+perftestLNX_S_GPU/AssemblyOfGlobalSparseMatrixOnGPU was filtered.
+    Test Diagnostic: The MeasuredTime should not be too close to the precision of the framework.
+================================================================================
+
+Done perftestLNX_S_GPU
+__________
+
+Failure Summary:
+
+     Name                                                 Failed  Incomplete  Reason(s)
+    ==================================================================================================
+     perftestLNX_S_GPU/TransferToGPUMemory                            X       Filtered by assumption.
+    --------------------------------------------------------------------------------------------------
+     perftestLNX_S_GPU/AssemblyOfGlobalSparseMatrixOnGPU              X       Filtered by assumption.
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 20x20x20 (8000)
+Date type for 'elements': 'int64'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Type of code: 'GPU'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_V_GPU
+........
+================================================================================
+perftestLNX_V_GPU/TransferToGPUMemory was filtered.
+    Test Diagnostic: The MeasuredTime should not be too close to the precision of the framework.
+================================================================================
+.. .......... .......... ..
+Done perftestLNX_V_GPU
+__________
+
+Failure Summary:
+
+     Name                                   Failed  Incomplete  Reason(s)
+    ====================================================================================
+     perftestLNX_V_GPU/TransferToGPUMemory              X       Filtered by assumption.
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 20x20x20 (8000)
+Date type for 'elements': 'uint64'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Type of code: 'GPU'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_S_GPU
+........
+================================================================================
+perftestLNX_S_GPU/TransferToGPUMemory was filtered.
+    Test Diagnostic: The MeasuredTime should not be too close to the precision of the framework.
+================================================================================
+.. .......... .......... ..
+================================================================================
+perftestLNX_S_GPU/AssemblyOfGlobalSparseMatrixOnGPU was filtered.
+    Test Diagnostic: The MeasuredTime should not be too close to the precision of the framework.
+================================================================================
+
+Done perftestLNX_S_GPU
+__________
+
+Failure Summary:
+
+     Name                                                 Failed  Incomplete  Reason(s)
+    ==================================================================================================
+     perftestLNX_S_GPU/TransferToGPUMemory                            X       Filtered by assumption.
+    --------------------------------------------------------------------------------------------------
+     perftestLNX_S_GPU/AssemblyOfGlobalSparseMatrixOnGPU              X       Filtered by assumption.
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 20x20x20 (8000)
+Date type for 'elements': 'uint64'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Type of code: 'GPU'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_V_GPU
+........
+================================================================================
+perftestLNX_V_GPU/TransferToGPUMemory was filtered.
+    Test Diagnostic: The MeasuredTime should not be too close to the precision of the framework.
+================================================================================
+.. .......... .......... ..
+Done perftestLNX_V_GPU
+__________
+
+Failure Summary:
+
+     Name                                   Failed  Incomplete  Reason(s)
+    ====================================================================================
+     perftestLNX_V_GPU/TransferToGPUMemory              X       Filtered by assumption.
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 20x20x20 (8000)
+Date type for 'elements': 'double'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Type of code: 'GPU'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_S_GPU
+........
+================================================================================
+perftestLNX_S_GPU/TransferToGPUMemory was filtered.
+    Test Diagnostic: The MeasuredTime should not be too close to the precision of the framework.
+================================================================================
+.. .......... .......... ...
+================================================================================
+perftestLNX_S_GPU/AssemblyOfGlobalSparseMatrixOnGPU was filtered.
+    Test Diagnostic: The MeasuredTime should not be too close to the precision of the framework.
+================================================================================
+
+Done perftestLNX_S_GPU
+__________
+
+Failure Summary:
+
+     Name                                                 Failed  Incomplete  Reason(s)
+    ==================================================================================================
+     perftestLNX_S_GPU/TransferToGPUMemory                            X       Filtered by assumption.
+    --------------------------------------------------------------------------------------------------
+     perftestLNX_S_GPU/AssemblyOfGlobalSparseMatrixOnGPU              X       Filtered by assumption.
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 20x20x20 (8000)
+Date type for 'elements': 'double'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Type of code: 'GPU'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_V_GPU
+........
+================================================================================
+perftestLNX_V_GPU/TransferToGPUMemory was filtered.
+    Test Diagnostic: The MeasuredTime should not be too close to the precision of the framework.
+================================================================================
+.. .......... .......... ..
+Done perftestLNX_V_GPU
+__________
+
+Failure Summary:
+
+     Name                                   Failed  Incomplete  Reason(s)
+    ====================================================================================
+     perftestLNX_V_GPU/TransferToGPUMemory              X       Filtered by assumption.
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 30x30x30 (27000)
+Date type for 'elements': 'int32'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Type of code: 'GPU'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_S_GPU
+........
+================================================================================
+perftestLNX_S_GPU/TransferToGPUMemory was filtered.
+    Test Diagnostic: The MeasuredTime should not be too close to the precision of the framework.
+================================================================================
+.. .......... ....
+Done perftestLNX_S_GPU
+__________
+
+Failure Summary:
+
+     Name                                   Failed  Incomplete  Reason(s)
+    ====================================================================================
+     perftestLNX_S_GPU/TransferToGPUMemory              X       Filtered by assumption.
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 30x30x30 (27000)
+Date type for 'elements': 'int32'
+Date type for 'nodes': 'single'
+Problem type: 'Vector'
+Type of code: 'GPU'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_V_GPU
+........
+================================================================================
+perftestLNX_V_GPU/TransferToGPUMemory was filtered.
+    Test Diagnostic: The MeasuredTime should not be too close to the precision of the framework.
+================================================================================
+.. .......... ....
+Done perftestLNX_V_GPU
+__________
+
+Failure Summary:
+
+     Name                                   Failed  Incomplete  Reason(s)
+    ====================================================================================
+     perftestLNX_V_GPU/TransferToGPUMemory              X       Filtered by assumption.
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 30x30x30 (27000)
+Date type for 'elements': 'int32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Type of code: 'GPU'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_S_GPU
+........
+================================================================================
+perftestLNX_S_GPU/TransferToGPUMemory was filtered.
+    Test Diagnostic: The MeasuredTime should not be too close to the precision of the framework.
+================================================================================
+.. .......... .......... ..
+Done perftestLNX_S_GPU
+__________
+
+Failure Summary:
+
+     Name                                   Failed  Incomplete  Reason(s)
+    ====================================================================================
+     perftestLNX_S_GPU/TransferToGPUMemory              X       Filtered by assumption.
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 30x30x30 (27000)
+Date type for 'elements': 'int32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Type of code: 'GPU'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_V_GPU
+........
+================================================================================
+perftestLNX_V_GPU/TransferToGPUMemory was filtered.
+    Test Diagnostic: The MeasuredTime should not be too close to the precision of the framework.
+================================================================================
+.. .......... .......... ..
+Done perftestLNX_V_GPU
+__________
+
+Failure Summary:
+
+     Name                                   Failed  Incomplete  Reason(s)
+    ====================================================================================
+     perftestLNX_V_GPU/TransferToGPUMemory              X       Filtered by assumption.
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 30x30x30 (27000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Type of code: 'GPU'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_S_GPU
+........
+================================================================================
+perftestLNX_S_GPU/TransferToGPUMemory was filtered.
+    Test Diagnostic: The MeasuredTime should not be too close to the precision of the framework.
+================================================================================
+.. .......... ....
+Done perftestLNX_S_GPU
+__________
+
+Failure Summary:
+
+     Name                                   Failed  Incomplete  Reason(s)
+    ====================================================================================
+     perftestLNX_S_GPU/TransferToGPUMemory              X       Filtered by assumption.
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 30x30x30 (27000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Vector'
+Type of code: 'GPU'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_V_GPU
+........
+================================================================================
+perftestLNX_V_GPU/TransferToGPUMemory was filtered.
+    Test Diagnostic: The MeasuredTime should not be too close to the precision of the framework.
+================================================================================
+.. .......... ....
+Done perftestLNX_V_GPU
+__________
+
+Failure Summary:
+
+     Name                                   Failed  Incomplete  Reason(s)
+    ====================================================================================
+     perftestLNX_V_GPU/TransferToGPUMemory              X       Filtered by assumption.
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 30x30x30 (27000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Type of code: 'GPU'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_S_GPU
+........
+================================================================================
+perftestLNX_S_GPU/TransferToGPUMemory was filtered.
+    Test Diagnostic: The MeasuredTime should not be too close to the precision of the framework.
+================================================================================
+.. .......... .......... ..
+Done perftestLNX_S_GPU
+__________
+
+Failure Summary:
+
+     Name                                   Failed  Incomplete  Reason(s)
+    ====================================================================================
+     perftestLNX_S_GPU/TransferToGPUMemory              X       Filtered by assumption.
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 30x30x30 (27000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Type of code: 'GPU'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_V_GPU
+........
+================================================================================
+perftestLNX_V_GPU/TransferToGPUMemory was filtered.
+    Test Diagnostic: The MeasuredTime should not be too close to the precision of the framework.
+================================================================================
+.. .......... .......... ..
+Done perftestLNX_V_GPU
+__________
+
+Failure Summary:
+
+     Name                                   Failed  Incomplete  Reason(s)
+    ====================================================================================
+     perftestLNX_V_GPU/TransferToGPUMemory              X       Filtered by assumption.
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 30x30x30 (27000)
+Date type for 'elements': 'int64'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Type of code: 'GPU'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_S_GPU
+........
+================================================================================
+perftestLNX_S_GPU/TransferToGPUMemory was filtered.
+    Test Diagnostic: The MeasuredTime should not be too close to the precision of the framework.
+================================================================================
+.. .......... .......... ..
+Done perftestLNX_S_GPU
+__________
+
+Failure Summary:
+
+     Name                                   Failed  Incomplete  Reason(s)
+    ====================================================================================
+     perftestLNX_S_GPU/TransferToGPUMemory              X       Filtered by assumption.
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 30x30x30 (27000)
+Date type for 'elements': 'int64'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Type of code: 'GPU'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_V_GPU
+........
+================================================================================
+perftestLNX_V_GPU/TransferToGPUMemory was filtered.
+    Test Diagnostic: The MeasuredTime should not be too close to the precision of the framework.
+================================================================================
+.. .......... .......... ..
+Done perftestLNX_V_GPU
+__________
+
+Failure Summary:
+
+     Name                                   Failed  Incomplete  Reason(s)
+    ====================================================================================
+     perftestLNX_V_GPU/TransferToGPUMemory              X       Filtered by assumption.
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 30x30x30 (27000)
+Date type for 'elements': 'uint64'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Type of code: 'GPU'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_S_GPU
+........
+================================================================================
+perftestLNX_S_GPU/TransferToGPUMemory was filtered.
+    Test Diagnostic: The MeasuredTime should not be too close to the precision of the framework.
+================================================================================
+.. .......... .......... ..
+Done perftestLNX_S_GPU
+__________
+
+Failure Summary:
+
+     Name                                   Failed  Incomplete  Reason(s)
+    ====================================================================================
+     perftestLNX_S_GPU/TransferToGPUMemory              X       Filtered by assumption.
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 30x30x30 (27000)
+Date type for 'elements': 'uint64'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Type of code: 'GPU'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_V_GPU
+........
+================================================================================
+perftestLNX_V_GPU/TransferToGPUMemory was filtered.
+    Test Diagnostic: The MeasuredTime should not be too close to the precision of the framework.
+================================================================================
+.. .......... .......... ..
+Done perftestLNX_V_GPU
+__________
+
+Failure Summary:
+
+     Name                                   Failed  Incomplete  Reason(s)
+    ====================================================================================
+     perftestLNX_V_GPU/TransferToGPUMemory              X       Filtered by assumption.
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 30x30x30 (27000)
+Date type for 'elements': 'double'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Type of code: 'GPU'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_S_GPU
+........
+================================================================================
+perftestLNX_S_GPU/TransferToGPUMemory was filtered.
+    Test Diagnostic: The MeasuredTime should not be too close to the precision of the framework.
+================================================================================
+.. .......... .......... ..
+Done perftestLNX_S_GPU
+__________
+
+Failure Summary:
+
+     Name                                   Failed  Incomplete  Reason(s)
+    ====================================================================================
+     perftestLNX_S_GPU/TransferToGPUMemory              X       Filtered by assumption.
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 30x30x30 (27000)
+Date type for 'elements': 'double'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Type of code: 'GPU'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_V_GPU
+........
+================================================================================
+perftestLNX_V_GPU/TransferToGPUMemory was filtered.
+    Test Diagnostic: The MeasuredTime should not be too close to the precision of the framework.
+================================================================================
+.. .......... .......... ..
+Done perftestLNX_V_GPU
+__________
+
+Failure Summary:
+
+     Name                                   Failed  Incomplete  Reason(s)
+    ====================================================================================
+     perftestLNX_V_GPU/TransferToGPUMemory              X       Filtered by assumption.
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 40x40x40 (64000)
+Date type for 'elements': 'int32'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Type of code: 'GPU'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_S_GPU
+........
+================================================================================
+perftestLNX_S_GPU/TransferToGPUMemory was filtered.
+    Test Diagnostic: The MeasuredTime should not be too close to the precision of the framework.
+================================================================================
+.. .......... ....
+Done perftestLNX_S_GPU
+__________
+
+Failure Summary:
+
+     Name                                   Failed  Incomplete  Reason(s)
+    ====================================================================================
+     perftestLNX_S_GPU/TransferToGPUMemory              X       Filtered by assumption.
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 40x40x40 (64000)
+Date type for 'elements': 'int32'
+Date type for 'nodes': 'single'
+Problem type: 'Vector'
+Type of code: 'GPU'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_V_GPU
+........
+================================================================================
+perftestLNX_V_GPU/TransferToGPUMemory was filtered.
+    Test Diagnostic: The MeasuredTime should not be too close to the precision of the framework.
+================================================================================
+.. .......... ....
+Done perftestLNX_V_GPU
+__________
+
+Failure Summary:
+
+     Name                                   Failed  Incomplete  Reason(s)
+    ====================================================================================
+     perftestLNX_V_GPU/TransferToGPUMemory              X       Filtered by assumption.
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 40x40x40 (64000)
+Date type for 'elements': 'int32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Type of code: 'GPU'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_S_GPU
+.......... .......... .......... ..
+Done perftestLNX_S_GPU
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 40x40x40 (64000)
+Date type for 'elements': 'int32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Type of code: 'GPU'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_V_GPU
+.......... .......... .......... ...
+Done perftestLNX_V_GPU
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 40x40x40 (64000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Type of code: 'GPU'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_S_GPU
+........
+================================================================================
+perftestLNX_S_GPU/TransferToGPUMemory was filtered.
+    Test Diagnostic: The MeasuredTime should not be too close to the precision of the framework.
+================================================================================
+.. .......... ....
+Done perftestLNX_S_GPU
+__________
+
+Failure Summary:
+
+     Name                                   Failed  Incomplete  Reason(s)
+    ====================================================================================
+     perftestLNX_S_GPU/TransferToGPUMemory              X       Filtered by assumption.
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 40x40x40 (64000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Vector'
+Type of code: 'GPU'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_V_GPU
+........
+================================================================================
+perftestLNX_V_GPU/TransferToGPUMemory was filtered.
+    Test Diagnostic: The MeasuredTime should not be too close to the precision of the framework.
+================================================================================
+.. .......... ....
+Done perftestLNX_V_GPU
+__________
+
+Failure Summary:
+
+     Name                                   Failed  Incomplete  Reason(s)
+    ====================================================================================
+     perftestLNX_V_GPU/TransferToGPUMemory              X       Filtered by assumption.
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 40x40x40 (64000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Type of code: 'GPU'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_S_GPU
+.......... .......... .......... ...
+Done perftestLNX_S_GPU
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 40x40x40 (64000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Type of code: 'GPU'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_V_GPU
+.......... .......... .......... ..
+Done perftestLNX_V_GPU
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 40x40x40 (64000)
+Date type for 'elements': 'int64'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Type of code: 'GPU'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_S_GPU
+.......... .......... .......... ...
+Done perftestLNX_S_GPU
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 40x40x40 (64000)
+Date type for 'elements': 'int64'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Type of code: 'GPU'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_V_GPU
+.......... .......... .......... ....
+Done perftestLNX_V_GPU
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 40x40x40 (64000)
+Date type for 'elements': 'uint64'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Type of code: 'GPU'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_S_GPU
+.......... .......... .......... .......
+Done perftestLNX_S_GPU
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 40x40x40 (64000)
+Date type for 'elements': 'uint64'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Type of code: 'GPU'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_V_GPU
+.......... .......... .......... ..
+Done perftestLNX_V_GPU
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 40x40x40 (64000)
+Date type for 'elements': 'double'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Type of code: 'GPU'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_S_GPU
+.......... .......... .......... ..
+Done perftestLNX_S_GPU
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 40x40x40 (64000)
+Date type for 'elements': 'double'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Type of code: 'GPU'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_V_GPU
+.......... .......... .......... ....
+Done perftestLNX_V_GPU
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 50x50x50 (125000)
+Date type for 'elements': 'int32'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Type of code: 'GPU'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_S_GPU
+.......... .......... .....
+Done perftestLNX_S_GPU
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 50x50x50 (125000)
+Date type for 'elements': 'int32'
+Date type for 'nodes': 'single'
+Problem type: 'Vector'
+Type of code: 'GPU'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_V_GPU
+.......... .......... .....
+Done perftestLNX_V_GPU
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 50x50x50 (125000)
+Date type for 'elements': 'int32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Type of code: 'GPU'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_S_GPU
+.......... .......... .......... .......
+Done perftestLNX_S_GPU
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 50x50x50 (125000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Type of code: 'GPU'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_S_GPU
+.......... .......... .....
+Done perftestLNX_S_GPU
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 50x50x50 (125000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Vector'
+Type of code: 'GPU'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_V_GPU
+.......... .......... ....
+Done perftestLNX_V_GPU
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 50x50x50 (125000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Type of code: 'GPU'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_S_GPU
+.......... .......... .......... ..
+Done perftestLNX_S_GPU
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 50x50x50 (125000)
+Date type for 'elements': 'int64'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Type of code: 'GPU'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_S_GPU
+.......... .......... .......... .......
+Done perftestLNX_S_GPU
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 50x50x50 (125000)
+Date type for 'elements': 'uint64'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Type of code: 'GPU'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_S_GPU
+.......... .......... .......... ..
+Done perftestLNX_S_GPU
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 50x50x50 (125000)
+Date type for 'elements': 'double'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Type of code: 'GPU'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_S_GPU
+.......... .......... .......... ..
+Done perftestLNX_S_GPU
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 60x60x60 (216000)
+Date type for 'elements': 'int32'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Type of code: 'GPU'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_S_GPU
+.......... .......... ....
+Done perftestLNX_S_GPU
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 60x60x60 (216000)
+Date type for 'elements': 'int32'
+Date type for 'nodes': 'single'
+Problem type: 'Vector'
+Type of code: 'GPU'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_V_GPU
+.......... .......... ....
+Done perftestLNX_V_GPU
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 60x60x60 (216000)
+Date type for 'elements': 'int32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Type of code: 'GPU'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_S_GPU
+.......... .......... .......... ..
+Done perftestLNX_S_GPU
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 60x60x60 (216000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Type of code: 'GPU'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_S_GPU
+.......... .......... ....
+Done perftestLNX_S_GPU
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 60x60x60 (216000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Vector'
+Type of code: 'GPU'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_V_GPU
+.......... .......... ....
+Done perftestLNX_V_GPU
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 60x60x60 (216000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Type of code: 'GPU'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_S_GPU
+.......... .......... .......... .......... ..........
+.
+Done perftestLNX_S_GPU
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 60x60x60 (216000)
+Date type for 'elements': 'int64'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Type of code: 'GPU'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_S_GPU
+.......... .......... .......... ..
+Done perftestLNX_S_GPU
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 60x60x60 (216000)
+Date type for 'elements': 'uint64'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Type of code: 'GPU'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_S_GPU
+.......... .......... .......... ...
+Done perftestLNX_S_GPU
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 60x60x60 (216000)
+Date type for 'elements': 'double'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Type of code: 'GPU'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_S_GPU
+.......... .......... .......... ..
+Done perftestLNX_S_GPU
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 70x70x70 (343000)
+Date type for 'elements': 'int32'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Type of code: 'GPU'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_S_GPU
+.......... .......... ....
+Done perftestLNX_S_GPU
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 70x70x70 (343000)
+Date type for 'elements': 'int32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Type of code: 'GPU'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_S_GPU
+.......... .......... .......... ..
+Done perftestLNX_S_GPU
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 70x70x70 (343000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Type of code: 'GPU'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_S_GPU
+.......... .......... ....
+Done perftestLNX_S_GPU
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 70x70x70 (343000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Type of code: 'GPU'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_S_GPU
+.......... .......... .......... ..
+Done perftestLNX_S_GPU
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 70x70x70 (343000)
+Date type for 'elements': 'int64'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Type of code: 'GPU'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_S_GPU
+.......... .......... .......... ..
+Done perftestLNX_S_GPU
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 70x70x70 (343000)
+Date type for 'elements': 'uint64'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Type of code: 'GPU'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_S_GPU
+.......... .......... .......... ..
+Done perftestLNX_S_GPU
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 70x70x70 (343000)
+Date type for 'elements': 'double'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Type of code: 'GPU'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_S_GPU
+.......... .......... .......... ..
+Done perftestLNX_S_GPU
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 80x80x80 (512000)
+Date type for 'elements': 'int32'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Type of code: 'GPU'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_S_GPU
+.......... .......... ....
+Done perftestLNX_S_GPU
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 80x80x80 (512000)
+Date type for 'elements': 'int32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Type of code: 'GPU'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_S_GPU
+.......... .......... .......... ..
+Done perftestLNX_S_GPU
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 80x80x80 (512000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Type of code: 'GPU'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_S_GPU
+.......... .......... ....
+Done perftestLNX_S_GPU
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 80x80x80 (512000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Type of code: 'GPU'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_S_GPU
+.......... .......... .......... ..
+Done perftestLNX_S_GPU
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 80x80x80 (512000)
+Date type for 'elements': 'int64'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Type of code: 'GPU'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_S_GPU
+.......... .......... .......... ..
+Done perftestLNX_S_GPU
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 80x80x80 (512000)
+Date type for 'elements': 'uint64'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Type of code: 'GPU'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_S_GPU
+.......... .......... .......... ..
+Done perftestLNX_S_GPU
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 80x80x80 (512000)
+Date type for 'elements': 'double'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Type of code: 'GPU'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_S_GPU
+.......... .......... .......... ..
+Done perftestLNX_S_GPU
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 90x90x90 (729000)
+Date type for 'elements': 'int32'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Type of code: 'GPU'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_S_GPU
+.......... .......... ....
+Done perftestLNX_S_GPU
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 90x90x90 (729000)
+Date type for 'elements': 'int32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Type of code: 'GPU'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_S_GPU
+.......... .......... .......... ..
+Done perftestLNX_S_GPU
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 90x90x90 (729000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Type of code: 'GPU'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_S_GPU
+.......... .......... ....
+Done perftestLNX_S_GPU
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 90x90x90 (729000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Type of code: 'GPU'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_S_GPU
+.......... .......... .......... ..
+Done perftestLNX_S_GPU
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 100x100x100 (1000000)
+Date type for 'elements': 'int32'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Type of code: 'GPU'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_S_GPU
+.......... .......... ....
+Done perftestLNX_S_GPU
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 100x100x100 (1000000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Type of code: 'GPU'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_S_GPU
+.......... .......... ....
+Done perftestLNX_S_GPU
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 10x10x10 (1000)
+Date type for 'elements': 'int32'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Type of code: 'CPUp'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_S_CPUp
+........
+================================================================================
+perftestLNX_S_CPUp/IndexComputationOnCPU_parallel_ was filtered.
+    Test Diagnostic: The MeasuredTime should not be too close to the precision of the framework.
+================================================================================
+.. ......
+Done perftestLNX_S_CPUp
+__________
+
+Failure Summary:
+
+     Name                                                Failed  Incomplete  Reason(s)
+    =================================================================================================
+     perftestLNX_S_CPUp/IndexComputationOnCPU_parallel_              X       Filtered by assumption.
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 10x10x10 (1000)
+Date type for 'elements': 'int32'
+Date type for 'nodes': 'single'
+Problem type: 'Vector'
+Type of code: 'CPUp'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_V_CPUp
+.......... ..........
+Done perftestLNX_V_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 10x10x10 (1000)
+Date type for 'elements': 'int32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Type of code: 'CPUp'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_S_CPUp
+........
+================================================================================
+perftestLNX_S_CPUp/IndexComputationOnCPU_parallel_ was filtered.
+    Test Diagnostic: The MeasuredTime should not be too close to the precision of the framework.
+================================================================================
+.. .......... ....
+Done perftestLNX_S_CPUp
+__________
+
+Failure Summary:
+
+     Name                                                Failed  Incomplete  Reason(s)
+    =================================================================================================
+     perftestLNX_S_CPUp/IndexComputationOnCPU_parallel_              X       Filtered by assumption.
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 10x10x10 (1000)
+Date type for 'elements': 'int32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Type of code: 'CPUp'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_V_CPUp
+.......... .......... ....
+Done perftestLNX_V_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 10x10x10 (1000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Type of code: 'CPUp'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_S_CPUp
+........
+================================================================================
+perftestLNX_S_CPUp/IndexComputationOnCPU_parallel_ was filtered.
+    Test Diagnostic: The MeasuredTime should not be too close to the precision of the framework.
+================================================================================
+.. ......
+Done perftestLNX_S_CPUp
+__________
+
+Failure Summary:
+
+     Name                                                Failed  Incomplete  Reason(s)
+    =================================================================================================
+     perftestLNX_S_CPUp/IndexComputationOnCPU_parallel_              X       Filtered by assumption.
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 10x10x10 (1000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Vector'
+Type of code: 'CPUp'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_V_CPUp
+.......... ......
+Done perftestLNX_V_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 10x10x10 (1000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Type of code: 'CPUp'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_S_CPUp
+........
+================================================================================
+perftestLNX_S_CPUp/IndexComputationOnCPU_parallel_ was filtered.
+    Test Diagnostic: The MeasuredTime should not be too close to the precision of the framework.
+================================================================================
+.. .......... ....
+Done perftestLNX_S_CPUp
+__________
+
+Failure Summary:
+
+     Name                                                Failed  Incomplete  Reason(s)
+    =================================================================================================
+     perftestLNX_S_CPUp/IndexComputationOnCPU_parallel_              X       Filtered by assumption.
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 10x10x10 (1000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Type of code: 'CPUp'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_V_CPUp
+.......... .......... ....
+Done perftestLNX_V_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 10x10x10 (1000)
+Date type for 'elements': 'int64'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Type of code: 'CPUp'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_S_CPUp
+.......... .......... ....
+Done perftestLNX_S_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 10x10x10 (1000)
+Date type for 'elements': 'int64'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Type of code: 'CPUp'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_V_CPUp
+.......... .......... ....
+Done perftestLNX_V_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 10x10x10 (1000)
+Date type for 'elements': 'uint64'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Type of code: 'CPUp'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_S_CPUp
+.......... .......... ....
+Done perftestLNX_S_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 10x10x10 (1000)
+Date type for 'elements': 'uint64'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Type of code: 'CPUp'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_V_CPUp
+.......... .......... ....
+Done perftestLNX_V_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 10x10x10 (1000)
+Date type for 'elements': 'double'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Type of code: 'CPUp'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_S_CPUp
+........
+================================================================================
+perftestLNX_S_CPUp/IndexComputationOnCPU_parallel_ was filtered.
+    Test Diagnostic: The MeasuredTime should not be too close to the precision of the framework.
+================================================================================
+.. .......... ....
+Done perftestLNX_S_CPUp
+__________
+
+Failure Summary:
+
+     Name                                                Failed  Incomplete  Reason(s)
+    =================================================================================================
+     perftestLNX_S_CPUp/IndexComputationOnCPU_parallel_              X       Filtered by assumption.
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 10x10x10 (1000)
+Date type for 'elements': 'double'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Type of code: 'CPUp'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_V_CPUp
+.......... .......... ....
+Done perftestLNX_V_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 20x20x20 (8000)
+Date type for 'elements': 'int32'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Type of code: 'CPUp'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_S_CPUp
+.......... ......
+Done perftestLNX_S_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 20x20x20 (8000)
+Date type for 'elements': 'int32'
+Date type for 'nodes': 'single'
+Problem type: 'Vector'
+Type of code: 'CPUp'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_V_CPUp
+.......... ......
+Done perftestLNX_V_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 20x20x20 (8000)
+Date type for 'elements': 'int32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Type of code: 'CPUp'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_S_CPUp
+.......... .......... ....
+Done perftestLNX_S_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 20x20x20 (8000)
+Date type for 'elements': 'int32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Type of code: 'CPUp'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_V_CPUp
+.......... .......... ....
+Done perftestLNX_V_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 20x20x20 (8000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Type of code: 'CPUp'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_S_CPUp
+.......... ......
+Done perftestLNX_S_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 20x20x20 (8000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Vector'
+Type of code: 'CPUp'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_V_CPUp
+.......... ......
+Done perftestLNX_V_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 20x20x20 (8000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Type of code: 'CPUp'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_S_CPUp
+.......... .......... ....
+Done perftestLNX_S_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 20x20x20 (8000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Type of code: 'CPUp'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_V_CPUp
+.......... .......... ....
+Done perftestLNX_V_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 20x20x20 (8000)
+Date type for 'elements': 'int64'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Type of code: 'CPUp'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_S_CPUp
+.......... .......... ....
+Done perftestLNX_S_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 20x20x20 (8000)
+Date type for 'elements': 'int64'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Type of code: 'CPUp'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_V_CPUp
+.......... .......... ....
+Done perftestLNX_V_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 20x20x20 (8000)
+Date type for 'elements': 'uint64'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Type of code: 'CPUp'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_S_CPUp
+.......... .......... ....
+Done perftestLNX_S_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 20x20x20 (8000)
+Date type for 'elements': 'uint64'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Type of code: 'CPUp'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_V_CPUp
+.......... .......... ....
+Done perftestLNX_V_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 20x20x20 (8000)
+Date type for 'elements': 'double'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Type of code: 'CPUp'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_S_CPUp
+.......... .......... ....
+Done perftestLNX_S_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 20x20x20 (8000)
+Date type for 'elements': 'double'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Type of code: 'CPUp'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_V_CPUp
+.......... .......... ....
+Done perftestLNX_V_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 30x30x30 (27000)
+Date type for 'elements': 'int32'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Type of code: 'CPUp'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_S_CPUp
+.......... ......
+Done perftestLNX_S_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 30x30x30 (27000)
+Date type for 'elements': 'int32'
+Date type for 'nodes': 'single'
+Problem type: 'Vector'
+Type of code: 'CPUp'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_V_CPUp
+.......... ......
+Done perftestLNX_V_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 30x30x30 (27000)
+Date type for 'elements': 'int32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Type of code: 'CPUp'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_S_CPUp
+.......... .......... ....
+Done perftestLNX_S_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 30x30x30 (27000)
+Date type for 'elements': 'int32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Type of code: 'CPUp'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_V_CPUp
+.......... .......... ....
+Done perftestLNX_V_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 30x30x30 (27000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Type of code: 'CPUp'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_S_CPUp
+.......... ......
+Done perftestLNX_S_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 30x30x30 (27000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Vector'
+Type of code: 'CPUp'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_V_CPUp
+.......... ......
+Done perftestLNX_V_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 30x30x30 (27000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Type of code: 'CPUp'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_S_CPUp
+.......... .......... ....
+Done perftestLNX_S_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 30x30x30 (27000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Type of code: 'CPUp'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_V_CPUp
+.......... .......... ....
+Done perftestLNX_V_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 30x30x30 (27000)
+Date type for 'elements': 'int64'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Type of code: 'CPUp'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_S_CPUp
+.......... .......... ....
+Done perftestLNX_S_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 30x30x30 (27000)
+Date type for 'elements': 'int64'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Type of code: 'CPUp'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_V_CPUp
+.......... .......... ....
+Done perftestLNX_V_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 30x30x30 (27000)
+Date type for 'elements': 'uint64'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Type of code: 'CPUp'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_S_CPUp
+.......... .......... ....
+Done perftestLNX_S_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 30x30x30 (27000)
+Date type for 'elements': 'uint64'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Type of code: 'CPUp'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_V_CPUp
+.......... .......... ....
+Done perftestLNX_V_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 30x30x30 (27000)
+Date type for 'elements': 'double'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Type of code: 'CPUp'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_S_CPUp
+.......... .......... ....
+Done perftestLNX_S_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 30x30x30 (27000)
+Date type for 'elements': 'double'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Type of code: 'CPUp'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_V_CPUp
+.......... .......... ....
+Done perftestLNX_V_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 40x40x40 (64000)
+Date type for 'elements': 'int32'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Type of code: 'CPUp'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_S_CPUp
+.......... ......
+Done perftestLNX_S_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 40x40x40 (64000)
+Date type for 'elements': 'int32'
+Date type for 'nodes': 'single'
+Problem type: 'Vector'
+Type of code: 'CPUp'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_V_CPUp
+.......... ......
+Done perftestLNX_V_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 40x40x40 (64000)
+Date type for 'elements': 'int32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Type of code: 'CPUp'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_S_CPUp
+.......... .......... ....
+Done perftestLNX_S_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 40x40x40 (64000)
+Date type for 'elements': 'int32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Type of code: 'CPUp'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_V_CPUp
+.......... .......... ....
+Done perftestLNX_V_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 40x40x40 (64000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Type of code: 'CPUp'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_S_CPUp
+.......... ......
+Done perftestLNX_S_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 40x40x40 (64000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Vector'
+Type of code: 'CPUp'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_V_CPUp
+.......... ......
+Done perftestLNX_V_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 40x40x40 (64000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Type of code: 'CPUp'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_S_CPUp
+.......... .......... ....
+Done perftestLNX_S_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 40x40x40 (64000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Type of code: 'CPUp'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_V_CPUp
+.......... .......... ....
+Done perftestLNX_V_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 40x40x40 (64000)
+Date type for 'elements': 'int64'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Type of code: 'CPUp'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_S_CPUp
+.......... .......... ....
+Done perftestLNX_S_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 40x40x40 (64000)
+Date type for 'elements': 'int64'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Type of code: 'CPUp'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_V_CPUp
+.......... .......... ....
+Done perftestLNX_V_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 40x40x40 (64000)
+Date type for 'elements': 'uint64'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Type of code: 'CPUp'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_S_CPUp
+.......... .......... ....
+Done perftestLNX_S_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 40x40x40 (64000)
+Date type for 'elements': 'uint64'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Type of code: 'CPUp'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_V_CPUp
+.......... .......... ....
+Done perftestLNX_V_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 40x40x40 (64000)
+Date type for 'elements': 'double'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Type of code: 'CPUp'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_S_CPUp
+.......... .......... ....
+Done perftestLNX_S_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 40x40x40 (64000)
+Date type for 'elements': 'double'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Type of code: 'CPUp'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_V_CPUp
+.......... .......... ....
+Done perftestLNX_V_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 50x50x50 (125000)
+Date type for 'elements': 'int32'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Type of code: 'CPUp'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_S_CPUp
+.......... ......
+Done perftestLNX_S_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 50x50x50 (125000)
+Date type for 'elements': 'int32'
+Date type for 'nodes': 'single'
+Problem type: 'Vector'
+Type of code: 'CPUp'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_V_CPUp
+.......... ......
+Done perftestLNX_V_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 50x50x50 (125000)
+Date type for 'elements': 'int32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Type of code: 'CPUp'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_S_CPUp
+.......... .......... ....
+Done perftestLNX_S_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 50x50x50 (125000)
+Date type for 'elements': 'int32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Type of code: 'CPUp'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_V_CPUp
+.......... .......... ....
+Done perftestLNX_V_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 50x50x50 (125000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Type of code: 'CPUp'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_S_CPUp
+.......... ......
+Done perftestLNX_S_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 50x50x50 (125000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Vector'
+Type of code: 'CPUp'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_V_CPUp
+.......... ......
+Done perftestLNX_V_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 50x50x50 (125000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Type of code: 'CPUp'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_S_CPUp
+.......... .......... ....
+Done perftestLNX_S_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 50x50x50 (125000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Type of code: 'CPUp'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_V_CPUp
+.......... .......... ....
+Done perftestLNX_V_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 50x50x50 (125000)
+Date type for 'elements': 'int64'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Type of code: 'CPUp'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_S_CPUp
+.......... .......... ....
+Done perftestLNX_S_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 50x50x50 (125000)
+Date type for 'elements': 'int64'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Type of code: 'CPUp'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_V_CPUp
+.......... .......... ....
+Done perftestLNX_V_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 50x50x50 (125000)
+Date type for 'elements': 'uint64'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Type of code: 'CPUp'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_S_CPUp
+.......... .......... ....
+Done perftestLNX_S_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 50x50x50 (125000)
+Date type for 'elements': 'uint64'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Type of code: 'CPUp'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_V_CPUp
+.......... .......... ....
+Done perftestLNX_V_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 50x50x50 (125000)
+Date type for 'elements': 'double'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Type of code: 'CPUp'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_S_CPUp
+.......... .......... ....
+Done perftestLNX_S_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 50x50x50 (125000)
+Date type for 'elements': 'double'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Type of code: 'CPUp'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_V_CPUp
+.......... .......... ....
+Done perftestLNX_V_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 60x60x60 (216000)
+Date type for 'elements': 'int32'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Type of code: 'CPUp'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_S_CPUp
+.......... ......
+Done perftestLNX_S_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 60x60x60 (216000)
+Date type for 'elements': 'int32'
+Date type for 'nodes': 'single'
+Problem type: 'Vector'
+Type of code: 'CPUp'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_V_CPUp
+.......... ......
+Done perftestLNX_V_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 60x60x60 (216000)
+Date type for 'elements': 'int32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Type of code: 'CPUp'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_S_CPUp
+.......... .......... ....
+Done perftestLNX_S_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 60x60x60 (216000)
+Date type for 'elements': 'int32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Type of code: 'CPUp'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_V_CPUp
+.......... .......... ....
+Done perftestLNX_V_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 60x60x60 (216000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Type of code: 'CPUp'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_S_CPUp
+.......... ......
+Done perftestLNX_S_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 60x60x60 (216000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Vector'
+Type of code: 'CPUp'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_V_CPUp
+.......... ......
+Done perftestLNX_V_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 60x60x60 (216000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Type of code: 'CPUp'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_S_CPUp
+.......... .......... ....
+Done perftestLNX_S_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 60x60x60 (216000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Type of code: 'CPUp'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_V_CPUp
+.......... .......... ....
+Done perftestLNX_V_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 60x60x60 (216000)
+Date type for 'elements': 'int64'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Type of code: 'CPUp'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_S_CPUp
+.......... .......... ....
+Done perftestLNX_S_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 60x60x60 (216000)
+Date type for 'elements': 'int64'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Type of code: 'CPUp'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_V_CPUp
+.......... .......... ....
+Done perftestLNX_V_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 60x60x60 (216000)
+Date type for 'elements': 'uint64'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Type of code: 'CPUp'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_S_CPUp
+.......... .......... ....
+Done perftestLNX_S_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 60x60x60 (216000)
+Date type for 'elements': 'uint64'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Type of code: 'CPUp'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_V_CPUp
+.......... .......... ....
+Done perftestLNX_V_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 60x60x60 (216000)
+Date type for 'elements': 'double'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Type of code: 'CPUp'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_S_CPUp
+.......... .......... ....
+Done perftestLNX_S_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 60x60x60 (216000)
+Date type for 'elements': 'double'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Type of code: 'CPUp'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_V_CPUp
+.......... .......... ....
+Done perftestLNX_V_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 70x70x70 (343000)
+Date type for 'elements': 'int32'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Type of code: 'CPUp'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_S_CPUp
+.......... ......
+Done perftestLNX_S_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 70x70x70 (343000)
+Date type for 'elements': 'int32'
+Date type for 'nodes': 'single'
+Problem type: 'Vector'
+Type of code: 'CPUp'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_V_CPUp
+.......... ......
+Done perftestLNX_V_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 70x70x70 (343000)
+Date type for 'elements': 'int32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Type of code: 'CPUp'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_S_CPUp
+.......... .......... ....
+Done perftestLNX_S_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 70x70x70 (343000)
+Date type for 'elements': 'int32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Type of code: 'CPUp'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_V_CPUp
+.......... .......... ....
+Done perftestLNX_V_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 70x70x70 (343000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Type of code: 'CPUp'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_S_CPUp
+.......... ......
+Done perftestLNX_S_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 70x70x70 (343000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Vector'
+Type of code: 'CPUp'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_V_CPUp
+.......... ......
+Done perftestLNX_V_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 70x70x70 (343000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Type of code: 'CPUp'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_S_CPUp
+.......... .......... ....
+Done perftestLNX_S_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 70x70x70 (343000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Type of code: 'CPUp'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_V_CPUp
+.......... .......... ....
+Done perftestLNX_V_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 70x70x70 (343000)
+Date type for 'elements': 'int64'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Type of code: 'CPUp'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_S_CPUp
+.......... .......... ....
+Done perftestLNX_S_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 70x70x70 (343000)
+Date type for 'elements': 'int64'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Type of code: 'CPUp'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_V_CPUp
+.......... .......... ....
+Done perftestLNX_V_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 70x70x70 (343000)
+Date type for 'elements': 'uint64'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Type of code: 'CPUp'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_S_CPUp
+.......... .......... ....
+Done perftestLNX_S_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 70x70x70 (343000)
+Date type for 'elements': 'uint64'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Type of code: 'CPUp'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_V_CPUp
+.......... .......... ....
+Done perftestLNX_V_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 70x70x70 (343000)
+Date type for 'elements': 'double'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Type of code: 'CPUp'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_S_CPUp
+.......... .......... ....
+Done perftestLNX_S_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 70x70x70 (343000)
+Date type for 'elements': 'double'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Type of code: 'CPUp'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_V_CPUp
+.......... .......... ....
+Done perftestLNX_V_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 80x80x80 (512000)
+Date type for 'elements': 'int32'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Type of code: 'CPUp'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_S_CPUp
+.......... ......
+Done perftestLNX_S_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 80x80x80 (512000)
+Date type for 'elements': 'int32'
+Date type for 'nodes': 'single'
+Problem type: 'Vector'
+Type of code: 'CPUp'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_V_CPUp
+.......... ......
+Done perftestLNX_V_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 80x80x80 (512000)
+Date type for 'elements': 'int32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Type of code: 'CPUp'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_S_CPUp
+.......... .......... ....
+Done perftestLNX_S_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 80x80x80 (512000)
+Date type for 'elements': 'int32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Type of code: 'CPUp'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_V_CPUp
+.......... .......... ....
+Done perftestLNX_V_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 80x80x80 (512000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Type of code: 'CPUp'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_S_CPUp
+.......... ......
+Done perftestLNX_S_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 80x80x80 (512000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Vector'
+Type of code: 'CPUp'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_V_CPUp
+.......... ......
+Done perftestLNX_V_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 80x80x80 (512000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Type of code: 'CPUp'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_S_CPUp
+.......... .......... ....
+Done perftestLNX_S_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 80x80x80 (512000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Type of code: 'CPUp'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_V_CPUp
+.......... .......... ....
+Done perftestLNX_V_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 80x80x80 (512000)
+Date type for 'elements': 'int64'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Type of code: 'CPUp'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_S_CPUp
+.......... .......... ....
+Done perftestLNX_S_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 80x80x80 (512000)
+Date type for 'elements': 'int64'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Type of code: 'CPUp'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_V_CPUp
+.......... .......... ....
+Done perftestLNX_V_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 80x80x80 (512000)
+Date type for 'elements': 'uint64'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Type of code: 'CPUp'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_S_CPUp
+.......... .......... ....
+Done perftestLNX_S_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 80x80x80 (512000)
+Date type for 'elements': 'uint64'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Type of code: 'CPUp'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_V_CPUp
+.......... .......... .....
+Done perftestLNX_V_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 80x80x80 (512000)
+Date type for 'elements': 'double'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Type of code: 'CPUp'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_S_CPUp
+.......... .......... ....
+Done perftestLNX_S_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 80x80x80 (512000)
+Date type for 'elements': 'double'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Type of code: 'CPUp'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_V_CPUp
+.......... .......... ....
+Done perftestLNX_V_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 90x90x90 (729000)
+Date type for 'elements': 'int32'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Type of code: 'CPUp'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_S_CPUp
+.......... ......
+Done perftestLNX_S_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 90x90x90 (729000)
+Date type for 'elements': 'int32'
+Date type for 'nodes': 'single'
+Problem type: 'Vector'
+Type of code: 'CPUp'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_V_CPUp
+.......... ......
+Done perftestLNX_V_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 90x90x90 (729000)
+Date type for 'elements': 'int32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Type of code: 'CPUp'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_S_CPUp
+.......... .......... ....
+Done perftestLNX_S_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 90x90x90 (729000)
+Date type for 'elements': 'int32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Type of code: 'CPUp'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_V_CPUp
+.......... ......
+================================================================================
+Error occurred in perftestLNX_V_CPUp/AssemblyOfGlobalSparseMatrixOnCPU and it did not run to completion.
+
+    ---------
+    Error ID:
+    ---------
+    'MATLAB:nomem'
+
+    --------------
+    Error Details:
+    --------------
+    Error using accumarray
+    Out of memory. Type "help memory" for your options.
+    
+    Error in AssemblyStiffMat (line 23)
+        K = accumarray([iK,jK], Ke, [N,N], [], [], 1);
+    
+    Error in perftestLNX_V_CPUp (line 18)
+    K = AssemblyStiffMat(iK,jK,Ke,3*N,dTE,dTN);
+================================================================================
+.
+================================================================================
+Error occurred in perftestLNX_V_CPUp/AssemblyOfGlobalSparseMatrixOnCPU and it did not run to completion.
+
+    ---------
+    Error ID:
+    ---------
+    'MATLAB:nomem'
+
+    --------------
+    Error Details:
+    --------------
+    Error using accumarray
+    Out of memory. Type "help memory" for your options.
+    
+    Error in AssemblyStiffMat (line 23)
+        K = accumarray([iK,jK], Ke, [N,N], [], [], 1);
+    
+    Error in perftestLNX_V_CPUp (line 18)
+    K = AssemblyStiffMat(iK,jK,Ke,3*N,dTE,dTN);
+================================================================================
+.
+================================================================================
+Error occurred in perftestLNX_V_CPUp/AssemblyOfGlobalSparseMatrixOnCPU and it did not run to completion.
+
+    ---------
+    Error ID:
+    ---------
+    'MATLAB:nomem'
+
+    --------------
+    Error Details:
+    --------------
+    Error using accumarray
+    Out of memory. Type "help memory" for your options.
+    
+    Error in AssemblyStiffMat (line 23)
+        K = accumarray([iK,jK], Ke, [N,N], [], [], 1);
+    
+    Error in perftestLNX_V_CPUp (line 18)
+    K = AssemblyStiffMat(iK,jK,Ke,3*N,dTE,dTN);
+================================================================================
+.
+================================================================================
+Error occurred in perftestLNX_V_CPUp/AssemblyOfGlobalSparseMatrixOnCPU and it did not run to completion.
+
+    ---------
+    Error ID:
+    ---------
+    'MATLAB:nomem'
+
+    --------------
+    Error Details:
+    --------------
+    Error using accumarray
+    Out of memory. Type "help memory" for your options.
+    
+    Error in AssemblyStiffMat (line 23)
+        K = accumarray([iK,jK], Ke, [N,N], [], [], 1);
+    
+    Error in perftestLNX_V_CPUp (line 18)
+    K = AssemblyStiffMat(iK,jK,Ke,3*N,dTE,dTN);
+================================================================================
+. 
+================================================================================
+Error occurred in perftestLNX_V_CPUp/AssemblyOfGlobalSparseMatrixOnCPU and it did not run to completion.
+
+    ---------
+    Error ID:
+    ---------
+    'MATLAB:nomem'
+
+    --------------
+    Error Details:
+    --------------
+    Error using accumarray
+    Out of memory. Type "help memory" for your options.
+    
+    Error in AssemblyStiffMat (line 23)
+        K = accumarray([iK,jK], Ke, [N,N], [], [], 1);
+    
+    Error in perftestLNX_V_CPUp (line 18)
+    K = AssemblyStiffMat(iK,jK,Ke,3*N,dTE,dTN);
+================================================================================
+.
+================================================================================
+Error occurred in perftestLNX_V_CPUp/AssemblyOfGlobalSparseMatrixOnCPU and it did not run to completion.
+
+    ---------
+    Error ID:
+    ---------
+    'MATLAB:nomem'
+
+    --------------
+    Error Details:
+    --------------
+    Error using accumarray
+    Out of memory. Type "help memory" for your options.
+    
+    Error in AssemblyStiffMat (line 23)
+        K = accumarray([iK,jK], Ke, [N,N], [], [], 1);
+    
+    Error in perftestLNX_V_CPUp (line 18)
+    K = AssemblyStiffMat(iK,jK,Ke,3*N,dTE,dTN);
+================================================================================
+.
+================================================================================
+Error occurred in perftestLNX_V_CPUp/AssemblyOfGlobalSparseMatrixOnCPU and it did not run to completion.
+
+    ---------
+    Error ID:
+    ---------
+    'MATLAB:nomem'
+
+    --------------
+    Error Details:
+    --------------
+    Error using accumarray
+    Out of memory. Type "help memory" for your options.
+    
+    Error in AssemblyStiffMat (line 23)
+        K = accumarray([iK,jK], Ke, [N,N], [], [], 1);
+    
+    Error in perftestLNX_V_CPUp (line 18)
+    K = AssemblyStiffMat(iK,jK,Ke,3*N,dTE,dTN);
+================================================================================
+.
+================================================================================
+Error occurred in perftestLNX_V_CPUp/AssemblyOfGlobalSparseMatrixOnCPU and it did not run to completion.
+
+    ---------
+    Error ID:
+    ---------
+    'MATLAB:nomem'
+
+    --------------
+    Error Details:
+    --------------
+    Error using accumarray
+    Out of memory. Type "help memory" for your options.
+    
+    Error in AssemblyStiffMat (line 23)
+        K = accumarray([iK,jK], Ke, [N,N], [], [], 1);
+    
+    Error in perftestLNX_V_CPUp (line 18)
+    K = AssemblyStiffMat(iK,jK,Ke,3*N,dTE,dTN);
+================================================================================
+.
+Done perftestLNX_V_CPUp
+__________
+
+Failure Summary:
+
+     Name                                                  Failed  Incomplete  Reason(s)
+    =====================================================================================
+     perftestLNX_V_CPUp/AssemblyOfGlobalSparseMatrixOnCPU    X         X       Errored.
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 90x90x90 (729000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Type of code: 'CPUp'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_S_CPUp
+.......... ......
+Done perftestLNX_S_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 90x90x90 (729000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Vector'
+Type of code: 'CPUp'
+CPU processor: 'AMD FX(tm)-8350 Eight-Core Processor'
+GPU co-processor: 'GeForce GTX 750 Ti'
+
+Running perftestLNX_V_CPUp
+.......... ....

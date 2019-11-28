@@ -1,0 +1,211 @@
+
+==============NVSMI LOG==============
+
+Timestamp                           : Sat Feb 09 11:52:20 2019
+Driver Version                      : 411.31
+
+Attached GPUs                       : 1
+GPU 00000000:03:00.0
+    Product Name                    : Quadro K5000
+    Product Brand                   : Quadro
+    Display Mode                    : Disabled
+    Display Active                  : Enabled
+    Persistence Mode                : N/A
+    Accounting Mode                 : Disabled
+    Accounting Mode Buffer Size     : 4000
+    Driver Model
+        Current                     : WDDM
+        Pending                     : WDDM
+    Serial Number                   : 0321214058880
+    GPU UUID                        : GPU-851a72ab-8496-1be3-0ead-ca75c6c73528
+    Minor Number                    : N/A
+    VBIOS Version                   : 80.04.CA.00.04
+    MultiGPU Board                  : No
+    Board ID                        : 0x300
+    GPU Part Number                 : N/A
+    Inforom Version
+        Image Version               : 2004.0500.00.02
+        OEM Object                  : 1.1
+        ECC Object                  : 2.0
+        Power Management Object     : N/A
+    GPU Operation Mode
+        Current                     : N/A
+        Pending                     : N/A
+    GPU Virtualization Mode
+        Virtualization mode         : None
+    IBMNPU
+        Relaxed Ordering Mode       : N/A
+    PCI
+        Bus                         : 0x03
+        Device                      : 0x00
+        Domain                      : 0x0000
+        Device Id                   : 0x11BA10DE
+        Bus Id                      : 00000000:03:00.0
+        Sub System Id               : 0x096510DE
+        GPU Link Info
+            PCIe Generation
+                Max                 : 2
+                Current             : 1
+            Link Width
+                Max                 : 16x
+                Current             : 16x
+        Bridge Chip
+            Type                    : N/A
+            Firmware                : N/A
+        Replays since reset         : 0
+        Tx Throughput               : N/A
+        Rx Throughput               : N/A
+    Fan Speed                       : 31 %
+    Performance State               : P8
+    Clocks Throttle Reasons
+        Idle                        : Active
+        Applications Clocks Setting : Not Active
+        SW Power Cap                : Not Active
+        HW Slowdown                 : Not Active
+            HW Thermal Slowdown     : N/A
+            HW Power Brake Slowdown : N/A
+        Sync Boost                  : Not Active
+        SW Thermal Slowdown         : Not Active
+        Display Clock Setting       : Not Active
+    FB Memory Usage
+        Total                       : 4096 MiB
+        Used                        : 136 MiB
+        Free                        : 3960 MiB
+    BAR1 Memory Usage
+        Total                       : 256 MiB
+        Used                        : 229 MiB
+        Free                        : 27 MiB
+    Compute Mode                    : Default
+    Utilization
+        Gpu                         : 3 %
+        Memory                      : 3 %
+        Encoder                     : 0 %
+        Decoder                     : 0 %
+    Encoder Stats
+        Active Sessions             : 0
+        Average FPS                 : 0
+        Average Latency             : 0
+    FBC Stats
+        Active Sessions             : 0
+        Average FPS                 : 0
+        Average Latency             : 0
+    Ecc Mode
+        Current                     : Disabled
+        Pending                     : Disabled
+    ECC Errors
+        Volatile
+            Single Bit            
+                Device Memory       : N/A
+                Register File       : N/A
+                L1 Cache            : N/A
+                L2 Cache            : N/A
+                Texture Memory      : N/A
+                Texture Shared      : N/A
+                CBU                 : N/A
+                Total               : N/A
+            Double Bit            
+                Device Memory       : N/A
+                Register File       : N/A
+                L1 Cache            : N/A
+                L2 Cache            : N/A
+                Texture Memory      : N/A
+                Texture Shared      : N/A
+                CBU                 : N/A
+                Total               : N/A
+        Aggregate
+            Single Bit            
+                Device Memory       : N/A
+                Register File       : N/A
+                L1 Cache            : N/A
+                L2 Cache            : N/A
+                Texture Memory      : N/A
+                Texture Shared      : N/A
+                CBU                 : N/A
+                Total               : N/A
+            Double Bit            
+                Device Memory       : N/A
+                Register File       : N/A
+                L1 Cache            : N/A
+                L2 Cache            : N/A
+                Texture Memory      : N/A
+                Texture Shared      : N/A
+                CBU                 : N/A
+                Total               : N/A
+    Retired Pages
+        Single Bit ECC              : N/A
+        Double Bit ECC              : N/A
+        Pending                     : N/A
+    Temperature
+        GPU Current Temp            : 44 C
+        GPU Shutdown Temp           : 102 C
+        GPU Slowdown Temp           : 97 C
+        GPU Max Operating Temp      : N/A
+        Memory Current Temp         : N/A
+        Memory Max Operating Temp   : N/A
+    Power Readings
+        Power Management            : Supported
+        Power Draw                  : 22.30 W
+        Power Limit                 : 137.40 W
+        Default Power Limit         : 137.40 W
+        Enforced Power Limit        : 137.40 W
+        Min Power Limit             : 100.00 W
+        Max Power Limit             : 153.00 W
+    Clocks
+        Graphics                    : 324 MHz
+        SM                          : 324 MHz
+        Memory                      : 324 MHz
+        Video                       : 405 MHz
+    Applications Clocks
+        Graphics                    : N/A
+        Memory                      : N/A
+    Default Applications Clocks
+        Graphics                    : N/A
+        Memory                      : N/A
+    Max Clocks
+        Graphics                    : 705 MHz
+        SM                          : 705 MHz
+        Memory                      : 2700 MHz
+        Video                       : 540 MHz
+    Max Customer Boost Clocks
+        Graphics                    : N/A
+    Clock Policy
+        Auto Boost                  : N/A
+        Auto Boost Default          : N/A
+    Processes
+        Process ID                  : 1644
+            Type                    : C+G
+            Name                    : Insufficient Permissions
+            Used GPU Memory         : Not available in WDDM driver model
+        Process ID                  : 2660
+            Type                    : C+G
+            Name                    : C:\Program Files (x86)\Dropbox\Client\Dropbox.exe
+            Used GPU Memory         : Not available in WDDM driver model
+        Process ID                  : 4776
+            Type                    : C+G
+            Name                    : Insufficient Permissions
+            Used GPU Memory         : Not available in WDDM driver model
+        Process ID                  : 8088
+            Type                    : C+G
+            Name                    : C:\Windows\explorer.exe
+            Used GPU Memory         : Not available in WDDM driver model
+        Process ID                  : 8612
+            Type                    : C+G
+            Name                    : C:\Windows\SystemApps\ShellExperienceHost_cw5n1h2txyewy\ShellExperienceHost.exe
+            Used GPU Memory         : Not available in WDDM driver model
+        Process ID                  : 8748
+            Type                    : C+G
+            Name                    : C:\Windows\SystemApps\Microsoft.Windows.Cortana_cw5n1h2txyewy\SearchUI.exe
+            Used GPU Memory         : Not available in WDDM driver model
+        Process ID                  : 9280
+            Type                    : C+G
+            Name                    : C:\Program Files\WindowsApps\Microsoft.SkypeApp_14.37.98.0_x64__kzf8qxf38zg5c\SkypeApp.exe
+            Used GPU Memory         : Not available in WDDM driver model
+        Process ID                  : 10016
+            Type                    : C+G
+            Name                    : C:\Windows\SystemApps\InputApp_cw5n1h2txyewy\WindowsInternal.ComposableShell.Experiences.TextInput.InputApp.exe
+            Used GPU Memory         : Not available in WDDM driver model
+        Process ID                  : 10328
+            Type                    : C+G
+            Name                    : C:\Windows\ImmersiveControlPanel\SystemSettings.exe
+            Used GPU Memory         : Not available in WDDM driver model
+

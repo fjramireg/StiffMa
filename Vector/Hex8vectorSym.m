@@ -7,14 +7,14 @@ function ke = Hex8vectorSym(X,D,L)
 %   of element "e", "D" the material property matrix for an isotropic
 %   material, and "L" the shape function derivatives for the HEX8 elements.
 %
-%   See also ASSEMBLYVECTOR, HEX8VECTOR, HEX8VECTORSYMGPU
+%   See also HEX8VECTOR, HEX8VECTORSYMGPU, STIFFMATGENVC, STIFFMATGENVCSYMCPU, STIFFMATGENSCSYMCPUP
 %
 %   For more information, see <a href="matlab:
 %   web('https://github.com/fjramireg/MatGen')">the MatGen Web site</a>.
 
 %   Written by Francisco Javier Ramirez-Gil, fjramireg@gmail.com
 %   Universidad Nacional de Colombia - Medellin
-%   Created: 16/01/2019. Modified: 21/01/2019. Version: 1.3
+%   Created: 16/01/2019. Modified: 28/01/2019. Version: 1.3
 
 B  = zeros(6,24,class(X));  % Initializes the matrix B
 ke = zeros(300,1,class(X)); % Initializes the element stiffness matrix

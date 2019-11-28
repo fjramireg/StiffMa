@@ -1,0 +1,4608 @@
+MATLAB is running in headless mode.  Figure windows will not be displayed.
+[Warning: Unrecognized command line option: mojvm.] 
+ 
+To get started, type doc.
+For product information, visit www.mathworks.com.
+ 
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 10x10x10 (1000)
+Date type for 'elements': 'int32'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Type of code: 'GPU'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_S_GPU
+........
+================================================================================
+perftestWIN_S_GPU/TransferToGPUMemory was filtered.
+    Test Diagnostic: The MeasuredTime should not be too close to the precision of the framework.
+================================================================================
+.. .......... .....
+Done perftestWIN_S_GPU
+__________
+
+Failure Summary:
+
+     Name                                   Failed  Incomplete  Reason(s)
+    ====================================================================================
+     perftestWIN_S_GPU/TransferToGPUMemory              X       Filtered by assumption.
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 10x10x10 (1000)
+Date type for 'elements': 'int32'
+Date type for 'nodes': 'single'
+Problem type: 'Vector'
+Type of code: 'GPU'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_V_GPU
+........
+================================================================================
+perftestWIN_V_GPU/TransferToGPUMemory was filtered.
+    Test Diagnostic: The MeasuredTime should not be too close to the precision of the framework.
+================================================================================
+.. .......... ....
+Done perftestWIN_V_GPU
+__________
+
+Failure Summary:
+
+     Name                                   Failed  Incomplete  Reason(s)
+    ====================================================================================
+     perftestWIN_V_GPU/TransferToGPUMemory              X       Filtered by assumption.
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 10x10x10 (1000)
+Date type for 'elements': 'int32'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Type of code: 'CPUp'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_S_CPUp
+Starting parallel pool (parpool) using the 'local' profile ...
+connected to 32 workers.
+........
+================================================================================
+perftestWIN_S_CPUp/IndexComputationOnCPU_parallel_ was filtered.
+    Test Diagnostic: The MeasuredTime should not be too close to the precision of the framework.
+================================================================================
+.. ......
+Done perftestWIN_S_CPUp
+__________
+
+Failure Summary:
+
+     Name                                                Failed  Incomplete  Reason(s)
+    =================================================================================================
+     perftestWIN_S_CPUp/IndexComputationOnCPU_parallel_              X       Filtered by assumption.
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 10x10x10 (1000)
+Date type for 'elements': 'int32'
+Date type for 'nodes': 'single'
+Problem type: 'Vector'
+Type of code: 'CPUp'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_V_CPUp
+.......... ........
+Done perftestWIN_V_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 10x10x10 (1000)
+Date type for 'elements': 'int32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Type of code: 'GPU'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_S_GPU
+........
+================================================================================
+perftestWIN_S_GPU/TransferToGPUMemory was filtered.
+    Test Diagnostic: The MeasuredTime should not be too close to the precision of the framework.
+================================================================================
+.. .......... .......... ....
+================================================================================
+perftestWIN_S_GPU/AssemblyOfGlobalSparseMatrixOnGPU was filtered.
+    Test Diagnostic: The MeasuredTime should not be too close to the precision of the framework.
+================================================================================
+
+Done perftestWIN_S_GPU
+__________
+
+Failure Summary:
+
+     Name                                                 Failed  Incomplete  Reason(s)
+    ==================================================================================================
+     perftestWIN_S_GPU/TransferToGPUMemory                            X       Filtered by assumption.
+    --------------------------------------------------------------------------------------------------
+     perftestWIN_S_GPU/AssemblyOfGlobalSparseMatrixOnGPU              X       Filtered by assumption.
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 10x10x10 (1000)
+Date type for 'elements': 'int32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Type of code: 'GPU'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_V_GPU
+........
+================================================================================
+perftestWIN_V_GPU/TransferToGPUMemory was filtered.
+    Test Diagnostic: The MeasuredTime should not be too close to the precision of the framework.
+================================================================================
+.. .......... .......... ....
+Done perftestWIN_V_GPU
+__________
+
+Failure Summary:
+
+     Name                                   Failed  Incomplete  Reason(s)
+    ====================================================================================
+     perftestWIN_V_GPU/TransferToGPUMemory              X       Filtered by assumption.
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 10x10x10 (1000)
+Date type for 'elements': 'int32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Type of code: 'CPUp'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_S_CPUp
+........
+================================================================================
+perftestWIN_S_CPUp/IndexComputationOnCPU_parallel_ was filtered.
+    Test Diagnostic: The MeasuredTime should not be too close to the precision of the framework.
+================================================================================
+.. .......... ........
+Done perftestWIN_S_CPUp
+__________
+
+Failure Summary:
+
+     Name                                                Failed  Incomplete  Reason(s)
+    =================================================================================================
+     perftestWIN_S_CPUp/IndexComputationOnCPU_parallel_              X       Filtered by assumption.
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 10x10x10 (1000)
+Date type for 'elements': 'int32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Type of code: 'CPUp'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_V_CPUp
+.......... .......... ....
+Done perftestWIN_V_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 10x10x10 (1000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Type of code: 'GPU'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_S_GPU
+........
+================================================================================
+perftestWIN_S_GPU/TransferToGPUMemory was filtered.
+    Test Diagnostic: The MeasuredTime should not be too close to the precision of the framework.
+================================================================================
+.. .......... ........
+Done perftestWIN_S_GPU
+__________
+
+Failure Summary:
+
+     Name                                   Failed  Incomplete  Reason(s)
+    ====================================================================================
+     perftestWIN_S_GPU/TransferToGPUMemory              X       Filtered by assumption.
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 10x10x10 (1000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Vector'
+Type of code: 'GPU'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_V_GPU
+........
+================================================================================
+perftestWIN_V_GPU/TransferToGPUMemory was filtered.
+    Test Diagnostic: The MeasuredTime should not be too close to the precision of the framework.
+================================================================================
+.. .......... ........
+Done perftestWIN_V_GPU
+__________
+
+Failure Summary:
+
+     Name                                   Failed  Incomplete  Reason(s)
+    ====================================================================================
+     perftestWIN_V_GPU/TransferToGPUMemory              X       Filtered by assumption.
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 10x10x10 (1000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Type of code: 'CPUp'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_S_CPUp
+........
+================================================================================
+perftestWIN_S_CPUp/IndexComputationOnCPU_parallel_ was filtered.
+    Test Diagnostic: The MeasuredTime should not be too close to the precision of the framework.
+================================================================================
+.. ......
+Done perftestWIN_S_CPUp
+__________
+
+Failure Summary:
+
+     Name                                                Failed  Incomplete  Reason(s)
+    =================================================================================================
+     perftestWIN_S_CPUp/IndexComputationOnCPU_parallel_              X       Filtered by assumption.
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 10x10x10 (1000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Vector'
+Type of code: 'CPUp'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_V_CPUp
+.......... ......
+Done perftestWIN_V_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 10x10x10 (1000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Type of code: 'GPU'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_S_GPU
+........
+================================================================================
+perftestWIN_S_GPU/TransferToGPUMemory was filtered.
+    Test Diagnostic: The MeasuredTime should not be too close to the precision of the framework.
+================================================================================
+.. .......... .......... .....
+Done perftestWIN_S_GPU
+__________
+
+Failure Summary:
+
+     Name                                   Failed  Incomplete  Reason(s)
+    ====================================================================================
+     perftestWIN_S_GPU/TransferToGPUMemory              X       Filtered by assumption.
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 10x10x10 (1000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Type of code: 'GPU'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_V_GPU
+........
+================================================================================
+perftestWIN_V_GPU/TransferToGPUMemory was filtered.
+    Test Diagnostic: The MeasuredTime should not be too close to the precision of the framework.
+================================================================================
+.. .......... .......... ...
+Done perftestWIN_V_GPU
+__________
+
+Failure Summary:
+
+     Name                                   Failed  Incomplete  Reason(s)
+    ====================================================================================
+     perftestWIN_V_GPU/TransferToGPUMemory              X       Filtered by assumption.
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 10x10x10 (1000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Type of code: 'CPUp'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_S_CPUp
+........
+================================================================================
+perftestWIN_S_CPUp/IndexComputationOnCPU_parallel_ was filtered.
+    Test Diagnostic: The MeasuredTime should not be too close to the precision of the framework.
+================================================================================
+.. .......... ....
+Done perftestWIN_S_CPUp
+__________
+
+Failure Summary:
+
+     Name                                                Failed  Incomplete  Reason(s)
+    =================================================================================================
+     perftestWIN_S_CPUp/IndexComputationOnCPU_parallel_              X       Filtered by assumption.
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 10x10x10 (1000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Type of code: 'CPUp'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_V_CPUp
+.......... .......... ....
+Done perftestWIN_V_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 10x10x10 (1000)
+Date type for 'elements': 'int64'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Type of code: 'GPU'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_S_GPU
+[Warning: Found invalid mapping for kernel argument 2. The PTX is
+not consistent with the prototype. The kernel prototype
+specifies int32 but the PTX expects '.u64'. You might have
+specified the wrong PTX file, or it might need recompiling.] 
+[> In parallel.internal.gpu.handleKernelArgs
+  In parallel.internal.gpu.handleKernelArgs
+  In IndexScalarSymGPU (line 37)
+  In perftestWIN_S_GPU (line 9)]
+
+================================================================================
+Error occurred while setting up or tearing down perftestWIN_S_GPU.
+As a result, all perftestWIN_S_GPU tests failed and did not run to completion.
+
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:kernel:PrototypeMismatchType'
+
+    --------------
+    Error Details:
+    --------------
+    Error using parallel.gpu.CUDAKernel/feval
+    The type of the array supplied for argument 1 does not match
+    the kernel prototype. The kernel prototype specifies that the
+    input must be an array of 'int32' data but the input supplied
+    was an array of type 'int64'.
+    
+    Error in IndexScalarSymGPU (line 57)
+    [iK, jK] = feval(ker, elements, nel, iK, jK);            %
+    GPU code execution
+    
+    Error in perftestWIN_S_GPU (line 9)
+    [iK, jK] = IndexScalarSymGPU(elementsGPU);
+================================================================================
+
+Done perftestWIN_S_GPU
+__________
+
+Failure Summary:
+
+     Name                                                        Failed  Incomplete  Reason(s)
+    ===========================================================================================
+     perftestWIN_S_GPU/TransferToGPUMemory                         X         X       Errored.
+    -------------------------------------------------------------------------------------------
+     perftestWIN_S_GPU/IndexComputationOnGPU                       X         X       Errored.
+    -------------------------------------------------------------------------------------------
+     perftestWIN_S_GPU/ElementStiffnessMatricesComputationOnGPU    X         X       Errored.
+    -------------------------------------------------------------------------------------------
+     perftestWIN_S_GPU/AssemblyOfGlobalSparseMatrixOnGPU           X         X       Errored.
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 10x10x10 (1000)
+Date type for 'elements': 'int64'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Type of code: 'GPU'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_V_GPU
+[Warning: Found invalid mapping for kernel argument 2. The PTX is
+not consistent with the prototype. The kernel prototype
+specifies int32 but the PTX expects '.u64'. You might have
+specified the wrong PTX file, or it might need recompiling.] 
+[> In parallel.internal.gpu.handleKernelArgs
+  In parallel.internal.gpu.handleKernelArgs
+  In IndexVectorSymGPU (line 37)
+  In perftestWIN_V_GPU (line 10)]
+
+================================================================================
+Error occurred while setting up or tearing down perftestWIN_V_GPU.
+As a result, all perftestWIN_V_GPU tests failed and did not run to completion.
+
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:kernel:PrototypeMismatchType'
+
+    --------------
+    Error Details:
+    --------------
+    Error using parallel.gpu.CUDAKernel/feval
+    The type of the array supplied for argument 1 does not match
+    the kernel prototype. The kernel prototype specifies that the
+    input must be an array of 'int32' data but the input supplied
+    was an array of type 'int64'.
+    
+    Error in IndexVectorSymGPU (line 57)
+    [iK, jK] = feval(ker, elements, nel, iK, jK);            %
+    GPU code execution
+    
+    Error in perftestWIN_V_GPU (line 10)
+    [iK, jK] = IndexVectorSymGPU(elementsGPU);
+================================================================================
+
+Done perftestWIN_V_GPU
+__________
+
+Failure Summary:
+
+     Name                                                        Failed  Incomplete  Reason(s)
+    ===========================================================================================
+     perftestWIN_V_GPU/TransferToGPUMemory                         X         X       Errored.
+    -------------------------------------------------------------------------------------------
+     perftestWIN_V_GPU/IndexComputationOnGPU                       X         X       Errored.
+    -------------------------------------------------------------------------------------------
+     perftestWIN_V_GPU/ElementStiffnessMatricesComputationOnGPU    X         X       Errored.
+    -------------------------------------------------------------------------------------------
+     perftestWIN_V_GPU/AssemblyOfGlobalSparseMatrixOnGPU           X         X       Errored.
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 10x10x10 (1000)
+Date type for 'elements': 'int64'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Type of code: 'CPUp'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_S_CPUp
+.......... .......... ....
+Done perftestWIN_S_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 10x10x10 (1000)
+Date type for 'elements': 'int64'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Type of code: 'CPUp'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_V_CPUp
+.......... .......... ....
+Done perftestWIN_V_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 10x10x10 (1000)
+Date type for 'elements': 'uint64'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Type of code: 'GPU'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_S_GPU
+[Warning: Found invalid mapping for kernel argument 2. The PTX is
+not consistent with the prototype. The kernel prototype
+specifies uint32 but the PTX expects '.u64'. You might have
+specified the wrong PTX file, or it might need recompiling.] 
+[> In parallel.internal.gpu.handleKernelArgs
+  In parallel.internal.gpu.handleKernelArgs
+  In IndexScalarSymGPU (line 41)
+  In perftestWIN_S_GPU (line 9)]
+
+================================================================================
+Error occurred while setting up or tearing down perftestWIN_S_GPU.
+As a result, all perftestWIN_S_GPU tests failed and did not run to completion.
+
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:kernel:PrototypeMismatchType'
+
+    --------------
+    Error Details:
+    --------------
+    Error using parallel.gpu.CUDAKernel/feval
+    The type of the array supplied for argument 1 does not match
+    the kernel prototype. The kernel prototype specifies that the
+    input must be an array of 'uint32' data but the input
+    supplied was an array of type 'uint64'.
+    
+    Error in IndexScalarSymGPU (line 57)
+    [iK, jK] = feval(ker, elements, nel, iK, jK);            %
+    GPU code execution
+    
+    Error in perftestWIN_S_GPU (line 9)
+    [iK, jK] = IndexScalarSymGPU(elementsGPU);
+================================================================================
+
+Done perftestWIN_S_GPU
+__________
+
+Failure Summary:
+
+     Name                                                        Failed  Incomplete  Reason(s)
+    ===========================================================================================
+     perftestWIN_S_GPU/TransferToGPUMemory                         X         X       Errored.
+    -------------------------------------------------------------------------------------------
+     perftestWIN_S_GPU/IndexComputationOnGPU                       X         X       Errored.
+    -------------------------------------------------------------------------------------------
+     perftestWIN_S_GPU/ElementStiffnessMatricesComputationOnGPU    X         X       Errored.
+    -------------------------------------------------------------------------------------------
+     perftestWIN_S_GPU/AssemblyOfGlobalSparseMatrixOnGPU           X         X       Errored.
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 10x10x10 (1000)
+Date type for 'elements': 'uint64'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Type of code: 'GPU'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_V_GPU
+[Warning: Found invalid mapping for kernel argument 2. The PTX is
+not consistent with the prototype. The kernel prototype
+specifies uint32 but the PTX expects '.u64'. You might have
+specified the wrong PTX file, or it might need recompiling.] 
+[> In parallel.internal.gpu.handleKernelArgs
+  In parallel.internal.gpu.handleKernelArgs
+  In IndexVectorSymGPU (line 41)
+  In perftestWIN_V_GPU (line 10)]
+
+================================================================================
+Error occurred while setting up or tearing down perftestWIN_V_GPU.
+As a result, all perftestWIN_V_GPU tests failed and did not run to completion.
+
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:kernel:PrototypeMismatchType'
+
+    --------------
+    Error Details:
+    --------------
+    Error using parallel.gpu.CUDAKernel/feval
+    The type of the array supplied for argument 1 does not match
+    the kernel prototype. The kernel prototype specifies that the
+    input must be an array of 'uint32' data but the input
+    supplied was an array of type 'uint64'.
+    
+    Error in IndexVectorSymGPU (line 57)
+    [iK, jK] = feval(ker, elements, nel, iK, jK);            %
+    GPU code execution
+    
+    Error in perftestWIN_V_GPU (line 10)
+    [iK, jK] = IndexVectorSymGPU(elementsGPU);
+================================================================================
+
+Done perftestWIN_V_GPU
+__________
+
+Failure Summary:
+
+     Name                                                        Failed  Incomplete  Reason(s)
+    ===========================================================================================
+     perftestWIN_V_GPU/TransferToGPUMemory                         X         X       Errored.
+    -------------------------------------------------------------------------------------------
+     perftestWIN_V_GPU/IndexComputationOnGPU                       X         X       Errored.
+    -------------------------------------------------------------------------------------------
+     perftestWIN_V_GPU/ElementStiffnessMatricesComputationOnGPU    X         X       Errored.
+    -------------------------------------------------------------------------------------------
+     perftestWIN_V_GPU/AssemblyOfGlobalSparseMatrixOnGPU           X         X       Errored.
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 10x10x10 (1000)
+Date type for 'elements': 'uint64'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Type of code: 'CPUp'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_S_CPUp
+.......... .......... ....
+================================================================================
+perftestWIN_S_CPUp/AssemblyOfGlobalSparseMatrixOnCPU was filtered.
+    Test Diagnostic: The MeasuredTime should not be too close to the precision of the framework.
+================================================================================
+
+Done perftestWIN_S_CPUp
+__________
+
+Failure Summary:
+
+     Name                                                  Failed  Incomplete  Reason(s)
+    ===================================================================================================
+     perftestWIN_S_CPUp/AssemblyOfGlobalSparseMatrixOnCPU              X       Filtered by assumption.
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 10x10x10 (1000)
+Date type for 'elements': 'uint64'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Type of code: 'CPUp'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_V_CPUp
+.......... .......... .......... .......... ..........
+.......... .......... .
+Done perftestWIN_V_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 10x10x10 (1000)
+Date type for 'elements': 'double'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Type of code: 'GPU'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_S_GPU
+........
+================================================================================
+perftestWIN_S_GPU/TransferToGPUMemory was filtered.
+    Test Diagnostic: The MeasuredTime should not be too close to the precision of the framework.
+================================================================================
+.. .......... .......... .......... .......
+================================================================================
+perftestWIN_S_GPU/AssemblyOfGlobalSparseMatrixOnGPU was filtered.
+    Test Diagnostic: The MeasuredTime should not be too close to the precision of the framework.
+================================================================================
+
+Done perftestWIN_S_GPU
+__________
+
+Failure Summary:
+
+     Name                                                 Failed  Incomplete  Reason(s)
+    ==================================================================================================
+     perftestWIN_S_GPU/TransferToGPUMemory                            X       Filtered by assumption.
+    --------------------------------------------------------------------------------------------------
+     perftestWIN_S_GPU/AssemblyOfGlobalSparseMatrixOnGPU              X       Filtered by assumption.
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 10x10x10 (1000)
+Date type for 'elements': 'double'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Type of code: 'GPU'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_V_GPU
+........
+================================================================================
+perftestWIN_V_GPU/TransferToGPUMemory was filtered.
+    Test Diagnostic: The MeasuredTime should not be too close to the precision of the framework.
+================================================================================
+.. .......... .......... ..
+Done perftestWIN_V_GPU
+__________
+
+Failure Summary:
+
+     Name                                   Failed  Incomplete  Reason(s)
+    ====================================================================================
+     perftestWIN_V_GPU/TransferToGPUMemory              X       Filtered by assumption.
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 10x10x10 (1000)
+Date type for 'elements': 'double'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Type of code: 'CPUp'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_S_CPUp
+........
+================================================================================
+perftestWIN_S_CPUp/IndexComputationOnCPU_parallel_ was filtered.
+    Test Diagnostic: The MeasuredTime should not be too close to the precision of the framework.
+================================================================================
+.. .......... .......
+================================================================================
+perftestWIN_S_CPUp/AssemblyOfGlobalSparseMatrixOnCPU was filtered.
+    Test Diagnostic: The MeasuredTime should not be too close to the precision of the framework.
+================================================================================
+
+Done perftestWIN_S_CPUp
+__________
+
+Failure Summary:
+
+     Name                                                  Failed  Incomplete  Reason(s)
+    ===================================================================================================
+     perftestWIN_S_CPUp/IndexComputationOnCPU_parallel_                X       Filtered by assumption.
+    ---------------------------------------------------------------------------------------------------
+     perftestWIN_S_CPUp/AssemblyOfGlobalSparseMatrixOnCPU              X       Filtered by assumption.
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 10x10x10 (1000)
+Date type for 'elements': 'double'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Type of code: 'CPUp'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_V_CPUp
+.......... .......... ......
+Done perftestWIN_V_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 20x20x20 (8000)
+Date type for 'elements': 'int32'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Type of code: 'GPU'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_S_GPU
+........
+================================================================================
+perftestWIN_S_GPU/TransferToGPUMemory was filtered.
+    Test Diagnostic: The MeasuredTime should not be too close to the precision of the framework.
+================================================================================
+.. .......... .......... .......... ..........
+.......... ..
+Done perftestWIN_S_GPU
+__________
+
+Failure Summary:
+
+     Name                                   Failed  Incomplete  Reason(s)
+    ====================================================================================
+     perftestWIN_S_GPU/TransferToGPUMemory              X       Filtered by assumption.
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 20x20x20 (8000)
+Date type for 'elements': 'int32'
+Date type for 'nodes': 'single'
+Problem type: 'Vector'
+Type of code: 'GPU'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_V_GPU
+........
+================================================================================
+perftestWIN_V_GPU/TransferToGPUMemory was filtered.
+    Test Diagnostic: The MeasuredTime should not be too close to the precision of the framework.
+================================================================================
+.. .......... ....
+Done perftestWIN_V_GPU
+__________
+
+Failure Summary:
+
+     Name                                   Failed  Incomplete  Reason(s)
+    ====================================================================================
+     perftestWIN_V_GPU/TransferToGPUMemory              X       Filtered by assumption.
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 20x20x20 (8000)
+Date type for 'elements': 'int32'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Type of code: 'CPUp'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_S_CPUp
+.......... .......... .......... ......[Warning: Target Relative Margin of Error not met after running
+the MaxSamples for
+perftestWIN_S_CPUp/IndexComputationOnCPU_parallel_.] 
+.... ....
+Done perftestWIN_S_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 20x20x20 (8000)
+Date type for 'elements': 'int32'
+Date type for 'nodes': 'single'
+Problem type: 'Vector'
+Type of code: 'CPUp'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_V_CPUp
+.......... ........
+Done perftestWIN_V_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 20x20x20 (8000)
+Date type for 'elements': 'int32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Type of code: 'GPU'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_S_GPU
+........
+================================================================================
+perftestWIN_S_GPU/TransferToGPUMemory was filtered.
+    Test Diagnostic: The MeasuredTime should not be too close to the precision of the framework.
+================================================================================
+.. .......... .......... .......... .
+Done perftestWIN_S_GPU
+__________
+
+Failure Summary:
+
+     Name                                   Failed  Incomplete  Reason(s)
+    ====================================================================================
+     perftestWIN_S_GPU/TransferToGPUMemory              X       Filtered by assumption.
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 20x20x20 (8000)
+Date type for 'elements': 'int32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Type of code: 'GPU'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_V_GPU
+........
+================================================================================
+perftestWIN_V_GPU/TransferToGPUMemory was filtered.
+    Test Diagnostic: The MeasuredTime should not be too close to the precision of the framework.
+================================================================================
+.. .......... .......... ..
+Done perftestWIN_V_GPU
+__________
+
+Failure Summary:
+
+     Name                                   Failed  Incomplete  Reason(s)
+    ====================================================================================
+     perftestWIN_V_GPU/TransferToGPUMemory              X       Filtered by assumption.
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 20x20x20 (8000)
+Date type for 'elements': 'int32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Type of code: 'CPUp'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_S_CPUp
+.......... .......... .......... ......[Warning: Target Relative Margin of Error not met after running
+the MaxSamples for
+perftestWIN_S_CPUp/IndexComputationOnCPU_parallel_.] 
+.... ..........
+.......... .......... ........
+Done perftestWIN_S_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 20x20x20 (8000)
+Date type for 'elements': 'int32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Type of code: 'CPUp'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_V_CPUp
+.......... .......... .....
+Done perftestWIN_V_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 20x20x20 (8000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Type of code: 'GPU'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_S_GPU
+........
+================================================================================
+perftestWIN_S_GPU/TransferToGPUMemory was filtered.
+    Test Diagnostic: The MeasuredTime should not be too close to the precision of the framework.
+================================================================================
+.. .......... .........
+Done perftestWIN_S_GPU
+__________
+
+Failure Summary:
+
+     Name                                   Failed  Incomplete  Reason(s)
+    ====================================================================================
+     perftestWIN_S_GPU/TransferToGPUMemory              X       Filtered by assumption.
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 20x20x20 (8000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Vector'
+Type of code: 'GPU'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_V_GPU
+........
+================================================================================
+perftestWIN_V_GPU/TransferToGPUMemory was filtered.
+    Test Diagnostic: The MeasuredTime should not be too close to the precision of the framework.
+================================================================================
+.. .......... ....
+Done perftestWIN_V_GPU
+__________
+
+Failure Summary:
+
+     Name                                   Failed  Incomplete  Reason(s)
+    ====================================================================================
+     perftestWIN_V_GPU/TransferToGPUMemory              X       Filtered by assumption.
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 20x20x20 (8000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Type of code: 'CPUp'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_S_CPUp
+.......... .........
+Done perftestWIN_S_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 20x20x20 (8000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Vector'
+Type of code: 'CPUp'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_V_CPUp
+.......... ......
+Done perftestWIN_V_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 20x20x20 (8000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Type of code: 'GPU'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_S_GPU
+........
+================================================================================
+perftestWIN_S_GPU/TransferToGPUMemory was filtered.
+    Test Diagnostic: The MeasuredTime should not be too close to the precision of the framework.
+================================================================================
+.. .......... .......... .......... ..........
+..[Warning: Target Relative Margin of Error not met after running
+the MaxSamples for
+perftestWIN_S_GPU/ElementStiffnessMatricesComputationOnGPU.] 
+........ .......... .......... ......
+Done perftestWIN_S_GPU
+__________
+
+Failure Summary:
+
+     Name                                   Failed  Incomplete  Reason(s)
+    ====================================================================================
+     perftestWIN_S_GPU/TransferToGPUMemory              X       Filtered by assumption.
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 20x20x20 (8000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Type of code: 'GPU'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_V_GPU
+........
+================================================================================
+perftestWIN_V_GPU/TransferToGPUMemory was filtered.
+    Test Diagnostic: The MeasuredTime should not be too close to the precision of the framework.
+================================================================================
+.. .......... .......... ..
+Done perftestWIN_V_GPU
+__________
+
+Failure Summary:
+
+     Name                                   Failed  Incomplete  Reason(s)
+    ====================================================================================
+     perftestWIN_V_GPU/TransferToGPUMemory              X       Filtered by assumption.
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 20x20x20 (8000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Type of code: 'CPUp'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_S_CPUp
+.......... .......... .......... ......[Warning: Target Relative Margin of Error not met after running
+the MaxSamples for
+perftestWIN_S_CPUp/IndexComputationOnCPU_parallel_.] 
+.... ..........
+..
+Done perftestWIN_S_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 20x20x20 (8000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Type of code: 'CPUp'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_V_CPUp
+.......... .......... ......
+Done perftestWIN_V_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 20x20x20 (8000)
+Date type for 'elements': 'int64'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Type of code: 'GPU'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_S_GPU
+[Warning: Found invalid mapping for kernel argument 2. The PTX is
+not consistent with the prototype. The kernel prototype
+specifies int32 but the PTX expects '.u64'. You might have
+specified the wrong PTX file, or it might need recompiling.] 
+[> In parallel.internal.gpu.handleKernelArgs
+  In parallel.internal.gpu.handleKernelArgs
+  In IndexScalarSymGPU (line 37)
+  In perftestWIN_S_GPU (line 9)]
+
+================================================================================
+Error occurred while setting up or tearing down perftestWIN_S_GPU.
+As a result, all perftestWIN_S_GPU tests failed and did not run to completion.
+
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:kernel:PrototypeMismatchType'
+
+    --------------
+    Error Details:
+    --------------
+    Error using parallel.gpu.CUDAKernel/feval
+    The type of the array supplied for argument 1 does not match
+    the kernel prototype. The kernel prototype specifies that the
+    input must be an array of 'int32' data but the input supplied
+    was an array of type 'int64'.
+    
+    Error in IndexScalarSymGPU (line 57)
+    [iK, jK] = feval(ker, elements, nel, iK, jK);            %
+    GPU code execution
+    
+    Error in perftestWIN_S_GPU (line 9)
+    [iK, jK] = IndexScalarSymGPU(elementsGPU);
+================================================================================
+
+Done perftestWIN_S_GPU
+__________
+
+Failure Summary:
+
+     Name                                                        Failed  Incomplete  Reason(s)
+    ===========================================================================================
+     perftestWIN_S_GPU/TransferToGPUMemory                         X         X       Errored.
+    -------------------------------------------------------------------------------------------
+     perftestWIN_S_GPU/IndexComputationOnGPU                       X         X       Errored.
+    -------------------------------------------------------------------------------------------
+     perftestWIN_S_GPU/ElementStiffnessMatricesComputationOnGPU    X         X       Errored.
+    -------------------------------------------------------------------------------------------
+     perftestWIN_S_GPU/AssemblyOfGlobalSparseMatrixOnGPU           X         X       Errored.
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 20x20x20 (8000)
+Date type for 'elements': 'int64'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Type of code: 'GPU'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_V_GPU
+[Warning: Found invalid mapping for kernel argument 2. The PTX is
+not consistent with the prototype. The kernel prototype
+specifies int32 but the PTX expects '.u64'. You might have
+specified the wrong PTX file, or it might need recompiling.] 
+[> In parallel.internal.gpu.handleKernelArgs
+  In parallel.internal.gpu.handleKernelArgs
+  In IndexVectorSymGPU (line 37)
+  In perftestWIN_V_GPU (line 10)]
+
+================================================================================
+Error occurred while setting up or tearing down perftestWIN_V_GPU.
+As a result, all perftestWIN_V_GPU tests failed and did not run to completion.
+
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:kernel:PrototypeMismatchType'
+
+    --------------
+    Error Details:
+    --------------
+    Error using parallel.gpu.CUDAKernel/feval
+    The type of the array supplied for argument 1 does not match
+    the kernel prototype. The kernel prototype specifies that the
+    input must be an array of 'int32' data but the input supplied
+    was an array of type 'int64'.
+    
+    Error in IndexVectorSymGPU (line 57)
+    [iK, jK] = feval(ker, elements, nel, iK, jK);            %
+    GPU code execution
+    
+    Error in perftestWIN_V_GPU (line 10)
+    [iK, jK] = IndexVectorSymGPU(elementsGPU);
+================================================================================
+
+Done perftestWIN_V_GPU
+__________
+
+Failure Summary:
+
+     Name                                                        Failed  Incomplete  Reason(s)
+    ===========================================================================================
+     perftestWIN_V_GPU/TransferToGPUMemory                         X         X       Errored.
+    -------------------------------------------------------------------------------------------
+     perftestWIN_V_GPU/IndexComputationOnGPU                       X         X       Errored.
+    -------------------------------------------------------------------------------------------
+     perftestWIN_V_GPU/ElementStiffnessMatricesComputationOnGPU    X         X       Errored.
+    -------------------------------------------------------------------------------------------
+     perftestWIN_V_GPU/AssemblyOfGlobalSparseMatrixOnGPU           X         X       Errored.
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 20x20x20 (8000)
+Date type for 'elements': 'int64'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Type of code: 'CPUp'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_S_CPUp
+.......... .......... .....
+Done perftestWIN_S_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 20x20x20 (8000)
+Date type for 'elements': 'int64'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Type of code: 'CPUp'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_V_CPUp
+.......... .......... ........
+Done perftestWIN_V_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 20x20x20 (8000)
+Date type for 'elements': 'uint64'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Type of code: 'GPU'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_S_GPU
+[Warning: Found invalid mapping for kernel argument 2. The PTX is
+not consistent with the prototype. The kernel prototype
+specifies uint32 but the PTX expects '.u64'. You might have
+specified the wrong PTX file, or it might need recompiling.] 
+[> In parallel.internal.gpu.handleKernelArgs
+  In parallel.internal.gpu.handleKernelArgs
+  In IndexScalarSymGPU (line 41)
+  In perftestWIN_S_GPU (line 9)]
+
+================================================================================
+Error occurred while setting up or tearing down perftestWIN_S_GPU.
+As a result, all perftestWIN_S_GPU tests failed and did not run to completion.
+
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:kernel:PrototypeMismatchType'
+
+    --------------
+    Error Details:
+    --------------
+    Error using parallel.gpu.CUDAKernel/feval
+    The type of the array supplied for argument 1 does not match
+    the kernel prototype. The kernel prototype specifies that the
+    input must be an array of 'uint32' data but the input
+    supplied was an array of type 'uint64'.
+    
+    Error in IndexScalarSymGPU (line 57)
+    [iK, jK] = feval(ker, elements, nel, iK, jK);            %
+    GPU code execution
+    
+    Error in perftestWIN_S_GPU (line 9)
+    [iK, jK] = IndexScalarSymGPU(elementsGPU);
+================================================================================
+
+Done perftestWIN_S_GPU
+__________
+
+Failure Summary:
+
+     Name                                                        Failed  Incomplete  Reason(s)
+    ===========================================================================================
+     perftestWIN_S_GPU/TransferToGPUMemory                         X         X       Errored.
+    -------------------------------------------------------------------------------------------
+     perftestWIN_S_GPU/IndexComputationOnGPU                       X         X       Errored.
+    -------------------------------------------------------------------------------------------
+     perftestWIN_S_GPU/ElementStiffnessMatricesComputationOnGPU    X         X       Errored.
+    -------------------------------------------------------------------------------------------
+     perftestWIN_S_GPU/AssemblyOfGlobalSparseMatrixOnGPU           X         X       Errored.
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 20x20x20 (8000)
+Date type for 'elements': 'uint64'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Type of code: 'GPU'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_V_GPU
+[Warning: Found invalid mapping for kernel argument 2. The PTX is
+not consistent with the prototype. The kernel prototype
+specifies uint32 but the PTX expects '.u64'. You might have
+specified the wrong PTX file, or it might need recompiling.] 
+[> In parallel.internal.gpu.handleKernelArgs
+  In parallel.internal.gpu.handleKernelArgs
+  In IndexVectorSymGPU (line 41)
+  In perftestWIN_V_GPU (line 10)]
+
+================================================================================
+Error occurred while setting up or tearing down perftestWIN_V_GPU.
+As a result, all perftestWIN_V_GPU tests failed and did not run to completion.
+
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:kernel:PrototypeMismatchType'
+
+    --------------
+    Error Details:
+    --------------
+    Error using parallel.gpu.CUDAKernel/feval
+    The type of the array supplied for argument 1 does not match
+    the kernel prototype. The kernel prototype specifies that the
+    input must be an array of 'uint32' data but the input
+    supplied was an array of type 'uint64'.
+    
+    Error in IndexVectorSymGPU (line 57)
+    [iK, jK] = feval(ker, elements, nel, iK, jK);            %
+    GPU code execution
+    
+    Error in perftestWIN_V_GPU (line 10)
+    [iK, jK] = IndexVectorSymGPU(elementsGPU);
+================================================================================
+
+Done perftestWIN_V_GPU
+__________
+
+Failure Summary:
+
+     Name                                                        Failed  Incomplete  Reason(s)
+    ===========================================================================================
+     perftestWIN_V_GPU/TransferToGPUMemory                         X         X       Errored.
+    -------------------------------------------------------------------------------------------
+     perftestWIN_V_GPU/IndexComputationOnGPU                       X         X       Errored.
+    -------------------------------------------------------------------------------------------
+     perftestWIN_V_GPU/ElementStiffnessMatricesComputationOnGPU    X         X       Errored.
+    -------------------------------------------------------------------------------------------
+     perftestWIN_V_GPU/AssemblyOfGlobalSparseMatrixOnGPU           X         X       Errored.
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 20x20x20 (8000)
+Date type for 'elements': 'uint64'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Type of code: 'CPUp'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_S_CPUp
+.......... .......... ....
+Done perftestWIN_S_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 20x20x20 (8000)
+Date type for 'elements': 'uint64'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Type of code: 'CPUp'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_V_CPUp
+.......... .......... ......
+Done perftestWIN_V_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 20x20x20 (8000)
+Date type for 'elements': 'double'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Type of code: 'GPU'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_S_GPU
+........
+================================================================================
+perftestWIN_S_GPU/TransferToGPUMemory was filtered.
+    Test Diagnostic: The MeasuredTime should not be too close to the precision of the framework.
+================================================================================
+.. .......... .......... .......... ....[Warning: Target Relative Margin of Error not met after running
+the MaxSamples for perftestWIN_S_GPU/IndexComputationOnGPU.] 
+......
+.......... .
+Done perftestWIN_S_GPU
+__________
+
+Failure Summary:
+
+     Name                                   Failed  Incomplete  Reason(s)
+    ====================================================================================
+     perftestWIN_S_GPU/TransferToGPUMemory              X       Filtered by assumption.
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 20x20x20 (8000)
+Date type for 'elements': 'double'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Type of code: 'GPU'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_V_GPU
+........
+================================================================================
+perftestWIN_V_GPU/TransferToGPUMemory was filtered.
+    Test Diagnostic: The MeasuredTime should not be too close to the precision of the framework.
+================================================================================
+.. .......... .......... ....
+Done perftestWIN_V_GPU
+__________
+
+Failure Summary:
+
+     Name                                   Failed  Incomplete  Reason(s)
+    ====================================================================================
+     perftestWIN_V_GPU/TransferToGPUMemory              X       Filtered by assumption.
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 20x20x20 (8000)
+Date type for 'elements': 'double'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Type of code: 'CPUp'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_S_CPUp
+.......... .......... .......... ......[Warning: Target Relative Margin of Error not met after running
+the MaxSamples for
+perftestWIN_S_CPUp/IndexComputationOnCPU_parallel_.] 
+.... ..........
+.......... .......... ..........[Warning: Target Relative Margin of Error not met after running
+the MaxSamples for
+perftestWIN_S_CPUp/AssemblyOfGlobalSparseMatrixOnCPU.] 
+
+Done perftestWIN_S_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 20x20x20 (8000)
+Date type for 'elements': 'double'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Type of code: 'CPUp'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_V_CPUp
+.......... .......... ..........
+Done perftestWIN_V_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 30x30x30 (27000)
+Date type for 'elements': 'int32'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Type of code: 'GPU'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_S_GPU
+........
+================================================================================
+perftestWIN_S_GPU/TransferToGPUMemory was filtered.
+    Test Diagnostic: The MeasuredTime should not be too close to the precision of the framework.
+================================================================================
+.. .......... .....
+Done perftestWIN_S_GPU
+__________
+
+Failure Summary:
+
+     Name                                   Failed  Incomplete  Reason(s)
+    ====================================================================================
+     perftestWIN_S_GPU/TransferToGPUMemory              X       Filtered by assumption.
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 30x30x30 (27000)
+Date type for 'elements': 'int32'
+Date type for 'nodes': 'single'
+Problem type: 'Vector'
+Type of code: 'GPU'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_V_GPU
+........
+================================================================================
+perftestWIN_V_GPU/TransferToGPUMemory was filtered.
+    Test Diagnostic: The MeasuredTime should not be too close to the precision of the framework.
+================================================================================
+.. .......... ....
+Done perftestWIN_V_GPU
+__________
+
+Failure Summary:
+
+     Name                                   Failed  Incomplete  Reason(s)
+    ====================================================================================
+     perftestWIN_V_GPU/TransferToGPUMemory              X       Filtered by assumption.
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 30x30x30 (27000)
+Date type for 'elements': 'int32'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Type of code: 'CPUp'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_S_CPUp
+.......... .......... .......... ......[Warning: Target Relative Margin of Error not met after running
+the MaxSamples for
+perftestWIN_S_CPUp/IndexComputationOnCPU_parallel_.] 
+.... ....
+Done perftestWIN_S_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 30x30x30 (27000)
+Date type for 'elements': 'int32'
+Date type for 'nodes': 'single'
+Problem type: 'Vector'
+Type of code: 'CPUp'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_V_CPUp
+.......... .......
+Done perftestWIN_V_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 30x30x30 (27000)
+Date type for 'elements': 'int32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Type of code: 'GPU'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_S_GPU
+........
+================================================================================
+perftestWIN_S_GPU/TransferToGPUMemory was filtered.
+    Test Diagnostic: The MeasuredTime should not be too close to the precision of the framework.
+================================================================================
+.. .......... .......... ..
+Done perftestWIN_S_GPU
+__________
+
+Failure Summary:
+
+     Name                                   Failed  Incomplete  Reason(s)
+    ====================================================================================
+     perftestWIN_S_GPU/TransferToGPUMemory              X       Filtered by assumption.
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 30x30x30 (27000)
+Date type for 'elements': 'int32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Type of code: 'GPU'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_V_GPU
+........
+================================================================================
+perftestWIN_V_GPU/TransferToGPUMemory was filtered.
+    Test Diagnostic: The MeasuredTime should not be too close to the precision of the framework.
+================================================================================
+.. .......... .......... ..
+Done perftestWIN_V_GPU
+__________
+
+Failure Summary:
+
+     Name                                   Failed  Incomplete  Reason(s)
+    ====================================================================================
+     perftestWIN_V_GPU/TransferToGPUMemory              X       Filtered by assumption.
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 30x30x30 (27000)
+Date type for 'elements': 'int32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Type of code: 'CPUp'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_S_CPUp
+.......... .......... .......... ......[Warning: Target Relative Margin of Error not met after running
+the MaxSamples for
+perftestWIN_S_CPUp/IndexComputationOnCPU_parallel_.] 
+.... ..........
+.......... .......
+Done perftestWIN_S_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 30x30x30 (27000)
+Date type for 'elements': 'int32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Type of code: 'CPUp'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_V_CPUp
+.......... .......... .......... .
+Done perftestWIN_V_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 30x30x30 (27000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Type of code: 'GPU'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_S_GPU
+........
+================================================================================
+perftestWIN_S_GPU/TransferToGPUMemory was filtered.
+    Test Diagnostic: The MeasuredTime should not be too close to the precision of the framework.
+================================================================================
+.. .......... .......
+Done perftestWIN_S_GPU
+__________
+
+Failure Summary:
+
+     Name                                   Failed  Incomplete  Reason(s)
+    ====================================================================================
+     perftestWIN_S_GPU/TransferToGPUMemory              X       Filtered by assumption.
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 30x30x30 (27000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Vector'
+Type of code: 'GPU'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_V_GPU
+........
+================================================================================
+perftestWIN_V_GPU/TransferToGPUMemory was filtered.
+    Test Diagnostic: The MeasuredTime should not be too close to the precision of the framework.
+================================================================================
+.. .......... ....
+Done perftestWIN_V_GPU
+__________
+
+Failure Summary:
+
+     Name                                   Failed  Incomplete  Reason(s)
+    ====================================================================================
+     perftestWIN_V_GPU/TransferToGPUMemory              X       Filtered by assumption.
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 30x30x30 (27000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Type of code: 'CPUp'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_S_CPUp
+.......... .......... .......... ......[Warning: Target Relative Margin of Error not met after running
+the MaxSamples for
+perftestWIN_S_CPUp/IndexComputationOnCPU_parallel_.] 
+.... .........
+Done perftestWIN_S_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 30x30x30 (27000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Vector'
+Type of code: 'CPUp'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_V_CPUp
+.......... ......
+Done perftestWIN_V_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 30x30x30 (27000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Type of code: 'GPU'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_S_GPU
+........
+================================================================================
+perftestWIN_S_GPU/TransferToGPUMemory was filtered.
+    Test Diagnostic: The MeasuredTime should not be too close to the precision of the framework.
+================================================================================
+.. .......... .......... ...
+Done perftestWIN_S_GPU
+__________
+
+Failure Summary:
+
+     Name                                   Failed  Incomplete  Reason(s)
+    ====================================================================================
+     perftestWIN_S_GPU/TransferToGPUMemory              X       Filtered by assumption.
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 30x30x30 (27000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Type of code: 'GPU'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_V_GPU
+........
+================================================================================
+perftestWIN_V_GPU/TransferToGPUMemory was filtered.
+    Test Diagnostic: The MeasuredTime should not be too close to the precision of the framework.
+================================================================================
+.. .......... .......... .......... ....
+Done perftestWIN_V_GPU
+__________
+
+Failure Summary:
+
+     Name                                   Failed  Incomplete  Reason(s)
+    ====================================================================================
+     perftestWIN_V_GPU/TransferToGPUMemory              X       Filtered by assumption.
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 30x30x30 (27000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Type of code: 'CPUp'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_S_CPUp
+.......... .......... .......... ......[Warning: Target Relative Margin of Error not met after running
+the MaxSamples for
+perftestWIN_S_CPUp/IndexComputationOnCPU_parallel_.] 
+.... ..........
+...
+Done perftestWIN_S_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 30x30x30 (27000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Type of code: 'CPUp'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_V_CPUp
+.......... .......... .........
+Done perftestWIN_V_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 30x30x30 (27000)
+Date type for 'elements': 'int64'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Type of code: 'GPU'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_S_GPU
+[Warning: Found invalid mapping for kernel argument 2. The PTX is
+not consistent with the prototype. The kernel prototype
+specifies int32 but the PTX expects '.u64'. You might have
+specified the wrong PTX file, or it might need recompiling.] 
+[> In parallel.internal.gpu.handleKernelArgs
+  In parallel.internal.gpu.handleKernelArgs
+  In IndexScalarSymGPU (line 37)
+  In perftestWIN_S_GPU (line 9)]
+
+================================================================================
+Error occurred while setting up or tearing down perftestWIN_S_GPU.
+As a result, all perftestWIN_S_GPU tests failed and did not run to completion.
+
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:kernel:PrototypeMismatchType'
+
+    --------------
+    Error Details:
+    --------------
+    Error using parallel.gpu.CUDAKernel/feval
+    The type of the array supplied for argument 1 does not match
+    the kernel prototype. The kernel prototype specifies that the
+    input must be an array of 'int32' data but the input supplied
+    was an array of type 'int64'.
+    
+    Error in IndexScalarSymGPU (line 57)
+    [iK, jK] = feval(ker, elements, nel, iK, jK);            %
+    GPU code execution
+    
+    Error in perftestWIN_S_GPU (line 9)
+    [iK, jK] = IndexScalarSymGPU(elementsGPU);
+================================================================================
+
+Done perftestWIN_S_GPU
+__________
+
+Failure Summary:
+
+     Name                                                        Failed  Incomplete  Reason(s)
+    ===========================================================================================
+     perftestWIN_S_GPU/TransferToGPUMemory                         X         X       Errored.
+    -------------------------------------------------------------------------------------------
+     perftestWIN_S_GPU/IndexComputationOnGPU                       X         X       Errored.
+    -------------------------------------------------------------------------------------------
+     perftestWIN_S_GPU/ElementStiffnessMatricesComputationOnGPU    X         X       Errored.
+    -------------------------------------------------------------------------------------------
+     perftestWIN_S_GPU/AssemblyOfGlobalSparseMatrixOnGPU           X         X       Errored.
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 30x30x30 (27000)
+Date type for 'elements': 'int64'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Type of code: 'GPU'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_V_GPU
+[Warning: Found invalid mapping for kernel argument 2. The PTX is
+not consistent with the prototype. The kernel prototype
+specifies int32 but the PTX expects '.u64'. You might have
+specified the wrong PTX file, or it might need recompiling.] 
+[> In parallel.internal.gpu.handleKernelArgs
+  In parallel.internal.gpu.handleKernelArgs
+  In IndexVectorSymGPU (line 37)
+  In perftestWIN_V_GPU (line 10)]
+
+================================================================================
+Error occurred while setting up or tearing down perftestWIN_V_GPU.
+As a result, all perftestWIN_V_GPU tests failed and did not run to completion.
+
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:kernel:PrototypeMismatchType'
+
+    --------------
+    Error Details:
+    --------------
+    Error using parallel.gpu.CUDAKernel/feval
+    The type of the array supplied for argument 1 does not match
+    the kernel prototype. The kernel prototype specifies that the
+    input must be an array of 'int32' data but the input supplied
+    was an array of type 'int64'.
+    
+    Error in IndexVectorSymGPU (line 57)
+    [iK, jK] = feval(ker, elements, nel, iK, jK);            %
+    GPU code execution
+    
+    Error in perftestWIN_V_GPU (line 10)
+    [iK, jK] = IndexVectorSymGPU(elementsGPU);
+================================================================================
+
+Done perftestWIN_V_GPU
+__________
+
+Failure Summary:
+
+     Name                                                        Failed  Incomplete  Reason(s)
+    ===========================================================================================
+     perftestWIN_V_GPU/TransferToGPUMemory                         X         X       Errored.
+    -------------------------------------------------------------------------------------------
+     perftestWIN_V_GPU/IndexComputationOnGPU                       X         X       Errored.
+    -------------------------------------------------------------------------------------------
+     perftestWIN_V_GPU/ElementStiffnessMatricesComputationOnGPU    X         X       Errored.
+    -------------------------------------------------------------------------------------------
+     perftestWIN_V_GPU/AssemblyOfGlobalSparseMatrixOnGPU           X         X       Errored.
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 30x30x30 (27000)
+Date type for 'elements': 'int64'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Type of code: 'CPUp'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_S_CPUp
+.......... .......... .....
+Done perftestWIN_S_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 30x30x30 (27000)
+Date type for 'elements': 'int64'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Type of code: 'CPUp'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_V_CPUp
+.......... .......... .....
+Done perftestWIN_V_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 30x30x30 (27000)
+Date type for 'elements': 'uint64'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Type of code: 'GPU'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_S_GPU
+[Warning: Found invalid mapping for kernel argument 2. The PTX is
+not consistent with the prototype. The kernel prototype
+specifies uint32 but the PTX expects '.u64'. You might have
+specified the wrong PTX file, or it might need recompiling.] 
+[> In parallel.internal.gpu.handleKernelArgs
+  In parallel.internal.gpu.handleKernelArgs
+  In IndexScalarSymGPU (line 41)
+  In perftestWIN_S_GPU (line 9)]
+
+================================================================================
+Error occurred while setting up or tearing down perftestWIN_S_GPU.
+As a result, all perftestWIN_S_GPU tests failed and did not run to completion.
+
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:kernel:PrototypeMismatchType'
+
+    --------------
+    Error Details:
+    --------------
+    Error using parallel.gpu.CUDAKernel/feval
+    The type of the array supplied for argument 1 does not match
+    the kernel prototype. The kernel prototype specifies that the
+    input must be an array of 'uint32' data but the input
+    supplied was an array of type 'uint64'.
+    
+    Error in IndexScalarSymGPU (line 57)
+    [iK, jK] = feval(ker, elements, nel, iK, jK);            %
+    GPU code execution
+    
+    Error in perftestWIN_S_GPU (line 9)
+    [iK, jK] = IndexScalarSymGPU(elementsGPU);
+================================================================================
+
+Done perftestWIN_S_GPU
+__________
+
+Failure Summary:
+
+     Name                                                        Failed  Incomplete  Reason(s)
+    ===========================================================================================
+     perftestWIN_S_GPU/TransferToGPUMemory                         X         X       Errored.
+    -------------------------------------------------------------------------------------------
+     perftestWIN_S_GPU/IndexComputationOnGPU                       X         X       Errored.
+    -------------------------------------------------------------------------------------------
+     perftestWIN_S_GPU/ElementStiffnessMatricesComputationOnGPU    X         X       Errored.
+    -------------------------------------------------------------------------------------------
+     perftestWIN_S_GPU/AssemblyOfGlobalSparseMatrixOnGPU           X         X       Errored.
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 30x30x30 (27000)
+Date type for 'elements': 'uint64'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Type of code: 'GPU'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_V_GPU
+[Warning: Found invalid mapping for kernel argument 2. The PTX is
+not consistent with the prototype. The kernel prototype
+specifies uint32 but the PTX expects '.u64'. You might have
+specified the wrong PTX file, or it might need recompiling.] 
+[> In parallel.internal.gpu.handleKernelArgs
+  In parallel.internal.gpu.handleKernelArgs
+  In IndexVectorSymGPU (line 41)
+  In perftestWIN_V_GPU (line 10)]
+
+================================================================================
+Error occurred while setting up or tearing down perftestWIN_V_GPU.
+As a result, all perftestWIN_V_GPU tests failed and did not run to completion.
+
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:kernel:PrototypeMismatchType'
+
+    --------------
+    Error Details:
+    --------------
+    Error using parallel.gpu.CUDAKernel/feval
+    The type of the array supplied for argument 1 does not match
+    the kernel prototype. The kernel prototype specifies that the
+    input must be an array of 'uint32' data but the input
+    supplied was an array of type 'uint64'.
+    
+    Error in IndexVectorSymGPU (line 57)
+    [iK, jK] = feval(ker, elements, nel, iK, jK);            %
+    GPU code execution
+    
+    Error in perftestWIN_V_GPU (line 10)
+    [iK, jK] = IndexVectorSymGPU(elementsGPU);
+================================================================================
+
+Done perftestWIN_V_GPU
+__________
+
+Failure Summary:
+
+     Name                                                        Failed  Incomplete  Reason(s)
+    ===========================================================================================
+     perftestWIN_V_GPU/TransferToGPUMemory                         X         X       Errored.
+    -------------------------------------------------------------------------------------------
+     perftestWIN_V_GPU/IndexComputationOnGPU                       X         X       Errored.
+    -------------------------------------------------------------------------------------------
+     perftestWIN_V_GPU/ElementStiffnessMatricesComputationOnGPU    X         X       Errored.
+    -------------------------------------------------------------------------------------------
+     perftestWIN_V_GPU/AssemblyOfGlobalSparseMatrixOnGPU           X         X       Errored.
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 30x30x30 (27000)
+Date type for 'elements': 'uint64'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Type of code: 'CPUp'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_S_CPUp
+.......... .......... .......... ....
+Done perftestWIN_S_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 30x30x30 (27000)
+Date type for 'elements': 'uint64'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Type of code: 'CPUp'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_V_CPUp
+.......... .......... ....
+Done perftestWIN_V_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 30x30x30 (27000)
+Date type for 'elements': 'double'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Type of code: 'GPU'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_S_GPU
+.......... .......... .......... ...
+Done perftestWIN_S_GPU
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 30x30x30 (27000)
+Date type for 'elements': 'double'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Type of code: 'GPU'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_V_GPU
+........
+================================================================================
+perftestWIN_V_GPU/TransferToGPUMemory was filtered.
+    Test Diagnostic: The MeasuredTime should not be too close to the precision of the framework.
+================================================================================
+.. .......... .......... ..
+Done perftestWIN_V_GPU
+__________
+
+Failure Summary:
+
+     Name                                   Failed  Incomplete  Reason(s)
+    ====================================================================================
+     perftestWIN_V_GPU/TransferToGPUMemory              X       Filtered by assumption.
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 30x30x30 (27000)
+Date type for 'elements': 'double'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Type of code: 'CPUp'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_S_CPUp
+.......... .......... .......... ......[Warning: Target Relative Margin of Error not met after running
+the MaxSamples for
+perftestWIN_S_CPUp/IndexComputationOnCPU_parallel_.] 
+.... ..........
+..
+Done perftestWIN_S_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 30x30x30 (27000)
+Date type for 'elements': 'double'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Type of code: 'CPUp'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_V_CPUp
+.......... .......... .....
+Done perftestWIN_V_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 40x40x40 (64000)
+Date type for 'elements': 'int32'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Type of code: 'GPU'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_S_GPU
+.......... .......... .....
+Done perftestWIN_S_GPU
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 40x40x40 (64000)
+Date type for 'elements': 'int32'
+Date type for 'nodes': 'single'
+Problem type: 'Vector'
+Type of code: 'GPU'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_V_GPU
+.......... .......... .......... ......[Warning: Target Relative Margin of Error not met after running
+the MaxSamples for perftestWIN_V_GPU/TransferToGPUMemory.] 
+.... ..........
+.....
+Done perftestWIN_V_GPU
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 40x40x40 (64000)
+Date type for 'elements': 'int32'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Type of code: 'CPUp'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_S_CPUp
+.......... ......
+Done perftestWIN_S_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 40x40x40 (64000)
+Date type for 'elements': 'int32'
+Date type for 'nodes': 'single'
+Problem type: 'Vector'
+Type of code: 'CPUp'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_V_CPUp
+.......... ......
+Done perftestWIN_V_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 40x40x40 (64000)
+Date type for 'elements': 'int32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Type of code: 'GPU'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_S_GPU
+.......... .......... .......... ......
+Done perftestWIN_S_GPU
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 40x40x40 (64000)
+Date type for 'elements': 'int32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Type of code: 'GPU'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_V_GPU
+.......... .......... .......... ..
+Done perftestWIN_V_GPU
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 40x40x40 (64000)
+Date type for 'elements': 'int32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Type of code: 'CPUp'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_S_CPUp
+.......... .......... .......... ......[Warning: Target Relative Margin of Error not met after running
+the MaxSamples for
+perftestWIN_S_CPUp/IndexComputationOnCPU_parallel_.] 
+.... ..........
+.........
+Done perftestWIN_S_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 40x40x40 (64000)
+Date type for 'elements': 'int32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Type of code: 'CPUp'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_V_CPUp
+.......... .......... ..........
+Done perftestWIN_V_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 40x40x40 (64000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Type of code: 'GPU'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_S_GPU
+.......... .......... .....
+Done perftestWIN_S_GPU
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 40x40x40 (64000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Vector'
+Type of code: 'GPU'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_V_GPU
+........
+================================================================================
+perftestWIN_V_GPU/TransferToGPUMemory was filtered.
+    Test Diagnostic: The MeasuredTime should not be too close to the precision of the framework.
+================================================================================
+.. .......... ....
+Done perftestWIN_V_GPU
+__________
+
+Failure Summary:
+
+     Name                                   Failed  Incomplete  Reason(s)
+    ====================================================================================
+     perftestWIN_V_GPU/TransferToGPUMemory              X       Filtered by assumption.
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 40x40x40 (64000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Type of code: 'CPUp'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_S_CPUp
+.......... .......... .......... ......[Warning: Target Relative Margin of Error not met after running
+the MaxSamples for
+perftestWIN_S_CPUp/IndexComputationOnCPU_parallel_.] 
+.... ....
+Done perftestWIN_S_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 40x40x40 (64000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Vector'
+Type of code: 'CPUp'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_V_CPUp
+.......... ......
+Done perftestWIN_V_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 40x40x40 (64000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Type of code: 'GPU'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_S_GPU
+.......... .......... .......... .......... ....[Warning: Target Relative Margin of Error not met after running
+the MaxSamples for perftestWIN_S_GPU/IndexComputationOnGPU.] 
+......
+..........
+Done perftestWIN_S_GPU
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 40x40x40 (64000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Type of code: 'GPU'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_V_GPU
+.......... .......... .......... ..
+Done perftestWIN_V_GPU
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 40x40x40 (64000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Type of code: 'CPUp'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_S_CPUp
+.......... .......... .......... ......[Warning: Target Relative Margin of Error not met after running
+the MaxSamples for
+perftestWIN_S_CPUp/IndexComputationOnCPU_parallel_.] 
+.... ..........
+....
+Done perftestWIN_S_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 40x40x40 (64000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Type of code: 'CPUp'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_V_CPUp
+.......... .......... .....
+Done perftestWIN_V_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 40x40x40 (64000)
+Date type for 'elements': 'int64'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Type of code: 'GPU'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_S_GPU
+[Warning: Found invalid mapping for kernel argument 2. The PTX is
+not consistent with the prototype. The kernel prototype
+specifies int32 but the PTX expects '.u64'. You might have
+specified the wrong PTX file, or it might need recompiling.] 
+[> In parallel.internal.gpu.handleKernelArgs
+  In parallel.internal.gpu.handleKernelArgs
+  In IndexScalarSymGPU (line 37)
+  In perftestWIN_S_GPU (line 9)]
+
+================================================================================
+Error occurred while setting up or tearing down perftestWIN_S_GPU.
+As a result, all perftestWIN_S_GPU tests failed and did not run to completion.
+
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:kernel:PrototypeMismatchType'
+
+    --------------
+    Error Details:
+    --------------
+    Error using parallel.gpu.CUDAKernel/feval
+    The type of the array supplied for argument 1 does not match
+    the kernel prototype. The kernel prototype specifies that the
+    input must be an array of 'int32' data but the input supplied
+    was an array of type 'int64'.
+    
+    Error in IndexScalarSymGPU (line 57)
+    [iK, jK] = feval(ker, elements, nel, iK, jK);            %
+    GPU code execution
+    
+    Error in perftestWIN_S_GPU (line 9)
+    [iK, jK] = IndexScalarSymGPU(elementsGPU);
+================================================================================
+
+Done perftestWIN_S_GPU
+__________
+
+Failure Summary:
+
+     Name                                                        Failed  Incomplete  Reason(s)
+    ===========================================================================================
+     perftestWIN_S_GPU/TransferToGPUMemory                         X         X       Errored.
+    -------------------------------------------------------------------------------------------
+     perftestWIN_S_GPU/IndexComputationOnGPU                       X         X       Errored.
+    -------------------------------------------------------------------------------------------
+     perftestWIN_S_GPU/ElementStiffnessMatricesComputationOnGPU    X         X       Errored.
+    -------------------------------------------------------------------------------------------
+     perftestWIN_S_GPU/AssemblyOfGlobalSparseMatrixOnGPU           X         X       Errored.
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 40x40x40 (64000)
+Date type for 'elements': 'int64'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Type of code: 'GPU'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_V_GPU
+[Warning: Found invalid mapping for kernel argument 2. The PTX is
+not consistent with the prototype. The kernel prototype
+specifies int32 but the PTX expects '.u64'. You might have
+specified the wrong PTX file, or it might need recompiling.] 
+[> In parallel.internal.gpu.handleKernelArgs
+  In parallel.internal.gpu.handleKernelArgs
+  In IndexVectorSymGPU (line 37)
+  In perftestWIN_V_GPU (line 10)]
+
+================================================================================
+Error occurred while setting up or tearing down perftestWIN_V_GPU.
+As a result, all perftestWIN_V_GPU tests failed and did not run to completion.
+
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:kernel:PrototypeMismatchType'
+
+    --------------
+    Error Details:
+    --------------
+    Error using parallel.gpu.CUDAKernel/feval
+    The type of the array supplied for argument 1 does not match
+    the kernel prototype. The kernel prototype specifies that the
+    input must be an array of 'int32' data but the input supplied
+    was an array of type 'int64'.
+    
+    Error in IndexVectorSymGPU (line 57)
+    [iK, jK] = feval(ker, elements, nel, iK, jK);            %
+    GPU code execution
+    
+    Error in perftestWIN_V_GPU (line 10)
+    [iK, jK] = IndexVectorSymGPU(elementsGPU);
+================================================================================
+
+Done perftestWIN_V_GPU
+__________
+
+Failure Summary:
+
+     Name                                                        Failed  Incomplete  Reason(s)
+    ===========================================================================================
+     perftestWIN_V_GPU/TransferToGPUMemory                         X         X       Errored.
+    -------------------------------------------------------------------------------------------
+     perftestWIN_V_GPU/IndexComputationOnGPU                       X         X       Errored.
+    -------------------------------------------------------------------------------------------
+     perftestWIN_V_GPU/ElementStiffnessMatricesComputationOnGPU    X         X       Errored.
+    -------------------------------------------------------------------------------------------
+     perftestWIN_V_GPU/AssemblyOfGlobalSparseMatrixOnGPU           X         X       Errored.
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 40x40x40 (64000)
+Date type for 'elements': 'int64'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Type of code: 'CPUp'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_S_CPUp
+.......... .......... .......... .
+Done perftestWIN_S_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 40x40x40 (64000)
+Date type for 'elements': 'int64'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Type of code: 'CPUp'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_V_CPUp
+.......... .......... ....
+Done perftestWIN_V_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 40x40x40 (64000)
+Date type for 'elements': 'uint64'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Type of code: 'GPU'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_S_GPU
+[Warning: Found invalid mapping for kernel argument 2. The PTX is
+not consistent with the prototype. The kernel prototype
+specifies uint32 but the PTX expects '.u64'. You might have
+specified the wrong PTX file, or it might need recompiling.] 
+[> In parallel.internal.gpu.handleKernelArgs
+  In parallel.internal.gpu.handleKernelArgs
+  In IndexScalarSymGPU (line 41)
+  In perftestWIN_S_GPU (line 9)]
+
+================================================================================
+Error occurred while setting up or tearing down perftestWIN_S_GPU.
+As a result, all perftestWIN_S_GPU tests failed and did not run to completion.
+
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:kernel:PrototypeMismatchType'
+
+    --------------
+    Error Details:
+    --------------
+    Error using parallel.gpu.CUDAKernel/feval
+    The type of the array supplied for argument 1 does not match
+    the kernel prototype. The kernel prototype specifies that the
+    input must be an array of 'uint32' data but the input
+    supplied was an array of type 'uint64'.
+    
+    Error in IndexScalarSymGPU (line 57)
+    [iK, jK] = feval(ker, elements, nel, iK, jK);            %
+    GPU code execution
+    
+    Error in perftestWIN_S_GPU (line 9)
+    [iK, jK] = IndexScalarSymGPU(elementsGPU);
+================================================================================
+
+Done perftestWIN_S_GPU
+__________
+
+Failure Summary:
+
+     Name                                                        Failed  Incomplete  Reason(s)
+    ===========================================================================================
+     perftestWIN_S_GPU/TransferToGPUMemory                         X         X       Errored.
+    -------------------------------------------------------------------------------------------
+     perftestWIN_S_GPU/IndexComputationOnGPU                       X         X       Errored.
+    -------------------------------------------------------------------------------------------
+     perftestWIN_S_GPU/ElementStiffnessMatricesComputationOnGPU    X         X       Errored.
+    -------------------------------------------------------------------------------------------
+     perftestWIN_S_GPU/AssemblyOfGlobalSparseMatrixOnGPU           X         X       Errored.
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 40x40x40 (64000)
+Date type for 'elements': 'uint64'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Type of code: 'GPU'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_V_GPU
+[Warning: Found invalid mapping for kernel argument 2. The PTX is
+not consistent with the prototype. The kernel prototype
+specifies uint32 but the PTX expects '.u64'. You might have
+specified the wrong PTX file, or it might need recompiling.] 
+[> In parallel.internal.gpu.handleKernelArgs
+  In parallel.internal.gpu.handleKernelArgs
+  In IndexVectorSymGPU (line 41)
+  In perftestWIN_V_GPU (line 10)]
+
+================================================================================
+Error occurred while setting up or tearing down perftestWIN_V_GPU.
+As a result, all perftestWIN_V_GPU tests failed and did not run to completion.
+
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:kernel:PrototypeMismatchType'
+
+    --------------
+    Error Details:
+    --------------
+    Error using parallel.gpu.CUDAKernel/feval
+    The type of the array supplied for argument 1 does not match
+    the kernel prototype. The kernel prototype specifies that the
+    input must be an array of 'uint32' data but the input
+    supplied was an array of type 'uint64'.
+    
+    Error in IndexVectorSymGPU (line 57)
+    [iK, jK] = feval(ker, elements, nel, iK, jK);            %
+    GPU code execution
+    
+    Error in perftestWIN_V_GPU (line 10)
+    [iK, jK] = IndexVectorSymGPU(elementsGPU);
+================================================================================
+
+Done perftestWIN_V_GPU
+__________
+
+Failure Summary:
+
+     Name                                                        Failed  Incomplete  Reason(s)
+    ===========================================================================================
+     perftestWIN_V_GPU/TransferToGPUMemory                         X         X       Errored.
+    -------------------------------------------------------------------------------------------
+     perftestWIN_V_GPU/IndexComputationOnGPU                       X         X       Errored.
+    -------------------------------------------------------------------------------------------
+     perftestWIN_V_GPU/ElementStiffnessMatricesComputationOnGPU    X         X       Errored.
+    -------------------------------------------------------------------------------------------
+     perftestWIN_V_GPU/AssemblyOfGlobalSparseMatrixOnGPU           X         X       Errored.
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 40x40x40 (64000)
+Date type for 'elements': 'uint64'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Type of code: 'CPUp'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_S_CPUp
+.......... .......... ....
+Done perftestWIN_S_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 40x40x40 (64000)
+Date type for 'elements': 'uint64'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Type of code: 'CPUp'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_V_CPUp
+.......... .......... ....
+Done perftestWIN_V_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 40x40x40 (64000)
+Date type for 'elements': 'double'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Type of code: 'GPU'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_S_GPU
+.......... .......... .......... ........
+Done perftestWIN_S_GPU
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 40x40x40 (64000)
+Date type for 'elements': 'double'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Type of code: 'GPU'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_V_GPU
+.......... .......... .......... ..
+Done perftestWIN_V_GPU
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 40x40x40 (64000)
+Date type for 'elements': 'double'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Type of code: 'CPUp'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_S_CPUp
+.......... .......... .......... ......[Warning: Target Relative Margin of Error not met after running
+the MaxSamples for
+perftestWIN_S_CPUp/IndexComputationOnCPU_parallel_.] 
+.... ..........
+...
+Done perftestWIN_S_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 40x40x40 (64000)
+Date type for 'elements': 'double'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Type of code: 'CPUp'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_V_CPUp
+.......... .......... ....
+Done perftestWIN_V_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 50x50x50 (125000)
+Date type for 'elements': 'int32'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Type of code: 'GPU'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_S_GPU
+.......... .......... .......... .......... ......
+Done perftestWIN_S_GPU
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 50x50x50 (125000)
+Date type for 'elements': 'int32'
+Date type for 'nodes': 'single'
+Problem type: 'Vector'
+Type of code: 'GPU'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_V_GPU
+.......... .......... .......... ......[Warning: Target Relative Margin of Error not met after running
+the MaxSamples for perftestWIN_V_GPU/TransferToGPUMemory.] 
+.... ..........
+..
+Done perftestWIN_V_GPU
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 50x50x50 (125000)
+Date type for 'elements': 'int32'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Type of code: 'CPUp'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_S_CPUp
+.......... .......... .......... ......[Warning: Target Relative Margin of Error not met after running
+the MaxSamples for
+perftestWIN_S_CPUp/IndexComputationOnCPU_parallel_.] 
+.... ....
+Done perftestWIN_S_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 50x50x50 (125000)
+Date type for 'elements': 'int32'
+Date type for 'nodes': 'single'
+Problem type: 'Vector'
+Type of code: 'CPUp'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_V_CPUp
+.......... ......
+Done perftestWIN_V_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 50x50x50 (125000)
+Date type for 'elements': 'int32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Type of code: 'GPU'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_S_GPU
+.......... .......... .......... ......[Warning: Target Relative Margin of Error not met after running
+the MaxSamples for perftestWIN_S_GPU/TransferToGPUMemory.] 
+.... ..........
+.......... ..
+Done perftestWIN_S_GPU
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 50x50x50 (125000)
+Date type for 'elements': 'int32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Type of code: 'GPU'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_V_GPU
+.......... .......... .......... ..
+Done perftestWIN_V_GPU
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 50x50x50 (125000)
+Date type for 'elements': 'int32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Type of code: 'CPUp'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_S_CPUp
+.......... .......... .......... .......... .......
+Done perftestWIN_S_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 50x50x50 (125000)
+Date type for 'elements': 'int32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Type of code: 'CPUp'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_V_CPUp
+.......... .......... .......
+Done perftestWIN_V_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 50x50x50 (125000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Type of code: 'GPU'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_S_GPU
+.......... .......... .......... ......[Warning: Target Relative Margin of Error not met after running
+the MaxSamples for perftestWIN_S_GPU/TransferToGPUMemory.] 
+.... ..........
+..
+Done perftestWIN_S_GPU
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 50x50x50 (125000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Vector'
+Type of code: 'GPU'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_V_GPU
+.......... .......... ....
+Done perftestWIN_V_GPU
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 50x50x50 (125000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Type of code: 'CPUp'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_S_CPUp
+.......... ..........
+Done perftestWIN_S_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 50x50x50 (125000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Vector'
+Type of code: 'CPUp'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_V_CPUp
+.......... .......
+Done perftestWIN_V_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 50x50x50 (125000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Type of code: 'GPU'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_S_GPU
+.......... .......... .......... ......[Warning: Target Relative Margin of Error not met after running
+the MaxSamples for perftestWIN_S_GPU/TransferToGPUMemory.] 
+.... ..........
+..........
+Done perftestWIN_S_GPU
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 50x50x50 (125000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Type of code: 'GPU'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_V_GPU
+.......... .......... .......... ...
+Done perftestWIN_V_GPU
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 50x50x50 (125000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Type of code: 'CPUp'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_S_CPUp
+.......... .......... ....
+Done perftestWIN_S_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 50x50x50 (125000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Type of code: 'CPUp'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_V_CPUp
+.......... .......... ....
+Done perftestWIN_V_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 50x50x50 (125000)
+Date type for 'elements': 'int64'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Type of code: 'GPU'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_S_GPU
+[Warning: Found invalid mapping for kernel argument 2. The PTX is
+not consistent with the prototype. The kernel prototype
+specifies int32 but the PTX expects '.u64'. You might have
+specified the wrong PTX file, or it might need recompiling.] 
+[> In parallel.internal.gpu.handleKernelArgs
+  In parallel.internal.gpu.handleKernelArgs
+  In IndexScalarSymGPU (line 37)
+  In perftestWIN_S_GPU (line 9)]
+
+================================================================================
+Error occurred while setting up or tearing down perftestWIN_S_GPU.
+As a result, all perftestWIN_S_GPU tests failed and did not run to completion.
+
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:kernel:PrototypeMismatchType'
+
+    --------------
+    Error Details:
+    --------------
+    Error using parallel.gpu.CUDAKernel/feval
+    The type of the array supplied for argument 1 does not match
+    the kernel prototype. The kernel prototype specifies that the
+    input must be an array of 'int32' data but the input supplied
+    was an array of type 'int64'.
+    
+    Error in IndexScalarSymGPU (line 57)
+    [iK, jK] = feval(ker, elements, nel, iK, jK);            %
+    GPU code execution
+    
+    Error in perftestWIN_S_GPU (line 9)
+    [iK, jK] = IndexScalarSymGPU(elementsGPU);
+================================================================================
+
+Done perftestWIN_S_GPU
+__________
+
+Failure Summary:
+
+     Name                                                        Failed  Incomplete  Reason(s)
+    ===========================================================================================
+     perftestWIN_S_GPU/TransferToGPUMemory                         X         X       Errored.
+    -------------------------------------------------------------------------------------------
+     perftestWIN_S_GPU/IndexComputationOnGPU                       X         X       Errored.
+    -------------------------------------------------------------------------------------------
+     perftestWIN_S_GPU/ElementStiffnessMatricesComputationOnGPU    X         X       Errored.
+    -------------------------------------------------------------------------------------------
+     perftestWIN_S_GPU/AssemblyOfGlobalSparseMatrixOnGPU           X         X       Errored.
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 50x50x50 (125000)
+Date type for 'elements': 'int64'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Type of code: 'GPU'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_V_GPU
+[Warning: Found invalid mapping for kernel argument 2. The PTX is
+not consistent with the prototype. The kernel prototype
+specifies int32 but the PTX expects '.u64'. You might have
+specified the wrong PTX file, or it might need recompiling.] 
+[> In parallel.internal.gpu.handleKernelArgs
+  In parallel.internal.gpu.handleKernelArgs
+  In IndexVectorSymGPU (line 37)
+  In perftestWIN_V_GPU (line 10)]
+
+================================================================================
+Error occurred while setting up or tearing down perftestWIN_V_GPU.
+As a result, all perftestWIN_V_GPU tests failed and did not run to completion.
+
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:kernel:PrototypeMismatchType'
+
+    --------------
+    Error Details:
+    --------------
+    Error using parallel.gpu.CUDAKernel/feval
+    The type of the array supplied for argument 1 does not match
+    the kernel prototype. The kernel prototype specifies that the
+    input must be an array of 'int32' data but the input supplied
+    was an array of type 'int64'.
+    
+    Error in IndexVectorSymGPU (line 57)
+    [iK, jK] = feval(ker, elements, nel, iK, jK);            %
+    GPU code execution
+    
+    Error in perftestWIN_V_GPU (line 10)
+    [iK, jK] = IndexVectorSymGPU(elementsGPU);
+================================================================================
+
+Done perftestWIN_V_GPU
+__________
+
+Failure Summary:
+
+     Name                                                        Failed  Incomplete  Reason(s)
+    ===========================================================================================
+     perftestWIN_V_GPU/TransferToGPUMemory                         X         X       Errored.
+    -------------------------------------------------------------------------------------------
+     perftestWIN_V_GPU/IndexComputationOnGPU                       X         X       Errored.
+    -------------------------------------------------------------------------------------------
+     perftestWIN_V_GPU/ElementStiffnessMatricesComputationOnGPU    X         X       Errored.
+    -------------------------------------------------------------------------------------------
+     perftestWIN_V_GPU/AssemblyOfGlobalSparseMatrixOnGPU           X         X       Errored.
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 50x50x50 (125000)
+Date type for 'elements': 'int64'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Type of code: 'CPUp'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_S_CPUp
+.......... .......... ....
+Done perftestWIN_S_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 50x50x50 (125000)
+Date type for 'elements': 'int64'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Type of code: 'CPUp'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_V_CPUp
+.......... .......... ....
+Done perftestWIN_V_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 50x50x50 (125000)
+Date type for 'elements': 'uint64'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Type of code: 'GPU'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_S_GPU
+[Warning: Found invalid mapping for kernel argument 2. The PTX is
+not consistent with the prototype. The kernel prototype
+specifies uint32 but the PTX expects '.u64'. You might have
+specified the wrong PTX file, or it might need recompiling.] 
+[> In parallel.internal.gpu.handleKernelArgs
+  In parallel.internal.gpu.handleKernelArgs
+  In IndexScalarSymGPU (line 41)
+  In perftestWIN_S_GPU (line 9)]
+
+================================================================================
+Error occurred while setting up or tearing down perftestWIN_S_GPU.
+As a result, all perftestWIN_S_GPU tests failed and did not run to completion.
+
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:kernel:PrototypeMismatchType'
+
+    --------------
+    Error Details:
+    --------------
+    Error using parallel.gpu.CUDAKernel/feval
+    The type of the array supplied for argument 1 does not match
+    the kernel prototype. The kernel prototype specifies that the
+    input must be an array of 'uint32' data but the input
+    supplied was an array of type 'uint64'.
+    
+    Error in IndexScalarSymGPU (line 57)
+    [iK, jK] = feval(ker, elements, nel, iK, jK);            %
+    GPU code execution
+    
+    Error in perftestWIN_S_GPU (line 9)
+    [iK, jK] = IndexScalarSymGPU(elementsGPU);
+================================================================================
+
+Done perftestWIN_S_GPU
+__________
+
+Failure Summary:
+
+     Name                                                        Failed  Incomplete  Reason(s)
+    ===========================================================================================
+     perftestWIN_S_GPU/TransferToGPUMemory                         X         X       Errored.
+    -------------------------------------------------------------------------------------------
+     perftestWIN_S_GPU/IndexComputationOnGPU                       X         X       Errored.
+    -------------------------------------------------------------------------------------------
+     perftestWIN_S_GPU/ElementStiffnessMatricesComputationOnGPU    X         X       Errored.
+    -------------------------------------------------------------------------------------------
+     perftestWIN_S_GPU/AssemblyOfGlobalSparseMatrixOnGPU           X         X       Errored.
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 50x50x50 (125000)
+Date type for 'elements': 'uint64'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Type of code: 'GPU'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_V_GPU
+[Warning: Found invalid mapping for kernel argument 2. The PTX is
+not consistent with the prototype. The kernel prototype
+specifies uint32 but the PTX expects '.u64'. You might have
+specified the wrong PTX file, or it might need recompiling.] 
+[> In parallel.internal.gpu.handleKernelArgs
+  In parallel.internal.gpu.handleKernelArgs
+  In IndexVectorSymGPU (line 41)
+  In perftestWIN_V_GPU (line 10)]
+
+================================================================================
+Error occurred while setting up or tearing down perftestWIN_V_GPU.
+As a result, all perftestWIN_V_GPU tests failed and did not run to completion.
+
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:kernel:PrototypeMismatchType'
+
+    --------------
+    Error Details:
+    --------------
+    Error using parallel.gpu.CUDAKernel/feval
+    The type of the array supplied for argument 1 does not match
+    the kernel prototype. The kernel prototype specifies that the
+    input must be an array of 'uint32' data but the input
+    supplied was an array of type 'uint64'.
+    
+    Error in IndexVectorSymGPU (line 57)
+    [iK, jK] = feval(ker, elements, nel, iK, jK);            %
+    GPU code execution
+    
+    Error in perftestWIN_V_GPU (line 10)
+    [iK, jK] = IndexVectorSymGPU(elementsGPU);
+================================================================================
+
+Done perftestWIN_V_GPU
+__________
+
+Failure Summary:
+
+     Name                                                        Failed  Incomplete  Reason(s)
+    ===========================================================================================
+     perftestWIN_V_GPU/TransferToGPUMemory                         X         X       Errored.
+    -------------------------------------------------------------------------------------------
+     perftestWIN_V_GPU/IndexComputationOnGPU                       X         X       Errored.
+    -------------------------------------------------------------------------------------------
+     perftestWIN_V_GPU/ElementStiffnessMatricesComputationOnGPU    X         X       Errored.
+    -------------------------------------------------------------------------------------------
+     perftestWIN_V_GPU/AssemblyOfGlobalSparseMatrixOnGPU           X         X       Errored.
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 50x50x50 (125000)
+Date type for 'elements': 'uint64'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Type of code: 'CPUp'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_S_CPUp
+.......... .......... ....
+Done perftestWIN_S_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 50x50x50 (125000)
+Date type for 'elements': 'uint64'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Type of code: 'CPUp'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_V_CPUp
+.......... .......... ....
+Done perftestWIN_V_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 50x50x50 (125000)
+Date type for 'elements': 'double'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Type of code: 'GPU'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_S_GPU
+.......... .......... .......... ..
+Done perftestWIN_S_GPU
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 50x50x50 (125000)
+Date type for 'elements': 'double'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Type of code: 'GPU'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_V_GPU
+.......... .......... .......... ..
+Done perftestWIN_V_GPU
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 50x50x50 (125000)
+Date type for 'elements': 'double'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Type of code: 'CPUp'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_S_CPUp
+.......... .......... .......... .......... ..........
+Done perftestWIN_S_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 50x50x50 (125000)
+Date type for 'elements': 'double'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Type of code: 'CPUp'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_V_CPUp
+.......... .......... .....
+Done perftestWIN_V_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 60x60x60 (216000)
+Date type for 'elements': 'int32'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Type of code: 'GPU'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_S_GPU
+.......... .......... ....
+Done perftestWIN_S_GPU
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 60x60x60 (216000)
+Date type for 'elements': 'int32'
+Date type for 'nodes': 'single'
+Problem type: 'Vector'
+Type of code: 'GPU'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_V_GPU
+.......... .......... .......... ..
+Done perftestWIN_V_GPU
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 60x60x60 (216000)
+Date type for 'elements': 'int32'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Type of code: 'CPUp'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_S_CPUp
+.......... .......... ....
+Done perftestWIN_S_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 60x60x60 (216000)
+Date type for 'elements': 'int32'
+Date type for 'nodes': 'single'
+Problem type: 'Vector'
+Type of code: 'CPUp'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_V_CPUp
+.......... ......
+Done perftestWIN_V_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 60x60x60 (216000)
+Date type for 'elements': 'int32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Type of code: 'GPU'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_S_GPU
+.......... .......... .......... .........
+Done perftestWIN_S_GPU
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 60x60x60 (216000)
+Date type for 'elements': 'int32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Type of code: 'CPUp'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_S_CPUp
+.......... .......... .....
+Done perftestWIN_S_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 60x60x60 (216000)
+Date type for 'elements': 'int32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Type of code: 'CPUp'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_V_CPUp
+.......... .......... ....
+Done perftestWIN_V_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 60x60x60 (216000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Type of code: 'GPU'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_S_GPU
+.......... .......... ....
+Done perftestWIN_S_GPU
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 60x60x60 (216000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Vector'
+Type of code: 'GPU'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_V_GPU
+.......... .......... ....
+Done perftestWIN_V_GPU
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 60x60x60 (216000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Type of code: 'CPUp'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_S_CPUp
+.......... .......... ...
+Done perftestWIN_S_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 60x60x60 (216000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Vector'
+Type of code: 'CPUp'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_V_CPUp
+.......... ......
+Done perftestWIN_V_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 60x60x60 (216000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Type of code: 'GPU'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_S_GPU
+.......... .......... .......... ..
+Done perftestWIN_S_GPU
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 60x60x60 (216000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Type of code: 'CPUp'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_S_CPUp
+.......... .......... .......... .......
+Done perftestWIN_S_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 60x60x60 (216000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Type of code: 'CPUp'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_V_CPUp
+.......... .......... ........
+Done perftestWIN_V_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 60x60x60 (216000)
+Date type for 'elements': 'int64'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Type of code: 'GPU'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_S_GPU
+[Warning: Found invalid mapping for kernel argument 2. The PTX is
+not consistent with the prototype. The kernel prototype
+specifies int32 but the PTX expects '.u64'. You might have
+specified the wrong PTX file, or it might need recompiling.] 
+[> In parallel.internal.gpu.handleKernelArgs
+  In parallel.internal.gpu.handleKernelArgs
+  In IndexScalarSymGPU (line 37)
+  In perftestWIN_S_GPU (line 9)]
+
+================================================================================
+Error occurred while setting up or tearing down perftestWIN_S_GPU.
+As a result, all perftestWIN_S_GPU tests failed and did not run to completion.
+
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:kernel:PrototypeMismatchType'
+
+    --------------
+    Error Details:
+    --------------
+    Error using parallel.gpu.CUDAKernel/feval
+    The type of the array supplied for argument 1 does not match
+    the kernel prototype. The kernel prototype specifies that the
+    input must be an array of 'int32' data but the input supplied
+    was an array of type 'int64'.
+    
+    Error in IndexScalarSymGPU (line 57)
+    [iK, jK] = feval(ker, elements, nel, iK, jK);            %
+    GPU code execution
+    
+    Error in perftestWIN_S_GPU (line 9)
+    [iK, jK] = IndexScalarSymGPU(elementsGPU);
+================================================================================
+
+Done perftestWIN_S_GPU
+__________
+
+Failure Summary:
+
+     Name                                                        Failed  Incomplete  Reason(s)
+    ===========================================================================================
+     perftestWIN_S_GPU/TransferToGPUMemory                         X         X       Errored.
+    -------------------------------------------------------------------------------------------
+     perftestWIN_S_GPU/IndexComputationOnGPU                       X         X       Errored.
+    -------------------------------------------------------------------------------------------
+     perftestWIN_S_GPU/ElementStiffnessMatricesComputationOnGPU    X         X       Errored.
+    -------------------------------------------------------------------------------------------
+     perftestWIN_S_GPU/AssemblyOfGlobalSparseMatrixOnGPU           X         X       Errored.
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 60x60x60 (216000)
+Date type for 'elements': 'int64'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Type of code: 'CPUp'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_S_CPUp
+.......... .......... ......
+Done perftestWIN_S_CPUp
+__________
+
+[Warning: The following error was caught while executing
+'onCleanup' class destructor:
+Error using rmdir
+C:\Users\Francisco\AppData\Local\Temp\a296faa8-1d67-4dce-8de0-8a7ee66f9346
+is not a directory.
+
+Error in
+matlab.unittest.internal.createConditionallyKeptFolderEnvironment>deleteFolderIfEmpty
+(line 17)
+    rmdir(folder);
+
+Error in
+matlab.unittest.internal.createConditionallyKeptFolderEnvironment>@()deleteFolderIfEmpty(folder)
+(line 9)
+    env = onCleanup(@() deleteFolderIfEmpty(folder));
+
+Error in onCleanup/delete (line 60)
+            h.task();
+
+Error in matlab.unittest.TestRunner/runTestSuite (after line
+949)
+        end
+
+Error in
+matlab.unittest.TestRunner/invokeTestContentOperatorMethod_
+(line 900)
+            [varargout{1:nargout}] = method(runner, pluginData);
+
+Error in matlab.unittest.plugins.TestRunnerPlugin/runTestSuite
+(line 226)
+            iter.CurrentOperator.invokeTestContentOperatorMethod_(@runTestSuite,
+            pluginData, iter);
+
+Error in
+matlab.unittest.plugins.DiagnosticsOutputPlugin/runTestSuite
+(line 154)
+            runTestSuite@matlab.unittest.plugins.TestRunnerPlugin(plugin,
+            pluginData);
+
+Error in
+matlab.unittest.plugins.TestRunnerPlugin/invokeTestContentOperatorMethod_
+(line 686)
+                [varargout{1:nargout}] = method(plugin,
+                pluginData);
+
+Error in matlab.unittest.plugins.TestRunnerPlugin/runTestSuite
+(line 226)
+            iter.CurrentOperator.invokeTestContentOperatorMethod_(@runTestSuite,
+            pluginData, iter);
+
+Error in
+matlab.unittest.plugins.DiagnosticsRecordingPlugin/runTestSuite
+(line 204)
+            plugin.runTestSuite@matlab.unittest.plugins.TestRunnerPlugin(pluginData);
+
+Error in
+matlab.unittest.plugins.TestRunnerPlugin/invokeTestContentOperatorMethod_
+(line 686)
+                [varargout{1:nargout}] = method(plugin,
+                pluginData);
+
+Error in matlab.unittest.plugins.TestRunnerPlugin/runTestSuite
+(line 226)
+            iter.CurrentOperator.invokeTestContentOperatorMethod_(@runTestSuite,
+            pluginData, iter);
+
+Error in sltest.plugins.TestManagerResultsPlugin/runTestSuite
+(line 59)
+            plugin.runTestSuite@matlab.unittest.plugins.TestRunnerPlugin(pluginData);
+
+Error in
+matlab.unittest.plugins.TestRunnerPlugin/invokeTestContentOperatorMethod_
+(line 686)
+                [varargout{1:nargout}] = method(plugin,
+                pluginData);
+
+Error in matlab.unittest.plugins.TestRunnerPlugin/runTestSuite
+(line 226)
+            iter.CurrentOperator.invokeTestContentOperatorMethod_(@runTestSuite,
+            pluginData, iter);
+
+Error in
+matlab.unittest.measurement.MeasurementPlugin/runTestSuite (line
+80)
+            runTestSuite@matlab.unittest.plugins.TestRunnerPlugin(plugin,
+            pluginData);
+
+Error in
+matlab.unittest.plugins.TestRunnerPlugin/invokeTestContentOperatorMethod_
+(line 686)
+                [varargout{1:nargout}] = method(plugin,
+                pluginData);
+
+Error in matlab.unittest.TestRunner/evaluateMethodOnPlugins
+(line 756)
+            [varargout{1:nargout}] =
+            iter.CurrentOperator.invokeTestContentOperatorMethod_(method,
+            pluginData, iter);
+
+Error in matlab.unittest.TestRunner/doRun (line 411)
+            runner.evaluateMethodOnPlugins(@runTestSuite,
+            pluginData);
+
+Error in matlab.unittest.TestRunner/runRepeatedly (line 364)
+            result = doRun(runner);
+
+Error in matlab.perftest.FrequentistTimeExperiment/doRun (line
+137)
+            runner.runRepeatedly(suite, maxMeasurements, ...
+
+Error in matlab.perftest.TimeExperiment/run (line 170)
+            experiment.doRun(operator, experiment.TestRunner,
+            suite, runIdentifier);
+
+Error in runperf (line 48)
+results = experiment.run(suites);
+
+Error in runScalabilityTest_All (line 77)
+                    perf_rst = runperf(nameFile);] 
+[>  In sltest.plugins.TestManagerResultsPlugin/runTestSuite (line 59)
+  In matlab.unittest.plugins.TestRunnerPlugin/invokeTestContentOperatorMethod_ (line 686)
+  In matlab.unittest.plugins.TestRunnerPlugin/runTestSuite (line 226)
+  In matlab.unittest.measurement.MeasurementPlugin/runTestSuite (line 80)
+  In matlab.unittest.plugins.TestRunnerPlugin/invokeTestContentOperatorMethod_ (line 686)
+  In matlab.unittest.TestRunner/evaluateMethodOnPlugins (line 756)
+  In matlab.unittest.TestRunner/doRun (line 411)
+  In matlab.unittest.TestRunner/runRepeatedly (line 364)
+  In matlab.perftest.FrequentistTimeExperiment/doRun (line 137)
+  In matlab.perftest.TimeExperiment/run (line 170)
+  In runperf (line 48)
+  In runScalabilityTest_All (line 77)]
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 60x60x60 (216000)
+Date type for 'elements': 'int64'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Type of code: 'CPUp'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_V_CPUp
+.......... .......... ....
+Done perftestWIN_V_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 60x60x60 (216000)
+Date type for 'elements': 'uint64'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Type of code: 'GPU'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_S_GPU
+[Warning: Found invalid mapping for kernel argument 2. The PTX is
+not consistent with the prototype. The kernel prototype
+specifies uint32 but the PTX expects '.u64'. You might have
+specified the wrong PTX file, or it might need recompiling.] 
+[> In parallel.internal.gpu.handleKernelArgs
+  In parallel.internal.gpu.handleKernelArgs
+  In IndexScalarSymGPU (line 41)
+  In perftestWIN_S_GPU (line 9)]
+
+================================================================================
+Error occurred while setting up or tearing down perftestWIN_S_GPU.
+As a result, all perftestWIN_S_GPU tests failed and did not run to completion.
+
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:kernel:PrototypeMismatchType'
+
+    --------------
+    Error Details:
+    --------------
+    Error using parallel.gpu.CUDAKernel/feval
+    The type of the array supplied for argument 1 does not match
+    the kernel prototype. The kernel prototype specifies that the
+    input must be an array of 'uint32' data but the input
+    supplied was an array of type 'uint64'.
+    
+    Error in IndexScalarSymGPU (line 57)
+    [iK, jK] = feval(ker, elements, nel, iK, jK);            %
+    GPU code execution
+    
+    Error in perftestWIN_S_GPU (line 9)
+    [iK, jK] = IndexScalarSymGPU(elementsGPU);
+================================================================================
+
+Done perftestWIN_S_GPU
+__________
+
+Failure Summary:
+
+     Name                                                        Failed  Incomplete  Reason(s)
+    ===========================================================================================
+     perftestWIN_S_GPU/TransferToGPUMemory                         X         X       Errored.
+    -------------------------------------------------------------------------------------------
+     perftestWIN_S_GPU/IndexComputationOnGPU                       X         X       Errored.
+    -------------------------------------------------------------------------------------------
+     perftestWIN_S_GPU/ElementStiffnessMatricesComputationOnGPU    X         X       Errored.
+    -------------------------------------------------------------------------------------------
+     perftestWIN_S_GPU/AssemblyOfGlobalSparseMatrixOnGPU           X         X       Errored.
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 60x60x60 (216000)
+Date type for 'elements': 'uint64'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Type of code: 'CPUp'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_S_CPUp
+.......... .......... ....
+Done perftestWIN_S_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 60x60x60 (216000)
+Date type for 'elements': 'uint64'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Type of code: 'CPUp'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_V_CPUp
+.......... .......... ....
+Done perftestWIN_V_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 60x60x60 (216000)
+Date type for 'elements': 'double'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Type of code: 'GPU'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_S_GPU
+.......... .......... .......... ....
+Done perftestWIN_S_GPU
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 60x60x60 (216000)
+Date type for 'elements': 'double'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Type of code: 'CPUp'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_S_CPUp
+.......... .......... .......... ..
+Done perftestWIN_S_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 60x60x60 (216000)
+Date type for 'elements': 'double'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Type of code: 'CPUp'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_V_CPUp
+.......... .......... ....
+Done perftestWIN_V_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 70x70x70 (343000)
+Date type for 'elements': 'int32'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Type of code: 'GPU'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_S_GPU
+.......... .......... .......... ......[Warning: Target Relative Margin of Error not met after running
+the MaxSamples for perftestWIN_S_GPU/TransferToGPUMemory.] 
+.... ..........
+..
+Done perftestWIN_S_GPU
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 70x70x70 (343000)
+Date type for 'elements': 'int32'
+Date type for 'nodes': 'single'
+Problem type: 'Vector'
+Type of code: 'GPU'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_V_GPU
+.......... .......
+================================================================================
+Error occurred in perftestWIN_V_GPU/ElementStiffnessMatricesComputationOnGPU and it did not run to completion.
+
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:kernel:CompilationError'
+
+    --------------
+    Error Details:
+    --------------
+    Error using parallel.gpu.CUDAKernel
+    An error occurred during PTX compilation of <image>.
+    The information log was:
+    
+    The error log was:
+    
+    The CUDA error code was: CUDA_ERROR_LAUNCH_FAILED.
+    
+    Error in Hex8vectorSymGPU (line 31)
+        ker = parallel.gpu.CUDAKernel('Hex8vectorSymGPU.ptx',...
+        % PTXFILE
+    
+    Error in perftestWIN_V_GPU (line 21)
+    v = Hex8vectorSymGPU(elementsGPU,nodesGPU,E,nu);
+================================================================================
+.
+================================================================================
+Error occurred in perftestWIN_V_GPU/ElementStiffnessMatricesComputationOnGPU and it did not run to completion.
+
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:kernel:CompilationError'
+
+    --------------
+    Error Details:
+    --------------
+    Error using parallel.gpu.CUDAKernel
+    An error occurred during PTX compilation of <image>.
+    The information log was:
+    <No information>
+    The error log was:
+    <No information>
+    The CUDA error code was: CUDA_ERROR_LAUNCH_FAILED.
+    
+    Error in Hex8vectorSymGPU (line 31)
+        ker = parallel.gpu.CUDAKernel('Hex8vectorSymGPU.ptx',...
+        % PTXFILE
+    
+    Error in perftestWIN_V_GPU (line 21)
+    v = Hex8vectorSymGPU(elementsGPU,nodesGPU,E,nu);
+================================================================================
+.
+================================================================================
+Error occurred in perftestWIN_V_GPU/ElementStiffnessMatricesComputationOnGPU and it did not run to completion.
+
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:kernel:CompilationError'
+
+    --------------
+    Error Details:
+    --------------
+    Error using parallel.gpu.CUDAKernel
+    An error occurred during PTX compilation of <image>.
+    The information log was:
+    <No information>
+    The error log was:
+    <No information>
+    The CUDA error code was: CUDA_ERROR_LAUNCH_FAILED.
+    
+    Error in Hex8vectorSymGPU (line 31)
+        ker = parallel.gpu.CUDAKernel('Hex8vectorSymGPU.ptx',...
+        % PTXFILE
+    
+    Error in perftestWIN_V_GPU (line 21)
+    v = Hex8vectorSymGPU(elementsGPU,nodesGPU,E,nu);
+================================================================================
+. 
+================================================================================
+Error occurred in perftestWIN_V_GPU/ElementStiffnessMatricesComputationOnGPU and it did not run to completion.
+
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:kernel:CompilationError'
+
+    --------------
+    Error Details:
+    --------------
+    Error using parallel.gpu.CUDAKernel
+    An error occurred during PTX compilation of <image>.
+    The information log was:
+    <No information>
+    The error log was:
+    <No information>
+    The CUDA error code was: CUDA_ERROR_LAUNCH_FAILED.
+    
+    Error in Hex8vectorSymGPU (line 31)
+        ker = parallel.gpu.CUDAKernel('Hex8vectorSymGPU.ptx',...
+        % PTXFILE
+    
+    Error in perftestWIN_V_GPU (line 21)
+    v = Hex8vectorSymGPU(elementsGPU,nodesGPU,E,nu);
+================================================================================
+.
+================================================================================
+Error occurred in perftestWIN_V_GPU/ElementStiffnessMatricesComputationOnGPU and it did not run to completion.
+
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:kernel:CompilationError'
+
+    --------------
+    Error Details:
+    --------------
+    Error using parallel.gpu.CUDAKernel
+    An error occurred during PTX compilation of <image>.
+    The information log was:
+    <No information>
+    The error log was:
+    <No information>
+    The CUDA error code was: CUDA_ERROR_LAUNCH_FAILED.
+    
+    Error in Hex8vectorSymGPU (line 31)
+        ker = parallel.gpu.CUDAKernel('Hex8vectorSymGPU.ptx',...
+        % PTXFILE
+    
+    Error in perftestWIN_V_GPU (line 21)
+    v = Hex8vectorSymGPU(elementsGPU,nodesGPU,E,nu);
+================================================================================
+.
+================================================================================
+Error occurred in perftestWIN_V_GPU/ElementStiffnessMatricesComputationOnGPU and it did not run to completion.
+
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:kernel:CompilationError'
+
+    --------------
+    Error Details:
+    --------------
+    Error using parallel.gpu.CUDAKernel
+    An error occurred during PTX compilation of <image>.
+    The information log was:
+    <No information>
+    The error log was:
+    <No information>
+    The CUDA error code was: CUDA_ERROR_LAUNCH_FAILED.
+    
+    Error in Hex8vectorSymGPU (line 31)
+        ker = parallel.gpu.CUDAKernel('Hex8vectorSymGPU.ptx',...
+        % PTXFILE
+    
+    Error in perftestWIN_V_GPU (line 21)
+    v = Hex8vectorSymGPU(elementsGPU,nodesGPU,E,nu);
+================================================================================
+.
+================================================================================
+Error occurred in perftestWIN_V_GPU/ElementStiffnessMatricesComputationOnGPU and it did not run to completion.
+
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:kernel:CompilationError'
+
+    --------------
+    Error Details:
+    --------------
+    Error using parallel.gpu.CUDAKernel
+    An error occurred during PTX compilation of <image>.
+    The information log was:
+    <No information>
+    The error log was:
+    <No information>
+    The CUDA error code was: CUDA_ERROR_LAUNCH_FAILED.
+    
+    Error in Hex8vectorSymGPU (line 31)
+        ker = parallel.gpu.CUDAKernel('Hex8vectorSymGPU.ptx',...
+        % PTXFILE
+    
+    Error in perftestWIN_V_GPU (line 21)
+    v = Hex8vectorSymGPU(elementsGPU,nodesGPU,E,nu);
+================================================================================
+.[Warning: An unexpected error occurred during CUDA execution. The
+CUDA error was:
+CUDA_ERROR_LAUNCH_FAILED] 
+[>  In sltest.plugins.TestManagerResultsPlugin/runTestSuite (line 59)
+  In matlab.unittest.plugins.TestRunnerPlugin/invokeTestContentOperatorMethod_ (line 686)
+  In matlab.unittest.plugins.TestRunnerPlugin/runTestSuite (line 226)
+  In matlab.unittest.measurement.MeasurementPlugin/runTestSuite (line 80)
+  In matlab.unittest.plugins.TestRunnerPlugin/invokeTestContentOperatorMethod_ (line 686)
+  In matlab.unittest.TestRunner/evaluateMethodOnPlugins (line 756)
+  In matlab.unittest.TestRunner/doRun (line 411)
+  In matlab.unittest.TestRunner/runRepeatedly (line 364)
+  In matlab.perftest.FrequentistTimeExperiment/doRun (line 137)
+  In matlab.perftest.TimeExperiment/run (line 170)
+  In runperf (line 48)
+  In runScalabilityTest_All (line 77)]
+[Warning: An unexpected error occurred during CUDA execution. The
+CUDA error was:
+CUDA_ERROR_LAUNCH_FAILED] 
+[>  In sltest.plugins.TestManagerResultsPlugin/runTestSuite (line 59)
+  In matlab.unittest.plugins.TestRunnerPlugin/invokeTestContentOperatorMethod_ (line 686)
+  In matlab.unittest.plugins.TestRunnerPlugin/runTestSuite (line 226)
+  In matlab.unittest.measurement.MeasurementPlugin/runTestSuite (line 80)
+  In matlab.unittest.plugins.TestRunnerPlugin/invokeTestContentOperatorMethod_ (line 686)
+  In matlab.unittest.TestRunner/evaluateMethodOnPlugins (line 756)
+  In matlab.unittest.TestRunner/doRun (line 411)
+  In matlab.unittest.TestRunner/runRepeatedly (line 364)
+  In matlab.perftest.FrequentistTimeExperiment/doRun (line 137)
+  In matlab.perftest.TimeExperiment/run (line 170)
+  In runperf (line 48)
+  In runScalabilityTest_All (line 77)]
+[Warning: An unexpected error occurred during CUDA execution. The
+CUDA error was:
+CUDA_ERROR_LAUNCH_FAILED] 
+[>  In sltest.plugins.TestManagerResultsPlugin/runTestSuite (line 59)
+  In matlab.unittest.plugins.TestRunnerPlugin/invokeTestContentOperatorMethod_ (line 686)
+  In matlab.unittest.plugins.TestRunnerPlugin/runTestSuite (line 226)
+  In matlab.unittest.measurement.MeasurementPlugin/runTestSuite (line 80)
+  In matlab.unittest.plugins.TestRunnerPlugin/invokeTestContentOperatorMethod_ (line 686)
+  In matlab.unittest.TestRunner/evaluateMethodOnPlugins (line 756)
+  In matlab.unittest.TestRunner/doRun (line 411)
+  In matlab.unittest.TestRunner/runRepeatedly (line 364)
+  In matlab.perftest.FrequentistTimeExperiment/doRun (line 137)
+  In matlab.perftest.TimeExperiment/run (line 170)
+  In runperf (line 48)
+  In runScalabilityTest_All (line 77)]
+[Warning: An unexpected error occurred during CUDA execution. The
+CUDA error was:
+CUDA_ERROR_LAUNCH_FAILED] 
+[>  In sltest.plugins.TestManagerResultsPlugin/runTestSuite (line 59)
+  In matlab.unittest.plugins.TestRunnerPlugin/invokeTestContentOperatorMethod_ (line 686)
+  In matlab.unittest.plugins.TestRunnerPlugin/runTestSuite (line 226)
+  In matlab.unittest.measurement.MeasurementPlugin/runTestSuite (line 80)
+  In matlab.unittest.plugins.TestRunnerPlugin/invokeTestContentOperatorMethod_ (line 686)
+  In matlab.unittest.TestRunner/evaluateMethodOnPlugins (line 756)
+  In matlab.unittest.TestRunner/doRun (line 411)
+  In matlab.unittest.TestRunner/runRepeatedly (line 364)
+  In matlab.perftest.FrequentistTimeExperiment/doRun (line 137)
+  In matlab.perftest.TimeExperiment/run (line 170)
+  In runperf (line 48)
+  In runScalabilityTest_All (line 77)]
+[Warning: An unexpected error occurred during CUDA execution. The
+CUDA error was:
+CUDA_ERROR_LAUNCH_FAILED] 
+[>  In sltest.plugins.TestManagerResultsPlugin/runTestSuite (line 59)
+  In matlab.unittest.plugins.TestRunnerPlugin/invokeTestContentOperatorMethod_ (line 686)
+  In matlab.unittest.plugins.TestRunnerPlugin/runTestSuite (line 226)
+  In matlab.unittest.measurement.MeasurementPlugin/runTestSuite (line 80)
+  In matlab.unittest.plugins.TestRunnerPlugin/invokeTestContentOperatorMethod_ (line 686)
+  In matlab.unittest.TestRunner/evaluateMethodOnPlugins (line 756)
+  In matlab.unittest.TestRunner/doRun (line 411)
+  In matlab.unittest.TestRunner/runRepeatedly (line 364)
+  In matlab.perftest.FrequentistTimeExperiment/doRun (line 137)
+  In matlab.perftest.TimeExperiment/run (line 170)
+  In runperf (line 48)
+  In runScalabilityTest_All (line 77)]
+[Warning: An unexpected error occurred during CUDA execution. The
+CUDA error was:
+CUDA_ERROR_LAUNCH_FAILED] 
+[>  In sltest.plugins.TestManagerResultsPlugin/runTestSuite (line 59)
+  In matlab.unittest.plugins.TestRunnerPlugin/invokeTestContentOperatorMethod_ (line 686)
+  In matlab.unittest.plugins.TestRunnerPlugin/runTestSuite (line 226)
+  In matlab.unittest.measurement.MeasurementPlugin/runTestSuite (line 80)
+  In matlab.unittest.plugins.TestRunnerPlugin/invokeTestContentOperatorMethod_ (line 686)
+  In matlab.unittest.TestRunner/evaluateMethodOnPlugins (line 756)
+  In matlab.unittest.TestRunner/doRun (line 411)
+  In matlab.unittest.TestRunner/runRepeatedly (line 364)
+  In matlab.perftest.FrequentistTimeExperiment/doRun (line 137)
+  In matlab.perftest.TimeExperiment/run (line 170)
+  In runperf (line 48)
+  In runScalabilityTest_All (line 77)]
+[Warning: An unexpected error occurred during CUDA execution. The
+CUDA error was:
+CUDA_ERROR_LAUNCH_FAILED] 
+[>  In sltest.plugins.TestManagerResultsPlugin/runTestSuite (line 59)
+  In matlab.unittest.plugins.TestRunnerPlugin/invokeTestContentOperatorMethod_ (line 686)
+  In matlab.unittest.plugins.TestRunnerPlugin/runTestSuite (line 226)
+  In matlab.unittest.measurement.MeasurementPlugin/runTestSuite (line 80)
+  In matlab.unittest.plugins.TestRunnerPlugin/invokeTestContentOperatorMethod_ (line 686)
+  In matlab.unittest.TestRunner/evaluateMethodOnPlugins (line 756)
+  In matlab.unittest.TestRunner/doRun (line 411)
+  In matlab.unittest.TestRunner/runRepeatedly (line 364)
+  In matlab.perftest.FrequentistTimeExperiment/doRun (line 137)
+  In matlab.perftest.TimeExperiment/run (line 170)
+  In runperf (line 48)
+  In runScalabilityTest_All (line 77)]
+[Warning: An unexpected error occurred during CUDA execution. The
+CUDA error was:
+CUDA_ERROR_LAUNCH_FAILED] 
+[>  In sltest.plugins.TestManagerResultsPlugin/runTestSuite (line 59)
+  In matlab.unittest.plugins.TestRunnerPlugin/invokeTestContentOperatorMethod_ (line 686)
+  In matlab.unittest.plugins.TestRunnerPlugin/runTestSuite (line 226)
+  In matlab.unittest.measurement.MeasurementPlugin/runTestSuite (line 80)
+  In matlab.unittest.plugins.TestRunnerPlugin/invokeTestContentOperatorMethod_ (line 686)
+  In matlab.unittest.TestRunner/evaluateMethodOnPlugins (line 756)
+  In matlab.unittest.TestRunner/doRun (line 411)
+  In matlab.unittest.TestRunner/runRepeatedly (line 364)
+  In matlab.perftest.FrequentistTimeExperiment/doRun (line 137)
+  In matlab.perftest.TimeExperiment/run (line 170)
+  In runperf (line 48)
+  In runScalabilityTest_All (line 77)]
+[Warning: An unexpected error occurred during CUDA execution. The
+CUDA error was:
+CUDA_ERROR_LAUNCH_FAILED] 
+[>  In sltest.plugins.TestManagerResultsPlugin/runTestSuite (line 59)
+  In matlab.unittest.plugins.TestRunnerPlugin/invokeTestContentOperatorMethod_ (line 686)
+  In matlab.unittest.plugins.TestRunnerPlugin/runTestSuite (line 226)
+  In matlab.unittest.measurement.MeasurementPlugin/runTestSuite (line 80)
+  In matlab.unittest.plugins.TestRunnerPlugin/invokeTestContentOperatorMethod_ (line 686)
+  In matlab.unittest.TestRunner/evaluateMethodOnPlugins (line 756)
+  In matlab.unittest.TestRunner/doRun (line 411)
+  In matlab.unittest.TestRunner/runRepeatedly (line 364)
+  In matlab.perftest.FrequentistTimeExperiment/doRun (line 137)
+  In matlab.perftest.TimeExperiment/run (line 170)
+  In runperf (line 48)
+  In runScalabilityTest_All (line 77)]
+
+Done perftestWIN_V_GPU
+__________
+
+Failure Summary:
+
+     Name                                                        Failed  Incomplete  Reason(s)
+    ===========================================================================================
+     perftestWIN_V_GPU/ElementStiffnessMatricesComputationOnGPU    X         X       Errored.
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 70x70x70 (343000)
+Date type for 'elements': 'int32'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Type of code: 'CPUp'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_S_CPUp
+.......... ......
+Done perftestWIN_S_CPUp
+__________
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 70x70x70 (343000)
+Date type for 'elements': 'int32'
+Date type for 'nodes': 'single'
+Problem type: 'Vector'
+Type of code: 'CPUp'
+CPU processor: 'Intel(R) Xeon(R) CPU E5-2687W v2 @ 3.40GHz'
+GPU co-processor: 'Quadro K5000'
+
+Running perftestWIN_V_CPUp
+.......... .......
+Done perftestWIN_V_CPUp
+__________
+
+{An unexpected error occurred during CUDA execution. The CUDA
+error was:
+unspecified launch failure
+
+Error in getMaxNel (line 27)
+    freeMem = gpu.AvailableMemory;  % Use as much memory as we
+    can
+
+Error in runScalabilityTest_All (line 62)
+                    nel_max =
+                    getMaxNel(dTE,dTN,prob_type,codetype,safetyFactor);} 
+IdleTimeout has been reached.
+Parallel pool using the 'local' profile is shutting down.
