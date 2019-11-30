@@ -1,4 +1,4 @@
-# MatGen: Fast finite element stiffness matrix construction in MATLAB
+# StiffMa: Fast finite element STIFFness MAtrix construction in MATLAB
 
 The finite element method (FEM) has several computational stages to which many efforts have been directed to accelerate the step associated with the linear system solution.
 However, the construction of the finite element stiffness matrix, which is also time-consuming for unstructured meshes, has been less investigated. 
