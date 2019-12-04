@@ -1,4 +1,4 @@
-function [iK, jK] = IndexScalarSymGPU(elements)
+function [iK, jK] = IndexScalarSymGPU(elements, tbs)
 % INDEXSCALARSYMGPU Compute the row and column indices of lower symmetric
 % part of global stiffness matrix for a SCALAR problem taking advantage of
 % GPU computing.
@@ -6,7 +6,7 @@ function [iK, jK] = IndexScalarSymGPU(elements)
 %   of all element stiffness matrices in the global system for a finite
 %   element analysis of a scalar problem in a three-dimensional domain
 %   taking advantage of symmetry and GPU computing, where "elements" is the
-%   connectivity matrix.
+%   connectivity matrix and the optional "tbs" refers to ThreadBlockSize.
 %
 %   See also INDEXSCALARSYMCPU, INDEXSCALARSYMCPUP, STIFFMATGENSCSYMGPU
 %
@@ -15,7 +15,9 @@ function [iK, jK] = IndexScalarSymGPU(elements)
 
 %   Written by Francisco Javier Ramirez-Gil, fjramireg@gmail.com
 %   Universidad Nacional de Colombia - Medellin
-%   Created: 30/11/2018. Modified: 21/01/2019. Version: 1.3
+% 	Modified: 03/12/2019. Version: 1.4. Variable number of inputs
+% 	Modified: 21/01/2019. Version: 1.3
+%   Created:  30/11/2018. Version: 1.0
 
 dType = classUnderlying(elements);          % Data type (int32, uint32, int64, uint64, double)
 nel = size(elements,2);                     % Number of elements
@@ -50,7 +52,8 @@ else
 end
 
 % MATLAB KERNEL CONFIGURATION
-ker.ThreadBlockSize = [ker.MaxThreadsPerBlock, 1, 1];    % Threads per block
+if nargin == 1; tbs = ker.MaxThreadsPerBlock; end        % Default (MaxThreadsPerBlock)
+ker.ThreadBlockSize = [tbs, 1, 1];                       % Threads per block
 ker.GridSize = [ceil(nel/ker.ThreadBlockSize(1)), 1, 1]; % Blocks per grid
 
 % MATLAB KERNEL CALL

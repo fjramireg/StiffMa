@@ -14,9 +14,11 @@ function K = AssemblyStiffMat(iK,jK,Ke,N,dTE,dTN)
 
 %   Written by Francisco Javier Ramirez-Gil, fjramireg@gmail.com
 %   Universidad Nacional de Colombia - Medellin
-%   Created: 10/12/2018. Modified: 21/01/2019. Version: 1.3
+% 	Modified: 05/12/2019. Version: 1.4.
+% 	Modified: 21/01/2019. Version: 1.3
+%   Created:  10/12/2018. Version: 1.0
 
-%% Assembly of global sparse matrix on CPU
+%% Assembly of global sparse matrix
 if ( strcmp(dTE,'double') && strcmp(dTN,'double') )
     K = sparse(iK, jK, Ke, N, N);
 else

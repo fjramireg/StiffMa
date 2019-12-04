@@ -10,13 +10,9 @@
  *			iK[36*nel]            // Row indices of the lower-triangular part of ke
  *			jK[36*nel]            // Colummn indices of the lower-triangular part of ke
  *
- ** COMPILATION LINUX (Terminal)
- *          sudo nano ~/.bashrc
- *          export PATH=/usr/local/cuda-10.0/bin${PATH:+:${PATH}}
- * 			nvcc -ptx IndexScalarGPU.cu
- *
- ** COMPILATION WINDOWS (Terminal)
- * 			nvcc -ptx IndexScalarGPU.cu
+ ** COMPILATION (Terminal)
+ * 	 Opt1:	nvcc -ptx IndexScalarGPU.cu
+ *   Opt2:  nvcc -ptx -v -arch=sm_50 -o IndexScalarGPU_cc50.ptx IndexScalarGPU.cu
  *
  ** COMPILATION Within MATLAB
  * 			setenv('MW_NVCC_PATH','/usr/local/cuda-10.0/bin')
@@ -44,9 +40,9 @@
  *
  ** Please cite this code as:
  *
- *** Date & version
- *      Created: 30/11/2018. Last modified: 21/01/2019
- *      V 1.3
+ *** Date & version       
+ *      Last modified: 02/12/2019, Version 1.4 (added grid stride)
+ *      Created: 30/11/2018. V 1.0
  *
  * ======================================================================*/
 
@@ -55,18 +51,19 @@ __global__ void IndexScalarGPU(const dType *elements, const dType nel, dType *iK
     // CUDA kernel to compute row/column indices of tril(K) (SCALAR)
     
     int tid = blockDim.x * blockIdx.x + threadIdx.x;    // Thread ID
-    unsigned int i, j, temp, idx;                       // General indices
+    int gridStride = gridDim.x * blockDim.x;            // Grid stride
+    unsigned int e, i, j, temp, idx;                    // General indices
     dType n[8];                                         // DOFs
     
-    if (tid < nel){                                     // Parallel computation
+    for (e = tid; e < nel; e += gridStride){            // Parallel computation
         
-        // Extract the nodes (DOFs) associated with element 'e' (=tid)
-        for (i=0; i<8; i++) {n[i] = elements[i+8*tid];}
+        // Extract the nodes (DOFs) associated with element 'e'
+        for (i=0; i<8; i++) {n[i] = elements[i+8*e];}
         
         temp = 0;
         for (j=0; j<8; j++){
             for (i=j; i<8; i++){
-                idx = temp + i + 36*tid;
+                idx = temp + i + 36*e;
                 if (n[i] >= n[j]){
                     iK[idx] = n[i];
                     jK[idx] = n[j];}
