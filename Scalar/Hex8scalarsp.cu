@@ -5,7 +5,7 @@
 *
 * DATA INPUT
 * 			elements[8][nel]      // Conectivity matrix of the mesh
-*			ncoord[3][N]          // Nodal coordinates
+*			nodes[3][N]           // Nodal coordinates
 *			nel                   // Number of finite elements in the mesh
 *			L[3][8][8]            // Shape function derivatives for 8-node brick element
 *			c                     // Isotropic material property
@@ -14,16 +14,16 @@
 *			ke[36*nel]            // Lower-triangular part of ke
 *
 ** COMPILATION (Terminal)
-* 	 Opt1:	nvcc -ptx Hex8scalarSymGPU.cu
-*    Opt2:  nvcc -ptx -v -arch=sm_50 -o Hex8scalarSymGPU_cc50.ptx Hex8scalarSymGPU.cu
+* 	 Opt1:	nvcc -ptx Hex8scalarsp.cu
+*    Opt2:  nvcc -ptx -v -arch=sm_50 -o Hex8scalarsp_cc50.ptx Hex8scalarsp.cu
 *
 ** COMPILATION Within MATLAB
-* 		   setenv('MW_NVCC_PATH','/usr/local/cuda-10.0/bin')
-*          setenv('PATH',[getenv('PATH') ':/usr/local/cuda-10.0/bin'])
-*          system('nvcc -ptx Hex8scalarSymGPU.cu')
+* 		   setenv('MW_NVCC_PATH','/usr/local/cuda-10.1/bin')
+*          setenv('PATH',[getenv('PATH') ':/usr/local/cuda-10.1/bin'])
+*          system('nvcc -ptx Hex8scalarsp.cu')
 *
 ** MATLAB KERNEL CREATION (inside MATLAB)
-*			kernel = parallel.gpu.CUDAKernel('Hex8scalarSymGPU.ptx', 'Hex8scalarSymGPU.cu');
+*			kernel = parallel.gpu.CUDAKernel('Hex8scalarsp.ptx', 'Hex8scalarsp.cu');
 *
 ** MATLAB KERNEL CONFIGURATION
 *          kernel.ThreadBlockSize = [512, 1, 1];
@@ -45,7 +45,7 @@
 ** Please cite this code as:
 *
 ** Date & version
-*          Last modified: 023/12/2019, Version 1.4 (added grid stride)
+*          Last modified: 07/12/2019, Version 1.4 (added grid stride)
 *          Modified: 21/01/2019, Version 1.3
 *          Created: 13/12/2018, Version 1.0
 *

@@ -11,16 +11,16 @@
  *			jK[36*nel]            // Colummn indices of the lower-triangular part of ke
  *
  ** COMPILATION (Terminal)
- * 	 Opt1:	nvcc -ptx IndexScalarGPU.cu
- *   Opt2:  nvcc -ptx -v -arch=sm_50 -o IndexScalarGPU_cc50.ptx IndexScalarGPU.cu
+ * 	 Opt1:	nvcc -ptx IndexScalarsp.cu
+ *   Opt2:  nvcc -ptx -v -arch=sm_50 -o IndexScalarsp_cc50.ptx IndexScalarsp.cu
  *
- ** COMPILATION Within MATLAB
- * 			setenv('MW_NVCC_PATH','/usr/local/cuda-10.0/bin')
- *          setenv('PATH',[getenv('PATH') ':/usr/local/cuda-10.0/bin'])
- *          system('nvcc -ptx IndexScalarGPU.cu')
+ ** COMPILATION within MATLAB using NVCC
+ * 			setenv('MW_NVCC_PATH','/usr/local/cuda-10.1/bin')
+ *          setenv('PATH',[getenv('PATH') ':/usr/local/cuda-10.1/bin'])
+ *          system('nvcc -ptx IndexScalarsp.cu')
  *
  ** MATLAB KERNEL CREATION (inside MATLAB)
- *			kernel = parallel.gpu.CUDAKernel('IndexScalarGPU.ptx', 'IndexScalarGPU.cu');
+ *			kernel = parallel.gpu.CUDAKernel('IndexScalarsp.ptx', 'IndexScalarsp.cu');
  *
  ** MATLAB KERNEL CONFIGURATION
  *          kernel.ThreadBlockSize = [512, 1, 1];
@@ -41,7 +41,8 @@
  ** Please cite this code as:
  *
  *** Date & version       
- *      Last modified: 02/12/2019, Version 1.4 (added grid stride)
+ *      Last modified: 07/12/2019. Version 1.4 (added grid stride)
+ *      Modified: 21/01/2019, Version 1.3
  *      Created: 30/11/2018. V 1.0
  *
  * ======================================================================*/

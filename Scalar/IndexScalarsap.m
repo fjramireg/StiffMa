@@ -1,17 +1,16 @@
-function [iK, jK] = IndexScalarSymGPU(elements, tbs)
-% INDEXSCALARSYMGPU Compute the row and column indices of lower symmetric
-% part of global stiffness matrix for a SCALAR problem taking advantage of
-% GPU computing.
-%   INDEXSCALARSYMGPU(elements) returns the rows "iK" and columns "jK" position
-%   of all element stiffness matrices in the global system for a finite
-%   element analysis of a scalar problem in a three-dimensional domain
-%   taking advantage of symmetry and GPU computing, where "elements" is the
-%   connectivity matrix and the optional "tbs" refers to ThreadBlockSize.
+function [iK, jK] = IndexScalarsap(elements, tbs)
+% INDEXSCALARSAP Compute the row/column indices of tril(K) in PARALLEL computing
+% for a SCALAR problem taking advantage of GPU computing.
+%   INDEXSCALARSAP(elements) returns the rows "iK" and columns "jK" position
+%   of all element stiffness matrices in the global system for a finite element
+%   analysis of a scalar problem in a three-dimensional domain taking advantage
+%   of symmetry and GPU computing, where "elements" is the connectivity matrix
+%   of size 8xnel and the optional "tbs" refers to ThreadBlockSize (scalar). 
 %
-%   See also INDEXSCALARSYMCPU, INDEXSCALARSYMCPUP, STIFFMATGENSCSYMGPU
+%   See also STIFFMAPS, INDEXSCALARSAS
 %
-%   For more information, see <a href="matlab:
-%   web('https://github.com/fjramireg/MatGen')">the MatGen Web site</a>.
+%   For more information, see the <a href="matlab:
+%   web('https://github.com/fjramireg/StiffMa')">StiffMa</a> web site.
 
 %   Written by Francisco Javier Ramirez-Gil, fjramireg@gmail.com
 %   Universidad Nacional de Colombia - Medellin
@@ -28,23 +27,23 @@ jK  = zeros(36*nel,1,dType,'gpuArray');     % Stores column indices (initialized
 
 % MATLAB KERNEL CREATION
 if strcmp(dType,'int32')                    % int32
-    ker = parallel.gpu.CUDAKernel('IndexScalarGPU.ptx',...  % PTXFILE
+    ker = parallel.gpu.CUDAKernel('IndexScalarsp.ptx',...   % PTXFILE
         'const int *, const int, int *, int *',...          % C prototype for kernel
         'IndexScalarGPUIi');                                % Specify entry point
 elseif strcmp(dType,'uint32')               % uint32
-    ker = parallel.gpu.CUDAKernel('IndexScalarGPU.ptx',...
+    ker = parallel.gpu.CUDAKernel('IndexScalarsp.ptx',...
         'const unsigned int *, const unsigned int, unsigned int *, unsigned int *',...
         'IndexScalarGPUIj');
 elseif strcmp(dType,'int64')                % int64
-    ker = parallel.gpu.CUDAKernel('IndexScalarGPU.ptx',...
+    ker = parallel.gpu.CUDAKernel('IndexScalarsp.ptx',...
         'const long *, const long, long *, long *',...
         'IndexScalarGPUIl');
 elseif strcmp(dType,'uint64')               % uint64
-    ker = parallel.gpu.CUDAKernel('IndexScalarGPU.ptx',...
+    ker = parallel.gpu.CUDAKernel('IndexScalarsp.ptx',...
         'const unsigned long *, const unsigned long, unsigned long *, unsigned long *',...
         'IndexScalarGPUIm');
 elseif strcmp(dType,'double')               % double
-    ker = parallel.gpu.CUDAKernel('IndexScalarGPU.ptx',...
+    ker = parallel.gpu.CUDAKernel('IndexScalarsp.ptx',...
         'const double *, const double, double *, double *',...
         'IndexScalarGPUId');
 else
@@ -52,7 +51,9 @@ else
 end
 
 % MATLAB KERNEL CONFIGURATION
-if nargin == 1; tbs = ker.MaxThreadsPerBlock; end        % Default (MaxThreadsPerBlock)
+if (nargin == 1 || tbs > ker.MaxThreadsPerBlock)
+    tbs = ker.MaxThreadsPerBlock;                        % Default (MaxThreadsPerBlock)
+end        
 ker.ThreadBlockSize = [tbs, 1, 1];                       % Threads per block
 ker.GridSize = [ceil(nel/ker.ThreadBlockSize(1)), 1, 1]; % Blocks per grid
 
