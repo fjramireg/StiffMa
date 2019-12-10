@@ -18,8 +18,8 @@
 *    Opt2:  nvcc -ptx -v -arch=sm_50 -o Hex8scalarsp_cc50.ptx Hex8scalarsp.cu
 *
 ** COMPILATION Within MATLAB
-* 		   setenv('MW_NVCC_PATH','/usr/local/cuda-10.1/bin')
-*          setenv('PATH',[getenv('PATH') ':/usr/local/cuda-10.1/bin'])
+* 		   setenv('MW_NVCC_PATH','/usr/local/cuda-10.2/bin')
+*          setenv('PATH',[getenv('PATH') ':/usr/local/cuda-10.2/bin'])
 *          system('nvcc -ptx Hex8scalarsp.cu')
 *
 ** MATLAB KERNEL CREATION (inside MATLAB)

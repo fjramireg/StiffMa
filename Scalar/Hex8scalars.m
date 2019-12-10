@@ -1,4 +1,4 @@
-function ke = Hex8scalars(X,c)
+function ke = Hex8scalars(X,c) %#codegen
 % HEX8SCALARS Compute the element stiffnes matrix for a SCALAR problem in SERIAL computing
 %   HEX8SCALARS(X,c) returns the element stiffness matrix "ke" for an element
 %   "e"  in a finite element analysis of scalar problems in a three-dimensional

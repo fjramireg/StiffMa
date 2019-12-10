@@ -12,7 +12,7 @@
  *
  ** COMPILATION (Terminal)
  * 	 Opt1:	nvcc -ptx IndexScalarsp.cu
- *   Opt2:  nvcc -ptx -v -arch=sm_50 -o IndexScalarsp_cc50.ptx IndexScalarsp.cu
+ *   Opt2:  nvcc -ptx -v -arch=sm_50 --fmad=false -o IndexScalarsp_cc50.ptx IndexScalarsp.cu
  *
  ** COMPILATION within MATLAB using NVCC
  * 			setenv('MW_NVCC_PATH','/usr/local/cuda-10.1/bin')
