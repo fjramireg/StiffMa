@@ -15,7 +15,7 @@
 *
 ** COMPILATION (Terminal)
 * 	 Opt1:	nvcc -ptx Hex8scalarsp.cu
-*    Opt2:  nvcc -ptx -v -arch=sm_50 -o Hex8scalarsp_cc50.ptx Hex8scalarsp.cu
+*    Opt2:  nvcc -ptx -v -arch=sm_50 --fmad=false -o Hex8scalarsp.ptx Hex8scalarsp.cu
 *
 ** COMPILATION Within MATLAB
 * 		   setenv('MW_NVCC_PATH','/usr/local/cuda-10.2/bin')

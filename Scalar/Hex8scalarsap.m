@@ -64,7 +64,7 @@ else
 end
 
 % Configure and execute the CUDA kernel
-if (nargin == 1 || tbs > ker.MaxThreadsPerBlock)
+if (nargin == 3 || tbs > ker.MaxThreadsPerBlock)
     tbs = ker.MaxThreadsPerBlock;                                   % Default (MaxThreadsPerBlock)
 end  
 ker.ThreadBlockSize = [tbs, 1, 1];                                  % Threads per block

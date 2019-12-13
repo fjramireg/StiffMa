@@ -12,11 +12,11 @@
  *
  ** COMPILATION (Terminal)
  * 	 Opt1:	nvcc -ptx IndexScalarsp.cu
- *   Opt2:  nvcc -ptx -v -arch=sm_50 --fmad=false -o IndexScalarsp_cc50.ptx IndexScalarsp.cu
+ *   Opt2:  nvcc -ptx -v -arch=sm_50 --fmad=false -o IndexScalarsp.ptx IndexScalarsp.cu
  *
  ** COMPILATION within MATLAB using NVCC
- * 			setenv('MW_NVCC_PATH','/usr/local/cuda-10.1/bin')
- *          setenv('PATH',[getenv('PATH') ':/usr/local/cuda-10.1/bin'])
+ * 			setenv('MW_NVCC_PATH','/usr/local/cuda-10.2/bin')
+ *          setenv('PATH',[getenv('PATH') ':/usr/local/cuda-10.2/bin'])
  *          system('nvcc -ptx IndexScalarsp.cu')
  *
  ** MATLAB KERNEL CREATION (inside MATLAB)

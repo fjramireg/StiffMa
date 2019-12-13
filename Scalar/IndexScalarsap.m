@@ -5,7 +5,7 @@ function [iK, jK] = IndexScalarsap(elements, tbs)
 %   of all element stiffness matrices in the global system for a finite element
 %   analysis of a scalar problem in a three-dimensional domain taking advantage
 %   of symmetry and GPU computing, where "elements" is the connectivity matrix
-%   of size 8xnel and the optional "tbs" refers to ThreadBlockSize (scalar). 
+%   of size 8xnel and the optional "tbs" refers to ThreadBlockSize (scalar).
 %
 %   See also STIFFMAPS, INDEXSCALARSAS
 %
@@ -20,10 +20,6 @@ function [iK, jK] = IndexScalarsap(elements, tbs)
 
 dType = classUnderlying(elements);          % Data type (int32, uint32, int64, uint64, double)
 nel = size(elements,2);                     % Number of elements
-
-% INITIALIZATION OF GPU VARIABLES
-iK  = zeros(36*nel,1,dType,'gpuArray');     % Stores row indices (initialized directly on GPU)
-jK  = zeros(36*nel,1,dType,'gpuArray');     % Stores column indices (initialized directly on GPU)
 
 % MATLAB KERNEL CREATION
 if strcmp(dType,'int32')                    % int32
@@ -53,9 +49,13 @@ end
 % MATLAB KERNEL CONFIGURATION
 if (nargin == 1 || tbs > ker.MaxThreadsPerBlock)
     tbs = ker.MaxThreadsPerBlock;                        % Default (MaxThreadsPerBlock)
-end        
+end
 ker.ThreadBlockSize = [tbs, 1, 1];                       % Threads per block
 ker.GridSize = [ceil(nel/ker.ThreadBlockSize(1)), 1, 1]; % Blocks per grid
+
+% INITIALIZATION OF GPU VARIABLES
+iK  = zeros(36*nel,1,dType,'gpuArray');                  % Stores row indices (initialized directly on GPU)
+jK  = zeros(36*nel,1,dType,'gpuArray');                  % Stores column indices (initialized directly on GPU)
 
 % MATLAB KERNEL CALL
 [iK, jK] = feval(ker, elements, nel, iK, jK);            % GPU code execution
