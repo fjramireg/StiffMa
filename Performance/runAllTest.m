@@ -21,7 +21,7 @@ end
 nel_all  = [10,20,40,80,160,320,640];                   % Cases for mesh size
 dTEall = {'int32','uint32','int64','uint64','double'};  % Cases for "element" data type
 dTNall = {'single','double'};                           % Cases for "nodes" data type
-proc_all = {'CPUs','CPUp','GPU'};                       % Cases for processor type
+proc_all = {'CPU','GPU'};                               % Cases for processor type
 prob_all = {'Scalar','Vector'};                         % Cases for problem type
 
 % Runs all tests

@@ -1,4 +1,4 @@
-function K = StiffMas(elements,nodes,c) %#codegen
+function K = StiffMas(elements,nodes,c)
 % STIFFMAS Create the global stiffness matrix K for a SCALAR problem in SERIAL computing.
 %   STIFFMAS(elements,nodes,c) returns a sparse matrix K from finite element
 %   analysis of scalar problems in a three-dimensional domain, where "elements"
@@ -15,9 +15,6 @@ function K = StiffMas(elements,nodes,c) %#codegen
 % 	Modified: 05/12/2019. Version: 1.4. Name changed, Doc improved
 % 	Modified: 21/01/2019. Version: 1.3
 %   Created:  30/11/2018. Version: 1.0
-
-% Add kernelfun pragma to trigger kernel creation
-coder.gpu.kernelfun;
 
 dTypeInd = class(elements);         % Data type (precision) for index computation
 dTypeKe = class(nodes);             % Data type (precision) for ke computation

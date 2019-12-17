@@ -1,25 +1,26 @@
 function spy3(S,arg2,arg3)
-%SPY Visualize sparsity pattern with points in 3D space.
-%   SPY(S) plots the sparsity pattern of the matrix S.
+%SPY3 Visualize sparsity pattern with points in 3D space.
+%   SPY3(S) plots the sparsity pattern of the matrix S.
 %
-%   SPY(S,'LineSpec') uses the color and marker from the line
+%   SPY3(S,'LineSpec') uses the color and marker from the line
 %   specification string 'LineSpec' (See PLOT for possibilities).
 %
-%   SPY(S,markersize) uses the specified marker size instead of
+%   SPY3(S,markersize) uses the specified marker size instead of
 %   a size which depends upon the figure size and the matrix order.
 %
-%   SPY(S,'LineSpec',markersize) sets both.
+%   SPY3(S,'LineSpec',markersize) sets both.
 %
-%   SPY(S,markersize,'LineSpec') also works.
+%   SPY3(S,markersize,'LineSpec') also works.
 % 
 %   See also SPY, SPY3D.
 %
-%   For more information, see <a href="matlab:
-%   web('https://github.com/fjramireg/MatGen')">the MatGen Web site</a>.
+%   For more information, see the <a href="matlab:
+%   web('https://github.com/fjramireg/StiffMa')">StiffMa</a> web site.
 
 %   Written by Francisco Javier Ramirez-Gil, fjramireg@gmail.com
 %   Universidad Nacional de Colombia - Medellin
-%   Created: 30/11/2018. Modified: 21/01/2019. Version: 1.3
+%   Modified: 17/12/2019. Version: 1.4
+%   Created: 30/11/2018. Version: 1.0
 
 cax = newplot;
 next = lower(get(cax,'NextPlot'));
@@ -69,11 +70,12 @@ plot3(i,j,v,'marker',marker,'markersize',markersize, ...
    'linestyle',linestyle,'color',color);
 
 title(['nz = ' int2str(nnz(S))]);
-xlabel('row index');
-ylabel('column index');
-zlabel('NNZ value');
+xlabel('Rows');
+ylabel('Columns');
+zlabel('NNZ');
 set(gca,'xlim',[0 n+1],'ylim',[0 m+1],'zlim',[min(0,min(v)) max(v)],'GridLineStyle','none');
 view(50,40);
+box on;
 
 if ~hold_state, set(cax,'NextPlot',next); end
 

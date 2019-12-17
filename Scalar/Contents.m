@@ -3,8 +3,15 @@
 % electrical and thermal phenomena. 
 % Version 1.4 13-Dec-2019
 % 
+%   For more information, see the <a href="matlab:
+%   web('https://github.com/fjramireg/StiffMa')">StiffMa</a> web site.
+% 
+%   Written by Francisco Javier Ramirez-Gil, fjramireg@gmail.com
+%   Universidad Nacional de Colombia - Medellin
+% 
+% 
 % Files
-
+% 
 
 %   runmeScalarOnCPU - run the whole assembly code on the CPU
 %   runmeScalarOnGPU - run the whole assembly code on the GPU
