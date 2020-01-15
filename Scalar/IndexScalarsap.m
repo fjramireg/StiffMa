@@ -18,22 +18,14 @@ function [iK, jK] = IndexScalarsap(elements, tbs)
 % 	Modified: 21/01/2019. Version: 1.3
 %   Created:  30/11/2018. Version: 1.0
 
-dType = classUnderlying(elements);          % Data type (int32, uint32, int64, uint64, double)
+dType = classUnderlying(elements);          % Data type (uint32, uint64, double)
 nel = size(elements,2);                     % Number of elements
 
 % MATLAB KERNEL CREATION
-if strcmp(dType,'int32')                    % int32
-    ker = parallel.gpu.CUDAKernel('IndexScalarsp.ptx',...   % PTXFILE
-        'const int *, const int, int *, int *',...          % C prototype for kernel
-        'IndexScalarGPUIi');                                % Specify entry point
-elseif strcmp(dType,'uint32')               % uint32
-    ker = parallel.gpu.CUDAKernel('IndexScalarsp.ptx',...
-        'const unsigned int *, const unsigned int, unsigned int *, unsigned int *',...
-        'IndexScalarGPUIj');
-elseif strcmp(dType,'int64')                % int64
-    ker = parallel.gpu.CUDAKernel('IndexScalarsp.ptx',...
-        'const long *, const long, long *, long *',...
-        'IndexScalarGPUIl');
+if strcmp(dType,'uint32')                   % uint32
+    ker = parallel.gpu.CUDAKernel('IndexScalarsp.ptx',...                       % PTXFILE
+        'const unsigned int*, const unsigned int, unsigned int*, unsigned int*',... % C prototype for kernel
+        'IndexScalarGPUIj');                                                    % Specify entry point
 elseif strcmp(dType,'uint64')               % uint64
     ker = parallel.gpu.CUDAKernel('IndexScalarsp.ptx',...
         'const unsigned long *, const unsigned long, unsigned long *, unsigned long *',...
@@ -43,7 +35,7 @@ elseif strcmp(dType,'double')               % double
         'const double *, const double, double *, double *',...
         'IndexScalarGPUId');
 else
-    error('Not supported data type. Use only one of this: int32, uint32, int64, uint64, double');
+    error('Not supported data type. Use only one of this: uint32, uint64, double');
 end
 
 % MATLAB KERNEL CONFIGURATION

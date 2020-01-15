@@ -73,12 +73,8 @@ __global__ void IndexScalarGPU(const dType *elements, const dType nel, dType *iK
                     jK[idx] = n[i];}}
             temp += i-j-1;   }}}
 
-template __global__ void IndexScalarGPU<int>(const int *,
-        const int, int *, int *);                               // Indices of data type 'int32'
 template __global__ void IndexScalarGPU<unsigned int>(const unsigned int *,
         const unsigned int, unsigned int *, unsigned int *);    // Indices of data type 'uint32'
-template __global__ void IndexScalarGPU<long>(const long *,
-        const long, long *, long *);                            // Indices of data type 'int64'
 template __global__ void IndexScalarGPU<unsigned long>(const unsigned long *,
         const unsigned long, unsigned long *, unsigned long *); // Indices of data type 'uint64'
 template __global__ void IndexScalarGPU<double>(const double *,

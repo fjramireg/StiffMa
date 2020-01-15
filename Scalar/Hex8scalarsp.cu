@@ -96,12 +96,9 @@ __global__ void Hex8scalar(const intT *elements, const floatT *nodes, floatT *ke
                         ke[temp+k+36*e] += c * detJ * B[l+3*j] * B[l+3*k]; }}
                 temp += k-j-1;  } } } }
 
-// NNZ of type 'single' and indices 'int32', 'uint32'
-template __global__ void Hex8scalar<float,int>(const int *, const float *, float *);
-template __global__ void Hex8scalar<float,unsigned int>(const unsigned int *, const float *, float *);
-// NNZ of type 'double' and indices 'int32', 'uint32', 'int64', 'uint64', 'double'
-template __global__ void Hex8scalar<double,int>(const int *, const double *, double *);
-template __global__ void Hex8scalar<double,unsigned int>(const unsigned int*, const double*, double*);
-template __global__ void Hex8scalar<double,long>(const long *, const double *, double *);
-template __global__ void Hex8scalar<double,unsigned long>(const unsigned long*,const double*,double*);
-template __global__ void Hex8scalar<double,double>(const double *, const double *, double *);
+// NNZ of type 'single' and indices of type 'uint32'
+template __global__ void Hex8scalar<float,unsigned int>(const unsigned int *, const float *, float *);  // 'single' and 'uint32'
+// NNZ of type 'double' and indices of type 'uint32', 'uint64', and 'double'
+template __global__ void Hex8scalar<double,unsigned int>(const unsigned int*, const double*, double*);  // 'double' and 'uint32'
+template __global__ void Hex8scalar<double,unsigned long>(const unsigned long*,const double*,double*);  // 'double' and 'uint64'
+template __global__ void Hex8scalar<double,double>(const double *, const double *, double *);           // 'double' and 'double'
