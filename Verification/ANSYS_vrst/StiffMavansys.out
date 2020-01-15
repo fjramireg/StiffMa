@@ -1,0 +1,351 @@
+
+ ANSYS Academic Research                           
+
+
+ *------------------------------------------------------------------*
+ |                                                                  |
+ |   W E L C O M E   T O   T H E   A N S Y S (R)  P R O G R A M     |
+ |                                                                  |
+ *------------------------------------------------------------------*
+
+
+
+
+ ***************************************************************
+ *            ANSYS Release 17.1     LEGAL NOTICES             *
+ ***************************************************************
+ *                                                             *
+ * Copyright 2016 SAS IP, Inc.  All rights reserved.           *
+ * Unauthorized use, distribution or duplication is            *
+ * prohibited.                                                 *
+ *                                                             *
+ * Ansys is a registered trademark of ANSYS, Inc. or its       *
+ * subsidiaries in the United States or other countries.       *
+ * See the ANSYS, Inc. online documentation or the ANSYS, Inc. *
+ * documentation CD or online help for the complete Legal      *
+ * Notice.                                                     *
+ *                                                             *
+ ***************************************************************
+ *                                                             *
+ * THIS ANSYS SOFTWARE PRODUCT AND PROGRAM DOCUMENTATION       *
+ * INCLUDE TRADE SECRETS AND CONFIDENTIAL AND PROPRIETARY      *
+ * PRODUCTS OF ANSYS, INC., ITS SUBSIDIARIES, OR LICENSORS.    *
+ * The software products and documentation are furnished by    *
+ * ANSYS, Inc. or its subsidiaries under a software license    *
+ * agreement that contains provisions concerning               *
+ * non-disclosure, copying, length and nature of use,          *
+ * compliance with exporting laws, warranties, disclaimers,    *
+ * limitations of liability, and remedies, and other           *
+ * provisions.  The software products and documentation may be *
+ * used, disclosed, transferred, or copied only in accordance  *
+ * with the terms and conditions of that software license      *
+ * agreement.                                                  *
+ *                                                             *
+ * ANSYS, Inc. is a UL registered                              *
+ * ISO 9001:2008 company.                                      *
+ *                                                             *
+ ***************************************************************
+ *                                                             *
+ * This product is subject to U.S. laws governing export and   *
+ * re-export.                                                  *
+ *                                                             *
+ * For U.S. Government users, except as specifically granted   *
+ * by the ANSYS, Inc. software license agreement, the use,     *
+ * duplication, or disclosure by the United States Government  *
+ * is subject to restrictions stated in the ANSYS, Inc.        *
+ * software license agreement and FAR 12.212 (for non-DOD      *
+ * licenses).                                                  *
+ *                                                             *
+ ***************************************************************
+
+ Release 17.1
+     
+ Point Releases and Patches installed:   
+     
+ ANSYS, Inc. Products Release 17.1   
+ ANSYS Mechanical Products Release 17.1  
+ ANSYS Customization Files for User Programmable Features Release 17.1   
+ ANSYS Autodyn Release 17.1  
+ ANSYS LS-DYNA Release 17.1  
+ ANSYS AIM Release 17.1  
+ ANSYS CFX (includes ANSYS CFD-Post) Release 17.1
+ ANSYS Fluent (includes ANSYS CFD-Post) Release 17.1 
+ ANSYS TurboGrid Release 17.1
+ ANSYS Polyflow (includes ANSYS CFD-Post) Release 17.1   
+ ANSYS CFD-Post only Release 17.1
+ ANSYS FORTE Release 17.1
+ ANSYS Chemkin Release 17.1  
+ ANSYS ICEM CFD Release 17.1 
+ ANSYS Aqwa Release 17.1 
+ ANSYS Composite PrepPost Release 17.1   
+ ANSYS Icepak (includes ANSYS CFD-Post) Release 17.1 
+ ANSYS Remote Solve Manager Standalone Services Release 17.1 
+ AutoCAD Release 17.1
+ ACIS Release 17.1   
+ Catia, Version 4 Release 17.1   
+ Catia, Version 5 Release 17.1   
+ Catia, Version 6 Release 17.1   
+ Creo Elements/Direct Modeling Release 17.1  
+ Inventor Release 17.1   
+ JTOpen Release 17.1 
+ NX Release 17.1 
+ Parasolid Release 17.1  
+ Creo Parametric (formerly Pro/ENGINEER) Release 17.1
+ Solid Edge Release 17.1 
+ SolidWorks Release 17.1 
+ ANSYS, Inc. License Manager Release 17.1
+
+
+          *****  ANSYS COMMAND LINE ARGUMENTS  *****
+  BATCH MODE REQUESTED (-b)    = LIST
+  INPUT FILE COPY MODE (-c)    = COPY
+  DESIGNXPLORER REQUESTED
+
+ RELEASE= Release 17.1         BUILD= 17.1      UP20160404   VERSION=WINDOWS x64 
+ CURRENT JOBNAME=file  17:34:01  DEC 18, 2019 CP=      1.734
+
+     1  /NOPR   
+     2  /FILNAME,STIFFNESS_VEC,0
+     3  /TITLE,STIFFNESS_VEC
+     4  /PREP7  
+     5  ET,1,SOLID185   
+     6  MP,EX,1,2.000000E+11
+     7  MP,PRXY,1,3.000000E-01  
+     8  N,1,0.000000E+00,0.000000E+00,0.000000E+00  
+     9  N,2,0.000000E+00,1.000000E+00,0.000000E+00  
+    10  N,3,0.000000E+00,1.000000E+00,1.000000E+00  
+    11  N,4,0.000000E+00,0.000000E+00,1.000000E+00  
+    12  N,5,0.000000E+00,5.000000E-01,0.000000E+00  
+    13  N,6,0.000000E+00,1.000000E+00,5.000000E-01  
+    14  N,7,0.000000E+00,5.000000E-01,1.000000E+00  
+    15  N,8,0.000000E+00,0.000000E+00,5.000000E-01  
+    16  N,9,0.000000E+00,5.000000E-01,5.000000E-01  
+    17  N,10,1.000000E+00,0.000000E+00,0.000000E+00 
+    18  N,11,1.000000E+00,1.500000E+00,0.000000E+00 
+    19  N,12,1.000000E+00,1.500000E+00,1.500000E+00 
+    20  N,13,1.000000E+00,0.000000E+00,1.500000E+00 
+    21  N,14,1.000000E+00,7.500000E-01,0.000000E+00 
+    22  N,15,1.000000E+00,1.500000E+00,7.500000E-01 
+    23  N,16,1.000000E+00,7.500000E-01,1.500000E+00 
+    24  N,17,1.000000E+00,0.000000E+00,7.500000E-01 
+    25  N,18,1.000000E+00,7.500000E-01,7.500000E-01 
+    26  N,19,2.000000E+00,0.000000E+00,0.000000E+00 
+    27  N,20,2.000000E+00,2.000000E+00,0.000000E+00 
+    28  N,21,2.000000E+00,2.000000E+00,2.000000E+00 
+    29  N,22,2.000000E+00,0.000000E+00,2.000000E+00 
+    30  N,23,2.000000E+00,1.000000E+00,0.000000E+00 
+    31  N,24,2.000000E+00,2.000000E+00,1.000000E+00 
+    32  N,25,2.000000E+00,1.000000E+00,2.000000E+00 
+    33  N,26,2.000000E+00,0.000000E+00,1.000000E+00 
+    34  N,27,2.000000E+00,1.000000E+00,1.000000E+00 
+    35  NWRITE  
+    36  E,1,5,9,8,10,14,18,17   
+    37  E,5,2,6,9,14,11,15,18   
+    38  E,9,6,3,7,18,15,12,16   
+    39  E,8,9,7,4,17,18,16,13   
+    40  E,10,14,18,17,19,23,27,26   
+    41  E,14,11,15,18,23,20,24,27   
+    42  E,18,15,12,16,27,24,21,25   
+    43  E,17,18,16,13,26,27,25,22   
+    44  EWRITE  
+    45  FINISH  
+    46  /SOL
+    47  EMATWRITE,YES   
+    48  WRFULL,1
+    49  SOLVE   
+    50  FINISH  
+    51  /AUX2   
+    52  FILE,'STIFFNESS_VEC','full',' ' 
+    53  HBMAT,'STIFF_ANSYS','hb',' ',ASCII,STIFF,NO,YES 
+    54  FINISH  
+    55  *SMAT,STIFFMAT,D,IMPORT,FULL,'STIFFNESS_VEC.full',STIFF 
+    56  *EXPORT,STIFFMAT,MMF,'STIFF_ANSYS.mmf'  
+    57  *DMAT,KE1,D,IMPORT,EMAT,'STIFFNESS_VEC.emat',STIFF,1
+    58  *EXPORT,KE1,MMF,'KE1.dat'   
+    59  *DMAT,KE2,D,IMPORT,EMAT,'STIFFNESS_VEC.emat',STIFF,2
+    60  *EXPORT,KE2,MMF,'KE2.dat'   
+    61  *DMAT,KE3,D,IMPORT,EMAT,'STIFFNESS_VEC.emat',STIFF,3
+    62  *EXPORT,KE3,MMF,'KE3.dat'   
+    63  *DMAT,KE4,D,IMPORT,EMAT,'STIFFNESS_VEC.emat',STIFF,4
+    64  *EXPORT,KE4,MMF,'KE4.dat'   
+    65  *DMAT,KE5,D,IMPORT,EMAT,'STIFFNESS_VEC.emat',STIFF,5
+    66  *EXPORT,KE5,MMF,'KE5.dat'   
+    67  *DMAT,KE6,D,IMPORT,EMAT,'STIFFNESS_VEC.emat',STIFF,6
+    68  *EXPORT,KE6,MMF,'KE6.dat'   
+    69  *DMAT,KE7,D,IMPORT,EMAT,'STIFFNESS_VEC.emat',STIFF,7
+    70  *EXPORT,KE7,MMF,'KE7.dat'   
+    71  *DMAT,KE8,D,IMPORT,EMAT,'STIFFNESS_VEC.emat',STIFF,8
+    72  *EXPORT,KE8,MMF,'KE8.dat'   
+    73  FINISH  
+    74  /GO 
+
+ RUN SETUP PROCEDURE FROM FILE= C:\Program Files\ANSYS Inc\v171\ANSYS\apdl\start.ans
+
+ /INPUT FILE= C:\Program Files\ANSYS Inc\v171\ANSYS\apdl\start.ans  LINE=       0
+
+ CURRENT JOBNAME REDEFINED AS STIFFNESS_VEC
+
+ *** ANSYS - ENGINEERING ANALYSIS SYSTEM  RELEASE Release 17.1     17.1     ***
+ ANSYS Academic Research                           
+ 01021961  VERSION=WINDOWS x64   17:34:01  DEC 18, 2019 CP=      1.875
+
+ STIFFNESS_VEC                                                                 
+
+
+
+          ***** ANSYS ANALYSIS DEFINITION (PREP7) *****
+
+
+ ***** ROUTINE COMPLETED *****  CP =         1.875
+
+
+
+ *****  ANSYS SOLUTION ROUTINE  *****
+
+ *****  ANSYS SOLVE    COMMAND  *****
+
+ *** SELECTION OF ELEMENT TECHNOLOGIES FOR APPLICABLE ELEMENTS ***
+                ---GIVE SUGGESTIONS ONLY---
+
+ ELEMENT TYPE    1 IS SOLID185. IT IS ASSOCIATED WITH LINEAR MATERIALS ONLY
+ AND POISSON'S RATIO IS NOT GREATER THAN 0.49. KEYOPT(2)=3 IS SUGGESTED.
+
+
+
+ *** ANSYS - ENGINEERING ANALYSIS SYSTEM  RELEASE Release 17.1     17.1     ***
+ ANSYS Academic Research                           
+ 01021961  VERSION=WINDOWS x64   17:34:01  DEC 18, 2019 CP=      1.875
+
+ STIFFNESS_VEC                                                                 
+
+
+
+ *** WARNING ***                         CP =       1.875   TIME= 17:34:01
+ No constraints have been defined using the D command.                   
+
+ SOLUTION MONITORING INFO IS WRITTEN TO FILE= STIFFNESS_VEC.mntr                                                                                                                                                                                                                                                  
+
+
+ Range of element maximum matrix coefficients in global coordinates
+ Maximum = 7.036989915E+10 at element 7.                                 
+ Minimum = 3.689177538E+10 at element 1.                                 
+
+   *** ELEMENT MATRIX FORMULATION TIMES
+  TYPE    NUMBER   ENAME      TOTAL CP  AVE CP
+
+     1         8  SOLID185      0.000   0.000000
+ Time at end of element matrix formulation CP = 1.90625.                 
+
+ *** NOTE ***                            CP =       1.906   TIME= 17:34:01
+ The requested load step, substep, and equilibrium iteration have been   
+ reached and the FULL file has been written.  Skipping equation          
+ solution and exiting the SOLVE command.                                 
+
+
+ *** ANSYS BINARY FILE STATISTICS
+  BUFFER SIZE USED= 16384
+        0.062 MB WRITTEN ON ELEMENT MATRIX FILE: STIFFNESS_VEC.emat
+        0.062 MB WRITTEN ON ASSEMBLED MATRIX FILE: STIFFNESS_VEC.full
+        0.000 MB WRITTEN ON RESULTS FILE: STIFFNESS_VEC.rst
+
+ FINISH SOLUTION PROCESSING
+
+
+ ***** ROUTINE COMPLETED *****  CP =         2.000
+
+
+
+ *** ANSYS - ENGINEERING ANALYSIS SYSTEM  RELEASE Release 17.1     17.1     ***
+ ANSYS Academic Research                           
+ 01021961  VERSION=WINDOWS x64   17:34:01  DEC 18, 2019 CP=      2.000
+
+ STIFFNESS_VEC                                                                 
+
+
+
+   ***** ANSYS BINARY FILE DUMP *****
+
+
+
+               ***** AUX02 MATRIX DUMP UTILITY *****
+
+
+
+ ***** ROUTINE COMPLETED *****  CP =         2.094
+
+
+
+ ***** END OF INPUT ENCOUNTERED *****
+
+ PURGE ALL SOLUTION AND POST DATA
+ SAVE ALL MODEL DATA
+
+ ALL CURRENT ANSYS DATA WRITTEN TO FILE NAME= STIFFNESS_VEC.db
+  FOR POSSIBLE RESUME FROM THIS POINT
+
+
+ NUMBER OF WARNING MESSAGES ENCOUNTERED=          1
+ NUMBER OF ERROR   MESSAGES ENCOUNTERED=          0
+
++--------------------- A N S Y S   S T A T I S T I C S ------------------------+
+
+Release: Release 17.1       Build: 17.1       Update: UP20160404   Platform: WINDOWS x64 
+Date Run: 12/18/2019   Time: 17:34
+Operating System: Windows 10  (Build: 17134)
+Windows Process ID: 52872       
+
+Processor Model:        Intel(R) Xeon(R) CPU E5-2620 0 @ 2.00GHz
+
+Compiler: Intel(R) FORTRAN Compiler Version 15.0.2  (Build: 20150121)
+          Intel(R) C/C++ Compiler Version 15.0.2  (Build: 20150121)
+          Intel(R) Math Kernel Library Version 11.2.3 Product Build 20150413
+
+Number of machines requested            :    1
+Total number of cores available         :   24
+Number of physical cores available      :   12
+Number of processes requested           :    1
+Number of threads per process requested :    2
+Total number of cores requested         :    2 (Shared Memory Parallel)                    
+
+GPU Acceleration: Not Requested
+
+Job Name: STIFFNESS_VEC
+Working Directory: D:\Francisco\ANSYS_vrst
+
+Total CPU time for main thread                    :        2.3 seconds
+Total CPU time summed for all threads             :        2.3 seconds
+
+Elapsed time spent pre-processing model (/PREP7)  :        0.0 seconds
+Elapsed time spent solution - preprocessing       :        0.0 seconds
+Elapsed time spent computing solution             :        0.0 seconds
+Elapsed time spent solution - postprocessing      :        0.0 seconds
+Elapsed time spent post-processing model (/POST1) :        0.0 seconds
+ 
+Equation solver used                              :            Sparse (symmetric)
+
+Maximum total memory used                         :        7.0 MB
+Maximum total memory allocated                    :     2112.0 MB
+Maximum total memory available                    :         88 GB
+
++------------------ E N D   A N S Y S   S T A T I S T I C S -------------------+
+
+
+ *---------------------------------------------------------------------------*
+ |                                                                           |
+ |                            ANSYS RUN COMPLETED                            |
+ |                                                                           |
+ |---------------------------------------------------------------------------|
+ |                                                                           |
+ | Ansys Release 17.1          Build 17.1         UP20160404     WINDOWS x64 |
+ |                                                                           |
+ |---------------------------------------------------------------------------|
+ |                                                                           |
+ | Database Requested(-db)  1024 MB    Scratch Memory Requested      1024 MB |
+ | Maximum Database Used       1 MB    Maximum Scratch Memory Used      6 MB |
+ |                                                                           |
+ |---------------------------------------------------------------------------|
+ |                                                                           |
+ |        CP Time      (sec) =          2.328       Time  =  17:34:01        |
+ |        Elapsed Time (sec) =          3.000       Date  =  12/18/2019      |
+ |                                                                           |
+ *---------------------------------------------------------------------------*

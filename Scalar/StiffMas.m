@@ -3,7 +3,7 @@ function K = StiffMas(elements,nodes,c)
 %   STIFFMAS(elements,nodes,c) returns a sparse matrix K from finite element
 %   analysis of scalar problems in a three-dimensional domain, where "elements"
 %   is the connectivity matrix of size nelx8, "nodes" the nodal coordinates of
-%   size Nx3, and "c" the material property for an isotropic material (scalar).
+%   size Nx3, and "c" the material property for a linear isotropic material (scalar).
 %
 %   See also STIFFMASS, STIFFMAPS, SPARSE
 %
@@ -28,6 +28,6 @@ for e = 1:nel                       % Loop over elements
     ind = repmat(n,8,1);            % Index for element 'e'
     iK(:,:,e) = ind';               % Row index storage
     jK(:,:,e) = ind;                % Columm index storage
-    Ke(:,:,e) = Hex8scalars(X,c);   % Element stiffness matrix storage
+    Ke(:,:,e) = Hex8scalars(X,c);   % Element stiffness matrix compute & storage
 end
 K = accumarray([iK(:),jK(:)],Ke(:),[],[],[],1);% Assembly of the global stiffness matrix

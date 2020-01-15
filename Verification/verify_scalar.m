@@ -57,7 +57,7 @@ elements = [1 5 9 8 10 14 18 17;% Element 1
 %%  Stiffness matrix generation
 
 % ANSYS Computation
-% StiffMansys(elements,nodes,c);                    % ANSYS macro to generate tril(K)
+% StiffMansys_mac(elements,nodes,c);                % ANSYS macro to generate tril(K)
 % K_as = hb_to_msm ('ANSYS_rst/STIFF_ANSYS.HB');      % Import ANSYS result: tril(K)
 K_af = mm_to_msm ('ANSYS_rst/STIFF_ANSYS.mmf');     % Import ANSYS result: K
 % K_af2= StiffMansys_import('ANSYS_rst/');            % Import ANSYS result: K (built from element matrices)
