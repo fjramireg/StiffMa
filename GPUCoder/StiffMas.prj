@@ -1,5 +1,5 @@
 <deployment-project plugin="plugin.coder" plugin-version="R2018b">
-  <configuration build-checksum="3671278225" file="/home/francisco/Dropbox/MatGen/Code/GPUCoder/StiffMas.prj" location="/home/francisco/Dropbox/MatGen/Code/GPUCoder" name="StiffMas" target="target.unifiedcoder" target-name="MATLAB Coder">
+  <configuration build-checksum="281197571" file="/home/francisco/Dropbox/MatGen/Code/GPUCoder/StiffMas.prj" location="/home/francisco/Dropbox/MatGen/Code/GPUCoder" name="StiffMas" target="target.unifiedcoder" target-name="MATLAB Coder">
     <profile key="profile.mex">
       <param.BuiltInstrumentedMex>false</param.BuiltInstrumentedMex>
       <param.RanInstrumentedMex>false</param.RanInstrumentedMex>
@@ -147,7 +147,7 @@
       <param.FilePartitionMethod>option.FilePartitionMethod.MapMFileToCFile</param.FilePartitionMethod>
       <param.GenerateComments>true</param.GenerateComments>
       <param.CommentStyle />
-      <param.MATLABSourceComments>false</param.MATLABSourceComments>
+      <param.MATLABSourceComments />
       <param.MATLABFcnDesc />
       <param.ConvertIfToSwitch />
       <param.PreserveExternInFcnDecls />
@@ -157,7 +157,7 @@
       <param.MaxIdLength />
       <param.HeaderGuardStyle />
       <param.DataTypeReplacement />
-      <param.EnableCustomReplacementTypes>false</param.EnableCustomReplacementTypes>
+      <param.EnableCustomReplacementTypes />
       <param.ReplacementTypes.double />
       <param.ReplacementTypes.single />
       <param.ReplacementTypes.uint8 />
@@ -170,7 +170,7 @@
       <param.ReplacementTypes.int64 />
       <param.ReplacementTypes.char />
       <param.ReplacementTypes.logical />
-      <param.ReplacementTypes.ImportCustomTypes>false</param.ReplacementTypes.ImportCustomTypes>
+      <param.ReplacementTypes.ImportCustomTypes />
       <param.ReplacementTypes.HeaderFiles />
       <param.CppInterfaceStyle>option.CppInterfaceStyle.Functions</param.CppInterfaceStyle>
       <param.CppInterfaceClassName />
@@ -211,9 +211,9 @@
       <param.CustomSource />
       <param.CustomLibrary />
       <param.PostCodeGenCommand />
-      <param.TargetLangStandard>C++03 (ISO)</param.TargetLangStandard>
-      <param.CodeReplacementLibrary>None</param.CodeReplacementLibrary>
-      <param.DeprecatedCRLFlag>false</param.DeprecatedCRLFlag>
+      <param.TargetLangStandard />
+      <param.CodeReplacementLibrary />
+      <param.DeprecatedCRLFlag />
       <param.SameHardware>true</param.SameHardware>
       <param.Toolchain>Automatically locate an installed toolchain</param.Toolchain>
       <param.BuildConfiguration />
@@ -527,7 +527,7 @@
       <param.hdl.LoopOptimization />
       <param.hdl.AggressiveDataflowConversion />
       <param.GenerateComments>true</param.GenerateComments>
-      <param.MATLABSourceComments>false</param.MATLABSourceComments>
+      <param.MATLABSourceComments />
       <param.hdl.VHDLFileExt />
       <param.hdl.VerilogFileExt />
       <param.hdl.DateComment />
@@ -854,12 +854,12 @@
     <param.unifiedParamStorage />
     <var.gc.lastOutputRoot>codegen/mex/StiffMas</var.gc.lastOutputRoot>
     <var.gc.lastOutputType>MEX_FILE</var.gc.lastOutputType>
-    <var.gc.preBuildChecksum>70094990</var.gc.preBuildChecksum>
+    <var.gc.preBuildChecksum>281197571</var.gc.preBuildChecksum>
     <var.cfi.lastOutputRoot>codegen/mex/StiffMas</var.cfi.lastOutputRoot>
     <var.cfi.preBuildChecksum>2926102334</var.cfi.preBuildChecksum>
     <var.lastCfiTestSnippet>runmeScalar</var.lastCfiTestSnippet>
     <var.outdatedOnRestore>false</var.outdatedOnRestore>
-    <var.lastUserSourceChecksum>&lt;?xml version="1.0" encoding="UTF-8" standalone="yes"?&gt;&lt;checksum&gt;&lt;includedFiles&gt;&lt;file&gt;/home/francisco/Dropbox/MatGen/Code/GPUCoder/Hex8scalars.m&lt;/file&gt;&lt;file&gt;/home/francisco/Dropbox/MatGen/Code/GPUCoder/StiffMas.m&lt;/file&gt;&lt;/includedFiles&gt;&lt;value&gt;1813820698&lt;/value&gt;&lt;/checksum&gt;</var.lastUserSourceChecksum>
+    <var.lastUserSourceChecksum>&lt;?xml version="1.0" encoding="UTF-8" standalone="yes"?&gt;&lt;checksum&gt;&lt;includedFiles&gt;&lt;file&gt;/home/francisco/Dropbox/MatGen/Code/GPUCoder/Hex8scalars.m&lt;/file&gt;&lt;file&gt;/home/francisco/Dropbox/MatGen/Code/GPUCoder/StiffMas.m&lt;/file&gt;&lt;/includedFiles&gt;&lt;value&gt;890638349&lt;/value&gt;&lt;/checksum&gt;</var.lastUserSourceChecksum>
     <var.sourceSetState>&lt;?xml version="1.0" encoding="UTF-8" standalone="yes"?&gt;&lt;sourceModel&gt;&lt;primarySourceFiles&gt;&lt;file&gt;/home/francisco/Dropbox/MatGen/Code/GPUCoder/Hex8scalars.m&lt;/file&gt;&lt;file&gt;/home/francisco/Dropbox/MatGen/Code/GPUCoder/StiffMas.m&lt;/file&gt;&lt;/primarySourceFiles&gt;&lt;fixedPointSourceFiles/&gt;&lt;fixedPointSourceRegistered&gt;false&lt;/fixedPointSourceRegistered&gt;&lt;fixedPointSourceSelected&gt;false&lt;/fixedPointSourceSelected&gt;&lt;/sourceModel&gt;</var.sourceSetState>
     <param.forceMexBuild>false</param.forceMexBuild>
     <param.NoDefaultJIT>false</param.NoDefaultJIT>

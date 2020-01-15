@@ -191,7 +191,7 @@ mxArray *emlrtMexFcnProperties()
   emlrtSetField(xEntryPoints, 0, "FullPath", emlrtMxCreateString(
     "/home/francisco/Dropbox/MatGen/Code/GPUCoder/StiffMas.m"));
   emlrtSetField(xEntryPoints, 0, "TimeStamp", emlrtMxCreateDoubleScalar
-                (737805.64857638883));
+                (737805.68493055552));
   xResult = emlrtCreateStructMatrix(1, 1, 4, propFieldName);
   emlrtSetField(xResult, 0, "Version", emlrtMxCreateString(
     "9.7.0.1261785 (R2019b) Update 3"));

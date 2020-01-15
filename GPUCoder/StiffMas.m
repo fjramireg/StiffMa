@@ -16,15 +16,17 @@ function [iK, jK, Ke] = StiffMas(elements,nodes,c) %#codegen
 % 	Modified: 21/01/2019. Version: 1.3
 %   Created:  30/11/2018. Version: 1.0
 
-% Add kernelfun pragma to trigger kernel creation
-coder.gpu.kernelfun;
-
+% Initialization
 dTypeInd = class(elements);         % Data type (precision) for index computation
 dTypeKe = class(nodes);             % Data type (precision) for ke computation
 nel = size(elements,1);             % Total number of elements
 iK = zeros(8,8,nel,dTypeInd);       % Stores the rows' indices
 jK = zeros(8,8,nel,dTypeInd);       % Stores the columns' indices
 Ke = zeros(8,8,nel,dTypeKe);        % Stores the NNZ values
+
+% Add kernelfun pragma to trigger kernel creation
+coder.gpu.kernelfun;
+
 for e = 1:nel                       % Loop over elements
     n = elements(e,:);              % Nodes of the element 'e'
     X = nodes(n,:);                 % Nodal coordinates of the element 'e'

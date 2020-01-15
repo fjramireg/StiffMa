@@ -16,12 +16,16 @@ dTypeN = 'double';  % Data precision for "nodes" ['single' or 'double']
 
 %% Creation of global stiffness matrix
 tic;
-K = StiffMas(elements,nodes,c);     % Assembly on CPU
+[iK, jK, Ke] = StiffMas(elements,nodes,c);      % using serial CPU
+K = accumarray([iK(:),jK(:)],Ke(:),[],[],[],1); % Assembly of the global stiffness matrix
 time = toc;
 fprintf('\nTime spend to build K on serial CPU: %f\n',time);
 
 tic;
-[iK, jK, Ke] = StiffMas_mex(elements,nodes,c);  % using GPU Coder 
-K2 = accumarray([iK(:),jK(:)],Ke(:),[],[],[],1);% Assembly of the global stiffness matrix
+[iK2, jK2, Ke2] = StiffMas_mex(elements,nodes,c);  % using GPU Coder 
+K2 = accumarray([iK2(:),jK2(:)],Ke2(:),[],[],[],1);% Assembly of the global stiffness matrix
 times = toc;
 fprintf('Time spend to build K with GPU Coder: %f\n',times);
+
+% Difference between results
+fprintf('Difference between results: %e\n\n',norm(K(:)-K2(:)));

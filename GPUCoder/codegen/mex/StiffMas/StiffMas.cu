@@ -20,25 +20,24 @@
 /* Function Declarations */
 static __global__ void StiffMas_kernel1(const emxArray_real_T *nodes, const
   int32_T e, const emxArray_uint32_T *elements, real_T X[24]);
-static __global__ void StiffMas_kernel10(const int32_T jy, const int32_T jp1j,
-  real_T Jac[9]);
-static __global__ void StiffMas_kernel11(const int32_T jp1j, const real_T Jac[9],
+static __global__ void StiffMas_kernel10(const int32_T jp1j, const real_T Jac[9],
   const int32_T jy, const real_T L[24], const int32_T jA, real_T B[24]);
-static __global__ void StiffMas_kernel12(const real_T B[24], real_T b_B[64]);
-static __global__ void StiffMas_kernel13(const real_T B[64], const real_T smax,
+static __global__ void StiffMas_kernel11(const real_T B[24], real_T b_B[64]);
+static __global__ void StiffMas_kernel12(const real_T B[64], const real_T smax,
   const emxArray_real_T *Ke, const int32_T e, real_T b_Ke[64]);
-static __global__ void StiffMas_kernel14(const real_T Ke[64], const int32_T e,
+static __global__ void StiffMas_kernel13(const real_T Ke[64], const int32_T e,
   emxArray_real_T *b_Ke);
 static __global__ void StiffMas_kernel2(const emxArray_uint32_T *elements, const
   int32_T e, uint32_T ind[64]);
 static __global__ void StiffMas_kernel3(const uint32_T ind[64], const int32_T e,
-  emxArray_uint32_T *jK, emxArray_uint32_T *iK);
-static __global__ void StiffMas_kernel4(const int32_T e, emxArray_real_T *Ke);
-static __global__ void StiffMas_kernel5(const real_T X[24], const real_T L[24],
+  emxArray_real_T *Ke, emxArray_uint32_T *jK, emxArray_uint32_T *iK);
+static __global__ void StiffMas_kernel4(const real_T X[24], const real_T L[24],
   real_T Jac[9]);
-static __global__ void StiffMas_kernel6(const real_T Jac[9], real_T x[9]);
-static __global__ void StiffMas_kernel7(int8_T ipiv[3]);
-static __global__ void StiffMas_kernel8(const real_T x[9], real_T *detJ);
+static __global__ void StiffMas_kernel5(const real_T Jac[9], real_T x[9]);
+static __global__ void StiffMas_kernel6(int8_T ipiv[3]);
+static __global__ void StiffMas_kernel7(const real_T x[9], real_T *detJ);
+static __global__ void StiffMas_kernel8(const int32_T jy, const int32_T jp1j,
+  real_T Jac[9]);
 static __global__ void StiffMas_kernel9(const int32_T jy, const int32_T jp1j,
   real_T Jac[9]);
 static __inline__ __device__ real_T atomicOpreal_T(real_T *address, real_T value);
@@ -79,18 +78,6 @@ static __global__ __launch_bounds__(32, 1) void StiffMas_kernel1(const
 }
 
 static __global__ __launch_bounds__(32, 1) void StiffMas_kernel10(const int32_T
-  jy, const int32_T jp1j, real_T Jac[9])
-{
-  uint32_T threadId;
-  int32_T tmpIdx;
-  threadId = static_cast<uint32_T>(mwGetGlobalThreadIndex());
-  tmpIdx = static_cast<int32_T>(threadId);
-  if (tmpIdx < 1) {
-    Jac[jp1j + 5] -= Jac[jp1j + 2] * Jac[jy + 5];
-  }
-}
-
-static __global__ __launch_bounds__(32, 1) void StiffMas_kernel11(const int32_T
   jp1j, const real_T Jac[9], const int32_T jy, const real_T L[24], const int32_T
   jA, real_T B[24])
 {
@@ -117,7 +104,7 @@ static __global__ __launch_bounds__(32, 1) void StiffMas_kernel11(const int32_T
   }
 }
 
-static __global__ __launch_bounds__(64, 1) void StiffMas_kernel12(const real_T
+static __global__ __launch_bounds__(64, 1) void StiffMas_kernel11(const real_T
   B[24], real_T b_B[64])
 {
   uint32_T threadId;
@@ -138,7 +125,7 @@ static __global__ __launch_bounds__(64, 1) void StiffMas_kernel12(const real_T
   }
 }
 
-static __global__ __launch_bounds__(64, 1) void StiffMas_kernel13(const real_T
+static __global__ __launch_bounds__(64, 1) void StiffMas_kernel12(const real_T
   B[64], const real_T smax, const emxArray_real_T *Ke, const int32_T e, real_T
   b_Ke[64])
 {
@@ -154,7 +141,7 @@ static __global__ __launch_bounds__(64, 1) void StiffMas_kernel13(const real_T
   }
 }
 
-static __global__ __launch_bounds__(64, 1) void StiffMas_kernel14(const real_T
+static __global__ __launch_bounds__(64, 1) void StiffMas_kernel13(const real_T
   Ke[64], const int32_T e, emxArray_real_T *b_Ke)
 {
   uint32_T threadId;
@@ -183,7 +170,8 @@ static __global__ __launch_bounds__(64, 1) void StiffMas_kernel2(const
 }
 
 static __global__ __launch_bounds__(64, 1) void StiffMas_kernel3(const uint32_T
-  ind[64], const int32_T e, emxArray_uint32_T *jK, emxArray_uint32_T *iK)
+  ind[64], const int32_T e, emxArray_real_T *Ke, emxArray_uint32_T *jK,
+  emxArray_uint32_T *iK)
 {
   uint32_T threadId;
   int32_T ibmat;
@@ -194,24 +182,11 @@ static __global__ __launch_bounds__(64, 1) void StiffMas_kernel3(const uint32_T
   if (jcol < 8) {
     iK->data[(ibmat + (jcol << 3)) + (e << 6)] = ind[jcol + (ibmat << 3)];
     jK->data[(ibmat + (jcol << 3)) + (e << 6)] = ind[ibmat + (jcol << 3)];
-  }
-}
-
-static __global__ __launch_bounds__(64, 1) void StiffMas_kernel4(const int32_T e,
-  emxArray_real_T *Ke)
-{
-  uint32_T threadId;
-  int32_T ibmat;
-  int32_T jcol;
-  threadId = static_cast<uint32_T>(mwGetGlobalThreadIndex());
-  ibmat = static_cast<int32_T>((threadId % 8U));
-  jcol = static_cast<int32_T>(((threadId - static_cast<uint32_T>(ibmat)) / 8U));
-  if (jcol < 8) {
     Ke->data[(ibmat + (jcol << 3)) + (e << 6)] = 0.0;
   }
 }
 
-static __global__ __launch_bounds__(32, 1) void StiffMas_kernel5(const real_T X
+static __global__ __launch_bounds__(32, 1) void StiffMas_kernel4(const real_T X
   [24], const real_T L[24], real_T Jac[9])
 {
   uint32_T threadId;
@@ -232,7 +207,7 @@ static __global__ __launch_bounds__(32, 1) void StiffMas_kernel5(const real_T X
   }
 }
 
-static __global__ __launch_bounds__(32, 1) void StiffMas_kernel6(const real_T
+static __global__ __launch_bounds__(32, 1) void StiffMas_kernel5(const real_T
   Jac[9], real_T x[9])
 {
   uint32_T threadId;
@@ -246,7 +221,7 @@ static __global__ __launch_bounds__(32, 1) void StiffMas_kernel6(const real_T
   }
 }
 
-static __global__ __launch_bounds__(32, 1) void StiffMas_kernel7(int8_T ipiv[3])
+static __global__ __launch_bounds__(32, 1) void StiffMas_kernel6(int8_T ipiv[3])
 {
   uint32_T threadId;
   int32_T jcol;
@@ -257,7 +232,7 @@ static __global__ __launch_bounds__(32, 1) void StiffMas_kernel7(int8_T ipiv[3])
   }
 }
 
-static __global__ __launch_bounds__(32, 1) void StiffMas_kernel8(const real_T x
+static __global__ __launch_bounds__(32, 1) void StiffMas_kernel7(const real_T x
   [9], real_T *detJ)
 {
   uint32_T idx;
@@ -300,7 +275,7 @@ static __global__ __launch_bounds__(32, 1) void StiffMas_kernel8(const real_T x
   }
 }
 
-static __global__ __launch_bounds__(32, 1) void StiffMas_kernel9(const int32_T
+static __global__ __launch_bounds__(32, 1) void StiffMas_kernel8(const int32_T
   jy, const int32_T jp1j, real_T Jac[9])
 {
   uint32_T threadId;
@@ -309,6 +284,18 @@ static __global__ __launch_bounds__(32, 1) void StiffMas_kernel9(const int32_T
   tmpIdx = static_cast<int32_T>(threadId);
   if (tmpIdx < 1) {
     Jac[jp1j + 2] /= Jac[jy + 2];
+  }
+}
+
+static __global__ __launch_bounds__(32, 1) void StiffMas_kernel9(const int32_T
+  jy, const int32_T jp1j, real_T Jac[9])
+{
+  uint32_T threadId;
+  int32_T tmpIdx;
+  threadId = static_cast<uint32_T>(mwGetGlobalThreadIndex());
+  tmpIdx = static_cast<int32_T>(threadId);
+  if (tmpIdx < 1) {
+    Jac[jp1j + 5] -= Jac[jp1j + 2] * Jac[jy + 5];
   }
 }
 
@@ -566,9 +553,9 @@ void StiffMas(const emxArray_uint32_T *elements, const emxArray_real_T *nodes,
   emxArray_uint32_T *gpu_elements;
   real_T (*gpu_X)[24];
   uint32_T (*gpu_ind)[64];
+  emxArray_real_T *gpu_Ke;
   emxArray_uint32_T *gpu_jK;
   emxArray_uint32_T *gpu_iK;
-  emxArray_real_T *gpu_Ke;
   real_T (*gpu_L)[24];
   real_T (*gpu_Jac)[9];
   real_T (*gpu_x)[9];
@@ -577,17 +564,17 @@ void StiffMas(const emxArray_uint32_T *elements, const emxArray_real_T *nodes,
   real_T (*gpu_B)[24];
   real_T (*b_gpu_B)[64];
   real_T (*b_gpu_Ke)[64];
+  boolean_T Ke_dirtyOnGpu;
   boolean_T jK_dirtyOnGpu;
   boolean_T iK_dirtyOnGpu;
-  boolean_T Ke_dirtyOnGpu;
   boolean_T x_dirtyOnGpu;
   boolean_T ipiv_dirtyOnGpu;
   boolean_T detJ_dirtyOnGpu;
   boolean_T nodes_dirtyOnCpu;
   boolean_T elements_dirtyOnCpu;
+  boolean_T Ke_dirtyOnCpu;
   boolean_T jK_dirtyOnCpu;
   boolean_T iK_dirtyOnCpu;
-  boolean_T Ke_dirtyOnCpu;
   boolean_T x_dirtyOnCpu;
   boolean_T ipiv_dirtyOnCpu;
   emxArray_uint32_T inter_elements;
@@ -638,21 +625,22 @@ void StiffMas(const emxArray_uint32_T *elements, const emxArray_real_T *nodes,
   /*  	Modified: 05/12/2019. Version: 1.4. Name changed, Doc improved */
   /*  	Modified: 21/01/2019. Version: 1.3 */
   /*    Created:  30/11/2018. Version: 1.0 */
-  /*  Add kernelfun pragma to trigger kernel creation */
-  /* 'StiffMas:20' coder.gpu.kernelfun; */
-  /* 'StiffMas:22' dTypeInd = class(elements); */
+  /*  Initialization */
+  /* 'StiffMas:20' dTypeInd = class(elements); */
   /*  Data type (precision) for index computation */
-  /* 'StiffMas:23' dTypeKe = class(nodes); */
+  /* 'StiffMas:21' dTypeKe = class(nodes); */
   /*  Data type (precision) for ke computation */
-  /* 'StiffMas:24' nel = size(elements,1); */
+  /* 'StiffMas:22' nel = size(elements,1); */
   /*  Total number of elements */
-  /* 'StiffMas:25' iK = zeros(8,8,nel,dTypeInd); */
+  /* 'StiffMas:23' iK = zeros(8,8,nel,dTypeInd); */
   /*  Stores the rows' indices */
-  /* 'StiffMas:26' jK = zeros(8,8,nel,dTypeInd); */
+  /* 'StiffMas:24' jK = zeros(8,8,nel,dTypeInd); */
   /*  Stores the columns' indices */
-  /* 'StiffMas:27' Ke = zeros(8,8,nel,dTypeKe); */
+  /* 'StiffMas:25' Ke = zeros(8,8,nel,dTypeKe); */
   /*  Stores the NNZ values */
-  /* 'StiffMas:28' for e = 1:nel */
+  /*  Add kernelfun pragma to trigger kernel creation */
+  /* 'StiffMas:28' coder.gpu.kernelfun; */
+  /* 'StiffMas:30' for e = 1:nel */
   i = elements->size[0];
   i1 = iK->size[0] * iK->size[1] * iK->size[2];
   iK->size[0] = 8;
@@ -674,9 +662,9 @@ void StiffMas(const emxArray_uint32_T *elements, const emxArray_real_T *nodes,
   Ke_dirtyOnCpu = true;
   for (e = 0; e < i; e++) {
     /*  Loop over elements */
-    /* 'StiffMas:29' n = elements(e,:); */
+    /* 'StiffMas:31' n = elements(e,:); */
     /*  Nodes of the element 'e' */
-    /* 'StiffMas:30' X = nodes(n,:); */
+    /* 'StiffMas:32' X = nodes(n,:); */
     if (nodes_dirtyOnCpu) {
       gpuEmxMemcpyCpuToGpu_real_T(nodes, &inter_nodes, gpu_nodes);
       nodes_dirtyOnCpu = false;
@@ -691,31 +679,16 @@ void StiffMas(const emxArray_uint32_T *elements, const emxArray_real_T *nodes,
       gpu_elements, *gpu_X);
 
     /*  Nodal coordinates of the element 'e' */
-    /* 'StiffMas:31' ind = repmat(n,8,1); */
+    /* 'StiffMas:33' ind = repmat(n,8,1); */
     StiffMas_kernel2<<<dim3(1U, 1U, 1U), dim3(64U, 1U, 1U)>>>(gpu_elements, e,
       *gpu_ind);
 
     /*  Index for element 'e' */
-    /* 'StiffMas:32' iK(:,:,e) = ind'; */
+    /* 'StiffMas:34' iK(:,:,e) = ind'; */
     /*  Row index storage */
-    /* 'StiffMas:33' jK(:,:,e) = ind; */
-    if (jK_dirtyOnCpu) {
-      gpuEmxMemcpyCpuToGpu_uint32_T(jK, &inter_jK, gpu_jK);
-      jK_dirtyOnCpu = false;
-    }
-
-    if (iK_dirtyOnCpu) {
-      gpuEmxMemcpyCpuToGpu_uint32_T(iK, &inter_iK, gpu_iK);
-      iK_dirtyOnCpu = false;
-    }
-
-    StiffMas_kernel3<<<dim3(1U, 1U, 1U), dim3(64U, 1U, 1U)>>>(*gpu_ind, e,
-      gpu_jK, gpu_iK);
-    iK_dirtyOnGpu = true;
-    jK_dirtyOnGpu = true;
-
+    /* 'StiffMas:35' jK(:,:,e) = ind; */
     /*  Columm index storage */
-    /* 'StiffMas:34' Ke(:,:,e) = Hex8scalars(X,c); */
+    /* 'StiffMas:36' Ke(:,:,e) = Hex8scalars(X,c); */
     /*  HEX8SCALARS Compute the element stiffnes matrix for a SCALAR problem in SERIAL computing. */
     /*    HEX8SCALARS(X,c) returns the element stiffness matrix "ke" for an element */
     /*    "e"  in a finite element analysis of scalar problems in a three-dimensional */
@@ -750,7 +723,20 @@ void StiffMas(const emxArray_uint32_T *elements, const emxArray_real_T *nodes,
       Ke_dirtyOnCpu = false;
     }
 
-    StiffMas_kernel4<<<dim3(1U, 1U, 1U), dim3(64U, 1U, 1U)>>>(e, gpu_Ke);
+    if (jK_dirtyOnCpu) {
+      gpuEmxMemcpyCpuToGpu_uint32_T(jK, &inter_jK, gpu_jK);
+      jK_dirtyOnCpu = false;
+    }
+
+    if (iK_dirtyOnCpu) {
+      gpuEmxMemcpyCpuToGpu_uint32_T(iK, &inter_iK, gpu_iK);
+      iK_dirtyOnCpu = false;
+    }
+
+    StiffMas_kernel3<<<dim3(1U, 1U, 1U), dim3(64U, 1U, 1U)>>>(*gpu_ind, e,
+      gpu_Ke, gpu_jK, gpu_iK);
+    iK_dirtyOnGpu = true;
+    jK_dirtyOnGpu = true;
     Ke_dirtyOnGpu = true;
 
     /*  Initialize the element stiffness matrix */
@@ -796,19 +782,19 @@ void StiffMas(const emxArray_uint32_T *elements, const emxArray_real_T *nodes,
       /*  L matrix */
       /* 'Hex8scalars:39' Jac  = L*X; */
       cudaMemcpy(gpu_L, &L[0], 192UL, cudaMemcpyHostToDevice);
-      StiffMas_kernel5<<<dim3(1U, 1U, 1U), dim3(32U, 1U, 1U)>>>(*gpu_X, *gpu_L, *
+      StiffMas_kernel4<<<dim3(1U, 1U, 1U), dim3(32U, 1U, 1U)>>>(*gpu_X, *gpu_L, *
         gpu_Jac);
 
       /*  Jacobian matrix */
       /* 'Hex8scalars:40' detJ = det(Jac); */
-      StiffMas_kernel6<<<dim3(1U, 1U, 1U), dim3(32U, 1U, 1U)>>>(*gpu_Jac, *gpu_x);
+      StiffMas_kernel5<<<dim3(1U, 1U, 1U), dim3(32U, 1U, 1U)>>>(*gpu_Jac, *gpu_x);
       x_dirtyOnGpu = true;
       if (ipiv_dirtyOnCpu) {
         cudaMemcpy(gpu_ipiv, &ipiv[0], 3UL, cudaMemcpyHostToDevice);
         ipiv_dirtyOnCpu = false;
       }
 
-      StiffMas_kernel7<<<dim3(1U, 1U, 1U), dim3(32U, 1U, 1U)>>>(*gpu_ipiv);
+      StiffMas_kernel6<<<dim3(1U, 1U, 1U), dim3(32U, 1U, 1U)>>>(*gpu_ipiv);
       ipiv_dirtyOnGpu = true;
       for (j = 0; j < 2; j++) {
         b_c = j << 2;
@@ -888,7 +874,7 @@ void StiffMas(const emxArray_uint32_T *elements, const emxArray_real_T *nodes,
       }
 
       cudaMemcpy(gpu_detJ, &detJ, 8UL, cudaMemcpyHostToDevice);
-      StiffMas_kernel8<<<dim3(1U, 1U, 1U), dim3(32U, 1U, 1U)>>>(*gpu_x, gpu_detJ);
+      StiffMas_kernel7<<<dim3(1U, 1U, 1U), dim3(32U, 1U, 1U)>>>(*gpu_x, gpu_detJ);
       detJ_dirtyOnGpu = true;
       isodd = false;
       for (jy = 0; jy < 2; jy++) {
@@ -941,11 +927,11 @@ void StiffMas(const emxArray_uint32_T *elements, const emxArray_real_T *nodes,
       }
 
       cudaMemcpy(gpu_Jac, &Jac[0], 72UL, cudaMemcpyHostToDevice);
+      StiffMas_kernel8<<<dim3(1U, 1U, 1U), dim3(32U, 1U, 1U)>>>(jy, jp1j,
+        *gpu_Jac);
       StiffMas_kernel9<<<dim3(1U, 1U, 1U), dim3(32U, 1U, 1U)>>>(jy, jp1j,
         *gpu_Jac);
-      StiffMas_kernel10<<<dim3(1U, 1U, 1U), dim3(32U, 1U, 1U)>>>(jy, jp1j,
-        *gpu_Jac);
-      StiffMas_kernel11<<<dim3(1U, 1U, 1U), dim3(32U, 1U, 1U)>>>(jp1j, *gpu_Jac,
+      StiffMas_kernel10<<<dim3(1U, 1U, 1U), dim3(32U, 1U, 1U)>>>(jp1j, *gpu_Jac,
         jy, *gpu_L, jA, *gpu_B);
 
       /*  B matrix */
@@ -955,11 +941,11 @@ void StiffMas(const emxArray_uint32_T *elements, const emxArray_real_T *nodes,
       }
 
       smax = c * detJ;
-      StiffMas_kernel12<<<dim3(1U, 1U, 1U), dim3(64U, 1U, 1U)>>>(*gpu_B,
+      StiffMas_kernel11<<<dim3(1U, 1U, 1U), dim3(64U, 1U, 1U)>>>(*gpu_B,
         *b_gpu_B);
-      StiffMas_kernel13<<<dim3(1U, 1U, 1U), dim3(64U, 1U, 1U)>>>(*b_gpu_B, smax,
+      StiffMas_kernel12<<<dim3(1U, 1U, 1U), dim3(64U, 1U, 1U)>>>(*b_gpu_B, smax,
         gpu_Ke, e, *b_gpu_Ke);
-      StiffMas_kernel14<<<dim3(1U, 1U, 1U), dim3(64U, 1U, 1U)>>>(*b_gpu_Ke, e,
+      StiffMas_kernel13<<<dim3(1U, 1U, 1U), dim3(64U, 1U, 1U)>>>(*b_gpu_Ke, e,
         gpu_Ke);
 
       /*  Element stiffness matrix */
