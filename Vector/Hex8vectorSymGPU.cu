@@ -137,12 +137,9 @@ template <typename floatT, typename intT>                           // Defines t
     }
 }
 
-// NNZ of type 'single' and indices 'int32', 'uint32'
-template __global__ void Hex8vector<float,int>(const int *, const float *, float *);
+// NNZ of type 'single' and 'uint32'
 template __global__ void Hex8vector<float,unsigned int>(const unsigned int *, const float *, float *);
-// NNZ of type 'double' and indices 'int32', 'uint32', 'int64', 'uint64', 'double'
-template __global__ void Hex8vector<double,int>(const int *, const double *, double *);
+// NNZ of type 'double' and indices ''uint32', 'uint64', 'double'
 template __global__ void Hex8vector<double,unsigned int>(const unsigned int*, const double*, double*);
-template __global__ void Hex8vector<double,long>(const long *, const double *, double *);
 template __global__ void Hex8vector<double,unsigned long>(const unsigned long*,const double*,double*);
 template __global__ void Hex8vector<double,double>(const double *, const double *, double *);

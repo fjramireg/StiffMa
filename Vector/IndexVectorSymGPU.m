@@ -25,28 +25,20 @@ iK  = zeros(300*nel,1,dType,'gpuArray');    % Stores row indices (initialized di
 jK  = zeros(300*nel,1,dType,'gpuArray');    % Stores column indices (initialized directly on GPU)
 
 % MATLAB KERNEL CREATION
-if strcmp(dType,'int32')                    % int32
-    ker = parallel.gpu.CUDAKernel('IndexVectorGPU.ptx',...  % PTXFILE
-        'const int *, const int, int *, int *',...          % C prototype for kernel
-        'IndexVectorGPUIi');                                % Specify entry point
-elseif strcmp(dType,'uint32')               % uint32
-    ker = parallel.gpu.CUDAKernel('IndexVectorGPU.ptx',...
-        'const unsigned int *, const unsigned int, unsigned int *, unsigned int *',...
-        'IndexVectorGPUIj');
-elseif strcmp(dType,'int64')                % int64
-    ker = parallel.gpu.CUDAKernel('IndexVectorGPU.ptx',...
-        'const long *, const long, long *, long *',...
-        'IndexVectorGPUIl');
-elseif strcmp(dType,'uint64')               % uint64
+if strcmp(dType,'uint32')               % uint32
+    ker = parallel.gpu.CUDAKernel('IndexVectorGPU.ptx',...                      % PTXFILE
+        'const unsigned int*,const unsigned int,unsigned int*,unsigned int*',...% C prototype for kernel
+        'IndexVectorGPUIj');                                                    % Specify entry point
+elseif strcmp(dType,'uint64')           % uint64
     ker = parallel.gpu.CUDAKernel('IndexVectorGPU.ptx',...
         'const unsigned long *, const unsigned long, unsigned long *, unsigned long *',...
         'IndexVectorGPUIm');
-elseif strcmp(dType,'double')               % double
+elseif strcmp(dType,'double')           % double
     ker = parallel.gpu.CUDAKernel('IndexVectorGPU.ptx',...
         'const double *, const double, double *, double *',...
         'IndexVectorGPUId');
 else
-    error('Not supported data type. Use only one of this: int32, uint32, int64, uint64, double');
+    error('Not supported data type. Use only one of this: uint32, uint64, double');
 end
 
 % MATLAB KERNEL CONFIGURATION

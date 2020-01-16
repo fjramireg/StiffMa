@@ -88,8 +88,6 @@ template <typename dType>
     }
 }
 
-template __global__ void IndexVectorGPU<int>(const int *, const int, int *, int *);                                                     // Indices of data type 'int32'
 template __global__ void IndexVectorGPU<unsigned int>(const unsigned int *, const unsigned int, unsigned int *, unsigned int *);        // Indices of data type 'uint32'
-template __global__ void IndexVectorGPU<long>(const long *, const long, long *, long *);                                                // Indices of data type 'int64'
 template __global__ void IndexVectorGPU<unsigned long>(const unsigned long *, const unsigned long, unsigned long *, unsigned long *);   // Indices of data type 'uint64'
 template __global__ void IndexVectorGPU<double>(const double *, const double, double *, double *);                                      // Indices of data type 'double'

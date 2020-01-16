@@ -31,3 +31,6 @@ time = toc;
 fprintf('\nTime spend to build K on serial CPU: %f\n',time);
 
 % K_s = StiffMatGenVcSymCPU(elements,nodes,E,nu);         % Assembly on CPU (symmetric)
+%% Creation of global stiffness matrix on CPU (serial)
+K_h = StiffMatGenVc(elements,nodes,E,nu);               % Assembly on CPU
+K_s = StiffMatGenVcSymCPU(elements,nodes,E,nu);         % Assembly on CPU (symmetric)
