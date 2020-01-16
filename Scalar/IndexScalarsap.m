@@ -24,7 +24,7 @@ nel = size(elements,2);                     % Number of elements
 % MATLAB KERNEL CREATION
 if strcmp(dType,'uint32')                   % uint32
     ker = parallel.gpu.CUDAKernel('IndexScalarsp.ptx',...                       % PTXFILE
-        'const unsigned int*, const unsigned int, unsigned int*, unsigned int*',... % C prototype for kernel
+        'const unsigned int*,const unsigned int,unsigned int*,unsigned int*',...% C prototype for kernel
         'IndexScalarGPUIj');                                                    % Specify entry point
 elseif strcmp(dType,'uint64')               % uint64
     ker = parallel.gpu.CUDAKernel('IndexScalarsp.ptx',...
