@@ -9,13 +9,12 @@ nelx = 10;          % Number of elements on X-direction
 nely = 10;          % Number of elements on Y-direction
 nelz = 10 ;         % Number of elements on Z-direction
 dTypeE = 'uint32';  % Data precision for "elements" ['uint32', 'uint64' or 'double']
-dTypeN = 'double';  % Data precision for "nodes" ['single' or 'double']
 
 %% Mesh generation
-[elements, nodes] = CreateMesh(nelx,nely,nelz,dTypeE,dTypeN);
+[elements, nodes] = CreateMesh(nelx,nely,nelz,dTypeE,'single');
 
 %% Index computation on CPU (symmetry)
 tic;
-[iKh, jKh] = IndexScalarsas(elements);      % Row/column indices of tril(K)
+[iKh, jKh] = IndexScalarsas(elements, dTypeE);      % Row/column indices of tril(K)
 times = toc;
 fprintf('Time spend computing row/column indices of tril(K) on serial CPU: %f\n',times);

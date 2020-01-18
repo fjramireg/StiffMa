@@ -16,11 +16,11 @@ dTypeN = 'single';  % Data precision for "nodes" ['single' or 'double']
 
 %% Element stiffness matrix computation on GPU (symmetry)
 d = gpuDevice;
-elements_d = gpuArray(elements');               % Transfer transposed array to GPU memory
-nodes_d = gpuArray(nodes');                     % Transfer transposed array to GPU memory
-tbs = 256;                                      % Thread Block Size
+elements_d = gpuArray(elements');           % Transfer transposed array to GPU memory
+nodes_d = gpuArray(nodes');                 % Transfer transposed array to GPU memory
+tbs = 256;                                  % Thread Block Size
 tic;
-Ked = Hex8scalarsap(elements_d,nodes_d,c,tbs);% NNZ entries of tril(K)
+Ked = Hex8scalarsap(elements_d,nodes_d,c,dTypeE,dTypeN,tbs);% NNZ entries of tril(K)
 wait(d);
-time = toc;
-fprintf('Time spend computing the element stiffness matrices on parallel GPU: %f\n',time);
+time_d = toc;
+fprintf('Time spend computing the element stiffness matrices on parallel GPU: %f\n',time_d);

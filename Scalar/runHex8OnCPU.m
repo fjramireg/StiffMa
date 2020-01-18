@@ -16,6 +16,6 @@ dTypeN = 'single';  % Data precision for "nodes" ['single' or 'double']
 
 %% Element stiffness matrix computation on CPU (symmetry)
 tic;
-Keh = Hex8scalarsas(elements,nodes,c);       % NNZ entries of tril(K)
-time = toc;
-fprintf('Time spend computing the element stiffness matrices on serial CPU: %f\n',time);
+Keh = Hex8scalarsas(elements,nodes,c,dTypeN);   % NNZ entries of tril(K)
+time_h = toc;
+fprintf('Time spend computing the element stiffness matrices on serial CPU: %f\n',time_h);
