@@ -17,7 +17,7 @@ dTypeE = 'uint32';  % Data precision for "elements" ['uint32', 'uint64' or 'doub
 tic;
 [iKh, jKh] = IndexScalarsas(elements,dTypeE);      % Row/column indices of tril(K)
 time_h = toc;
-fprintf('Time spend computing row/column indices of tril(K) on serial CPU: %f\n',time_h);
+fprintf('Elapsed time for computing row/column indices of tril(K) on serial CPU: %f\n',time_h);
 
 %% Index computation on GPU (symmetry)
 d = gpuDevice;
@@ -27,7 +27,7 @@ tic;
 [iKd, jKd] = IndexScalarsap(elementsGPU, dTypeE, tbs); % Row/column indices of tril(K)
 wait(d);
 time_d = toc;
-fprintf('Time spend computing row/column indices of tril(K) on parallel GPU: %f\n',time_d);
+fprintf('Elapsed time for computing row/column indices of tril(K) on parallel GPU: %f\n',time_d);
 fprintf('GPU speedup: %f\n',time_h/time_d);
 
 %% Difference between results

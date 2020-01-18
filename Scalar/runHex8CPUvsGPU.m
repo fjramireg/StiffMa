@@ -18,7 +18,7 @@ dTypeN = 'single';  % Data precision for "nodes" ['single' or 'double']
 tic;
 Keh = Hex8scalarsas(elements,nodes,c,dTypeN);% NNZ entries of tril(K)
 time_h = toc;
-fprintf('Time spend computing the element stiffness matrices on serial CPU: %f\n',time_h);
+fprintf('Elapsed time for computing the element stiffness matrices on serial CPU: %f\n',time_h);
 
 %% Element stiffness matrix computation on GPU (symmetry)
 d = gpuDevice;
@@ -29,7 +29,7 @@ tic;
 Ked = Hex8scalarsap(elements_d,nodes_d,c,dTypeE,dTypeN,tbs);% NNZ entries of tril(K)
 wait(d);
 time_d = toc;
-fprintf('Time spend computing the element stiffness matrices on parallel GPU: %f\n',time_d);
+fprintf('Elapsed time for computing the element stiffness matrices on parallel GPU: %f\n',time_d);
 fprintf('GPU speedup: %f\n',time_h/time_d);
 
 %% Difference between results

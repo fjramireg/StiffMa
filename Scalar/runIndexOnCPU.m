@@ -17,4 +17,4 @@ dTypeE = 'uint32';  % Data precision for "elements" ['uint32', 'uint64' or 'doub
 tic;
 [iKh, jKh] = IndexScalarsas(elements, dTypeE);      % Row/column indices of tril(K)
 times = toc;
-fprintf('Time spend computing row/column indices of tril(K) on serial CPU: %f\n',times);
+fprintf('Elapsed time for computing row/column indices of tril(K) on serial CPU: %f\n',times);

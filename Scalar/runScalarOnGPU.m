@@ -23,4 +23,4 @@ tic;
 K = StiffMaps(elementsGPU,nodesGPU,c,tbs);  % Generate the stiffness matrix on GPU (tril(K))
 wait(d);
 times = toc;
-fprintf('Time spend building tril(K) on parallel GPU: %f\n',times);
+fprintf('Elapsed time for building tril(K) on parallel GPU: %f\n',times);

@@ -18,10 +18,10 @@ dTypeN = 'double';  % Data precision for "nodes" ['single' or 'double']
 tic;
 K = StiffMas(elements,nodes,c);     % Assembly on CPU
 time = toc;
-fprintf('\nTime spend to build K on serial CPU: %f\n',time);
+fprintf('\nElapsed time for building K on serial CPU: %f\n',time);
 
 %% Creation of global stiffness matrix on CPU (serial) taking advantage of symmetry
 tic;
 K_s = StiffMass(elements,nodes,c);  % Assembly on CPU (tril(K))
 times = toc;
-fprintf('Time spend to build tril(K) on serial CPU: %f\n',times);
+fprintf('Elapsed time for building tril(K) on serial CPU: %f\n',times);

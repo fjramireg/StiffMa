@@ -21,4 +21,4 @@ tic;
 [iKd, jKd] = IndexScalarsap(elementsGPU, dTypeE, tbs); % Row/column indices of tril(K)
 wait(d);
 times = toc;
-fprintf('Time spend computing row/column indices of tril(K) on parallel GPU: %f\n',times);
+fprintf('Elapsed time for computing row/column indices of tril(K) on parallel GPU: %f\n',times);

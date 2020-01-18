@@ -23,4 +23,4 @@ tic;
 Ked = Hex8scalarsap(elements_d,nodes_d,c,dTypeE,dTypeN,tbs);% NNZ entries of tril(K)
 wait(d);
 time_d = toc;
-fprintf('Time spend computing the element stiffness matrices on parallel GPU: %f\n',time_d);
+fprintf('Elapsed time for computing the element stiffness matrices on parallel GPU: %f\n',time_d);

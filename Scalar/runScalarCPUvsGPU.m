@@ -18,13 +18,13 @@ dTypeN = 'double';  % Data precision for "nodes" ['single' or 'double']
 tic;
 K = StiffMas(elements,nodes,c);     % Assembly on CPU
 time = toc;
-fprintf('\nTime spend building K on serial CPU: %f\n',time);
+fprintf('\nElapsed time for building K on serial CPU: %f\n',time);
 
 %% Creation of global stiffness matrix on CPU (serial) taking advantage of symmetry
 tic;
 Ks = StiffMass(elements,nodes,c);  % Assembly on CPU (tril(K))
 time_h = toc;
-fprintf('Time spend building tril(K) on serial CPU: %f\n',time_h);
+fprintf('Elapsed time for building tril(K) on serial CPU: %f\n',time_h);
 
 %% Creation of global stiffness matrix on GPU (parallel) taking advantage of symmetry
 d = gpuDevice;
@@ -35,7 +35,7 @@ tic;
 Ks_d = StiffMaps(elementsGPU,nodesGPU,c,tbs);   % Generate the stiffness matrix on GPU (tril(K))
 wait(d);
 time_d = toc;
-fprintf('Time spend building tril(K) on parallel GPU: %f\n',time_d);
+fprintf('Elapsed time for building tril(K) on parallel GPU: %f\n',time_d);
 fprintf('GPU speedup: %f\n',time_h/time_d);
 
 %% Difference between results
