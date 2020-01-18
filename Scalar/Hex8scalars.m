@@ -1,10 +1,10 @@
-function ke = Hex8scalars(X,c) %#codegen
+function ke = Hex8scalars(X,c,dTN)
 % HEX8SCALARS Compute the element stiffnes matrix for a SCALAR problem in SERIAL computing.
-%   HEX8SCALARS(X,c) returns the element stiffness matrix "ke" for an element
+%   HEX8SCALARS(X,c,dTN) returns the element stiffness matrix "ke" for an element
 %   "e"  in a finite element analysis of scalar problems in a three-dimensional
 %   domain computed in a serial manner on the CPU,  where "X" is the nodal
 %   coordinates of the element "e" (size 8x3), and "c" the material property
-%   (scalar).
+%   (scalar). dTN is the data type for nodal coordinates.  
 %
 %   Examples:
 %         X = [-1,-1,-1; 1,-1,-1; 1,1,-1; -1,1,-1; -1,-1,1; 1,-1,1; 1,1,1; -1,1,1]
@@ -25,7 +25,7 @@ p = 1/sqrt(3);              % Gauss points
 r = [-p,p,p,-p,-p,p,p,-p];  % Points through r-coordinate
 s = [-p,-p,p,p,-p,-p,p,p];  % Points through s-coordinate
 t = [-p,-p,-p,-p,p,p,p,p];  % Points through t-coordinate
-ke = zeros(8,8);            % Initialize the element stiffness matrix
+ke = zeros(8,8,dTN);        % Initialize the element stiffness matrix
 for i=1:8                   % Loop over numerical integration
     ri = r(i); si = s(i); ti = t(i);
     %  Shape function derivatives with respect to r,s,t

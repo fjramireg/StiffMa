@@ -16,18 +16,18 @@ function K = StiffMas(elements,nodes,c)
 % 	Modified: 21/01/2019. Version: 1.3
 %   Created:  30/11/2018. Version: 1.0
 
-dTypeInd = class(elements);         % Data type (precision) for index computation
-dTypeKe = class(nodes);             % Data type (precision) for ke computation
+dTE = class(elements);              % Data type (precision) for index computation
+dTN = class(nodes);                 % Data type (precision) for ke computation
 nel = size(elements,1);             % Total number of elements
-iK = zeros(8,8,nel,dTypeInd);       % Stores the rows' indices
-jK = zeros(8,8,nel,dTypeInd);       % Stores the columns' indices
-Ke = zeros(8,8,nel,dTypeKe);        % Stores the NNZ values
+iK = zeros(8,8,nel,dTE);            % Stores the rows' indices
+jK = zeros(8,8,nel,dTE);            % Stores the columns' indices
+Ke = zeros(8,8,nel,dTN);            % Stores the NNZ values
 for e = 1:nel                       % Loop over elements
     n = elements(e,:);              % Nodes of the element 'e'
     X = nodes(n,:);                 % Nodal coordinates of the element 'e'
     ind = repmat(n,8,1);            % Index for element 'e'
     iK(:,:,e) = ind';               % Row index storage
     jK(:,:,e) = ind;                % Columm index storage
-    Ke(:,:,e) = Hex8scalars(X,c);   % Element stiffness matrix compute & storage
+    Ke(:,:,e) = Hex8scalars(X,c,dTN);% Element stiffness matrix compute & storage
 end
-K = accumarray([iK(:),jK(:)],Ke(:),[],[],[],1);% Assembly of the global stiffness matrix
+K = AssemblyStiffMa(iK(:),jK(:),Ke(:),dTE,dTN); % Global stiffness matrix K assembly

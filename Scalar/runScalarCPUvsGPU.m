@@ -1,5 +1,5 @@
 
-% run the whole assembly code on the CPU
+% Script to run the whole assembly code on the CPU and GPU, and compare them
 addpath('../Common');
 addpath('../Utils');
 
@@ -18,13 +18,13 @@ dTypeN = 'double';  % Data precision for "nodes" ['single' or 'double']
 tic;
 K = StiffMas(elements,nodes,c);     % Assembly on CPU
 time = toc;
-fprintf('\nTime spend to build K on serial CPU: %f\n',time);
+fprintf('\nTime spend building K on serial CPU: %f\n',time);
 
 %% Creation of global stiffness matrix on CPU (serial) taking advantage of symmetry
 tic;
 Ks = StiffMass(elements,nodes,c);  % Assembly on CPU (tril(K))
-times = toc;
-fprintf('Time spend to build tril(K) on serial CPU: %f\n',times);
+time_h = toc;
+fprintf('Time spend building tril(K) on serial CPU: %f\n',time_h);
 
 %% Creation of global stiffness matrix on GPU (parallel) taking advantage of symmetry
 d = gpuDevice;
@@ -34,8 +34,9 @@ nodesGPU    = gpuArray(nodes');                 % Transfer transposed array to G
 tic;
 Ks_d = StiffMaps(elementsGPU,nodesGPU,c,tbs);   % Generate the stiffness matrix on GPU (tril(K))
 wait(d);
-times = toc;
-fprintf('Time spend to build tril(K) on parallel GPU: %f\n',times);
+time_d = toc;
+fprintf('Time spend building tril(K) on parallel GPU: %f\n',time_d);
+fprintf('GPU speedup: %f\n',time_h/time_d);
 
 %% Difference between results
 fprintf('Difference between results:\n');

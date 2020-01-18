@@ -1,10 +1,9 @@
 
-% run the whole assembly code on the GPU
+% Script to run the INDEX code on GPU
 addpath('../Common');
 addpath('../Utils');
 
 %% Problem setup
-tbs = 512;          % Thread Block Size
 c = 1.0;            % Conductivity (homogeneous, linear, isotropic material)
 nelx = 10;          % Number of elements on X-direction
 nely = 10;          % Number of elements on Y-direction
@@ -15,12 +14,12 @@ dTypeN = 'double';  % Data precision for "nodes" ['single' or 'double']
 %% Mesh generation
 [elements, nodes] = CreateMesh(nelx,nely,nelz,dTypeE,dTypeN);
 
-%% Creation of global stiffness matrix on GPU
+%% Index computation on GPU (symmetry)
 d = gpuDevice;
 elementsGPU = gpuArray(elements');          % Transfer transposed array to GPU memory
-nodesGPU    = gpuArray(nodes');             % Transfer transposed array to GPU memory
+tbs = 256;                                  % Thread Block Size
 tic;
-K = StiffMaps(elementsGPU,nodesGPU,c,tbs);   % Generate the stiffness matrix on GPU (tril(K))
+[iKd, jKd] = IndexScalarsap(elementsGPU, tbs); % Row/column indices of tril(K)
 wait(d);
 times = toc;
-fprintf('Time spend to build tril(K) on parallel GPU: %f\n',times);
+fprintf('Time spend computing row/column indices of tril(K) on parallel GPU: %f\n',times);

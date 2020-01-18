@@ -1,11 +1,12 @@
-function [iK, jK] = IndexScalarsap(elements, tbs)
+function [iK, jK] = IndexScalarsap(elements, dType, tbs)
 % INDEXSCALARSAP Compute the row/column indices of tril(K) in PARALLEL computing
 % for a SCALAR problem taking advantage of GPU computing.
-%   INDEXSCALARSAP(elements) returns the rows "iK" and columns "jK" position
-%   of all element stiffness matrices in the global system for a finite element
-%   analysis of a scalar problem in a three-dimensional domain taking advantage
-%   of symmetry and GPU computing, where "elements" is the connectivity matrix
-%   of size 8xnel and the optional "tbs" refers to ThreadBlockSize (scalar).
+%   INDEXSCALARSAP(elements, tbs, dType) returns the rows "iK" and columns "jK"
+%   position of all element stiffness matrices in the global system for a finite
+%   element analysis of a scalar problem in a three-dimensional domain taking
+%   advantage of symmetry and GPU computing, where "elements" is the
+%   connectivity matrix of size 8xnel and dType is the data type defined to the
+%   "elements" array. The optional "tbs" refers to ThreadBlockSize (scalar).  
 %
 %   See also STIFFMAPS, INDEXSCALARSAS
 %
@@ -18,7 +19,6 @@ function [iK, jK] = IndexScalarsap(elements, tbs)
 % 	Modified: 21/01/2019. Version: 1.3
 %   Created:  30/11/2018. Version: 1.0
 
-dType = classUnderlying(elements);          % Data type (uint32, uint64, double)
 nel = size(elements,2);                     % Number of elements
 
 % MATLAB KERNEL CREATION

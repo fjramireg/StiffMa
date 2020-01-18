@@ -37,10 +37,10 @@ elseif ~isscalar(c)                                                             
 end
 
 %% Index computation
-[iK, jK] = IndexScalarsap(elements, tbs);   % Row/column indices of tril(K)
+[iK, jK] = IndexScalarsap(elements, dTE, tbs);      % Row/column indices of tril(K)
 
 %% Element matrix computation
-Ke = Hex8scalarsap(elements,nodes,c, tbs);  % Entries of tril(K)
+Ke = Hex8scalarsap(elements,nodes,c,dTE,dTN,tbs);   % Entries of tril(K)
 
 %% Assembly of global sparse matrix on GPU
-K = accumarray([iK,jK], Ke, [], [], [], 1); % Stiffness matrix K
+K = AssemblyStiffMa(iK,jK,Ke,dTE,dTN);              % Global stiffness matrix K assembly

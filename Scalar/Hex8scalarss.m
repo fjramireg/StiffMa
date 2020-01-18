@@ -1,11 +1,12 @@
-function ke = Hex8scalarss(X,c,L)
+function ke = Hex8scalarss(X,c,L,dTN)
 % HEX8SCALARSS Compute the lower symmetric part of the element stiffness matrix
 % for a SCALAR problem in SERIAL computing on CPU.
-%   HEX8SCALARSS(X,c,L) returns the element stiffness matrix "ke" from finite
-%   element analysis of scalar problems in a three-dimensional domain taking
-%   advantage of symmetry, where "X" is the nodal coordinates of element "e" of
-%   size 8x3, "c" the material property for an isotropic material (scalar), and
-%   "L" the shape function derivatives for the HEX8 elements of size 3x3x8. 
+%   HEX8SCALARSS(X,c,L,dTN) returns the element stiffness matrix "ke" from
+%   finite element analysis of scalar problems in a three-dimensional domain
+%   taking advantage of symmetry, where "X" is the nodal coordinates of element
+%   "e" of size 8x3, "c" the material property for an isotropic material
+%   (scalar), and "L" the shape function derivatives for the HEX8 elements of
+%   size 3x3x8. dTN is the data type for nodal coordinates.  
 %
 %   See also HEX8SCALARSAS, HEX8SCALARS, HEX8SCALARSAP
 %
@@ -18,7 +19,7 @@ function ke = Hex8scalarss(X,c,L)
 % 	Modified: 21/01/2019. Version: 1.3
 %   Created:  30/11/2018. Version: 1.0
 
-ke = zeros(36,1,class(X));% Initializes the element stiffness matrix
+ke = zeros(36,1,dTN);   % Initializes the element stiffness matrix
 for i=1:8               % Loop over numerical integration
     Li = L(:,:,i);      % Matrix L in point i
     Jac  = Li*X;        % Jacobian matrix
