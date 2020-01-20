@@ -15,7 +15,7 @@
 *
 ** COMPILATION (Terminal)
 * 	 Opt1:	nvcc -ptx Hex8scalarsp.cu
-*    Opt2:  nvcc -ptx -v -arch=sm_50 --fmad=false -o Hex8scalarsp.ptx Hex8scalarsp.cu
+*    Opt2:  nvcc -ptx -lineinfo -v -arch=sm_50 --fmad=false -o Hex8scalarsp.ptx Hex8scalarsp.cu
 *
 ** COMPILATION Within MATLAB
 * 		   setenv('MW_NVCC_PATH','/usr/local/cuda-10.2/bin')
@@ -51,26 +51,46 @@
 *
 * ==========================================================================*/
 
+#define MAX_THREADS_PER_BLOCK   1024
+#define MIN_KERNEL_BLOCKS       2
+
+// #if floatT == double
+//     __constant__ double L[3*8*8], nel, c;                   // Declares constant memory
+// #else
+//     __constant__ float L[3*8*8], nel, c;                   // Declares constant memory
+// #endif
 
 __constant__ double L[3*8*8], nel, c;                   // Declares constant memory
 template <typename floatT, typename intT>               // Defines template
-__global__ void Hex8scalar(const intT *elements, const floatT *nodes, floatT *ke)
+__global__ void __launch_bounds__(MAX_THREADS_PER_BLOCK, MIN_KERNEL_BLOCKS)
+Hex8scalar(const intT *elements, const floatT *nodes, floatT *ke)
     {// CUDA kernel to compute the NNZ entries or all tril(ke) (SCALAR)
 
-    unsigned int e, i, j, k, l, temp, tid, gridStride, n[8];// General indices
-    tid = blockDim.x * blockIdx.x + threadIdx.x;        // Thread ID
-    gridStride = gridDim.x * blockDim.x;                // Grid stride
-    floatT x[8], y[8], z[8], invJ[9], B[24], detJ, iJ;  // Temporal matrix/scalar of type floatT
+    // unsigned int e, i, j, k, l, temp, tid, gridStride, n[8];// General indices
+    intT e, i, j, k, l, temp;
+    __shared__ intT n[8];                                         // DOFs
+    // tid = blockDim.x * blockIdx.x + threadIdx.x;        // Thread ID
+    // gridStride = gridDim.x * blockDim.x;                // Grid stride
+    // floatT x[8], y[8], z[8], invJ[9], B[24], detJ, iJ;  // Temporal matrix/scalar of type floatT
+    __shared__ floatT x[8], y[8], z[8], invJ[9], B[24];
+    floatT detJ, iJ;
 
-    for (e = tid; e < nel; e += gridStride){            // Parallel computation
+    // for (e = tid; e < nel; e += gridStride){            // Parallel computation
+    for (e = blockDim.x * blockIdx.x + threadIdx.x; e < nel; e += gridDim.x * blockDim.x){            // Parallel computation
 
+        #pragma unroll    
         for (i=0; i<8; i++) {
             n[i] = 3*elements[i+8*e];                   // Extracts nodes (DOFs) of element 'e'
             x[i]=nodes[n[i]-3]; y[i]=nodes[n[i]-2]; z[i]=nodes[n[i]-1];}    //x-y-z-coord of node i
-
+//             x[i]=nodes[3*elements[i+8*e]-3];
+//             y[i]=nodes[3*elements[i+8*e]-2];
+//             z[i]=nodes[3*elements[i+8*e]-1];
+//         }
+          
         for (i=0; i<8; i++) {   // Numerical integration over the 8 Gauss integration points
 
             floatT J[9] = {0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0};    // Jacobian matrix
+            #pragma unroll          
             for (j=0; j<8; j++) {
             J[0] += L[3*j+24*i  ]*x[j]; J[3] += L[3*j+24*i  ]*y[j];	J[6] += L[3*j+24*i  ]*z[j];
             J[1] += L[3*j+24*i+1]*x[j];	J[4] += L[3*j+24*i+1]*y[j];	J[7] += L[3*j+24*i+1]*z[j];
@@ -89,14 +109,17 @@ __global__ void Hex8scalar(const intT *elements, const floatT *nodes, floatT *ke
                 for (k=0; k<3; k++) { B[k+3*j] = 0.0;
                     for (l=0; l<3; l++) {B[k+3*j] += invJ[k+3*l] * L[l+3*j+24*i]; } } }
 
-            temp = 0;   // Computes the lower symmetry part of the element stiffness matrix (tril(ke))
+            temp = 0;   // Computes the lower symmetry part of the element stiffness matrix (tril(ke))       
             for (j=0; j<8; j++) {
                 for (k=j; k<8; k++) {
                     for (l=0; l<3; l++){
                         ke[temp+k+36*e] += c * detJ * B[l+3*j] * B[l+3*k]; }}
                 temp += k-j-1;  } } } }
 
+// NNZ of type 'single' and indices of type 'uint32'
+template __global__ void Hex8scalar<float,unsigned int>(const unsigned int *, const float *, float *);  // 'single' and 'uint32'
+        
 // NNZ of type 'double' and indices of type 'uint32', 'uint64', and 'double'
 template __global__ void Hex8scalar<double,unsigned int>(const unsigned int*, const double*, double*);  // 'double' and 'uint32'
 template __global__ void Hex8scalar<double,unsigned long>(const unsigned long*,const double*,double*);  // 'double' and 'uint64'
-template __global__ void Hex8scalar<double,double>(const double *, const double *, double *);           // 'double' and 'double'
+//template __global__ void Hex8scalar<double,double>(const double *, const double *, double *);           // 'double' and 'double'

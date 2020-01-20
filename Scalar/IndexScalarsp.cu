@@ -51,12 +51,14 @@ template <typename dType>                               // Data type
 __global__ void IndexScalarGPU(const dType *elements, const dType nel, dType *iK, dType *jK){
     // CUDA kernel to compute row/column indices of tril(K) (SCALAR)
     
-    int tid = blockDim.x * blockIdx.x + threadIdx.x;    // Thread ID
-    int gridStride = gridDim.x * blockDim.x;            // Grid stride
+    // int tid = blockDim.x * blockIdx.x + threadIdx.x;    // Thread ID
+    // int gridStride = gridDim.x * blockDim.x;            // Grid stride
     unsigned int e, i, j, temp, idx;                    // General indices
-    dType n[8];                                         // DOFs
+    // dType n[8];                                         // DOFs
+    __shared__ dType n[8];                                         // DOFs        
     
-    for (e = tid; e < nel; e += gridStride){            // Parallel computation
+    // for (e = tid; e < nel; e += gridStride){            // Parallel computation
+    for (e = blockDim.x * blockIdx.x + threadIdx.x; e < nel; e += gridDim.x * blockDim.x){            // Parallel computation
         
         // Extract the nodes (DOFs) associated with element 'e'
         for (i=0; i<8; i++) {n[i] = elements[i+8*e];}

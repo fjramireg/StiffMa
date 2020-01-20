@@ -28,7 +28,7 @@ L = dNdrst(dTN);                        % Shape functions derivatives in natural
 % Check the data type to create the proper CUDA kernel object
 % NNZ of type 'single' and indices 'uint32'
 if ( strcmp(dTE,'uint32') && strcmp(dTN,'single') )       % Indices: 'uint32'. NNZ: 'single'
-    ker = parallel.gpu.CUDAKernel('Hex8scalarsps.ptx',...       % PTXFILE
+    ker = parallel.gpu.CUDAKernel('Hex8scalarsp.ptx',...       % PTXFILE
         'const unsigned int *, const float *, float *',...      % C prototype for kernel
         'Hex8scalarIfj');                                       % Specify entry point
     nel = single(nel);                                          % Converts to 'single' precision
