@@ -1,4 +1,4 @@
-function K = StiffMass(elements,nodes,c)
+function K = StiffMass(elements, nodes, c, settings)
 % STIFFMASS Create the global stiffness matrix tril(K) for a SCALAR problem in SERIAL computing
 % taking advantage of simmetry.
 %   STIFFMASS(elements,nodes,c) returns the lower-triangle of a sparse matrix K
@@ -18,16 +18,11 @@ function K = StiffMass(elements,nodes,c)
 % 	Modified: 21/01/2019. Version: 1.3
 %   Created:  10/12/2018. Version: 1.0
 
-
-%% Data type (precision)
-dTE = class(elements);                      % for index computation
-dTN = class(nodes);                         % for ke computation
-
 %% Index computation
-[iK, jK] = IndexScalarsas(elements,dTE);    % Row/column indices of tril(K)
+[iK, jK] = IndexScalarsas(elements, settings);    % Row/column indices of tril(K)
 
 %% Element stiffness matrix computation
-Ke = Hex8scalarsas(elements,nodes,c,dTN);   % Entries of tril(K)
+Ke = Hex8scalarsas(elements, nodes, c, settings);   % Entries of tril(K)
 
 %% Assembly of global sparse matrix on CPU
-K = AssemblyStiffMa(iK,jK,Ke,dTE,dTN);      % Global stiffness matrix K assembly
+K = AssemblyStiffMa(iK, jK, Ke, settings.dTE, settings.dTN);      % Global stiffness matrix K assembly

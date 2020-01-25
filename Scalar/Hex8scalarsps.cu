@@ -55,18 +55,19 @@
 __constant__ float L[3*8*8], nel, c;                    // Declares constant memory
 template <typename floatT, typename intT>               // Defines template
 __global__ void Hex8scalar(const intT *elements, const floatT *nodes, floatT *ke)
-    {// CUDA kernel to compute the NNZ entries or all tril(ke) (SCALAR)
+    { // CUDA kernel to compute the NNZ entries or all tril(ke) (SCALAR)
 
-    unsigned int e, i, j, k, l, temp, tid, gridStride, n[8];// General indices
-    tid = blockDim.x * blockIdx.x + threadIdx.x;        // Thread ID
-    gridStride = gridDim.x * blockDim.x;                // Grid stride
-    floatT x[8], y[8], z[8], invJ[9], B[24], detJ, iJ;  // Temporal matrix/scalar of type floatT
+    intT e, i, j, k, l, temp;                           // General indices of type intT
+	__shared__ intT n[8];                               // Temporal array of type intT
+    __shared__ floatT x[8], y[8], z[8], invJ[9], B[24]; // Temporal arrays of type floatT
+    floatT detJ, iJ;                                    // Temporal scalars of type floatT
 
-    for (e = tid; e < nel; e += gridStride){            // Parallel computation
+    // Parallel computation loop
+    for (e = blockDim.x * blockIdx.x + threadIdx.x; e < nel; e += gridDim.x * blockDim.x){
 
         for (i=0; i<8; i++) {
             n[i] = 3*elements[i+8*e];                   // Extracts nodes (DOFs) of element 'e'
-            x[i]=nodes[n[i]-3]; y[i]=nodes[n[i]-2]; z[i]=nodes[n[i]-1];}    //x-y-z-coord of node i
+            x[i]=nodes[n[i]-3]; y[i]=nodes[n[i]-2]; z[i]=nodes[n[i]-1];} // x-y-z-coord of node i
 
         for (i=0; i<8; i++) {   // Numerical integration over the 8 Gauss integration points
 
@@ -97,4 +98,4 @@ __global__ void Hex8scalar(const intT *elements, const floatT *nodes, floatT *ke
                 temp += k-j-1;  } } } }
 
 // NNZ of type 'single' and indices of type 'uint32'
-template __global__ void Hex8scalar<float,unsigned int>(const unsigned int *, const float *, float *);  // 'single' and 'uint32'
+template __global__ void Hex8scalar<float,unsigned int>(const unsigned int *, const float *, float *);

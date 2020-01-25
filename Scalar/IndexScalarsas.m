@@ -1,4 +1,4 @@
-function [iK, jK] = IndexScalarsas(elements, dType)
+function [iK, jK] = IndexScalarsas(elements, settings)
 % INDEXSCALARSAS Compute the row/column indices of tril(K) using SERIAL computing
 % for a SCALAR problem on the CPU.
 %   [iK, jK] = INDEXSCALARSAS(elements,dType) returns the rows "iK" and columns "jK"
@@ -18,10 +18,9 @@ function [iK, jK] = IndexScalarsas(elements, dType)
 % 	Modified: 21/01/2019. Version: 1.3
 %   Created:  30/11/2018. Version: 1.0
 
-nel = size(elements,1);         % # of elements
-iK  = zeros(36*nel, 1, dType);  % Row indices
-jK  = zeros(36*nel, 1, dType);  % Column indices
-for e = 1:nel
+iK  = zeros(36*settings.nel, 1, settings.dTE);  % Row indices
+jK  = zeros(36*settings.nel, 1, settings.dTE);  % Column indices
+for e = 1:settings.nel
     n = elements(e,:);
     temp = 0;
     for j = 1:8

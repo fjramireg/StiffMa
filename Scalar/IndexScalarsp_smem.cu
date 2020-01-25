@@ -47,29 +47,43 @@
 *
 * ======================================================================*/
 
+#define THREADS_PER_BLOCK 1024
+#define TILE THREADS_PER_BLOCK/8
+        
 template <typename intT>        // Data type template
-__global__ void IndexScalarGPU(const intT *elements, const intT nel, intT *iK, intT *jK) {
-    // CUDA kernel to compute row/column indices of tril(K) (SCALAR)
+__global__ void IndexScalarGPU(const intT *elements, const intT nel, intT *iK, intT *jK)
+{    // CUDA kernel to compute row/column indices of tril(K) (SCALAR)
 
-    intT e, i, j, temp, idx, n[8];	// General indices
+//     intT i, j, temp, idx;	// General indices
+    intT e, i, j, temp, idx;	// General indices
+//     __shared__ intT n[8];       // DOFs
+    __shared__ intT n[THREADS_PER_BLOCK];       // DOFs of 128 elements
+    int gTid = blockDim.x * blockIdx.x + threadIdx.x;
+    int lTid = threadIdx.x;
 
     // Parallel computation loop
-    for (e = blockDim.x * blockIdx.x + threadIdx.x; e < nel; e += gridDim.x * blockDim.x){
+    for (e = gTid; e < nel; e += gridDim.x * blockDim.x){
+//     if (gTid < nel){
 
-        for (i=0; i<8; i++) {n[i] = elements[i+8*e];} // Extracts nodes (DOFs) of element 'e'
+        // for (i=0; i<8; i++) {n[i] = elements[i+8*e];} // Extracts nodes (DOFs) of element 'e'
+        n[lTid] = elements[gTid];
+//         n[lTid] = elements[e];
+        __syncthreads();
 
         // Computes row/column indices taking advantage of symmetry
-        temp = 0;
+        
+for (int k=0; k<TILE; k++){
+    temp = 0;
         for (j=0; j<8; j++){
             for (i=j; i<8; i++){
-                idx = temp + i + 36*e;
-                if (n[i] >= n[j]){
-                    iK[idx] = n[i];
-                    jK[idx] = n[j];}
+                idx = temp + i + 36*k;
+                if (n[i+8*k] >= n[j+8*k]){
+                    iK[idx] = n[i+8*k];
+                    jK[idx] = n[j+8*k];}
                 else{
-                    iK[idx] = n[j];
-                    jK[idx] = n[i];}}
-            temp += i-j-1;   }}}
+                    iK[idx] = n[j+8*k];
+                    jK[idx] = n[i+8*k];}}
+            temp += i-j-1;   }}}}
 
 template __global__ void IndexScalarGPU<unsigned int>(const unsigned int *,
         const unsigned int, unsigned int *, unsigned int *);	// Indices of data type 'uint32'

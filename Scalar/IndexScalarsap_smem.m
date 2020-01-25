@@ -1,4 +1,4 @@
-function [iK, jK] = IndexScalarsap(elements, settings)
+function [iK, jK] = IndexScalarsap_smem(elements, settings)
 % INDEXSCALARSAP Compute the row/column indices of tril(K) in PARALLEL computing
 % for a SCALAR problem taking advantage of GPU computing.
 %   INDEXSCALARSAP(elements, tbs, dType) returns the rows "iK" and columns "jK"
@@ -21,11 +21,11 @@ function [iK, jK] = IndexScalarsap(elements, settings)
 
 % MATLAB KERNEL CREATION
 if strcmp(settings.dTE,'uint32')                      % uint32
-    ker = parallel.gpu.CUDAKernel('IndexScalarsp.ptx',...                       % PTXFILE
+    ker = parallel.gpu.CUDAKernel('IndexScalarsp_smem.ptx',...                       % PTXFILE
         'const unsigned int*,const unsigned int,unsigned int*,unsigned int*',...% C prototype for kernel
         'IndexScalarGPUIj');                                                    % Specify entry point
 elseif strcmp(settings.dTE,'uint64')                  % uint64
-    ker = parallel.gpu.CUDAKernel('IndexScalarsp.ptx',...
+    ker = parallel.gpu.CUDAKernel('IndexScalarsp_smem.ptx',...
         'const unsigned long *, const unsigned long, unsigned long *, unsigned long *',...
         'IndexScalarGPUIm');
 else
@@ -41,6 +41,7 @@ if (settings.tbs > ker.MaxThreadsPerBlock || mod(settings.tbs, settings.WarpSize
 end
 ker.ThreadBlockSize = [settings.tbs, 1, 1];                   	% Threads per block
 ker.GridSize = [settings.WarpSize*settings.numSMs, 1, 1];       % Blocks per grid   
+% ker.GridSize = [ceil(settings.nel/settings.tbs), 1, 1];       % Blocks per grid  
 
 % INITIALIZATION OF GPU VARIABLES
 iK  = zeros(36*settings.nel, 1, settings.dTE, 'gpuArray');    % Stores row indices (initialized directly on GPU)

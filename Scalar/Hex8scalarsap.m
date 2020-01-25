@@ -1,4 +1,4 @@
-function KE = Hex8scalarsap(elements,nodes,c,dTE,dTN,tbs)
+function KE = Hex8scalarsap(elements, nodes, c, settings)
 % HEX8SCALARSAP Compute all tril(ke) for a SCALAR problem in PARALLEL computing
 % taking advantage of simmetry and GPU computing.
 %   HEX8SCALARSAP(elements,nodes,c,dTE,dTN,tbs) returns the element stiffness
@@ -22,39 +22,39 @@ function KE = Hex8scalarsap(elements,nodes,c,dTE,dTN,tbs)
 %   Created:  01/12/2018. Version: 1.4
 
 % General variables
-nel = size(elements,2);                 % Number of elements
-L = dNdrst(dTN);                        % Shape functions derivatives in natural coord.
+nel = settings.nel;         % Number of elements
+L   = dNdrst(settings.dTN);	% Shape functions derivatives in natural coord.
 
-% Check the data type to create the proper CUDA kernel object
-% NNZ of type 'single' and indices 'uint32'
-if ( strcmp(dTE,'uint32') && strcmp(dTN,'single') )       % Indices: 'uint32'. NNZ: 'single'
-    ker = parallel.gpu.CUDAKernel('Hex8scalarsp.ptx',...       % PTXFILE
-        'const unsigned int *, const float *, float *',...      % C prototype for kernel
-        'Hex8scalarIfj');                                       % Specify entry point
-    nel = single(nel);                                          % Converts to 'single' precision
+% MATLAB KERNEL CREATION
+if ( strcmp(settings.dTE,'uint32') && strcmp(settings.dTN,'single') )       % Indices: 'uint32'. NNZ: 'single'
+    ker = parallel.gpu.CUDAKernel('Hex8scalarsps.ptx',...	% PTXFILE
+        'const unsigned int *, const float *, float *',...	% C prototype for kernel
+        'Hex8scalarIfj');                                 	% Specify entry point
+    nel = single(nel);                                     	% Converts to 'single' precision
     c   = single(c);
-    % NNZ of type 'double' and indices 'uint32', 'uint64', and 'double'
-elseif ( strcmp(dTE,'uint32') && strcmp(dTN,'double') )   % Indices: 'uint32'. NNZ: 'double'
+elseif ( strcmp(settings.dTE,'uint32') && strcmp(settings.dTN,'double') )	% Indices: 'uint32'. NNZ: 'double'
     ker = parallel.gpu.CUDAKernel('Hex8scalarsp.ptx',...
         'const unsigned int *, const double *, double *',...
         'Hex8scalarIdj');
-elseif ( strcmp(dTE,'uint64') && strcmp(dTN,'double') )   % Indices: 'uint64'. NNZ: 'double'
+elseif ( strcmp(settings.dTE,'uint64') && strcmp(settings.dTN,'double') )	% Indices: 'uint64'. NNZ: 'double'
     ker = parallel.gpu.CUDAKernel('Hex8scalarsp.ptx',...
         'const unsigned long *, const double *, double *',...
         'Hex8scalarIdm');
-elseif ( strcmp(dTE,'double') && strcmp(dTN,'double') )   % Indices: 'double'. NNZ: 'double'
-    ker = parallel.gpu.CUDAKernel('Hex8scalarsp.ptx',...
-        'const double *, const double *, double *',...
-        'Hex8scalarIdd');
 else
-    error('Input "elements" must be defined as "uint32", "uint64" or "double" and Input "nodes" must be defined as "single" or "double" ');
+    error('Input "elements" must be defined as "uint32", "uint64" and Input "nodes" must be defined as "single" or "double" ');
 end
 
-% Configure and execute the CUDA kernel
-if (nargin == 3 || tbs > ker.MaxThreadsPerBlock)
-    tbs = ker.MaxThreadsPerBlock;                                   % Default (MaxThreadsPerBlock)
+% MATLAB KERNEL CONFIGURATION
+if (settings.tbs > ker.MaxThreadsPerBlock || mod(settings.tbs, settings.WarpSize) )
+    settings.tbs = ker.MaxThreadsPerBlock;
+    if  mod(settings.tbs, settings.WarpSize)
+        settings.tbs = settings.tbs - mod(settings.tbs, settings.WarpSize);
+    end
 end
-ker.ThreadBlockSize = [tbs, 1, 1];                                  % Threads per block
-ker.GridSize = [ceil(nel/ker.ThreadBlockSize(1)), 1, 1];            % Blocks per grid
-setConstantMemory(ker,'L',L,'nel',nel,'c',c);                       % Set constant memory on GPU
-KE = feval(ker, elements, nodes, zeros(36*nel,1,dTN,'gpuArray'));% GPU code execution
+ker.ThreadBlockSize = [settings.tbs, 1, 1];               	% Threads per block
+ker.GridSize = [settings.WarpSize*settings.numSMs, 1, 1];	% Blocks per grid   
+
+% INITIALIZATION OF GPU VARIABLES
+setConstantMemory(ker, 'L',L, 'nel',nel, 'c',c);            % Set constant memory on GPU
+KE = zeros(36*nel, 1, settings.dTN, 'gpuArray');            % Initialized directly on GPU
+KE = feval(ker, elements, nodes, KE);                       % GPU code execution

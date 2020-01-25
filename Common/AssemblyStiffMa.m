@@ -1,4 +1,4 @@
-function K = AssemblyStiffMa(iK,jK,Ke,dTE,dTN)
+function K = AssemblyStiffMa(iK, jK, Ke, dTE, dTN)
 % ASSEMBLYSTIFFMA Assembly a global sparse stiffness matrix K.
 %   ASSEMBLYSTIFFMA(iK,jK,Ke,dTE,dTN) returns a sparse matrix K that is computed
 %   on the CPU or on the GPU according to the input data, where "iK", "jK", and
