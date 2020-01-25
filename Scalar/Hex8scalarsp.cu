@@ -53,20 +53,19 @@
 
 __constant__ double L[3*8*8], nel, c;                   // Declares constant memory
 template <typename floatT, typename intT>               // Defines template
-__global__ void Hex8scalar(const intT *elements, const floatT *nodes, floatT *ke)
-    { // CUDA kernel to compute the NNZ entries or all tril(ke) (SCALAR)
+__global__ void Hex8scalar(const intT *elements, const floatT *nodes, floatT *ke) {
+    // CUDA kernel to compute the NNZ entries or all tril(ke) (SCALAR)
 
-    intT e, i, j, k, l, temp;                           // General indices of type intT
-	__shared__ intT n[8];                               // Temporal array of type intT
-    __shared__ floatT x[8], y[8], z[8], invJ[9], B[24]; // Temporal arrays of type floatT
-    floatT detJ, iJ;                                    // Temporal scalars of type floatT
+    intT e, ni;                                         // General indices of type intT
+    char i, j, k, l, temp;                              // General indices of type char
+    floatT x[8], y[8], z[8], invJ[9], B[24], detJ, iJ;  // Temporal arrays/scalars of type floatT
 
     // Parallel computation loop
     for (e = blockDim.x * blockIdx.x + threadIdx.x; e < nel; e += gridDim.x * blockDim.x){
 
         for (i=0; i<8; i++) {
-            n[i] = 3*elements[i+8*e];                   // Extracts nodes (DOFs) of element 'e'
-            x[i]=nodes[n[i]-3]; y[i]=nodes[n[i]-2]; z[i]=nodes[n[i]-1];} // x-y-z-coord of node i
+            ni = 3*elements[i+8*e];                                 // node i of element e
+            x[i]=nodes[ni-3]; y[i]=nodes[ni-2]; z[i]=nodes[ni-1];}  // x-y-z-coord of node i
 
         for (i=0; i<8; i++) {   // Numerical integration over the 8 Gauss integration points
 

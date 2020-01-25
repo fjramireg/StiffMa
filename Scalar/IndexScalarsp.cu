@@ -51,7 +51,8 @@ template <typename intT>        // Data type template
 __global__ void IndexScalarGPU(const intT *elements, const intT nel, intT *iK, intT *jK) {
     // CUDA kernel to compute row/column indices of tril(K) (SCALAR)
 
-    intT e, i, j, temp, idx, n[8];	// General indices
+    intT e, idx, n[8];          // General indices of type intT
+    char i, j, temp;            // General indices of type char 
 
     // Parallel computation loop
     for (e = blockDim.x * blockIdx.x + threadIdx.x; e < nel; e += gridDim.x * blockDim.x){
