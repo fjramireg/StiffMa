@@ -20,7 +20,10 @@ fprintf(afile,'/NOPR\n');
 fprintf(afile,'/FILNAME,STIFFNESS_VEC,0\n');
 fprintf(afile,'/TITLE,STIFFNESS_VEC\n');
 fprintf(afile,'/PREP7\n');
-fprintf(afile,'ET,1,SOLID185\n');   % SOLID185 is used for 3-D modeling of solid structures. It is defined by eight nodes having three degrees of freedom at each node: translations in the nodal x, y, and z directions.
+fprintf(afile,'ET,1,SOLID5\n');     % SOLID5 is used for 3-D modeling of multiphysics capabilities. It is defined by eight nodes having three degrees of freedom at each node: translations in the nodal x, y, and z directions.
+fprintf(afile,'KEYOPT,1,1,2\n');    % Define DOFs: UX, UY, UZ
+fprintf(afile,'KEYOPT,1,3,1\n');    % Do not include extra shapes
+fprintf(afile,'KEYOPT,1,5,0\n');    % Basic element printout
 fprintf(afile,'MP,EX,1,%E\n',E);    % Elastic moduli
 fprintf(afile,'MP,PRXY,1,%E\n',nu); % Major Poisson's ratio
 
