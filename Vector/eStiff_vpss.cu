@@ -1,6 +1,6 @@
 /*=========================================================================
 *
-** Computes the lower symmetry part of the element stiffness matrix (VECTOR)
+** Computes the lower symmetry part of the element stiffness matrix (VECTOR) using single data
 *
 *
 * DATA INPUT
@@ -50,7 +50,7 @@
 *
 * ==========================================================================*/
 
-__constant__ double L[3*8*8], D[6*6], nel;                          // Declares constant memory
+__constant__ float L[3*8*8], D[6*6], nel;                          // Declares constant memory
 template <typename floatT, typename intT>                           // Defines template
 __global__ void Hex8vector(const intT *elements, const floatT *nodes, floatT *ke ) {
     // CUDA kernel to compute the NNZ entries or all tril(ke) (VECTOR)
@@ -130,6 +130,5 @@ __global__ void Hex8vector(const intT *elements, const floatT *nodes, floatT *ke
     }
 }
 
-// NNZ of type 'double' and INDICES of type 'uint32', 'uint64'
-template __global__ void Hex8vector<double,unsigned int>(const unsigned int*, const double*, double*);
-template __global__ void Hex8vector<double,unsigned long>(const unsigned long*,const double*,double*);
+// NNZ of type 'single' and INDEX of type 'uint32'
+template __global__ void Hex8vector<float,unsigned int>(const unsigned int *, const float *, float *);

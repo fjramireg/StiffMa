@@ -7,6 +7,7 @@
 %       (s,v): Refers to scalar (s) or vector (v) problem
 %       (s,p): Refers to serial (s) or parallel (p) computing
 %       (s): For the symmetry case only
+%       (s): For the "single" data precision
 
 
 %% Functions Files
@@ -32,3 +33,6 @@
 %   runVectorCPUvsGPU      - Runs the whole assembly vector code on the CPU and GPU (comparison)
 %   runVectorOnCPU         - Runs the whole assembly vector code on the CPU
 %   runVectorOnGPU         - Runs the whole assembly vector code on the GPU
+
+
+

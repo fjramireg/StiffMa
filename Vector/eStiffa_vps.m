@@ -1,6 +1,6 @@
 function KE = eStiffa_vps(elements, nodes, MP, sets)
 % ESTIFFA_VPS Compute ALL (a) element stiffness matrices for a VECTOR (v)
-% problem using GPU computing (p) taking advantage of simmetry (s). 
+% problem using GPU computing (p) taking advantage of simmetry (s).
 %   ESTIFFA_VPS(elements, nodes, MP, sets) returns the element stiffness
 %   matrix "ke" for all elements in a finite element analysis of a vector
 %   problem in a three-dimensional domain taking advantage of symmetry and
@@ -28,9 +28,10 @@ function KE = eStiffa_vps(elements, nodes, MP, sets)
 
 % MATLAB KERNEL CREATION
 if ( strcmp(sets.dTE,'uint32') && strcmp(sets.dTN,'single') )       % Indices: 'uint32'. NNZ: 'single'
-    ker = parallel.gpu.CUDAKernel('eStiff_vps.ptx',...              % PTXFILE
+    ker = parallel.gpu.CUDAKernel('eStiff_vpss.ptx',...             % PTXFILE
         'const unsigned int *, const float *, float *',...          % C prototype for kernel
         'Hex8vectorIfj');                                           % Specify entry point
+    sets.nel = single(sets.nel);                                    % Converts to 'single' precision
 elseif ( strcmp(sets.dTE,'uint32') && strcmp(sets.dTN,'double') )   % Indices: 'uint32'. NNZ: 'double'
     ker = parallel.gpu.CUDAKernel('eStiff_vps.ptx',...
         'const unsigned int *, const double *, double *',...
