@@ -32,4 +32,3 @@
 %   runVectorCPUvsGPU      - Runs the whole assembly vector code on the CPU and GPU (comparison)
 %   runVectorOnCPU         - Runs the whole assembly vector code on the CPU
 %   runVectorOnGPU         - Runs the whole assembly vector code on the GPU
-
