@@ -1,35 +1,30 @@
-% Runs the whole assembly scalar code on the GPU
-%
-% This script is used to generate the global stiffness matrix K for the VECTOT
-% problem (linear static elasticiy).
+% Runs the HEX8 scalar code on the GPU
 %
 %   For more information, see the <a href="matlab:
 %   web('https://github.com/fjramireg/StiffMa')">StiffMa</a> web site.
 %
 %   Written by Francisco Javier Ramirez-Gil, fjramireg@gmail.com
 %   Universidad Nacional de Colombia - Medellin
-%   Created:  28/01/2020. Version: 1.4
+%   Created:  31/01/2020. Version: 1.4
 
-% run the whole assembly code on the CPU and GPU
+%% Add some common paths
 addpath('../Common');
 addpath('../Utils');
 
 %% Mesh generation
+dxn = 1;            % For vector 3 (UX, UY, UZ). For scalar 1 (Temp)
 nelx = 10;          % Number of elements on X-direction
 nely = 10;          % Number of elements on Y-direction
 nelz = 10;          % Number of elements on Z-direction
-dTE = 'uint64';     % Data precision for "elements" ['uint32', 'uint64' or 'double']
+dTE = 'uint32';     % Data precision for "elements" ['uint32', 'uint64']
 dTN = 'double';     % Data precision for "nodes" ['single' or 'double']
-PlotE = 0;          % Plot the elements and their numbers (1 to plot)
-PlotN = 0;          % Plot the nodes and their numbers (1 to plot)
-[Mesh.elements, Mesh.nodes] = CreateMesh(nelx,nely,nelz,dTE,dTN);
-[nel, nxe] = size(Mesh.elements);
+[elements, nodes] = CreateMesh(nelx,nely,nelz,dTE,dTN);
+[nel, nxe] = size(elements);
 
 %% Material properties
 c = 1.0;            % Conductivity (homogeneous, linear, isotropic material)
 
-%% General settings
-dxn = 1;            % For vector 3 (UX, UY, UZ). For scalar 1 (Temp)
+%% General Settings
 sets.dTE = dTE;     % Data precision for computing
 sets.dTN = dTN;     % Data precision for computing
 sets.nel = nel;     % Number of finite elements
@@ -44,11 +39,11 @@ sets.tbs      = d.MaxThreadsPerBlock;   % Max. Thread Block Size
 sets.numSMs   = d.MultiprocessorCount;  % Number of multiprocessors on the device
 sets.WarpSize = d.SIMDWidth;            % The warp size in threads
 
-%% Creation of global stiffness matrix on GPU
+%% Element stiffness matrix computation on GPU (symmetry)
 tic;
-elementsGPU = gpuArray(Mesh.elements');	% Transfer to GPU memory
-nodesGPU    = gpuArray(Mesh.nodes');  	% Transfer to GPU memory
-K_d = StiffMa_sps(elementsGPU, nodesGPU, c, sets);      % Assembly on GPU (symmetric)
-time_d = toc;
+elementsGPU = gpuArray(elements');      % Transfer transposed array to GPU memory
+nodesGPU = gpuArray(nodes');            % Transfer transposed array to GPU memory
+Ke  = eStiff_spsa(elementsGPU, nodesGPU, c, sets); % Computation of Ke for tril(K)
 wait(d);
-fprintf('Elapsed time for building tril(K) on parallel GPU: %f\n',time_d);
+times = toc;
+fprintf('Elapsed time for computing row/column indices of tril(K) on parallel GPU: %f\n',times);
