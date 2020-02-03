@@ -17,7 +17,7 @@ nelx = 10;          % Number of elements on X-direction
 nely = 10;          % Number of elements on Y-direction
 nelz = 10;          % Number of elements on Z-direction
 dTE = 'uint32';     % Data precision for "elements" ['uint32', 'uint64']
-dTN = 'double';     % Data precision for "nodes" ['single' or 'double']
+dTN = 'single';     % Data precision for "nodes" ['single' or 'double']
 [Mesh.elements, ~] = CreateMesh(nelx,nely,nelz,dTE,dTN);
 [nel, nxe] = size(Mesh.elements);
 

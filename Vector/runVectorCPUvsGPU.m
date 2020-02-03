@@ -18,7 +18,7 @@ addpath('../Utils');
 nelx = 10;          % Number of elements on X-direction
 nely = 10;          % Number of elements on Y-direction
 nelz = 10;          % Number of elements on Z-direction
-dTE = 'uint32';     % Data precision for "elements" ['uint32', 'uint64' or 'double']
+dTE = 'uint32';     % Data precision for "elements" ['uint32', 'uint64']
 dTN = 'double';     % Data precision for "nodes" ['single' or 'double']
 PlotE = 0;          % Plot the elements and their numbers (1 to plot)
 PlotN = 0;          % Plot the nodes and their numbers (1 to plot)

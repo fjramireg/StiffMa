@@ -36,7 +36,7 @@ sets.sz  = sets.edof * (sets.edof + 1) / 2; % Number of symmetry entries
 
 %% Element stiffness matrix computation on CPU
 tic;
-Ke_hf = eStiffa_vs(Mesh, MP, sets); % Computation of Ke for tril(K)
+Ke_hf = StiffMa_vs(Mesh, MP, sets); % Computation of Ke for K
 times = toc;
 fprintf('Elapsed time for computing Ke for K on serial CPU: %f\n',times);
 
