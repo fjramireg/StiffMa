@@ -13,10 +13,10 @@ addpath('../Utils');
 
 %% Mesh generation
 dxn = 1;            % For vector 3 (UX, UY, UZ). For scalar 1 (Temp)
-nelx = 100;          % Number of elements on X-direction
-nely = 100;          % Number of elements on Y-direction
-nelz = 100;          % Number of elements on Z-direction
-dTE = 'uint64';     % Data precision for "elements" ['uint32', 'uint64']
+nelx = 10;          % Number of elements on X-direction
+nely = 10;          % Number of elements on Y-direction
+nelz = 10;          % Number of elements on Z-direction
+dTE = 'uint32';     % Data precision for "elements" ['uint32', 'uint64']
 dTN = 'single';     % Data precision for "nodes" ['single' or 'double']
 [elements, nodes] = CreateMesh(nelx,nely,nelz,dTE,dTN);
 [nel, nxe] = size(elements);
