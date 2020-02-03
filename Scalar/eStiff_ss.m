@@ -1,5 +1,5 @@
 function ke = eStiff_ss(X,ct,dTN)
-% ESTIFF_SS Computes the element stiffnes matrix for a SCALAR (s) problem
+% ESTIFF_SS Computes the element stiffness matrix for a SCALAR (s) problem
 % in SERIAL (s) computing.
 %   ke = ESTIFF_SS(X,c,dTN) returns the element stiffness matrix "ke" for
 %   an element "e" in a finite element analysis of scalar problems in a

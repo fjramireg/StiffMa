@@ -17,7 +17,7 @@ function KE = eStiff_spsa(elements, nodes, c, sets)
 %   - sets.numSMs is the number of multiprocessors on the device
 %   - sets.WarpSize is the warp size
 %
-%   See also STIFFMAPS, HEX8SCALARSAS
+%   See also STIFFMA_SPS
 %
 %   For more information, see the <a href="matlab:
 %   web('https://github.com/fjramireg/StiffMa')">StiffMa</a> web site.
