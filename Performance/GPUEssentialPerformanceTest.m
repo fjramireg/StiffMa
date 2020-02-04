@@ -1,3 +1,4 @@
+function GPUEssentialPerformanceTest
 % Measuring GPU Performance
 % This example shows how to measure some of the key performance characteristics of a GPU.
 %  In order to quantify the performance of a GPU, three tests are used:
