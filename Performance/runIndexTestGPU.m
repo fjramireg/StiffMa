@@ -1,5 +1,5 @@
-function runIndexTestCPU
-% Runs the INDEX code on the CPU by varying problem size and data precision type
+function runIndexTestGPU
+% Runs the INDEX code on the GPU by varying problem size and data precision type
 %
 %   For more information, see the <a href="matlab:
 %   web('https://github.com/fjramireg/StiffMa')">StiffMa</a> web site.
@@ -20,11 +20,12 @@ MWver = ver;        % Version information for MathWorks products
 Matlab_v = version; % Version number for MATLAB and libraries
 platform = system_dependent('getos');
 infoCPU = cpuinfo();
+infoGPU = gpuDevice();
 if ismac
     sets.pf = 'MAC';    % Code to run on Mac platform
 elseif isunix
     sets.pf = 'LNX';    % Code to run on Linux platform
-    system('lshw');     % List hardware details
+    system('lshw');% List hardware details
 elseif ispc
     sets.pf = 'WIN';    % Code to run on Windows platform
 else
@@ -35,11 +36,11 @@ end
 nel_all  = [10,20,40,80,160,320,640,1000]; 	% Cases for mesh size
 dTEall = {'uint32','uint64'};           % Cases for "element" data type
 dTNall = {'single'};                   	% Cases for "nodes" data type
-proc_all = {'CPU'};                     % Cases for processor type
+proc_all = {'GPU'};                     % Cases for processor type
 prob_all = {'Scalar','Vector'};         % Cases for problem type
 
 % Move to results folder
-cd 'PerfTestIndex_CPU/';
+cd 'PerfTestIndex_GPU/';
 
 % Runs all tests
 for k = 1:length(nel_all)
@@ -67,7 +68,7 @@ for k = 1:length(nel_all)
                     fprintf("Processor type: '%s'\n",sets.proctype);
                     fprintf("Problem type: '%s'\n\n",sets.prob_type);
                     perf_rst = runperf(sets.name);
-                    save(sets.name,'perf_rst','sets','Matlab_v','MWver','platform','infoCPU');
+                    save(sets.name,'perf_rst','sets','Matlab_v','MWver','platform','infoCPU','infoGPU');
                     
                 end
             end
