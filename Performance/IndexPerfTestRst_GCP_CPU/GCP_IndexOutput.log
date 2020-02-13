@@ -1,0 +1,553 @@
+/bin/bash: lshw: command not found
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 10x10x10 (1000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Processor type: 'CPU'
+
+Running IndexTest_CPU_Sca_LNX_Nsingle_Euint32_nel10
+
+Mesh created successfully with 1000 Hex8 elements and 1331 nodes!
+........
+================================================================================
+IndexTest_CPU_Sca_LNX_Nsingle_Euint32_nel10/Index_CPU_Scalar was filtered.
+    Test Diagnostic: The MeasuredTime should not be too close to the precision of the framework.
+================================================================================
+.. ......
+================================================================================
+IndexTest_CPU_Sca_LNX_Nsingle_Euint32_nel10/Index_CPU_Scalar_Symmetry was filtered.
+    Test Diagnostic: The MeasuredTime should not be too close to the precision of the framework.
+================================================================================
+
+Done IndexTest_CPU_Sca_LNX_Nsingle_Euint32_nel10
+__________
+
+Failure Summary:
+
+     Name                                                                   Failed  Incomplete  Reason(s)
+    ====================================================================================================================
+     IndexTest_CPU_Sca_LNX_Nsingle_Euint32_nel10/Index_CPU_Scalar                       X       Filtered by assumption.
+    --------------------------------------------------------------------------------------------------------------------
+     IndexTest_CPU_Sca_LNX_Nsingle_Euint32_nel10/Index_CPU_Scalar_Symmetry              X       Filtered by assumption.
+  1x2 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   0 Valid, 2 Invalid.
+   0.28689 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 10x10x10 (1000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Vector'
+Processor type: 'CPU'
+
+Running IndexTest_CPU_Vec_LNX_Nsingle_Euint32_nel10
+
+Mesh created successfully with 1000 Hex8 elements and 1331 nodes!
+.......... .......... .......... .......... ..........
+.......... .......... .......... .......... ..........
+.......... .......... .......... .......... ..........
+.......... ..
+Done IndexTest_CPU_Vec_LNX_Nsingle_Euint32_nel10
+__________
+
+  1x2 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   2 Valid, 0 Invalid.
+   2.4455 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 10x10x10 (1000)
+Date type for 'elements': 'uint64'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Processor type: 'CPU'
+
+Running IndexTest_CPU_Sca_LNX_Nsingle_Euint64_nel10
+
+Mesh created successfully with 1000 Hex8 elements and 1331 nodes!
+.......... .......... .......... .......... ..........
+.......... .......... .......... .......... ..........
+.......... .......... .......... .......... ..........
+.......... .......... ........
+Done IndexTest_CPU_Sca_LNX_Nsingle_Euint64_nel10
+__________
+
+  1x2 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   2 Valid, 0 Invalid.
+   3.6846 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 10x10x10 (1000)
+Date type for 'elements': 'uint64'
+Date type for 'nodes': 'single'
+Problem type: 'Vector'
+Processor type: 'CPU'
+
+Running IndexTest_CPU_Vec_LNX_Nsingle_Euint64_nel10
+
+Mesh created successfully with 1000 Hex8 elements and 1331 nodes!
+.......... .......... .......... .......... ..........
+.......... .......... .......... .......... ..........
+.......... .......... .......... ...
+Done IndexTest_CPU_Vec_LNX_Nsingle_Euint64_nel10
+__________
+
+  1x2 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   2 Valid, 0 Invalid.
+   7.0112 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 20x20x20 (8000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Processor type: 'CPU'
+
+Running IndexTest_CPU_Sca_LNX_Nsingle_Euint32_nel20
+
+Mesh created successfully with 8000 Hex8 elements and 9261 nodes!
+.......... .......... .......... .......... ..........
+.......... .......... .......... .......
+Done IndexTest_CPU_Sca_LNX_Nsingle_Euint32_nel20
+__________
+
+  1x2 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   2 Valid, 0 Invalid.
+   1.9061 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 20x20x20 (8000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Vector'
+Processor type: 'CPU'
+
+Running IndexTest_CPU_Vec_LNX_Nsingle_Euint32_nel20
+
+Mesh created successfully with 8000 Hex8 elements and 9261 nodes!
+.......... .........
+Done IndexTest_CPU_Vec_LNX_Nsingle_Euint32_nel20
+__________
+
+  1x2 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   2 Valid, 0 Invalid.
+   2.0416 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 20x20x20 (8000)
+Date type for 'elements': 'uint64'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Processor type: 'CPU'
+
+Running IndexTest_CPU_Sca_LNX_Nsingle_Euint64_nel20
+
+Mesh created successfully with 8000 Hex8 elements and 9261 nodes!
+.......... .......... .......... .......... ..........
+.......... ........
+Done IndexTest_CPU_Sca_LNX_Nsingle_Euint64_nel20
+__________
+
+  1x2 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   2 Valid, 0 Invalid.
+   5.1021 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 20x20x20 (8000)
+Date type for 'elements': 'uint64'
+Date type for 'nodes': 'single'
+Problem type: 'Vector'
+Processor type: 'CPU'
+
+Running IndexTest_CPU_Vec_LNX_Nsingle_Euint64_nel20
+
+Mesh created successfully with 8000 Hex8 elements and 9261 nodes!
+.......... .......... ......
+Done IndexTest_CPU_Vec_LNX_Nsingle_Euint64_nel20
+__________
+
+  1x2 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   2 Valid, 0 Invalid.
+   26.2909 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 40x40x40 (64000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Processor type: 'CPU'
+
+Running IndexTest_CPU_Sca_LNX_Nsingle_Euint32_nel40
+
+Mesh created successfully with 64000 Hex8 elements and 68921 nodes!
+.......... .......... ........
+Done IndexTest_CPU_Sca_LNX_Nsingle_Euint32_nel40
+__________
+
+  1x2 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   2 Valid, 0 Invalid.
+   3.9031 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 40x40x40 (64000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Vector'
+Processor type: 'CPU'
+
+Running IndexTest_CPU_Vec_LNX_Nsingle_Euint32_nel40
+
+Mesh created successfully with 64000 Hex8 elements and 68921 nodes!
+.......... ......
+Done IndexTest_CPU_Vec_LNX_Nsingle_Euint32_nel40
+__________
+
+  1x2 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   2 Valid, 0 Invalid.
+   15.2626 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 40x40x40 (64000)
+Date type for 'elements': 'uint64'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Processor type: 'CPU'
+
+Running IndexTest_CPU_Sca_LNX_Nsingle_Euint64_nel40
+
+Mesh created successfully with 64000 Hex8 elements and 68921 nodes!
+.......... ......
+Done IndexTest_CPU_Sca_LNX_Nsingle_Euint64_nel40
+__________
+
+  1x2 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   2 Valid, 0 Invalid.
+   25.1076 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 40x40x40 (64000)
+Date type for 'elements': 'uint64'
+Date type for 'nodes': 'single'
+Problem type: 'Vector'
+Processor type: 'CPU'
+
+Running IndexTest_CPU_Vec_LNX_Nsingle_Euint64_nel40
+
+Mesh created successfully with 64000 Hex8 elements and 68921 nodes!
+.......... ......
+Done IndexTest_CPU_Vec_LNX_Nsingle_Euint64_nel40
+__________
+
+  1x2 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   2 Valid, 0 Invalid.
+   191.3128 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 80x80x80 (512000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Processor type: 'CPU'
+
+Running IndexTest_CPU_Sca_LNX_Nsingle_Euint32_nel80
+
+Mesh created successfully with 512000 Hex8 elements and 531441 nodes!
+.......... ........
+Done IndexTest_CPU_Sca_LNX_Nsingle_Euint32_nel80
+__________
+
+  1x2 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   2 Valid, 0 Invalid.
+   20.7222 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 80x80x80 (512000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Vector'
+Processor type: 'CPU'
+
+Running IndexTest_CPU_Vec_LNX_Nsingle_Euint32_nel80
+
+Mesh created successfully with 512000 Hex8 elements and 531441 nodes!
+.......... ......
+Done IndexTest_CPU_Vec_LNX_Nsingle_Euint32_nel80
+__________
+
+  1x2 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   2 Valid, 0 Invalid.
+   118.1398 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 80x80x80 (512000)
+Date type for 'elements': 'uint64'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Processor type: 'CPU'
+
+Running IndexTest_CPU_Sca_LNX_Nsingle_Euint64_nel80
+
+Mesh created successfully with 512000 Hex8 elements and 531441 nodes!
+.......... .......
+Done IndexTest_CPU_Sca_LNX_Nsingle_Euint64_nel80
+__________
+
+  1x2 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   2 Valid, 0 Invalid.
+   191.6884 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 80x80x80 (512000)
+Date type for 'elements': 'uint64'
+Date type for 'nodes': 'single'
+Problem type: 'Vector'
+Processor type: 'CPU'
+
+Running IndexTest_CPU_Vec_LNX_Nsingle_Euint64_nel80
+
+Mesh created successfully with 512000 Hex8 elements and 531441 nodes!
+.......... ......
+Done IndexTest_CPU_Vec_LNX_Nsingle_Euint64_nel80
+__________
+
+  1x2 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   2 Valid, 0 Invalid.
+   1519.0315 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 160x160x160 (4096000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Processor type: 'CPU'
+
+Running IndexTest_CPU_Sca_LNX_Nsingle_Euint32_nel160
+
+Mesh created successfully with 4096000 Hex8 elements and 4173281 nodes!
+.......... ......
+Done IndexTest_CPU_Sca_LNX_Nsingle_Euint32_nel160
+__________
+
+  1x2 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   2 Valid, 0 Invalid.
+   146.6162 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 160x160x160 (4096000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Vector'
+Processor type: 'CPU'
+
+Running IndexTest_CPU_Vec_LNX_Nsingle_Euint32_nel160
+
+Mesh created successfully with 4096000 Hex8 elements and 4173281 nodes!
+.......... ......
+Done IndexTest_CPU_Vec_LNX_Nsingle_Euint32_nel160
+__________
+
+  1x2 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   2 Valid, 0 Invalid.
+   937.2263 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 160x160x160 (4096000)
+Date type for 'elements': 'uint64'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Processor type: 'CPU'
+
+Running IndexTest_CPU_Sca_LNX_Nsingle_Euint64_nel160
+
+Mesh created successfully with 4096000 Hex8 elements and 4173281 nodes!
+.......... ......
+Done IndexTest_CPU_Sca_LNX_Nsingle_Euint64_nel160
+__________
+
+  1x2 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   2 Valid, 0 Invalid.
+   1515.5173 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 160x160x160 (4096000)
+Date type for 'elements': 'uint64'
+Date type for 'nodes': 'single'
+Problem type: 'Vector'
+Processor type: 'CPU'
+
+Running IndexTest_CPU_Vec_LNX_Nsingle_Euint64_nel160
+
+Mesh created successfully with 4096000 Hex8 elements and 4173281 nodes!

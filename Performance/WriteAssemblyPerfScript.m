@@ -1,6 +1,13 @@
 function WriteAssemblyPerfScript(sets)
 % Writes a script to measure the performance of the code using "runperf"
 
+%   For more information, see the <a href="matlab:
+%   web('https://github.com/fjramireg/StiffMa')">StiffMa</a> web site.
+%
+%   Written by Francisco Javier Ramirez-Gil, fjramireg@gmail.com
+%   Universidad Nacional de Colombia - Medellin
+%   Created:  12/02/2020. Version: 1.4
+
 Filename = [sets.name,'.m'];
 fileID = fopen(Filename,'w');
 fprintf(fileID,'sets.nel = %d;\n',sets.nel);
@@ -22,6 +29,7 @@ if strcmp(sets.prob_type,'Scalar')
     fprintf(fileID,"c = %d;\n",1);
     fprintf(fileID,'[iKd, jKd] = Index_spsa(elementsGPU, sets);\n');
     fprintf(fileID,'Ked = eStiff_spsa(elementsGPU, nodesGPU, c, sets);\n');
+    fprintf(fileID,'clear elementsGPU nodesGPU;\n');
     fprintf(fileID,'iKs = gather(iKd);\n');
     fprintf(fileID,'jKs = gather(jKd);\n');
     fprintf(fileID,'Kes = gather(Ked);\n');
@@ -50,6 +58,7 @@ elseif strcmp(sets.prob_type,'Vector')
     fprintf(fileID,"MP.nu = %d;\n",0.3);
     fprintf(fileID,'[iKd, jKd] = Index_vpsa(elementsGPU, sets);\n');
     fprintf(fileID,'Ked = eStiff_vpsa(elementsGPU, nodesGPU, MP, sets);\n');
+    fprintf(fileID,'clear elementsGPU nodesGPU;\n');
     fprintf(fileID,'iKs = gather(iKd);\n');
     fprintf(fileID,'jKs = gather(jKd);\n');
     fprintf(fileID,'Kes = gather(Ked);\n');
