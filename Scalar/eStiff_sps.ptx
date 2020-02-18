@@ -731,11 +731,11 @@ BB0_5:
 	ret;
 }
 
-	// .globl	_Z10Hex8scalarIdmEvPKT0_PKT_PS3_
-.visible .entry _Z10Hex8scalarIdmEvPKT0_PKT_PS3_(
-	.param .u64 _Z10Hex8scalarIdmEvPKT0_PKT_PS3__param_0,
-	.param .u64 _Z10Hex8scalarIdmEvPKT0_PKT_PS3__param_1,
-	.param .u64 _Z10Hex8scalarIdmEvPKT0_PKT_PS3__param_2
+	// .globl	_Z10Hex8scalarIdyEvPKT0_PKT_PS3_
+.visible .entry _Z10Hex8scalarIdyEvPKT0_PKT_PS3_(
+	.param .u64 _Z10Hex8scalarIdyEvPKT0_PKT_PS3__param_0,
+	.param .u64 _Z10Hex8scalarIdyEvPKT0_PKT_PS3__param_1,
+	.param .u64 _Z10Hex8scalarIdyEvPKT0_PKT_PS3__param_2
 )
 {
 	.reg .pred 	%p<4>;
@@ -744,9 +744,9 @@ BB0_5:
 	.reg .b64 	%rd<60>;
 
 
-	ld.param.u64 	%rd7, [_Z10Hex8scalarIdmEvPKT0_PKT_PS3__param_0];
-	ld.param.u64 	%rd8, [_Z10Hex8scalarIdmEvPKT0_PKT_PS3__param_1];
-	ld.param.u64 	%rd9, [_Z10Hex8scalarIdmEvPKT0_PKT_PS3__param_2];
+	ld.param.u64 	%rd7, [_Z10Hex8scalarIdyEvPKT0_PKT_PS3__param_0];
+	ld.param.u64 	%rd8, [_Z10Hex8scalarIdyEvPKT0_PKT_PS3__param_1];
+	ld.param.u64 	%rd9, [_Z10Hex8scalarIdyEvPKT0_PKT_PS3__param_2];
 	mov.u32 	%r4, %ntid.x;
 	mov.u32 	%r5, %ctaid.x;
 	mov.u32 	%r6, %tid.x;

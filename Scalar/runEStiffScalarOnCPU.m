@@ -1,4 +1,4 @@
-% Runs the INDEX scalar code on the GPU
+% Runs the HEX8 scalar code on the CPU
 %
 %   For more information, see the <a href="matlab:
 %   web('https://github.com/fjramireg/StiffMa')">StiffMa</a> web site.
@@ -17,9 +17,9 @@ nelx = 10;          % Number of elements on X-direction
 nely = 10;          % Number of elements on Y-direction
 nelz = 10;          % Number of elements on Z-direction
 dTE = 'uint32';     % Data precision for "elements" ['uint32', 'uint64']
-dTN = 'single';     % Data precision for "nodes" ['single' or 'double']
-[elements, nodes] = CreateMesh2(nelx,nely,nelz,dTE,dTN);
-[nel, nxe] = size(elements);
+dTN = 'double';     % Data precision for "nodes" ['single' or 'double']
+[Mesh.elements, Mesh.nodes] = CreateMesh2(nelx,nely,nelz,dTE,dTN);
+[nel, nxe] = size(Mesh.elements);
 
 %% Material properties
 c = 1.0;            % Conductivity (homogeneous, linear, isotropic material)
@@ -33,15 +33,14 @@ sets.dxn = dxn;     % Number of DOFs per node
 sets.edof= dxn*nxe; % Number of DOFs per element
 sets.sz  = sets.edof * (sets.edof + 1) / 2; % Number of symmetry entries
 
-%% GPU Settings
-d = gpuDevice;
-sets.tbs      = d.MaxThreadsPerBlock;   % Max. Thread Block Size
-sets.numSMs   = d.MultiprocessorCount;  % Number of multiprocessors on the device
-sets.WarpSize = d.SIMDWidth;            % The warp size in threads
-
-%% Index computation on GPU (symmetry)
+%% Element stiffness matrix computation on CPU
 tic;
-elementsGPU = gpuArray(elements');          % Transfer transposed array to GPU memory
-[iKh, jKh] = Index_spsa(elementsGPU, sets);	% Row/column indices of tril(K)
+Ke_hf = eStiff_ssa(Mesh, c, sets); % Computation of Ke for K
 times = toc;
-fprintf('Elapsed time for computing row/column indices of tril(K) on parallel GPU: %f\n',times);
+fprintf('Elapsed time for computing Ke for K on serial CPU: %f\n',times);
+
+%% Element stiffness matrix computation on CPU (symmetry)
+tic;
+Ke_hs  = eStiff_sssa(Mesh, c, sets); % Computation of Ke for tril(K)
+times = toc;
+fprintf('Elapsed time for computing Ke for tril(K) on serial CPU: %f\n',times);

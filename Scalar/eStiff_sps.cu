@@ -13,16 +13,16 @@
 *	ke[36*nel]            // Lower-triangular part of ke
 *
 ** COMPILATION (Terminal)
-* 	 Opt1:	nvcc -ptx eStiff_spss.cu
-*    Opt2:  nvcc -ptx -v -arch=sm_50 --fmad=false -lineinfo -o eStiff_spss.ptx eStiff_spss.cu
+* 	 Opt1:	nvcc -ptx eStiff_sps.cu
+*    Opt2:  nvcc -ptx -v -arch=sm_50 --fmad=false -lineinfo -o eStiff_sps.ptx eStiff_sps.cu
 *
 ** COMPILATION Within MATLAB
 * 	setenv('MW_NVCC_PATH','/usr/local/cuda-10.2/bin')
 *   setenv('PATH',[getenv('PATH') ':/usr/local/cuda-10.2/bin'])
-*   system('nvcc -ptx eStiff_spss.cu')
+*   system('nvcc -ptx eStiff_sps.cu')
 *
 ** MATLAB KERNEL CREATION (inside MATLAB)
-*	kernel = parallel.gpu.CUDAKernel('eStiff_spss.ptx', 'eStiff_spss.cu');
+*	kernel = parallel.gpu.CUDAKernel('eStiff_sps.ptx', 'eStiff_sps.cu');
 *
 ** MATLAB KERNEL CONFIGURATION
 *   kernel.ThreadBlockSize = [512, 1, 1];
@@ -93,6 +93,13 @@ __global__ void Hex8scalar(const intT *elements, const floatT *nodes, floatT *ke
                         ke[temp+k+36*e] += c * detJ * B[l+3*j] * B[l+3*k]; }}
                 temp += k-j-1;  } } } }
 
-// NNZ of type 'double' and indices of type 'uint32', 'uint64'
-template __global__ void Hex8scalar<double,unsigned int>(const unsigned int*, const double*, double*);  // 'double' and 'uint32'
-template __global__ void Hex8scalar<double,unsigned long>(const unsigned long*,const double*,double*);  // 'double' and 'uint64'
+
+// NNZ of type 'double' and indices of type 'uint32'
+template __global__ void Hex8scalar<double,unsigned int>(const unsigned int*,
+                                                         const double*,
+                                                         double* );
+
+// NNZ of type 'double' and indices of type 'uint64'
+template __global__ void Hex8scalar<double,unsigned long long int>(const unsigned long long int*,
+                                                                   const double*,
+                                                                   double*);

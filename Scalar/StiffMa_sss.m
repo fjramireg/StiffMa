@@ -26,7 +26,7 @@ function K = StiffMa_sss(Mesh, c, sets)
 %   Created:  10/12/2018. Version: 1.0
 
 %% Index computation - Row/column indices of tril(K)
-[iK, jK] = Index_sss(Mesh.elements, sets);
+[iK, jK] = Index_sssa(Mesh.elements, sets);
 
 %% Element stiffness matrix computation - Entries of tril(K)
 Ke = eStiff_sssa(Mesh, c, sets);

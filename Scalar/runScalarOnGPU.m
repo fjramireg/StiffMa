@@ -22,7 +22,7 @@ dTE = 'uint64';     % Data precision for "elements" ['uint32', 'uint64' or 'doub
 dTN = 'double';     % Data precision for "nodes" ['single' or 'double']
 PlotE = 0;          % Plot the elements and their numbers (1 to plot)
 PlotN = 0;          % Plot the nodes and their numbers (1 to plot)
-[Mesh.elements, Mesh.nodes] = CreateMesh(nelx,nely,nelz,dTE,dTN);
+[Mesh.elements, Mesh.nodes] = CreateMesh2(nelx,nely,nelz,dTE,dTN);
 [nel, nxe] = size(Mesh.elements);
 
 %% Material properties

@@ -21,7 +21,7 @@ nely = 10;          % Number of elements on Y-direction
 nelz = 10;          % Number of elements on Z-direction
 dTE = 'uint32';     % Data precision for "elements" ['uint32', 'uint64']
 dTN = 'double';     % Data precision for "nodes" ['single' or 'double']
-[Mesh.elements, Mesh.nodes] = CreateMesh(nelx,nely,nelz,dTE,dTN);
+[Mesh.elements, Mesh.nodes] = CreateMesh2(nelx,nely,nelz,dTE,dTN);
 [nel, nxe] = size(Mesh.elements);
 
 %% Material properties

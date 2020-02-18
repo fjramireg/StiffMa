@@ -41,8 +41,8 @@ elseif ( strcmp(sets.dTE,'uint32') && strcmp(sets.dTN,'double') )	% Indices: 'ui
         'Hex8scalarIdj');
 elseif ( strcmp(sets.dTE,'uint64') && strcmp(sets.dTN,'double') )	% Indices: 'uint64'. NNZ: 'double'
     ker = parallel.gpu.CUDAKernel('eStiff_sps.ptx',...
-        'const unsigned long *, const double *, double *',...
-        'Hex8scalarIdm');
+        'const unsigned long long int*, const double *, double *',...
+        'Hex8scalarIdy');
 else
     error('Input "elements" must be defined as "uint32", "uint64" and Input "nodes" must be defined as "single" or "double" ');
 end

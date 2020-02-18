@@ -40,7 +40,7 @@ elseif ~isscalar(c)                                	% Check input "c"
 end
 
 %% Index computation
-[iK, jK] = Index_sps(elements, sets);                   % Row/column indices of tril(K)
+[iK, jK] = Index_spsa(elements, sets);                   % Row/column indices of tril(K)
 
 %% Element matrix computation
 Ke = eStiff_spsa(elements, nodes, c, sets);             % Entries of tril(K)

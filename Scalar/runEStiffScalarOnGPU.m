@@ -1,4 +1,4 @@
-% Runs the INDEX scalar code on the GPU
+% Runs the HEX8 scalar code on the GPU
 %
 %   For more information, see the <a href="matlab:
 %   web('https://github.com/fjramireg/StiffMa')">StiffMa</a> web site.
@@ -16,8 +16,8 @@ dxn = 1;            % For vector 3 (UX, UY, UZ). For scalar 1 (Temp)
 nelx = 10;          % Number of elements on X-direction
 nely = 10;          % Number of elements on Y-direction
 nelz = 10;          % Number of elements on Z-direction
-dTE = 'uint32';     % Data precision for "elements" ['uint32', 'uint64']
-dTN = 'single';     % Data precision for "nodes" ['single' or 'double']
+dTE = 'uint64';     % Data precision for "elements" ['uint32', 'uint64']
+dTN = 'double';     % Data precision for "nodes" ['single' or 'double']
 [elements, nodes] = CreateMesh2(nelx,nely,nelz,dTE,dTN);
 [nel, nxe] = size(elements);
 
@@ -39,9 +39,11 @@ sets.tbs      = d.MaxThreadsPerBlock;   % Max. Thread Block Size
 sets.numSMs   = d.MultiprocessorCount;  % Number of multiprocessors on the device
 sets.WarpSize = d.SIMDWidth;            % The warp size in threads
 
-%% Index computation on GPU (symmetry)
+%% Element stiffness matrix computation on GPU (symmetry)
 tic;
-elementsGPU = gpuArray(elements');          % Transfer transposed array to GPU memory
-[iKh, jKh] = Index_spsa(elementsGPU, sets);	% Row/column indices of tril(K)
+elementsGPU = gpuArray(elements');      % Transfer transposed array to GPU memory
+nodesGPU = gpuArray(nodes');            % Transfer transposed array to GPU memory
+Ke  = eStiff_spsa(elementsGPU, nodesGPU, c, sets); % Computation of Ke for tril(K)
+wait(d);
 times = toc;
 fprintf('Elapsed time for computing row/column indices of tril(K) on parallel GPU: %f\n',times);

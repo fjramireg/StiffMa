@@ -22,7 +22,7 @@ dTE = 'uint64';     % Data precision for "elements" ['uint32', 'uint64' or 'doub
 dTN = 'double';     % Data precision for "nodes" ['single' or 'double']
 PlotE = 0;          % Plot the elements and their numbers (1 to plot)
 PlotN = 0;          % Plot the nodes and their numbers (1 to plot)
-[Mesh.elements, Mesh.nodes] = CreateMesh(nelx,nely,nelz,dTE,dTN);
+[Mesh.elements, Mesh.nodes] = CreateMesh2(nelx,nely,nelz,dTE,dTN);
 [nel, nxe] = size(Mesh.elements);
 
 %% Material properties
@@ -38,6 +38,12 @@ sets.dxn = dxn;     % Number of DOFs per node
 sets.edof= dxn*nxe; % Number of DOFs per element
 sets.sz  = sets.edof * (sets.edof + 1) / 2; % Number of symmetry entries
 
+%% GPU Settings
+d = gpuDevice;
+sets.tbs      = d.MaxThreadsPerBlock;   % Max. Thread Block Size
+sets.numSMs   = d.MultiprocessorCount;  % Number of multiprocessors on the device
+sets.WarpSize = d.SIMDWidth;            % The warp size in threads
+
 %% Creation of global stiffness matrix on CPU (serial)
 tic;
 K_f = StiffMa_ss(Mesh, c, sets);	% Assembly on CPU: K
@@ -50,12 +56,6 @@ K_s = StiffMa_sss(Mesh, c, sets);  % Assembly on CPU (tril(K))
 times = toc;
 fprintf('Elapsed time for building tril(K) on serial CPU: %f\n',times);
 fprintf('\tCPU speedup (CPU vs CPU, K vs tril(K)): %f\n',time/times);
-
-%% GPU Settings
-d = gpuDevice;
-sets.tbs      = d.MaxThreadsPerBlock;   % Max. Thread Block Size
-sets.numSMs   = d.MultiprocessorCount;  % Number of multiprocessors on the device
-sets.WarpSize = d.SIMDWidth;            % The warp size in threads
 
 %% Creation of global stiffness matrix on GPU
 tic;

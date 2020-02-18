@@ -41,22 +41,30 @@
 *** Please cite this code if you find it useful (See: https://github.com/fjramireg/StiffMa)
 *
 ** Date & version
-* 	Last modified: 31/01/2020. Version 1.4 (added grid stride)
-* 	Modified: 21/01/2019, Version 1.3
+* 	Last modified: 08/02/2020. Version 1.4 (Error fix to use 'uint64')
+*   Modified: 31/01/2020. Version 1.3 (added grid stride)
+* 	Modified: 21/01/2019, Version 1.2
 * 	Created: 30/11/2018. V 1.0
 *
 * ======================================================================*/
 
-template <typename intT>            // Data type template
-__global__ void IndexScalarGPU(const intT *elements, const intT nel, intT *iK, intT *jK) 
-    {// CUDA kernel to compute row/column indices of tril(K) (SCALAR)
 
-    intT e, idx, i, j, temp, n[8];	// General indices of type intT
+template <typename intT>           	// Data type template
+// CUDA kernel to compute row/column indices of tril(K) (SCALAR)
+__global__ void IndexScalarGPU(const intT *elements,
+                               const intT nel,
+                               intT *iK,
+                               intT *jK) {
+
+    intT e, idx, i, j, temp, n[8];                      // General indices of type intT
+    intT tid = blockDim.x * blockIdx.x + threadIdx.x;   // Thread ID
+    intT stride = gridDim.x * blockDim.x;               // Grid stride
 
     // Parallel computation loop
-    for (e = blockDim.x * blockIdx.x + threadIdx.x; e < nel; e += gridDim.x * blockDim.x){
+    for (e = tid; e < nel; e += stride ){
 
-        for (i=0; i<8; i++) {n[i] = elements[i+8*e];} // Extracts nodes (DOFs) of element 'e'
+        // Extracts nodes (DOFs) of element 'e'
+        for (i=0; i<8; i++) {n[i] = elements[i+8*e];}
 
         // Computes row/column indices taking advantage of symmetry
         temp = 0;
@@ -68,10 +76,22 @@ __global__ void IndexScalarGPU(const intT *elements, const intT nel, intT *iK, i
                     jK[idx] = n[j];}
                 else{
                     iK[idx] = n[j];
-                    jK[idx] = n[i];}}
-            temp += i-j-1;   }}}
+                    jK[idx] = n[i];
+                } // End of IF
+            } // End of FOR LOOP i
+            temp += i-j-1;
+        } // End of FOR LOOP j
+    } // End of FOR LOOP e
+} // End of KERNEL
 
+// Indices of data type 'uint32'
 template __global__ void IndexScalarGPU<unsigned int>(const unsigned int *,
-        const unsigned int, unsigned int *, unsigned int *);	// Indices of data type 'uint32'
-template __global__ void IndexScalarGPU<unsigned long>(const unsigned long *,
-        const unsigned long, unsigned long *, unsigned long *); // Indices of data type 'uint64'
+                                                      const unsigned int,
+                                                      unsigned int *,
+                                                      unsigned int *);
+
+// Indices of data type 'uint64'
+template __global__ void IndexScalarGPU<unsigned long long int>(const unsigned long long int *,
+                                                                const unsigned long long int,
+                                                                unsigned long long int *,
+                                                                unsigned long long int *);
