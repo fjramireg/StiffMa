@@ -627,11 +627,11 @@ BB0_12:
 	ret;
 }
 
-	// .globl	_Z10Hex8vectorIdmEvPKT0_PKT_PS3_
-.visible .entry _Z10Hex8vectorIdmEvPKT0_PKT_PS3_(
-	.param .u64 _Z10Hex8vectorIdmEvPKT0_PKT_PS3__param_0,
-	.param .u64 _Z10Hex8vectorIdmEvPKT0_PKT_PS3__param_1,
-	.param .u64 _Z10Hex8vectorIdmEvPKT0_PKT_PS3__param_2
+	// .globl	_Z10Hex8vectorIdyEvPKT0_PKT_PS3_
+.visible .entry _Z10Hex8vectorIdyEvPKT0_PKT_PS3_(
+	.param .u64 _Z10Hex8vectorIdyEvPKT0_PKT_PS3__param_0,
+	.param .u64 _Z10Hex8vectorIdyEvPKT0_PKT_PS3__param_1,
+	.param .u64 _Z10Hex8vectorIdyEvPKT0_PKT_PS3__param_2
 )
 {
 	.local .align 16 .b8 	__local_depot1[1152];
@@ -644,9 +644,9 @@ BB0_12:
 
 
 	mov.u64 	%SPL, __local_depot1;
-	ld.param.u64 	%rd14, [_Z10Hex8vectorIdmEvPKT0_PKT_PS3__param_0];
-	ld.param.u64 	%rd15, [_Z10Hex8vectorIdmEvPKT0_PKT_PS3__param_1];
-	ld.param.u64 	%rd16, [_Z10Hex8vectorIdmEvPKT0_PKT_PS3__param_2];
+	ld.param.u64 	%rd14, [_Z10Hex8vectorIdyEvPKT0_PKT_PS3__param_0];
+	ld.param.u64 	%rd15, [_Z10Hex8vectorIdyEvPKT0_PKT_PS3__param_1];
+	ld.param.u64 	%rd16, [_Z10Hex8vectorIdyEvPKT0_PKT_PS3__param_2];
 	add.u64 	%rd1, %SPL, 0;
 	mov.u32 	%r4, %ctaid.x;
 	mov.u32 	%r5, %ntid.x;

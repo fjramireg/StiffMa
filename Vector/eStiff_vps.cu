@@ -130,6 +130,8 @@ __global__ void Hex8vector(const intT *elements, const floatT *nodes, floatT *ke
     }
 }
 
-// NNZ of type 'double' and INDICES of type 'uint32', 'uint64'
+// NNZ of type 'double' and INDICES of type 'uint32'
 template __global__ void Hex8vector<double,unsigned int>(const unsigned int*, const double*, double*);
-template __global__ void Hex8vector<double,unsigned long>(const unsigned long*,const double*,double*);
+
+// NNZ of type 'double' and INDICES of type 'uint32'
+template __global__ void Hex8vector<double,unsigned long long int>(const unsigned long long int*,const double*,double*);

@@ -1,11 +1,11 @@
-% Runs the INDEX vector code. CPU vs GPU
+% Script to run the HEX8 (ke) code. CPU vs GPU
 %
 %   For more information, see the <a href="matlab:
 %   web('https://github.com/fjramireg/StiffMa')">StiffMa</a> web site.
 %
 %   Written by Francisco Javier Ramirez-Gil, fjramireg@gmail.com
 %   Universidad Nacional de Colombia - Medellin
-%   Created:  28/01/2020. Version: 1.4
+%   Created:  30/01/2020. Version: 1.4
 
 %% Add some common paths
 addpath('../Common');
@@ -17,9 +17,9 @@ nelx = 10;          % Number of elements on X-direction
 nely = 10;          % Number of elements on Y-direction
 nelz = 10;          % Number of elements on Z-direction
 dTE = 'uint32';     % Data precision for "elements" ['uint32', 'uint64']
-dTN = 'single';     % Data precision for "nodes" ['single' or 'double']
-[elements, ~] = CreateMesh(nelx,nely,nelz,dTE,dTN);
-[nel, nxe] = size(elements);
+dTN = 'double';     % Data precision for "nodes" ['single' or 'double']
+[Mesh.elements, Mesh.nodes] = CreateMesh(nelx,nely,nelz,dTE,dTN);
+[nel, nxe] = size(Mesh.elements);
 
 %% Material properties
 MP.E = 200e9;      	% Elastic modulus (homogeneous, linear, isotropic material)
@@ -40,29 +40,30 @@ sets.tbs      = d.MaxThreadsPerBlock;   % Max. Thread Block Size
 sets.numSMs   = d.MultiprocessorCount;  % Number of multiprocessors on the device
 sets.WarpSize = d.SIMDWidth;            % The warp size in threads
 
-%% Index computation on CPU
+%% Element stiffness matrix computation on CPU
 tic;
-[iKhf, jKhf] = Index_vsa(elements, sets);	% Row/column indices of tril(K)
+Ke_hf = eStiff_vsa(Mesh, MP, sets);        % Computation of Ke for K
 times = toc;
-fprintf('Elapsed time for computing row/column indices of K on serial CPU: %f\n',times);
+fprintf('Elapsed time for computing Ke for K on serial CPU: %f\n',times);
 
-%% Index computation on CPU (symmetry)
+%% Element stiffness matrix computation on CPU (symmetry)
 tic;
-[iKh, jKh]  = Index_vssa(elements, sets); % Computation of row/column indices of tril(K)
+Ke_h  = eStiff_vssa(Mesh, MP, sets); % Computation of Ke for tril(K)
 time_h = toc;
-fprintf('Elapsed time for computing row/column indices of tril(K) on serial CPU: %f\n',time_h);
-fprintf('\tCPU speedup (Full vs Symmetry): %f\n',times/time_h);
+fprintf('Elapsed time for computing Ke for tril(K) on serial CPU: %f\n',time_h);
+fprintf('\tCPU speedup: K vs tril(K) %f\n',times/time_h);
 
-%% Index computation on GPU (symmetry)
+%% Element stiffness matrix computation on GPU (symmetry)
 tic;
-elementsGPU = gpuArray(elements');     % Transfer transposed array to GPU memory
-[iKd, jKd]  = Index_vpsa(elementsGPU, sets); % Computation of row/column indices of tril(K)
+elementsGPU = gpuArray(Mesh.elements');      % Transfer transposed array to GPU memory
+nodesGPU = gpuArray(Mesh.nodes');            % Transfer transposed array to GPU memory
+Ke_d  = eStiff_vpsa(elementsGPU, nodesGPU, MP, sets); % Computation of Ke for tril(K)
 wait(d);
 time_d = toc;
 fprintf('Elapsed time for computing row/column indices of tril(K) on parallel GPU: %f\n',time_d);
-fprintf('\tGPU speedup: %f\n',time_h/time_d);
+fprintf('\tGPU speedup: K vs tril(K) %f\n',times/time_d);
+fprintf('\tGPU speedup: tril(K) vs tril(K) %f\n',time_h/time_d);
 
 %% Difference between results
 fprintf('Difference between results:\n');
-fprintf('\tCPU vs GPU (iKh vs iKd): %e\n',norm(double(iKh(:))-double(iKd(:))));
-fprintf('\tCPU vs GPU (jKh vs jKd): %e\n',norm(double(jKh(:))-double(jKd(:))));
+fprintf('\tCPU vs GPU (Ked vs iKd): %e\n',norm(Ke_h(:)-Ke_d(:)));

@@ -43,7 +43,7 @@ sets.WarpSize = d.SIMDWidth;            % The warp size in threads
 %% Index computation on GPU (symmetry)
 tic;
 elementsGPU = gpuArray(elements');     % Transfer transposed array to GPU memory
-[iKd, jKd]  = Index_vps(elementsGPU, sets); % Computation of row/column indices of tril(K)
+[iKd, jKd]  = Index_vpsa(elementsGPU, sets); % Computation of row/column indices of tril(K)
 wait(d);
 times = toc;
 fprintf('Elapsed time for computing row/column indices of tril(K) on parallel GPU: %f\n',times);

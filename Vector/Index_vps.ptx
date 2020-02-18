@@ -248,12 +248,12 @@ BB0_15:
 	ret;
 }
 
-	// .globl	_Z14IndexVectorGPUImEvPKT_S0_PS0_S3_
-.visible .entry _Z14IndexVectorGPUImEvPKT_S0_PS0_S3_(
-	.param .u64 _Z14IndexVectorGPUImEvPKT_S0_PS0_S3__param_0,
-	.param .u64 _Z14IndexVectorGPUImEvPKT_S0_PS0_S3__param_1,
-	.param .u64 _Z14IndexVectorGPUImEvPKT_S0_PS0_S3__param_2,
-	.param .u64 _Z14IndexVectorGPUImEvPKT_S0_PS0_S3__param_3
+	// .globl	_Z14IndexVectorGPUIyEvPKT_S0_PS0_S3_
+.visible .entry _Z14IndexVectorGPUIyEvPKT_S0_PS0_S3_(
+	.param .u64 _Z14IndexVectorGPUIyEvPKT_S0_PS0_S3__param_0,
+	.param .u64 _Z14IndexVectorGPUIyEvPKT_S0_PS0_S3__param_1,
+	.param .u64 _Z14IndexVectorGPUIyEvPKT_S0_PS0_S3__param_2,
+	.param .u64 _Z14IndexVectorGPUIyEvPKT_S0_PS0_S3__param_3
 )
 {
 	.local .align 16 .b8 	__local_depot1[192];
@@ -265,10 +265,10 @@ BB0_15:
 
 
 	mov.u64 	%SPL, __local_depot1;
-	ld.param.u64 	%rd34, [_Z14IndexVectorGPUImEvPKT_S0_PS0_S3__param_0];
-	ld.param.u64 	%rd35, [_Z14IndexVectorGPUImEvPKT_S0_PS0_S3__param_1];
-	ld.param.u64 	%rd36, [_Z14IndexVectorGPUImEvPKT_S0_PS0_S3__param_2];
-	ld.param.u64 	%rd37, [_Z14IndexVectorGPUImEvPKT_S0_PS0_S3__param_3];
+	ld.param.u64 	%rd34, [_Z14IndexVectorGPUIyEvPKT_S0_PS0_S3__param_0];
+	ld.param.u64 	%rd35, [_Z14IndexVectorGPUIyEvPKT_S0_PS0_S3__param_1];
+	ld.param.u64 	%rd36, [_Z14IndexVectorGPUIyEvPKT_S0_PS0_S3__param_2];
+	ld.param.u64 	%rd37, [_Z14IndexVectorGPUIyEvPKT_S0_PS0_S3__param_3];
 	mov.u32 	%r5, %ctaid.x;
 	mov.u32 	%r1, %ntid.x;
 	mov.u32 	%r6, %tid.x;
@@ -456,7 +456,7 @@ BB1_13:
 	@%p8 bra 	BB1_3;
 
 	cvt.u64.u32	%rd135, %r2;
-	add.s64 	%rd136, %rd135, %rd136;
+	add.s64 	%rd136, %rd136, %rd135;
 	setp.lt.u64	%p9, %rd136, %rd35;
 	@%p9 bra 	BB1_2;
 

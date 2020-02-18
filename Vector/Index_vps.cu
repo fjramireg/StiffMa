@@ -41,20 +41,26 @@
 ** Please cite this code if you find it useful (See: https://github.com/fjramireg/StiffMa)
 *
 ** Date & version
-* 	Last modified: 28/01/2020. Version 1.4 (added grid stride)
-* 	Modified: 21/01/2019, Version 1.3
+* 	Last modified: 08/02/2020. Version 1.4 (Error fix to use 'uint64')
+*   Modified: 28/01/2020. Version 1.3 (added grid stride)
+* 	Modified: 21/01/2019. Version 1.2
 * 	Created: 17/01/2019. V 1.0
 *
 * ======================================================================*/
 
 template <typename intT>           	// Data type template
-__global__ void IndexVectorGPU(const intT *elements, const intT nel, intT *iK, intT *jK ) {
-    // CUDA kernel to compute row/column indices of tril(K) (VECTOR)
+// CUDA kernel to compute row/column indices of tril(K) (VECTOR)
+__global__ void IndexVectorGPU(const intT *elements,
+                               const intT nel,
+                               intT *iK,
+                               intT *jK ) {
 
     intT e, idx, ni, i, j, temp, dof[24];	// General indices of type intT
+    intT tid = blockDim.x * blockIdx.x + threadIdx.x;   // Thread ID
+    intT stride = gridDim.x * blockDim.x;               // Grid stride
 
     // Parallel computation loop
-    for (e = threadIdx.x + blockDim.x * blockIdx.x; e < nel; e += gridDim.x * blockDim.x){
+    for (e = tid; e < nel; e += stride){
 
         // Extract the global DOFs associated with element 'e'
         for (i=0; i<8; i++) {
@@ -73,8 +79,21 @@ __global__ void IndexVectorGPU(const intT *elements, const intT nel, intT *iK, i
                 }
                 else {
                     iK[idx] = dof[j];
-                    jK[idx] = dof[i]; } }
-            temp += i-j-1; } } }
+                    jK[idx] = dof[i];
+                } // End of IF
+            } // End of FOR LOOP i
+            temp += i-j-1;
+        } // End of FOR LOOP j
+    } // End of FOR LOOP e
+} // End of KERNEL
 
-template __global__ void IndexVectorGPU<unsigned int>(const unsigned int *, const unsigned int, unsigned int *, unsigned int *);        // Indices of data type 'uint32'
-template __global__ void IndexVectorGPU<unsigned long>(const unsigned long *, const unsigned long, unsigned long *, unsigned long *);   // Indices of data type 'uint64'
+// Indices of data type "uint32"
+template __global__ void IndexVectorGPU<unsigned int>(const unsigned int *,
+                                                      const unsigned int,
+                                                      unsigned int *,
+                                                      unsigned int *);
+// Indices of data type "uint64"
+template __global__ void IndexVectorGPU<unsigned long long int>(const unsigned long long int *,
+                                                                const unsigned long long int,
+                                                                unsigned long long int *,
+                                                                unsigned long long int *);
