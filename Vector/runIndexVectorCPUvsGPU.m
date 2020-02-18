@@ -13,7 +13,7 @@ addpath('../Utils');
 
 %% Mesh generation
 dxn = 3;            % For vector 3 (UX, UY, UZ). For scalar 1 (Temp)
-nelx = 10;          % Number of elements on X-direction
+nelx = 1000;          % Number of elements on X-direction
 nely = 10;          % Number of elements on Y-direction
 nelz = 10;          % Number of elements on Z-direction
 dTE = 'uint32';     % Data precision for "elements" ['uint32', 'uint64']
@@ -45,6 +45,16 @@ tic;
 [iKhf, jKhf] = Index_vsa(elements, sets);	% Row/column indices of tril(K)
 times = toc;
 fprintf('Elapsed time for computing row/column indices of K on serial CPU: %f\n',times);
+
+%% Index computation on CPU (vectorized)
+tic;
+[iKhfv, jKhfv] = Index_va(elements', sets);	% Row/column indices of K
+time1 = toc;
+fprintf('Elapsed time for computing row/column indices of K on CPU (vectorized): %f\n',time1);
+fprintf('\tSpeedup (loop vs vectorized): %f\n',times/time1);
+fprintf('Difference between results:\n');
+fprintf('\tShould be %d!: %d\n', sets.edof^2*sets.nel, sum(iKhf==iKhfv));
+fprintf('\tShould be %d!: %d\n\n', sets.edof^2*sets.nel, sum(jKhf==jKhfv));
 
 %% Index computation on CPU (symmetry)
 tic;
