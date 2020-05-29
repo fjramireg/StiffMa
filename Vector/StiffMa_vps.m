@@ -40,10 +40,10 @@ elseif ~( isscalar(MP.E) && isscalar(MP.nu) )                       % Check inpu
 end
 
 %% Index computation
-[iK, jK] = Index_vps(elements, sets);                   % Row/column indices of tril(K)
+[iK, jK] = Index_vpsa(elements, sets);                   % Row/column indices of tril(K)
 
 %% Element matrix computation
-Ke = eStiffa_vps(elements, nodes, MP, sets);            % Entries of tril(K)
+Ke = eStiff_vpsa(elements, nodes, MP, sets);            % Entries of tril(K)
 
 %% Assembly of global sparse matrix on GPU
 K = AssemblyStiffMa(iK, jK, Ke, sets.dTE, sets.dTN);	% Global stiffness matrix K assembly

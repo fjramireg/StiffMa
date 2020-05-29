@@ -1,0 +1,459 @@
+[Warning: Directory already exists.] 
+[> In runIndexTest (line 28)] 
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 200x200x200 (8000000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running ITestLNX_GSs32_200
+
+Mesh created successfully with 8000000 Hex8 elements and 8120601 nodes!
+........
+Done ITestLNX_GSs32_200
+__________
+
+  TimeResult with properties:
+
+            Name: 'ITestLNX_GSs32_200/Index_GPU_Scalar_Symmetry'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   3.156 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 200x200x200 (8000000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running ITestLNX_GVs32_200
+
+Mesh created successfully with 8000000 Hex8 elements and 8120601 nodes!
+
+================================================================================
+Error occurred in ITestLNX_GVs32_200/Index_GPU_Vector_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in Index_vpsa (line 53)
+    iK  = zeros(sets.sz*sets.nel, 1, sets.dTE, 'gpuArray');     % Stores row
+    indices (initialized directly on GPU)
+    
+    Error in ITestLNX_GVs32_200 (line 15)
+    [iKd, jKd] = Index_vpsa(elementsGPU, sets);
+================================================================================
+.
+================================================================================
+Error occurred in ITestLNX_GVs32_200/Index_GPU_Vector_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in Index_vpsa (line 53)
+    iK  = zeros(sets.sz*sets.nel, 1, sets.dTE, 'gpuArray');     % Stores row
+    indices (initialized directly on GPU)
+    
+    Error in ITestLNX_GVs32_200 (line 15)
+    [iKd, jKd] = Index_vpsa(elementsGPU, sets);
+================================================================================
+.
+================================================================================
+Error occurred in ITestLNX_GVs32_200/Index_GPU_Vector_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in Index_vpsa (line 53)
+    iK  = zeros(sets.sz*sets.nel, 1, sets.dTE, 'gpuArray');     % Stores row
+    indices (initialized directly on GPU)
+    
+    Error in ITestLNX_GVs32_200 (line 15)
+    [iKd, jKd] = Index_vpsa(elementsGPU, sets);
+================================================================================
+.
+================================================================================
+Error occurred in ITestLNX_GVs32_200/Index_GPU_Vector_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in Index_vpsa (line 53)
+    iK  = zeros(sets.sz*sets.nel, 1, sets.dTE, 'gpuArray');     % Stores row
+    indices (initialized directly on GPU)
+    
+    Error in ITestLNX_GVs32_200 (line 15)
+    [iKd, jKd] = Index_vpsa(elementsGPU, sets);
+================================================================================
+.
+================================================================================
+Error occurred in ITestLNX_GVs32_200/Index_GPU_Vector_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in Index_vpsa (line 53)
+    iK  = zeros(sets.sz*sets.nel, 1, sets.dTE, 'gpuArray');     % Stores row
+    indices (initialized directly on GPU)
+    
+    Error in ITestLNX_GVs32_200 (line 15)
+    [iKd, jKd] = Index_vpsa(elementsGPU, sets);
+================================================================================
+.
+================================================================================
+Error occurred in ITestLNX_GVs32_200/Index_GPU_Vector_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in Index_vpsa (line 53)
+    iK  = zeros(sets.sz*sets.nel, 1, sets.dTE, 'gpuArray');     % Stores row
+    indices (initialized directly on GPU)
+    
+    Error in ITestLNX_GVs32_200 (line 15)
+    [iKd, jKd] = Index_vpsa(elementsGPU, sets);
+================================================================================
+.
+================================================================================
+Error occurred in ITestLNX_GVs32_200/Index_GPU_Vector_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in Index_vpsa (line 53)
+    iK  = zeros(sets.sz*sets.nel, 1, sets.dTE, 'gpuArray');     % Stores row
+    indices (initialized directly on GPU)
+    
+    Error in ITestLNX_GVs32_200 (line 15)
+    [iKd, jKd] = Index_vpsa(elementsGPU, sets);
+================================================================================
+.
+================================================================================
+Error occurred in ITestLNX_GVs32_200/Index_GPU_Vector_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in Index_vpsa (line 53)
+    iK  = zeros(sets.sz*sets.nel, 1, sets.dTE, 'gpuArray');     % Stores row
+    indices (initialized directly on GPU)
+    
+    Error in ITestLNX_GVs32_200 (line 15)
+    [iKd, jKd] = Index_vpsa(elementsGPU, sets);
+================================================================================
+.
+Done ITestLNX_GVs32_200
+__________
+
+Failure Summary:
+
+     Name                                          Failed  Incomplete  Reason(s)
+    =============================================================================
+     ITestLNX_GVs32_200/Index_GPU_Vector_Symmetry    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'ITestLNX_GVs32_200/Index_GPU_Vector_Symmetry'
+           Valid: 0
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   1.5666 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 200x200x200 (8000000)
+Date type for 'elements': 'uint64'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running ITestLNX_GSs64_200
+
+Mesh created successfully with 8000000 Hex8 elements and 8120601 nodes!
+........
+Done ITestLNX_GSs64_200
+__________
+
+  TimeResult with properties:
+
+            Name: 'ITestLNX_GSs64_200/Index_GPU_Scalar_Symmetry'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   4.4999 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 200x200x200 (8000000)
+Date type for 'elements': 'uint64'
+Date type for 'nodes': 'single'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running ITestLNX_GVs64_200
+
+Mesh created successfully with 8000000 Hex8 elements and 8120601 nodes!
+
+================================================================================
+Error occurred in ITestLNX_GVs64_200/Index_GPU_Vector_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in Index_vpsa (line 53)
+    iK  = zeros(sets.sz*sets.nel, 1, sets.dTE, 'gpuArray');     % Stores row
+    indices (initialized directly on GPU)
+    
+    Error in ITestLNX_GVs64_200 (line 15)
+    [iKd, jKd] = Index_vpsa(elementsGPU, sets);
+================================================================================
+.
+================================================================================
+Error occurred in ITestLNX_GVs64_200/Index_GPU_Vector_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in Index_vpsa (line 53)
+    iK  = zeros(sets.sz*sets.nel, 1, sets.dTE, 'gpuArray');     % Stores row
+    indices (initialized directly on GPU)
+    
+    Error in ITestLNX_GVs64_200 (line 15)
+    [iKd, jKd] = Index_vpsa(elementsGPU, sets);
+================================================================================
+.
+================================================================================
+Error occurred in ITestLNX_GVs64_200/Index_GPU_Vector_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in Index_vpsa (line 53)
+    iK  = zeros(sets.sz*sets.nel, 1, sets.dTE, 'gpuArray');     % Stores row
+    indices (initialized directly on GPU)
+    
+    Error in ITestLNX_GVs64_200 (line 15)
+    [iKd, jKd] = Index_vpsa(elementsGPU, sets);
+================================================================================
+.
+================================================================================
+Error occurred in ITestLNX_GVs64_200/Index_GPU_Vector_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in Index_vpsa (line 53)
+    iK  = zeros(sets.sz*sets.nel, 1, sets.dTE, 'gpuArray');     % Stores row
+    indices (initialized directly on GPU)
+    
+    Error in ITestLNX_GVs64_200 (line 15)
+    [iKd, jKd] = Index_vpsa(elementsGPU, sets);
+================================================================================
+.
+================================================================================
+Error occurred in ITestLNX_GVs64_200/Index_GPU_Vector_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in Index_vpsa (line 53)
+    iK  = zeros(sets.sz*sets.nel, 1, sets.dTE, 'gpuArray');     % Stores row
+    indices (initialized directly on GPU)
+    
+    Error in ITestLNX_GVs64_200 (line 15)
+    [iKd, jKd] = Index_vpsa(elementsGPU, sets);
+================================================================================
+.
+================================================================================
+Error occurred in ITestLNX_GVs64_200/Index_GPU_Vector_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in Index_vpsa (line 53)
+    iK  = zeros(sets.sz*sets.nel, 1, sets.dTE, 'gpuArray');     % Stores row
+    indices (initialized directly on GPU)
+    
+    Error in ITestLNX_GVs64_200 (line 15)
+    [iKd, jKd] = Index_vpsa(elementsGPU, sets);
+================================================================================
+.
+================================================================================
+Error occurred in ITestLNX_GVs64_200/Index_GPU_Vector_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in Index_vpsa (line 53)
+    iK  = zeros(sets.sz*sets.nel, 1, sets.dTE, 'gpuArray');     % Stores row
+    indices (initialized directly on GPU)
+    
+    Error in ITestLNX_GVs64_200 (line 15)
+    [iKd, jKd] = Index_vpsa(elementsGPU, sets);
+================================================================================
+.
+================================================================================
+Error occurred in ITestLNX_GVs64_200/Index_GPU_Vector_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in Index_vpsa (line 53)
+    iK  = zeros(sets.sz*sets.nel, 1, sets.dTE, 'gpuArray');     % Stores row
+    indices (initialized directly on GPU)
+    
+    Error in ITestLNX_GVs64_200 (line 15)
+    [iKd, jKd] = Index_vpsa(elementsGPU, sets);
+================================================================================
+.
+Done ITestLNX_GVs64_200
+__________
+
+Failure Summary:
+
+     Name                                          Failed  Incomplete  Reason(s)
+    =============================================================================
+     ITestLNX_GVs64_200/Index_GPU_Vector_Symmetry    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'ITestLNX_GVs64_200/Index_GPU_Vector_Symmetry'
+           Valid: 0
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   2.3191 seconds testing time.
+
+
+
+A total of 4 time experiments was executed!
+Date and time at the beginning of the process: 	18-Feb-2020 15:39:22 
+Date and time at the end of the process: 	18-Feb-2020 15:39:48
+
+
+ans =
+
+  4x7 table
+
+                        Name                        SampleSize     Mean      StandardDeviation      Min      Median       Max  
+    ____________________________________________    __________    _______    _________________    _______    _______    _______
+
+    ITestLNX_GSs32_200/Index_GPU_Scalar_Symmetry        4          0.1923        0.0075008        0.18788    0.18894    0.20346
+    ITestLNX_GVs32_200/Index_GPU_Vector_Symmetry        4             NaN              NaN            NaN        NaN        NaN
+    ITestLNX_GSs64_200/Index_GPU_Scalar_Symmetry        4         0.27186        0.0013852        0.27083    0.27137    0.27388
+    ITestLNX_GVs64_200/Index_GPU_Vector_Symmetry        4             NaN              NaN            NaN        NaN        NaN
+

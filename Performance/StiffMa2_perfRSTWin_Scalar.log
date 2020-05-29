@@ -1,0 +1,2492 @@
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In parallel.internal.gpu.selectDevice
+  In parallel.gpu/GPUDevice/current (line 44)
+  In gpuDevice (line 23)
+  In runStiffMaTest2 (line 35)] 
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 10x10x10 (1000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running StiffMa2_WIN_Sca10
+	Mesh created successfully with 1000 Hex8 elements and 1331 nodes!
+
+The global stiffness matrix will be computed with 1 chunk(s).
+Available memory on GPU before computations begin (MB): 3498.4526
+Processing the SCALAR problem with 10x10x10 elements
+.......... .......... .......... ...
+Done StiffMa2_WIN_Sca10
+__________
+
+  TimeResult with properties:
+
+            Name: 'StiffMa2_WIN_Sca10/StiffMa'
+           Valid: 1
+         Samples: [29x7 table]
+    TestActivity: [33x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   1.2895 seconds testing time.
+
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In runStiffMaTest2 (line 103)] 
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 20x20x20 (8000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running StiffMa2_WIN_Sca20
+	Mesh created successfully with 8000 Hex8 elements and 9261 nodes!
+
+The global stiffness matrix will be computed with 1 chunk(s).
+Available memory on GPU before computations begin (MB): 3498.4526
+Processing the SCALAR problem with 20x20x20 elements
+........
+Done StiffMa2_WIN_Sca20
+__________
+
+  TimeResult with properties:
+
+            Name: 'StiffMa2_WIN_Sca20/StiffMa'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   0.63312 seconds testing time.
+
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In runStiffMaTest2 (line 103)] 
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 40x40x40 (64000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running StiffMa2_WIN_Sca40
+	Mesh created successfully with 64000 Hex8 elements and 68921 nodes!
+
+The global stiffness matrix will be computed with 1 chunk(s).
+Available memory on GPU before computations begin (MB): 3498.4526
+Processing the SCALAR problem with 40x40x40 elements
+........
+Done StiffMa2_WIN_Sca40
+__________
+
+  TimeResult with properties:
+
+            Name: 'StiffMa2_WIN_Sca40/StiffMa'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   0.97521 seconds testing time.
+
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In runStiffMaTest2 (line 103)] 
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 80x80x80 (512000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running StiffMa2_WIN_Sca80
+	Mesh created successfully with 512000 Hex8 elements and 531441 nodes!
+
+The global stiffness matrix will be computed with 1 chunk(s).
+Available memory on GPU before computations begin (MB): 3498.4526
+Processing the SCALAR problem with 80x80x80 elements
+........
+Done StiffMa2_WIN_Sca80
+__________
+
+  TimeResult with properties:
+
+            Name: 'StiffMa2_WIN_Sca80/StiffMa'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   3.5796 seconds testing time.
+
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In runStiffMaTest2 (line 103)] 
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 160x160x160 (4096000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running StiffMa2_WIN_Sca160
+	Mesh created successfully with 4096000 Hex8 elements and 4173281 nodes!
+
+The global stiffness matrix will be computed with 5 chunk(s).
+Available memory on GPU before computations begin (MB): 3498.4526
+Processing the SCALAR problem with 160x160x160 elements
+	 Processing Chunk 1 of 5...
+	 Processing Chunk 2 of 5...
+	 Processing Chunk 3 of 5...
+	 Processing Chunk 4 of 5...
+	 Processing Chunk 5 of 5...
+.	 Processing Chunk 1 of 5...
+	 Processing Chunk 2 of 5...
+	 Processing Chunk 3 of 5...
+	 Processing Chunk 4 of 5...
+	 Processing Chunk 5 of 5...
+.	 Processing Chunk 1 of 5...
+	 Processing Chunk 2 of 5...
+	 Processing Chunk 3 of 5...
+	 Processing Chunk 4 of 5...
+	 Processing Chunk 5 of 5...
+.	 Processing Chunk 1 of 5...
+	 Processing Chunk 2 of 5...
+	 Processing Chunk 3 of 5...
+	 Processing Chunk 4 of 5...
+	 Processing Chunk 5 of 5...
+.	 Processing Chunk 1 of 5...
+	 Processing Chunk 2 of 5...
+	 Processing Chunk 3 of 5...
+	 Processing Chunk 4 of 5...
+	 Processing Chunk 5 of 5...
+.	 Processing Chunk 1 of 5...
+	 Processing Chunk 2 of 5...
+	 Processing Chunk 3 of 5...
+	 Processing Chunk 4 of 5...
+	 Processing Chunk 5 of 5...
+.	 Processing Chunk 1 of 5...
+	 Processing Chunk 2 of 5...
+	 Processing Chunk 3 of 5...
+	 Processing Chunk 4 of 5...
+	 Processing Chunk 5 of 5...
+.	 Processing Chunk 1 of 5...
+	 Processing Chunk 2 of 5...
+	 Processing Chunk 3 of 5...
+	 Processing Chunk 4 of 5...
+	 Processing Chunk 5 of 5...
+.
+Done StiffMa2_WIN_Sca160
+__________
+
+  TimeResult with properties:
+
+            Name: 'StiffMa2_WIN_Sca160/StiffMa'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   61.2214 seconds testing time.
+
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In runStiffMaTest2 (line 103)] 
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 320x320x320 (32768000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running StiffMa2_WIN_Sca320
+	Mesh created successfully with 32768000 Hex8 elements and 33076161 nodes!
+
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In StiffMa2_WIN_Sca320 (line 44)]
+
+================================================================================
+Error occurred while setting up or tearing down StiffMa2_WIN_Sca320.
+As a result, all StiffMa2_WIN_Sca320 tests failed and did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    ''
+    --------------
+    Error Details:
+    --------------
+    Error using StiffMa2_WIN_Sca320 (line 45)
+    No enough memory on the GPU to process the mesh.
+================================================================================
+
+Done StiffMa2_WIN_Sca320
+__________
+
+Failure Summary:
+
+     Name                         Failed  Incomplete  Reason(s)
+    ============================================================
+     StiffMa2_WIN_Sca320/StiffMa    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'StiffMa2_WIN_Sca320/StiffMa'
+           Valid: 0
+         Samples: [0x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   3.1595 seconds testing time.
+
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In runStiffMaTest2 (line 103)] 
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 321x321x321 (33076161)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running StiffMa2_WIN_Sca321
+	Mesh created successfully with 33076161 Hex8 elements and 33386248 nodes!
+
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In StiffMa2_WIN_Sca321 (line 44)]
+
+================================================================================
+Error occurred while setting up or tearing down StiffMa2_WIN_Sca321.
+As a result, all StiffMa2_WIN_Sca321 tests failed and did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    ''
+    --------------
+    Error Details:
+    --------------
+    Error using StiffMa2_WIN_Sca321 (line 45)
+    No enough memory on the GPU to process the mesh.
+================================================================================
+
+Done StiffMa2_WIN_Sca321
+__________
+
+Failure Summary:
+
+     Name                         Failed  Incomplete  Reason(s)
+    ============================================================
+     StiffMa2_WIN_Sca321/StiffMa    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'StiffMa2_WIN_Sca321/StiffMa'
+           Valid: 0
+         Samples: [0x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   3.0789 seconds testing time.
+
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In runStiffMaTest2 (line 103)] 
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 322x322x322 (33386248)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running StiffMa2_WIN_Sca322
+	Mesh created successfully with 33386248 Hex8 elements and 33698267 nodes!
+
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In StiffMa2_WIN_Sca322 (line 44)]
+
+================================================================================
+Error occurred while setting up or tearing down StiffMa2_WIN_Sca322.
+As a result, all StiffMa2_WIN_Sca322 tests failed and did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    ''
+    --------------
+    Error Details:
+    --------------
+    Error using StiffMa2_WIN_Sca322 (line 45)
+    No enough memory on the GPU to process the mesh.
+================================================================================
+
+Done StiffMa2_WIN_Sca322
+__________
+
+Failure Summary:
+
+     Name                         Failed  Incomplete  Reason(s)
+    ============================================================
+     StiffMa2_WIN_Sca322/StiffMa    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'StiffMa2_WIN_Sca322/StiffMa'
+           Valid: 0
+         Samples: [0x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   2.9522 seconds testing time.
+
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In runStiffMaTest2 (line 103)] 
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 323x323x323 (33698267)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running StiffMa2_WIN_Sca323
+	Mesh created successfully with 33698267 Hex8 elements and 34012224 nodes!
+
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In StiffMa2_WIN_Sca323 (line 44)]
+
+================================================================================
+Error occurred while setting up or tearing down StiffMa2_WIN_Sca323.
+As a result, all StiffMa2_WIN_Sca323 tests failed and did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    ''
+    --------------
+    Error Details:
+    --------------
+    Error using StiffMa2_WIN_Sca323 (line 45)
+    No enough memory on the GPU to process the mesh.
+================================================================================
+
+Done StiffMa2_WIN_Sca323
+__________
+
+Failure Summary:
+
+     Name                         Failed  Incomplete  Reason(s)
+    ============================================================
+     StiffMa2_WIN_Sca323/StiffMa    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'StiffMa2_WIN_Sca323/StiffMa'
+           Valid: 0
+         Samples: [0x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   3.3849 seconds testing time.
+
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In runStiffMaTest2 (line 103)] 
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 324x324x324 (34012224)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running StiffMa2_WIN_Sca324
+	Mesh created successfully with 34012224 Hex8 elements and 34328125 nodes!
+
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In StiffMa2_WIN_Sca324 (line 44)]
+
+================================================================================
+Error occurred while setting up or tearing down StiffMa2_WIN_Sca324.
+As a result, all StiffMa2_WIN_Sca324 tests failed and did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    ''
+    --------------
+    Error Details:
+    --------------
+    Error using StiffMa2_WIN_Sca324 (line 45)
+    No enough memory on the GPU to process the mesh.
+================================================================================
+
+Done StiffMa2_WIN_Sca324
+__________
+
+Failure Summary:
+
+     Name                         Failed  Incomplete  Reason(s)
+    ============================================================
+     StiffMa2_WIN_Sca324/StiffMa    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'StiffMa2_WIN_Sca324/StiffMa'
+           Valid: 0
+         Samples: [0x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   3.2705 seconds testing time.
+
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In runStiffMaTest2 (line 103)] 
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 325x325x325 (34328125)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running StiffMa2_WIN_Sca325
+	Mesh created successfully with 34328125 Hex8 elements and 34645976 nodes!
+
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In StiffMa2_WIN_Sca325 (line 44)]
+
+================================================================================
+Error occurred while setting up or tearing down StiffMa2_WIN_Sca325.
+As a result, all StiffMa2_WIN_Sca325 tests failed and did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    ''
+    --------------
+    Error Details:
+    --------------
+    Error using StiffMa2_WIN_Sca325 (line 45)
+    No enough memory on the GPU to process the mesh.
+================================================================================
+
+Done StiffMa2_WIN_Sca325
+__________
+
+Failure Summary:
+
+     Name                         Failed  Incomplete  Reason(s)
+    ============================================================
+     StiffMa2_WIN_Sca325/StiffMa    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'StiffMa2_WIN_Sca325/StiffMa'
+           Valid: 0
+         Samples: [0x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   3.0218 seconds testing time.
+
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In runStiffMaTest2 (line 103)] 
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 326x326x326 (34645976)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running StiffMa2_WIN_Sca326
+	Mesh created successfully with 34645976 Hex8 elements and 34965783 nodes!
+
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In StiffMa2_WIN_Sca326 (line 44)]
+
+================================================================================
+Error occurred while setting up or tearing down StiffMa2_WIN_Sca326.
+As a result, all StiffMa2_WIN_Sca326 tests failed and did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    ''
+    --------------
+    Error Details:
+    --------------
+    Error using StiffMa2_WIN_Sca326 (line 45)
+    No enough memory on the GPU to process the mesh.
+================================================================================
+
+Done StiffMa2_WIN_Sca326
+__________
+
+Failure Summary:
+
+     Name                         Failed  Incomplete  Reason(s)
+    ============================================================
+     StiffMa2_WIN_Sca326/StiffMa    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'StiffMa2_WIN_Sca326/StiffMa'
+           Valid: 0
+         Samples: [0x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   3.0922 seconds testing time.
+
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In runStiffMaTest2 (line 103)] 
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 327x327x327 (34965783)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running StiffMa2_WIN_Sca327
+	Mesh created successfully with 34965783 Hex8 elements and 35287552 nodes!
+
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In StiffMa2_WIN_Sca327 (line 44)]
+
+================================================================================
+Error occurred while setting up or tearing down StiffMa2_WIN_Sca327.
+As a result, all StiffMa2_WIN_Sca327 tests failed and did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    ''
+    --------------
+    Error Details:
+    --------------
+    Error using StiffMa2_WIN_Sca327 (line 45)
+    No enough memory on the GPU to process the mesh.
+================================================================================
+
+Done StiffMa2_WIN_Sca327
+__________
+
+Failure Summary:
+
+     Name                         Failed  Incomplete  Reason(s)
+    ============================================================
+     StiffMa2_WIN_Sca327/StiffMa    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'StiffMa2_WIN_Sca327/StiffMa'
+           Valid: 0
+         Samples: [0x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   3.4111 seconds testing time.
+
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In runStiffMaTest2 (line 103)] 
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 328x328x328 (35287552)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running StiffMa2_WIN_Sca328
+	Mesh created successfully with 35287552 Hex8 elements and 35611289 nodes!
+
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In StiffMa2_WIN_Sca328 (line 44)]
+
+================================================================================
+Error occurred while setting up or tearing down StiffMa2_WIN_Sca328.
+As a result, all StiffMa2_WIN_Sca328 tests failed and did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    ''
+    --------------
+    Error Details:
+    --------------
+    Error using StiffMa2_WIN_Sca328 (line 45)
+    No enough memory on the GPU to process the mesh.
+================================================================================
+
+Done StiffMa2_WIN_Sca328
+__________
+
+Failure Summary:
+
+     Name                         Failed  Incomplete  Reason(s)
+    ============================================================
+     StiffMa2_WIN_Sca328/StiffMa    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'StiffMa2_WIN_Sca328/StiffMa'
+           Valid: 0
+         Samples: [0x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   3.122 seconds testing time.
+
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In runStiffMaTest2 (line 103)] 
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 329x329x329 (35611289)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running StiffMa2_WIN_Sca329
+	Mesh created successfully with 35611289 Hex8 elements and 35937000 nodes!
+
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In StiffMa2_WIN_Sca329 (line 44)]
+
+================================================================================
+Error occurred while setting up or tearing down StiffMa2_WIN_Sca329.
+As a result, all StiffMa2_WIN_Sca329 tests failed and did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    ''
+    --------------
+    Error Details:
+    --------------
+    Error using StiffMa2_WIN_Sca329 (line 45)
+    No enough memory on the GPU to process the mesh.
+================================================================================
+
+Done StiffMa2_WIN_Sca329
+__________
+
+Failure Summary:
+
+     Name                         Failed  Incomplete  Reason(s)
+    ============================================================
+     StiffMa2_WIN_Sca329/StiffMa    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'StiffMa2_WIN_Sca329/StiffMa'
+           Valid: 0
+         Samples: [0x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   3.2152 seconds testing time.
+
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In runStiffMaTest2 (line 103)] 
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 330x330x330 (35937000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running StiffMa2_WIN_Sca330
+	Mesh created successfully with 35937000 Hex8 elements and 36264691 nodes!
+
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In StiffMa2_WIN_Sca330 (line 44)]
+
+================================================================================
+Error occurred while setting up or tearing down StiffMa2_WIN_Sca330.
+As a result, all StiffMa2_WIN_Sca330 tests failed and did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    ''
+    --------------
+    Error Details:
+    --------------
+    Error using StiffMa2_WIN_Sca330 (line 45)
+    No enough memory on the GPU to process the mesh.
+================================================================================
+
+Done StiffMa2_WIN_Sca330
+__________
+
+Failure Summary:
+
+     Name                         Failed  Incomplete  Reason(s)
+    ============================================================
+     StiffMa2_WIN_Sca330/StiffMa    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'StiffMa2_WIN_Sca330/StiffMa'
+           Valid: 0
+         Samples: [0x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   3.1906 seconds testing time.
+
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In runStiffMaTest2 (line 103)] 
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 331x331x331 (36264691)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running StiffMa2_WIN_Sca331
+	Mesh created successfully with 36264691 Hex8 elements and 36594368 nodes!
+
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In StiffMa2_WIN_Sca331 (line 44)]
+
+================================================================================
+Error occurred while setting up or tearing down StiffMa2_WIN_Sca331.
+As a result, all StiffMa2_WIN_Sca331 tests failed and did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    ''
+    --------------
+    Error Details:
+    --------------
+    Error using StiffMa2_WIN_Sca331 (line 45)
+    No enough memory on the GPU to process the mesh.
+================================================================================
+
+Done StiffMa2_WIN_Sca331
+__________
+
+Failure Summary:
+
+     Name                         Failed  Incomplete  Reason(s)
+    ============================================================
+     StiffMa2_WIN_Sca331/StiffMa    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'StiffMa2_WIN_Sca331/StiffMa'
+           Valid: 0
+         Samples: [0x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   3.1947 seconds testing time.
+
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In runStiffMaTest2 (line 103)] 
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 332x332x332 (36594368)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running StiffMa2_WIN_Sca332
+	Mesh created successfully with 36594368 Hex8 elements and 36926037 nodes!
+
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In StiffMa2_WIN_Sca332 (line 44)]
+
+================================================================================
+Error occurred while setting up or tearing down StiffMa2_WIN_Sca332.
+As a result, all StiffMa2_WIN_Sca332 tests failed and did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    ''
+    --------------
+    Error Details:
+    --------------
+    Error using StiffMa2_WIN_Sca332 (line 45)
+    No enough memory on the GPU to process the mesh.
+================================================================================
+
+Done StiffMa2_WIN_Sca332
+__________
+
+Failure Summary:
+
+     Name                         Failed  Incomplete  Reason(s)
+    ============================================================
+     StiffMa2_WIN_Sca332/StiffMa    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'StiffMa2_WIN_Sca332/StiffMa'
+           Valid: 0
+         Samples: [0x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   3.4185 seconds testing time.
+
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In runStiffMaTest2 (line 103)] 
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 333x333x333 (36926037)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running StiffMa2_WIN_Sca333
+	Mesh created successfully with 36926037 Hex8 elements and 37259704 nodes!
+
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In StiffMa2_WIN_Sca333 (line 44)]
+
+================================================================================
+Error occurred while setting up or tearing down StiffMa2_WIN_Sca333.
+As a result, all StiffMa2_WIN_Sca333 tests failed and did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    ''
+    --------------
+    Error Details:
+    --------------
+    Error using StiffMa2_WIN_Sca333 (line 45)
+    No enough memory on the GPU to process the mesh.
+================================================================================
+
+Done StiffMa2_WIN_Sca333
+__________
+
+Failure Summary:
+
+     Name                         Failed  Incomplete  Reason(s)
+    ============================================================
+     StiffMa2_WIN_Sca333/StiffMa    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'StiffMa2_WIN_Sca333/StiffMa'
+           Valid: 0
+         Samples: [0x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   3.6688 seconds testing time.
+
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In runStiffMaTest2 (line 103)] 
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 334x334x334 (37259704)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running StiffMa2_WIN_Sca334
+	Mesh created successfully with 37259704 Hex8 elements and 37595375 nodes!
+
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In StiffMa2_WIN_Sca334 (line 44)]
+
+================================================================================
+Error occurred while setting up or tearing down StiffMa2_WIN_Sca334.
+As a result, all StiffMa2_WIN_Sca334 tests failed and did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    ''
+    --------------
+    Error Details:
+    --------------
+    Error using StiffMa2_WIN_Sca334 (line 45)
+    No enough memory on the GPU to process the mesh.
+================================================================================
+
+Done StiffMa2_WIN_Sca334
+__________
+
+Failure Summary:
+
+     Name                         Failed  Incomplete  Reason(s)
+    ============================================================
+     StiffMa2_WIN_Sca334/StiffMa    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'StiffMa2_WIN_Sca334/StiffMa'
+           Valid: 0
+         Samples: [0x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   3.2799 seconds testing time.
+
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In runStiffMaTest2 (line 103)] 
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 335x335x335 (37595375)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running StiffMa2_WIN_Sca335
+	Mesh created successfully with 37595375 Hex8 elements and 37933056 nodes!
+
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In StiffMa2_WIN_Sca335 (line 44)]
+
+================================================================================
+Error occurred while setting up or tearing down StiffMa2_WIN_Sca335.
+As a result, all StiffMa2_WIN_Sca335 tests failed and did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    ''
+    --------------
+    Error Details:
+    --------------
+    Error using StiffMa2_WIN_Sca335 (line 45)
+    No enough memory on the GPU to process the mesh.
+================================================================================
+
+Done StiffMa2_WIN_Sca335
+__________
+
+Failure Summary:
+
+     Name                         Failed  Incomplete  Reason(s)
+    ============================================================
+     StiffMa2_WIN_Sca335/StiffMa    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'StiffMa2_WIN_Sca335/StiffMa'
+           Valid: 0
+         Samples: [0x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   3.2918 seconds testing time.
+
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In runStiffMaTest2 (line 103)] 
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 336x336x336 (37933056)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running StiffMa2_WIN_Sca336
+	Mesh created successfully with 37933056 Hex8 elements and 38272753 nodes!
+
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In StiffMa2_WIN_Sca336 (line 44)]
+
+================================================================================
+Error occurred while setting up or tearing down StiffMa2_WIN_Sca336.
+As a result, all StiffMa2_WIN_Sca336 tests failed and did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    ''
+    --------------
+    Error Details:
+    --------------
+    Error using StiffMa2_WIN_Sca336 (line 45)
+    No enough memory on the GPU to process the mesh.
+================================================================================
+
+Done StiffMa2_WIN_Sca336
+__________
+
+Failure Summary:
+
+     Name                         Failed  Incomplete  Reason(s)
+    ============================================================
+     StiffMa2_WIN_Sca336/StiffMa    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'StiffMa2_WIN_Sca336/StiffMa'
+           Valid: 0
+         Samples: [0x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   3.5698 seconds testing time.
+
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In runStiffMaTest2 (line 103)] 
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 337x337x337 (38272753)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running StiffMa2_WIN_Sca337
+	Mesh created successfully with 38272753 Hex8 elements and 38614472 nodes!
+
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In StiffMa2_WIN_Sca337 (line 44)]
+
+================================================================================
+Error occurred while setting up or tearing down StiffMa2_WIN_Sca337.
+As a result, all StiffMa2_WIN_Sca337 tests failed and did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    ''
+    --------------
+    Error Details:
+    --------------
+    Error using StiffMa2_WIN_Sca337 (line 45)
+    No enough memory on the GPU to process the mesh.
+================================================================================
+
+Done StiffMa2_WIN_Sca337
+__________
+
+Failure Summary:
+
+     Name                         Failed  Incomplete  Reason(s)
+    ============================================================
+     StiffMa2_WIN_Sca337/StiffMa    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'StiffMa2_WIN_Sca337/StiffMa'
+           Valid: 0
+         Samples: [0x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   3.3852 seconds testing time.
+
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In runStiffMaTest2 (line 103)] 
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 338x338x338 (38614472)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running StiffMa2_WIN_Sca338
+	Mesh created successfully with 38614472 Hex8 elements and 38958219 nodes!
+
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In StiffMa2_WIN_Sca338 (line 44)]
+
+================================================================================
+Error occurred while setting up or tearing down StiffMa2_WIN_Sca338.
+As a result, all StiffMa2_WIN_Sca338 tests failed and did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    ''
+    --------------
+    Error Details:
+    --------------
+    Error using StiffMa2_WIN_Sca338 (line 45)
+    No enough memory on the GPU to process the mesh.
+================================================================================
+
+Done StiffMa2_WIN_Sca338
+__________
+
+Failure Summary:
+
+     Name                         Failed  Incomplete  Reason(s)
+    ============================================================
+     StiffMa2_WIN_Sca338/StiffMa    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'StiffMa2_WIN_Sca338/StiffMa'
+           Valid: 0
+         Samples: [0x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   3.4097 seconds testing time.
+
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In runStiffMaTest2 (line 103)] 
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 339x339x339 (38958219)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running StiffMa2_WIN_Sca339
+	Mesh created successfully with 38958219 Hex8 elements and 39304000 nodes!
+
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In StiffMa2_WIN_Sca339 (line 44)]
+
+================================================================================
+Error occurred while setting up or tearing down StiffMa2_WIN_Sca339.
+As a result, all StiffMa2_WIN_Sca339 tests failed and did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    ''
+    --------------
+    Error Details:
+    --------------
+    Error using StiffMa2_WIN_Sca339 (line 45)
+    No enough memory on the GPU to process the mesh.
+================================================================================
+
+Done StiffMa2_WIN_Sca339
+__________
+
+Failure Summary:
+
+     Name                         Failed  Incomplete  Reason(s)
+    ============================================================
+     StiffMa2_WIN_Sca339/StiffMa    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'StiffMa2_WIN_Sca339/StiffMa'
+           Valid: 0
+         Samples: [0x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   3.7825 seconds testing time.
+
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In runStiffMaTest2 (line 103)] 
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 340x340x340 (39304000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running StiffMa2_WIN_Sca340
+	Mesh created successfully with 39304000 Hex8 elements and 39651821 nodes!
+
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In StiffMa2_WIN_Sca340 (line 44)]
+
+================================================================================
+Error occurred while setting up or tearing down StiffMa2_WIN_Sca340.
+As a result, all StiffMa2_WIN_Sca340 tests failed and did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    ''
+    --------------
+    Error Details:
+    --------------
+    Error using StiffMa2_WIN_Sca340 (line 45)
+    No enough memory on the GPU to process the mesh.
+================================================================================
+
+Done StiffMa2_WIN_Sca340
+__________
+
+Failure Summary:
+
+     Name                         Failed  Incomplete  Reason(s)
+    ============================================================
+     StiffMa2_WIN_Sca340/StiffMa    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'StiffMa2_WIN_Sca340/StiffMa'
+           Valid: 0
+         Samples: [0x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   3.4098 seconds testing time.
+
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In runStiffMaTest2 (line 103)] 
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 341x341x341 (39651821)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running StiffMa2_WIN_Sca341
+	Mesh created successfully with 39651821 Hex8 elements and 40001688 nodes!
+
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In StiffMa2_WIN_Sca341 (line 44)]
+
+================================================================================
+Error occurred while setting up or tearing down StiffMa2_WIN_Sca341.
+As a result, all StiffMa2_WIN_Sca341 tests failed and did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    ''
+    --------------
+    Error Details:
+    --------------
+    Error using StiffMa2_WIN_Sca341 (line 45)
+    No enough memory on the GPU to process the mesh.
+================================================================================
+
+Done StiffMa2_WIN_Sca341
+__________
+
+Failure Summary:
+
+     Name                         Failed  Incomplete  Reason(s)
+    ============================================================
+     StiffMa2_WIN_Sca341/StiffMa    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'StiffMa2_WIN_Sca341/StiffMa'
+           Valid: 0
+         Samples: [0x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   3.4337 seconds testing time.
+
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In runStiffMaTest2 (line 103)] 
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 342x342x342 (40001688)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running StiffMa2_WIN_Sca342
+	Mesh created successfully with 40001688 Hex8 elements and 40353607 nodes!
+
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In StiffMa2_WIN_Sca342 (line 44)]
+
+================================================================================
+Error occurred while setting up or tearing down StiffMa2_WIN_Sca342.
+As a result, all StiffMa2_WIN_Sca342 tests failed and did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    ''
+    --------------
+    Error Details:
+    --------------
+    Error using StiffMa2_WIN_Sca342 (line 45)
+    No enough memory on the GPU to process the mesh.
+================================================================================
+
+Done StiffMa2_WIN_Sca342
+__________
+
+Failure Summary:
+
+     Name                         Failed  Incomplete  Reason(s)
+    ============================================================
+     StiffMa2_WIN_Sca342/StiffMa    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'StiffMa2_WIN_Sca342/StiffMa'
+           Valid: 0
+         Samples: [0x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   3.8446 seconds testing time.
+
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In runStiffMaTest2 (line 103)] 
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 343x343x343 (40353607)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running StiffMa2_WIN_Sca343
+	Mesh created successfully with 40353607 Hex8 elements and 40707584 nodes!
+
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In StiffMa2_WIN_Sca343 (line 44)]
+
+================================================================================
+Error occurred while setting up or tearing down StiffMa2_WIN_Sca343.
+As a result, all StiffMa2_WIN_Sca343 tests failed and did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    ''
+    --------------
+    Error Details:
+    --------------
+    Error using StiffMa2_WIN_Sca343 (line 45)
+    No enough memory on the GPU to process the mesh.
+================================================================================
+
+Done StiffMa2_WIN_Sca343
+__________
+
+Failure Summary:
+
+     Name                         Failed  Incomplete  Reason(s)
+    ============================================================
+     StiffMa2_WIN_Sca343/StiffMa    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'StiffMa2_WIN_Sca343/StiffMa'
+           Valid: 0
+         Samples: [0x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   3.5262 seconds testing time.
+
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In runStiffMaTest2 (line 103)] 
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 344x344x344 (40707584)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running StiffMa2_WIN_Sca344
+	Mesh created successfully with 40707584 Hex8 elements and 41063625 nodes!
+
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In StiffMa2_WIN_Sca344 (line 44)]
+
+================================================================================
+Error occurred while setting up or tearing down StiffMa2_WIN_Sca344.
+As a result, all StiffMa2_WIN_Sca344 tests failed and did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    ''
+    --------------
+    Error Details:
+    --------------
+    Error using StiffMa2_WIN_Sca344 (line 45)
+    No enough memory on the GPU to process the mesh.
+================================================================================
+
+Done StiffMa2_WIN_Sca344
+__________
+
+Failure Summary:
+
+     Name                         Failed  Incomplete  Reason(s)
+    ============================================================
+     StiffMa2_WIN_Sca344/StiffMa    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'StiffMa2_WIN_Sca344/StiffMa'
+           Valid: 0
+         Samples: [0x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   3.7181 seconds testing time.
+
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In runStiffMaTest2 (line 103)] 
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 345x345x345 (41063625)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running StiffMa2_WIN_Sca345
+	Mesh created successfully with 41063625 Hex8 elements and 41421736 nodes!
+
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In StiffMa2_WIN_Sca345 (line 44)]
+
+================================================================================
+Error occurred while setting up or tearing down StiffMa2_WIN_Sca345.
+As a result, all StiffMa2_WIN_Sca345 tests failed and did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    ''
+    --------------
+    Error Details:
+    --------------
+    Error using StiffMa2_WIN_Sca345 (line 45)
+    No enough memory on the GPU to process the mesh.
+================================================================================
+
+Done StiffMa2_WIN_Sca345
+__________
+
+Failure Summary:
+
+     Name                         Failed  Incomplete  Reason(s)
+    ============================================================
+     StiffMa2_WIN_Sca345/StiffMa    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'StiffMa2_WIN_Sca345/StiffMa'
+           Valid: 0
+         Samples: [0x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   3.8115 seconds testing time.
+
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In runStiffMaTest2 (line 103)] 
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 346x346x346 (41421736)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running StiffMa2_WIN_Sca346
+	Mesh created successfully with 41421736 Hex8 elements and 41781923 nodes!
+
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In StiffMa2_WIN_Sca346 (line 44)]
+
+================================================================================
+Error occurred while setting up or tearing down StiffMa2_WIN_Sca346.
+As a result, all StiffMa2_WIN_Sca346 tests failed and did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    ''
+    --------------
+    Error Details:
+    --------------
+    Error using StiffMa2_WIN_Sca346 (line 45)
+    No enough memory on the GPU to process the mesh.
+================================================================================
+
+Done StiffMa2_WIN_Sca346
+__________
+
+Failure Summary:
+
+     Name                         Failed  Incomplete  Reason(s)
+    ============================================================
+     StiffMa2_WIN_Sca346/StiffMa    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'StiffMa2_WIN_Sca346/StiffMa'
+           Valid: 0
+         Samples: [0x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   4.0136 seconds testing time.
+
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In runStiffMaTest2 (line 103)] 
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 347x347x347 (41781923)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running StiffMa2_WIN_Sca347
+	Mesh created successfully with 41781923 Hex8 elements and 42144192 nodes!
+
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In StiffMa2_WIN_Sca347 (line 44)]
+
+================================================================================
+Error occurred while setting up or tearing down StiffMa2_WIN_Sca347.
+As a result, all StiffMa2_WIN_Sca347 tests failed and did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    ''
+    --------------
+    Error Details:
+    --------------
+    Error using StiffMa2_WIN_Sca347 (line 45)
+    No enough memory on the GPU to process the mesh.
+================================================================================
+
+Done StiffMa2_WIN_Sca347
+__________
+
+Failure Summary:
+
+     Name                         Failed  Incomplete  Reason(s)
+    ============================================================
+     StiffMa2_WIN_Sca347/StiffMa    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'StiffMa2_WIN_Sca347/StiffMa'
+           Valid: 0
+         Samples: [0x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   3.7953 seconds testing time.
+
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In runStiffMaTest2 (line 103)] 
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 348x348x348 (42144192)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running StiffMa2_WIN_Sca348
+	Mesh created successfully with 42144192 Hex8 elements and 42508549 nodes!
+
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In StiffMa2_WIN_Sca348 (line 44)]
+
+================================================================================
+Error occurred while setting up or tearing down StiffMa2_WIN_Sca348.
+As a result, all StiffMa2_WIN_Sca348 tests failed and did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    ''
+    --------------
+    Error Details:
+    --------------
+    Error using StiffMa2_WIN_Sca348 (line 45)
+    No enough memory on the GPU to process the mesh.
+================================================================================
+
+Done StiffMa2_WIN_Sca348
+__________
+
+Failure Summary:
+
+     Name                         Failed  Incomplete  Reason(s)
+    ============================================================
+     StiffMa2_WIN_Sca348/StiffMa    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'StiffMa2_WIN_Sca348/StiffMa'
+           Valid: 0
+         Samples: [0x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   3.8633 seconds testing time.
+
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In runStiffMaTest2 (line 103)] 
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 349x349x349 (42508549)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running StiffMa2_WIN_Sca349
+	Mesh created successfully with 42508549 Hex8 elements and 42875000 nodes!
+
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In StiffMa2_WIN_Sca349 (line 44)]
+
+================================================================================
+Error occurred while setting up or tearing down StiffMa2_WIN_Sca349.
+As a result, all StiffMa2_WIN_Sca349 tests failed and did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    ''
+    --------------
+    Error Details:
+    --------------
+    Error using StiffMa2_WIN_Sca349 (line 45)
+    No enough memory on the GPU to process the mesh.
+================================================================================
+
+Done StiffMa2_WIN_Sca349
+__________
+
+Failure Summary:
+
+     Name                         Failed  Incomplete  Reason(s)
+    ============================================================
+     StiffMa2_WIN_Sca349/StiffMa    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'StiffMa2_WIN_Sca349/StiffMa'
+           Valid: 0
+         Samples: [0x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   4.0231 seconds testing time.
+
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In runStiffMaTest2 (line 103)] 
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 350x350x350 (42875000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running StiffMa2_WIN_Sca350
+	Mesh created successfully with 42875000 Hex8 elements and 43243551 nodes!
+
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In StiffMa2_WIN_Sca350 (line 44)]
+
+================================================================================
+Error occurred while setting up or tearing down StiffMa2_WIN_Sca350.
+As a result, all StiffMa2_WIN_Sca350 tests failed and did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    ''
+    --------------
+    Error Details:
+    --------------
+    Error using StiffMa2_WIN_Sca350 (line 45)
+    No enough memory on the GPU to process the mesh.
+================================================================================
+
+Done StiffMa2_WIN_Sca350
+__________
+
+Failure Summary:
+
+     Name                         Failed  Incomplete  Reason(s)
+    ============================================================
+     StiffMa2_WIN_Sca350/StiffMa    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'StiffMa2_WIN_Sca350/StiffMa'
+           Valid: 0
+         Samples: [0x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   3.7967 seconds testing time.
+
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In runStiffMaTest2 (line 103)] 
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 351x351x351 (43243551)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running StiffMa2_WIN_Sca351
+	Mesh created successfully with 43243551 Hex8 elements and 43614208 nodes!
+
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In StiffMa2_WIN_Sca351 (line 44)]
+
+================================================================================
+Error occurred while setting up or tearing down StiffMa2_WIN_Sca351.
+As a result, all StiffMa2_WIN_Sca351 tests failed and did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    ''
+    --------------
+    Error Details:
+    --------------
+    Error using StiffMa2_WIN_Sca351 (line 45)
+    No enough memory on the GPU to process the mesh.
+================================================================================
+
+Done StiffMa2_WIN_Sca351
+__________
+
+Failure Summary:
+
+     Name                         Failed  Incomplete  Reason(s)
+    ============================================================
+     StiffMa2_WIN_Sca351/StiffMa    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'StiffMa2_WIN_Sca351/StiffMa'
+           Valid: 0
+         Samples: [0x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   3.8612 seconds testing time.
+
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In runStiffMaTest2 (line 103)] 
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 352x352x352 (43614208)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running StiffMa2_WIN_Sca352
+	Mesh created successfully with 43614208 Hex8 elements and 43986977 nodes!
+
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In StiffMa2_WIN_Sca352 (line 44)]
+
+================================================================================
+Error occurred while setting up or tearing down StiffMa2_WIN_Sca352.
+As a result, all StiffMa2_WIN_Sca352 tests failed and did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    ''
+    --------------
+    Error Details:
+    --------------
+    Error using StiffMa2_WIN_Sca352 (line 45)
+    No enough memory on the GPU to process the mesh.
+================================================================================
+
+Done StiffMa2_WIN_Sca352
+__________
+
+Failure Summary:
+
+     Name                         Failed  Incomplete  Reason(s)
+    ============================================================
+     StiffMa2_WIN_Sca352/StiffMa    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'StiffMa2_WIN_Sca352/StiffMa'
+           Valid: 0
+         Samples: [0x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   3.8355 seconds testing time.
+
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In runStiffMaTest2 (line 103)] 
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 353x353x353 (43986977)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running StiffMa2_WIN_Sca353
+	Mesh created successfully with 43986977 Hex8 elements and 44361864 nodes!
+
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In StiffMa2_WIN_Sca353 (line 44)]
+
+================================================================================
+Error occurred while setting up or tearing down StiffMa2_WIN_Sca353.
+As a result, all StiffMa2_WIN_Sca353 tests failed and did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    ''
+    --------------
+    Error Details:
+    --------------
+    Error using StiffMa2_WIN_Sca353 (line 45)
+    No enough memory on the GPU to process the mesh.
+================================================================================
+
+Done StiffMa2_WIN_Sca353
+__________
+
+Failure Summary:
+
+     Name                         Failed  Incomplete  Reason(s)
+    ============================================================
+     StiffMa2_WIN_Sca353/StiffMa    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'StiffMa2_WIN_Sca353/StiffMa'
+           Valid: 0
+         Samples: [0x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   3.8661 seconds testing time.
+
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In runStiffMaTest2 (line 103)] 
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 354x354x354 (44361864)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running StiffMa2_WIN_Sca354
+	Mesh created successfully with 44361864 Hex8 elements and 44738875 nodes!
+
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In StiffMa2_WIN_Sca354 (line 44)]
+
+================================================================================
+Error occurred while setting up or tearing down StiffMa2_WIN_Sca354.
+As a result, all StiffMa2_WIN_Sca354 tests failed and did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    ''
+    --------------
+    Error Details:
+    --------------
+    Error using StiffMa2_WIN_Sca354 (line 45)
+    No enough memory on the GPU to process the mesh.
+================================================================================
+
+Done StiffMa2_WIN_Sca354
+__________
+
+Failure Summary:
+
+     Name                         Failed  Incomplete  Reason(s)
+    ============================================================
+     StiffMa2_WIN_Sca354/StiffMa    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'StiffMa2_WIN_Sca354/StiffMa'
+           Valid: 0
+         Samples: [0x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   3.7815 seconds testing time.
+
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In runStiffMaTest2 (line 103)] 
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 355x355x355 (44738875)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running StiffMa2_WIN_Sca355
+	Mesh created successfully with 44738875 Hex8 elements and 45118016 nodes!
+
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In StiffMa2_WIN_Sca355 (line 44)]
+
+================================================================================
+Error occurred while setting up or tearing down StiffMa2_WIN_Sca355.
+As a result, all StiffMa2_WIN_Sca355 tests failed and did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    ''
+    --------------
+    Error Details:
+    --------------
+    Error using StiffMa2_WIN_Sca355 (line 45)
+    No enough memory on the GPU to process the mesh.
+================================================================================
+
+Done StiffMa2_WIN_Sca355
+__________
+
+Failure Summary:
+
+     Name                         Failed  Incomplete  Reason(s)
+    ============================================================
+     StiffMa2_WIN_Sca355/StiffMa    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'StiffMa2_WIN_Sca355/StiffMa'
+           Valid: 0
+         Samples: [0x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   3.8417 seconds testing time.
+
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In runStiffMaTest2 (line 103)] 
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 356x356x356 (45118016)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running StiffMa2_WIN_Sca356
+	Mesh created successfully with 45118016 Hex8 elements and 45499293 nodes!
+
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In StiffMa2_WIN_Sca356 (line 44)]
+
+================================================================================
+Error occurred while setting up or tearing down StiffMa2_WIN_Sca356.
+As a result, all StiffMa2_WIN_Sca356 tests failed and did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    ''
+    --------------
+    Error Details:
+    --------------
+    Error using StiffMa2_WIN_Sca356 (line 45)
+    No enough memory on the GPU to process the mesh.
+================================================================================
+
+Done StiffMa2_WIN_Sca356
+__________
+
+Failure Summary:
+
+     Name                         Failed  Incomplete  Reason(s)
+    ============================================================
+     StiffMa2_WIN_Sca356/StiffMa    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'StiffMa2_WIN_Sca356/StiffMa'
+           Valid: 0
+         Samples: [0x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   4.1722 seconds testing time.
+
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In runStiffMaTest2 (line 103)] 
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 357x357x357 (45499293)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running StiffMa2_WIN_Sca357
+	Mesh created successfully with 45499293 Hex8 elements and 45882712 nodes!
+
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In StiffMa2_WIN_Sca357 (line 44)]
+
+================================================================================
+Error occurred while setting up or tearing down StiffMa2_WIN_Sca357.
+As a result, all StiffMa2_WIN_Sca357 tests failed and did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    ''
+    --------------
+    Error Details:
+    --------------
+    Error using StiffMa2_WIN_Sca357 (line 45)
+    No enough memory on the GPU to process the mesh.
+================================================================================
+
+Done StiffMa2_WIN_Sca357
+__________
+
+Failure Summary:
+
+     Name                         Failed  Incomplete  Reason(s)
+    ============================================================
+     StiffMa2_WIN_Sca357/StiffMa    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'StiffMa2_WIN_Sca357/StiffMa'
+           Valid: 0
+         Samples: [0x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   4.0914 seconds testing time.
+
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In runStiffMaTest2 (line 103)] 
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 358x358x358 (45882712)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running StiffMa2_WIN_Sca358
+	Mesh created successfully with 45882712 Hex8 elements and 46268279 nodes!
+
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In StiffMa2_WIN_Sca358 (line 44)]
+
+================================================================================
+Error occurred while setting up or tearing down StiffMa2_WIN_Sca358.
+As a result, all StiffMa2_WIN_Sca358 tests failed and did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    ''
+    --------------
+    Error Details:
+    --------------
+    Error using StiffMa2_WIN_Sca358 (line 45)
+    No enough memory on the GPU to process the mesh.
+================================================================================
+
+Done StiffMa2_WIN_Sca358
+__________
+
+Failure Summary:
+
+     Name                         Failed  Incomplete  Reason(s)
+    ============================================================
+     StiffMa2_WIN_Sca358/StiffMa    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'StiffMa2_WIN_Sca358/StiffMa'
+           Valid: 0
+         Samples: [0x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   4.1321 seconds testing time.
+
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In runStiffMaTest2 (line 103)] 
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 359x359x359 (46268279)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running StiffMa2_WIN_Sca359
+	Mesh created successfully with 46268279 Hex8 elements and 46656000 nodes!
+
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In StiffMa2_WIN_Sca359 (line 44)]
+
+================================================================================
+Error occurred while setting up or tearing down StiffMa2_WIN_Sca359.
+As a result, all StiffMa2_WIN_Sca359 tests failed and did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    ''
+    --------------
+    Error Details:
+    --------------
+    Error using StiffMa2_WIN_Sca359 (line 45)
+    No enough memory on the GPU to process the mesh.
+================================================================================
+
+Done StiffMa2_WIN_Sca359
+__________
+
+Failure Summary:
+
+     Name                         Failed  Incomplete  Reason(s)
+    ============================================================
+     StiffMa2_WIN_Sca359/StiffMa    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'StiffMa2_WIN_Sca359/StiffMa'
+           Valid: 0
+         Samples: [0x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   4.2423 seconds testing time.
+
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In runStiffMaTest2 (line 103)] 
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 360x360x360 (46656000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running StiffMa2_WIN_Sca360
+	Mesh created successfully with 46656000 Hex8 elements and 47045881 nodes!
+
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In StiffMa2_WIN_Sca360 (line 44)]
+
+================================================================================
+Error occurred while setting up or tearing down StiffMa2_WIN_Sca360.
+As a result, all StiffMa2_WIN_Sca360 tests failed and did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    ''
+    --------------
+    Error Details:
+    --------------
+    Error using StiffMa2_WIN_Sca360 (line 45)
+    No enough memory on the GPU to process the mesh.
+================================================================================
+
+Done StiffMa2_WIN_Sca360
+__________
+
+Failure Summary:
+
+     Name                         Failed  Incomplete  Reason(s)
+    ============================================================
+     StiffMa2_WIN_Sca360/StiffMa    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'StiffMa2_WIN_Sca360/StiffMa'
+           Valid: 0
+         Samples: [0x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   4.457 seconds testing time.
+
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In runStiffMaTest2 (line 103)] 
+
+
+A total of 46 time experiments was executed!
+Date and time at the beginning of the process: 	22-May-2020 06:44:23 
+Date and time at the end of the process: 	22-May-2020 06:49:02
+
+
+ans =
+
+  46x7 table
+
+               Name                SampleSize      Mean      StandardDeviation      Min        Median       Max   
+    ___________________________    __________    ________    _________________    ________    ________    ________
+
+    StiffMa2_WIN_Sca10/StiffMa         29         0.01419        0.0022219        0.012651      0.0138    0.025283
+    StiffMa2_WIN_Sca20/StiffMa          4        0.019422       0.00051506        0.018957    0.019318    0.020097
+    StiffMa2_WIN_Sca40/StiffMa          4        0.060715       0.00033672        0.060222    0.060836    0.060964
+    StiffMa2_WIN_Sca80/StiffMa          4         0.36887        0.0010323         0.36777     0.36881     0.37008
+    StiffMa2_WIN_Sca160/StiffMa         4          7.5261         0.011627          7.5105      7.5279      7.5382
+    StiffMa2_WIN_Sca320/StiffMa         0             NaN              NaN             NaN         NaN         NaN
+    StiffMa2_WIN_Sca321/StiffMa         0             NaN              NaN             NaN         NaN         NaN
+    StiffMa2_WIN_Sca322/StiffMa         0             NaN              NaN             NaN         NaN         NaN
+    StiffMa2_WIN_Sca323/StiffMa         0             NaN              NaN             NaN         NaN         NaN
+    StiffMa2_WIN_Sca324/StiffMa         0             NaN              NaN             NaN         NaN         NaN
+    StiffMa2_WIN_Sca325/StiffMa         0             NaN              NaN             NaN         NaN         NaN
+    StiffMa2_WIN_Sca326/StiffMa         0             NaN              NaN             NaN         NaN         NaN
+    StiffMa2_WIN_Sca327/StiffMa         0             NaN              NaN             NaN         NaN         NaN
+    StiffMa2_WIN_Sca328/StiffMa         0             NaN              NaN             NaN         NaN         NaN
+    StiffMa2_WIN_Sca329/StiffMa         0             NaN              NaN             NaN         NaN         NaN
+    StiffMa2_WIN_Sca330/StiffMa         0             NaN              NaN             NaN         NaN         NaN
+    StiffMa2_WIN_Sca331/StiffMa         0             NaN              NaN             NaN         NaN         NaN
+    StiffMa2_WIN_Sca332/StiffMa         0             NaN              NaN             NaN         NaN         NaN
+    StiffMa2_WIN_Sca333/StiffMa         0             NaN              NaN             NaN         NaN         NaN
+    StiffMa2_WIN_Sca334/StiffMa         0             NaN              NaN             NaN         NaN         NaN
+    StiffMa2_WIN_Sca335/StiffMa         0             NaN              NaN             NaN         NaN         NaN
+    StiffMa2_WIN_Sca336/StiffMa         0             NaN              NaN             NaN         NaN         NaN
+    StiffMa2_WIN_Sca337/StiffMa         0             NaN              NaN             NaN         NaN         NaN
+    StiffMa2_WIN_Sca338/StiffMa         0             NaN              NaN             NaN         NaN         NaN
+    StiffMa2_WIN_Sca339/StiffMa         0             NaN              NaN             NaN         NaN         NaN
+    StiffMa2_WIN_Sca340/StiffMa         0             NaN              NaN             NaN         NaN         NaN
+    StiffMa2_WIN_Sca341/StiffMa         0             NaN              NaN             NaN         NaN         NaN
+    StiffMa2_WIN_Sca342/StiffMa         0             NaN              NaN             NaN         NaN         NaN
+    StiffMa2_WIN_Sca343/StiffMa         0             NaN              NaN             NaN         NaN         NaN
+    StiffMa2_WIN_Sca344/StiffMa         0             NaN              NaN             NaN         NaN         NaN
+    StiffMa2_WIN_Sca345/StiffMa         0             NaN              NaN             NaN         NaN         NaN
+    StiffMa2_WIN_Sca346/StiffMa         0             NaN              NaN             NaN         NaN         NaN
+    StiffMa2_WIN_Sca347/StiffMa         0             NaN              NaN             NaN         NaN         NaN
+    StiffMa2_WIN_Sca348/StiffMa         0             NaN              NaN             NaN         NaN         NaN
+    StiffMa2_WIN_Sca349/StiffMa         0             NaN              NaN             NaN         NaN         NaN
+    StiffMa2_WIN_Sca350/StiffMa         0             NaN              NaN             NaN         NaN         NaN
+    StiffMa2_WIN_Sca351/StiffMa         0             NaN              NaN             NaN         NaN         NaN
+    StiffMa2_WIN_Sca352/StiffMa         0             NaN              NaN             NaN         NaN         NaN
+    StiffMa2_WIN_Sca353/StiffMa         0             NaN              NaN             NaN         NaN         NaN
+    StiffMa2_WIN_Sca354/StiffMa         0             NaN              NaN             NaN         NaN         NaN
+    StiffMa2_WIN_Sca355/StiffMa         0             NaN              NaN             NaN         NaN         NaN
+    StiffMa2_WIN_Sca356/StiffMa         0             NaN              NaN             NaN         NaN         NaN
+    StiffMa2_WIN_Sca357/StiffMa         0             NaN              NaN             NaN         NaN         NaN
+    StiffMa2_WIN_Sca358/StiffMa         0             NaN              NaN             NaN         NaN         NaN
+    StiffMa2_WIN_Sca359/StiffMa         0             NaN              NaN             NaN         NaN         NaN
+    StiffMa2_WIN_Sca360/StiffMa         0             NaN              NaN             NaN         NaN         NaN
+

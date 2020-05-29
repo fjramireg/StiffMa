@@ -19,12 +19,21 @@ fprintf(fileID,'sets.nel = %d;\n',sets.nel^3);
 %% 'Scalar'
 if strcmp(sets.prob_type,'Scalar')
     fprintf(fileID,"sets.sz = %d;\n",36);
-    fprintf(fileID,"sets.edof = %d;\n",8);    
+    fprintf(fileID,"sets.edof = %d;\n",8);
     
     % 'Scalar'-'CPU'
     if strcmp(sets.proc_type,'CPU')
+        if sets.nel^3 < 50000  % Warm ups the CPU code for few elements
+            fprintf(fileID,'[iK, jK] = Index_ssa(elements, sets);\n');
+            fprintf(fileID,"[iK, jK] = Index_sa(elements', sets);\n");
+            fprintf(fileID,'[iK, jK] = Index_sssa(elements, sets);\n');
+        end
         fprintf(fileID,'\n%s\n','%% Index-CPU-Scalar');
         fprintf(fileID,'[iK, jK] = Index_ssa(elements, sets);\n');
+        
+        % 'Scalar'-'CPU'-'Vectorized'
+        fprintf(fileID,'\n%s\n','%% Index-CPU-Scalar-Vectorized');
+        fprintf(fileID,"[iK, jK] = Index_sa(elements', sets);\n");
         
         % 'Scalar'-'CPU'-'Symmetry'
         fprintf(fileID,'\n%s\n','%% Index-CPU-Scalar-Symmetry');
@@ -37,6 +46,9 @@ if strcmp(sets.prob_type,'Scalar')
         fprintf(fileID,"sets.numSMs   = d.MultiprocessorCount;\n");
         fprintf(fileID,"sets.WarpSize = d.SIMDWidth;\n");
         fprintf(fileID,"elementsGPU = gpuArray(elements');\n");
+        if sets.nel^3 < 50000  % Warm ups the GPU code for few elements
+            fprintf(fileID,'[iKd, jKd] = Index_spsa(elementsGPU, sets);\n');
+        end
         fprintf(fileID,'\n%s\n','%% Index-GPU-Scalar-Symmetry');
         fprintf(fileID,'[iKd, jKd] = Index_spsa(elementsGPU, sets);\n');
         fprintf(fileID,'wait(d);\n');
@@ -53,8 +65,17 @@ elseif strcmp(sets.prob_type,'Vector')
     
     % 'Vector'-'CPU'
     if strcmp(sets.proc_type,'CPU')
+        if sets.nel^3 < 50000  % Warm ups the CPU code for few elements
+            fprintf(fileID,'[iK, jK] = Index_vsa(elements, sets);\n');
+            fprintf(fileID,"[iK, jK] = Index_va(elements', sets);\n");
+            fprintf(fileID,'[iK, jK] = Index_vssa(elements, sets);\n');
+        end
         fprintf(fileID,'\n%s\n','%% Index-CPU-Vector');
         fprintf(fileID,'[iK, jK] = Index_vsa(elements, sets);\n');
+        
+        % 'Vector'-'CPU'-'Vectorized'
+        fprintf(fileID,'\n%s\n','%% Index-CPU-Vector-Vectorized');
+        fprintf(fileID,"[iK, jK] = Index_va(elements', sets);\n");
         
         % 'Vector'-'CPU'-'Symmetry'
         fprintf(fileID,'\n%s\n','%% Index-CPU-Vector-Symmetry');
@@ -67,6 +88,9 @@ elseif strcmp(sets.prob_type,'Vector')
         fprintf(fileID,"sets.numSMs   = d.MultiprocessorCount;\n");
         fprintf(fileID,"sets.WarpSize = d.SIMDWidth;\n");
         fprintf(fileID,"elementsGPU = gpuArray(elements');\n");
+        if sets.nel^3 < 50000  % Warm ups the GPU code for few elements
+            fprintf(fileID,'[iKd, jKd] = Index_vpsa(elementsGPU, sets);\n');
+        end
         fprintf(fileID,'\n%s\n','%% Index-GPU-Vector-Symmetry');
         fprintf(fileID,'[iKd, jKd] = Index_vpsa(elementsGPU, sets);\n');
         fprintf(fileID,'wait(d);\n');

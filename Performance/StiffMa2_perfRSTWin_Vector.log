@@ -1,0 +1,1909 @@
+[Warning: Directory already exists.] 
+[> In runStiffMaTest2 (line 28)] 
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In parallel.internal.gpu.selectDevice
+  In parallel.gpu/GPUDevice/current (line 44)
+  In gpuDevice (line 23)
+  In runStiffMaTest2 (line 35)] 
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 10x10x10 (1000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running StiffMa2_WIN_Vec10
+	Mesh created successfully with 1000 Hex8 elements and 1331 nodes!
+
+The global stiffness matrix will be computed with 1 chunk(s).
+Available memory on GPU before computations begin (MB): 3498.4526
+Processing the VECTOR problem with 10x10x10 elements
+.......... .......... ...
+Done StiffMa2_WIN_Vec10
+__________
+
+  TimeResult with properties:
+
+            Name: 'StiffMa2_WIN_Vec10/StiffMa'
+           Valid: 1
+         Samples: [19x7 table]
+    TestActivity: [23x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   1.639 seconds testing time.
+
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In runStiffMaTest2 (line 103)] 
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 20x20x20 (8000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running StiffMa2_WIN_Vec20
+	Mesh created successfully with 8000 Hex8 elements and 9261 nodes!
+
+The global stiffness matrix will be computed with 1 chunk(s).
+Available memory on GPU before computations begin (MB): 3498.4526
+Processing the VECTOR problem with 20x20x20 elements
+........
+Done StiffMa2_WIN_Vec20
+__________
+
+  TimeResult with properties:
+
+            Name: 'StiffMa2_WIN_Vec20/StiffMa'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   1.2341 seconds testing time.
+
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In runStiffMaTest2 (line 103)] 
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 40x40x40 (64000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running StiffMa2_WIN_Vec40
+	Mesh created successfully with 64000 Hex8 elements and 68921 nodes!
+
+The global stiffness matrix will be computed with 1 chunk(s).
+Available memory on GPU before computations begin (MB): 3498.4526
+Processing the VECTOR problem with 40x40x40 elements
+........
+Done StiffMa2_WIN_Vec40
+__________
+
+  TimeResult with properties:
+
+            Name: 'StiffMa2_WIN_Vec40/StiffMa'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   6.1475 seconds testing time.
+
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In runStiffMaTest2 (line 103)] 
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 80x80x80 (512000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running StiffMa2_WIN_Vec80
+	Mesh created successfully with 512000 Hex8 elements and 531441 nodes!
+
+The global stiffness matrix will be computed with 5 chunk(s).
+Available memory on GPU before computations begin (MB): 3498.4526
+Processing the VECTOR problem with 80x80x80 elements
+	 Processing Chunk 1 of 5...
+	 Processing Chunk 2 of 5...
+	 Processing Chunk 3 of 5...
+	 Processing Chunk 4 of 5...
+	 Processing Chunk 5 of 5...
+.	 Processing Chunk 1 of 5...
+	 Processing Chunk 2 of 5...
+	 Processing Chunk 3 of 5...
+	 Processing Chunk 4 of 5...
+	 Processing Chunk 5 of 5...
+.	 Processing Chunk 1 of 5...
+	 Processing Chunk 2 of 5...
+	 Processing Chunk 3 of 5...
+	 Processing Chunk 4 of 5...
+	 Processing Chunk 5 of 5...
+.	 Processing Chunk 1 of 5...
+	 Processing Chunk 2 of 5...
+	 Processing Chunk 3 of 5...
+	 Processing Chunk 4 of 5...
+	 Processing Chunk 5 of 5...
+.	 Processing Chunk 1 of 5...
+	 Processing Chunk 2 of 5...
+	 Processing Chunk 3 of 5...
+	 Processing Chunk 4 of 5...
+	 Processing Chunk 5 of 5...
+.	 Processing Chunk 1 of 5...
+	 Processing Chunk 2 of 5...
+	 Processing Chunk 3 of 5...
+	 Processing Chunk 4 of 5...
+	 Processing Chunk 5 of 5...
+.	 Processing Chunk 1 of 5...
+	 Processing Chunk 2 of 5...
+	 Processing Chunk 3 of 5...
+	 Processing Chunk 4 of 5...
+	 Processing Chunk 5 of 5...
+.	 Processing Chunk 1 of 5...
+	 Processing Chunk 2 of 5...
+	 Processing Chunk 3 of 5...
+	 Processing Chunk 4 of 5...
+	 Processing Chunk 5 of 5...
+.
+Done StiffMa2_WIN_Vec80
+__________
+
+  TimeResult with properties:
+
+            Name: 'StiffMa2_WIN_Vec80/StiffMa'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   63.5995 seconds testing time.
+
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In runStiffMaTest2 (line 103)] 
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 160x160x160 (4096000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running StiffMa2_WIN_Vec160
+	Mesh created successfully with 4096000 Hex8 elements and 4173281 nodes!
+
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In StiffMa2_WIN_Vec160 (line 44)]
+
+================================================================================
+Error occurred while setting up or tearing down StiffMa2_WIN_Vec160.
+As a result, all StiffMa2_WIN_Vec160 tests failed and did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    ''
+    --------------
+    Error Details:
+    --------------
+    Error using StiffMa2_WIN_Vec160 (line 45)
+    No enough memory on the GPU to process the mesh.
+================================================================================
+
+Done StiffMa2_WIN_Vec160
+__________
+
+Failure Summary:
+
+     Name                         Failed  Incomplete  Reason(s)
+    ============================================================
+     StiffMa2_WIN_Vec160/StiffMa    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'StiffMa2_WIN_Vec160/StiffMa'
+           Valid: 0
+         Samples: [0x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   1.1465 seconds testing time.
+
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In runStiffMaTest2 (line 103)] 
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 161x161x161 (4173281)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running StiffMa2_WIN_Vec161
+	Mesh created successfully with 4173281 Hex8 elements and 4251528 nodes!
+
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In StiffMa2_WIN_Vec161 (line 44)]
+
+================================================================================
+Error occurred while setting up or tearing down StiffMa2_WIN_Vec161.
+As a result, all StiffMa2_WIN_Vec161 tests failed and did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    ''
+    --------------
+    Error Details:
+    --------------
+    Error using StiffMa2_WIN_Vec161 (line 45)
+    No enough memory on the GPU to process the mesh.
+================================================================================
+
+Done StiffMa2_WIN_Vec161
+__________
+
+Failure Summary:
+
+     Name                         Failed  Incomplete  Reason(s)
+    ============================================================
+     StiffMa2_WIN_Vec161/StiffMa    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'StiffMa2_WIN_Vec161/StiffMa'
+           Valid: 0
+         Samples: [0x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   1.1444 seconds testing time.
+
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In runStiffMaTest2 (line 103)] 
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 162x162x162 (4251528)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running StiffMa2_WIN_Vec162
+	Mesh created successfully with 4251528 Hex8 elements and 4330747 nodes!
+
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In StiffMa2_WIN_Vec162 (line 44)]
+
+================================================================================
+Error occurred while setting up or tearing down StiffMa2_WIN_Vec162.
+As a result, all StiffMa2_WIN_Vec162 tests failed and did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    ''
+    --------------
+    Error Details:
+    --------------
+    Error using StiffMa2_WIN_Vec162 (line 45)
+    No enough memory on the GPU to process the mesh.
+================================================================================
+
+Done StiffMa2_WIN_Vec162
+__________
+
+Failure Summary:
+
+     Name                         Failed  Incomplete  Reason(s)
+    ============================================================
+     StiffMa2_WIN_Vec162/StiffMa    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'StiffMa2_WIN_Vec162/StiffMa'
+           Valid: 0
+         Samples: [0x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   1.0751 seconds testing time.
+
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In runStiffMaTest2 (line 103)] 
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 163x163x163 (4330747)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running StiffMa2_WIN_Vec163
+	Mesh created successfully with 4330747 Hex8 elements and 4410944 nodes!
+
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In StiffMa2_WIN_Vec163 (line 44)]
+
+================================================================================
+Error occurred while setting up or tearing down StiffMa2_WIN_Vec163.
+As a result, all StiffMa2_WIN_Vec163 tests failed and did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    ''
+    --------------
+    Error Details:
+    --------------
+    Error using StiffMa2_WIN_Vec163 (line 45)
+    No enough memory on the GPU to process the mesh.
+================================================================================
+
+Done StiffMa2_WIN_Vec163
+__________
+
+Failure Summary:
+
+     Name                         Failed  Incomplete  Reason(s)
+    ============================================================
+     StiffMa2_WIN_Vec163/StiffMa    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'StiffMa2_WIN_Vec163/StiffMa'
+           Valid: 0
+         Samples: [0x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   1.0731 seconds testing time.
+
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In runStiffMaTest2 (line 103)] 
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 164x164x164 (4410944)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running StiffMa2_WIN_Vec164
+	Mesh created successfully with 4410944 Hex8 elements and 4492125 nodes!
+
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In StiffMa2_WIN_Vec164 (line 44)]
+
+================================================================================
+Error occurred while setting up or tearing down StiffMa2_WIN_Vec164.
+As a result, all StiffMa2_WIN_Vec164 tests failed and did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    ''
+    --------------
+    Error Details:
+    --------------
+    Error using StiffMa2_WIN_Vec164 (line 45)
+    No enough memory on the GPU to process the mesh.
+================================================================================
+
+Done StiffMa2_WIN_Vec164
+__________
+
+Failure Summary:
+
+     Name                         Failed  Incomplete  Reason(s)
+    ============================================================
+     StiffMa2_WIN_Vec164/StiffMa    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'StiffMa2_WIN_Vec164/StiffMa'
+           Valid: 0
+         Samples: [0x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   1.0793 seconds testing time.
+
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In runStiffMaTest2 (line 103)] 
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 165x165x165 (4492125)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running StiffMa2_WIN_Vec165
+	Mesh created successfully with 4492125 Hex8 elements and 4574296 nodes!
+
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In StiffMa2_WIN_Vec165 (line 44)]
+
+================================================================================
+Error occurred while setting up or tearing down StiffMa2_WIN_Vec165.
+As a result, all StiffMa2_WIN_Vec165 tests failed and did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    ''
+    --------------
+    Error Details:
+    --------------
+    Error using StiffMa2_WIN_Vec165 (line 45)
+    No enough memory on the GPU to process the mesh.
+================================================================================
+
+Done StiffMa2_WIN_Vec165
+__________
+
+Failure Summary:
+
+     Name                         Failed  Incomplete  Reason(s)
+    ============================================================
+     StiffMa2_WIN_Vec165/StiffMa    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'StiffMa2_WIN_Vec165/StiffMa'
+           Valid: 0
+         Samples: [0x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   1.128 seconds testing time.
+
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In runStiffMaTest2 (line 103)] 
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 166x166x166 (4574296)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running StiffMa2_WIN_Vec166
+	Mesh created successfully with 4574296 Hex8 elements and 4657463 nodes!
+
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In StiffMa2_WIN_Vec166 (line 44)]
+
+================================================================================
+Error occurred while setting up or tearing down StiffMa2_WIN_Vec166.
+As a result, all StiffMa2_WIN_Vec166 tests failed and did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    ''
+    --------------
+    Error Details:
+    --------------
+    Error using StiffMa2_WIN_Vec166 (line 45)
+    No enough memory on the GPU to process the mesh.
+================================================================================
+
+Done StiffMa2_WIN_Vec166
+__________
+
+Failure Summary:
+
+     Name                         Failed  Incomplete  Reason(s)
+    ============================================================
+     StiffMa2_WIN_Vec166/StiffMa    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'StiffMa2_WIN_Vec166/StiffMa'
+           Valid: 0
+         Samples: [0x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   1.0918 seconds testing time.
+
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In runStiffMaTest2 (line 103)] 
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 167x167x167 (4657463)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running StiffMa2_WIN_Vec167
+	Mesh created successfully with 4657463 Hex8 elements and 4741632 nodes!
+
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In StiffMa2_WIN_Vec167 (line 44)]
+
+================================================================================
+Error occurred while setting up or tearing down StiffMa2_WIN_Vec167.
+As a result, all StiffMa2_WIN_Vec167 tests failed and did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    ''
+    --------------
+    Error Details:
+    --------------
+    Error using StiffMa2_WIN_Vec167 (line 45)
+    No enough memory on the GPU to process the mesh.
+================================================================================
+
+Done StiffMa2_WIN_Vec167
+__________
+
+Failure Summary:
+
+     Name                         Failed  Incomplete  Reason(s)
+    ============================================================
+     StiffMa2_WIN_Vec167/StiffMa    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'StiffMa2_WIN_Vec167/StiffMa'
+           Valid: 0
+         Samples: [0x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   1.1677 seconds testing time.
+
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In runStiffMaTest2 (line 103)] 
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 168x168x168 (4741632)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running StiffMa2_WIN_Vec168
+	Mesh created successfully with 4741632 Hex8 elements and 4826809 nodes!
+
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In StiffMa2_WIN_Vec168 (line 44)]
+
+================================================================================
+Error occurred while setting up or tearing down StiffMa2_WIN_Vec168.
+As a result, all StiffMa2_WIN_Vec168 tests failed and did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    ''
+    --------------
+    Error Details:
+    --------------
+    Error using StiffMa2_WIN_Vec168 (line 45)
+    No enough memory on the GPU to process the mesh.
+================================================================================
+
+Done StiffMa2_WIN_Vec168
+__________
+
+Failure Summary:
+
+     Name                         Failed  Incomplete  Reason(s)
+    ============================================================
+     StiffMa2_WIN_Vec168/StiffMa    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'StiffMa2_WIN_Vec168/StiffMa'
+           Valid: 0
+         Samples: [0x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   1.1517 seconds testing time.
+
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In runStiffMaTest2 (line 103)] 
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 169x169x169 (4826809)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running StiffMa2_WIN_Vec169
+	Mesh created successfully with 4826809 Hex8 elements and 4913000 nodes!
+
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In StiffMa2_WIN_Vec169 (line 44)]
+
+================================================================================
+Error occurred while setting up or tearing down StiffMa2_WIN_Vec169.
+As a result, all StiffMa2_WIN_Vec169 tests failed and did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    ''
+    --------------
+    Error Details:
+    --------------
+    Error using StiffMa2_WIN_Vec169 (line 45)
+    No enough memory on the GPU to process the mesh.
+================================================================================
+
+Done StiffMa2_WIN_Vec169
+__________
+
+Failure Summary:
+
+     Name                         Failed  Incomplete  Reason(s)
+    ============================================================
+     StiffMa2_WIN_Vec169/StiffMa    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'StiffMa2_WIN_Vec169/StiffMa'
+           Valid: 0
+         Samples: [0x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   1.1591 seconds testing time.
+
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In runStiffMaTest2 (line 103)] 
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 170x170x170 (4913000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running StiffMa2_WIN_Vec170
+	Mesh created successfully with 4913000 Hex8 elements and 5000211 nodes!
+
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In StiffMa2_WIN_Vec170 (line 44)]
+
+================================================================================
+Error occurred while setting up or tearing down StiffMa2_WIN_Vec170.
+As a result, all StiffMa2_WIN_Vec170 tests failed and did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    ''
+    --------------
+    Error Details:
+    --------------
+    Error using StiffMa2_WIN_Vec170 (line 45)
+    No enough memory on the GPU to process the mesh.
+================================================================================
+
+Done StiffMa2_WIN_Vec170
+__________
+
+Failure Summary:
+
+     Name                         Failed  Incomplete  Reason(s)
+    ============================================================
+     StiffMa2_WIN_Vec170/StiffMa    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'StiffMa2_WIN_Vec170/StiffMa'
+           Valid: 0
+         Samples: [0x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   1.1314 seconds testing time.
+
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In runStiffMaTest2 (line 103)] 
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 171x171x171 (5000211)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running StiffMa2_WIN_Vec171
+	Mesh created successfully with 5000211 Hex8 elements and 5088448 nodes!
+
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In StiffMa2_WIN_Vec171 (line 44)]
+
+================================================================================
+Error occurred while setting up or tearing down StiffMa2_WIN_Vec171.
+As a result, all StiffMa2_WIN_Vec171 tests failed and did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    ''
+    --------------
+    Error Details:
+    --------------
+    Error using StiffMa2_WIN_Vec171 (line 45)
+    No enough memory on the GPU to process the mesh.
+================================================================================
+
+Done StiffMa2_WIN_Vec171
+__________
+
+Failure Summary:
+
+     Name                         Failed  Incomplete  Reason(s)
+    ============================================================
+     StiffMa2_WIN_Vec171/StiffMa    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'StiffMa2_WIN_Vec171/StiffMa'
+           Valid: 0
+         Samples: [0x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   1.1467 seconds testing time.
+
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In runStiffMaTest2 (line 103)] 
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 172x172x172 (5088448)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running StiffMa2_WIN_Vec172
+	Mesh created successfully with 5088448 Hex8 elements and 5177717 nodes!
+
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In StiffMa2_WIN_Vec172 (line 44)]
+
+================================================================================
+Error occurred while setting up or tearing down StiffMa2_WIN_Vec172.
+As a result, all StiffMa2_WIN_Vec172 tests failed and did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    ''
+    --------------
+    Error Details:
+    --------------
+    Error using StiffMa2_WIN_Vec172 (line 45)
+    No enough memory on the GPU to process the mesh.
+================================================================================
+
+Done StiffMa2_WIN_Vec172
+__________
+
+Failure Summary:
+
+     Name                         Failed  Incomplete  Reason(s)
+    ============================================================
+     StiffMa2_WIN_Vec172/StiffMa    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'StiffMa2_WIN_Vec172/StiffMa'
+           Valid: 0
+         Samples: [0x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   1.1829 seconds testing time.
+
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In runStiffMaTest2 (line 103)] 
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 173x173x173 (5177717)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running StiffMa2_WIN_Vec173
+	Mesh created successfully with 5177717 Hex8 elements and 5268024 nodes!
+
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In StiffMa2_WIN_Vec173 (line 44)]
+
+================================================================================
+Error occurred while setting up or tearing down StiffMa2_WIN_Vec173.
+As a result, all StiffMa2_WIN_Vec173 tests failed and did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    ''
+    --------------
+    Error Details:
+    --------------
+    Error using StiffMa2_WIN_Vec173 (line 45)
+    No enough memory on the GPU to process the mesh.
+================================================================================
+
+Done StiffMa2_WIN_Vec173
+__________
+
+Failure Summary:
+
+     Name                         Failed  Incomplete  Reason(s)
+    ============================================================
+     StiffMa2_WIN_Vec173/StiffMa    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'StiffMa2_WIN_Vec173/StiffMa'
+           Valid: 0
+         Samples: [0x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   1.1525 seconds testing time.
+
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In runStiffMaTest2 (line 103)] 
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 174x174x174 (5268024)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running StiffMa2_WIN_Vec174
+	Mesh created successfully with 5268024 Hex8 elements and 5359375 nodes!
+
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In StiffMa2_WIN_Vec174 (line 44)]
+
+================================================================================
+Error occurred while setting up or tearing down StiffMa2_WIN_Vec174.
+As a result, all StiffMa2_WIN_Vec174 tests failed and did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    ''
+    --------------
+    Error Details:
+    --------------
+    Error using StiffMa2_WIN_Vec174 (line 45)
+    No enough memory on the GPU to process the mesh.
+================================================================================
+
+Done StiffMa2_WIN_Vec174
+__________
+
+Failure Summary:
+
+     Name                         Failed  Incomplete  Reason(s)
+    ============================================================
+     StiffMa2_WIN_Vec174/StiffMa    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'StiffMa2_WIN_Vec174/StiffMa'
+           Valid: 0
+         Samples: [0x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   1.1508 seconds testing time.
+
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In runStiffMaTest2 (line 103)] 
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 175x175x175 (5359375)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running StiffMa2_WIN_Vec175
+	Mesh created successfully with 5359375 Hex8 elements and 5451776 nodes!
+
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In StiffMa2_WIN_Vec175 (line 44)]
+
+================================================================================
+Error occurred while setting up or tearing down StiffMa2_WIN_Vec175.
+As a result, all StiffMa2_WIN_Vec175 tests failed and did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    ''
+    --------------
+    Error Details:
+    --------------
+    Error using StiffMa2_WIN_Vec175 (line 45)
+    No enough memory on the GPU to process the mesh.
+================================================================================
+
+Done StiffMa2_WIN_Vec175
+__________
+
+Failure Summary:
+
+     Name                         Failed  Incomplete  Reason(s)
+    ============================================================
+     StiffMa2_WIN_Vec175/StiffMa    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'StiffMa2_WIN_Vec175/StiffMa'
+           Valid: 0
+         Samples: [0x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   1.1466 seconds testing time.
+
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In runStiffMaTest2 (line 103)] 
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 176x176x176 (5451776)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running StiffMa2_WIN_Vec176
+	Mesh created successfully with 5451776 Hex8 elements and 5545233 nodes!
+
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In StiffMa2_WIN_Vec176 (line 44)]
+
+================================================================================
+Error occurred while setting up or tearing down StiffMa2_WIN_Vec176.
+As a result, all StiffMa2_WIN_Vec176 tests failed and did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    ''
+    --------------
+    Error Details:
+    --------------
+    Error using StiffMa2_WIN_Vec176 (line 45)
+    No enough memory on the GPU to process the mesh.
+================================================================================
+
+Done StiffMa2_WIN_Vec176
+__________
+
+Failure Summary:
+
+     Name                         Failed  Incomplete  Reason(s)
+    ============================================================
+     StiffMa2_WIN_Vec176/StiffMa    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'StiffMa2_WIN_Vec176/StiffMa'
+           Valid: 0
+         Samples: [0x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   1.1718 seconds testing time.
+
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In runStiffMaTest2 (line 103)] 
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 177x177x177 (5545233)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running StiffMa2_WIN_Vec177
+	Mesh created successfully with 5545233 Hex8 elements and 5639752 nodes!
+
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In StiffMa2_WIN_Vec177 (line 44)]
+
+================================================================================
+Error occurred while setting up or tearing down StiffMa2_WIN_Vec177.
+As a result, all StiffMa2_WIN_Vec177 tests failed and did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    ''
+    --------------
+    Error Details:
+    --------------
+    Error using StiffMa2_WIN_Vec177 (line 45)
+    No enough memory on the GPU to process the mesh.
+================================================================================
+
+Done StiffMa2_WIN_Vec177
+__________
+
+Failure Summary:
+
+     Name                         Failed  Incomplete  Reason(s)
+    ============================================================
+     StiffMa2_WIN_Vec177/StiffMa    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'StiffMa2_WIN_Vec177/StiffMa'
+           Valid: 0
+         Samples: [0x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   1.2934 seconds testing time.
+
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In runStiffMaTest2 (line 103)] 
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 178x178x178 (5639752)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running StiffMa2_WIN_Vec178
+	Mesh created successfully with 5639752 Hex8 elements and 5735339 nodes!
+
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In StiffMa2_WIN_Vec178 (line 44)]
+
+================================================================================
+Error occurred while setting up or tearing down StiffMa2_WIN_Vec178.
+As a result, all StiffMa2_WIN_Vec178 tests failed and did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    ''
+    --------------
+    Error Details:
+    --------------
+    Error using StiffMa2_WIN_Vec178 (line 45)
+    No enough memory on the GPU to process the mesh.
+================================================================================
+
+Done StiffMa2_WIN_Vec178
+__________
+
+Failure Summary:
+
+     Name                         Failed  Incomplete  Reason(s)
+    ============================================================
+     StiffMa2_WIN_Vec178/StiffMa    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'StiffMa2_WIN_Vec178/StiffMa'
+           Valid: 0
+         Samples: [0x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   1.1879 seconds testing time.
+
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In runStiffMaTest2 (line 103)] 
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 179x179x179 (5735339)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running StiffMa2_WIN_Vec179
+	Mesh created successfully with 5735339 Hex8 elements and 5832000 nodes!
+
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In StiffMa2_WIN_Vec179 (line 44)]
+
+================================================================================
+Error occurred while setting up or tearing down StiffMa2_WIN_Vec179.
+As a result, all StiffMa2_WIN_Vec179 tests failed and did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    ''
+    --------------
+    Error Details:
+    --------------
+    Error using StiffMa2_WIN_Vec179 (line 45)
+    No enough memory on the GPU to process the mesh.
+================================================================================
+
+Done StiffMa2_WIN_Vec179
+__________
+
+Failure Summary:
+
+     Name                         Failed  Incomplete  Reason(s)
+    ============================================================
+     StiffMa2_WIN_Vec179/StiffMa    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'StiffMa2_WIN_Vec179/StiffMa'
+           Valid: 0
+         Samples: [0x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   1.1776 seconds testing time.
+
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In runStiffMaTest2 (line 103)] 
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 180x180x180 (5832000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running StiffMa2_WIN_Vec180
+	Mesh created successfully with 5832000 Hex8 elements and 5929741 nodes!
+
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In StiffMa2_WIN_Vec180 (line 44)]
+
+================================================================================
+Error occurred while setting up or tearing down StiffMa2_WIN_Vec180.
+As a result, all StiffMa2_WIN_Vec180 tests failed and did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    ''
+    --------------
+    Error Details:
+    --------------
+    Error using StiffMa2_WIN_Vec180 (line 45)
+    No enough memory on the GPU to process the mesh.
+================================================================================
+
+Done StiffMa2_WIN_Vec180
+__________
+
+Failure Summary:
+
+     Name                         Failed  Incomplete  Reason(s)
+    ============================================================
+     StiffMa2_WIN_Vec180/StiffMa    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'StiffMa2_WIN_Vec180/StiffMa'
+           Valid: 0
+         Samples: [0x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   1.1842 seconds testing time.
+
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In runStiffMaTest2 (line 103)] 
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 181x181x181 (5929741)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running StiffMa2_WIN_Vec181
+	Mesh created successfully with 5929741 Hex8 elements and 6028568 nodes!
+
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In StiffMa2_WIN_Vec181 (line 44)]
+
+================================================================================
+Error occurred while setting up or tearing down StiffMa2_WIN_Vec181.
+As a result, all StiffMa2_WIN_Vec181 tests failed and did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    ''
+    --------------
+    Error Details:
+    --------------
+    Error using StiffMa2_WIN_Vec181 (line 45)
+    No enough memory on the GPU to process the mesh.
+================================================================================
+
+Done StiffMa2_WIN_Vec181
+__________
+
+Failure Summary:
+
+     Name                         Failed  Incomplete  Reason(s)
+    ============================================================
+     StiffMa2_WIN_Vec181/StiffMa    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'StiffMa2_WIN_Vec181/StiffMa'
+           Valid: 0
+         Samples: [0x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   1.2046 seconds testing time.
+
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In runStiffMaTest2 (line 103)] 
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 182x182x182 (6028568)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running StiffMa2_WIN_Vec182
+	Mesh created successfully with 6028568 Hex8 elements and 6128487 nodes!
+
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In StiffMa2_WIN_Vec182 (line 44)]
+
+================================================================================
+Error occurred while setting up or tearing down StiffMa2_WIN_Vec182.
+As a result, all StiffMa2_WIN_Vec182 tests failed and did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    ''
+    --------------
+    Error Details:
+    --------------
+    Error using StiffMa2_WIN_Vec182 (line 45)
+    No enough memory on the GPU to process the mesh.
+================================================================================
+
+Done StiffMa2_WIN_Vec182
+__________
+
+Failure Summary:
+
+     Name                         Failed  Incomplete  Reason(s)
+    ============================================================
+     StiffMa2_WIN_Vec182/StiffMa    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'StiffMa2_WIN_Vec182/StiffMa'
+           Valid: 0
+         Samples: [0x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   1.2243 seconds testing time.
+
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In runStiffMaTest2 (line 103)] 
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 183x183x183 (6128487)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running StiffMa2_WIN_Vec183
+	Mesh created successfully with 6128487 Hex8 elements and 6229504 nodes!
+
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In StiffMa2_WIN_Vec183 (line 44)]
+
+================================================================================
+Error occurred while setting up or tearing down StiffMa2_WIN_Vec183.
+As a result, all StiffMa2_WIN_Vec183 tests failed and did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    ''
+    --------------
+    Error Details:
+    --------------
+    Error using StiffMa2_WIN_Vec183 (line 45)
+    No enough memory on the GPU to process the mesh.
+================================================================================
+
+Done StiffMa2_WIN_Vec183
+__________
+
+Failure Summary:
+
+     Name                         Failed  Incomplete  Reason(s)
+    ============================================================
+     StiffMa2_WIN_Vec183/StiffMa    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'StiffMa2_WIN_Vec183/StiffMa'
+           Valid: 0
+         Samples: [0x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   1.2126 seconds testing time.
+
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In runStiffMaTest2 (line 103)] 
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 184x184x184 (6229504)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running StiffMa2_WIN_Vec184
+	Mesh created successfully with 6229504 Hex8 elements and 6331625 nodes!
+
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In StiffMa2_WIN_Vec184 (line 44)]
+
+================================================================================
+Error occurred while setting up or tearing down StiffMa2_WIN_Vec184.
+As a result, all StiffMa2_WIN_Vec184 tests failed and did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    ''
+    --------------
+    Error Details:
+    --------------
+    Error using StiffMa2_WIN_Vec184 (line 45)
+    No enough memory on the GPU to process the mesh.
+================================================================================
+
+Done StiffMa2_WIN_Vec184
+__________
+
+Failure Summary:
+
+     Name                         Failed  Incomplete  Reason(s)
+    ============================================================
+     StiffMa2_WIN_Vec184/StiffMa    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'StiffMa2_WIN_Vec184/StiffMa'
+           Valid: 0
+         Samples: [0x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   1.2129 seconds testing time.
+
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In runStiffMaTest2 (line 103)] 
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 185x185x185 (6331625)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running StiffMa2_WIN_Vec185
+	Mesh created successfully with 6331625 Hex8 elements and 6434856 nodes!
+
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In StiffMa2_WIN_Vec185 (line 44)]
+
+================================================================================
+Error occurred while setting up or tearing down StiffMa2_WIN_Vec185.
+As a result, all StiffMa2_WIN_Vec185 tests failed and did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    ''
+    --------------
+    Error Details:
+    --------------
+    Error using StiffMa2_WIN_Vec185 (line 45)
+    No enough memory on the GPU to process the mesh.
+================================================================================
+
+Done StiffMa2_WIN_Vec185
+__________
+
+Failure Summary:
+
+     Name                         Failed  Incomplete  Reason(s)
+    ============================================================
+     StiffMa2_WIN_Vec185/StiffMa    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'StiffMa2_WIN_Vec185/StiffMa'
+           Valid: 0
+         Samples: [0x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   1.2185 seconds testing time.
+
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In runStiffMaTest2 (line 103)] 
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 186x186x186 (6434856)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running StiffMa2_WIN_Vec186
+	Mesh created successfully with 6434856 Hex8 elements and 6539203 nodes!
+
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In StiffMa2_WIN_Vec186 (line 44)]
+
+================================================================================
+Error occurred while setting up or tearing down StiffMa2_WIN_Vec186.
+As a result, all StiffMa2_WIN_Vec186 tests failed and did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    ''
+    --------------
+    Error Details:
+    --------------
+    Error using StiffMa2_WIN_Vec186 (line 45)
+    No enough memory on the GPU to process the mesh.
+================================================================================
+
+Done StiffMa2_WIN_Vec186
+__________
+
+Failure Summary:
+
+     Name                         Failed  Incomplete  Reason(s)
+    ============================================================
+     StiffMa2_WIN_Vec186/StiffMa    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'StiffMa2_WIN_Vec186/StiffMa'
+           Valid: 0
+         Samples: [0x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   1.2258 seconds testing time.
+
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In runStiffMaTest2 (line 103)] 
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 187x187x187 (6539203)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running StiffMa2_WIN_Vec187
+	Mesh created successfully with 6539203 Hex8 elements and 6644672 nodes!
+
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In StiffMa2_WIN_Vec187 (line 44)]
+
+================================================================================
+Error occurred while setting up or tearing down StiffMa2_WIN_Vec187.
+As a result, all StiffMa2_WIN_Vec187 tests failed and did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    ''
+    --------------
+    Error Details:
+    --------------
+    Error using StiffMa2_WIN_Vec187 (line 45)
+    No enough memory on the GPU to process the mesh.
+================================================================================
+
+Done StiffMa2_WIN_Vec187
+__________
+
+Failure Summary:
+
+     Name                         Failed  Incomplete  Reason(s)
+    ============================================================
+     StiffMa2_WIN_Vec187/StiffMa    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'StiffMa2_WIN_Vec187/StiffMa'
+           Valid: 0
+         Samples: [0x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   1.2934 seconds testing time.
+
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In runStiffMaTest2 (line 103)] 
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 188x188x188 (6644672)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running StiffMa2_WIN_Vec188
+	Mesh created successfully with 6644672 Hex8 elements and 6751269 nodes!
+
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In StiffMa2_WIN_Vec188 (line 44)]
+
+================================================================================
+Error occurred while setting up or tearing down StiffMa2_WIN_Vec188.
+As a result, all StiffMa2_WIN_Vec188 tests failed and did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    ''
+    --------------
+    Error Details:
+    --------------
+    Error using StiffMa2_WIN_Vec188 (line 45)
+    No enough memory on the GPU to process the mesh.
+================================================================================
+
+Done StiffMa2_WIN_Vec188
+__________
+
+Failure Summary:
+
+     Name                         Failed  Incomplete  Reason(s)
+    ============================================================
+     StiffMa2_WIN_Vec188/StiffMa    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'StiffMa2_WIN_Vec188/StiffMa'
+           Valid: 0
+         Samples: [0x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   1.2787 seconds testing time.
+
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In runStiffMaTest2 (line 103)] 
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 189x189x189 (6751269)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running StiffMa2_WIN_Vec189
+	Mesh created successfully with 6751269 Hex8 elements and 6859000 nodes!
+
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In StiffMa2_WIN_Vec189 (line 44)]
+
+================================================================================
+Error occurred while setting up or tearing down StiffMa2_WIN_Vec189.
+As a result, all StiffMa2_WIN_Vec189 tests failed and did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    ''
+    --------------
+    Error Details:
+    --------------
+    Error using StiffMa2_WIN_Vec189 (line 45)
+    No enough memory on the GPU to process the mesh.
+================================================================================
+
+Done StiffMa2_WIN_Vec189
+__________
+
+Failure Summary:
+
+     Name                         Failed  Incomplete  Reason(s)
+    ============================================================
+     StiffMa2_WIN_Vec189/StiffMa    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'StiffMa2_WIN_Vec189/StiffMa'
+           Valid: 0
+         Samples: [0x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   1.325 seconds testing time.
+
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In runStiffMaTest2 (line 103)] 
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 190x190x190 (6859000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running StiffMa2_WIN_Vec190
+	Mesh created successfully with 6859000 Hex8 elements and 6967871 nodes!
+
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In StiffMa2_WIN_Vec190 (line 44)]
+
+================================================================================
+Error occurred while setting up or tearing down StiffMa2_WIN_Vec190.
+As a result, all StiffMa2_WIN_Vec190 tests failed and did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    ''
+    --------------
+    Error Details:
+    --------------
+    Error using StiffMa2_WIN_Vec190 (line 45)
+    No enough memory on the GPU to process the mesh.
+================================================================================
+
+Done StiffMa2_WIN_Vec190
+__________
+
+Failure Summary:
+
+     Name                         Failed  Incomplete  Reason(s)
+    ============================================================
+     StiffMa2_WIN_Vec190/StiffMa    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'StiffMa2_WIN_Vec190/StiffMa'
+           Valid: 0
+         Samples: [0x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   1.359 seconds testing time.
+
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In runStiffMaTest2 (line 103)] 
+
+
+A total of 35 time experiments was executed!
+Date and time at the beginning of the process: 	22-May-2020 06:51:25 
+Date and time at the end of the process: 	22-May-2020 06:54:06
+
+
+ans =
+
+  35x7 table
+
+               Name                SampleSize      Mean      StandardDeviation      Min        Median       Max   
+    ___________________________    __________    ________    _________________    ________    ________    ________
+
+    StiffMa2_WIN_Vec10/StiffMa         19         0.03664        0.0045882          0.0347    0.035233    0.055312
+    StiffMa2_WIN_Vec20/StiffMa          4        0.093458       0.00051469        0.093013     0.09333    0.094159
+    StiffMa2_WIN_Vec40/StiffMa          4         0.69921        0.0012233          0.6976     0.69945     0.70032
+    StiffMa2_WIN_Vec80/StiffMa          4          7.8946          0.01624          7.8728      7.8977      7.9101
+    StiffMa2_WIN_Vec160/StiffMa         0             NaN              NaN             NaN         NaN         NaN
+    StiffMa2_WIN_Vec161/StiffMa         0             NaN              NaN             NaN         NaN         NaN
+    StiffMa2_WIN_Vec162/StiffMa         0             NaN              NaN             NaN         NaN         NaN
+    StiffMa2_WIN_Vec163/StiffMa         0             NaN              NaN             NaN         NaN         NaN
+    StiffMa2_WIN_Vec164/StiffMa         0             NaN              NaN             NaN         NaN         NaN
+    StiffMa2_WIN_Vec165/StiffMa         0             NaN              NaN             NaN         NaN         NaN
+    StiffMa2_WIN_Vec166/StiffMa         0             NaN              NaN             NaN         NaN         NaN
+    StiffMa2_WIN_Vec167/StiffMa         0             NaN              NaN             NaN         NaN         NaN
+    StiffMa2_WIN_Vec168/StiffMa         0             NaN              NaN             NaN         NaN         NaN
+    StiffMa2_WIN_Vec169/StiffMa         0             NaN              NaN             NaN         NaN         NaN
+    StiffMa2_WIN_Vec170/StiffMa         0             NaN              NaN             NaN         NaN         NaN
+    StiffMa2_WIN_Vec171/StiffMa         0             NaN              NaN             NaN         NaN         NaN
+    StiffMa2_WIN_Vec172/StiffMa         0             NaN              NaN             NaN         NaN         NaN
+    StiffMa2_WIN_Vec173/StiffMa         0             NaN              NaN             NaN         NaN         NaN
+    StiffMa2_WIN_Vec174/StiffMa         0             NaN              NaN             NaN         NaN         NaN
+    StiffMa2_WIN_Vec175/StiffMa         0             NaN              NaN             NaN         NaN         NaN
+    StiffMa2_WIN_Vec176/StiffMa         0             NaN              NaN             NaN         NaN         NaN
+    StiffMa2_WIN_Vec177/StiffMa         0             NaN              NaN             NaN         NaN         NaN
+    StiffMa2_WIN_Vec178/StiffMa         0             NaN              NaN             NaN         NaN         NaN
+    StiffMa2_WIN_Vec179/StiffMa         0             NaN              NaN             NaN         NaN         NaN
+    StiffMa2_WIN_Vec180/StiffMa         0             NaN              NaN             NaN         NaN         NaN
+    StiffMa2_WIN_Vec181/StiffMa         0             NaN              NaN             NaN         NaN         NaN
+    StiffMa2_WIN_Vec182/StiffMa         0             NaN              NaN             NaN         NaN         NaN
+    StiffMa2_WIN_Vec183/StiffMa         0             NaN              NaN             NaN         NaN         NaN
+    StiffMa2_WIN_Vec184/StiffMa         0             NaN              NaN             NaN         NaN         NaN
+    StiffMa2_WIN_Vec185/StiffMa         0             NaN              NaN             NaN         NaN         NaN
+    StiffMa2_WIN_Vec186/StiffMa         0             NaN              NaN             NaN         NaN         NaN
+    StiffMa2_WIN_Vec187/StiffMa         0             NaN              NaN             NaN         NaN         NaN
+    StiffMa2_WIN_Vec188/StiffMa         0             NaN              NaN             NaN         NaN         NaN
+    StiffMa2_WIN_Vec189/StiffMa         0             NaN              NaN             NaN         NaN         NaN
+    StiffMa2_WIN_Vec190/StiffMa         0             NaN              NaN             NaN         NaN         NaN
+

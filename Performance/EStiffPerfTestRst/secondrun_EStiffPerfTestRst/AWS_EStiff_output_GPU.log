@@ -1,0 +1,1071 @@
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 10x10x10 (1000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running ETestLNX_GSs32_10
+	Mesh created successfully with 1000 Hex8 elements and 1331 nodes!
+
+..........
+Done ETestLNX_GSs32_10
+__________
+
+  TimeResult with properties:
+
+            Name: 'ETestLNX_GSs32_10/EStiff_GPU_Scalar_Symmetry'
+           Valid: 1
+         Samples: [6x7 table]
+    TestActivity: [10x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   0.32929 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 10x10x10 (1000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running ETestLNX_GVs32_10
+	Mesh created successfully with 1000 Hex8 elements and 1331 nodes!
+
+........
+Done ETestLNX_GVs32_10
+__________
+
+  TimeResult with properties:
+
+            Name: 'ETestLNX_GVs32_10/EStiff_GPU_Vector_Symmetry'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   0.66505 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 10x10x10 (1000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running ETestLNX_GSd32_10
+	Mesh created successfully with 1000 Hex8 elements and 1331 nodes!
+
+.......... .......... .......... .......... ..........
+.......... .......... .......... .......... ..........
+.......... .......... .......... .......... ..........
+.......... .......... .......... .......... ..........
+.......... .......... .......... .......... ..........
+..........[Warning: Target Relative Margin of Error not met after running the MaxSamples
+for ETestLNX_GSd32_10/EStiff_GPU_Scalar_Symmetry.] 
+
+Done ETestLNX_GSd32_10
+__________
+
+  TimeResult with properties:
+
+            Name: 'ETestLNX_GSd32_10/EStiff_GPU_Scalar_Symmetry'
+           Valid: 1
+         Samples: [256x7 table]
+    TestActivity: [260x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   3.1047 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 10x10x10 (1000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running ETestLNX_GVd32_10
+	Mesh created successfully with 1000 Hex8 elements and 1331 nodes!
+
+.......... .......... .......... .......... ..........
+.......... .......... .......... .......... ..........
+.......... .......... .......... .......... ..........
+.......... .......... .......... .......... ..........
+.......... .......... .......... .......... ..........
+..........[Warning: Target Relative Margin of Error not met after running the MaxSamples
+for ETestLNX_GVd32_10/EStiff_GPU_Vector_Symmetry.] 
+
+Done ETestLNX_GVd32_10
+__________
+
+  TimeResult with properties:
+
+            Name: 'ETestLNX_GVd32_10/EStiff_GPU_Vector_Symmetry'
+           Valid: 1
+         Samples: [256x7 table]
+    TestActivity: [260x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   4.2922 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 20x20x20 (8000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running ETestLNX_GSs32_20
+	Mesh created successfully with 8000 Hex8 elements and 9261 nodes!
+
+.......... .......... .......... .......... ..........
+.......... .......... .......... .......... ..........
+.......... .......... .......... .......... ..........
+.......... .......... .......... .......... ..........
+.......... .......... .......... .......... ..........
+..........[Warning: Target Relative Margin of Error not met after running the MaxSamples
+for ETestLNX_GSs32_20/EStiff_GPU_Scalar_Symmetry.] 
+
+Done ETestLNX_GSs32_20
+__________
+
+  TimeResult with properties:
+
+            Name: 'ETestLNX_GSs32_20/EStiff_GPU_Scalar_Symmetry'
+           Valid: 1
+         Samples: [256x7 table]
+    TestActivity: [260x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   2.8271 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 20x20x20 (8000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running ETestLNX_GVs32_20
+	Mesh created successfully with 8000 Hex8 elements and 9261 nodes!
+
+.......... .......... .......... .......... ..........
+.......... .......... .......... .......... ..........
+.......... .......... .......... .......... ..........
+.......... .......... .......... .......... ..........
+.......... .......... .......... .......... ..........
+..........[Warning: Target Relative Margin of Error not met after running the MaxSamples
+for ETestLNX_GVs32_20/EStiff_GPU_Vector_Symmetry.] 
+
+Done ETestLNX_GVs32_20
+__________
+
+  TimeResult with properties:
+
+            Name: 'ETestLNX_GVs32_20/EStiff_GPU_Vector_Symmetry'
+           Valid: 1
+         Samples: [256x7 table]
+    TestActivity: [260x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   4.9735 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 20x20x20 (8000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running ETestLNX_GSd32_20
+	Mesh created successfully with 8000 Hex8 elements and 9261 nodes!
+
+.......... .......... .......... .......... ..........
+.......... .......... .......... .......... ..........
+.......... .......... .......... .......... ..........
+.......... .......... .......... .......... ..........
+.......... .......... .......... .......... ..........
+..........[Warning: Target Relative Margin of Error not met after running the MaxSamples
+for ETestLNX_GSd32_20/EStiff_GPU_Scalar_Symmetry.] 
+
+Done ETestLNX_GSd32_20
+__________
+
+  TimeResult with properties:
+
+            Name: 'ETestLNX_GSd32_20/EStiff_GPU_Scalar_Symmetry'
+           Valid: 1
+         Samples: [256x7 table]
+    TestActivity: [260x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   3.3484 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 20x20x20 (8000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running ETestLNX_GVd32_20
+	Mesh created successfully with 8000 Hex8 elements and 9261 nodes!
+
+.......... .......... .......... .......... ..........
+.......... .......... .......... .......... ..........
+.......... .......... .......... .......... ..........
+.......... .......... .......... .......... ..........
+.......... .......... .......... .......... ..........
+..........[Warning: Target Relative Margin of Error not met after running the MaxSamples
+for ETestLNX_GVd32_20/EStiff_GPU_Vector_Symmetry.] 
+
+Done ETestLNX_GVd32_20
+__________
+
+  TimeResult with properties:
+
+            Name: 'ETestLNX_GVd32_20/EStiff_GPU_Vector_Symmetry'
+           Valid: 1
+         Samples: [256x7 table]
+    TestActivity: [260x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   4.7877 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 40x40x40 (64000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running ETestLNX_GSs32_40
+	Mesh created successfully with 64000 Hex8 elements and 68921 nodes!
+
+.......... .......... .......... .......... ..........
+.......... .......... .......... .......... ..........
+.......... .......... .......... .......... ..........
+.......... .......... .......... .......... ..........
+.......... .......... .......... .......... ..........
+..........[Warning: Target Relative Margin of Error not met after running the MaxSamples
+for ETestLNX_GSs32_40/EStiff_GPU_Scalar_Symmetry.] 
+
+Done ETestLNX_GSs32_40
+__________
+
+  TimeResult with properties:
+
+            Name: 'ETestLNX_GSs32_40/EStiff_GPU_Scalar_Symmetry'
+           Valid: 1
+         Samples: [256x7 table]
+    TestActivity: [260x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   2.8315 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 40x40x40 (64000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running ETestLNX_GVs32_40
+	Mesh created successfully with 64000 Hex8 elements and 68921 nodes!
+
+........
+Done ETestLNX_GVs32_40
+__________
+
+  TimeResult with properties:
+
+            Name: 'ETestLNX_GVs32_40/EStiff_GPU_Vector_Symmetry'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   0.8572 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 40x40x40 (64000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running ETestLNX_GSd32_40
+	Mesh created successfully with 64000 Hex8 elements and 68921 nodes!
+
+........
+Done ETestLNX_GSd32_40
+__________
+
+  TimeResult with properties:
+
+            Name: 'ETestLNX_GSd32_40/EStiff_GPU_Scalar_Symmetry'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   0.40095 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 40x40x40 (64000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running ETestLNX_GVd32_40
+	Mesh created successfully with 64000 Hex8 elements and 68921 nodes!
+
+........
+Done ETestLNX_GVd32_40
+__________
+
+  TimeResult with properties:
+
+            Name: 'ETestLNX_GVd32_40/EStiff_GPU_Vector_Symmetry'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   0.73919 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 80x80x80 (512000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running ETestLNX_GSs32_80
+	Mesh created successfully with 512000 Hex8 elements and 531441 nodes!
+
+.......... ........
+Done ETestLNX_GSs32_80
+__________
+
+  TimeResult with properties:
+
+            Name: 'ETestLNX_GSs32_80/EStiff_GPU_Scalar_Symmetry'
+           Valid: 1
+         Samples: [14x7 table]
+    TestActivity: [18x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   0.88273 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 80x80x80 (512000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running ETestLNX_GVs32_80
+	Mesh created successfully with 512000 Hex8 elements and 531441 nodes!
+
+........
+Done ETestLNX_GVs32_80
+__________
+
+  TimeResult with properties:
+
+            Name: 'ETestLNX_GVs32_80/EStiff_GPU_Vector_Symmetry'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   4.0166 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 80x80x80 (512000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running ETestLNX_GSd32_80
+	Mesh created successfully with 512000 Hex8 elements and 531441 nodes!
+
+........
+Done ETestLNX_GSd32_80
+__________
+
+  TimeResult with properties:
+
+            Name: 'ETestLNX_GSd32_80/EStiff_GPU_Scalar_Symmetry'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   0.4553 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 80x80x80 (512000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running ETestLNX_GVd32_80
+	Mesh created successfully with 512000 Hex8 elements and 531441 nodes!
+
+........
+Done ETestLNX_GVd32_80
+__________
+
+  TimeResult with properties:
+
+            Name: 'ETestLNX_GVd32_80/EStiff_GPU_Vector_Symmetry'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   2.9478 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 160x160x160 (4096000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running ETestLNX_GSs32_160
+	Mesh created successfully with 4096000 Hex8 elements and 4173281 nodes!
+
+.......... .......... .......... .......... ..........
+.......... .......... .......... .......... ..........
+.......... .......... .......... .......... ..........
+..........
+Done ETestLNX_GSs32_160
+__________
+
+  TimeResult with properties:
+
+            Name: 'ETestLNX_GSs32_160/EStiff_GPU_Scalar_Symmetry'
+           Valid: 1
+         Samples: [156x7 table]
+    TestActivity: [160x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   3.4668 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 160x160x160 (4096000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running ETestLNX_GVs32_160
+	Mesh created successfully with 4096000 Hex8 elements and 4173281 nodes!
+
+........
+Done ETestLNX_GVs32_160
+__________
+
+  TimeResult with properties:
+
+            Name: 'ETestLNX_GVs32_160/EStiff_GPU_Vector_Symmetry'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   30.9521 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 160x160x160 (4096000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running ETestLNX_GSd32_160
+	Mesh created successfully with 4096000 Hex8 elements and 4173281 nodes!
+
+.......... .......... .......... .......... ..........
+.......... .......... .......... .......... ..........
+....
+Done ETestLNX_GSd32_160
+__________
+
+  TimeResult with properties:
+
+            Name: 'ETestLNX_GSd32_160/EStiff_GPU_Scalar_Symmetry'
+           Valid: 1
+         Samples: [100x7 table]
+    TestActivity: [104x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   3.4008 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 160x160x160 (4096000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running ETestLNX_GVd32_160
+	Mesh created successfully with 4096000 Hex8 elements and 4173281 nodes!
+
+........
+Done ETestLNX_GVd32_160
+__________
+
+  TimeResult with properties:
+
+            Name: 'ETestLNX_GVd32_160/EStiff_GPU_Vector_Symmetry'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   22.9723 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 320x320x320 (32768000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running ETestLNX_GSs32_320
+	Mesh created successfully with 32768000 Hex8 elements and 33076161 nodes!
+
+........
+Done ETestLNX_GSs32_320
+__________
+
+  TimeResult with properties:
+
+            Name: 'ETestLNX_GSs32_320/EStiff_GPU_Scalar_Symmetry'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   5.0768 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 320x320x320 (32768000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running ETestLNX_GVs32_320
+	Mesh created successfully with 32768000 Hex8 elements and 33076161 nodes!
+
+
+================================================================================
+Error occurred in ETestLNX_GVs32_320/EStiff_GPU_Vector_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in eStiff_vpsa (line 62)
+    Ke = feval(kernel, elements, nodes, zeros(sets.sz*sets.nel, 1, sets.dTN,
+    'gpuArray'));% GPU code execution
+    
+    Error in ETestLNX_GVs32_320 (line 18)
+    Ke = eStiff_vpsa(elementsGPU, nodesGPU, MP, sets);
+================================================================================
+.
+================================================================================
+Error occurred in ETestLNX_GVs32_320/EStiff_GPU_Vector_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in eStiff_vpsa (line 62)
+    Ke = feval(kernel, elements, nodes, zeros(sets.sz*sets.nel, 1, sets.dTN,
+    'gpuArray'));% GPU code execution
+    
+    Error in ETestLNX_GVs32_320 (line 18)
+    Ke = eStiff_vpsa(elementsGPU, nodesGPU, MP, sets);
+================================================================================
+.
+================================================================================
+Error occurred in ETestLNX_GVs32_320/EStiff_GPU_Vector_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in eStiff_vpsa (line 62)
+    Ke = feval(kernel, elements, nodes, zeros(sets.sz*sets.nel, 1, sets.dTN,
+    'gpuArray'));% GPU code execution
+    
+    Error in ETestLNX_GVs32_320 (line 18)
+    Ke = eStiff_vpsa(elementsGPU, nodesGPU, MP, sets);
+================================================================================
+.
+================================================================================
+Error occurred in ETestLNX_GVs32_320/EStiff_GPU_Vector_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in eStiff_vpsa (line 62)
+    Ke = feval(kernel, elements, nodes, zeros(sets.sz*sets.nel, 1, sets.dTN,
+    'gpuArray'));% GPU code execution
+    
+    Error in ETestLNX_GVs32_320 (line 18)
+    Ke = eStiff_vpsa(elementsGPU, nodesGPU, MP, sets);
+================================================================================
+.
+================================================================================
+Error occurred in ETestLNX_GVs32_320/EStiff_GPU_Vector_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in eStiff_vpsa (line 62)
+    Ke = feval(kernel, elements, nodes, zeros(sets.sz*sets.nel, 1, sets.dTN,
+    'gpuArray'));% GPU code execution
+    
+    Error in ETestLNX_GVs32_320 (line 18)
+    Ke = eStiff_vpsa(elementsGPU, nodesGPU, MP, sets);
+================================================================================
+.
+================================================================================
+Error occurred in ETestLNX_GVs32_320/EStiff_GPU_Vector_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in eStiff_vpsa (line 62)
+    Ke = feval(kernel, elements, nodes, zeros(sets.sz*sets.nel, 1, sets.dTN,
+    'gpuArray'));% GPU code execution
+    
+    Error in ETestLNX_GVs32_320 (line 18)
+    Ke = eStiff_vpsa(elementsGPU, nodesGPU, MP, sets);
+================================================================================
+.
+================================================================================
+Error occurred in ETestLNX_GVs32_320/EStiff_GPU_Vector_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in eStiff_vpsa (line 62)
+    Ke = feval(kernel, elements, nodes, zeros(sets.sz*sets.nel, 1, sets.dTN,
+    'gpuArray'));% GPU code execution
+    
+    Error in ETestLNX_GVs32_320 (line 18)
+    Ke = eStiff_vpsa(elementsGPU, nodesGPU, MP, sets);
+================================================================================
+.
+================================================================================
+Error occurred in ETestLNX_GVs32_320/EStiff_GPU_Vector_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in eStiff_vpsa (line 62)
+    Ke = feval(kernel, elements, nodes, zeros(sets.sz*sets.nel, 1, sets.dTN,
+    'gpuArray'));% GPU code execution
+    
+    Error in ETestLNX_GVs32_320 (line 18)
+    Ke = eStiff_vpsa(elementsGPU, nodesGPU, MP, sets);
+================================================================================
+.
+Done ETestLNX_GVs32_320
+__________
+
+Failure Summary:
+
+     Name                                           Failed  Incomplete  Reason(s)
+    ==============================================================================
+     ETestLNX_GVs32_320/EStiff_GPU_Vector_Symmetry    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'ETestLNX_GVs32_320/EStiff_GPU_Vector_Symmetry'
+           Valid: 0
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   4.5716 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 320x320x320 (32768000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running ETestLNX_GSd32_320
+	Mesh created successfully with 32768000 Hex8 elements and 33076161 nodes!
+
+........
+Done ETestLNX_GSd32_320
+__________
+
+  TimeResult with properties:
+
+            Name: 'ETestLNX_GSd32_320/EStiff_GPU_Scalar_Symmetry'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   7.8292 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 320x320x320 (32768000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running ETestLNX_GVd32_320
+	Mesh created successfully with 32768000 Hex8 elements and 33076161 nodes!
+
+
+================================================================================
+Error occurred in ETestLNX_GVd32_320/EStiff_GPU_Vector_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in eStiff_vpsa (line 62)
+    Ke = feval(kernel, elements, nodes, zeros(sets.sz*sets.nel, 1, sets.dTN,
+    'gpuArray'));% GPU code execution
+    
+    Error in ETestLNX_GVd32_320 (line 18)
+    Ke = eStiff_vpsa(elementsGPU, nodesGPU, MP, sets);
+================================================================================
+.
+================================================================================
+Error occurred in ETestLNX_GVd32_320/EStiff_GPU_Vector_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in eStiff_vpsa (line 62)
+    Ke = feval(kernel, elements, nodes, zeros(sets.sz*sets.nel, 1, sets.dTN,
+    'gpuArray'));% GPU code execution
+    
+    Error in ETestLNX_GVd32_320 (line 18)
+    Ke = eStiff_vpsa(elementsGPU, nodesGPU, MP, sets);
+================================================================================
+.
+================================================================================
+Error occurred in ETestLNX_GVd32_320/EStiff_GPU_Vector_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in eStiff_vpsa (line 62)
+    Ke = feval(kernel, elements, nodes, zeros(sets.sz*sets.nel, 1, sets.dTN,
+    'gpuArray'));% GPU code execution
+    
+    Error in ETestLNX_GVd32_320 (line 18)
+    Ke = eStiff_vpsa(elementsGPU, nodesGPU, MP, sets);
+================================================================================
+.
+================================================================================
+Error occurred in ETestLNX_GVd32_320/EStiff_GPU_Vector_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in eStiff_vpsa (line 62)
+    Ke = feval(kernel, elements, nodes, zeros(sets.sz*sets.nel, 1, sets.dTN,
+    'gpuArray'));% GPU code execution
+    
+    Error in ETestLNX_GVd32_320 (line 18)
+    Ke = eStiff_vpsa(elementsGPU, nodesGPU, MP, sets);
+================================================================================
+.
+================================================================================
+Error occurred in ETestLNX_GVd32_320/EStiff_GPU_Vector_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in eStiff_vpsa (line 62)
+    Ke = feval(kernel, elements, nodes, zeros(sets.sz*sets.nel, 1, sets.dTN,
+    'gpuArray'));% GPU code execution
+    
+    Error in ETestLNX_GVd32_320 (line 18)
+    Ke = eStiff_vpsa(elementsGPU, nodesGPU, MP, sets);
+================================================================================
+.
+================================================================================
+Error occurred in ETestLNX_GVd32_320/EStiff_GPU_Vector_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in eStiff_vpsa (line 62)
+    Ke = feval(kernel, elements, nodes, zeros(sets.sz*sets.nel, 1, sets.dTN,
+    'gpuArray'));% GPU code execution
+    
+    Error in ETestLNX_GVd32_320 (line 18)
+    Ke = eStiff_vpsa(elementsGPU, nodesGPU, MP, sets);
+================================================================================
+.
+================================================================================
+Error occurred in ETestLNX_GVd32_320/EStiff_GPU_Vector_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in eStiff_vpsa (line 62)
+    Ke = feval(kernel, elements, nodes, zeros(sets.sz*sets.nel, 1, sets.dTN,
+    'gpuArray'));% GPU code execution
+    
+    Error in ETestLNX_GVd32_320 (line 18)
+    Ke = eStiff_vpsa(elementsGPU, nodesGPU, MP, sets);
+================================================================================
+.
+================================================================================
+Error occurred in ETestLNX_GVd32_320/EStiff_GPU_Vector_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in eStiff_vpsa (line 62)
+    Ke = feval(kernel, elements, nodes, zeros(sets.sz*sets.nel, 1, sets.dTN,
+    'gpuArray'));% GPU code execution
+    
+    Error in ETestLNX_GVd32_320 (line 18)
+    Ke = eStiff_vpsa(elementsGPU, nodesGPU, MP, sets);
+================================================================================
+.
+Done ETestLNX_GVd32_320
+__________
+
+Failure Summary:
+
+     Name                                           Failed  Incomplete  Reason(s)
+    ==============================================================================
+     ETestLNX_GVd32_320/EStiff_GPU_Vector_Symmetry    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'ETestLNX_GVd32_320/EStiff_GPU_Vector_Symmetry'
+           Valid: 0
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   5.2668 seconds testing time.
+
+
+
+ A total of 24 time experiments was executed!
+Date and time at the beginning of the process: 	09-May-2020 15:05:06 
+Date and time at the end of the process: 	09-May-2020 15:08:29
+
+
+ans =
+
+  24x7 table
+
+                        Name                         SampleSize      Mean       StandardDeviation      Min        Median        Max   
+    _____________________________________________    __________    _________    _________________    ________    _________    ________
+
+    ETestLNX_GSs32_10/EStiff_GPU_Scalar_Symmetry          6        0.0053095       0.00031981        0.004983     0.005276    0.005832
+    ETestLNX_GVs32_10/EStiff_GPU_Vector_Symmetry          4         0.046238        0.0018676        0.043651     0.046666    0.047968
+    ETestLNX_GSd32_10/EStiff_GPU_Scalar_Symmetry        256        0.0062237        0.0055144        0.005017    0.0052215     0.04686
+    ETestLNX_GVd32_10/EStiff_GPU_Vector_Symmetry        256         0.010795        0.0062216        0.009415    0.0096425    0.063566
+    ETestLNX_GSs32_20/EStiff_GPU_Scalar_Symmetry        256        0.0055697        0.0036124         0.00471      0.00511       0.038
+    ETestLNX_GVs32_20/EStiff_GPU_Vector_Symmetry        256         0.013532        0.0068203        0.011581     0.012134    0.058168
+    ETestLNX_GSd32_20/EStiff_GPU_Scalar_Symmetry        256        0.0072049         0.010411        0.004893    0.0050015    0.074784
+    ETestLNX_GVd32_20/EStiff_GPU_Vector_Symmetry        256         0.013019        0.0078377        0.010709     0.011193    0.065386
+    ETestLNX_GSs32_40/EStiff_GPU_Scalar_Symmetry        256        0.0059176         0.005431        0.004802     0.005028    0.051226
+    ETestLNX_GVs32_40/EStiff_GPU_Vector_Symmetry          4          0.09457        0.0018579        0.092905     0.094072    0.097229
+    ETestLNX_GSd32_40/EStiff_GPU_Scalar_Symmetry          4         0.036578        0.0015102        0.034373     0.037147    0.037647
+    ETestLNX_GVd32_40/EStiff_GPU_Vector_Symmetry          4         0.079988         0.002905        0.076489     0.079963    0.083536
+    ETestLNX_GSs32_80/EStiff_GPU_Scalar_Symmetry         14         0.039821         0.004127        0.034978     0.038563    0.046372
+    ETestLNX_GVs32_80/EStiff_GPU_Vector_Symmetry          4          0.47009       0.00023067         0.46977      0.47012     0.47033
+    ETestLNX_GSd32_80/EStiff_GPU_Scalar_Symmetry          4         0.038792       0.00065991         0.03796     0.038818    0.039574
+    ETestLNX_GVd32_80/EStiff_GPU_Vector_Symmetry          4          0.33437        0.0017239         0.33219      0.33448     0.33632
+    ETestLNX_GSs32_160/EStiff_GPU_Scalar_Symmetry       156         0.013185        0.0049709        0.012142     0.012336    0.048871
+    ETestLNX_GVs32_160/EStiff_GPU_Vector_Symmetry         4           3.7903        0.0011779          3.7888       3.7905      3.7914
+    ETestLNX_GSd32_160/EStiff_GPU_Scalar_Symmetry       100         0.020462        0.0061157        0.018423     0.019338    0.056114
+    ETestLNX_GVd32_160/EStiff_GPU_Vector_Symmetry         4           2.8136        0.0034008          2.8098       2.8138      2.8171
+    ETestLNX_GSs32_320/EStiff_GPU_Scalar_Symmetry         4         0.083328        0.0002407        0.083096     0.083292    0.083634
+    ETestLNX_GVs32_320/EStiff_GPU_Vector_Symmetry         4              NaN              NaN             NaN          NaN         NaN
+    ETestLNX_GSd32_320/EStiff_GPU_Scalar_Symmetry         4          0.35889        0.0025412         0.35513      0.35994     0.36056
+    ETestLNX_GVd32_320/EStiff_GPU_Vector_Symmetry         4              NaN              NaN             NaN          NaN         NaN
+

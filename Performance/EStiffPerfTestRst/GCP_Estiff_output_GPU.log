@@ -1,0 +1,616 @@
+[Warning: Directory already exists.] 
+[> In runEStiffTest (line 28)] 
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 10x10x10 (1000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running ETestLNX_GSs32_10
+
+Mesh created successfully with 1000 Hex8 elements and 1331 nodes!
+.......... .........
+Done ETestLNX_GSs32_10
+__________
+
+  TimeResult with properties:
+
+            Name: 'ETestLNX_GSs32_10/EStiff_GPU_Scalar_Symmetry'
+           Valid: 1
+         Samples: [15x7 table]
+    TestActivity: [19x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   0.64132 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 10x10x10 (1000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running ETestLNX_GVs32_10
+
+Mesh created successfully with 1000 Hex8 elements and 1331 nodes!
+.......... .......... .....
+Done ETestLNX_GVs32_10
+__________
+
+  TimeResult with properties:
+
+            Name: 'ETestLNX_GVs32_10/EStiff_GPU_Vector_Symmetry'
+           Valid: 1
+         Samples: [21x7 table]
+    TestActivity: [25x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   0.79781 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 10x10x10 (1000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running ETestLNX_GSd32_10
+
+Mesh created successfully with 1000 Hex8 elements and 1331 nodes!
+.......... .......... .......... .......... ..........
+.......... .......... .......... .......... ..........
+.......... .......... .......... .......... ..........
+.......... .......... .......... .......... ..........
+.......... .......... .......... .......... ..........
+..........[Warning: Target Relative Margin of Error not met after running the MaxSamples
+for ETestLNX_GSd32_10/EStiff_GPU_Scalar_Symmetry.] 
+
+Done ETestLNX_GSd32_10
+__________
+
+  TimeResult with properties:
+
+            Name: 'ETestLNX_GSd32_10/EStiff_GPU_Scalar_Symmetry'
+           Valid: 1
+         Samples: [256x7 table]
+    TestActivity: [260x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   4.3261 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 10x10x10 (1000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running ETestLNX_GVd32_10
+
+Mesh created successfully with 1000 Hex8 elements and 1331 nodes!
+.......... .......... .......... ...
+Done ETestLNX_GVd32_10
+__________
+
+  TimeResult with properties:
+
+            Name: 'ETestLNX_GVd32_10/EStiff_GPU_Vector_Symmetry'
+           Valid: 1
+         Samples: [29x7 table]
+    TestActivity: [33x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   1.1968 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 20x20x20 (8000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running ETestLNX_GSs32_20
+
+Mesh created successfully with 8000 Hex8 elements and 9261 nodes!
+.........
+Done ETestLNX_GSs32_20
+__________
+
+  TimeResult with properties:
+
+            Name: 'ETestLNX_GSs32_20/EStiff_GPU_Scalar_Symmetry'
+           Valid: 1
+         Samples: [5x7 table]
+    TestActivity: [9x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   0.66981 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 20x20x20 (8000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running ETestLNX_GVs32_20
+
+Mesh created successfully with 8000 Hex8 elements and 9261 nodes!
+.......... .......... .......... .......... ..........
+.......... .......... .......... .......... ..........
+.......... .......... .......... .......... ..........
+.......... .......... .......... .......... ..........
+.......... .......... .......... .......... ..........
+Done ETestLNX_GVs32_20
+__________
+
+  TimeResult with properties:
+
+            Name: 'ETestLNX_GVs32_20/EStiff_GPU_Vector_Symmetry'
+           Valid: 1
+         Samples: [246x7 table]
+    TestActivity: [250x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   5.1149 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 20x20x20 (8000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running ETestLNX_GSd32_20
+
+Mesh created successfully with 8000 Hex8 elements and 9261 nodes!
+.......... .......... .......... .......... ..........
+.......... .......... .......... .......... ..........
+.......... .......... .......... .......... ..........
+.......... .......... .......... .......... ..........
+.......... .......... .......... .......... ..........
+..........[Warning: Target Relative Margin of Error not met after running the MaxSamples
+for ETestLNX_GSd32_20/EStiff_GPU_Scalar_Symmetry.] 
+
+Done ETestLNX_GSd32_20
+__________
+
+  TimeResult with properties:
+
+            Name: 'ETestLNX_GSd32_20/EStiff_GPU_Scalar_Symmetry'
+           Valid: 1
+         Samples: [256x7 table]
+    TestActivity: [260x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   4.6412 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 20x20x20 (8000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running ETestLNX_GVd32_20
+
+Mesh created successfully with 8000 Hex8 elements and 9261 nodes!
+.......... .......... .......... .......... ..........
+.......... .......... .......... .......... ..........
+.......... .......... .......... .......... ..........
+.......... .......... .......... .......... ..........
+.......... .......... .......... .......... ....
+Done ETestLNX_GVd32_20
+__________
+
+  TimeResult with properties:
+
+            Name: 'ETestLNX_GVd32_20/EStiff_GPU_Vector_Symmetry'
+           Valid: 1
+         Samples: [240x7 table]
+    TestActivity: [244x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   5.6855 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 40x40x40 (64000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running ETestLNX_GSs32_40
+
+Mesh created successfully with 64000 Hex8 elements and 68921 nodes!
+.......... .......... .......... .......... ..........
+.......... .
+Done ETestLNX_GSs32_40
+__________
+
+  TimeResult with properties:
+
+            Name: 'ETestLNX_GSs32_40/EStiff_GPU_Scalar_Symmetry'
+           Valid: 1
+         Samples: [57x7 table]
+    TestActivity: [61x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   1.6766 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 40x40x40 (64000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running ETestLNX_GVs32_40
+
+Mesh created successfully with 64000 Hex8 elements and 68921 nodes!
+.......... .......... .......... .....
+Done ETestLNX_GVs32_40
+__________
+
+  TimeResult with properties:
+
+            Name: 'ETestLNX_GVs32_40/EStiff_GPU_Vector_Symmetry'
+           Valid: 1
+         Samples: [31x7 table]
+    TestActivity: [35x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   2.9157 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 40x40x40 (64000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running ETestLNX_GSd32_40
+
+Mesh created successfully with 64000 Hex8 elements and 68921 nodes!
+.......... .......... .......... .......... ..........
+.......... .......... .......... .......... ..........
+.......... .......... .......... .......... ..........
+.......... .......... .......... .......... ..........
+.......... .......... .......... .......... ..........
+..........[Warning: Target Relative Margin of Error not met after running the MaxSamples
+for ETestLNX_GSd32_40/EStiff_GPU_Scalar_Symmetry.] 
+
+Done ETestLNX_GSd32_40
+__________
+
+  TimeResult with properties:
+
+            Name: 'ETestLNX_GSd32_40/EStiff_GPU_Scalar_Symmetry'
+           Valid: 1
+         Samples: [256x7 table]
+    TestActivity: [260x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   3.5661 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 40x40x40 (64000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running ETestLNX_GVd32_40
+
+Mesh created successfully with 64000 Hex8 elements and 68921 nodes!
+.......... .......... .......... .......... ..........
+.......... .......... .......... .......... ..........
+.......... .......... ....
+Done ETestLNX_GVd32_40
+__________
+
+  TimeResult with properties:
+
+            Name: 'ETestLNX_GVd32_40/EStiff_GPU_Vector_Symmetry'
+           Valid: 1
+         Samples: [120x7 table]
+    TestActivity: [124x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   7.4866 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 80x80x80 (512000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running ETestLNX_GSs32_80
+
+Mesh created successfully with 512000 Hex8 elements and 531441 nodes!
+.......... .......... .......... .......... ..........
+.......... .......... .......... .......... ..........
+.......... .......... .......... .......... ..........
+.......... .......... .......... .......... ..........
+.......... .......... .......... .......... ..........
+..........[Warning: Target Relative Margin of Error not met after running the MaxSamples
+for ETestLNX_GSs32_80/EStiff_GPU_Scalar_Symmetry.] 
+
+Done ETestLNX_GSs32_80
+__________
+
+  TimeResult with properties:
+
+            Name: 'ETestLNX_GSs32_80/EStiff_GPU_Scalar_Symmetry'
+           Valid: 1
+         Samples: [256x7 table]
+    TestActivity: [260x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   4.1097 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 80x80x80 (512000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running ETestLNX_GVs32_80
+
+Mesh created successfully with 512000 Hex8 elements and 531441 nodes!
+........
+Done ETestLNX_GVs32_80
+__________
+
+  TimeResult with properties:
+
+            Name: 'ETestLNX_GVs32_80/EStiff_GPU_Vector_Symmetry'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   4.1918 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 80x80x80 (512000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running ETestLNX_GSd32_80
+
+Mesh created successfully with 512000 Hex8 elements and 531441 nodes!
+.......... .......... .......
+Done ETestLNX_GSd32_80
+__________
+
+  TimeResult with properties:
+
+            Name: 'ETestLNX_GSd32_80/EStiff_GPU_Scalar_Symmetry'
+           Valid: 1
+         Samples: [23x7 table]
+    TestActivity: [27x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   1.0136 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 80x80x80 (512000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running ETestLNX_GVd32_80
+
+Mesh created successfully with 512000 Hex8 elements and 531441 nodes!
+........
+Done ETestLNX_GVd32_80
+__________
+
+  TimeResult with properties:
+
+            Name: 'ETestLNX_GVd32_80/EStiff_GPU_Vector_Symmetry'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   3.2488 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 160x160x160 (4096000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running ETestLNX_GSs32_160
+
+Mesh created successfully with 4096000 Hex8 elements and 4173281 nodes!
+.......... ........
+Done ETestLNX_GSs32_160
+__________
+
+  TimeResult with properties:
+
+            Name: 'ETestLNX_GSs32_160/EStiff_GPU_Scalar_Symmetry'
+           Valid: 1
+         Samples: [14x7 table]
+    TestActivity: [18x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   1.272 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 160x160x160 (4096000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running ETestLNX_GVs32_160
+
+Mesh created successfully with 4096000 Hex8 elements and 4173281 nodes!
+........
+Done ETestLNX_GVs32_160
+__________
+
+  TimeResult with properties:
+
+            Name: 'ETestLNX_GVs32_160/EStiff_GPU_Vector_Symmetry'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   30.9065 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 160x160x160 (4096000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running ETestLNX_GSd32_160
+
+Mesh created successfully with 4096000 Hex8 elements and 4173281 nodes!
+........
+Done ETestLNX_GSd32_160
+__________
+
+  TimeResult with properties:
+
+            Name: 'ETestLNX_GSd32_160/EStiff_GPU_Scalar_Symmetry'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   1.1422 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 160x160x160 (4096000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running ETestLNX_GVd32_160
+
+Mesh created successfully with 4096000 Hex8 elements and 4173281 nodes!
+........
+Done ETestLNX_GVd32_160
+__________
+
+  TimeResult with properties:
+
+            Name: 'ETestLNX_GVd32_160/EStiff_GPU_Vector_Symmetry'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   23.0501 seconds testing time.
+
+
+
+ A total of 20 time experiments was executed!
+Date and time at the beginning of the process: 	15-Feb-2020 19:08:16 
+Date and time at the end of the process: 	15-Feb-2020 19:11:42
+
+
+ans =
+
+  20x7 table
+
+                        Name                         SampleSize      Mean       StandardDeviation      Min        Median        Max   
+    _____________________________________________    __________    _________    _________________    ________    _________    ________
+
+    ETestLNX_GSs32_10/EStiff_GPU_Scalar_Symmetry         15        0.0069805       0.00074795          0.0063       0.0068    0.009287
+    ETestLNX_GVs32_10/EStiff_GPU_Vector_Symmetry         21         0.011436        0.0014863         0.00968     0.011405    0.014213
+    ETestLNX_GSd32_10/EStiff_GPU_Scalar_Symmetry        256        0.0084245         0.008347        0.004818    0.0071165     0.08462
+    ETestLNX_GVd32_10/EStiff_GPU_Vector_Symmetry         29         0.011974        0.0018519        0.009209     0.012294    0.016264
+    ETestLNX_GSs32_20/EStiff_GPU_Scalar_Symmetry          5        0.0063958       0.00029927         0.00615     0.006359    0.006888
+    ETestLNX_GVs32_20/EStiff_GPU_Vector_Symmetry        246         0.011849        0.0056178        0.009174     0.011163    0.094199
+    ETestLNX_GSd32_20/EStiff_GPU_Scalar_Symmetry        256        0.0093165         0.013115        0.006056    0.0071015      0.1251
+    ETestLNX_GVd32_20/EStiff_GPU_Vector_Symmetry        240         0.013967        0.0065387          0.0097     0.013102      0.1096
+    ETestLNX_GSs32_40/EStiff_GPU_Scalar_Symmetry         57         0.010278        0.0023087        0.008809     0.009496     0.02267
+    ETestLNX_GVs32_40/EStiff_GPU_Vector_Symmetry         31         0.062697         0.010022        0.059294     0.060529     0.11632
+    ETestLNX_GSd32_40/EStiff_GPU_Scalar_Symmetry        256        0.0072998         0.006299        0.005209     0.006304    0.092426
+    ETestLNX_GVd32_40/EStiff_GPU_Vector_Symmetry        120         0.050157         0.016471        0.045509     0.047201     0.15479
+    ETestLNX_GSs32_80/EStiff_GPU_Scalar_Symmetry        256        0.0085849        0.0098647        0.005763    0.0072435    0.097219
+    ETestLNX_GVs32_80/EStiff_GPU_Vector_Symmetry          4           0.4635       0.00037295          0.4631      0.46347     0.46397
+    ETestLNX_GSd32_80/EStiff_GPU_Scalar_Symmetry         23        0.0093359         0.001277        0.007993     0.008659    0.011637
+    ETestLNX_GVd32_80/EStiff_GPU_Vector_Symmetry          4          0.33225       0.00088475         0.33105      0.33245     0.33307
+    ETestLNX_GSs32_160/EStiff_GPU_Scalar_Symmetry        14          0.01582        0.0016625        0.013625     0.015267    0.020566
+    ETestLNX_GVs32_160/EStiff_GPU_Vector_Symmetry         4           3.7482       0.00056256          3.7473       3.7484      3.7485
+    ETestLNX_GSd32_160/EStiff_GPU_Scalar_Symmetry         4         0.019529       0.00018092        0.019361     0.019502    0.019748
+    ETestLNX_GVd32_160/EStiff_GPU_Vector_Symmetry         4           2.7845         0.010464          2.7692       2.7887      2.7915
+

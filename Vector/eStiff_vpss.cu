@@ -14,16 +14,16 @@
 *	ke[300*nel]           // Lower-triangular part of ke
 *
 ** COMPILATION (Terminal)
-*	Opt1:  nvcc -ptx eStiff_vps.cu
-*   Opt2:  nvcc -ptx -v -arch=sm_50 --fmad=false -o eStiff_vps.ptx eStiff_vps.cu
+*	Opt1:  nvcc -ptx eStiff_vpss.cu
+*   Opt2:  nvcc -ptx -v -arch=sm_50 --fmad=false -o eStiff_vpss.ptx eStiff_vpss.cu
 *
 ** COMPILATION Within MATLAB
 * 	setenv('MW_NVCC_PATH','/usr/local/cuda/bin')
 *   setenv('PATH',[getenv('PATH') ':/usr/local/cuda/bin'])
-*   system('nvcc -ptx eStiff_vps.cu')
+*   system('nvcc -ptx eStiff_vpss.cu')
 *
 ** MATLAB KERNEL CREATION (inside MATLAB)
-*	kernel = parallel.gpu.CUDAKernel('Hex8vectorSymGPU.ptx', 'Hex8vectorSymGPU.cu');
+*	kernel = parallel.gpu.CUDAKernel('eStiff_vpss.ptx', 'eStiff_vpss.cu');
 *
 ** MATLAB KERNEL CONFIGURATION
 *   kernel.ThreadBlockSize = [512, 1, 1];
@@ -44,20 +44,18 @@
 ** Please cite this code if you find it useful (See: https://github.com/fjramireg/StiffMa)
 *
 ** Date & version
-* 	Last modified: 30/01/2020. Version 1.4 (added grid stride)
-* 	Modified: 21/01/2019, Version 1.3
+* 	Last modified: 09/05/2020. Version 1.4 (added grid stride, template removed)
 * 	Created: 17/01/2019. V 1.0
 *
 * ==========================================================================*/
 
 __constant__ float L[3*8*8], D[6*6], nel;                          // Declares constant memory
-template <typename floatT, typename intT>                           // Defines template
-__global__ void Hex8vector(const intT *elements, const floatT *nodes, floatT *ke ) {
+__global__ void Hex8vector(const unsigned int *elements, const float *nodes, float *ke ) {
     // CUDA kernel to compute the NNZ entries or all tril(ke) (VECTOR)
 
-    intT e, i, j, k, l, m, temp, ni;                                // General indices
-    floatT detJ, BDB, DB;                                           // Temporal scalars
-    floatT x[8], y[8], z[8], invJ[9], B[6*24], dNdxyz[3*8];         // Temporal matrices
+    unsigned int e, i, j, k, l, m, temp, ni;                       // General indices
+    float detJ, BDB, DB;                                           // Temporal scalars
+    float x[8], y[8], z[8], invJ[9], B[6*24], dNdxyz[3*8];         // Temporal matrices
     
     // Parallel computation loop
     for (e = threadIdx.x + blockDim.x * blockIdx.x; e < nel; e += gridDim.x * blockDim.x){
@@ -73,7 +71,7 @@ __global__ void Hex8vector(const intT *elements, const floatT *nodes, floatT *ke
 
         for (i=0; i<8; i++) {                                       // Numerical integration (8 Gauss integration points)
 
-            floatT J[9] = {0, 0, 0, 0, 0, 0, 0, 0, 0};              // Jacobian matrix
+            float J[9] = {0, 0, 0, 0, 0, 0, 0, 0, 0};              // Jacobian matrix
             for (j=0; j<8; j++) {
                 J[0] += L[3*j+24*i]*x[j];   J[3] += L[3*j+24*i]*y[j];	J[6] += L[3*j+24*i]*z[j];
                 J[1] += L[3*j+24*i+1]*x[j];	J[4] += L[3*j+24*i+1]*y[j];	J[7] += L[3*j+24*i+1]*z[j];
@@ -129,6 +127,3 @@ __global__ void Hex8vector(const intT *elements, const floatT *nodes, floatT *ke
         }
     }
 }
-
-// NNZ of type 'single' and INDEX of type 'uint32'
-template __global__ void Hex8vector<float,unsigned int>(const unsigned int *, const float *, float *);

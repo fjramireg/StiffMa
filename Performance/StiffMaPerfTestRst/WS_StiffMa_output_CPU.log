@@ -1,0 +1,328 @@
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 10x10x10 (1000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'CPU'
+
+Running StiffMaWIN_CSdu32_10
+
+Mesh created successfully with 1000 Hex8 elements and 1331 nodes!
+.......... ......
+Done StiffMaWIN_CSdu32_10
+__________
+
+  1x2 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   2 Valid, 0 Invalid.
+   2.3952 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 10x10x10 (1000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Processor type: 'CPU'
+
+Running StiffMaWIN_CVdu32_10
+
+Mesh created successfully with 1000 Hex8 elements and 1331 nodes!
+.......... ........
+Done StiffMaWIN_CVdu32_10
+__________
+
+  1x2 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   2 Valid, 0 Invalid.
+   14.2788 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 20x20x20 (8000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'CPU'
+
+Running StiffMaWIN_CSdu32_20
+
+Mesh created successfully with 8000 Hex8 elements and 9261 nodes!
+.......... ......
+Done StiffMaWIN_CSdu32_20
+__________
+
+  1x2 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   2 Valid, 0 Invalid.
+   16.5285 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 20x20x20 (8000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Processor type: 'CPU'
+
+Running StiffMaWIN_CVdu32_20
+
+Mesh created successfully with 8000 Hex8 elements and 9261 nodes!
+.......... ......
+Done StiffMaWIN_CVdu32_20
+__________
+
+  1x2 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   2 Valid, 0 Invalid.
+   106.6852 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 40x40x40 (64000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'CPU'
+
+Running StiffMaWIN_CSdu32_40
+
+Mesh created successfully with 64000 Hex8 elements and 68921 nodes!
+..
+Done StiffMaWIN_CSdu32_40
+__________
+
+  1x2 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   2 Valid, 0 Invalid.
+   16.5739 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 40x40x40 (64000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Processor type: 'CPU'
+
+Running StiffMaWIN_CVdu32_40
+
+Mesh created successfully with 64000 Hex8 elements and 68921 nodes!
+..
+Done StiffMaWIN_CVdu32_40
+__________
+
+  1x2 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   2 Valid, 0 Invalid.
+   107.6645 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 80x80x80 (512000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'CPU'
+
+Running StiffMaWIN_CSdu32_80
+
+Mesh created successfully with 512000 Hex8 elements and 531441 nodes!
+..
+Done StiffMaWIN_CSdu32_80
+__________
+
+  1x2 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   2 Valid, 0 Invalid.
+   130.3923 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 80x80x80 (512000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Processor type: 'CPU'
+
+Running StiffMaWIN_CVdu32_80
+
+Mesh created successfully with 512000 Hex8 elements and 531441 nodes!
+..
+Done StiffMaWIN_CVdu32_80
+__________
+
+  1x2 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   2 Valid, 0 Invalid.
+   862.4519 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 160x160x160 (4096000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'CPU'
+
+Running StiffMaWIN_CSdu32_160
+
+Mesh created successfully with 4096000 Hex8 elements and 4173281 nodes!
+..
+Done StiffMaWIN_CSdu32_160
+__________
+
+  1x2 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   2 Valid, 0 Invalid.
+   1064.4726 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 160x160x160 (4096000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Processor type: 'CPU'
+
+Running StiffMaWIN_CVdu32_160
+
+Mesh created successfully with 4096000 Hex8 elements and 4173281 nodes!
+
+================================================================================
+Error occurred in StiffMaWIN_CVdu32_160/StiffMa_CPU_Vector and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'MATLAB:nomem'
+    --------------
+    Error Details:
+    --------------
+    Out of memory. Type "help memory" for your options.
+    
+    Error in AssemblyStiffMa (line 25)
+        K = accumarray([iK,jK], Ke, [], [], [], 1);
+    
+    Error in StiffMaWIN_CVdu32_160 (line 14)
+    K = AssemblyStiffMa(iK, jK, Ke, sets.dTE, sets.dTN);
+================================================================================
+..
+Done StiffMaWIN_CVdu32_160
+__________
+
+Failure Summary:
+
+     Name                                      Failed  Incomplete  Reason(s)
+    =========================================================================
+     StiffMaWIN_CVdu32_160/StiffMa_CPU_Vector    X         X       Errored.
+  1x2 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   1 Valid, 1 Invalid.
+   6818.4357 seconds testing time.
+
+
+
+A total of 10 time experiments was executed!
+Date and time at the beginning of the process: 	19-Feb-2020 09:14:54 
+Date and time at the end of the process: 	19-Feb-2020 11:47:42
+
+
+ans =
+
+  20x7 table
+
+                          Name                           SampleSize      Mean      StandardDeviation      Min        Median       Max   
+    _________________________________________________    __________    ________    _________________    ________    ________    ________
+
+    StiffMaWIN_CSdu32_10/StiffMa_CPU_Scalar                  4         0.092541        0.0033533        0.090569    0.091019    0.097555
+    StiffMaWIN_CSdu32_10/StiffMa_CPU_Scalar_Symmetry         4          0.15428        0.0023891         0.15303     0.15311     0.15786
+    StiffMaWIN_CVdu32_10/StiffMa_CPU_Vector                  6          0.27614          0.01652         0.26536      0.2687     0.30841
+    StiffMaWIN_CVdu32_10/StiffMa_CPU_Vector_Symmetry         4           1.4065         0.021922          1.3868      1.4021      1.4351
+    StiffMaWIN_CSdu32_20/StiffMa_CPU_Scalar                  4          0.76872       0.00075765         0.76779     0.76873     0.76963
+    StiffMaWIN_CSdu32_20/StiffMa_CPU_Scalar_Symmetry         4           1.2823         0.020671          1.2559       1.284      1.3052
+    StiffMaWIN_CVdu32_20/StiffMa_CPU_Vector                  4           2.2522         0.069548          2.2004      2.2276      2.3531
+    StiffMaWIN_CVdu32_20/StiffMa_CPU_Vector_Symmetry         4           11.088         0.031559          11.046      11.093      11.121
+    StiffMaWIN_CSdu32_40/StiffMa_CPU_Scalar                  1           6.3431                0          6.3431      6.3431      6.3431
+    StiffMaWIN_CSdu32_40/StiffMa_CPU_Scalar_Symmetry         1           10.196                0          10.196      10.196      10.196
+    StiffMaWIN_CVdu32_40/StiffMa_CPU_Vector                  1           18.169                0          18.169      18.169      18.169
+    StiffMaWIN_CVdu32_40/StiffMa_CPU_Vector_Symmetry         1            89.47                0           89.47       89.47       89.47
+    StiffMaWIN_CSdu32_80/StiffMa_CPU_Scalar                  1           49.778                0          49.778      49.778      49.778
+    StiffMaWIN_CSdu32_80/StiffMa_CPU_Scalar_Symmetry         1           80.552                0          80.552      80.552      80.552
+    StiffMaWIN_CVdu32_80/StiffMa_CPU_Vector                  1           146.15                0          146.15      146.15      146.15
+    StiffMaWIN_CVdu32_80/StiffMa_CPU_Vector_Symmetry         1           716.24                0          716.24      716.24      716.24
+    StiffMaWIN_CSdu32_160/StiffMa_CPU_Scalar                 1           409.53                0          409.53      409.53      409.53
+    StiffMaWIN_CSdu32_160/StiffMa_CPU_Scalar_Symmetry        1           654.61                0          654.61      654.61      654.61
+    StiffMaWIN_CVdu32_160/StiffMa_CPU_Vector                 1              NaN              NaN             NaN         NaN         NaN
+    StiffMaWIN_CVdu32_160/StiffMa_CPU_Vector_Symmetry        1           5830.8                0          5830.8      5830.8      5830.8
+

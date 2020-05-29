@@ -59,4 +59,4 @@ fz = nnod-nx*ny+1:nnod;         % Nodes at face Z=1
 n1 = setdiff(n',[fx,fy,fz]');   % Node 1 of each element
 elements = [n1, n1+1, n1+nx+1, n1+nx, n1+(nx*ny), n1+(nx*ny)+1, n1+(nx*ny)+nx+1, n1+(nx*ny)+nx];
 
-fprintf('\nMesh created successfully with %u Hex8 elements and %u nodes!\n',nelx*nely*nelz,nnod);
+fprintf('\tMesh created successfully with %u Hex8 elements and %u nodes!\n\n',nelx*nely*nelz,nnod);

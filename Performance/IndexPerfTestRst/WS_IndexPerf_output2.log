@@ -1,0 +1,663 @@
+[Warning: Directory already exists.] 
+[> In runIndexTest (line 28)] 
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 10x10x10 (1000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Processor type: 'CPU'
+
+Running ITestWIN_CSs32_10
+
+Mesh created successfully with 1000 Hex8 elements and 1331 nodes!
+........
+================================================================================
+ITestWIN_CSs32_10/Index_CPU_Scalar was filtered.
+    Test Diagnostic: The MeasuredTime should not be too close to the precision of the framework.
+================================================================================
+.. ......
+================================================================================
+ITestWIN_CSs32_10/Index_CPU_Scalar_Vectorized was filtered.
+    Test Diagnostic: The MeasuredTime should not be too close to the precision of the framework.
+================================================================================
+.... ....
+================================================================================
+ITestWIN_CSs32_10/Index_CPU_Scalar_Symmetry was filtered.
+    Test Diagnostic: The MeasuredTime should not be too close to the precision of the framework.
+================================================================================
+
+Done ITestWIN_CSs32_10
+__________
+
+Failure Summary:
+
+     Name                                           Failed  Incomplete  Reason(s)
+    ============================================================================================
+     ITestWIN_CSs32_10/Index_CPU_Scalar                         X       Filtered by assumption.
+    --------------------------------------------------------------------------------------------
+     ITestWIN_CSs32_10/Index_CPU_Scalar_Vectorized              X       Filtered by assumption.
+    --------------------------------------------------------------------------------------------
+     ITestWIN_CSs32_10/Index_CPU_Scalar_Symmetry                X       Filtered by assumption.
+  1x3 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   0 Valid, 3 Invalid.
+   0.32646 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 10x10x10 (1000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Vector'
+Processor type: 'CPU'
+
+Running ITestWIN_CVs32_10
+
+Mesh created successfully with 1000 Hex8 elements and 1331 nodes!
+.......... .......... ......
+Done ITestWIN_CVs32_10
+__________
+
+  1x3 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   3 Valid, 0 Invalid.
+   0.5279 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 10x10x10 (1000)
+Date type for 'elements': 'uint64'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Processor type: 'CPU'
+
+Running ITestWIN_CSs64_10
+
+Mesh created successfully with 1000 Hex8 elements and 1331 nodes!
+.......... ......
+================================================================================
+ITestWIN_CSs64_10/Index_CPU_Scalar_Vectorized was filtered.
+    Test Diagnostic: The MeasuredTime should not be too close to the precision of the framework.
+================================================================================
+.... ....
+Done ITestWIN_CSs64_10
+__________
+
+Failure Summary:
+
+     Name                                           Failed  Incomplete  Reason(s)
+    ============================================================================================
+     ITestWIN_CSs64_10/Index_CPU_Scalar_Vectorized              X       Filtered by assumption.
+  1x3 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   2 Valid, 1 Invalid.
+   0.80995 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 10x10x10 (1000)
+Date type for 'elements': 'uint64'
+Date type for 'nodes': 'single'
+Problem type: 'Vector'
+Processor type: 'CPU'
+
+Running ITestWIN_CVs64_10
+
+Mesh created successfully with 1000 Hex8 elements and 1331 nodes!
+.......... .......... .....
+Done ITestWIN_CVs64_10
+__________
+
+  1x3 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   3 Valid, 0 Invalid.
+   4.8807 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 20x20x20 (8000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Processor type: 'CPU'
+
+Running ITestWIN_CSs32_20
+
+Mesh created successfully with 8000 Hex8 elements and 9261 nodes!
+.......... .......... ....
+================================================================================
+ITestWIN_CSs32_20/Index_CPU_Scalar_Vectorized was filtered.
+    Test Diagnostic: The MeasuredTime should not be too close to the precision of the framework.
+================================================================================
+...... ..
+Done ITestWIN_CSs32_20
+__________
+
+Failure Summary:
+
+     Name                                           Failed  Incomplete  Reason(s)
+    ============================================================================================
+     ITestWIN_CSs32_20/Index_CPU_Scalar_Vectorized              X       Filtered by assumption.
+  1x3 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   2 Valid, 1 Invalid.
+   0.71151 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 20x20x20 (8000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Vector'
+Processor type: 'CPU'
+
+Running ITestWIN_CVs32_20
+
+Mesh created successfully with 8000 Hex8 elements and 9261 nodes!
+.......... .......... ....
+Done ITestWIN_CVs32_20
+__________
+
+  1x3 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   3 Valid, 0 Invalid.
+   2.3163 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 20x20x20 (8000)
+Date type for 'elements': 'uint64'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Processor type: 'CPU'
+
+Running ITestWIN_CSs64_20
+
+Mesh created successfully with 8000 Hex8 elements and 9261 nodes!
+.......... .......... .......... .......... ..........
+.......... .......... .......... .......... ....
+Done ITestWIN_CSs64_20
+__________
+
+  1x3 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   3 Valid, 0 Invalid.
+   5.6965 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 20x20x20 (8000)
+Date type for 'elements': 'uint64'
+Date type for 'nodes': 'single'
+Problem type: 'Vector'
+Processor type: 'CPU'
+
+Running ITestWIN_CVs64_20
+
+Mesh created successfully with 8000 Hex8 elements and 9261 nodes!
+.......... .......... .......... .......... ..........
+.........
+Done ITestWIN_CVs64_20
+__________
+
+  1x3 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   3 Valid, 0 Invalid.
+   39.9555 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 40x40x40 (64000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Processor type: 'CPU'
+
+Running ITestWIN_CSs32_40
+
+Mesh created successfully with 64000 Hex8 elements and 68921 nodes!
+.......... .......... .......
+Done ITestWIN_CSs32_40
+__________
+
+  1x3 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   3 Valid, 0 Invalid.
+   2.7981 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 40x40x40 (64000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Vector'
+Processor type: 'CPU'
+
+Running ITestWIN_CVs32_40
+
+Mesh created successfully with 64000 Hex8 elements and 68921 nodes!
+.......... .......... ......
+Done ITestWIN_CVs32_40
+__________
+
+  1x3 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   3 Valid, 0 Invalid.
+   16.8682 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 40x40x40 (64000)
+Date type for 'elements': 'uint64'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Processor type: 'CPU'
+
+Running ITestWIN_CSs64_40
+
+Mesh created successfully with 64000 Hex8 elements and 68921 nodes!
+.......... .......... ....
+Done ITestWIN_CSs64_40
+__________
+
+  1x3 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   3 Valid, 0 Invalid.
+   33.3399 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 40x40x40 (64000)
+Date type for 'elements': 'uint64'
+Date type for 'nodes': 'single'
+Problem type: 'Vector'
+Processor type: 'CPU'
+
+Running ITestWIN_CVs64_40
+
+Mesh created successfully with 64000 Hex8 elements and 68921 nodes!
+.......... .......... .......
+Done ITestWIN_CVs64_40
+__________
+
+  1x3 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   3 Valid, 0 Invalid.
+   270.5779 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 80x80x80 (512000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Processor type: 'CPU'
+
+Running ITestWIN_CSs32_80
+
+Mesh created successfully with 512000 Hex8 elements and 531441 nodes!
+...
+Done ITestWIN_CSs32_80
+__________
+
+  1x3 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   3 Valid, 0 Invalid.
+   2.6713 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 80x80x80 (512000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Vector'
+Processor type: 'CPU'
+
+Running ITestWIN_CVs32_80
+
+Mesh created successfully with 512000 Hex8 elements and 531441 nodes!
+...
+Done ITestWIN_CVs32_80
+__________
+
+  1x3 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   3 Valid, 0 Invalid.
+   16.0408 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 80x80x80 (512000)
+Date type for 'elements': 'uint64'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Processor type: 'CPU'
+
+Running ITestWIN_CSs64_80
+
+Mesh created successfully with 512000 Hex8 elements and 531441 nodes!
+...
+Done ITestWIN_CSs64_80
+__________
+
+  1x3 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   3 Valid, 0 Invalid.
+   33.7134 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 80x80x80 (512000)
+Date type for 'elements': 'uint64'
+Date type for 'nodes': 'single'
+Problem type: 'Vector'
+Processor type: 'CPU'
+
+Running ITestWIN_CVs64_80
+
+Mesh created successfully with 512000 Hex8 elements and 531441 nodes!
+...
+Done ITestWIN_CVs64_80
+__________
+
+  1x3 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   3 Valid, 0 Invalid.
+   270.1566 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 160x160x160 (4096000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Processor type: 'CPU'
+
+Running ITestWIN_CSs32_160
+
+Mesh created successfully with 4096000 Hex8 elements and 4173281 nodes!
+...
+Done ITestWIN_CSs32_160
+__________
+
+  1x3 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   3 Valid, 0 Invalid.
+   21.6697 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 160x160x160 (4096000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Vector'
+Processor type: 'CPU'
+
+Running ITestWIN_CVs32_160
+
+Mesh created successfully with 4096000 Hex8 elements and 4173281 nodes!
+...
+Done ITestWIN_CVs32_160
+__________
+
+  1x3 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   3 Valid, 0 Invalid.
+   130.0421 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 160x160x160 (4096000)
+Date type for 'elements': 'uint64'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Processor type: 'CPU'
+
+Running ITestWIN_CSs64_160
+
+Mesh created successfully with 4096000 Hex8 elements and 4173281 nodes!
+...
+Done ITestWIN_CSs64_160
+__________
+
+  1x3 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   3 Valid, 0 Invalid.
+   269.0319 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 160x160x160 (4096000)
+Date type for 'elements': 'uint64'
+Date type for 'nodes': 'single'
+Problem type: 'Vector'
+Processor type: 'CPU'
+
+Running ITestWIN_CVs64_160
+
+Mesh created successfully with 4096000 Hex8 elements and 4173281 nodes!
+...
+Done ITestWIN_CVs64_160
+__________
+
+  1x3 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   3 Valid, 0 Invalid.
+   2173.9997 seconds testing time.
+
+
+
+A total of 20 time experiments was executed!
+Date and time at the beginning of the process: 	18-Feb-2020 19:03:07 
+Date and time at the end of the process: 	18-Feb-2020 19:58:48
+
+
+ans =
+
+  60x7 table
+
+                         Name                         SampleSize       Mean       StandardDeviation       Min         Median         Max   
+    ______________________________________________    __________    __________    _________________    _________    __________    _________
+
+    ITestWIN_CSs32_10/Index_CPU_Scalar                     4         0.0024224        0.0001478         0.002287     0.0023856    0.0026316
+    ITestWIN_CSs32_10/Index_CPU_Scalar_Vectorized          4        0.00029763       0.00017056        0.0002015     0.0002179    0.0005532
+    ITestWIN_CSs32_10/Index_CPU_Scalar_Symmetry            4          0.002315       0.00024944         0.002171     0.0022011     0.002687
+    ITestWIN_CVs32_10/Index_CPU_Vector                     4         0.0079964       0.00020666        0.0077596     0.0079893    0.0082475
+    ITestWIN_CVs32_10/Index_CPU_Vector_Vectorized          6         0.0036294       0.00018533          0.00347     0.0035373    0.0038962
+    ITestWIN_CVs32_10/Index_CPU_Vector_Symmetry            4          0.020271       9.9022e-05         0.020134        0.0203     0.020352
+    ITestWIN_CSs64_10/Index_CPU_Scalar                     4         0.0043724       0.00012305         0.004283     0.0043288    0.0045489
+    ITestWIN_CSs64_10/Index_CPU_Scalar_Vectorized          4         0.0010495       0.00085263        0.0005427    0.00066825    0.0023189
+    ITestWIN_CSs64_10/Index_CPU_Scalar_Symmetry            4          0.063404       0.00021036         0.063123      0.063451     0.063592
+    ITestWIN_CVs64_10/Index_CPU_Vector                     4          0.025424       0.00058386         0.024786      0.025472     0.025966
+    ITestWIN_CVs64_10/Index_CPU_Vector_Vectorized          5         0.0069394       0.00034966        0.0064844     0.0071505    0.0072555
+    ITestWIN_CVs64_10/Index_CPU_Vector_Symmetry            4           0.48584         0.001099          0.48484       0.48564      0.48722
+    ITestWIN_CSs32_20/Index_CPU_Scalar                    12          0.020113         0.001827         0.019329      0.019644     0.025894
+    ITestWIN_CSs32_20/Index_CPU_Scalar_Vectorized          4         0.0031024       0.00020479        0.0029425      0.003033    0.0034009
+    ITestWIN_CSs32_20/Index_CPU_Scalar_Symmetry            4          0.018451       0.00030453         0.018173      0.018406     0.018818
+    ITestWIN_CVs32_20/Index_CPU_Vector                     4          0.059954       0.00018582         0.059685      0.060012     0.060107
+    ITestWIN_CVs32_20/Index_CPU_Vector_Vectorized          4          0.020038       0.00063259         0.019461      0.019981     0.020728
+    ITestWIN_CVs32_20/Index_CPU_Vector_Symmetry            4           0.16154        0.0026649           0.1601       0.16027      0.16553
+    ITestWIN_CSs64_20/Index_CPU_Scalar                     4          0.036478       0.00011198         0.036338      0.036484     0.036606
+    ITestWIN_CSs64_20/Index_CPU_Scalar_Vectorized         74         0.0066627        0.0017026        0.0043087     0.0066479     0.012367
+    ITestWIN_CSs64_20/Index_CPU_Scalar_Symmetry            4           0.47798         0.010958          0.46833       0.47742      0.48877
+    ITestWIN_CVs64_20/Index_CPU_Vector                     4           0.19218        0.0007938          0.19101       0.19249      0.19273
+    ITestWIN_CVs64_20/Index_CPU_Vector_Vectorized         39          0.049027        0.0089977          0.03702      0.048276     0.070672
+    ITestWIN_CVs64_20/Index_CPU_Vector_Symmetry            4            4.0006         0.085592           3.9267         3.984       4.1077
+    ITestWIN_CSs32_40/Index_CPU_Scalar                     4           0.15951        0.0013604          0.15816        0.1593      0.16128
+    ITestWIN_CSs32_40/Index_CPU_Scalar_Vectorized          7          0.018168        0.0010197         0.017126      0.017897     0.020125
+    ITestWIN_CSs32_40/Index_CPU_Scalar_Symmetry            4           0.14357       0.00049165          0.14307        0.1436      0.14401
+    ITestWIN_CVs32_40/Index_CPU_Vector                     6           0.50073         0.028875          0.47653       0.48689      0.53916
+    ITestWIN_CVs32_40/Index_CPU_Vector_Vectorized          4           0.18535        0.0078016          0.17738       0.18564      0.19275
+    ITestWIN_CVs32_40/Index_CPU_Vector_Symmetry            4            1.2866        0.0062506           1.2774        1.2889       1.2911
+    ITestWIN_CSs64_40/Index_CPU_Scalar                     4           0.29583        0.0094767          0.28984       0.29176      0.30998
+    ITestWIN_CSs64_40/Index_CPU_Scalar_Vectorized          4          0.036435       0.00063396         0.035606      0.036496     0.037144
+    ITestWIN_CSs64_40/Index_CPU_Scalar_Symmetry            4            3.8268          0.04212           3.7903        3.8151       3.8867
+    ITestWIN_CVs64_40/Index_CPU_Vector                     4            1.6064         0.064763           1.5629        1.5802       1.7024
+    ITestWIN_CVs64_40/Index_CPU_Vector_Vectorized          7           0.35622         0.023455          0.31071       0.35673      0.38461
+    ITestWIN_CVs64_40/Index_CPU_Vector_Symmetry            4            31.887          0.17346           31.671        31.896       32.084
+    ITestWIN_CSs32_80/Index_CPU_Scalar                     1            1.3151                0           1.3151        1.3151       1.3151
+    ITestWIN_CSs32_80/Index_CPU_Scalar_Vectorized          1             0.148                0            0.148         0.148        0.148
+    ITestWIN_CSs32_80/Index_CPU_Scalar_Symmetry            1            1.1461                0           1.1461        1.1461       1.1461
+    ITestWIN_CVs32_80/Index_CPU_Vector                     1            4.0297                0           4.0297        4.0297       4.0297
+    ITestWIN_CVs32_80/Index_CPU_Vector_Vectorized          1            1.4919                0           1.4919        1.4919       1.4919
+    ITestWIN_CVs32_80/Index_CPU_Vector_Symmetry            1            10.457                0           10.457        10.457       10.457
+    ITestWIN_CSs64_80/Index_CPU_Scalar                     1            2.3669                0           2.3669        2.3669       2.3669
+    ITestWIN_CSs64_80/Index_CPU_Scalar_Vectorized          1           0.25877                0          0.25877       0.25877      0.25877
+    ITestWIN_CSs64_80/Index_CPU_Scalar_Symmetry            1            31.008                0           31.008        31.008       31.008
+    ITestWIN_CVs64_80/Index_CPU_Vector                     1            12.266                0           12.266        12.266       12.266
+    ITestWIN_CVs64_80/Index_CPU_Vector_Vectorized          1            3.0169                0           3.0169        3.0169       3.0169
+    ITestWIN_CVs64_80/Index_CPU_Vector_Symmetry            1            254.78                0           254.78        254.78       254.78
+    ITestWIN_CSs32_160/Index_CPU_Scalar                    1             10.71                0            10.71         10.71        10.71
+    ITestWIN_CSs32_160/Index_CPU_Scalar_Vectorized         1            1.4094                0           1.4094        1.4094       1.4094
+    ITestWIN_CSs32_160/Index_CPU_Scalar_Symmetry           1            9.2058                0           9.2058        9.2058       9.2058
+    ITestWIN_CVs32_160/Index_CPU_Vector                    1             31.38                0            31.38         31.38        31.38
+    ITestWIN_CVs32_160/Index_CPU_Vector_Vectorized         1            15.088                0           15.088        15.088       15.088
+    ITestWIN_CVs32_160/Index_CPU_Vector_Symmetry           1            83.256                0           83.256        83.256       83.256
+    ITestWIN_CSs64_160/Index_CPU_Scalar                    1            19.217                0           19.217        19.217       19.217
+    ITestWIN_CSs64_160/Index_CPU_Scalar_Vectorized         1            2.3726                0           2.3726        2.3726       2.3726
+    ITestWIN_CSs64_160/Index_CPU_Scalar_Symmetry           1            246.91                0           246.91        246.91       246.91
+    ITestWIN_CVs64_160/Index_CPU_Vector                    1            100.85                0           100.85        100.85       100.85
+    ITestWIN_CVs64_160/Index_CPU_Vector_Vectorized         1            34.934                0           34.934        34.934       34.934
+    ITestWIN_CVs64_160/Index_CPU_Vector_Symmetry           1            2037.7                0           2037.7        2037.7       2037.7
+

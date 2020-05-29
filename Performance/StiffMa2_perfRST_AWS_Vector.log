@@ -1,0 +1,1910 @@
+[Warning: Directory already exists.] 
+[> In runStiffMaTest2 (line 28)] 
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 10x10x10 (1000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running StiffMa2_LNX_Vec10
+	Mesh created successfully with 1000 Hex8 elements and 1331 nodes!
+
+The global stiffness matrix will be computed with 1 chunk(s).
+Available memory on GPU before computations begin (MB): 16435.839
+Processing the VECTOR problem with 10x10x10 elements
+.......... .......... .......... .......
+Done StiffMa2_LNX_Vec10
+__________
+
+  TimeResult with properties:
+
+            Name: 'StiffMa2_LNX_Vec10/StiffMa'
+           Valid: 1
+         Samples: [33x7 table]
+    TestActivity: [37x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   1.4599 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 20x20x20 (8000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running StiffMa2_LNX_Vec20
+	Mesh created successfully with 8000 Hex8 elements and 9261 nodes!
+
+The global stiffness matrix will be computed with 1 chunk(s).
+Available memory on GPU before computations begin (MB): 16435.839
+Processing the VECTOR problem with 20x20x20 elements
+........
+Done StiffMa2_LNX_Vec20
+__________
+
+  TimeResult with properties:
+
+            Name: 'StiffMa2_LNX_Vec20/StiffMa'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   0.52564 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 40x40x40 (64000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running StiffMa2_LNX_Vec40
+	Mesh created successfully with 64000 Hex8 elements and 68921 nodes!
+
+The global stiffness matrix will be computed with 1 chunk(s).
+Available memory on GPU before computations begin (MB): 16435.839
+Processing the VECTOR problem with 40x40x40 elements
+........
+Done StiffMa2_LNX_Vec40
+__________
+
+  TimeResult with properties:
+
+            Name: 'StiffMa2_LNX_Vec40/StiffMa'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   1.062 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 80x80x80 (512000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running StiffMa2_LNX_Vec80
+	Mesh created successfully with 512000 Hex8 elements and 531441 nodes!
+
+The global stiffness matrix will be computed with 1 chunk(s).
+Available memory on GPU before computations begin (MB): 16435.839
+Processing the VECTOR problem with 80x80x80 elements
+........
+Done StiffMa2_LNX_Vec80
+__________
+
+  TimeResult with properties:
+
+            Name: 'StiffMa2_LNX_Vec80/StiffMa'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   5.9628 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 90x90x90 (729000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running StiffMa2_LNX_Vec90
+	Mesh created successfully with 729000 Hex8 elements and 753571 nodes!
+
+The global stiffness matrix will be computed with 1 chunk(s).
+Available memory on GPU before computations begin (MB): 16435.839
+Processing the VECTOR problem with 90x90x90 elements
+........
+Done StiffMa2_LNX_Vec90
+__________
+
+  TimeResult with properties:
+
+            Name: 'StiffMa2_LNX_Vec90/StiffMa'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   8.4316 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 94x94x94 (830584)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running StiffMa2_LNX_Vec94
+	Mesh created successfully with 830584 Hex8 elements and 857375 nodes!
+
+The global stiffness matrix will be computed with 4 chunk(s).
+Available memory on GPU before computations begin (MB): 16435.839
+Processing the VECTOR problem with 94x94x94 elements
+	 Processing Chunk 1 of 4...
+	 Processing Chunk 2 of 4...
+	 Processing Chunk 3 of 4...
+	 Processing Chunk 4 of 4...
+.	 Processing Chunk 1 of 4...
+	 Processing Chunk 2 of 4...
+	 Processing Chunk 3 of 4...
+	 Processing Chunk 4 of 4...
+.	 Processing Chunk 1 of 4...
+	 Processing Chunk 2 of 4...
+	 Processing Chunk 3 of 4...
+	 Processing Chunk 4 of 4...
+.	 Processing Chunk 1 of 4...
+	 Processing Chunk 2 of 4...
+	 Processing Chunk 3 of 4...
+	 Processing Chunk 4 of 4...
+.	 Processing Chunk 1 of 4...
+	 Processing Chunk 2 of 4...
+	 Processing Chunk 3 of 4...
+	 Processing Chunk 4 of 4...
+.	 Processing Chunk 1 of 4...
+	 Processing Chunk 2 of 4...
+	 Processing Chunk 3 of 4...
+	 Processing Chunk 4 of 4...
+.	 Processing Chunk 1 of 4...
+	 Processing Chunk 2 of 4...
+	 Processing Chunk 3 of 4...
+	 Processing Chunk 4 of 4...
+.	 Processing Chunk 1 of 4...
+	 Processing Chunk 2 of 4...
+	 Processing Chunk 3 of 4...
+	 Processing Chunk 4 of 4...
+.
+Done StiffMa2_LNX_Vec94
+__________
+
+  TimeResult with properties:
+
+            Name: 'StiffMa2_LNX_Vec94/StiffMa'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   10.6956 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 98x98x98 (941192)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running StiffMa2_LNX_Vec98
+	Mesh created successfully with 941192 Hex8 elements and 970299 nodes!
+
+The global stiffness matrix will be computed with 4 chunk(s).
+Available memory on GPU before computations begin (MB): 16435.839
+Processing the VECTOR problem with 98x98x98 elements
+	 Processing Chunk 1 of 4...
+	 Processing Chunk 2 of 4...
+	 Processing Chunk 3 of 4...
+	 Processing Chunk 4 of 4...
+.	 Processing Chunk 1 of 4...
+	 Processing Chunk 2 of 4...
+	 Processing Chunk 3 of 4...
+	 Processing Chunk 4 of 4...
+.	 Processing Chunk 1 of 4...
+	 Processing Chunk 2 of 4...
+	 Processing Chunk 3 of 4...
+	 Processing Chunk 4 of 4...
+.	 Processing Chunk 1 of 4...
+	 Processing Chunk 2 of 4...
+	 Processing Chunk 3 of 4...
+	 Processing Chunk 4 of 4...
+.	 Processing Chunk 1 of 4...
+	 Processing Chunk 2 of 4...
+	 Processing Chunk 3 of 4...
+	 Processing Chunk 4 of 4...
+.	 Processing Chunk 1 of 4...
+	 Processing Chunk 2 of 4...
+	 Processing Chunk 3 of 4...
+	 Processing Chunk 4 of 4...
+.	 Processing Chunk 1 of 4...
+	 Processing Chunk 2 of 4...
+	 Processing Chunk 3 of 4...
+	 Processing Chunk 4 of 4...
+.	 Processing Chunk 1 of 4...
+	 Processing Chunk 2 of 4...
+	 Processing Chunk 3 of 4...
+	 Processing Chunk 4 of 4...
+.
+Done StiffMa2_LNX_Vec98
+__________
+
+  TimeResult with properties:
+
+            Name: 'StiffMa2_LNX_Vec98/StiffMa'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   12.2158 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 102x102x102 (1061208)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running StiffMa2_LNX_Vec102
+	Mesh created successfully with 1061208 Hex8 elements and 1092727 nodes!
+
+The global stiffness matrix will be computed with 3 chunk(s).
+Available memory on GPU before computations begin (MB): 16435.839
+Processing the VECTOR problem with 102x102x102 elements
+	 Processing Chunk 1 of 3...
+	 Processing Chunk 2 of 3...
+	 Processing Chunk 3 of 3...
+.	 Processing Chunk 1 of 3...
+	 Processing Chunk 2 of 3...
+	 Processing Chunk 3 of 3...
+.	 Processing Chunk 1 of 3...
+	 Processing Chunk 2 of 3...
+	 Processing Chunk 3 of 3...
+.	 Processing Chunk 1 of 3...
+	 Processing Chunk 2 of 3...
+	 Processing Chunk 3 of 3...
+.	 Processing Chunk 1 of 3...
+	 Processing Chunk 2 of 3...
+	 Processing Chunk 3 of 3...
+.	 Processing Chunk 1 of 3...
+	 Processing Chunk 2 of 3...
+	 Processing Chunk 3 of 3...
+.	 Processing Chunk 1 of 3...
+	 Processing Chunk 2 of 3...
+	 Processing Chunk 3 of 3...
+.	 Processing Chunk 1 of 3...
+	 Processing Chunk 2 of 3...
+	 Processing Chunk 3 of 3...
+.
+Done StiffMa2_LNX_Vec102
+__________
+
+  TimeResult with properties:
+
+            Name: 'StiffMa2_LNX_Vec102/StiffMa'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   13.3055 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 106x106x106 (1191016)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running StiffMa2_LNX_Vec106
+	Mesh created successfully with 1191016 Hex8 elements and 1225043 nodes!
+
+The global stiffness matrix will be computed with 4 chunk(s).
+Available memory on GPU before computations begin (MB): 16435.839
+Processing the VECTOR problem with 106x106x106 elements
+	 Processing Chunk 1 of 4...
+	 Processing Chunk 2 of 4...
+	 Processing Chunk 3 of 4...
+	 Processing Chunk 4 of 4...
+.	 Processing Chunk 1 of 4...
+	 Processing Chunk 2 of 4...
+	 Processing Chunk 3 of 4...
+	 Processing Chunk 4 of 4...
+.	 Processing Chunk 1 of 4...
+	 Processing Chunk 2 of 4...
+	 Processing Chunk 3 of 4...
+	 Processing Chunk 4 of 4...
+.	 Processing Chunk 1 of 4...
+	 Processing Chunk 2 of 4...
+	 Processing Chunk 3 of 4...
+	 Processing Chunk 4 of 4...
+.	 Processing Chunk 1 of 4...
+	 Processing Chunk 2 of 4...
+	 Processing Chunk 3 of 4...
+	 Processing Chunk 4 of 4...
+.	 Processing Chunk 1 of 4...
+	 Processing Chunk 2 of 4...
+	 Processing Chunk 3 of 4...
+	 Processing Chunk 4 of 4...
+.	 Processing Chunk 1 of 4...
+	 Processing Chunk 2 of 4...
+	 Processing Chunk 3 of 4...
+	 Processing Chunk 4 of 4...
+.	 Processing Chunk 1 of 4...
+	 Processing Chunk 2 of 4...
+	 Processing Chunk 3 of 4...
+	 Processing Chunk 4 of 4...
+.
+Done StiffMa2_LNX_Vec106
+__________
+
+  TimeResult with properties:
+
+            Name: 'StiffMa2_LNX_Vec106/StiffMa'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   15.4651 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 110x110x110 (1331000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running StiffMa2_LNX_Vec110
+	Mesh created successfully with 1331000 Hex8 elements and 1367631 nodes!
+
+The global stiffness matrix will be computed with 4 chunk(s).
+Available memory on GPU before computations begin (MB): 16435.839
+Processing the VECTOR problem with 110x110x110 elements
+	 Processing Chunk 1 of 4...
+	 Processing Chunk 2 of 4...
+	 Processing Chunk 3 of 4...
+	 Processing Chunk 4 of 4...
+.	 Processing Chunk 1 of 4...
+	 Processing Chunk 2 of 4...
+	 Processing Chunk 3 of 4...
+	 Processing Chunk 4 of 4...
+.	 Processing Chunk 1 of 4...
+	 Processing Chunk 2 of 4...
+	 Processing Chunk 3 of 4...
+	 Processing Chunk 4 of 4...
+.	 Processing Chunk 1 of 4...
+	 Processing Chunk 2 of 4...
+	 Processing Chunk 3 of 4...
+	 Processing Chunk 4 of 4...
+.	 Processing Chunk 1 of 4...
+	 Processing Chunk 2 of 4...
+	 Processing Chunk 3 of 4...
+	 Processing Chunk 4 of 4...
+.	 Processing Chunk 1 of 4...
+	 Processing Chunk 2 of 4...
+	 Processing Chunk 3 of 4...
+	 Processing Chunk 4 of 4...
+.	 Processing Chunk 1 of 4...
+	 Processing Chunk 2 of 4...
+	 Processing Chunk 3 of 4...
+	 Processing Chunk 4 of 4...
+.	 Processing Chunk 1 of 4...
+	 Processing Chunk 2 of 4...
+	 Processing Chunk 3 of 4...
+	 Processing Chunk 4 of 4...
+.
+Done StiffMa2_LNX_Vec110
+__________
+
+  TimeResult with properties:
+
+            Name: 'StiffMa2_LNX_Vec110/StiffMa'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   17.4527 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 114x114x114 (1481544)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running StiffMa2_LNX_Vec114
+	Mesh created successfully with 1481544 Hex8 elements and 1520875 nodes!
+
+The global stiffness matrix will be computed with 3 chunk(s).
+Available memory on GPU before computations begin (MB): 16435.839
+Processing the VECTOR problem with 114x114x114 elements
+	 Processing Chunk 1 of 3...
+	 Processing Chunk 2 of 3...
+	 Processing Chunk 3 of 3...
+.	 Processing Chunk 1 of 3...
+	 Processing Chunk 2 of 3...
+	 Processing Chunk 3 of 3...
+.	 Processing Chunk 1 of 3...
+	 Processing Chunk 2 of 3...
+	 Processing Chunk 3 of 3...
+.	 Processing Chunk 1 of 3...
+	 Processing Chunk 2 of 3...
+	 Processing Chunk 3 of 3...
+.	 Processing Chunk 1 of 3...
+	 Processing Chunk 2 of 3...
+	 Processing Chunk 3 of 3...
+.	 Processing Chunk 1 of 3...
+	 Processing Chunk 2 of 3...
+	 Processing Chunk 3 of 3...
+.	 Processing Chunk 1 of 3...
+	 Processing Chunk 2 of 3...
+	 Processing Chunk 3 of 3...
+.	 Processing Chunk 1 of 3...
+	 Processing Chunk 2 of 3...
+	 Processing Chunk 3 of 3...
+.
+Done StiffMa2_LNX_Vec114
+__________
+
+  TimeResult with properties:
+
+            Name: 'StiffMa2_LNX_Vec114/StiffMa'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   18.5561 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 118x118x118 (1643032)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running StiffMa2_LNX_Vec118
+	Mesh created successfully with 1643032 Hex8 elements and 1685159 nodes!
+
+The global stiffness matrix will be computed with 4 chunk(s).
+Available memory on GPU before computations begin (MB): 16435.839
+Processing the VECTOR problem with 118x118x118 elements
+	 Processing Chunk 1 of 4...
+	 Processing Chunk 2 of 4...
+	 Processing Chunk 3 of 4...
+	 Processing Chunk 4 of 4...
+.	 Processing Chunk 1 of 4...
+	 Processing Chunk 2 of 4...
+	 Processing Chunk 3 of 4...
+	 Processing Chunk 4 of 4...
+.	 Processing Chunk 1 of 4...
+	 Processing Chunk 2 of 4...
+	 Processing Chunk 3 of 4...
+	 Processing Chunk 4 of 4...
+.	 Processing Chunk 1 of 4...
+	 Processing Chunk 2 of 4...
+	 Processing Chunk 3 of 4...
+	 Processing Chunk 4 of 4...
+.	 Processing Chunk 1 of 4...
+	 Processing Chunk 2 of 4...
+	 Processing Chunk 3 of 4...
+	 Processing Chunk 4 of 4...
+.	 Processing Chunk 1 of 4...
+	 Processing Chunk 2 of 4...
+	 Processing Chunk 3 of 4...
+	 Processing Chunk 4 of 4...
+.	 Processing Chunk 1 of 4...
+	 Processing Chunk 2 of 4...
+	 Processing Chunk 3 of 4...
+	 Processing Chunk 4 of 4...
+.	 Processing Chunk 1 of 4...
+	 Processing Chunk 2 of 4...
+	 Processing Chunk 3 of 4...
+	 Processing Chunk 4 of 4...
+.
+Done StiffMa2_LNX_Vec118
+__________
+
+  TimeResult with properties:
+
+            Name: 'StiffMa2_LNX_Vec118/StiffMa'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   21.4415 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 122x122x122 (1815848)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running StiffMa2_LNX_Vec122
+	Mesh created successfully with 1815848 Hex8 elements and 1860867 nodes!
+
+The global stiffness matrix will be computed with 4 chunk(s).
+Available memory on GPU before computations begin (MB): 16435.839
+Processing the VECTOR problem with 122x122x122 elements
+	 Processing Chunk 1 of 4...
+	 Processing Chunk 2 of 4...
+	 Processing Chunk 3 of 4...
+	 Processing Chunk 4 of 4...
+.	 Processing Chunk 1 of 4...
+	 Processing Chunk 2 of 4...
+	 Processing Chunk 3 of 4...
+	 Processing Chunk 4 of 4...
+.	 Processing Chunk 1 of 4...
+	 Processing Chunk 2 of 4...
+	 Processing Chunk 3 of 4...
+	 Processing Chunk 4 of 4...
+.	 Processing Chunk 1 of 4...
+	 Processing Chunk 2 of 4...
+	 Processing Chunk 3 of 4...
+	 Processing Chunk 4 of 4...
+.	 Processing Chunk 1 of 4...
+	 Processing Chunk 2 of 4...
+	 Processing Chunk 3 of 4...
+	 Processing Chunk 4 of 4...
+.	 Processing Chunk 1 of 4...
+	 Processing Chunk 2 of 4...
+	 Processing Chunk 3 of 4...
+	 Processing Chunk 4 of 4...
+.	 Processing Chunk 1 of 4...
+	 Processing Chunk 2 of 4...
+	 Processing Chunk 3 of 4...
+	 Processing Chunk 4 of 4...
+.	 Processing Chunk 1 of 4...
+	 Processing Chunk 2 of 4...
+	 Processing Chunk 3 of 4...
+	 Processing Chunk 4 of 4...
+.
+Done StiffMa2_LNX_Vec122
+__________
+
+  TimeResult with properties:
+
+            Name: 'StiffMa2_LNX_Vec122/StiffMa'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   23.9016 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 126x126x126 (2000376)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running StiffMa2_LNX_Vec126
+	Mesh created successfully with 2000376 Hex8 elements and 2048383 nodes!
+
+The global stiffness matrix will be computed with 4 chunk(s).
+Available memory on GPU before computations begin (MB): 16435.839
+Processing the VECTOR problem with 126x126x126 elements
+	 Processing Chunk 1 of 4...
+	 Processing Chunk 2 of 4...
+	 Processing Chunk 3 of 4...
+	 Processing Chunk 4 of 4...
+.	 Processing Chunk 1 of 4...
+	 Processing Chunk 2 of 4...
+	 Processing Chunk 3 of 4...
+	 Processing Chunk 4 of 4...
+.	 Processing Chunk 1 of 4...
+	 Processing Chunk 2 of 4...
+	 Processing Chunk 3 of 4...
+	 Processing Chunk 4 of 4...
+.	 Processing Chunk 1 of 4...
+	 Processing Chunk 2 of 4...
+	 Processing Chunk 3 of 4...
+	 Processing Chunk 4 of 4...
+.	 Processing Chunk 1 of 4...
+	 Processing Chunk 2 of 4...
+	 Processing Chunk 3 of 4...
+	 Processing Chunk 4 of 4...
+.	 Processing Chunk 1 of 4...
+	 Processing Chunk 2 of 4...
+	 Processing Chunk 3 of 4...
+	 Processing Chunk 4 of 4...
+.	 Processing Chunk 1 of 4...
+	 Processing Chunk 2 of 4...
+	 Processing Chunk 3 of 4...
+	 Processing Chunk 4 of 4...
+.	 Processing Chunk 1 of 4...
+	 Processing Chunk 2 of 4...
+	 Processing Chunk 3 of 4...
+	 Processing Chunk 4 of 4...
+.
+Done StiffMa2_LNX_Vec126
+__________
+
+  TimeResult with properties:
+
+            Name: 'StiffMa2_LNX_Vec126/StiffMa'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   26.472 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 130x130x130 (2197000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running StiffMa2_LNX_Vec130
+	Mesh created successfully with 2197000 Hex8 elements and 2248091 nodes!
+
+The global stiffness matrix will be computed with 4 chunk(s).
+Available memory on GPU before computations begin (MB): 16435.839
+Processing the VECTOR problem with 130x130x130 elements
+	 Processing Chunk 1 of 4...
+	 Processing Chunk 2 of 4...
+	 Processing Chunk 3 of 4...
+	 Processing Chunk 4 of 4...
+.	 Processing Chunk 1 of 4...
+	 Processing Chunk 2 of 4...
+	 Processing Chunk 3 of 4...
+	 Processing Chunk 4 of 4...
+.	 Processing Chunk 1 of 4...
+	 Processing Chunk 2 of 4...
+	 Processing Chunk 3 of 4...
+	 Processing Chunk 4 of 4...
+.	 Processing Chunk 1 of 4...
+	 Processing Chunk 2 of 4...
+	 Processing Chunk 3 of 4...
+	 Processing Chunk 4 of 4...
+.	 Processing Chunk 1 of 4...
+	 Processing Chunk 2 of 4...
+	 Processing Chunk 3 of 4...
+	 Processing Chunk 4 of 4...
+.	 Processing Chunk 1 of 4...
+	 Processing Chunk 2 of 4...
+	 Processing Chunk 3 of 4...
+	 Processing Chunk 4 of 4...
+.	 Processing Chunk 1 of 4...
+	 Processing Chunk 2 of 4...
+	 Processing Chunk 3 of 4...
+	 Processing Chunk 4 of 4...
+.	 Processing Chunk 1 of 4...
+	 Processing Chunk 2 of 4...
+	 Processing Chunk 3 of 4...
+	 Processing Chunk 4 of 4...
+.
+Done StiffMa2_LNX_Vec130
+__________
+
+  TimeResult with properties:
+
+            Name: 'StiffMa2_LNX_Vec130/StiffMa'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   29.8112 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 134x134x134 (2406104)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running StiffMa2_LNX_Vec134
+	Mesh created successfully with 2406104 Hex8 elements and 2460375 nodes!
+
+The global stiffness matrix will be computed with 8 chunk(s).
+Available memory on GPU before computations begin (MB): 16435.839
+Processing the VECTOR problem with 134x134x134 elements
+	 Processing Chunk 1 of 8...
+	 Processing Chunk 2 of 8...
+	 Processing Chunk 3 of 8...
+	 Processing Chunk 4 of 8...
+	 Processing Chunk 5 of 8...
+	 Processing Chunk 6 of 8...
+	 Processing Chunk 7 of 8...
+	 Processing Chunk 8 of 8...
+.	 Processing Chunk 1 of 8...
+	 Processing Chunk 2 of 8...
+	 Processing Chunk 3 of 8...
+	 Processing Chunk 4 of 8...
+	 Processing Chunk 5 of 8...
+	 Processing Chunk 6 of 8...
+	 Processing Chunk 7 of 8...
+	 Processing Chunk 8 of 8...
+.	 Processing Chunk 1 of 8...
+	 Processing Chunk 2 of 8...
+	 Processing Chunk 3 of 8...
+	 Processing Chunk 4 of 8...
+	 Processing Chunk 5 of 8...
+	 Processing Chunk 6 of 8...
+	 Processing Chunk 7 of 8...
+	 Processing Chunk 8 of 8...
+.	 Processing Chunk 1 of 8...
+	 Processing Chunk 2 of 8...
+	 Processing Chunk 3 of 8...
+	 Processing Chunk 4 of 8...
+	 Processing Chunk 5 of 8...
+	 Processing Chunk 6 of 8...
+	 Processing Chunk 7 of 8...
+	 Processing Chunk 8 of 8...
+.	 Processing Chunk 1 of 8...
+	 Processing Chunk 2 of 8...
+	 Processing Chunk 3 of 8...
+	 Processing Chunk 4 of 8...
+	 Processing Chunk 5 of 8...
+	 Processing Chunk 6 of 8...
+	 Processing Chunk 7 of 8...
+	 Processing Chunk 8 of 8...
+.	 Processing Chunk 1 of 8...
+	 Processing Chunk 2 of 8...
+	 Processing Chunk 3 of 8...
+	 Processing Chunk 4 of 8...
+	 Processing Chunk 5 of 8...
+	 Processing Chunk 6 of 8...
+	 Processing Chunk 7 of 8...
+	 Processing Chunk 8 of 8...
+.	 Processing Chunk 1 of 8...
+	 Processing Chunk 2 of 8...
+	 Processing Chunk 3 of 8...
+	 Processing Chunk 4 of 8...
+	 Processing Chunk 5 of 8...
+	 Processing Chunk 6 of 8...
+	 Processing Chunk 7 of 8...
+	 Processing Chunk 8 of 8...
+.	 Processing Chunk 1 of 8...
+	 Processing Chunk 2 of 8...
+	 Processing Chunk 3 of 8...
+	 Processing Chunk 4 of 8...
+	 Processing Chunk 5 of 8...
+	 Processing Chunk 6 of 8...
+	 Processing Chunk 7 of 8...
+	 Processing Chunk 8 of 8...
+.
+Done StiffMa2_LNX_Vec134
+__________
+
+  TimeResult with properties:
+
+            Name: 'StiffMa2_LNX_Vec134/StiffMa'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   37.4279 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 138x138x138 (2628072)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running StiffMa2_LNX_Vec138
+	Mesh created successfully with 2628072 Hex8 elements and 2685619 nodes!
+
+The global stiffness matrix will be computed with 6 chunk(s).
+Available memory on GPU before computations begin (MB): 16435.839
+Processing the VECTOR problem with 138x138x138 elements
+	 Processing Chunk 1 of 6...
+	 Processing Chunk 2 of 6...
+	 Processing Chunk 3 of 6...
+	 Processing Chunk 4 of 6...
+	 Processing Chunk 5 of 6...
+	 Processing Chunk 6 of 6...
+.	 Processing Chunk 1 of 6...
+	 Processing Chunk 2 of 6...
+	 Processing Chunk 3 of 6...
+	 Processing Chunk 4 of 6...
+	 Processing Chunk 5 of 6...
+	 Processing Chunk 6 of 6...
+.	 Processing Chunk 1 of 6...
+	 Processing Chunk 2 of 6...
+	 Processing Chunk 3 of 6...
+	 Processing Chunk 4 of 6...
+	 Processing Chunk 5 of 6...
+	 Processing Chunk 6 of 6...
+.	 Processing Chunk 1 of 6...
+	 Processing Chunk 2 of 6...
+	 Processing Chunk 3 of 6...
+	 Processing Chunk 4 of 6...
+	 Processing Chunk 5 of 6...
+	 Processing Chunk 6 of 6...
+.	 Processing Chunk 1 of 6...
+	 Processing Chunk 2 of 6...
+	 Processing Chunk 3 of 6...
+	 Processing Chunk 4 of 6...
+	 Processing Chunk 5 of 6...
+	 Processing Chunk 6 of 6...
+.	 Processing Chunk 1 of 6...
+	 Processing Chunk 2 of 6...
+	 Processing Chunk 3 of 6...
+	 Processing Chunk 4 of 6...
+	 Processing Chunk 5 of 6...
+	 Processing Chunk 6 of 6...
+.	 Processing Chunk 1 of 6...
+	 Processing Chunk 2 of 6...
+	 Processing Chunk 3 of 6...
+	 Processing Chunk 4 of 6...
+	 Processing Chunk 5 of 6...
+	 Processing Chunk 6 of 6...
+.	 Processing Chunk 1 of 6...
+	 Processing Chunk 2 of 6...
+	 Processing Chunk 3 of 6...
+	 Processing Chunk 4 of 6...
+	 Processing Chunk 5 of 6...
+	 Processing Chunk 6 of 6...
+.
+Done StiffMa2_LNX_Vec138
+__________
+
+  TimeResult with properties:
+
+            Name: 'StiffMa2_LNX_Vec138/StiffMa'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   38.4416 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 142x142x142 (2863288)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running StiffMa2_LNX_Vec142
+	Mesh created successfully with 2863288 Hex8 elements and 2924207 nodes!
+
+The global stiffness matrix will be computed with 8 chunk(s).
+Available memory on GPU before computations begin (MB): 16435.839
+Processing the VECTOR problem with 142x142x142 elements
+	 Processing Chunk 1 of 8...
+	 Processing Chunk 2 of 8...
+	 Processing Chunk 3 of 8...
+	 Processing Chunk 4 of 8...
+	 Processing Chunk 5 of 8...
+	 Processing Chunk 6 of 8...
+	 Processing Chunk 7 of 8...
+	 Processing Chunk 8 of 8...
+.	 Processing Chunk 1 of 8...
+	 Processing Chunk 2 of 8...
+	 Processing Chunk 3 of 8...
+	 Processing Chunk 4 of 8...
+	 Processing Chunk 5 of 8...
+	 Processing Chunk 6 of 8...
+	 Processing Chunk 7 of 8...
+	 Processing Chunk 8 of 8...
+.	 Processing Chunk 1 of 8...
+	 Processing Chunk 2 of 8...
+	 Processing Chunk 3 of 8...
+	 Processing Chunk 4 of 8...
+	 Processing Chunk 5 of 8...
+	 Processing Chunk 6 of 8...
+	 Processing Chunk 7 of 8...
+	 Processing Chunk 8 of 8...
+.	 Processing Chunk 1 of 8...
+	 Processing Chunk 2 of 8...
+	 Processing Chunk 3 of 8...
+	 Processing Chunk 4 of 8...
+	 Processing Chunk 5 of 8...
+	 Processing Chunk 6 of 8...
+	 Processing Chunk 7 of 8...
+	 Processing Chunk 8 of 8...
+.	 Processing Chunk 1 of 8...
+	 Processing Chunk 2 of 8...
+	 Processing Chunk 3 of 8...
+	 Processing Chunk 4 of 8...
+	 Processing Chunk 5 of 8...
+	 Processing Chunk 6 of 8...
+	 Processing Chunk 7 of 8...
+	 Processing Chunk 8 of 8...
+.	 Processing Chunk 1 of 8...
+	 Processing Chunk 2 of 8...
+	 Processing Chunk 3 of 8...
+	 Processing Chunk 4 of 8...
+	 Processing Chunk 5 of 8...
+	 Processing Chunk 6 of 8...
+	 Processing Chunk 7 of 8...
+	 Processing Chunk 8 of 8...
+.	 Processing Chunk 1 of 8...
+	 Processing Chunk 2 of 8...
+	 Processing Chunk 3 of 8...
+	 Processing Chunk 4 of 8...
+	 Processing Chunk 5 of 8...
+	 Processing Chunk 6 of 8...
+	 Processing Chunk 7 of 8...
+	 Processing Chunk 8 of 8...
+.	 Processing Chunk 1 of 8...
+	 Processing Chunk 2 of 8...
+	 Processing Chunk 3 of 8...
+	 Processing Chunk 4 of 8...
+	 Processing Chunk 5 of 8...
+	 Processing Chunk 6 of 8...
+	 Processing Chunk 7 of 8...
+	 Processing Chunk 8 of 8...
+.
+Done StiffMa2_LNX_Vec142
+__________
+
+  TimeResult with properties:
+
+            Name: 'StiffMa2_LNX_Vec142/StiffMa'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   45.2369 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 146x146x146 (3112136)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running StiffMa2_LNX_Vec146
+	Mesh created successfully with 3112136 Hex8 elements and 3176523 nodes!
+
+The global stiffness matrix will be computed with 8 chunk(s).
+Available memory on GPU before computations begin (MB): 16435.839
+Processing the VECTOR problem with 146x146x146 elements
+	 Processing Chunk 1 of 8...
+	 Processing Chunk 2 of 8...
+	 Processing Chunk 3 of 8...
+	 Processing Chunk 4 of 8...
+	 Processing Chunk 5 of 8...
+	 Processing Chunk 6 of 8...
+	 Processing Chunk 7 of 8...
+	 Processing Chunk 8 of 8...
+.	 Processing Chunk 1 of 8...
+	 Processing Chunk 2 of 8...
+	 Processing Chunk 3 of 8...
+	 Processing Chunk 4 of 8...
+	 Processing Chunk 5 of 8...
+	 Processing Chunk 6 of 8...
+	 Processing Chunk 7 of 8...
+	 Processing Chunk 8 of 8...
+.	 Processing Chunk 1 of 8...
+	 Processing Chunk 2 of 8...
+	 Processing Chunk 3 of 8...
+	 Processing Chunk 4 of 8...
+	 Processing Chunk 5 of 8...
+	 Processing Chunk 6 of 8...
+	 Processing Chunk 7 of 8...
+	 Processing Chunk 8 of 8...
+.	 Processing Chunk 1 of 8...
+	 Processing Chunk 2 of 8...
+	 Processing Chunk 3 of 8...
+	 Processing Chunk 4 of 8...
+	 Processing Chunk 5 of 8...
+	 Processing Chunk 6 of 8...
+	 Processing Chunk 7 of 8...
+	 Processing Chunk 8 of 8...
+.	 Processing Chunk 1 of 8...
+	 Processing Chunk 2 of 8...
+	 Processing Chunk 3 of 8...
+	 Processing Chunk 4 of 8...
+	 Processing Chunk 5 of 8...
+	 Processing Chunk 6 of 8...
+	 Processing Chunk 7 of 8...
+	 Processing Chunk 8 of 8...
+.	 Processing Chunk 1 of 8...
+	 Processing Chunk 2 of 8...
+	 Processing Chunk 3 of 8...
+	 Processing Chunk 4 of 8...
+	 Processing Chunk 5 of 8...
+	 Processing Chunk 6 of 8...
+	 Processing Chunk 7 of 8...
+	 Processing Chunk 8 of 8...
+.	 Processing Chunk 1 of 8...
+	 Processing Chunk 2 of 8...
+	 Processing Chunk 3 of 8...
+	 Processing Chunk 4 of 8...
+	 Processing Chunk 5 of 8...
+	 Processing Chunk 6 of 8...
+	 Processing Chunk 7 of 8...
+	 Processing Chunk 8 of 8...
+.	 Processing Chunk 1 of 8...
+	 Processing Chunk 2 of 8...
+	 Processing Chunk 3 of 8...
+	 Processing Chunk 4 of 8...
+	 Processing Chunk 5 of 8...
+	 Processing Chunk 6 of 8...
+	 Processing Chunk 7 of 8...
+	 Processing Chunk 8 of 8...
+.
+Done StiffMa2_LNX_Vec146
+__________
+
+  TimeResult with properties:
+
+            Name: 'StiffMa2_LNX_Vec146/StiffMa'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   49.3313 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 150x150x150 (3375000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running StiffMa2_LNX_Vec150
+	Mesh created successfully with 3375000 Hex8 elements and 3442951 nodes!
+
+
+================================================================================
+Error occurred while setting up or tearing down StiffMa2_LNX_Vec150.
+As a result, all StiffMa2_LNX_Vec150 tests failed and did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    ''
+    --------------
+    Error Details:
+    --------------
+    Error using StiffMa2_LNX_Vec150 (line 45)
+    No enough memory on the GPU to process the mesh.
+================================================================================
+
+Done StiffMa2_LNX_Vec150
+__________
+
+Failure Summary:
+
+     Name                         Failed  Incomplete  Reason(s)
+    ============================================================
+     StiffMa2_LNX_Vec150/StiffMa    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'StiffMa2_LNX_Vec150/StiffMa'
+           Valid: 0
+         Samples: [0x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   1.074 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 154x154x154 (3652264)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running StiffMa2_LNX_Vec154
+	Mesh created successfully with 3652264 Hex8 elements and 3723875 nodes!
+
+
+================================================================================
+Error occurred while setting up or tearing down StiffMa2_LNX_Vec154.
+As a result, all StiffMa2_LNX_Vec154 tests failed and did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    ''
+    --------------
+    Error Details:
+    --------------
+    Error using StiffMa2_LNX_Vec154 (line 45)
+    No enough memory on the GPU to process the mesh.
+================================================================================
+
+Done StiffMa2_LNX_Vec154
+__________
+
+Failure Summary:
+
+     Name                         Failed  Incomplete  Reason(s)
+    ============================================================
+     StiffMa2_LNX_Vec154/StiffMa    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'StiffMa2_LNX_Vec154/StiffMa'
+           Valid: 0
+         Samples: [0x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   1.1049 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 158x158x158 (3944312)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running StiffMa2_LNX_Vec158
+	Mesh created successfully with 3944312 Hex8 elements and 4019679 nodes!
+
+
+================================================================================
+Error occurred while setting up or tearing down StiffMa2_LNX_Vec158.
+As a result, all StiffMa2_LNX_Vec158 tests failed and did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    ''
+    --------------
+    Error Details:
+    --------------
+    Error using StiffMa2_LNX_Vec158 (line 45)
+    No enough memory on the GPU to process the mesh.
+================================================================================
+
+Done StiffMa2_LNX_Vec158
+__________
+
+Failure Summary:
+
+     Name                         Failed  Incomplete  Reason(s)
+    ============================================================
+     StiffMa2_LNX_Vec158/StiffMa    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'StiffMa2_LNX_Vec158/StiffMa'
+           Valid: 0
+         Samples: [0x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   1.1175 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 162x162x162 (4251528)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running StiffMa2_LNX_Vec162
+	Mesh created successfully with 4251528 Hex8 elements and 4330747 nodes!
+
+
+================================================================================
+Error occurred while setting up or tearing down StiffMa2_LNX_Vec162.
+As a result, all StiffMa2_LNX_Vec162 tests failed and did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    ''
+    --------------
+    Error Details:
+    --------------
+    Error using StiffMa2_LNX_Vec162 (line 45)
+    No enough memory on the GPU to process the mesh.
+================================================================================
+
+Done StiffMa2_LNX_Vec162
+__________
+
+Failure Summary:
+
+     Name                         Failed  Incomplete  Reason(s)
+    ============================================================
+     StiffMa2_LNX_Vec162/StiffMa    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'StiffMa2_LNX_Vec162/StiffMa'
+           Valid: 0
+         Samples: [0x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   1.1769 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 166x166x166 (4574296)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running StiffMa2_LNX_Vec166
+	Mesh created successfully with 4574296 Hex8 elements and 4657463 nodes!
+
+
+================================================================================
+Error occurred while setting up or tearing down StiffMa2_LNX_Vec166.
+As a result, all StiffMa2_LNX_Vec166 tests failed and did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    ''
+    --------------
+    Error Details:
+    --------------
+    Error using StiffMa2_LNX_Vec166 (line 45)
+    No enough memory on the GPU to process the mesh.
+================================================================================
+
+Done StiffMa2_LNX_Vec166
+__________
+
+Failure Summary:
+
+     Name                         Failed  Incomplete  Reason(s)
+    ============================================================
+     StiffMa2_LNX_Vec166/StiffMa    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'StiffMa2_LNX_Vec166/StiffMa'
+           Valid: 0
+         Samples: [0x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   1.2062 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 170x170x170 (4913000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running StiffMa2_LNX_Vec170
+	Mesh created successfully with 4913000 Hex8 elements and 5000211 nodes!
+
+
+================================================================================
+Error occurred while setting up or tearing down StiffMa2_LNX_Vec170.
+As a result, all StiffMa2_LNX_Vec170 tests failed and did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    ''
+    --------------
+    Error Details:
+    --------------
+    Error using StiffMa2_LNX_Vec170 (line 45)
+    No enough memory on the GPU to process the mesh.
+================================================================================
+
+Done StiffMa2_LNX_Vec170
+__________
+
+Failure Summary:
+
+     Name                         Failed  Incomplete  Reason(s)
+    ============================================================
+     StiffMa2_LNX_Vec170/StiffMa    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'StiffMa2_LNX_Vec170/StiffMa'
+           Valid: 0
+         Samples: [0x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   1.2377 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 174x174x174 (5268024)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running StiffMa2_LNX_Vec174
+	Mesh created successfully with 5268024 Hex8 elements and 5359375 nodes!
+
+
+================================================================================
+Error occurred while setting up or tearing down StiffMa2_LNX_Vec174.
+As a result, all StiffMa2_LNX_Vec174 tests failed and did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    ''
+    --------------
+    Error Details:
+    --------------
+    Error using StiffMa2_LNX_Vec174 (line 45)
+    No enough memory on the GPU to process the mesh.
+================================================================================
+
+Done StiffMa2_LNX_Vec174
+__________
+
+Failure Summary:
+
+     Name                         Failed  Incomplete  Reason(s)
+    ============================================================
+     StiffMa2_LNX_Vec174/StiffMa    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'StiffMa2_LNX_Vec174/StiffMa'
+           Valid: 0
+         Samples: [0x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   1.2923 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 178x178x178 (5639752)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running StiffMa2_LNX_Vec178
+	Mesh created successfully with 5639752 Hex8 elements and 5735339 nodes!
+
+The global stiffness matrix will be computed with 89 chunk(s).
+Available memory on GPU before computations begin (MB): 16435.839
+Processing the VECTOR problem with 178x178x178 elements
+	 Processing Chunk 1 of 89...
+
+================================================================================
+Error occurred in StiffMa2_LNX_Vec178/StiffMa and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'MATLAB:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using gpuArray/accumarray
+    Maximum variable size allowed by the program is exceeded.
+    
+    Error in AssemblyStiffMa (line 26)
+        K = accumarray([iK,jK], Ke, [sets.tdofs sets.tdofs], [], [], 1);
+    
+    Error in StiffMa2_LNX_Vec178 (line 72)
+            K = K + AssemblyStiffMa(iKd, jKd, Ked, sets);
+================================================================================
+.	 Processing Chunk 1 of 89...
+
+================================================================================
+Error occurred in StiffMa2_LNX_Vec178/StiffMa and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'MATLAB:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using gpuArray/accumarray
+    Maximum variable size allowed by the program is exceeded.
+    
+    Error in AssemblyStiffMa (line 26)
+        K = accumarray([iK,jK], Ke, [sets.tdofs sets.tdofs], [], [], 1);
+    
+    Error in StiffMa2_LNX_Vec178 (line 72)
+            K = K + AssemblyStiffMa(iKd, jKd, Ked, sets);
+================================================================================
+.	 Processing Chunk 1 of 89...
+
+================================================================================
+Error occurred in StiffMa2_LNX_Vec178/StiffMa and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'MATLAB:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using gpuArray/accumarray
+    Maximum variable size allowed by the program is exceeded.
+    
+    Error in AssemblyStiffMa (line 26)
+        K = accumarray([iK,jK], Ke, [sets.tdofs sets.tdofs], [], [], 1);
+    
+    Error in StiffMa2_LNX_Vec178 (line 72)
+            K = K + AssemblyStiffMa(iKd, jKd, Ked, sets);
+================================================================================
+.	 Processing Chunk 1 of 89...
+
+================================================================================
+Error occurred in StiffMa2_LNX_Vec178/StiffMa and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'MATLAB:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using gpuArray/accumarray
+    Maximum variable size allowed by the program is exceeded.
+    
+    Error in AssemblyStiffMa (line 26)
+        K = accumarray([iK,jK], Ke, [sets.tdofs sets.tdofs], [], [], 1);
+    
+    Error in StiffMa2_LNX_Vec178 (line 72)
+            K = K + AssemblyStiffMa(iKd, jKd, Ked, sets);
+================================================================================
+.	 Processing Chunk 1 of 89...
+
+================================================================================
+Error occurred in StiffMa2_LNX_Vec178/StiffMa and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'MATLAB:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using gpuArray/accumarray
+    Maximum variable size allowed by the program is exceeded.
+    
+    Error in AssemblyStiffMa (line 26)
+        K = accumarray([iK,jK], Ke, [sets.tdofs sets.tdofs], [], [], 1);
+    
+    Error in StiffMa2_LNX_Vec178 (line 72)
+            K = K + AssemblyStiffMa(iKd, jKd, Ked, sets);
+================================================================================
+.	 Processing Chunk 1 of 89...
+
+================================================================================
+Error occurred in StiffMa2_LNX_Vec178/StiffMa and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'MATLAB:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using gpuArray/accumarray
+    Maximum variable size allowed by the program is exceeded.
+    
+    Error in AssemblyStiffMa (line 26)
+        K = accumarray([iK,jK], Ke, [sets.tdofs sets.tdofs], [], [], 1);
+    
+    Error in StiffMa2_LNX_Vec178 (line 72)
+            K = K + AssemblyStiffMa(iKd, jKd, Ked, sets);
+================================================================================
+.	 Processing Chunk 1 of 89...
+
+================================================================================
+Error occurred in StiffMa2_LNX_Vec178/StiffMa and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'MATLAB:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using gpuArray/accumarray
+    Maximum variable size allowed by the program is exceeded.
+    
+    Error in AssemblyStiffMa (line 26)
+        K = accumarray([iK,jK], Ke, [sets.tdofs sets.tdofs], [], [], 1);
+    
+    Error in StiffMa2_LNX_Vec178 (line 72)
+            K = K + AssemblyStiffMa(iKd, jKd, Ked, sets);
+================================================================================
+.	 Processing Chunk 1 of 89...
+
+================================================================================
+Error occurred in StiffMa2_LNX_Vec178/StiffMa and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'MATLAB:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using gpuArray/accumarray
+    Maximum variable size allowed by the program is exceeded.
+    
+    Error in AssemblyStiffMa (line 26)
+        K = accumarray([iK,jK], Ke, [sets.tdofs sets.tdofs], [], [], 1);
+    
+    Error in StiffMa2_LNX_Vec178 (line 72)
+            K = K + AssemblyStiffMa(iKd, jKd, Ked, sets);
+================================================================================
+.
+Done StiffMa2_LNX_Vec178
+__________
+
+Failure Summary:
+
+     Name                         Failed  Incomplete  Reason(s)
+    ============================================================
+     StiffMa2_LNX_Vec178/StiffMa    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'StiffMa2_LNX_Vec178/StiffMa'
+           Valid: 0
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   1.8338 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 182x182x182 (6028568)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running StiffMa2_LNX_Vec182
+	Mesh created successfully with 6028568 Hex8 elements and 6128487 nodes!
+
+
+================================================================================
+Error occurred while setting up or tearing down StiffMa2_LNX_Vec182.
+As a result, all StiffMa2_LNX_Vec182 tests failed and did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    ''
+    --------------
+    Error Details:
+    --------------
+    Error using StiffMa2_LNX_Vec182 (line 45)
+    No enough memory on the GPU to process the mesh.
+================================================================================
+
+Done StiffMa2_LNX_Vec182
+__________
+
+Failure Summary:
+
+     Name                         Failed  Incomplete  Reason(s)
+    ============================================================
+     StiffMa2_LNX_Vec182/StiffMa    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'StiffMa2_LNX_Vec182/StiffMa'
+           Valid: 0
+         Samples: [0x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   1.3381 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 186x186x186 (6434856)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running StiffMa2_LNX_Vec186
+	Mesh created successfully with 6434856 Hex8 elements and 6539203 nodes!
+
+
+================================================================================
+Error occurred while setting up or tearing down StiffMa2_LNX_Vec186.
+As a result, all StiffMa2_LNX_Vec186 tests failed and did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    ''
+    --------------
+    Error Details:
+    --------------
+    Error using StiffMa2_LNX_Vec186 (line 45)
+    No enough memory on the GPU to process the mesh.
+================================================================================
+
+Done StiffMa2_LNX_Vec186
+__________
+
+Failure Summary:
+
+     Name                         Failed  Incomplete  Reason(s)
+    ============================================================
+     StiffMa2_LNX_Vec186/StiffMa    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'StiffMa2_LNX_Vec186/StiffMa'
+           Valid: 0
+         Samples: [0x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   1.3863 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 190x190x190 (6859000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running StiffMa2_LNX_Vec190
+	Mesh created successfully with 6859000 Hex8 elements and 6967871 nodes!
+
+
+================================================================================
+Error occurred while setting up or tearing down StiffMa2_LNX_Vec190.
+As a result, all StiffMa2_LNX_Vec190 tests failed and did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    ''
+    --------------
+    Error Details:
+    --------------
+    Error using StiffMa2_LNX_Vec190 (line 45)
+    No enough memory on the GPU to process the mesh.
+================================================================================
+
+Done StiffMa2_LNX_Vec190
+__________
+
+Failure Summary:
+
+     Name                         Failed  Incomplete  Reason(s)
+    ============================================================
+     StiffMa2_LNX_Vec190/StiffMa    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'StiffMa2_LNX_Vec190/StiffMa'
+           Valid: 0
+         Samples: [0x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   1.4428 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 194x194x194 (7301384)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running StiffMa2_LNX_Vec194
+	Mesh created successfully with 7301384 Hex8 elements and 7414875 nodes!
+
+
+================================================================================
+Error occurred while setting up or tearing down StiffMa2_LNX_Vec194.
+As a result, all StiffMa2_LNX_Vec194 tests failed and did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    ''
+    --------------
+    Error Details:
+    --------------
+    Error using StiffMa2_LNX_Vec194 (line 45)
+    No enough memory on the GPU to process the mesh.
+================================================================================
+
+Done StiffMa2_LNX_Vec194
+__________
+
+Failure Summary:
+
+     Name                         Failed  Incomplete  Reason(s)
+    ============================================================
+     StiffMa2_LNX_Vec194/StiffMa    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'StiffMa2_LNX_Vec194/StiffMa'
+           Valid: 0
+         Samples: [0x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   1.4799 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 198x198x198 (7762392)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running StiffMa2_LNX_Vec198
+	Mesh created successfully with 7762392 Hex8 elements and 7880599 nodes!
+
+
+================================================================================
+Error occurred while setting up or tearing down StiffMa2_LNX_Vec198.
+As a result, all StiffMa2_LNX_Vec198 tests failed and did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    ''
+    --------------
+    Error Details:
+    --------------
+    Error using StiffMa2_LNX_Vec198 (line 45)
+    No enough memory on the GPU to process the mesh.
+================================================================================
+
+Done StiffMa2_LNX_Vec198
+__________
+
+Failure Summary:
+
+     Name                         Failed  Incomplete  Reason(s)
+    ============================================================
+     StiffMa2_LNX_Vec198/StiffMa    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'StiffMa2_LNX_Vec198/StiffMa'
+           Valid: 0
+         Samples: [0x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   1.824 seconds testing time.
+
+
+
+A total of 32 time experiments was executed!
+Date and time at the beginning of the process: 	22-May-2020 12:32:28 
+Date and time at the end of the process: 	22-May-2020 12:39:54
+
+
+ans =
+
+  32x7 table
+
+               Name                SampleSize      Mean      StandardDeviation      Min        Median       Max   
+    ___________________________    __________    ________    _________________    ________    ________    ________
+
+    StiffMa2_LNX_Vec10/StiffMa         33        0.017873        0.0029738         0.01672    0.017032    0.034051
+    StiffMa2_LNX_Vec20/StiffMa          4        0.020564       0.00058183        0.019735    0.020716    0.021091
+    StiffMa2_LNX_Vec40/StiffMa          4         0.09088       0.00041722        0.090338    0.090917     0.09135
+    StiffMa2_LNX_Vec80/StiffMa          4         0.69787        0.0012313         0.69679     0.69754     0.69963
+    StiffMa2_LNX_Vec90/StiffMa          4          1.0056         0.012384         0.98716      1.0106       1.014
+    StiffMa2_LNX_Vec94/StiffMa          4          1.2861        0.0029779          1.2836      1.2852      1.2904
+    StiffMa2_LNX_Vec98/StiffMa          4          1.4766        0.0030337           1.474      1.4757      1.4809
+    StiffMa2_LNX_Vec102/StiffMa         4          1.6098        0.0021746          1.6072        1.61      1.6121
+    StiffMa2_LNX_Vec106/StiffMa         4          1.8802        0.0028628          1.8778      1.8797      1.8838
+    StiffMa2_LNX_Vec110/StiffMa         4          2.1179        0.0020907          2.1151      2.1182      2.1201
+    StiffMa2_LNX_Vec114/StiffMa         4          2.2707         0.049529           2.245      2.2465       2.345
+    StiffMa2_LNX_Vec118/StiffMa         4          2.6163        0.0039982          2.6127      2.6153       2.622
+    StiffMa2_LNX_Vec122/StiffMa         4          2.9221        0.0039243          2.9165      2.9231      2.9256
+    StiffMa2_LNX_Vec126/StiffMa         4          3.2453         0.020697          3.2222      3.2467      3.2656
+    StiffMa2_LNX_Vec130/StiffMa         4          3.6384        0.0039437          3.6345      3.6378      3.6433
+    StiffMa2_LNX_Vec134/StiffMa         4           4.586         0.004441          4.5807      4.5865      4.5901
+    StiffMa2_LNX_Vec138/StiffMa         4          4.7245         0.030938           4.689      4.7283      4.7526
+    StiffMa2_LNX_Vec142/StiffMa         4          5.5358         0.025557          5.5004      5.5414      5.5603
+    StiffMa2_LNX_Vec146/StiffMa         4          6.0694         0.019527          6.0413       6.075      6.0864
+    StiffMa2_LNX_Vec150/StiffMa         0             NaN              NaN             NaN         NaN         NaN
+    StiffMa2_LNX_Vec154/StiffMa         0             NaN              NaN             NaN         NaN         NaN
+    StiffMa2_LNX_Vec158/StiffMa         0             NaN              NaN             NaN         NaN         NaN
+    StiffMa2_LNX_Vec162/StiffMa         0             NaN              NaN             NaN         NaN         NaN
+    StiffMa2_LNX_Vec166/StiffMa         0             NaN              NaN             NaN         NaN         NaN
+    StiffMa2_LNX_Vec170/StiffMa         0             NaN              NaN             NaN         NaN         NaN
+    StiffMa2_LNX_Vec174/StiffMa         0             NaN              NaN             NaN         NaN         NaN
+    StiffMa2_LNX_Vec178/StiffMa         4             NaN              NaN             NaN         NaN         NaN
+    StiffMa2_LNX_Vec182/StiffMa         0             NaN              NaN             NaN         NaN         NaN
+    StiffMa2_LNX_Vec186/StiffMa         0             NaN              NaN             NaN         NaN         NaN
+    StiffMa2_LNX_Vec190/StiffMa         0             NaN              NaN             NaN         NaN         NaN
+    StiffMa2_LNX_Vec194/StiffMa         0             NaN              NaN             NaN         NaN         NaN
+    StiffMa2_LNX_Vec198/StiffMa         0             NaN              NaN             NaN         NaN         NaN
+

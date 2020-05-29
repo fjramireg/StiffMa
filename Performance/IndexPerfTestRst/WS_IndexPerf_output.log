@@ -1,0 +1,1504 @@
+[Warning: Directory already exists.] 
+[> In runIndexTest (line 28)] 
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 10x10x10 (1000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Processor type: 'CPU'
+
+Running ITestWIN_CSs32_10
+
+Mesh created successfully with 1000 Hex8 elements and 1331 nodes!
+........
+================================================================================
+ITestWIN_CSs32_10/Index_CPU_Scalar was filtered.
+    Test Diagnostic: The MeasuredTime should not be too close to the precision of the framework.
+================================================================================
+.. ......
+================================================================================
+ITestWIN_CSs32_10/Index_CPU_Scalar_Symmetry was filtered.
+    Test Diagnostic: The MeasuredTime should not be too close to the precision of the framework.
+================================================================================
+
+Done ITestWIN_CSs32_10
+__________
+
+Failure Summary:
+
+     Name                                         Failed  Incomplete  Reason(s)
+    ==========================================================================================
+     ITestWIN_CSs32_10/Index_CPU_Scalar                       X       Filtered by assumption.
+    ------------------------------------------------------------------------------------------
+     ITestWIN_CSs32_10/Index_CPU_Scalar_Symmetry              X       Filtered by assumption.
+  1x2 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   0 Valid, 2 Invalid.
+   0.25541 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 10x10x10 (1000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running ITestWIN_GSs32_10
+
+Mesh created successfully with 1000 Hex8 elements and 1331 nodes!
+........
+Done ITestWIN_GSs32_10
+__________
+
+  TimeResult with properties:
+
+            Name: 'ITestWIN_GSs32_10/Index_GPU_Scalar_Symmetry'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   0.2707 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 10x10x10 (1000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Vector'
+Processor type: 'CPU'
+
+Running ITestWIN_CVs32_10
+
+Mesh created successfully with 1000 Hex8 elements and 1331 nodes!
+.......... ......
+Done ITestWIN_CVs32_10
+__________
+
+  1x2 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   2 Valid, 0 Invalid.
+   0.41226 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 10x10x10 (1000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running ITestWIN_GVs32_10
+
+Mesh created successfully with 1000 Hex8 elements and 1331 nodes!
+.......... .
+Done ITestWIN_GVs32_10
+__________
+
+  TimeResult with properties:
+
+            Name: 'ITestWIN_GVs32_10/Index_GPU_Vector_Symmetry'
+           Valid: 1
+         Samples: [7x7 table]
+    TestActivity: [11x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   0.18077 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 10x10x10 (1000)
+Date type for 'elements': 'uint64'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Processor type: 'CPU'
+
+Running ITestWIN_CSs64_10
+
+Mesh created successfully with 1000 Hex8 elements and 1331 nodes!
+.......... ......
+Done ITestWIN_CSs64_10
+__________
+
+  1x2 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   2 Valid, 0 Invalid.
+   0.70927 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 10x10x10 (1000)
+Date type for 'elements': 'uint64'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running ITestWIN_GSs64_10
+
+Mesh created successfully with 1000 Hex8 elements and 1331 nodes!
+........
+Done ITestWIN_GSs64_10
+__________
+
+  TimeResult with properties:
+
+            Name: 'ITestWIN_GSs64_10/Index_GPU_Scalar_Symmetry'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   0.11336 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 10x10x10 (1000)
+Date type for 'elements': 'uint64'
+Date type for 'nodes': 'single'
+Problem type: 'Vector'
+Processor type: 'CPU'
+
+Running ITestWIN_CVs64_10
+
+Mesh created successfully with 1000 Hex8 elements and 1331 nodes!
+.......... ......
+Done ITestWIN_CVs64_10
+__________
+
+  1x2 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   2 Valid, 0 Invalid.
+   4.5666 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 10x10x10 (1000)
+Date type for 'elements': 'uint64'
+Date type for 'nodes': 'single'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running ITestWIN_GVs64_10
+
+Mesh created successfully with 1000 Hex8 elements and 1331 nodes!
+........
+Done ITestWIN_GVs64_10
+__________
+
+  TimeResult with properties:
+
+            Name: 'ITestWIN_GVs64_10/Index_GPU_Vector_Symmetry'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   0.1226 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 20x20x20 (8000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Processor type: 'CPU'
+
+Running ITestWIN_CSs32_20
+
+Mesh created successfully with 8000 Hex8 elements and 9261 nodes!
+.......... ......
+Done ITestWIN_CSs32_20
+__________
+
+  1x2 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   2 Valid, 0 Invalid.
+   0.46593 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 20x20x20 (8000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running ITestWIN_GSs32_20
+
+Mesh created successfully with 8000 Hex8 elements and 9261 nodes!
+........
+Done ITestWIN_GSs32_20
+__________
+
+  TimeResult with properties:
+
+            Name: 'ITestWIN_GSs32_20/Index_GPU_Scalar_Symmetry'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   0.111 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 20x20x20 (8000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Vector'
+Processor type: 'CPU'
+
+Running ITestWIN_CVs32_20
+
+Mesh created successfully with 8000 Hex8 elements and 9261 nodes!
+.......... ......
+Done ITestWIN_CVs32_20
+__________
+
+  1x2 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   2 Valid, 0 Invalid.
+   2.0571 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 20x20x20 (8000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running ITestWIN_GVs32_20
+
+Mesh created successfully with 8000 Hex8 elements and 9261 nodes!
+........
+Done ITestWIN_GVs32_20
+__________
+
+  TimeResult with properties:
+
+            Name: 'ITestWIN_GVs32_20/Index_GPU_Vector_Symmetry'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   0.15613 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 20x20x20 (8000)
+Date type for 'elements': 'uint64'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Processor type: 'CPU'
+
+Running ITestWIN_CSs64_20
+
+Mesh created successfully with 8000 Hex8 elements and 9261 nodes!
+.......... ......
+Done ITestWIN_CSs64_20
+__________
+
+  1x2 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   2 Valid, 0 Invalid.
+   4.5296 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 20x20x20 (8000)
+Date type for 'elements': 'uint64'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running ITestWIN_GSs64_20
+
+Mesh created successfully with 8000 Hex8 elements and 9261 nodes!
+........
+Done ITestWIN_GSs64_20
+__________
+
+  TimeResult with properties:
+
+            Name: 'ITestWIN_GSs64_20/Index_GPU_Scalar_Symmetry'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   0.12437 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 20x20x20 (8000)
+Date type for 'elements': 'uint64'
+Date type for 'nodes': 'single'
+Problem type: 'Vector'
+Processor type: 'CPU'
+
+Running ITestWIN_CVs64_20
+
+Mesh created successfully with 8000 Hex8 elements and 9261 nodes!
+.......... ......
+Done ITestWIN_CVs64_20
+__________
+
+  1x2 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   2 Valid, 0 Invalid.
+   35.2478 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 20x20x20 (8000)
+Date type for 'elements': 'uint64'
+Date type for 'nodes': 'single'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running ITestWIN_GVs64_20
+
+Mesh created successfully with 8000 Hex8 elements and 9261 nodes!
+........
+Done ITestWIN_GVs64_20
+__________
+
+  TimeResult with properties:
+
+            Name: 'ITestWIN_GVs64_20/Index_GPU_Vector_Symmetry'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   0.17238 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 40x40x40 (64000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Processor type: 'CPU'
+
+Running ITestWIN_CSs32_40
+
+Mesh created successfully with 64000 Hex8 elements and 68921 nodes!
+..
+Done ITestWIN_CSs32_40
+__________
+
+  1x2 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   2 Valid, 0 Invalid.
+   0.32993 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 40x40x40 (64000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running ITestWIN_GSs32_40
+
+Mesh created successfully with 64000 Hex8 elements and 68921 nodes!
+........
+Done ITestWIN_GSs32_40
+__________
+
+  TimeResult with properties:
+
+            Name: 'ITestWIN_GSs32_40/Index_GPU_Scalar_Symmetry'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   0.14202 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 40x40x40 (64000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Vector'
+Processor type: 'CPU'
+
+Running ITestWIN_CVs32_40
+
+Mesh created successfully with 64000 Hex8 elements and 68921 nodes!
+..
+Done ITestWIN_CVs32_40
+__________
+
+  1x2 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   2 Valid, 0 Invalid.
+   1.7265 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 40x40x40 (64000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running ITestWIN_GVs32_40
+
+Mesh created successfully with 64000 Hex8 elements and 68921 nodes!
+........
+Done ITestWIN_GVs32_40
+__________
+
+  TimeResult with properties:
+
+            Name: 'ITestWIN_GVs32_40/Index_GPU_Vector_Symmetry'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   0.45445 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 40x40x40 (64000)
+Date type for 'elements': 'uint64'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Processor type: 'CPU'
+
+Running ITestWIN_CSs64_40
+
+Mesh created successfully with 64000 Hex8 elements and 68921 nodes!
+..
+Done ITestWIN_CSs64_40
+__________
+
+  1x2 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   2 Valid, 0 Invalid.
+   3.9528 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 40x40x40 (64000)
+Date type for 'elements': 'uint64'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running ITestWIN_GSs64_40
+
+Mesh created successfully with 64000 Hex8 elements and 68921 nodes!
+........
+Done ITestWIN_GSs64_40
+__________
+
+  TimeResult with properties:
+
+            Name: 'ITestWIN_GSs64_40/Index_GPU_Scalar_Symmetry'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   0.15583 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 40x40x40 (64000)
+Date type for 'elements': 'uint64'
+Date type for 'nodes': 'single'
+Problem type: 'Vector'
+Processor type: 'CPU'
+
+Running ITestWIN_CVs64_40
+
+Mesh created successfully with 64000 Hex8 elements and 68921 nodes!
+..
+Done ITestWIN_CVs64_40
+__________
+
+  1x2 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   2 Valid, 0 Invalid.
+   31.2203 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 40x40x40 (64000)
+Date type for 'elements': 'uint64'
+Date type for 'nodes': 'single'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running ITestWIN_GVs64_40
+
+Mesh created successfully with 64000 Hex8 elements and 68921 nodes!
+........
+Done ITestWIN_GVs64_40
+__________
+
+  TimeResult with properties:
+
+            Name: 'ITestWIN_GVs64_40/Index_GPU_Vector_Symmetry'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   0.51394 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 80x80x80 (512000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Processor type: 'CPU'
+
+Running ITestWIN_CSs32_80
+
+Mesh created successfully with 512000 Hex8 elements and 531441 nodes!
+..
+Done ITestWIN_CSs32_80
+__________
+
+  1x2 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   2 Valid, 0 Invalid.
+   2.4624 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 80x80x80 (512000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running ITestWIN_GSs32_80
+
+Mesh created successfully with 512000 Hex8 elements and 531441 nodes!
+........
+Done ITestWIN_GSs32_80
+__________
+
+  TimeResult with properties:
+
+            Name: 'ITestWIN_GSs32_80/Index_GPU_Scalar_Symmetry'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   0.43749 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 80x80x80 (512000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Vector'
+Processor type: 'CPU'
+
+Running ITestWIN_CVs32_80
+
+Mesh created successfully with 512000 Hex8 elements and 531441 nodes!
+..
+Done ITestWIN_CVs32_80
+__________
+
+  1x2 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   2 Valid, 0 Invalid.
+   13.7086 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 80x80x80 (512000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running ITestWIN_GVs32_80
+
+Mesh created successfully with 512000 Hex8 elements and 531441 nodes!
+........
+Done ITestWIN_GVs32_80
+__________
+
+  TimeResult with properties:
+
+            Name: 'ITestWIN_GVs32_80/Index_GPU_Vector_Symmetry'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   3.4809 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 80x80x80 (512000)
+Date type for 'elements': 'uint64'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Processor type: 'CPU'
+
+Running ITestWIN_CSs64_80
+
+Mesh created successfully with 512000 Hex8 elements and 531441 nodes!
+..
+Done ITestWIN_CSs64_80
+__________
+
+  1x2 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   2 Valid, 0 Invalid.
+   31.3302 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 80x80x80 (512000)
+Date type for 'elements': 'uint64'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running ITestWIN_GSs64_80
+
+Mesh created successfully with 512000 Hex8 elements and 531441 nodes!
+........
+Done ITestWIN_GSs64_80
+__________
+
+  TimeResult with properties:
+
+            Name: 'ITestWIN_GSs64_80/Index_GPU_Scalar_Symmetry'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   0.53556 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 80x80x80 (512000)
+Date type for 'elements': 'uint64'
+Date type for 'nodes': 'single'
+Problem type: 'Vector'
+Processor type: 'CPU'
+
+Running ITestWIN_CVs64_80
+
+Mesh created successfully with 512000 Hex8 elements and 531441 nodes!
+..
+Done ITestWIN_CVs64_80
+__________
+
+  1x2 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   2 Valid, 0 Invalid.
+   249.2601 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 80x80x80 (512000)
+Date type for 'elements': 'uint64'
+Date type for 'nodes': 'single'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running ITestWIN_GVs64_80
+
+Mesh created successfully with 512000 Hex8 elements and 531441 nodes!
+........
+Done ITestWIN_GVs64_80
+__________
+
+  TimeResult with properties:
+
+            Name: 'ITestWIN_GVs64_80/Index_GPU_Vector_Symmetry'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   5.6104 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 160x160x160 (4096000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Processor type: 'CPU'
+
+Running ITestWIN_CSs32_160
+
+Mesh created successfully with 4096000 Hex8 elements and 4173281 nodes!
+..
+Done ITestWIN_CSs32_160
+__________
+
+  1x2 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   2 Valid, 0 Invalid.
+   19.7047 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 160x160x160 (4096000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running ITestWIN_GSs32_160
+
+Mesh created successfully with 4096000 Hex8 elements and 4173281 nodes!
+........
+Done ITestWIN_GSs32_160
+__________
+
+  TimeResult with properties:
+
+            Name: 'ITestWIN_GSs32_160/Index_GPU_Scalar_Symmetry'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   3.2923 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 160x160x160 (4096000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Vector'
+Processor type: 'CPU'
+
+Running ITestWIN_CVs32_160
+
+Mesh created successfully with 4096000 Hex8 elements and 4173281 nodes!
+..
+Done ITestWIN_CVs32_160
+__________
+
+  1x2 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   2 Valid, 0 Invalid.
+   108.9973 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 160x160x160 (4096000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running ITestWIN_GVs32_160
+
+Mesh created successfully with 4096000 Hex8 elements and 4173281 nodes!
+
+================================================================================
+Error occurred in ITestWIN_GVs32_160/Index_GPU_Vector_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the GPU, use 'gpuDevice()'. If the problem persists, reset the
+    GPU by calling 'gpuDevice(1)'.
+    
+    Error in Index_vpsa (line 53)
+    iK  = zeros(sets.sz*sets.nel, 1, sets.dTE, 'gpuArray');     % Stores row indices (initialized directly on GPU)
+    
+    Error in ITestWIN_GVs32_160 (line 15)
+    [iKd, jKd] = Index_vpsa(elementsGPU, sets);
+================================================================================
+.
+================================================================================
+Error occurred in ITestWIN_GVs32_160/Index_GPU_Vector_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the GPU, use 'gpuDevice()'. If the problem persists, reset the
+    GPU by calling 'gpuDevice(1)'.
+    
+    Error in Index_vpsa (line 53)
+    iK  = zeros(sets.sz*sets.nel, 1, sets.dTE, 'gpuArray');     % Stores row indices (initialized directly on GPU)
+    
+    Error in ITestWIN_GVs32_160 (line 15)
+    [iKd, jKd] = Index_vpsa(elementsGPU, sets);
+================================================================================
+.
+================================================================================
+Error occurred in ITestWIN_GVs32_160/Index_GPU_Vector_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the GPU, use 'gpuDevice()'. If the problem persists, reset the
+    GPU by calling 'gpuDevice(1)'.
+    
+    Error in Index_vpsa (line 53)
+    iK  = zeros(sets.sz*sets.nel, 1, sets.dTE, 'gpuArray');     % Stores row indices (initialized directly on GPU)
+    
+    Error in ITestWIN_GVs32_160 (line 15)
+    [iKd, jKd] = Index_vpsa(elementsGPU, sets);
+================================================================================
+.
+================================================================================
+Error occurred in ITestWIN_GVs32_160/Index_GPU_Vector_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the GPU, use 'gpuDevice()'. If the problem persists, reset the
+    GPU by calling 'gpuDevice(1)'.
+    
+    Error in Index_vpsa (line 53)
+    iK  = zeros(sets.sz*sets.nel, 1, sets.dTE, 'gpuArray');     % Stores row indices (initialized directly on GPU)
+    
+    Error in ITestWIN_GVs32_160 (line 15)
+    [iKd, jKd] = Index_vpsa(elementsGPU, sets);
+================================================================================
+.
+================================================================================
+Error occurred in ITestWIN_GVs32_160/Index_GPU_Vector_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the GPU, use 'gpuDevice()'. If the problem persists, reset the
+    GPU by calling 'gpuDevice(1)'.
+    
+    Error in Index_vpsa (line 53)
+    iK  = zeros(sets.sz*sets.nel, 1, sets.dTE, 'gpuArray');     % Stores row indices (initialized directly on GPU)
+    
+    Error in ITestWIN_GVs32_160 (line 15)
+    [iKd, jKd] = Index_vpsa(elementsGPU, sets);
+================================================================================
+.
+================================================================================
+Error occurred in ITestWIN_GVs32_160/Index_GPU_Vector_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the GPU, use 'gpuDevice()'. If the problem persists, reset the
+    GPU by calling 'gpuDevice(1)'.
+    
+    Error in Index_vpsa (line 53)
+    iK  = zeros(sets.sz*sets.nel, 1, sets.dTE, 'gpuArray');     % Stores row indices (initialized directly on GPU)
+    
+    Error in ITestWIN_GVs32_160 (line 15)
+    [iKd, jKd] = Index_vpsa(elementsGPU, sets);
+================================================================================
+.
+================================================================================
+Error occurred in ITestWIN_GVs32_160/Index_GPU_Vector_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the GPU, use 'gpuDevice()'. If the problem persists, reset the
+    GPU by calling 'gpuDevice(1)'.
+    
+    Error in Index_vpsa (line 53)
+    iK  = zeros(sets.sz*sets.nel, 1, sets.dTE, 'gpuArray');     % Stores row indices (initialized directly on GPU)
+    
+    Error in ITestWIN_GVs32_160 (line 15)
+    [iKd, jKd] = Index_vpsa(elementsGPU, sets);
+================================================================================
+.
+================================================================================
+Error occurred in ITestWIN_GVs32_160/Index_GPU_Vector_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the GPU, use 'gpuDevice()'. If the problem persists, reset the
+    GPU by calling 'gpuDevice(1)'.
+    
+    Error in Index_vpsa (line 53)
+    iK  = zeros(sets.sz*sets.nel, 1, sets.dTE, 'gpuArray');     % Stores row indices (initialized directly on GPU)
+    
+    Error in ITestWIN_GVs32_160 (line 15)
+    [iKd, jKd] = Index_vpsa(elementsGPU, sets);
+================================================================================
+.
+Done ITestWIN_GVs32_160
+__________
+
+Failure Summary:
+
+     Name                                          Failed  Incomplete  Reason(s)
+    =============================================================================
+     ITestWIN_GVs32_160/Index_GPU_Vector_Symmetry    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'ITestWIN_GVs32_160/Index_GPU_Vector_Symmetry'
+           Valid: 0
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   0.62499 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 160x160x160 (4096000)
+Date type for 'elements': 'uint64'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Processor type: 'CPU'
+
+Running ITestWIN_CSs64_160
+
+Mesh created successfully with 4096000 Hex8 elements and 4173281 nodes!
+..
+Done ITestWIN_CSs64_160
+__________
+
+  1x2 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   2 Valid, 0 Invalid.
+   248.5024 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 160x160x160 (4096000)
+Date type for 'elements': 'uint64'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running ITestWIN_GSs64_160
+
+Mesh created successfully with 4096000 Hex8 elements and 4173281 nodes!
+........
+Done ITestWIN_GSs64_160
+__________
+
+  TimeResult with properties:
+
+            Name: 'ITestWIN_GSs64_160/Index_GPU_Scalar_Symmetry'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   5.7155 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 160x160x160 (4096000)
+Date type for 'elements': 'uint64'
+Date type for 'nodes': 'single'
+Problem type: 'Vector'
+Processor type: 'CPU'
+
+Running ITestWIN_CVs64_160
+
+Mesh created successfully with 4096000 Hex8 elements and 4173281 nodes!
+..
+Done ITestWIN_CVs64_160
+__________
+
+  1x2 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   2 Valid, 0 Invalid.
+   2019.3832 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 160x160x160 (4096000)
+Date type for 'elements': 'uint64'
+Date type for 'nodes': 'single'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running ITestWIN_GVs64_160
+
+Mesh created successfully with 4096000 Hex8 elements and 4173281 nodes!
+
+================================================================================
+Error occurred in ITestWIN_GVs64_160/Index_GPU_Vector_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the GPU, use 'gpuDevice()'. If the problem persists, reset the
+    GPU by calling 'gpuDevice(1)'.
+    
+    Error in Index_vpsa (line 53)
+    iK  = zeros(sets.sz*sets.nel, 1, sets.dTE, 'gpuArray');     % Stores row indices (initialized directly on GPU)
+    
+    Error in ITestWIN_GVs64_160 (line 15)
+    [iKd, jKd] = Index_vpsa(elementsGPU, sets);
+================================================================================
+.
+================================================================================
+Error occurred in ITestWIN_GVs64_160/Index_GPU_Vector_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the GPU, use 'gpuDevice()'. If the problem persists, reset the
+    GPU by calling 'gpuDevice(1)'.
+    
+    Error in Index_vpsa (line 53)
+    iK  = zeros(sets.sz*sets.nel, 1, sets.dTE, 'gpuArray');     % Stores row indices (initialized directly on GPU)
+    
+    Error in ITestWIN_GVs64_160 (line 15)
+    [iKd, jKd] = Index_vpsa(elementsGPU, sets);
+================================================================================
+.
+================================================================================
+Error occurred in ITestWIN_GVs64_160/Index_GPU_Vector_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the GPU, use 'gpuDevice()'. If the problem persists, reset the
+    GPU by calling 'gpuDevice(1)'.
+    
+    Error in Index_vpsa (line 53)
+    iK  = zeros(sets.sz*sets.nel, 1, sets.dTE, 'gpuArray');     % Stores row indices (initialized directly on GPU)
+    
+    Error in ITestWIN_GVs64_160 (line 15)
+    [iKd, jKd] = Index_vpsa(elementsGPU, sets);
+================================================================================
+.
+================================================================================
+Error occurred in ITestWIN_GVs64_160/Index_GPU_Vector_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the GPU, use 'gpuDevice()'. If the problem persists, reset the
+    GPU by calling 'gpuDevice(1)'.
+    
+    Error in Index_vpsa (line 53)
+    iK  = zeros(sets.sz*sets.nel, 1, sets.dTE, 'gpuArray');     % Stores row indices (initialized directly on GPU)
+    
+    Error in ITestWIN_GVs64_160 (line 15)
+    [iKd, jKd] = Index_vpsa(elementsGPU, sets);
+================================================================================
+.
+================================================================================
+Error occurred in ITestWIN_GVs64_160/Index_GPU_Vector_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the GPU, use 'gpuDevice()'. If the problem persists, reset the
+    GPU by calling 'gpuDevice(1)'.
+    
+    Error in Index_vpsa (line 53)
+    iK  = zeros(sets.sz*sets.nel, 1, sets.dTE, 'gpuArray');     % Stores row indices (initialized directly on GPU)
+    
+    Error in ITestWIN_GVs64_160 (line 15)
+    [iKd, jKd] = Index_vpsa(elementsGPU, sets);
+================================================================================
+.
+================================================================================
+Error occurred in ITestWIN_GVs64_160/Index_GPU_Vector_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the GPU, use 'gpuDevice()'. If the problem persists, reset the
+    GPU by calling 'gpuDevice(1)'.
+    
+    Error in Index_vpsa (line 53)
+    iK  = zeros(sets.sz*sets.nel, 1, sets.dTE, 'gpuArray');     % Stores row indices (initialized directly on GPU)
+    
+    Error in ITestWIN_GVs64_160 (line 15)
+    [iKd, jKd] = Index_vpsa(elementsGPU, sets);
+================================================================================
+.
+================================================================================
+Error occurred in ITestWIN_GVs64_160/Index_GPU_Vector_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the GPU, use 'gpuDevice()'. If the problem persists, reset the
+    GPU by calling 'gpuDevice(1)'.
+    
+    Error in Index_vpsa (line 53)
+    iK  = zeros(sets.sz*sets.nel, 1, sets.dTE, 'gpuArray');     % Stores row indices (initialized directly on GPU)
+    
+    Error in ITestWIN_GVs64_160 (line 15)
+    [iKd, jKd] = Index_vpsa(elementsGPU, sets);
+================================================================================
+.
+================================================================================
+Error occurred in ITestWIN_GVs64_160/Index_GPU_Vector_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the GPU, use 'gpuDevice()'. If the problem persists, reset the
+    GPU by calling 'gpuDevice(1)'.
+    
+    Error in Index_vpsa (line 53)
+    iK  = zeros(sets.sz*sets.nel, 1, sets.dTE, 'gpuArray');     % Stores row indices (initialized directly on GPU)
+    
+    Error in ITestWIN_GVs64_160 (line 15)
+    [iKd, jKd] = Index_vpsa(elementsGPU, sets);
+================================================================================
+.
+Done ITestWIN_GVs64_160
+__________
+
+Failure Summary:
+
+     Name                                          Failed  Incomplete  Reason(s)
+    =============================================================================
+     ITestWIN_GVs64_160/Index_GPU_Vector_Symmetry    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'ITestWIN_GVs64_160/Index_GPU_Vector_Symmetry'
+           Valid: 0
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   1.093 seconds testing time.
+
+
+
+A total of 40 time experiments was executed!
+Date and time at the beginning of the process: 	15-Feb-2020 10:50:55 
+Date and time at the end of the process: 	15-Feb-2020 11:38:39
+
+
+ans =
+
+  60x7 table
+
+                        Name                        SampleSize      Mean       StandardDeviation       Min        Median         Max   
+    ____________________________________________    __________    _________    _________________    _________    _________    _________
+
+    ITestWIN_CSs32_10/Index_CPU_Scalar                  4         0.0025702       0.00027586        0.0022201    0.0025836    0.0028935
+    ITestWIN_CSs32_10/Index_CPU_Scalar_Symmetry         4         0.0027235       0.00015046        0.0026124    0.0026688     0.002944
+    ITestWIN_GSs32_10/Index_GPU_Scalar_Symmetry         4         0.0053048       0.00022512         0.004975    0.0053809    0.0054823
+    ITestWIN_CVs32_10/Index_CPU_Vector                  4         0.0084912       0.00030716        0.0081552    0.0084756    0.0088584
+    ITestWIN_CVs32_10/Index_CPU_Vector_Symmetry         4          0.020851       0.00024202          0.02065     0.020786     0.021181
+    ITestWIN_GVs32_10/Index_GPU_Vector_Symmetry         7         0.0061671        0.0003518        0.0057985     0.006075    0.0066564
+    ITestWIN_CSs64_10/Index_CPU_Scalar                  4         0.0042984       0.00012362        0.0041972    0.0042693    0.0044577
+    ITestWIN_CSs64_10/Index_CPU_Scalar_Symmetry         4          0.057252       0.00014784         0.057107     0.057243     0.057413
+    ITestWIN_GSs64_10/Index_GPU_Scalar_Symmetry         4         0.0056011       9.8714e-05        0.0055277     0.005565    0.0057467
+    ITestWIN_CVs64_10/Index_CPU_Vector                  4          0.024993       0.00052566         0.024615     0.024807     0.025743
+    ITestWIN_CVs64_10/Index_CPU_Vector_Symmetry         4           0.46788        0.0011368          0.46647      0.46791      0.46924
+    ITestWIN_GVs64_10/Index_GPU_Vector_Symmetry         4         0.0066516       0.00012253        0.0064909    0.0066656    0.0067844
+    ITestWIN_CSs32_20/Index_CPU_Scalar                  4          0.021116       7.1432e-05         0.021039     0.021115     0.021196
+    ITestWIN_CSs32_20/Index_CPU_Scalar_Symmetry         4          0.018551       9.8776e-05         0.018428     0.018555     0.018664
+    ITestWIN_GSs32_20/Index_GPU_Scalar_Symmetry         4         0.0056298       0.00015363        0.0055062    0.0055795    0.0058541
+    ITestWIN_CVs32_20/Index_CPU_Vector                  4          0.058917        0.0001415          0.05875     0.058934      0.05905
+    ITestWIN_CVs32_20/Index_CPU_Vector_Symmetry         4           0.15865       0.00033915          0.15843      0.15851      0.15916
+    ITestWIN_GVs32_20/Index_GPU_Vector_Symmetry         4          0.010427       0.00042968         0.010154     0.010246      0.01106
+    ITestWIN_CSs64_20/Index_CPU_Scalar                  4           0.03682       0.00024413         0.036583      0.03677     0.037156
+    ITestWIN_CSs64_20/Index_CPU_Scalar_Symmetry         4           0.45466        0.0023973          0.45256      0.45402      0.45806
+    ITestWIN_GSs64_20/Index_GPU_Scalar_Symmetry         4         0.0066543       0.00028221        0.0062994    0.0066727    0.0069722
+    ITestWIN_CVs64_20/Index_CPU_Vector                  4           0.19057        0.0010225          0.18986      0.19016      0.19209
+    ITestWIN_CVs64_20/Index_CPU_Vector_Symmetry         4            3.7006         0.010447           3.6852       3.7044       3.7083
+    ITestWIN_GVs64_20/Index_GPU_Vector_Symmetry         4          0.011602       0.00039412           0.0113     0.011465     0.012179
+    ITestWIN_CSs32_40/Index_CPU_Scalar                  1           0.16176                0          0.16176      0.16176      0.16176
+    ITestWIN_CSs32_40/Index_CPU_Scalar_Symmetry         1           0.14182                0          0.14182      0.14182      0.14182
+    ITestWIN_GSs32_40/Index_GPU_Scalar_Symmetry         4         0.0091471       0.00021471        0.0089525    0.0091039    0.0094278
+    ITestWIN_CVs32_40/Index_CPU_Vector                  1           0.46844                0          0.46844      0.46844      0.46844
+    ITestWIN_CVs32_40/Index_CPU_Vector_Symmetry         1            1.2335                0           1.2335       1.2335       1.2335
+    ITestWIN_GVs32_40/Index_GPU_Vector_Symmetry         4          0.046538        0.0005138         0.046043      0.04643     0.047248
+    ITestWIN_CSs64_40/Index_CPU_Scalar                  1           0.28727                0          0.28727      0.28727      0.28727
+    ITestWIN_CSs64_40/Index_CPU_Scalar_Symmetry         1             3.636                0            3.636        3.636        3.636
+    ITestWIN_GSs64_40/Index_GPU_Scalar_Symmetry         4          0.010295       0.00013443         0.010168     0.010282     0.010448
+    ITestWIN_CVs64_40/Index_CPU_Vector                  1            1.5052                0           1.5052       1.5052       1.5052
+    ITestWIN_CVs64_40/Index_CPU_Vector_Symmetry         1            29.685                0           29.685       29.685       29.685
+    ITestWIN_GVs64_40/Index_GPU_Vector_Symmetry         4           0.05135       0.00032616         0.050925     0.051383     0.051707
+    ITestWIN_CSs32_80/Index_CPU_Scalar                  1             1.287                0            1.287        1.287        1.287
+    ITestWIN_CSs32_80/Index_CPU_Scalar_Symmetry         1            1.1171                0           1.1171       1.1171       1.1171
+    ITestWIN_GSs32_80/Index_GPU_Scalar_Symmetry         4          0.038237       0.00030433         0.037846     0.038295     0.038511
+    ITestWIN_CVs32_80/Index_CPU_Vector                  1            3.7322                0           3.7322       3.7322       3.7322
+    ITestWIN_CVs32_80/Index_CPU_Vector_Symmetry         1            9.9161                0           9.9161       9.9161       9.9161
+    ITestWIN_GVs32_80/Index_GPU_Vector_Symmetry         4           0.40951        0.0017852          0.40788      0.40905      0.41205
+    ITestWIN_CSs64_80/Index_CPU_Scalar                  1            2.2906                0           2.2906       2.2906       2.2906
+    ITestWIN_CSs64_80/Index_CPU_Scalar_Symmetry         1            28.961                0           28.961       28.961       28.961
+    ITestWIN_GSs64_80/Index_GPU_Scalar_Symmetry         4          0.043978        0.0001282         0.043797     0.044019     0.044077
+    ITestWIN_CVs64_80/Index_CPU_Vector                  1            12.013                0           12.013       12.013       12.013
+    ITestWIN_CVs64_80/Index_CPU_Vector_Symmetry         1            237.17                0           237.17       237.17       237.17
+    ITestWIN_GVs64_80/Index_GPU_Vector_Symmetry         4           0.68329        0.0075037           0.6766      0.68285      0.69086
+    ITestWIN_CSs32_160/Index_CPU_Scalar                 1            10.447                0           10.447       10.447       10.447
+    ITestWIN_CSs32_160/Index_CPU_Scalar_Symmetry        1            8.9797                0           8.9797       8.9797       8.9797
+    ITestWIN_GSs32_160/Index_GPU_Scalar_Symmetry        4           0.34658        0.0056124          0.34314       0.3441      0.35496
+    ITestWIN_CVs32_160/Index_CPU_Vector                 1            29.853                0           29.853       29.853       29.853
+    ITestWIN_CVs32_160/Index_CPU_Vector_Symmetry        1            78.865                0           78.865       78.865       78.865
+    ITestWIN_GVs32_160/Index_GPU_Vector_Symmetry        4               NaN              NaN              NaN          NaN          NaN
+    ITestWIN_CSs64_160/Index_CPU_Scalar                 1            20.186                0           20.186       20.186       20.186
+    ITestWIN_CSs64_160/Index_CPU_Scalar_Symmetry        1            227.92                0           227.92       227.92       227.92
+    ITestWIN_GSs64_160/Index_GPU_Scalar_Symmetry        4           0.62315          0.01057          0.60958      0.62386      0.63527
+    ITestWIN_CVs64_160/Index_CPU_Vector                 1            100.75                0           100.75       100.75       100.75
+    ITestWIN_CVs64_160/Index_CPU_Vector_Symmetry        1            1918.2                0           1918.2       1918.2       1918.2
+    ITestWIN_GVs64_160/Index_GPU_Vector_Symmetry        4               NaN              NaN              NaN          NaN          NaN
+

@@ -20,10 +20,14 @@ fprintf(fileID,'sets.nel = %d;\n',sets.nel^3);
 if strcmp(sets.prob_type,'Scalar')
     fprintf(fileID,"sets.sz = %d;\n",36);
     fprintf(fileID,"sets.edof = %d;\n",8);
-    fprintf(fileID,"c = %d;\n",1.0);
+    fprintf(fileID,"c = %d;\n",384.1);
     
     % 'Scalar'-'CPU'
     if strcmp(sets.proc_type,'CPU')
+        if sets.nel^3 < 50000  % Warm ups the CPU code for few elements
+            fprintf(fileID,'Ke = eStiff_ssa(Mesh, c, sets);\n');
+            fprintf(fileID,'Ke = eStiff_sssa(Mesh, c, sets);\n');
+        end
         fprintf(fileID,'\n%s\n','%% EStiff-CPU-Scalar');
         fprintf(fileID,'Ke = eStiff_ssa(Mesh, c, sets);\n');
         
@@ -39,6 +43,9 @@ if strcmp(sets.prob_type,'Scalar')
         fprintf(fileID,"sets.WarpSize = d.SIMDWidth;\n");
         fprintf(fileID,"elementsGPU = gpuArray(Mesh.elements');\n");
         fprintf(fileID,"nodesGPU = gpuArray(Mesh.nodes');\n");
+        if sets.nel^3 < 50000  % Warm ups the GPU code for few elements
+            fprintf(fileID,'Ke = eStiff_spsa(elementsGPU, nodesGPU, c, sets);\n');
+        end
         fprintf(fileID,'\n%s\n','%% EStiff-GPU-Scalar-Symmetry');
         fprintf(fileID,'Ke = eStiff_spsa(elementsGPU, nodesGPU, c, sets);\n');
         fprintf(fileID,'wait(d);\n');
@@ -57,6 +64,10 @@ elseif strcmp(sets.prob_type,'Vector')
     
     % 'Vector'-'CPU'
     if strcmp(sets.proc_type,'CPU')
+        if sets.nel^3 < 50000  % Warm ups the CPU code for few elements
+            fprintf(fileID,'Ke = eStiff_vsa(Mesh, MP, sets);\n');
+            fprintf(fileID,'Ke = eStiff_vssa(Mesh, MP, sets);\n');
+        end
         fprintf(fileID,'\n%s\n','%% EStiff-CPU-Vector');
         fprintf(fileID,'Ke = eStiff_vsa(Mesh, MP, sets);\n');
         
@@ -72,6 +83,9 @@ elseif strcmp(sets.prob_type,'Vector')
         fprintf(fileID,"sets.WarpSize = d.SIMDWidth;\n");
         fprintf(fileID,"elementsGPU = gpuArray(Mesh.elements');\n");
         fprintf(fileID,"nodesGPU = gpuArray(Mesh.nodes');\n");
+        if sets.nel^3 < 50000  % Warm ups the GPU code for few elements
+            fprintf(fileID,'Ke = eStiff_vpsa(elementsGPU, nodesGPU, MP, sets);\n');
+        end
         fprintf(fileID,'\n%s\n','%% EStiff-GPU-Vector-Symmetry');
         fprintf(fileID,'Ke = eStiff_vpsa(elementsGPU, nodesGPU, MP, sets);\n');
         fprintf(fileID,'wait(d);\n');

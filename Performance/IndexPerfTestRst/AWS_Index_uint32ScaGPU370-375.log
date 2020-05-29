@@ -1,0 +1,909 @@
+[Warning: Directory already exists.] 
+[> In runIndexTest (line 28)] 
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 370x370x370 (50653000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running ITestLNX_GSs32_370
+	Mesh created successfully with 50653000 Hex8 elements and 51064811 nodes!
+
+........
+Done ITestLNX_GSs32_370
+__________
+
+  TimeResult with properties:
+
+            Name: 'ITestLNX_GSs32_370/Index_GPU_Scalar_Symmetry'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   18.1727 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 371x371x371 (51064811)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running ITestLNX_GSs32_371
+	Mesh created successfully with 51064811 Hex8 elements and 51478848 nodes!
+
+........
+Done ITestLNX_GSs32_371
+__________
+
+  TimeResult with properties:
+
+            Name: 'ITestLNX_GSs32_371/Index_GPU_Scalar_Symmetry'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   18.3543 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 372x372x372 (51478848)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running ITestLNX_GSs32_372
+	Mesh created successfully with 51478848 Hex8 elements and 51895117 nodes!
+
+
+================================================================================
+Error occurred in ITestLNX_GSs32_372/Index_GPU_Scalar_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the
+    GPU, use 'gpuDevice()'. If the problem persists, reset the GPU by calling
+    'gpuDevice(1)'.
+    
+    Error in Index_spsa (line 57)
+    jK  = zeros(36*sets.nel, 1, sets.dTE, 'gpuArray');	% Stores column
+    indices (initialized directly on GPU)
+    
+    Error in ITestLNX_GSs32_372 (line 15)
+    [iKd, jKd] = Index_spsa(elementsGPU, sets);
+================================================================================
+.
+================================================================================
+Error occurred in ITestLNX_GSs32_372/Index_GPU_Scalar_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the
+    GPU, use 'gpuDevice()'. If the problem persists, reset the GPU by calling
+    'gpuDevice(1)'.
+    
+    Error in Index_spsa (line 57)
+    jK  = zeros(36*sets.nel, 1, sets.dTE, 'gpuArray');	% Stores column
+    indices (initialized directly on GPU)
+    
+    Error in ITestLNX_GSs32_372 (line 15)
+    [iKd, jKd] = Index_spsa(elementsGPU, sets);
+================================================================================
+.
+================================================================================
+Error occurred in ITestLNX_GSs32_372/Index_GPU_Scalar_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the
+    GPU, use 'gpuDevice()'. If the problem persists, reset the GPU by calling
+    'gpuDevice(1)'.
+    
+    Error in Index_spsa (line 57)
+    jK  = zeros(36*sets.nel, 1, sets.dTE, 'gpuArray');	% Stores column
+    indices (initialized directly on GPU)
+    
+    Error in ITestLNX_GSs32_372 (line 15)
+    [iKd, jKd] = Index_spsa(elementsGPU, sets);
+================================================================================
+.
+================================================================================
+Error occurred in ITestLNX_GSs32_372/Index_GPU_Scalar_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the
+    GPU, use 'gpuDevice()'. If the problem persists, reset the GPU by calling
+    'gpuDevice(1)'.
+    
+    Error in Index_spsa (line 57)
+    jK  = zeros(36*sets.nel, 1, sets.dTE, 'gpuArray');	% Stores column
+    indices (initialized directly on GPU)
+    
+    Error in ITestLNX_GSs32_372 (line 15)
+    [iKd, jKd] = Index_spsa(elementsGPU, sets);
+================================================================================
+.
+================================================================================
+Error occurred in ITestLNX_GSs32_372/Index_GPU_Scalar_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the
+    GPU, use 'gpuDevice()'. If the problem persists, reset the GPU by calling
+    'gpuDevice(1)'.
+    
+    Error in Index_spsa (line 57)
+    jK  = zeros(36*sets.nel, 1, sets.dTE, 'gpuArray');	% Stores column
+    indices (initialized directly on GPU)
+    
+    Error in ITestLNX_GSs32_372 (line 15)
+    [iKd, jKd] = Index_spsa(elementsGPU, sets);
+================================================================================
+.
+================================================================================
+Error occurred in ITestLNX_GSs32_372/Index_GPU_Scalar_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the
+    GPU, use 'gpuDevice()'. If the problem persists, reset the GPU by calling
+    'gpuDevice(1)'.
+    
+    Error in Index_spsa (line 57)
+    jK  = zeros(36*sets.nel, 1, sets.dTE, 'gpuArray');	% Stores column
+    indices (initialized directly on GPU)
+    
+    Error in ITestLNX_GSs32_372 (line 15)
+    [iKd, jKd] = Index_spsa(elementsGPU, sets);
+================================================================================
+.
+================================================================================
+Error occurred in ITestLNX_GSs32_372/Index_GPU_Scalar_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the
+    GPU, use 'gpuDevice()'. If the problem persists, reset the GPU by calling
+    'gpuDevice(1)'.
+    
+    Error in Index_spsa (line 57)
+    jK  = zeros(36*sets.nel, 1, sets.dTE, 'gpuArray');	% Stores column
+    indices (initialized directly on GPU)
+    
+    Error in ITestLNX_GSs32_372 (line 15)
+    [iKd, jKd] = Index_spsa(elementsGPU, sets);
+================================================================================
+.
+================================================================================
+Error occurred in ITestLNX_GSs32_372/Index_GPU_Scalar_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the
+    GPU, use 'gpuDevice()'. If the problem persists, reset the GPU by calling
+    'gpuDevice(1)'.
+    
+    Error in Index_spsa (line 57)
+    jK  = zeros(36*sets.nel, 1, sets.dTE, 'gpuArray');	% Stores column
+    indices (initialized directly on GPU)
+    
+    Error in ITestLNX_GSs32_372 (line 15)
+    [iKd, jKd] = Index_spsa(elementsGPU, sets);
+================================================================================
+.
+Done ITestLNX_GSs32_372
+__________
+
+Failure Summary:
+
+     Name                                          Failed  Incomplete  Reason(s)
+    =============================================================================
+     ITestLNX_GSs32_372/Index_GPU_Scalar_Symmetry    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'ITestLNX_GSs32_372/Index_GPU_Scalar_Symmetry'
+           Valid: 0
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   7.3005 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 373x373x373 (51895117)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running ITestLNX_GSs32_373
+	Mesh created successfully with 51895117 Hex8 elements and 52313624 nodes!
+
+
+================================================================================
+Error occurred in ITestLNX_GSs32_373/Index_GPU_Scalar_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the
+    GPU, use 'gpuDevice()'. If the problem persists, reset the GPU by calling
+    'gpuDevice(1)'.
+    
+    Error in Index_spsa (line 57)
+    jK  = zeros(36*sets.nel, 1, sets.dTE, 'gpuArray');	% Stores column
+    indices (initialized directly on GPU)
+    
+    Error in ITestLNX_GSs32_373 (line 15)
+    [iKd, jKd] = Index_spsa(elementsGPU, sets);
+================================================================================
+.
+================================================================================
+Error occurred in ITestLNX_GSs32_373/Index_GPU_Scalar_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the
+    GPU, use 'gpuDevice()'. If the problem persists, reset the GPU by calling
+    'gpuDevice(1)'.
+    
+    Error in Index_spsa (line 57)
+    jK  = zeros(36*sets.nel, 1, sets.dTE, 'gpuArray');	% Stores column
+    indices (initialized directly on GPU)
+    
+    Error in ITestLNX_GSs32_373 (line 15)
+    [iKd, jKd] = Index_spsa(elementsGPU, sets);
+================================================================================
+.
+================================================================================
+Error occurred in ITestLNX_GSs32_373/Index_GPU_Scalar_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the
+    GPU, use 'gpuDevice()'. If the problem persists, reset the GPU by calling
+    'gpuDevice(1)'.
+    
+    Error in Index_spsa (line 57)
+    jK  = zeros(36*sets.nel, 1, sets.dTE, 'gpuArray');	% Stores column
+    indices (initialized directly on GPU)
+    
+    Error in ITestLNX_GSs32_373 (line 15)
+    [iKd, jKd] = Index_spsa(elementsGPU, sets);
+================================================================================
+.
+================================================================================
+Error occurred in ITestLNX_GSs32_373/Index_GPU_Scalar_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the
+    GPU, use 'gpuDevice()'. If the problem persists, reset the GPU by calling
+    'gpuDevice(1)'.
+    
+    Error in Index_spsa (line 57)
+    jK  = zeros(36*sets.nel, 1, sets.dTE, 'gpuArray');	% Stores column
+    indices (initialized directly on GPU)
+    
+    Error in ITestLNX_GSs32_373 (line 15)
+    [iKd, jKd] = Index_spsa(elementsGPU, sets);
+================================================================================
+.
+================================================================================
+Error occurred in ITestLNX_GSs32_373/Index_GPU_Scalar_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the
+    GPU, use 'gpuDevice()'. If the problem persists, reset the GPU by calling
+    'gpuDevice(1)'.
+    
+    Error in Index_spsa (line 57)
+    jK  = zeros(36*sets.nel, 1, sets.dTE, 'gpuArray');	% Stores column
+    indices (initialized directly on GPU)
+    
+    Error in ITestLNX_GSs32_373 (line 15)
+    [iKd, jKd] = Index_spsa(elementsGPU, sets);
+================================================================================
+.
+================================================================================
+Error occurred in ITestLNX_GSs32_373/Index_GPU_Scalar_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the
+    GPU, use 'gpuDevice()'. If the problem persists, reset the GPU by calling
+    'gpuDevice(1)'.
+    
+    Error in Index_spsa (line 57)
+    jK  = zeros(36*sets.nel, 1, sets.dTE, 'gpuArray');	% Stores column
+    indices (initialized directly on GPU)
+    
+    Error in ITestLNX_GSs32_373 (line 15)
+    [iKd, jKd] = Index_spsa(elementsGPU, sets);
+================================================================================
+.
+================================================================================
+Error occurred in ITestLNX_GSs32_373/Index_GPU_Scalar_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the
+    GPU, use 'gpuDevice()'. If the problem persists, reset the GPU by calling
+    'gpuDevice(1)'.
+    
+    Error in Index_spsa (line 57)
+    jK  = zeros(36*sets.nel, 1, sets.dTE, 'gpuArray');	% Stores column
+    indices (initialized directly on GPU)
+    
+    Error in ITestLNX_GSs32_373 (line 15)
+    [iKd, jKd] = Index_spsa(elementsGPU, sets);
+================================================================================
+.
+================================================================================
+Error occurred in ITestLNX_GSs32_373/Index_GPU_Scalar_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the
+    GPU, use 'gpuDevice()'. If the problem persists, reset the GPU by calling
+    'gpuDevice(1)'.
+    
+    Error in Index_spsa (line 57)
+    jK  = zeros(36*sets.nel, 1, sets.dTE, 'gpuArray');	% Stores column
+    indices (initialized directly on GPU)
+    
+    Error in ITestLNX_GSs32_373 (line 15)
+    [iKd, jKd] = Index_spsa(elementsGPU, sets);
+================================================================================
+.
+Done ITestLNX_GSs32_373
+__________
+
+Failure Summary:
+
+     Name                                          Failed  Incomplete  Reason(s)
+    =============================================================================
+     ITestLNX_GSs32_373/Index_GPU_Scalar_Symmetry    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'ITestLNX_GSs32_373/Index_GPU_Scalar_Symmetry'
+           Valid: 0
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   7.6371 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 374x374x374 (52313624)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running ITestLNX_GSs32_374
+	Mesh created successfully with 52313624 Hex8 elements and 52734375 nodes!
+
+
+================================================================================
+Error occurred in ITestLNX_GSs32_374/Index_GPU_Scalar_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the
+    GPU, use 'gpuDevice()'. If the problem persists, reset the GPU by calling
+    'gpuDevice(1)'.
+    
+    Error in Index_spsa (line 57)
+    jK  = zeros(36*sets.nel, 1, sets.dTE, 'gpuArray');	% Stores column
+    indices (initialized directly on GPU)
+    
+    Error in ITestLNX_GSs32_374 (line 15)
+    [iKd, jKd] = Index_spsa(elementsGPU, sets);
+================================================================================
+.
+================================================================================
+Error occurred in ITestLNX_GSs32_374/Index_GPU_Scalar_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the
+    GPU, use 'gpuDevice()'. If the problem persists, reset the GPU by calling
+    'gpuDevice(1)'.
+    
+    Error in Index_spsa (line 57)
+    jK  = zeros(36*sets.nel, 1, sets.dTE, 'gpuArray');	% Stores column
+    indices (initialized directly on GPU)
+    
+    Error in ITestLNX_GSs32_374 (line 15)
+    [iKd, jKd] = Index_spsa(elementsGPU, sets);
+================================================================================
+.
+================================================================================
+Error occurred in ITestLNX_GSs32_374/Index_GPU_Scalar_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the
+    GPU, use 'gpuDevice()'. If the problem persists, reset the GPU by calling
+    'gpuDevice(1)'.
+    
+    Error in Index_spsa (line 57)
+    jK  = zeros(36*sets.nel, 1, sets.dTE, 'gpuArray');	% Stores column
+    indices (initialized directly on GPU)
+    
+    Error in ITestLNX_GSs32_374 (line 15)
+    [iKd, jKd] = Index_spsa(elementsGPU, sets);
+================================================================================
+.
+================================================================================
+Error occurred in ITestLNX_GSs32_374/Index_GPU_Scalar_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the
+    GPU, use 'gpuDevice()'. If the problem persists, reset the GPU by calling
+    'gpuDevice(1)'.
+    
+    Error in Index_spsa (line 57)
+    jK  = zeros(36*sets.nel, 1, sets.dTE, 'gpuArray');	% Stores column
+    indices (initialized directly on GPU)
+    
+    Error in ITestLNX_GSs32_374 (line 15)
+    [iKd, jKd] = Index_spsa(elementsGPU, sets);
+================================================================================
+.
+================================================================================
+Error occurred in ITestLNX_GSs32_374/Index_GPU_Scalar_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the
+    GPU, use 'gpuDevice()'. If the problem persists, reset the GPU by calling
+    'gpuDevice(1)'.
+    
+    Error in Index_spsa (line 57)
+    jK  = zeros(36*sets.nel, 1, sets.dTE, 'gpuArray');	% Stores column
+    indices (initialized directly on GPU)
+    
+    Error in ITestLNX_GSs32_374 (line 15)
+    [iKd, jKd] = Index_spsa(elementsGPU, sets);
+================================================================================
+.
+================================================================================
+Error occurred in ITestLNX_GSs32_374/Index_GPU_Scalar_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the
+    GPU, use 'gpuDevice()'. If the problem persists, reset the GPU by calling
+    'gpuDevice(1)'.
+    
+    Error in Index_spsa (line 57)
+    jK  = zeros(36*sets.nel, 1, sets.dTE, 'gpuArray');	% Stores column
+    indices (initialized directly on GPU)
+    
+    Error in ITestLNX_GSs32_374 (line 15)
+    [iKd, jKd] = Index_spsa(elementsGPU, sets);
+================================================================================
+.
+================================================================================
+Error occurred in ITestLNX_GSs32_374/Index_GPU_Scalar_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the
+    GPU, use 'gpuDevice()'. If the problem persists, reset the GPU by calling
+    'gpuDevice(1)'.
+    
+    Error in Index_spsa (line 57)
+    jK  = zeros(36*sets.nel, 1, sets.dTE, 'gpuArray');	% Stores column
+    indices (initialized directly on GPU)
+    
+    Error in ITestLNX_GSs32_374 (line 15)
+    [iKd, jKd] = Index_spsa(elementsGPU, sets);
+================================================================================
+.
+================================================================================
+Error occurred in ITestLNX_GSs32_374/Index_GPU_Scalar_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the
+    GPU, use 'gpuDevice()'. If the problem persists, reset the GPU by calling
+    'gpuDevice(1)'.
+    
+    Error in Index_spsa (line 57)
+    jK  = zeros(36*sets.nel, 1, sets.dTE, 'gpuArray');	% Stores column
+    indices (initialized directly on GPU)
+    
+    Error in ITestLNX_GSs32_374 (line 15)
+    [iKd, jKd] = Index_spsa(elementsGPU, sets);
+================================================================================
+.
+Done ITestLNX_GSs32_374
+__________
+
+Failure Summary:
+
+     Name                                          Failed  Incomplete  Reason(s)
+    =============================================================================
+     ITestLNX_GSs32_374/Index_GPU_Scalar_Symmetry    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'ITestLNX_GSs32_374/Index_GPU_Scalar_Symmetry'
+           Valid: 0
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   7.538 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 375x375x375 (52734375)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running ITestLNX_GSs32_375
+	Mesh created successfully with 52734375 Hex8 elements and 53157376 nodes!
+
+
+================================================================================
+Error occurred in ITestLNX_GSs32_375/Index_GPU_Scalar_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the
+    GPU, use 'gpuDevice()'. If the problem persists, reset the GPU by calling
+    'gpuDevice(1)'.
+    
+    Error in Index_spsa (line 57)
+    jK  = zeros(36*sets.nel, 1, sets.dTE, 'gpuArray');	% Stores column
+    indices (initialized directly on GPU)
+    
+    Error in ITestLNX_GSs32_375 (line 15)
+    [iKd, jKd] = Index_spsa(elementsGPU, sets);
+================================================================================
+.
+================================================================================
+Error occurred in ITestLNX_GSs32_375/Index_GPU_Scalar_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the
+    GPU, use 'gpuDevice()'. If the problem persists, reset the GPU by calling
+    'gpuDevice(1)'.
+    
+    Error in Index_spsa (line 57)
+    jK  = zeros(36*sets.nel, 1, sets.dTE, 'gpuArray');	% Stores column
+    indices (initialized directly on GPU)
+    
+    Error in ITestLNX_GSs32_375 (line 15)
+    [iKd, jKd] = Index_spsa(elementsGPU, sets);
+================================================================================
+.
+================================================================================
+Error occurred in ITestLNX_GSs32_375/Index_GPU_Scalar_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the
+    GPU, use 'gpuDevice()'. If the problem persists, reset the GPU by calling
+    'gpuDevice(1)'.
+    
+    Error in Index_spsa (line 57)
+    jK  = zeros(36*sets.nel, 1, sets.dTE, 'gpuArray');	% Stores column
+    indices (initialized directly on GPU)
+    
+    Error in ITestLNX_GSs32_375 (line 15)
+    [iKd, jKd] = Index_spsa(elementsGPU, sets);
+================================================================================
+.
+================================================================================
+Error occurred in ITestLNX_GSs32_375/Index_GPU_Scalar_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the
+    GPU, use 'gpuDevice()'. If the problem persists, reset the GPU by calling
+    'gpuDevice(1)'.
+    
+    Error in Index_spsa (line 57)
+    jK  = zeros(36*sets.nel, 1, sets.dTE, 'gpuArray');	% Stores column
+    indices (initialized directly on GPU)
+    
+    Error in ITestLNX_GSs32_375 (line 15)
+    [iKd, jKd] = Index_spsa(elementsGPU, sets);
+================================================================================
+.
+================================================================================
+Error occurred in ITestLNX_GSs32_375/Index_GPU_Scalar_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the
+    GPU, use 'gpuDevice()'. If the problem persists, reset the GPU by calling
+    'gpuDevice(1)'.
+    
+    Error in Index_spsa (line 57)
+    jK  = zeros(36*sets.nel, 1, sets.dTE, 'gpuArray');	% Stores column
+    indices (initialized directly on GPU)
+    
+    Error in ITestLNX_GSs32_375 (line 15)
+    [iKd, jKd] = Index_spsa(elementsGPU, sets);
+================================================================================
+.
+================================================================================
+Error occurred in ITestLNX_GSs32_375/Index_GPU_Scalar_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the
+    GPU, use 'gpuDevice()'. If the problem persists, reset the GPU by calling
+    'gpuDevice(1)'.
+    
+    Error in Index_spsa (line 57)
+    jK  = zeros(36*sets.nel, 1, sets.dTE, 'gpuArray');	% Stores column
+    indices (initialized directly on GPU)
+    
+    Error in ITestLNX_GSs32_375 (line 15)
+    [iKd, jKd] = Index_spsa(elementsGPU, sets);
+================================================================================
+.
+================================================================================
+Error occurred in ITestLNX_GSs32_375/Index_GPU_Scalar_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the
+    GPU, use 'gpuDevice()'. If the problem persists, reset the GPU by calling
+    'gpuDevice(1)'.
+    
+    Error in Index_spsa (line 57)
+    jK  = zeros(36*sets.nel, 1, sets.dTE, 'gpuArray');	% Stores column
+    indices (initialized directly on GPU)
+    
+    Error in ITestLNX_GSs32_375 (line 15)
+    [iKd, jKd] = Index_spsa(elementsGPU, sets);
+================================================================================
+.
+================================================================================
+Error occurred in ITestLNX_GSs32_375/Index_GPU_Scalar_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the
+    GPU, use 'gpuDevice()'. If the problem persists, reset the GPU by calling
+    'gpuDevice(1)'.
+    
+    Error in Index_spsa (line 57)
+    jK  = zeros(36*sets.nel, 1, sets.dTE, 'gpuArray');	% Stores column
+    indices (initialized directly on GPU)
+    
+    Error in ITestLNX_GSs32_375 (line 15)
+    [iKd, jKd] = Index_spsa(elementsGPU, sets);
+================================================================================
+.
+Done ITestLNX_GSs32_375
+__________
+
+Failure Summary:
+
+     Name                                          Failed  Incomplete  Reason(s)
+    =============================================================================
+     ITestLNX_GSs32_375/Index_GPU_Scalar_Symmetry    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'ITestLNX_GSs32_375/Index_GPU_Scalar_Symmetry'
+           Valid: 0
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   7.5941 seconds testing time.
+
+
+
+A total of 6 time experiments was executed!
+Date and time at the beginning of the process: 	02-May-2020 20:51:36 
+Date and time at the end of the process: 	02-May-2020 20:52:58
+
+
+ans =
+
+  6x7 table
+
+                        Name                        SampleSize     Mean     StandardDeviation     Min      Median     Max  
+    ____________________________________________    __________    ______    _________________    ______    ______    ______
+
+    ITestLNX_GSs32_370/Index_GPU_Scalar_Symmetry        4          1.532        0.0099093        1.5225    1.5314    1.5427
+    ITestLNX_GSs32_371/Index_GPU_Scalar_Symmetry        4         1.5534        0.0023556        1.5503    1.5536     1.556
+    ITestLNX_GSs32_372/Index_GPU_Scalar_Symmetry        4            NaN              NaN           NaN       NaN       NaN
+    ITestLNX_GSs32_373/Index_GPU_Scalar_Symmetry        4            NaN              NaN           NaN       NaN       NaN
+    ITestLNX_GSs32_374/Index_GPU_Scalar_Symmetry        4            NaN              NaN           NaN       NaN       NaN
+    ITestLNX_GSs32_375/Index_GPU_Scalar_Symmetry        4            NaN              NaN           NaN       NaN       NaN
+

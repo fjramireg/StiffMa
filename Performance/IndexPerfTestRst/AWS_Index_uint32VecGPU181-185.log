@@ -1,0 +1,157 @@
+[Warning: Directory already exists.] 
+[> In runIndexTest (line 28)] 
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 181x181x181 (5929741)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running ITestLNX_GVs32_181
+	Mesh created successfully with 5929741 Hex8 elements and 6028568 nodes!
+
+........
+Done ITestLNX_GVs32_181
+__________
+
+  TimeResult with properties:
+
+            Name: 'ITestLNX_GVs32_181/Index_GPU_Vector_Symmetry'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   18.3494 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 182x182x182 (6028568)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running ITestLNX_GVs32_182
+	Mesh created successfully with 6028568 Hex8 elements and 6128487 nodes!
+
+........
+Done ITestLNX_GVs32_182
+__________
+
+  TimeResult with properties:
+
+            Name: 'ITestLNX_GVs32_182/Index_GPU_Vector_Symmetry'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   18.6213 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 183x183x183 (6128487)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running ITestLNX_GVs32_183
+	Mesh created successfully with 6128487 Hex8 elements and 6229504 nodes!
+
+........
+Done ITestLNX_GVs32_183
+__________
+
+  TimeResult with properties:
+
+            Name: 'ITestLNX_GVs32_183/Index_GPU_Vector_Symmetry'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   18.8973 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 184x184x184 (6229504)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running ITestLNX_GVs32_184
+	Mesh created successfully with 6229504 Hex8 elements and 6331625 nodes!
+
+........
+Done ITestLNX_GVs32_184
+__________
+
+  TimeResult with properties:
+
+            Name: 'ITestLNX_GVs32_184/Index_GPU_Vector_Symmetry'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   19.2142 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 185x185x185 (6331625)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running ITestLNX_GVs32_185
+	Mesh created successfully with 6331625 Hex8 elements and 6434856 nodes!
+
+........
+Done ITestLNX_GVs32_185
+__________
+
+  TimeResult with properties:
+
+            Name: 'ITestLNX_GVs32_185/Index_GPU_Vector_Symmetry'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   19.45 seconds testing time.
+
+
+
+A total of 5 time experiments was executed!
+Date and time at the beginning of the process: 	02-May-2020 20:58:50 
+Date and time at the end of the process: 	02-May-2020 21:00:37
+
+
+ans =
+
+  5x7 table
+
+                        Name                        SampleSize     Mean     StandardDeviation     Min      Median     Max  
+    ____________________________________________    __________    ______    _________________    ______    ______    ______
+
+    ITestLNX_GVs32_181/Index_GPU_Vector_Symmetry        4         2.2233        0.0086082        2.2135    2.2229    2.2339
+    ITestLNX_GVs32_182/Index_GPU_Vector_Symmetry        4         2.2707        0.0048728         2.266    2.2701    2.2766
+    ITestLNX_GVs32_183/Index_GPU_Vector_Symmetry        4         2.3066        0.0012156        2.3054    2.3063    2.3083
+    ITestLNX_GVs32_184/Index_GPU_Vector_Symmetry        4         2.3459        0.0036846        2.3417    2.3462    2.3494
+    ITestLNX_GVs32_185/Index_GPU_Vector_Symmetry        4         2.3863        0.0047723        2.3813    2.3864    2.3909
+

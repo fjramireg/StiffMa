@@ -1,0 +1,226 @@
+[Warning: Directory already exists.] 
+[> In runIndexTest (line 28)] 
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 190x190x190 (6859000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running ITestLNX_GVs32_190
+
+Mesh created successfully with 6859000 Hex8 elements and 6967871 nodes!
+
+================================================================================
+Error occurred in ITestLNX_GVs32_190/Index_GPU_Vector_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the
+    GPU, use 'gpuDevice()'. If the problem persists, reset the GPU by calling
+    'gpuDevice(1)'.
+    
+    Error in Index_vpsa (line 54)
+    jK  = zeros(sets.sz*sets.nel, 1, sets.dTE, 'gpuArray');     % Stores column
+    indices (initialized directly on GPU)
+    
+    Error in ITestLNX_GVs32_190 (line 15)
+    [iKd, jKd] = Index_vpsa(elementsGPU, sets);
+================================================================================
+.
+================================================================================
+Error occurred in ITestLNX_GVs32_190/Index_GPU_Vector_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the
+    GPU, use 'gpuDevice()'. If the problem persists, reset the GPU by calling
+    'gpuDevice(1)'.
+    
+    Error in Index_vpsa (line 54)
+    jK  = zeros(sets.sz*sets.nel, 1, sets.dTE, 'gpuArray');     % Stores column
+    indices (initialized directly on GPU)
+    
+    Error in ITestLNX_GVs32_190 (line 15)
+    [iKd, jKd] = Index_vpsa(elementsGPU, sets);
+================================================================================
+.
+================================================================================
+Error occurred in ITestLNX_GVs32_190/Index_GPU_Vector_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the
+    GPU, use 'gpuDevice()'. If the problem persists, reset the GPU by calling
+    'gpuDevice(1)'.
+    
+    Error in Index_vpsa (line 54)
+    jK  = zeros(sets.sz*sets.nel, 1, sets.dTE, 'gpuArray');     % Stores column
+    indices (initialized directly on GPU)
+    
+    Error in ITestLNX_GVs32_190 (line 15)
+    [iKd, jKd] = Index_vpsa(elementsGPU, sets);
+================================================================================
+.
+================================================================================
+Error occurred in ITestLNX_GVs32_190/Index_GPU_Vector_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the
+    GPU, use 'gpuDevice()'. If the problem persists, reset the GPU by calling
+    'gpuDevice(1)'.
+    
+    Error in Index_vpsa (line 54)
+    jK  = zeros(sets.sz*sets.nel, 1, sets.dTE, 'gpuArray');     % Stores column
+    indices (initialized directly on GPU)
+    
+    Error in ITestLNX_GVs32_190 (line 15)
+    [iKd, jKd] = Index_vpsa(elementsGPU, sets);
+================================================================================
+.
+================================================================================
+Error occurred in ITestLNX_GVs32_190/Index_GPU_Vector_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the
+    GPU, use 'gpuDevice()'. If the problem persists, reset the GPU by calling
+    'gpuDevice(1)'.
+    
+    Error in Index_vpsa (line 54)
+    jK  = zeros(sets.sz*sets.nel, 1, sets.dTE, 'gpuArray');     % Stores column
+    indices (initialized directly on GPU)
+    
+    Error in ITestLNX_GVs32_190 (line 15)
+    [iKd, jKd] = Index_vpsa(elementsGPU, sets);
+================================================================================
+.
+================================================================================
+Error occurred in ITestLNX_GVs32_190/Index_GPU_Vector_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the
+    GPU, use 'gpuDevice()'. If the problem persists, reset the GPU by calling
+    'gpuDevice(1)'.
+    
+    Error in Index_vpsa (line 54)
+    jK  = zeros(sets.sz*sets.nel, 1, sets.dTE, 'gpuArray');     % Stores column
+    indices (initialized directly on GPU)
+    
+    Error in ITestLNX_GVs32_190 (line 15)
+    [iKd, jKd] = Index_vpsa(elementsGPU, sets);
+================================================================================
+.
+================================================================================
+Error occurred in ITestLNX_GVs32_190/Index_GPU_Vector_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the
+    GPU, use 'gpuDevice()'. If the problem persists, reset the GPU by calling
+    'gpuDevice(1)'.
+    
+    Error in Index_vpsa (line 54)
+    jK  = zeros(sets.sz*sets.nel, 1, sets.dTE, 'gpuArray');     % Stores column
+    indices (initialized directly on GPU)
+    
+    Error in ITestLNX_GVs32_190 (line 15)
+    [iKd, jKd] = Index_vpsa(elementsGPU, sets);
+================================================================================
+.
+================================================================================
+Error occurred in ITestLNX_GVs32_190/Index_GPU_Vector_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the
+    GPU, use 'gpuDevice()'. If the problem persists, reset the GPU by calling
+    'gpuDevice(1)'.
+    
+    Error in Index_vpsa (line 54)
+    jK  = zeros(sets.sz*sets.nel, 1, sets.dTE, 'gpuArray');     % Stores column
+    indices (initialized directly on GPU)
+    
+    Error in ITestLNX_GVs32_190 (line 15)
+    [iKd, jKd] = Index_vpsa(elementsGPU, sets);
+================================================================================
+.
+Done ITestLNX_GVs32_190
+__________
+
+Failure Summary:
+
+     Name                                          Failed  Incomplete  Reason(s)
+    =============================================================================
+     ITestLNX_GVs32_190/Index_GPU_Vector_Symmetry    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'ITestLNX_GVs32_190/Index_GPU_Vector_Symmetry'
+           Valid: 0
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   2.2829 seconds testing time.
+
+
+
+A total of 1 time experiments was executed!
+Date and time at the beginning of the process: 	18-Feb-2020 15:50:07 
+Date and time at the end of the process: 	18-Feb-2020 15:50:18
+
+
+ans =
+
+  1x7 table
+
+                        Name                        SampleSize    Mean    StandardDeviation    Min    Median    Max
+    ____________________________________________    __________    ____    _________________    ___    ______    ___
+
+    ITestLNX_GVs32_190/Index_GPU_Vector_Symmetry        4         NaN            NaN           NaN     NaN      NaN
+

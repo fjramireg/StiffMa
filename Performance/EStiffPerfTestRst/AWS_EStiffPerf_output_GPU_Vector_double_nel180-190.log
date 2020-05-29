@@ -1,0 +1,687 @@
+[Warning: Directory already exists.] 
+[> In runEStiffTest (line 28)] 
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 180x180x180 (5832000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running ETestLNX_GVd32_180
+	Mesh created successfully with 5832000 Hex8 elements and 5929741 nodes!
+
+........
+Done ETestLNX_GVd32_180
+__________
+
+  TimeResult with properties:
+
+            Name: 'ETestLNX_GVd32_180/EStiff_GPU_Vector_Symmetry'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   32.4012 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 181x181x181 (5929741)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running ETestLNX_GVd32_181
+	Mesh created successfully with 5929741 Hex8 elements and 6028568 nodes!
+
+........
+Done ETestLNX_GVd32_181
+__________
+
+  TimeResult with properties:
+
+            Name: 'ETestLNX_GVd32_181/EStiff_GPU_Vector_Symmetry'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   32.8713 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 182x182x182 (6028568)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running ETestLNX_GVd32_182
+	Mesh created successfully with 6028568 Hex8 elements and 6128487 nodes!
+
+........
+Done ETestLNX_GVd32_182
+__________
+
+  TimeResult with properties:
+
+            Name: 'ETestLNX_GVd32_182/EStiff_GPU_Vector_Symmetry'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   33.4395 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 183x183x183 (6128487)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running ETestLNX_GVd32_183
+	Mesh created successfully with 6128487 Hex8 elements and 6229504 nodes!
+
+........
+Done ETestLNX_GVd32_183
+__________
+
+  TimeResult with properties:
+
+            Name: 'ETestLNX_GVd32_183/EStiff_GPU_Vector_Symmetry'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   33.9498 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 184x184x184 (6229504)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running ETestLNX_GVd32_184
+	Mesh created successfully with 6229504 Hex8 elements and 6331625 nodes!
+
+........
+Done ETestLNX_GVd32_184
+__________
+
+  TimeResult with properties:
+
+            Name: 'ETestLNX_GVd32_184/EStiff_GPU_Vector_Symmetry'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   34.4717 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 185x185x185 (6331625)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running ETestLNX_GVd32_185
+	Mesh created successfully with 6331625 Hex8 elements and 6434856 nodes!
+
+........
+Done ETestLNX_GVd32_185
+__________
+
+  TimeResult with properties:
+
+            Name: 'ETestLNX_GVd32_185/EStiff_GPU_Vector_Symmetry'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   35.0801 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 186x186x186 (6434856)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running ETestLNX_GVd32_186
+	Mesh created successfully with 6434856 Hex8 elements and 6539203 nodes!
+
+........
+Done ETestLNX_GVd32_186
+__________
+
+  TimeResult with properties:
+
+            Name: 'ETestLNX_GVd32_186/EStiff_GPU_Vector_Symmetry'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   35.6347 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 187x187x187 (6539203)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running ETestLNX_GVd32_187
+	Mesh created successfully with 6539203 Hex8 elements and 6644672 nodes!
+
+........
+Done ETestLNX_GVd32_187
+__________
+
+  TimeResult with properties:
+
+            Name: 'ETestLNX_GVd32_187/EStiff_GPU_Vector_Symmetry'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   36.2399 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 188x188x188 (6644672)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running ETestLNX_GVd32_188
+	Mesh created successfully with 6644672 Hex8 elements and 6751269 nodes!
+
+........
+Done ETestLNX_GVd32_188
+__________
+
+  TimeResult with properties:
+
+            Name: 'ETestLNX_GVd32_188/EStiff_GPU_Vector_Symmetry'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   37.1629 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 189x189x189 (6751269)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running ETestLNX_GVd32_189
+	Mesh created successfully with 6751269 Hex8 elements and 6859000 nodes!
+
+
+================================================================================
+Error occurred in ETestLNX_GVd32_189/EStiff_GPU_Vector_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the
+    GPU, use 'gpuDevice()'. If the problem persists, reset the GPU by calling
+    'gpuDevice(1)'.
+    
+    Error in eStiff_vpsa (line 64)
+    Ke = feval(kernel, elements, nodes, zeros(sets.sz*sets.nel, 1, sets.dTN,
+    'gpuArray'));% GPU code execution
+    
+    Error in ETestLNX_GVd32_189 (line 18)
+    Ke = eStiff_vpsa(elementsGPU, nodesGPU, MP, sets);
+================================================================================
+.
+================================================================================
+Error occurred in ETestLNX_GVd32_189/EStiff_GPU_Vector_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the
+    GPU, use 'gpuDevice()'. If the problem persists, reset the GPU by calling
+    'gpuDevice(1)'.
+    
+    Error in eStiff_vpsa (line 64)
+    Ke = feval(kernel, elements, nodes, zeros(sets.sz*sets.nel, 1, sets.dTN,
+    'gpuArray'));% GPU code execution
+    
+    Error in ETestLNX_GVd32_189 (line 18)
+    Ke = eStiff_vpsa(elementsGPU, nodesGPU, MP, sets);
+================================================================================
+.
+================================================================================
+Error occurred in ETestLNX_GVd32_189/EStiff_GPU_Vector_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the
+    GPU, use 'gpuDevice()'. If the problem persists, reset the GPU by calling
+    'gpuDevice(1)'.
+    
+    Error in eStiff_vpsa (line 64)
+    Ke = feval(kernel, elements, nodes, zeros(sets.sz*sets.nel, 1, sets.dTN,
+    'gpuArray'));% GPU code execution
+    
+    Error in ETestLNX_GVd32_189 (line 18)
+    Ke = eStiff_vpsa(elementsGPU, nodesGPU, MP, sets);
+================================================================================
+.
+================================================================================
+Error occurred in ETestLNX_GVd32_189/EStiff_GPU_Vector_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the
+    GPU, use 'gpuDevice()'. If the problem persists, reset the GPU by calling
+    'gpuDevice(1)'.
+    
+    Error in eStiff_vpsa (line 64)
+    Ke = feval(kernel, elements, nodes, zeros(sets.sz*sets.nel, 1, sets.dTN,
+    'gpuArray'));% GPU code execution
+    
+    Error in ETestLNX_GVd32_189 (line 18)
+    Ke = eStiff_vpsa(elementsGPU, nodesGPU, MP, sets);
+================================================================================
+.
+================================================================================
+Error occurred in ETestLNX_GVd32_189/EStiff_GPU_Vector_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the
+    GPU, use 'gpuDevice()'. If the problem persists, reset the GPU by calling
+    'gpuDevice(1)'.
+    
+    Error in eStiff_vpsa (line 64)
+    Ke = feval(kernel, elements, nodes, zeros(sets.sz*sets.nel, 1, sets.dTN,
+    'gpuArray'));% GPU code execution
+    
+    Error in ETestLNX_GVd32_189 (line 18)
+    Ke = eStiff_vpsa(elementsGPU, nodesGPU, MP, sets);
+================================================================================
+.
+================================================================================
+Error occurred in ETestLNX_GVd32_189/EStiff_GPU_Vector_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the
+    GPU, use 'gpuDevice()'. If the problem persists, reset the GPU by calling
+    'gpuDevice(1)'.
+    
+    Error in eStiff_vpsa (line 64)
+    Ke = feval(kernel, elements, nodes, zeros(sets.sz*sets.nel, 1, sets.dTN,
+    'gpuArray'));% GPU code execution
+    
+    Error in ETestLNX_GVd32_189 (line 18)
+    Ke = eStiff_vpsa(elementsGPU, nodesGPU, MP, sets);
+================================================================================
+.
+================================================================================
+Error occurred in ETestLNX_GVd32_189/EStiff_GPU_Vector_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the
+    GPU, use 'gpuDevice()'. If the problem persists, reset the GPU by calling
+    'gpuDevice(1)'.
+    
+    Error in eStiff_vpsa (line 64)
+    Ke = feval(kernel, elements, nodes, zeros(sets.sz*sets.nel, 1, sets.dTN,
+    'gpuArray'));% GPU code execution
+    
+    Error in ETestLNX_GVd32_189 (line 18)
+    Ke = eStiff_vpsa(elementsGPU, nodesGPU, MP, sets);
+================================================================================
+.
+================================================================================
+Error occurred in ETestLNX_GVd32_189/EStiff_GPU_Vector_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the
+    GPU, use 'gpuDevice()'. If the problem persists, reset the GPU by calling
+    'gpuDevice(1)'.
+    
+    Error in eStiff_vpsa (line 64)
+    Ke = feval(kernel, elements, nodes, zeros(sets.sz*sets.nel, 1, sets.dTN,
+    'gpuArray'));% GPU code execution
+    
+    Error in ETestLNX_GVd32_189 (line 18)
+    Ke = eStiff_vpsa(elementsGPU, nodesGPU, MP, sets);
+================================================================================
+.
+Done ETestLNX_GVd32_189
+__________
+
+Failure Summary:
+
+     Name                                           Failed  Incomplete  Reason(s)
+    ==============================================================================
+     ETestLNX_GVd32_189/EStiff_GPU_Vector_Symmetry    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'ETestLNX_GVd32_189/EStiff_GPU_Vector_Symmetry'
+           Valid: 0
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   1.1849 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 190x190x190 (6859000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running ETestLNX_GVd32_190
+	Mesh created successfully with 6859000 Hex8 elements and 6967871 nodes!
+
+
+================================================================================
+Error occurred in ETestLNX_GVd32_190/EStiff_GPU_Vector_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the
+    GPU, use 'gpuDevice()'. If the problem persists, reset the GPU by calling
+    'gpuDevice(1)'.
+    
+    Error in eStiff_vpsa (line 64)
+    Ke = feval(kernel, elements, nodes, zeros(sets.sz*sets.nel, 1, sets.dTN,
+    'gpuArray'));% GPU code execution
+    
+    Error in ETestLNX_GVd32_190 (line 18)
+    Ke = eStiff_vpsa(elementsGPU, nodesGPU, MP, sets);
+================================================================================
+.
+================================================================================
+Error occurred in ETestLNX_GVd32_190/EStiff_GPU_Vector_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the
+    GPU, use 'gpuDevice()'. If the problem persists, reset the GPU by calling
+    'gpuDevice(1)'.
+    
+    Error in eStiff_vpsa (line 64)
+    Ke = feval(kernel, elements, nodes, zeros(sets.sz*sets.nel, 1, sets.dTN,
+    'gpuArray'));% GPU code execution
+    
+    Error in ETestLNX_GVd32_190 (line 18)
+    Ke = eStiff_vpsa(elementsGPU, nodesGPU, MP, sets);
+================================================================================
+.
+================================================================================
+Error occurred in ETestLNX_GVd32_190/EStiff_GPU_Vector_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the
+    GPU, use 'gpuDevice()'. If the problem persists, reset the GPU by calling
+    'gpuDevice(1)'.
+    
+    Error in eStiff_vpsa (line 64)
+    Ke = feval(kernel, elements, nodes, zeros(sets.sz*sets.nel, 1, sets.dTN,
+    'gpuArray'));% GPU code execution
+    
+    Error in ETestLNX_GVd32_190 (line 18)
+    Ke = eStiff_vpsa(elementsGPU, nodesGPU, MP, sets);
+================================================================================
+.
+================================================================================
+Error occurred in ETestLNX_GVd32_190/EStiff_GPU_Vector_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the
+    GPU, use 'gpuDevice()'. If the problem persists, reset the GPU by calling
+    'gpuDevice(1)'.
+    
+    Error in eStiff_vpsa (line 64)
+    Ke = feval(kernel, elements, nodes, zeros(sets.sz*sets.nel, 1, sets.dTN,
+    'gpuArray'));% GPU code execution
+    
+    Error in ETestLNX_GVd32_190 (line 18)
+    Ke = eStiff_vpsa(elementsGPU, nodesGPU, MP, sets);
+================================================================================
+.
+================================================================================
+Error occurred in ETestLNX_GVd32_190/EStiff_GPU_Vector_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the
+    GPU, use 'gpuDevice()'. If the problem persists, reset the GPU by calling
+    'gpuDevice(1)'.
+    
+    Error in eStiff_vpsa (line 64)
+    Ke = feval(kernel, elements, nodes, zeros(sets.sz*sets.nel, 1, sets.dTN,
+    'gpuArray'));% GPU code execution
+    
+    Error in ETestLNX_GVd32_190 (line 18)
+    Ke = eStiff_vpsa(elementsGPU, nodesGPU, MP, sets);
+================================================================================
+.
+================================================================================
+Error occurred in ETestLNX_GVd32_190/EStiff_GPU_Vector_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the
+    GPU, use 'gpuDevice()'. If the problem persists, reset the GPU by calling
+    'gpuDevice(1)'.
+    
+    Error in eStiff_vpsa (line 64)
+    Ke = feval(kernel, elements, nodes, zeros(sets.sz*sets.nel, 1, sets.dTN,
+    'gpuArray'));% GPU code execution
+    
+    Error in ETestLNX_GVd32_190 (line 18)
+    Ke = eStiff_vpsa(elementsGPU, nodesGPU, MP, sets);
+================================================================================
+.
+================================================================================
+Error occurred in ETestLNX_GVd32_190/EStiff_GPU_Vector_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the
+    GPU, use 'gpuDevice()'. If the problem persists, reset the GPU by calling
+    'gpuDevice(1)'.
+    
+    Error in eStiff_vpsa (line 64)
+    Ke = feval(kernel, elements, nodes, zeros(sets.sz*sets.nel, 1, sets.dTN,
+    'gpuArray'));% GPU code execution
+    
+    Error in ETestLNX_GVd32_190 (line 18)
+    Ke = eStiff_vpsa(elementsGPU, nodesGPU, MP, sets);
+================================================================================
+.
+================================================================================
+Error occurred in ETestLNX_GVd32_190/EStiff_GPU_Vector_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the
+    GPU, use 'gpuDevice()'. If the problem persists, reset the GPU by calling
+    'gpuDevice(1)'.
+    
+    Error in eStiff_vpsa (line 64)
+    Ke = feval(kernel, elements, nodes, zeros(sets.sz*sets.nel, 1, sets.dTN,
+    'gpuArray'));% GPU code execution
+    
+    Error in ETestLNX_GVd32_190 (line 18)
+    Ke = eStiff_vpsa(elementsGPU, nodesGPU, MP, sets);
+================================================================================
+.
+Done ETestLNX_GVd32_190
+__________
+
+Failure Summary:
+
+     Name                                           Failed  Incomplete  Reason(s)
+    ==============================================================================
+     ETestLNX_GVd32_190/EStiff_GPU_Vector_Symmetry    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'ETestLNX_GVd32_190/EStiff_GPU_Vector_Symmetry'
+           Valid: 0
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   1.1763 seconds testing time.
+
+
+
+ A total of 11 time experiments was executed!
+Date and time at the beginning of the process: 	07-May-2020 12:38:56 
+Date and time at the end of the process: 	07-May-2020 12:44:31
+
+
+ans =
+
+  11x7 table
+
+                        Name                         SampleSize     Mean     StandardDeviation     Min      Median     Max  
+    _____________________________________________    __________    ______    _________________    ______    ______    ______
+
+    ETestLNX_GVd32_180/EStiff_GPU_Vector_Symmetry        4         3.9564        0.0043427        3.9514    3.9565    3.9614
+    ETestLNX_GVd32_181/EStiff_GPU_Vector_Symmetry        4         4.0287        0.0049159        4.0223    4.0294    4.0337
+    ETestLNX_GVd32_182/EStiff_GPU_Vector_Symmetry        4         4.0996        0.0022499        4.0974    4.0991    4.1027
+    ETestLNX_GVd32_183/EStiff_GPU_Vector_Symmetry        4          4.158         0.007041        4.1484    4.1591    4.1653
+    ETestLNX_GVd32_184/EStiff_GPU_Vector_Symmetry        4         4.2231         0.001742        4.2215    4.2228    4.2253
+    ETestLNX_GVd32_185/EStiff_GPU_Vector_Symmetry        4         4.3004        0.0053629        4.2963    4.2986    4.3082
+    ETestLNX_GVd32_186/EStiff_GPU_Vector_Symmetry        4         4.3694         0.001546        4.3678    4.3695    4.3708
+    ETestLNX_GVd32_187/EStiff_GPU_Vector_Symmetry        4         4.4418         0.003503        4.4374    4.4424     4.445
+    ETestLNX_GVd32_188/EStiff_GPU_Vector_Symmetry        4         4.5343         0.003789        4.5317    4.5328    4.5398
+    ETestLNX_GVd32_189/EStiff_GPU_Vector_Symmetry        4            NaN              NaN           NaN       NaN       NaN
+    ETestLNX_GVd32_190/EStiff_GPU_Vector_Symmetry        4            NaN              NaN           NaN       NaN       NaN
+

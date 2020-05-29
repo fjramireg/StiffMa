@@ -1,0 +1,208 @@
+[Warning: Directory already exists.] 
+[> In runStiffMaTest (line 28)] 
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 195x195x195 (7414875)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running StiffMaLNX_GSdu32_195
+	Mesh created successfully with 7414875 Hex8 elements and 7529536 nodes!
+
+........
+Done StiffMaLNX_GSdu32_195
+__________
+
+  TimeResult with properties:
+
+            Name: 'StiffMaLNX_GSdu32_195/StiffMa_GPU_Scalar_Symmetry'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   7.2338 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 196x196x196 (7529536)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running StiffMaLNX_GSdu32_196
+	Mesh created successfully with 7529536 Hex8 elements and 7645373 nodes!
+
+.
+Done StiffMaLNX_GSdu32_196
+__________
+
+  TimeResult with properties:
+
+            Name: 'StiffMaLNX_GSdu32_196/StiffMa_GPU_Scalar_Symmetry'
+           Valid: 1
+         Samples: [1x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   2.2999 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 197x197x197 (7645373)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running StiffMaLNX_GSdu32_197
+	Mesh created successfully with 7645373 Hex8 elements and 7762392 nodes!
+
+.
+Done StiffMaLNX_GSdu32_197
+__________
+
+  TimeResult with properties:
+
+            Name: 'StiffMaLNX_GSdu32_197/StiffMa_GPU_Scalar_Symmetry'
+           Valid: 1
+         Samples: [1x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   2.2909 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 198x198x198 (7762392)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running StiffMaLNX_GSdu32_198
+	Mesh created successfully with 7762392 Hex8 elements and 7880599 nodes!
+
+.
+Done StiffMaLNX_GSdu32_198
+__________
+
+  TimeResult with properties:
+
+            Name: 'StiffMaLNX_GSdu32_198/StiffMa_GPU_Scalar_Symmetry'
+           Valid: 1
+         Samples: [1x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   2.3087 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 199x199x199 (7880599)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running StiffMaLNX_GSdu32_199
+	Mesh created successfully with 7880599 Hex8 elements and 8000000 nodes!
+
+.
+Done StiffMaLNX_GSdu32_199
+__________
+
+  TimeResult with properties:
+
+            Name: 'StiffMaLNX_GSdu32_199/StiffMa_GPU_Scalar_Symmetry'
+           Valid: 1
+         Samples: [1x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   2.3253 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 200x200x200 (8000000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running StiffMaLNX_GSdu32_200
+	Mesh created successfully with 8000000 Hex8 elements and 8120601 nodes!
+
+
+================================================================================
+Error occurred in StiffMaLNX_GSdu32_200/StiffMa_GPU_Scalar_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'MATLAB:nomem'
+    --------------
+    Error Details:
+    --------------
+    Out of memory. Type "help memory" for your options.
+    
+    Error in AssemblyStiffMa (line 25)
+        K = accumarray([iK,jK], Ke, [], [], [], 1);
+    
+    Error in StiffMaLNX_GSdu32_200 (line 20)
+    K = AssemblyStiffMa(iKd, jKd, Ked, sets.dTE, sets.dTN);
+================================================================================
+.
+Done StiffMaLNX_GSdu32_200
+__________
+
+Failure Summary:
+
+     Name                                               Failed  Incomplete  Reason(s)
+    ==================================================================================
+     StiffMaLNX_GSdu32_200/StiffMa_GPU_Scalar_Symmetry    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'StiffMaLNX_GSdu32_200/StiffMa_GPU_Scalar_Symmetry'
+           Valid: 0
+         Samples: [1x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   1.6883 seconds testing time.
+
+
+
+A total of 6 time experiments was executed!
+Date and time at the beginning of the process: 	12-May-2020 22:59:23 
+Date and time at the end of the process: 	12-May-2020 22:59:56
+
+
+ans =
+
+  6x7 table
+
+                          Name                           SampleSize     Mean      StandardDeviation      Min      Median       Max  
+    _________________________________________________    __________    _______    _________________    _______    _______    _______
+
+    StiffMaLNX_GSdu32_195/StiffMa_GPU_Scalar_Symmetry        4         0.67927        0.0047245        0.67612     0.6774    0.68616
+    StiffMaLNX_GSdu32_196/StiffMa_GPU_Scalar_Symmetry        1         0.97076                0        0.97076    0.97076    0.97076
+    StiffMaLNX_GSdu32_197/StiffMa_GPU_Scalar_Symmetry        1         0.95968                0        0.95968    0.95968    0.95968
+    StiffMaLNX_GSdu32_198/StiffMa_GPU_Scalar_Symmetry        1         0.96019                0        0.96019    0.96019    0.96019
+    StiffMaLNX_GSdu32_199/StiffMa_GPU_Scalar_Symmetry        1         0.96183                0        0.96183    0.96183    0.96183
+    StiffMaLNX_GSdu32_200/StiffMa_GPU_Scalar_Symmetry        1             NaN              NaN            NaN        NaN        NaN
+

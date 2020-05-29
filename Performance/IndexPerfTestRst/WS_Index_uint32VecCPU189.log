@@ -1,0 +1,58 @@
+[Warning: Directory already exists.] 
+[> In runIndexTest (line 28)] 
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In parallel.internal.gpu.selectDevice
+  In parallel.gpu/GPUDevice/current (line 44)
+  In gpuDevice (line 23)
+  In runIndexTest (line 35)] 
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 189x189x189 (6751269)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Vector'
+Processor type: 'CPU'
+
+Running ITestWIN_CVs32_189
+	Mesh created successfully with 6751269 Hex8 elements and 6859000 nodes!
+
+...
+Done ITestWIN_CVs32_189
+__________
+
+  1x3 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   3 Valid, 0 Invalid.
+   208.3156 seconds testing time.
+
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In runIndexTest (line 115)] 
+
+
+A total of 1 time experiments was executed!
+Date and time at the beginning of the process: 	04-May-2020 08:29:22 
+Date and time at the end of the process: 	04-May-2020 08:32:58
+
+
+ans =
+
+  3x7 table
+
+                         Name                         SampleSize     Mean     StandardDeviation     Min      Median     Max  
+    ______________________________________________    __________    ______    _________________    ______    ______    ______
+
+    ITestWIN_CVs32_189/Index_CPU_Vector                   1         53.396            0            53.396    53.396    53.396
+    ITestWIN_CVs32_189/Index_CPU_Vector_Vectorized        1         13.378            0            13.378    13.378    13.378
+    ITestWIN_CVs32_189/Index_CPU_Vector_Symmetry          1         141.02            0            141.02    141.02    141.02
+

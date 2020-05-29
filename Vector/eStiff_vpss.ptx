@@ -10,15 +10,15 @@
 .target sm_30
 .address_size 64
 
-	// .globl	_Z10Hex8vectorIfjEvPKT0_PKT_PS3_
+	// .globl	_Z10Hex8vectorPKjPKfPf
 .const .align 4 .b8 L[768];
 .const .align 4 .b8 D[144];
 .const .align 4 .f32 nel;
 
-.visible .entry _Z10Hex8vectorIfjEvPKT0_PKT_PS3_(
-	.param .u64 _Z10Hex8vectorIfjEvPKT0_PKT_PS3__param_0,
-	.param .u64 _Z10Hex8vectorIfjEvPKT0_PKT_PS3__param_1,
-	.param .u64 _Z10Hex8vectorIfjEvPKT0_PKT_PS3__param_2
+.visible .entry _Z10Hex8vectorPKjPKfPf(
+	.param .u64 _Z10Hex8vectorPKjPKfPf_param_0,
+	.param .u64 _Z10Hex8vectorPKjPKfPf_param_1,
+	.param .u64 _Z10Hex8vectorPKjPKfPf_param_2
 )
 {
 	.local .align 16 .b8 	__local_depot0[576];
@@ -31,9 +31,9 @@
 
 
 	mov.u64 	%SPL, __local_depot0;
-	ld.param.u64 	%rd2, [_Z10Hex8vectorIfjEvPKT0_PKT_PS3__param_0];
-	ld.param.u64 	%rd3, [_Z10Hex8vectorIfjEvPKT0_PKT_PS3__param_1];
-	ld.param.u64 	%rd4, [_Z10Hex8vectorIfjEvPKT0_PKT_PS3__param_2];
+	ld.param.u64 	%rd2, [_Z10Hex8vectorPKjPKfPf_param_0];
+	ld.param.u64 	%rd3, [_Z10Hex8vectorPKjPKfPf_param_1];
+	ld.param.u64 	%rd4, [_Z10Hex8vectorPKjPKfPf_param_2];
 	add.u64 	%rd1, %SPL, 0;
 	mov.u32 	%r15, %ctaid.x;
 	mov.u32 	%r16, %ntid.x;

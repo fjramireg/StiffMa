@@ -1,0 +1,444 @@
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 10x10x10 (1000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+
+Running ATestWIN_C_Sd32_10
+
+Mesh created successfully with 1000 Hex8 elements and 1331 nodes!
+.......... .......... .....
+Done ATestWIN_C_Sd32_10
+__________
+
+  1x2 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   2 Valid, 0 Invalid.
+   0.74009 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 10x10x10 (1000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+
+Running ATestWIN_C_Vd32_10
+
+Mesh created successfully with 1000 Hex8 elements and 1331 nodes!
+.......... ......
+Done ATestWIN_C_Vd32_10
+__________
+
+  1x2 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   2 Valid, 0 Invalid.
+   2.6271 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 20x20x20 (8000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+
+Running ATestWIN_C_Sd32_20
+
+Mesh created successfully with 8000 Hex8 elements and 9261 nodes!
+.......... ......
+Done ATestWIN_C_Sd32_20
+__________
+
+  1x2 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   2 Valid, 0 Invalid.
+   2.8594 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 20x20x20 (8000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+
+Running ATestWIN_C_Vd32_20
+
+Mesh created successfully with 8000 Hex8 elements and 9261 nodes!
+.......... ......
+Done ATestWIN_C_Vd32_20
+__________
+
+  1x2 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   2 Valid, 0 Invalid.
+   19.6362 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 40x40x40 (64000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+
+Running ATestWIN_C_Sd32_40
+
+Mesh created successfully with 64000 Hex8 elements and 68921 nodes!
+.......... ......
+Done ATestWIN_C_Sd32_40
+__________
+
+  1x2 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   2 Valid, 0 Invalid.
+   22.5787 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 40x40x40 (64000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+
+Running ATestWIN_C_Vd32_40
+
+Mesh created successfully with 64000 Hex8 elements and 68921 nodes!
+.......... ......
+Done ATestWIN_C_Vd32_40
+__________
+
+  1x2 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   2 Valid, 0 Invalid.
+   160.8588 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 80x80x80 (512000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+
+Running ATestWIN_C_Sd32_80
+
+Mesh created successfully with 512000 Hex8 elements and 531441 nodes!
+.......... .......
+Done ATestWIN_C_Sd32_80
+__________
+
+  1x2 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   2 Valid, 0 Invalid.
+   184.3204 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 80x80x80 (512000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+
+Running ATestWIN_C_Vd32_80
+
+Mesh created successfully with 512000 Hex8 elements and 531441 nodes!
+.......... ......
+Done ATestWIN_C_Vd32_80
+__________
+
+  1x2 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   2 Valid, 0 Invalid.
+   1293.1245 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 160x160x160 (4096000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+
+Running ATestWIN_C_Sd32_160
+
+Mesh created successfully with 4096000 Hex8 elements and 4173281 nodes!
+.......... ......
+Done ATestWIN_C_Sd32_160
+__________
+
+  1x2 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   2 Valid, 0 Invalid.
+   1487.3016 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 160x160x160 (4096000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+
+Running ATestWIN_C_Vd32_160
+
+Mesh created successfully with 4096000 Hex8 elements and 4173281 nodes!
+
+================================================================================
+Error occurred in ATestWIN_C_Vd32_160/Assembly_CPU_Vector and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'MATLAB:nomem'
+    --------------
+    Error Details:
+    --------------
+    Out of memory. Type "help memory" for your options.
+    
+    Error in AssemblyStiffMa (line 25)
+        K = accumarray([iK,jK], Ke, [], [], [], 1);
+    
+    Error in ATestWIN_C_Vd32_160 (line 16)
+    K = AssemblyStiffMa(iK, jK, Ke, sets.dTE, sets.dTN);
+================================================================================
+.
+================================================================================
+Error occurred in ATestWIN_C_Vd32_160/Assembly_CPU_Vector and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'MATLAB:nomem'
+    --------------
+    Error Details:
+    --------------
+    Out of memory. Type "help memory" for your options.
+    
+    Error in AssemblyStiffMa (line 25)
+        K = accumarray([iK,jK], Ke, [], [], [], 1);
+    
+    Error in ATestWIN_C_Vd32_160 (line 16)
+    K = AssemblyStiffMa(iK, jK, Ke, sets.dTE, sets.dTN);
+================================================================================
+.
+================================================================================
+Error occurred in ATestWIN_C_Vd32_160/Assembly_CPU_Vector and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'MATLAB:nomem'
+    --------------
+    Error Details:
+    --------------
+    Out of memory. Type "help memory" for your options.
+    
+    Error in AssemblyStiffMa (line 25)
+        K = accumarray([iK,jK], Ke, [], [], [], 1);
+    
+    Error in ATestWIN_C_Vd32_160 (line 16)
+    K = AssemblyStiffMa(iK, jK, Ke, sets.dTE, sets.dTN);
+================================================================================
+.
+================================================================================
+Error occurred in ATestWIN_C_Vd32_160/Assembly_CPU_Vector and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'MATLAB:nomem'
+    --------------
+    Error Details:
+    --------------
+    Out of memory. Type "help memory" for your options.
+    
+    Error in AssemblyStiffMa (line 25)
+        K = accumarray([iK,jK], Ke, [], [], [], 1);
+    
+    Error in ATestWIN_C_Vd32_160 (line 16)
+    K = AssemblyStiffMa(iK, jK, Ke, sets.dTE, sets.dTN);
+================================================================================
+.
+================================================================================
+Error occurred in ATestWIN_C_Vd32_160/Assembly_CPU_Vector and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'MATLAB:nomem'
+    --------------
+    Error Details:
+    --------------
+    Out of memory. Type "help memory" for your options.
+    
+    Error in AssemblyStiffMa (line 25)
+        K = accumarray([iK,jK], Ke, [], [], [], 1);
+    
+    Error in ATestWIN_C_Vd32_160 (line 16)
+    K = AssemblyStiffMa(iK, jK, Ke, sets.dTE, sets.dTN);
+================================================================================
+.
+================================================================================
+Error occurred in ATestWIN_C_Vd32_160/Assembly_CPU_Vector and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'MATLAB:nomem'
+    --------------
+    Error Details:
+    --------------
+    Out of memory. Type "help memory" for your options.
+    
+    Error in AssemblyStiffMa (line 25)
+        K = accumarray([iK,jK], Ke, [], [], [], 1);
+    
+    Error in ATestWIN_C_Vd32_160 (line 16)
+    K = AssemblyStiffMa(iK, jK, Ke, sets.dTE, sets.dTN);
+================================================================================
+.
+================================================================================
+Error occurred in ATestWIN_C_Vd32_160/Assembly_CPU_Vector and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'MATLAB:nomem'
+    --------------
+    Error Details:
+    --------------
+    Out of memory. Type "help memory" for your options.
+    
+    Error in AssemblyStiffMa (line 25)
+        K = accumarray([iK,jK], Ke, [], [], [], 1);
+    
+    Error in ATestWIN_C_Vd32_160 (line 16)
+    K = AssemblyStiffMa(iK, jK, Ke, sets.dTE, sets.dTN);
+================================================================================
+.
+================================================================================
+Error occurred in ATestWIN_C_Vd32_160/Assembly_CPU_Vector and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'MATLAB:nomem'
+    --------------
+    Error Details:
+    --------------
+    Out of memory. Type "help memory" for your options.
+    
+    Error in AssemblyStiffMa (line 25)
+        K = accumarray([iK,jK], Ke, [], [], [], 1);
+    
+    Error in ATestWIN_C_Vd32_160 (line 16)
+    K = AssemblyStiffMa(iK, jK, Ke, sets.dTE, sets.dTN);
+================================================================================
+... ......
+Done ATestWIN_C_Vd32_160
+__________
+
+Failure Summary:
+
+     Name                                     Failed  Incomplete  Reason(s)
+    ========================================================================
+     ATestWIN_C_Vd32_160/Assembly_CPU_Vector    X         X       Errored.
+  1x2 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   1 Valid, 1 Invalid.
+   9552.2507 seconds testing time.
+
+
+
+A total of 10 time experiments was executed!
+Date and time at the beginning of the process: 	19-Feb-2020 05:21:34 
+Date and time at the end of the process: 	19-Feb-2020 08:54:16
+
+
+ans =
+
+  20x7 table
+
+                          Name                          SampleSize      Mean       StandardDeviation       Min        Median         Max   
+    ________________________________________________    __________    _________    _________________    _________    _________    _________
+
+    ATestWIN_C_Sd32_10/Assembly_CPU_Scalar                  12        0.0064229       0.00060771        0.0061266    0.0062477    0.0083399
+    ATestWIN_C_Sd32_10/Assembly_CPU_Scalar_Symmetry          5        0.0032928       0.00012653        0.0032183    0.0032459     0.003518
+    ATestWIN_C_Vd32_10/Assembly_CPU_Vector                   4         0.065486       0.00043098         0.065058     0.065401     0.066086
+    ATestWIN_C_Vd32_10/Assembly_CPU_Vector_Symmetry          4         0.034953       0.00039082         0.034539     0.034992     0.035289
+    ATestWIN_C_Sd32_20/Assembly_CPU_Scalar                   4         0.060417       0.00018068         0.060234     0.060397     0.060641
+    ATestWIN_C_Sd32_20/Assembly_CPU_Scalar_Symmetry          4         0.034316        0.0002867         0.034014     0.034288     0.034673
+    ATestWIN_C_Vd32_20/Assembly_CPU_Vector                   4          0.56555        0.0067885          0.55838      0.56457      0.57466
+    ATestWIN_C_Vd32_20/Assembly_CPU_Vector_Symmetry          4          0.29302          0.00227          0.29088      0.29289      0.29541
+    ATestWIN_C_Sd32_40/Assembly_CPU_Scalar                   4          0.53649        0.0032785          0.53293      0.53672      0.53958
+    ATestWIN_C_Sd32_40/Assembly_CPU_Scalar_Symmetry          4          0.29241        0.0020702          0.29074      0.29186      0.29518
+    ATestWIN_C_Vd32_40/Assembly_CPU_Vector                   4           4.8519         0.055322           4.7974       4.8545       4.9012
+    ATestWIN_C_Vd32_40/Assembly_CPU_Vector_Symmetry          4           2.5597          0.02726           2.5239       2.5625       2.5899
+    ATestWIN_C_Sd32_80/Assembly_CPU_Scalar                   4           4.5714        0.0070818           4.5611        4.574       4.5767
+    ATestWIN_C_Sd32_80/Assembly_CPU_Scalar_Symmetry          5           2.6164          0.11223           2.5342       2.5417       2.7846
+    ATestWIN_C_Vd32_80/Assembly_CPU_Vector                   4           40.307          0.25112           40.045       40.308       40.565
+    ATestWIN_C_Vd32_80/Assembly_CPU_Vector_Symmetry          4           21.025         0.070635           20.931       21.035       21.102
+    ATestWIN_C_Sd32_160/Assembly_CPU_Scalar                  4           38.387           0.3385           38.079        38.35       38.771
+    ATestWIN_C_Sd32_160/Assembly_CPU_Scalar_Symmetry         4           21.468          0.27798           21.192       21.483       21.715
+    ATestWIN_C_Vd32_160/Assembly_CPU_Vector                  4              NaN              NaN              NaN          NaN          NaN
+    ATestWIN_C_Vd32_160/Assembly_CPU_Vector_Symmetry         4           262.64           6.8979           255.84       261.93       270.84
+

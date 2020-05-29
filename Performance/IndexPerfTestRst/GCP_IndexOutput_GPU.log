@@ -1,0 +1,762 @@
+[Warning: Directory already exists.] 
+[> In runIndexTest (line 28)] 
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 10x10x10 (1000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running ITestLNX_GSs32_10
+
+Mesh created successfully with 1000 Hex8 elements and 1331 nodes!
+........
+Done ITestLNX_GSs32_10
+__________
+
+  TimeResult with properties:
+
+            Name: 'ITestLNX_GSs32_10/Index_GPU_Scalar_Symmetry'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   0.52136 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 10x10x10 (1000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running ITestLNX_GVs32_10
+
+Mesh created successfully with 1000 Hex8 elements and 1331 nodes!
+........
+Done ITestLNX_GVs32_10
+__________
+
+  TimeResult with properties:
+
+            Name: 'ITestLNX_GVs32_10/Index_GPU_Vector_Symmetry'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   0.26038 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 10x10x10 (1000)
+Date type for 'elements': 'uint64'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running ITestLNX_GSs64_10
+
+Mesh created successfully with 1000 Hex8 elements and 1331 nodes!
+.......... .......... .......... .
+Done ITestLNX_GSs64_10
+__________
+
+  TimeResult with properties:
+
+            Name: 'ITestLNX_GSs64_10/Index_GPU_Scalar_Symmetry'
+           Valid: 1
+         Samples: [27x7 table]
+    TestActivity: [31x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   0.57582 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 10x10x10 (1000)
+Date type for 'elements': 'uint64'
+Date type for 'nodes': 'single'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running ITestLNX_GVs64_10
+
+Mesh created successfully with 1000 Hex8 elements and 1331 nodes!
+.......... .......... .......... .......... ....
+Done ITestLNX_GVs64_10
+__________
+
+  TimeResult with properties:
+
+            Name: 'ITestLNX_GVs64_10/Index_GPU_Vector_Symmetry'
+           Valid: 1
+         Samples: [40x7 table]
+    TestActivity: [44x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   0.78707 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 20x20x20 (8000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running ITestLNX_GSs32_20
+
+Mesh created successfully with 8000 Hex8 elements and 9261 nodes!
+.......... .......... .......... .......... ..........
+.......... .......... .......... .......... ..........
+Done ITestLNX_GSs32_20
+__________
+
+  TimeResult with properties:
+
+            Name: 'ITestLNX_GSs32_20/Index_GPU_Scalar_Symmetry'
+           Valid: 1
+         Samples: [96x7 table]
+    TestActivity: [100x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   1.492 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 20x20x20 (8000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running ITestLNX_GVs32_20
+
+Mesh created successfully with 8000 Hex8 elements and 9261 nodes!
+.......... .......... .......... .......... ...
+Done ITestLNX_GVs32_20
+__________
+
+  TimeResult with properties:
+
+            Name: 'ITestLNX_GVs32_20/Index_GPU_Vector_Symmetry'
+           Valid: 1
+         Samples: [39x7 table]
+    TestActivity: [43x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   0.69302 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 20x20x20 (8000)
+Date type for 'elements': 'uint64'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running ITestLNX_GSs64_20
+
+Mesh created successfully with 8000 Hex8 elements and 9261 nodes!
+.......... .......... .......... .......... ..........
+.......... ......
+Done ITestLNX_GSs64_20
+__________
+
+  TimeResult with properties:
+
+            Name: 'ITestLNX_GSs64_20/Index_GPU_Scalar_Symmetry'
+           Valid: 1
+         Samples: [62x7 table]
+    TestActivity: [66x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   1.0626 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 20x20x20 (8000)
+Date type for 'elements': 'uint64'
+Date type for 'nodes': 'single'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running ITestLNX_GVs64_20
+
+Mesh created successfully with 8000 Hex8 elements and 9261 nodes!
+.......... .......... .......... .......... ..........
+.......... .....
+Done ITestLNX_GVs64_20
+__________
+
+  TimeResult with properties:
+
+            Name: 'ITestLNX_GVs64_20/Index_GPU_Vector_Symmetry'
+           Valid: 1
+         Samples: [61x7 table]
+    TestActivity: [65x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   0.94955 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 40x40x40 (64000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running ITestLNX_GSs32_40
+
+Mesh created successfully with 64000 Hex8 elements and 68921 nodes!
+.......... .......... .......... .......... ..........
+.......... ......
+Done ITestLNX_GSs32_40
+__________
+
+  TimeResult with properties:
+
+            Name: 'ITestLNX_GSs32_40/Index_GPU_Scalar_Symmetry'
+           Valid: 1
+         Samples: [62x7 table]
+    TestActivity: [66x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   1.0994 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 40x40x40 (64000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running ITestLNX_GVs32_40
+
+Mesh created successfully with 64000 Hex8 elements and 68921 nodes!
+.......... .
+Done ITestLNX_GVs32_40
+__________
+
+  TimeResult with properties:
+
+            Name: 'ITestLNX_GVs32_40/Index_GPU_Vector_Symmetry'
+           Valid: 1
+         Samples: [7x7 table]
+    TestActivity: [11x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   0.35019 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 40x40x40 (64000)
+Date type for 'elements': 'uint64'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running ITestLNX_GSs64_40
+
+Mesh created successfully with 64000 Hex8 elements and 68921 nodes!
+........
+Done ITestLNX_GSs64_40
+__________
+
+  TimeResult with properties:
+
+            Name: 'ITestLNX_GSs64_40/Index_GPU_Scalar_Symmetry'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   0.14404 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 40x40x40 (64000)
+Date type for 'elements': 'uint64'
+Date type for 'nodes': 'single'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running ITestLNX_GVs64_40
+
+Mesh created successfully with 64000 Hex8 elements and 68921 nodes!
+........
+Done ITestLNX_GVs64_40
+__________
+
+  TimeResult with properties:
+
+            Name: 'ITestLNX_GVs64_40/Index_GPU_Vector_Symmetry'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   0.28346 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 80x80x80 (512000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running ITestLNX_GSs32_80
+
+Mesh created successfully with 512000 Hex8 elements and 531441 nodes!
+........
+Done ITestLNX_GSs32_80
+__________
+
+  TimeResult with properties:
+
+            Name: 'ITestLNX_GSs32_80/Index_GPU_Scalar_Symmetry'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   0.28099 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 80x80x80 (512000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running ITestLNX_GVs32_80
+
+Mesh created successfully with 512000 Hex8 elements and 531441 nodes!
+........
+Done ITestLNX_GVs32_80
+__________
+
+  TimeResult with properties:
+
+            Name: 'ITestLNX_GVs32_80/Index_GPU_Vector_Symmetry'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   1.475 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 80x80x80 (512000)
+Date type for 'elements': 'uint64'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running ITestLNX_GSs64_80
+
+Mesh created successfully with 512000 Hex8 elements and 531441 nodes!
+........
+Done ITestLNX_GSs64_80
+__________
+
+  TimeResult with properties:
+
+            Name: 'ITestLNX_GSs64_80/Index_GPU_Scalar_Symmetry'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   0.37213 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 80x80x80 (512000)
+Date type for 'elements': 'uint64'
+Date type for 'nodes': 'single'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running ITestLNX_GVs64_80
+
+Mesh created successfully with 512000 Hex8 elements and 531441 nodes!
+........
+Done ITestLNX_GVs64_80
+__________
+
+  TimeResult with properties:
+
+            Name: 'ITestLNX_GVs64_80/Index_GPU_Vector_Symmetry'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   1.5057 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 160x160x160 (4096000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running ITestLNX_GSs32_160
+
+Mesh created successfully with 4096000 Hex8 elements and 4173281 nodes!
+........
+Done ITestLNX_GSs32_160
+__________
+
+  TimeResult with properties:
+
+            Name: 'ITestLNX_GSs32_160/Index_GPU_Scalar_Symmetry'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   1.4576 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 160x160x160 (4096000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running ITestLNX_GVs32_160
+
+Mesh created successfully with 4096000 Hex8 elements and 4173281 nodes!
+........
+Done ITestLNX_GVs32_160
+__________
+
+  TimeResult with properties:
+
+            Name: 'ITestLNX_GVs32_160/Index_GPU_Vector_Symmetry'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   12.6204 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 160x160x160 (4096000)
+Date type for 'elements': 'uint64'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running ITestLNX_GSs64_160
+
+Mesh created successfully with 4096000 Hex8 elements and 4173281 nodes!
+........
+Done ITestLNX_GSs64_160
+__________
+
+  TimeResult with properties:
+
+            Name: 'ITestLNX_GSs64_160/Index_GPU_Scalar_Symmetry'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   2.1144 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 160x160x160 (4096000)
+Date type for 'elements': 'uint64'
+Date type for 'nodes': 'single'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running ITestLNX_GVs64_160
+
+Mesh created successfully with 4096000 Hex8 elements and 4173281 nodes!
+
+================================================================================
+Error occurred in ITestLNX_GVs64_160/Index_GPU_Vector_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the
+    GPU, use 'gpuDevice()'. If the problem persists, reset the GPU by calling
+    'gpuDevice(1)'.
+    
+    Error in Index_vpsa (line 54)
+    jK  = zeros(sets.sz*sets.nel, 1, sets.dTE, 'gpuArray');     % Stores column
+    indices (initialized directly on GPU)
+    
+    Error in ITestLNX_GVs64_160 (line 15)
+    [iKd, jKd] = Index_vpsa(elementsGPU, sets);
+================================================================================
+.
+================================================================================
+Error occurred in ITestLNX_GVs64_160/Index_GPU_Vector_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the
+    GPU, use 'gpuDevice()'. If the problem persists, reset the GPU by calling
+    'gpuDevice(1)'.
+    
+    Error in Index_vpsa (line 54)
+    jK  = zeros(sets.sz*sets.nel, 1, sets.dTE, 'gpuArray');     % Stores column
+    indices (initialized directly on GPU)
+    
+    Error in ITestLNX_GVs64_160 (line 15)
+    [iKd, jKd] = Index_vpsa(elementsGPU, sets);
+================================================================================
+.
+================================================================================
+Error occurred in ITestLNX_GVs64_160/Index_GPU_Vector_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the
+    GPU, use 'gpuDevice()'. If the problem persists, reset the GPU by calling
+    'gpuDevice(1)'.
+    
+    Error in Index_vpsa (line 54)
+    jK  = zeros(sets.sz*sets.nel, 1, sets.dTE, 'gpuArray');     % Stores column
+    indices (initialized directly on GPU)
+    
+    Error in ITestLNX_GVs64_160 (line 15)
+    [iKd, jKd] = Index_vpsa(elementsGPU, sets);
+================================================================================
+.
+================================================================================
+Error occurred in ITestLNX_GVs64_160/Index_GPU_Vector_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the
+    GPU, use 'gpuDevice()'. If the problem persists, reset the GPU by calling
+    'gpuDevice(1)'.
+    
+    Error in Index_vpsa (line 54)
+    jK  = zeros(sets.sz*sets.nel, 1, sets.dTE, 'gpuArray');     % Stores column
+    indices (initialized directly on GPU)
+    
+    Error in ITestLNX_GVs64_160 (line 15)
+    [iKd, jKd] = Index_vpsa(elementsGPU, sets);
+================================================================================
+.
+================================================================================
+Error occurred in ITestLNX_GVs64_160/Index_GPU_Vector_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the
+    GPU, use 'gpuDevice()'. If the problem persists, reset the GPU by calling
+    'gpuDevice(1)'.
+    
+    Error in Index_vpsa (line 54)
+    jK  = zeros(sets.sz*sets.nel, 1, sets.dTE, 'gpuArray');     % Stores column
+    indices (initialized directly on GPU)
+    
+    Error in ITestLNX_GVs64_160 (line 15)
+    [iKd, jKd] = Index_vpsa(elementsGPU, sets);
+================================================================================
+.
+================================================================================
+Error occurred in ITestLNX_GVs64_160/Index_GPU_Vector_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the
+    GPU, use 'gpuDevice()'. If the problem persists, reset the GPU by calling
+    'gpuDevice(1)'.
+    
+    Error in Index_vpsa (line 54)
+    jK  = zeros(sets.sz*sets.nel, 1, sets.dTE, 'gpuArray');     % Stores column
+    indices (initialized directly on GPU)
+    
+    Error in ITestLNX_GVs64_160 (line 15)
+    [iKd, jKd] = Index_vpsa(elementsGPU, sets);
+================================================================================
+.
+================================================================================
+Error occurred in ITestLNX_GVs64_160/Index_GPU_Vector_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the
+    GPU, use 'gpuDevice()'. If the problem persists, reset the GPU by calling
+    'gpuDevice(1)'.
+    
+    Error in Index_vpsa (line 54)
+    jK  = zeros(sets.sz*sets.nel, 1, sets.dTE, 'gpuArray');     % Stores column
+    indices (initialized directly on GPU)
+    
+    Error in ITestLNX_GVs64_160 (line 15)
+    [iKd, jKd] = Index_vpsa(elementsGPU, sets);
+================================================================================
+.
+================================================================================
+Error occurred in ITestLNX_GVs64_160/Index_GPU_Vector_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the
+    GPU, use 'gpuDevice()'. If the problem persists, reset the GPU by calling
+    'gpuDevice(1)'.
+    
+    Error in Index_vpsa (line 54)
+    jK  = zeros(sets.sz*sets.nel, 1, sets.dTE, 'gpuArray');     % Stores column
+    indices (initialized directly on GPU)
+    
+    Error in ITestLNX_GVs64_160 (line 15)
+    [iKd, jKd] = Index_vpsa(elementsGPU, sets);
+================================================================================
+.
+Done ITestLNX_GVs64_160
+__________
+
+Failure Summary:
+
+     Name                                          Failed  Incomplete  Reason(s)
+    =============================================================================
+     ITestLNX_GVs64_160/Index_GPU_Vector_Symmetry    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'ITestLNX_GVs64_160/Index_GPU_Vector_Symmetry'
+           Valid: 0
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   2.5341 seconds testing time.
+
+
+
+A total of 20 time experiments was executed!
+Date and time at the beginning of the process: 	15-Feb-2020 19:02:47 
+Date and time at the end of the process: 	15-Feb-2020 19:04:10
+
+
+ans =
+
+  20x7 table
+
+                        Name                        SampleSize      Mean       StandardDeviation      Min        Median        Max   
+    ____________________________________________    __________    _________    _________________    ________    _________    ________
+
+    ITestLNX_GSs32_10/Index_GPU_Scalar_Symmetry          4         0.006872       0.00024156        0.006644    0.0068535    0.007137
+    ITestLNX_GVs32_10/Index_GPU_Vector_Symmetry          4         0.007758       5.6862e-05        0.007675     0.007778    0.007801
+    ITestLNX_GSs64_10/Index_GPU_Scalar_Symmetry         27        0.0084579        0.0012657        0.007005     0.008082    0.011315
+    ITestLNX_GVs64_10/Index_GPU_Vector_Symmetry         40         0.010213        0.0019093        0.007686    0.0092995    0.013577
+    ITestLNX_GSs32_20/Index_GPU_Scalar_Symmetry         96        0.0084053        0.0024539        0.006233    0.0075195    0.022659
+    ITestLNX_GVs32_20/Index_GPU_Vector_Symmetry         39        0.0092113        0.0017017        0.007281      0.00824    0.013178
+    ITestLNX_GSs64_20/Index_GPU_Scalar_Symmetry         62        0.0089979        0.0021136        0.006292     0.008289    0.014181
+    ITestLNX_GVs64_20/Index_GPU_Vector_Symmetry         61        0.0086409        0.0020132        0.006468     0.007662    0.018131
+    ITestLNX_GSs32_40/Index_GPU_Scalar_Symmetry         62          0.01003        0.0023447        0.006566     0.010346    0.017576
+    ITestLNX_GVs32_40/Index_GPU_Vector_Symmetry          7         0.023691        0.0015543        0.022361     0.022831    0.026384
+    ITestLNX_GSs64_40/Index_GPU_Scalar_Symmetry          4        0.0090565       0.00028645        0.008717       0.0091    0.009309
+    ITestLNX_GVs64_40/Index_GPU_Vector_Symmetry          4         0.026102       0.00029003        0.025832     0.026062    0.026451
+    ITestLNX_GSs32_80/Index_GPU_Scalar_Symmetry          4         0.019198       0.00045879        0.018626     0.019253    0.019659
+    ITestLNX_GVs32_80/Index_GPU_Vector_Symmetry          4          0.16861        0.0013055         0.16722      0.16843     0.17037
+    ITestLNX_GSs64_80/Index_GPU_Scalar_Symmetry          4         0.024427       0.00069479        0.024019     0.024112    0.025465
+    ITestLNX_GVs64_80/Index_GPU_Vector_Symmetry          4          0.17236         0.001298          0.1713      0.17198      0.1742
+    ITestLNX_GSs32_160/Index_GPU_Scalar_Symmetry         4         0.099268       0.00036404        0.098894      0.09924    0.099699
+    ITestLNX_GVs32_160/Index_GPU_Vector_Symmetry         4           1.5253        0.0030576          1.5228       1.5244      1.5296
+    ITestLNX_GSs64_160/Index_GPU_Scalar_Symmetry         4          0.13768       0.00037316         0.13721      0.13769     0.13812
+    ITestLNX_GVs64_160/Index_GPU_Vector_Symmetry         4              NaN              NaN             NaN          NaN         NaN
+

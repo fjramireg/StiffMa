@@ -1,0 +1,208 @@
+[Warning: Directory already exists.] 
+[> In runAssemblyTest (line 28)] 
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 95x95x95 (857375)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running ATestLNX_G_Vd32_95
+	Mesh created successfully with 857375 Hex8 elements and 884736 nodes!
+
+.........
+Done ATestLNX_G_Vd32_95
+__________
+
+  TimeResult with properties:
+
+            Name: 'ATestLNX_G_Vd32_95/Assembly_GPU_Vector_Symmetry'
+           Valid: 1
+         Samples: [5x7 table]
+    TestActivity: [9x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   5.8819 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 96x96x96 (884736)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running ATestLNX_G_Vd32_96
+	Mesh created successfully with 884736 Hex8 elements and 912673 nodes!
+
+.
+Done ATestLNX_G_Vd32_96
+__________
+
+  TimeResult with properties:
+
+            Name: 'ATestLNX_G_Vd32_96/Assembly_GPU_Vector_Symmetry'
+           Valid: 1
+         Samples: [1x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   1.7139 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 97x97x97 (912673)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running ATestLNX_G_Vd32_97
+	Mesh created successfully with 912673 Hex8 elements and 941192 nodes!
+
+.
+Done ATestLNX_G_Vd32_97
+__________
+
+  TimeResult with properties:
+
+            Name: 'ATestLNX_G_Vd32_97/Assembly_GPU_Vector_Symmetry'
+           Valid: 1
+         Samples: [1x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   1.7594 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 98x98x98 (941192)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running ATestLNX_G_Vd32_98
+	Mesh created successfully with 941192 Hex8 elements and 970299 nodes!
+
+.
+Done ATestLNX_G_Vd32_98
+__________
+
+  TimeResult with properties:
+
+            Name: 'ATestLNX_G_Vd32_98/Assembly_GPU_Vector_Symmetry'
+           Valid: 1
+         Samples: [1x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   1.7585 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 99x99x99 (970299)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running ATestLNX_G_Vd32_99
+	Mesh created successfully with 970299 Hex8 elements and 1000000 nodes!
+
+.
+Done ATestLNX_G_Vd32_99
+__________
+
+  TimeResult with properties:
+
+            Name: 'ATestLNX_G_Vd32_99/Assembly_GPU_Vector_Symmetry'
+           Valid: 1
+         Samples: [1x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   1.7928 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 100x100x100 (1000000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running ATestLNX_G_Vd32_100
+	Mesh created successfully with 1000000 Hex8 elements and 1030301 nodes!
+
+
+================================================================================
+Error occurred in ATestLNX_G_Vd32_100/Assembly_GPU_Vector_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'MATLAB:nomem'
+    --------------
+    Error Details:
+    --------------
+    Out of memory. Type "help memory" for your options.
+    
+    Error in AssemblyStiffMa (line 25)
+        K = accumarray([iK,jK], Ke, [], [], [], 1);
+    
+    Error in ATestLNX_G_Vd32_100 (line 18)
+    K = AssemblyStiffMa(iKd, jKd, Ked, sets.dTE, sets.dTN);
+================================================================================
+.
+Done ATestLNX_G_Vd32_100
+__________
+
+Failure Summary:
+
+     Name                                              Failed  Incomplete  Reason(s)
+    =================================================================================
+     ATestLNX_G_Vd32_100/Assembly_GPU_Vector_Symmetry    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'ATestLNX_G_Vd32_100/Assembly_GPU_Vector_Symmetry'
+           Valid: 0
+         Samples: [1x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   1.1526 seconds testing time.
+
+
+
+A total of 6 time experiments was executed!
+Date and time at the beginning of the process: 	12-May-2020 18:53:38 
+Date and time at the end of the process: 	12-May-2020 18:54:08
+
+
+ans =
+
+  6x7 table
+
+                          Name                          SampleSize     Mean      StandardDeviation      Min      Median       Max  
+    ________________________________________________    __________    _______    _________________    _______    _______    _______
+
+    ATestLNX_G_Vd32_95/Assembly_GPU_Vector_Symmetry         5         0.46751        0.023435         0.43839    0.48055     0.4902
+    ATestLNX_G_Vd32_96/Assembly_GPU_Vector_Symmetry         1          0.7128               0          0.7128     0.7128     0.7128
+    ATestLNX_G_Vd32_97/Assembly_GPU_Vector_Symmetry         1         0.74555               0         0.74555    0.74555    0.74555
+    ATestLNX_G_Vd32_98/Assembly_GPU_Vector_Symmetry         1         0.74072               0         0.74072    0.74072    0.74072
+    ATestLNX_G_Vd32_99/Assembly_GPU_Vector_Symmetry         1         0.72066               0         0.72066    0.72066    0.72066
+    ATestLNX_G_Vd32_100/Assembly_GPU_Vector_Symmetry        1             NaN             NaN             NaN        NaN        NaN
+

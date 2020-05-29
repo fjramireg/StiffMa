@@ -1,0 +1,1170 @@
+[Warning: Directory already exists.] 
+[> In runStiffMaTest2 (line 28)] 
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 160x160x160 (4096000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running StiffMa2_LNX_Sca160
+	Mesh created successfully with 4096000 Hex8 elements and 4173281 nodes!
+
+The global stiffness matrix will be computed with 1 chunk(s).
+Available memory on GPU before computations begin (MB): 16435.839
+Processing the SCALAR problem with 160x160x160 elements
+........
+Done StiffMa2_LNX_Sca160
+__________
+
+  TimeResult with properties:
+
+            Name: 'StiffMa2_LNX_Sca160/StiffMa'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   3.6833 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 170x170x170 (4913000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running StiffMa2_LNX_Sca170
+	Mesh created successfully with 4913000 Hex8 elements and 5000211 nodes!
+
+The global stiffness matrix will be computed with 1 chunk(s).
+Available memory on GPU before computations begin (MB): 16435.839
+Processing the SCALAR problem with 170x170x170 elements
+........
+Done StiffMa2_LNX_Sca170
+__________
+
+  TimeResult with properties:
+
+            Name: 'StiffMa2_LNX_Sca170/StiffMa'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   4.1859 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 180x180x180 (5832000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running StiffMa2_LNX_Sca180
+	Mesh created successfully with 5832000 Hex8 elements and 5929741 nodes!
+
+The global stiffness matrix will be computed with 1 chunk(s).
+Available memory on GPU before computations begin (MB): 16435.839
+Processing the SCALAR problem with 180x180x180 elements
+........
+Done StiffMa2_LNX_Sca180
+__________
+
+  TimeResult with properties:
+
+            Name: 'StiffMa2_LNX_Sca180/StiffMa'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   4.9945 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 190x190x190 (6859000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running StiffMa2_LNX_Sca190
+	Mesh created successfully with 6859000 Hex8 elements and 6967871 nodes!
+
+The global stiffness matrix will be computed with 4 chunk(s).
+Available memory on GPU before computations begin (MB): 16435.839
+Processing the SCALAR problem with 190x190x190 elements
+	 Processing Chunk 1 of 4...
+	 Processing Chunk 2 of 4...
+	 Processing Chunk 3 of 4...
+	 Processing Chunk 4 of 4...
+.	 Processing Chunk 1 of 4...
+	 Processing Chunk 2 of 4...
+	 Processing Chunk 3 of 4...
+	 Processing Chunk 4 of 4...
+.	 Processing Chunk 1 of 4...
+	 Processing Chunk 2 of 4...
+	 Processing Chunk 3 of 4...
+	 Processing Chunk 4 of 4...
+.	 Processing Chunk 1 of 4...
+	 Processing Chunk 2 of 4...
+	 Processing Chunk 3 of 4...
+	 Processing Chunk 4 of 4...
+.	 Processing Chunk 1 of 4...
+	 Processing Chunk 2 of 4...
+	 Processing Chunk 3 of 4...
+	 Processing Chunk 4 of 4...
+.	 Processing Chunk 1 of 4...
+	 Processing Chunk 2 of 4...
+	 Processing Chunk 3 of 4...
+	 Processing Chunk 4 of 4...
+.	 Processing Chunk 1 of 4...
+	 Processing Chunk 2 of 4...
+	 Processing Chunk 3 of 4...
+	 Processing Chunk 4 of 4...
+.	 Processing Chunk 1 of 4...
+	 Processing Chunk 2 of 4...
+	 Processing Chunk 3 of 4...
+	 Processing Chunk 4 of 4...
+.
+Done StiffMa2_LNX_Sca190
+__________
+
+  TimeResult with properties:
+
+            Name: 'StiffMa2_LNX_Sca190/StiffMa'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   9.2701 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 200x200x200 (8000000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running StiffMa2_LNX_Sca200
+	Mesh created successfully with 8000000 Hex8 elements and 8120601 nodes!
+
+The global stiffness matrix will be computed with 4 chunk(s).
+Available memory on GPU before computations begin (MB): 16435.839
+Processing the SCALAR problem with 200x200x200 elements
+	 Processing Chunk 1 of 4...
+	 Processing Chunk 2 of 4...
+	 Processing Chunk 3 of 4...
+	 Processing Chunk 4 of 4...
+.	 Processing Chunk 1 of 4...
+	 Processing Chunk 2 of 4...
+	 Processing Chunk 3 of 4...
+	 Processing Chunk 4 of 4...
+.	 Processing Chunk 1 of 4...
+	 Processing Chunk 2 of 4...
+	 Processing Chunk 3 of 4...
+	 Processing Chunk 4 of 4...
+.	 Processing Chunk 1 of 4...
+	 Processing Chunk 2 of 4...
+	 Processing Chunk 3 of 4...
+	 Processing Chunk 4 of 4...
+.	 Processing Chunk 1 of 4...
+	 Processing Chunk 2 of 4...
+	 Processing Chunk 3 of 4...
+	 Processing Chunk 4 of 4...
+.	 Processing Chunk 1 of 4...
+	 Processing Chunk 2 of 4...
+	 Processing Chunk 3 of 4...
+	 Processing Chunk 4 of 4...
+.	 Processing Chunk 1 of 4...
+	 Processing Chunk 2 of 4...
+	 Processing Chunk 3 of 4...
+	 Processing Chunk 4 of 4...
+.	 Processing Chunk 1 of 4...
+	 Processing Chunk 2 of 4...
+	 Processing Chunk 3 of 4...
+	 Processing Chunk 4 of 4...
+.
+Done StiffMa2_LNX_Sca200
+__________
+
+  TimeResult with properties:
+
+            Name: 'StiffMa2_LNX_Sca200/StiffMa'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   10.7669 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 210x210x210 (9261000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running StiffMa2_LNX_Sca210
+	Mesh created successfully with 9261000 Hex8 elements and 9393931 nodes!
+
+The global stiffness matrix will be computed with 3 chunk(s).
+Available memory on GPU before computations begin (MB): 16435.839
+Processing the SCALAR problem with 210x210x210 elements
+	 Processing Chunk 1 of 3...
+	 Processing Chunk 2 of 3...
+	 Processing Chunk 3 of 3...
+.	 Processing Chunk 1 of 3...
+	 Processing Chunk 2 of 3...
+	 Processing Chunk 3 of 3...
+.	 Processing Chunk 1 of 3...
+	 Processing Chunk 2 of 3...
+	 Processing Chunk 3 of 3...
+.	 Processing Chunk 1 of 3...
+	 Processing Chunk 2 of 3...
+	 Processing Chunk 3 of 3...
+.	 Processing Chunk 1 of 3...
+	 Processing Chunk 2 of 3...
+	 Processing Chunk 3 of 3...
+.	 Processing Chunk 1 of 3...
+	 Processing Chunk 2 of 3...
+	 Processing Chunk 3 of 3...
+.	 Processing Chunk 1 of 3...
+	 Processing Chunk 2 of 3...
+	 Processing Chunk 3 of 3...
+.	 Processing Chunk 1 of 3...
+	 Processing Chunk 2 of 3...
+	 Processing Chunk 3 of 3...
+.
+Done StiffMa2_LNX_Sca210
+__________
+
+  TimeResult with properties:
+
+            Name: 'StiffMa2_LNX_Sca210/StiffMa'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   10.9233 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 220x220x220 (10648000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running StiffMa2_LNX_Sca220
+	Mesh created successfully with 10648000 Hex8 elements and 10793861 nodes!
+
+The global stiffness matrix will be computed with 4 chunk(s).
+Available memory on GPU before computations begin (MB): 16435.839
+Processing the SCALAR problem with 220x220x220 elements
+	 Processing Chunk 1 of 4...
+	 Processing Chunk 2 of 4...
+	 Processing Chunk 3 of 4...
+	 Processing Chunk 4 of 4...
+.	 Processing Chunk 1 of 4...
+	 Processing Chunk 2 of 4...
+	 Processing Chunk 3 of 4...
+	 Processing Chunk 4 of 4...
+.	 Processing Chunk 1 of 4...
+	 Processing Chunk 2 of 4...
+	 Processing Chunk 3 of 4...
+	 Processing Chunk 4 of 4...
+.	 Processing Chunk 1 of 4...
+	 Processing Chunk 2 of 4...
+	 Processing Chunk 3 of 4...
+	 Processing Chunk 4 of 4...
+.	 Processing Chunk 1 of 4...
+	 Processing Chunk 2 of 4...
+	 Processing Chunk 3 of 4...
+	 Processing Chunk 4 of 4...
+.	 Processing Chunk 1 of 4...
+	 Processing Chunk 2 of 4...
+	 Processing Chunk 3 of 4...
+	 Processing Chunk 4 of 4...
+.	 Processing Chunk 1 of 4...
+	 Processing Chunk 2 of 4...
+	 Processing Chunk 3 of 4...
+	 Processing Chunk 4 of 4...
+.	 Processing Chunk 1 of 4...
+	 Processing Chunk 2 of 4...
+	 Processing Chunk 3 of 4...
+	 Processing Chunk 4 of 4...
+.
+Done StiffMa2_LNX_Sca220
+__________
+
+  TimeResult with properties:
+
+            Name: 'StiffMa2_LNX_Sca220/StiffMa'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   14.3569 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 230x230x230 (12167000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running StiffMa2_LNX_Sca230
+	Mesh created successfully with 12167000 Hex8 elements and 12326391 nodes!
+
+The global stiffness matrix will be computed with 4 chunk(s).
+Available memory on GPU before computations begin (MB): 16435.839
+Processing the SCALAR problem with 230x230x230 elements
+	 Processing Chunk 1 of 4...
+	 Processing Chunk 2 of 4...
+	 Processing Chunk 3 of 4...
+	 Processing Chunk 4 of 4...
+.	 Processing Chunk 1 of 4...
+	 Processing Chunk 2 of 4...
+	 Processing Chunk 3 of 4...
+	 Processing Chunk 4 of 4...
+.	 Processing Chunk 1 of 4...
+	 Processing Chunk 2 of 4...
+	 Processing Chunk 3 of 4...
+	 Processing Chunk 4 of 4...
+.	 Processing Chunk 1 of 4...
+	 Processing Chunk 2 of 4...
+	 Processing Chunk 3 of 4...
+	 Processing Chunk 4 of 4...
+.	 Processing Chunk 1 of 4...
+	 Processing Chunk 2 of 4...
+	 Processing Chunk 3 of 4...
+	 Processing Chunk 4 of 4...
+.	 Processing Chunk 1 of 4...
+	 Processing Chunk 2 of 4...
+	 Processing Chunk 3 of 4...
+	 Processing Chunk 4 of 4...
+.	 Processing Chunk 1 of 4...
+	 Processing Chunk 2 of 4...
+	 Processing Chunk 3 of 4...
+	 Processing Chunk 4 of 4...
+.	 Processing Chunk 1 of 4...
+	 Processing Chunk 2 of 4...
+	 Processing Chunk 3 of 4...
+	 Processing Chunk 4 of 4...
+.
+Done StiffMa2_LNX_Sca230
+__________
+
+  TimeResult with properties:
+
+            Name: 'StiffMa2_LNX_Sca230/StiffMa'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   16.3783 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 240x240x240 (13824000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running StiffMa2_LNX_Sca240
+	Mesh created successfully with 13824000 Hex8 elements and 13997521 nodes!
+
+The global stiffness matrix will be computed with 4 chunk(s).
+Available memory on GPU before computations begin (MB): 16435.839
+Processing the SCALAR problem with 240x240x240 elements
+	 Processing Chunk 1 of 4...
+	 Processing Chunk 2 of 4...
+	 Processing Chunk 3 of 4...
+	 Processing Chunk 4 of 4...
+.	 Processing Chunk 1 of 4...
+	 Processing Chunk 2 of 4...
+	 Processing Chunk 3 of 4...
+	 Processing Chunk 4 of 4...
+.	 Processing Chunk 1 of 4...
+	 Processing Chunk 2 of 4...
+	 Processing Chunk 3 of 4...
+	 Processing Chunk 4 of 4...
+.	 Processing Chunk 1 of 4...
+	 Processing Chunk 2 of 4...
+	 Processing Chunk 3 of 4...
+	 Processing Chunk 4 of 4...
+.	 Processing Chunk 1 of 4...
+	 Processing Chunk 2 of 4...
+	 Processing Chunk 3 of 4...
+	 Processing Chunk 4 of 4...
+.	 Processing Chunk 1 of 4...
+	 Processing Chunk 2 of 4...
+	 Processing Chunk 3 of 4...
+	 Processing Chunk 4 of 4...
+.	 Processing Chunk 1 of 4...
+	 Processing Chunk 2 of 4...
+	 Processing Chunk 3 of 4...
+	 Processing Chunk 4 of 4...
+.	 Processing Chunk 1 of 4...
+	 Processing Chunk 2 of 4...
+	 Processing Chunk 3 of 4...
+	 Processing Chunk 4 of 4...
+.
+Done StiffMa2_LNX_Sca240
+__________
+
+  TimeResult with properties:
+
+            Name: 'StiffMa2_LNX_Sca240/StiffMa'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   18.7249 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 250x250x250 (15625000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running StiffMa2_LNX_Sca250
+	Mesh created successfully with 15625000 Hex8 elements and 15813251 nodes!
+
+The global stiffness matrix will be computed with 4 chunk(s).
+Available memory on GPU before computations begin (MB): 16435.839
+Processing the SCALAR problem with 250x250x250 elements
+	 Processing Chunk 1 of 4...
+	 Processing Chunk 2 of 4...
+	 Processing Chunk 3 of 4...
+	 Processing Chunk 4 of 4...
+.	 Processing Chunk 1 of 4...
+	 Processing Chunk 2 of 4...
+	 Processing Chunk 3 of 4...
+	 Processing Chunk 4 of 4...
+.	 Processing Chunk 1 of 4...
+	 Processing Chunk 2 of 4...
+	 Processing Chunk 3 of 4...
+	 Processing Chunk 4 of 4...
+.	 Processing Chunk 1 of 4...
+	 Processing Chunk 2 of 4...
+	 Processing Chunk 3 of 4...
+	 Processing Chunk 4 of 4...
+.	 Processing Chunk 1 of 4...
+	 Processing Chunk 2 of 4...
+	 Processing Chunk 3 of 4...
+	 Processing Chunk 4 of 4...
+.	 Processing Chunk 1 of 4...
+	 Processing Chunk 2 of 4...
+	 Processing Chunk 3 of 4...
+	 Processing Chunk 4 of 4...
+.	 Processing Chunk 1 of 4...
+	 Processing Chunk 2 of 4...
+	 Processing Chunk 3 of 4...
+	 Processing Chunk 4 of 4...
+.	 Processing Chunk 1 of 4...
+	 Processing Chunk 2 of 4...
+	 Processing Chunk 3 of 4...
+	 Processing Chunk 4 of 4...
+.
+Done StiffMa2_LNX_Sca250
+__________
+
+  TimeResult with properties:
+
+            Name: 'StiffMa2_LNX_Sca250/StiffMa'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   21.3729 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 260x260x260 (17576000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running StiffMa2_LNX_Sca260
+	Mesh created successfully with 17576000 Hex8 elements and 17779581 nodes!
+
+The global stiffness matrix will be computed with 4 chunk(s).
+Available memory on GPU before computations begin (MB): 16435.839
+Processing the SCALAR problem with 260x260x260 elements
+	 Processing Chunk 1 of 4...
+
+================================================================================
+Error occurred in StiffMa2_LNX_Sca260/StiffMa and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'MATLAB:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using gpuArray/accumarray
+    Maximum variable size allowed by the program is exceeded.
+    
+    Error in AssemblyStiffMa (line 26)
+        K = accumarray([iK,jK], Ke, [sets.tdofs sets.tdofs], [], [], 1);
+    
+    Error in StiffMa2_LNX_Sca260 (line 72)
+            K = K + AssemblyStiffMa(iKd, jKd, Ked, sets);
+================================================================================
+.	 Processing Chunk 1 of 4...
+
+================================================================================
+Error occurred in StiffMa2_LNX_Sca260/StiffMa and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'MATLAB:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using gpuArray/accumarray
+    Maximum variable size allowed by the program is exceeded.
+    
+    Error in AssemblyStiffMa (line 26)
+        K = accumarray([iK,jK], Ke, [sets.tdofs sets.tdofs], [], [], 1);
+    
+    Error in StiffMa2_LNX_Sca260 (line 72)
+            K = K + AssemblyStiffMa(iKd, jKd, Ked, sets);
+================================================================================
+.	 Processing Chunk 1 of 4...
+
+================================================================================
+Error occurred in StiffMa2_LNX_Sca260/StiffMa and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'MATLAB:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using gpuArray/accumarray
+    Maximum variable size allowed by the program is exceeded.
+    
+    Error in AssemblyStiffMa (line 26)
+        K = accumarray([iK,jK], Ke, [sets.tdofs sets.tdofs], [], [], 1);
+    
+    Error in StiffMa2_LNX_Sca260 (line 72)
+            K = K + AssemblyStiffMa(iKd, jKd, Ked, sets);
+================================================================================
+.	 Processing Chunk 1 of 4...
+
+================================================================================
+Error occurred in StiffMa2_LNX_Sca260/StiffMa and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'MATLAB:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using gpuArray/accumarray
+    Maximum variable size allowed by the program is exceeded.
+    
+    Error in AssemblyStiffMa (line 26)
+        K = accumarray([iK,jK], Ke, [sets.tdofs sets.tdofs], [], [], 1);
+    
+    Error in StiffMa2_LNX_Sca260 (line 72)
+            K = K + AssemblyStiffMa(iKd, jKd, Ked, sets);
+================================================================================
+.	 Processing Chunk 1 of 4...
+
+================================================================================
+Error occurred in StiffMa2_LNX_Sca260/StiffMa and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'MATLAB:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using gpuArray/accumarray
+    Maximum variable size allowed by the program is exceeded.
+    
+    Error in AssemblyStiffMa (line 26)
+        K = accumarray([iK,jK], Ke, [sets.tdofs sets.tdofs], [], [], 1);
+    
+    Error in StiffMa2_LNX_Sca260 (line 72)
+            K = K + AssemblyStiffMa(iKd, jKd, Ked, sets);
+================================================================================
+.	 Processing Chunk 1 of 4...
+
+================================================================================
+Error occurred in StiffMa2_LNX_Sca260/StiffMa and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'MATLAB:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using gpuArray/accumarray
+    Maximum variable size allowed by the program is exceeded.
+    
+    Error in AssemblyStiffMa (line 26)
+        K = accumarray([iK,jK], Ke, [sets.tdofs sets.tdofs], [], [], 1);
+    
+    Error in StiffMa2_LNX_Sca260 (line 72)
+            K = K + AssemblyStiffMa(iKd, jKd, Ked, sets);
+================================================================================
+.	 Processing Chunk 1 of 4...
+
+================================================================================
+Error occurred in StiffMa2_LNX_Sca260/StiffMa and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'MATLAB:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using gpuArray/accumarray
+    Maximum variable size allowed by the program is exceeded.
+    
+    Error in AssemblyStiffMa (line 26)
+        K = accumarray([iK,jK], Ke, [sets.tdofs sets.tdofs], [], [], 1);
+    
+    Error in StiffMa2_LNX_Sca260 (line 72)
+            K = K + AssemblyStiffMa(iKd, jKd, Ked, sets);
+================================================================================
+.	 Processing Chunk 1 of 4...
+
+================================================================================
+Error occurred in StiffMa2_LNX_Sca260/StiffMa and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'MATLAB:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using gpuArray/accumarray
+    Maximum variable size allowed by the program is exceeded.
+    
+    Error in AssemblyStiffMa (line 26)
+        K = accumarray([iK,jK], Ke, [sets.tdofs sets.tdofs], [], [], 1);
+    
+    Error in StiffMa2_LNX_Sca260 (line 72)
+            K = K + AssemblyStiffMa(iKd, jKd, Ked, sets);
+================================================================================
+.
+Done StiffMa2_LNX_Sca260
+__________
+
+Failure Summary:
+
+     Name                         Failed  Incomplete  Reason(s)
+    ============================================================
+     StiffMa2_LNX_Sca260/StiffMa    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'StiffMa2_LNX_Sca260/StiffMa'
+           Valid: 0
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   3.8499 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 270x270x270 (19683000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running StiffMa2_LNX_Sca270
+	Mesh created successfully with 19683000 Hex8 elements and 19902511 nodes!
+
+The global stiffness matrix will be computed with 5 chunk(s).
+Available memory on GPU before computations begin (MB): 16435.839
+Processing the SCALAR problem with 270x270x270 elements
+	 Processing Chunk 1 of 5...
+
+================================================================================
+Error occurred in StiffMa2_LNX_Sca270/StiffMa and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'MATLAB:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using gpuArray/accumarray
+    Maximum variable size allowed by the program is exceeded.
+    
+    Error in AssemblyStiffMa (line 26)
+        K = accumarray([iK,jK], Ke, [sets.tdofs sets.tdofs], [], [], 1);
+    
+    Error in StiffMa2_LNX_Sca270 (line 72)
+            K = K + AssemblyStiffMa(iKd, jKd, Ked, sets);
+================================================================================
+.	 Processing Chunk 1 of 5...
+
+================================================================================
+Error occurred in StiffMa2_LNX_Sca270/StiffMa and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'MATLAB:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using gpuArray/accumarray
+    Maximum variable size allowed by the program is exceeded.
+    
+    Error in AssemblyStiffMa (line 26)
+        K = accumarray([iK,jK], Ke, [sets.tdofs sets.tdofs], [], [], 1);
+    
+    Error in StiffMa2_LNX_Sca270 (line 72)
+            K = K + AssemblyStiffMa(iKd, jKd, Ked, sets);
+================================================================================
+.	 Processing Chunk 1 of 5...
+
+================================================================================
+Error occurred in StiffMa2_LNX_Sca270/StiffMa and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'MATLAB:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using gpuArray/accumarray
+    Maximum variable size allowed by the program is exceeded.
+    
+    Error in AssemblyStiffMa (line 26)
+        K = accumarray([iK,jK], Ke, [sets.tdofs sets.tdofs], [], [], 1);
+    
+    Error in StiffMa2_LNX_Sca270 (line 72)
+            K = K + AssemblyStiffMa(iKd, jKd, Ked, sets);
+================================================================================
+.	 Processing Chunk 1 of 5...
+
+================================================================================
+Error occurred in StiffMa2_LNX_Sca270/StiffMa and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'MATLAB:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using gpuArray/accumarray
+    Maximum variable size allowed by the program is exceeded.
+    
+    Error in AssemblyStiffMa (line 26)
+        K = accumarray([iK,jK], Ke, [sets.tdofs sets.tdofs], [], [], 1);
+    
+    Error in StiffMa2_LNX_Sca270 (line 72)
+            K = K + AssemblyStiffMa(iKd, jKd, Ked, sets);
+================================================================================
+.	 Processing Chunk 1 of 5...
+
+================================================================================
+Error occurred in StiffMa2_LNX_Sca270/StiffMa and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'MATLAB:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using gpuArray/accumarray
+    Maximum variable size allowed by the program is exceeded.
+    
+    Error in AssemblyStiffMa (line 26)
+        K = accumarray([iK,jK], Ke, [sets.tdofs sets.tdofs], [], [], 1);
+    
+    Error in StiffMa2_LNX_Sca270 (line 72)
+            K = K + AssemblyStiffMa(iKd, jKd, Ked, sets);
+================================================================================
+.	 Processing Chunk 1 of 5...
+
+================================================================================
+Error occurred in StiffMa2_LNX_Sca270/StiffMa and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'MATLAB:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using gpuArray/accumarray
+    Maximum variable size allowed by the program is exceeded.
+    
+    Error in AssemblyStiffMa (line 26)
+        K = accumarray([iK,jK], Ke, [sets.tdofs sets.tdofs], [], [], 1);
+    
+    Error in StiffMa2_LNX_Sca270 (line 72)
+            K = K + AssemblyStiffMa(iKd, jKd, Ked, sets);
+================================================================================
+.	 Processing Chunk 1 of 5...
+
+================================================================================
+Error occurred in StiffMa2_LNX_Sca270/StiffMa and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'MATLAB:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using gpuArray/accumarray
+    Maximum variable size allowed by the program is exceeded.
+    
+    Error in AssemblyStiffMa (line 26)
+        K = accumarray([iK,jK], Ke, [sets.tdofs sets.tdofs], [], [], 1);
+    
+    Error in StiffMa2_LNX_Sca270 (line 72)
+            K = K + AssemblyStiffMa(iKd, jKd, Ked, sets);
+================================================================================
+.	 Processing Chunk 1 of 5...
+
+================================================================================
+Error occurred in StiffMa2_LNX_Sca270/StiffMa and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'MATLAB:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using gpuArray/accumarray
+    Maximum variable size allowed by the program is exceeded.
+    
+    Error in AssemblyStiffMa (line 26)
+        K = accumarray([iK,jK], Ke, [sets.tdofs sets.tdofs], [], [], 1);
+    
+    Error in StiffMa2_LNX_Sca270 (line 72)
+            K = K + AssemblyStiffMa(iKd, jKd, Ked, sets);
+================================================================================
+.
+Done StiffMa2_LNX_Sca270
+__________
+
+Failure Summary:
+
+     Name                         Failed  Incomplete  Reason(s)
+    ============================================================
+     StiffMa2_LNX_Sca270/StiffMa    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'StiffMa2_LNX_Sca270/StiffMa'
+           Valid: 0
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   4.0312 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 280x280x280 (21952000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running StiffMa2_LNX_Sca280
+	Mesh created successfully with 21952000 Hex8 elements and 22188041 nodes!
+
+
+================================================================================
+Error occurred while setting up or tearing down StiffMa2_LNX_Sca280.
+As a result, all StiffMa2_LNX_Sca280 tests failed and did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    ''
+    --------------
+    Error Details:
+    --------------
+    Error using StiffMa2_LNX_Sca280 (line 45)
+    No enough memory on the GPU to process the mesh.
+================================================================================
+
+Done StiffMa2_LNX_Sca280
+__________
+
+Failure Summary:
+
+     Name                         Failed  Incomplete  Reason(s)
+    ============================================================
+     StiffMa2_LNX_Sca280/StiffMa    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'StiffMa2_LNX_Sca280/StiffMa'
+           Valid: 0
+         Samples: [0x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   3.4724 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 290x290x290 (24389000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running StiffMa2_LNX_Sca290
+	Mesh created successfully with 24389000 Hex8 elements and 24642171 nodes!
+
+
+================================================================================
+Error occurred while setting up or tearing down StiffMa2_LNX_Sca290.
+As a result, all StiffMa2_LNX_Sca290 tests failed and did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    ''
+    --------------
+    Error Details:
+    --------------
+    Error using StiffMa2_LNX_Sca290 (line 45)
+    No enough memory on the GPU to process the mesh.
+================================================================================
+
+Done StiffMa2_LNX_Sca290
+__________
+
+Failure Summary:
+
+     Name                         Failed  Incomplete  Reason(s)
+    ============================================================
+     StiffMa2_LNX_Sca290/StiffMa    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'StiffMa2_LNX_Sca290/StiffMa'
+           Valid: 0
+         Samples: [0x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   3.3202 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 300x300x300 (27000000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running StiffMa2_LNX_Sca300
+	Mesh created successfully with 27000000 Hex8 elements and 27270901 nodes!
+
+
+================================================================================
+Error occurred while setting up or tearing down StiffMa2_LNX_Sca300.
+As a result, all StiffMa2_LNX_Sca300 tests failed and did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    ''
+    --------------
+    Error Details:
+    --------------
+    Error using StiffMa2_LNX_Sca300 (line 45)
+    No enough memory on the GPU to process the mesh.
+================================================================================
+
+Done StiffMa2_LNX_Sca300
+__________
+
+Failure Summary:
+
+     Name                         Failed  Incomplete  Reason(s)
+    ============================================================
+     StiffMa2_LNX_Sca300/StiffMa    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'StiffMa2_LNX_Sca300/StiffMa'
+           Valid: 0
+         Samples: [0x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   3.6664 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 310x310x310 (29791000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running StiffMa2_LNX_Sca310
+	Mesh created successfully with 29791000 Hex8 elements and 30080231 nodes!
+
+
+================================================================================
+Error occurred while setting up or tearing down StiffMa2_LNX_Sca310.
+As a result, all StiffMa2_LNX_Sca310 tests failed and did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    ''
+    --------------
+    Error Details:
+    --------------
+    Error using StiffMa2_LNX_Sca310 (line 45)
+    No enough memory on the GPU to process the mesh.
+================================================================================
+
+Done StiffMa2_LNX_Sca310
+__________
+
+Failure Summary:
+
+     Name                         Failed  Incomplete  Reason(s)
+    ============================================================
+     StiffMa2_LNX_Sca310/StiffMa    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'StiffMa2_LNX_Sca310/StiffMa'
+           Valid: 0
+         Samples: [0x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   3.9553 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 320x320x320 (32768000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running StiffMa2_LNX_Sca320
+	Mesh created successfully with 32768000 Hex8 elements and 33076161 nodes!
+
+
+================================================================================
+Error occurred while setting up or tearing down StiffMa2_LNX_Sca320.
+As a result, all StiffMa2_LNX_Sca320 tests failed and did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    ''
+    --------------
+    Error Details:
+    --------------
+    Error using StiffMa2_LNX_Sca320 (line 45)
+    No enough memory on the GPU to process the mesh.
+================================================================================
+
+Done StiffMa2_LNX_Sca320
+__________
+
+Failure Summary:
+
+     Name                         Failed  Incomplete  Reason(s)
+    ============================================================
+     StiffMa2_LNX_Sca320/StiffMa    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'StiffMa2_LNX_Sca320/StiffMa'
+           Valid: 0
+         Samples: [0x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   4.2228 seconds testing time.
+
+
+
+A total of 17 time experiments was executed!
+Date and time at the beginning of the process: 	22-May-2020 12:42:20 
+Date and time at the end of the process: 	22-May-2020 12:45:11
+
+
+ans =
+
+  17x7 table
+
+               Name                SampleSize     Mean      StandardDeviation      Min      Median       Max  
+    ___________________________    __________    _______    _________________    _______    _______    _______
+
+    StiffMa2_LNX_Sca160/StiffMa        4         0.31275        0.0037587        0.31027    0.31122    0.31827
+    StiffMa2_LNX_Sca170/StiffMa        4         0.37338       0.00094308        0.37271    0.37302    0.37478
+    StiffMa2_LNX_Sca180/StiffMa        4         0.46324         0.012556        0.44461    0.46875    0.47086
+    StiffMa2_LNX_Sca190/StiffMa        4         0.97052         0.001307        0.96899    0.97057    0.97197
+    StiffMa2_LNX_Sca200/StiffMa        4          1.1527        0.0012944         1.1515     1.1525     1.1545
+    StiffMa2_LNX_Sca210/StiffMa        4          1.1404       0.00071253         1.1395     1.1405     1.1411
+    StiffMa2_LNX_Sca220/StiffMa        4           1.545       0.00099733         1.5437      1.545     1.5461
+    StiffMa2_LNX_Sca230/StiffMa        4          1.7705        0.0038774         1.7654     1.7712     1.7744
+    StiffMa2_LNX_Sca240/StiffMa        4          2.0294       0.00066676         2.0288     2.0292     2.0303
+    StiffMa2_LNX_Sca250/StiffMa        4          2.3146          0.01002          2.307     2.3114     2.3286
+    StiffMa2_LNX_Sca260/StiffMa        4             NaN              NaN            NaN        NaN        NaN
+    StiffMa2_LNX_Sca270/StiffMa        4             NaN              NaN            NaN        NaN        NaN
+    StiffMa2_LNX_Sca280/StiffMa        0             NaN              NaN            NaN        NaN        NaN
+    StiffMa2_LNX_Sca290/StiffMa        0             NaN              NaN            NaN        NaN        NaN
+    StiffMa2_LNX_Sca300/StiffMa        0             NaN              NaN            NaN        NaN        NaN
+    StiffMa2_LNX_Sca310/StiffMa        0             NaN              NaN            NaN        NaN        NaN
+    StiffMa2_LNX_Sca320/StiffMa        0             NaN              NaN            NaN        NaN        NaN
+

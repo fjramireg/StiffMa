@@ -1,0 +1,58 @@
+[Warning: Directory already exists.] 
+[> In runIndexTest (line 28)] 
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In parallel.internal.gpu.selectDevice
+  In parallel.gpu/GPUDevice/current (line 44)
+  In gpuDevice (line 23)
+  In runIndexTest (line 35)] 
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 320x320x320 (32768000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Processor type: 'CPU'
+
+Running ITestWIN_CSs32_320
+	Mesh created successfully with 32768000 Hex8 elements and 33076161 nodes!
+
+...
+Done ITestWIN_CSs32_320
+__________
+
+  1x3 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   3 Valid, 0 Invalid.
+   166.0631 seconds testing time.
+
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In runIndexTest (line 115)] 
+
+
+A total of 1 time experiments was executed!
+Date and time at the beginning of the process: 	02-May-2020 07:49:40 
+Date and time at the end of the process: 	02-May-2020 07:52:37
+
+
+ans =
+
+  3x7 table
+
+                         Name                         SampleSize     Mean     StandardDeviation     Min      Median     Max  
+    ______________________________________________    __________    ______    _________________    ______    ______    ______
+
+    ITestWIN_CSs32_320/Index_CPU_Scalar                   1         78.893            0            78.893    78.893    78.893
+    ITestWIN_CSs32_320/Index_CPU_Scalar_Vectorized        1         7.3907            0            7.3907    7.3907    7.3907
+    ITestWIN_CSs32_320/Index_CPU_Scalar_Symmetry          1         77.179            0            77.179    77.179    77.179
+

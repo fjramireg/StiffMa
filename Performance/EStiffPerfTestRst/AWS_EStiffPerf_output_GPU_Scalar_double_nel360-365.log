@@ -1,0 +1,728 @@
+[Warning: Directory already exists.] 
+[> In runEStiffTest (line 28)] 
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 360x360x360 (46656000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running ETestLNX_GSd32_360
+	Mesh created successfully with 46656000 Hex8 elements and 47045881 nodes!
+
+........
+Done ETestLNX_GSd32_360
+__________
+
+  TimeResult with properties:
+
+            Name: 'ETestLNX_GSd32_360/EStiff_GPU_Scalar_Symmetry'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   11.2517 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 361x361x361 (47045881)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running ETestLNX_GSd32_361
+	Mesh created successfully with 47045881 Hex8 elements and 47437928 nodes!
+
+........
+Done ETestLNX_GSd32_361
+__________
+
+  TimeResult with properties:
+
+            Name: 'ETestLNX_GSd32_361/EStiff_GPU_Scalar_Symmetry'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   11.3354 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 362x362x362 (47437928)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running ETestLNX_GSd32_362
+	Mesh created successfully with 47437928 Hex8 elements and 47832147 nodes!
+
+........
+Done ETestLNX_GSd32_362
+__________
+
+  TimeResult with properties:
+
+            Name: 'ETestLNX_GSd32_362/EStiff_GPU_Scalar_Symmetry'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   11.7179 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 363x363x363 (47832147)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running ETestLNX_GSd32_363
+	Mesh created successfully with 47832147 Hex8 elements and 48228544 nodes!
+
+
+================================================================================
+Error occurred in ETestLNX_GSd32_363/EStiff_GPU_Scalar_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the
+    GPU, use 'gpuDevice()'. If the problem persists, reset the GPU by calling
+    'gpuDevice(1)'.
+    
+    Error in eStiff_spsa (line 65)
+    KE = feval(ker, elements, nodes, zeros(sets.sz*sets.nel, 1, sets.dTN,
+    'gpuArray'));
+    
+    Error in ETestLNX_GSd32_363 (line 17)
+    Ke = eStiff_spsa(elementsGPU, nodesGPU, c, sets);
+================================================================================
+.
+================================================================================
+Error occurred in ETestLNX_GSd32_363/EStiff_GPU_Scalar_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the
+    GPU, use 'gpuDevice()'. If the problem persists, reset the GPU by calling
+    'gpuDevice(1)'.
+    
+    Error in eStiff_spsa (line 65)
+    KE = feval(ker, elements, nodes, zeros(sets.sz*sets.nel, 1, sets.dTN,
+    'gpuArray'));
+    
+    Error in ETestLNX_GSd32_363 (line 17)
+    Ke = eStiff_spsa(elementsGPU, nodesGPU, c, sets);
+================================================================================
+.
+================================================================================
+Error occurred in ETestLNX_GSd32_363/EStiff_GPU_Scalar_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the
+    GPU, use 'gpuDevice()'. If the problem persists, reset the GPU by calling
+    'gpuDevice(1)'.
+    
+    Error in eStiff_spsa (line 65)
+    KE = feval(ker, elements, nodes, zeros(sets.sz*sets.nel, 1, sets.dTN,
+    'gpuArray'));
+    
+    Error in ETestLNX_GSd32_363 (line 17)
+    Ke = eStiff_spsa(elementsGPU, nodesGPU, c, sets);
+================================================================================
+.
+================================================================================
+Error occurred in ETestLNX_GSd32_363/EStiff_GPU_Scalar_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the
+    GPU, use 'gpuDevice()'. If the problem persists, reset the GPU by calling
+    'gpuDevice(1)'.
+    
+    Error in eStiff_spsa (line 65)
+    KE = feval(ker, elements, nodes, zeros(sets.sz*sets.nel, 1, sets.dTN,
+    'gpuArray'));
+    
+    Error in ETestLNX_GSd32_363 (line 17)
+    Ke = eStiff_spsa(elementsGPU, nodesGPU, c, sets);
+================================================================================
+.
+================================================================================
+Error occurred in ETestLNX_GSd32_363/EStiff_GPU_Scalar_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the
+    GPU, use 'gpuDevice()'. If the problem persists, reset the GPU by calling
+    'gpuDevice(1)'.
+    
+    Error in eStiff_spsa (line 65)
+    KE = feval(ker, elements, nodes, zeros(sets.sz*sets.nel, 1, sets.dTN,
+    'gpuArray'));
+    
+    Error in ETestLNX_GSd32_363 (line 17)
+    Ke = eStiff_spsa(elementsGPU, nodesGPU, c, sets);
+================================================================================
+.
+================================================================================
+Error occurred in ETestLNX_GSd32_363/EStiff_GPU_Scalar_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the
+    GPU, use 'gpuDevice()'. If the problem persists, reset the GPU by calling
+    'gpuDevice(1)'.
+    
+    Error in eStiff_spsa (line 65)
+    KE = feval(ker, elements, nodes, zeros(sets.sz*sets.nel, 1, sets.dTN,
+    'gpuArray'));
+    
+    Error in ETestLNX_GSd32_363 (line 17)
+    Ke = eStiff_spsa(elementsGPU, nodesGPU, c, sets);
+================================================================================
+.
+================================================================================
+Error occurred in ETestLNX_GSd32_363/EStiff_GPU_Scalar_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the
+    GPU, use 'gpuDevice()'. If the problem persists, reset the GPU by calling
+    'gpuDevice(1)'.
+    
+    Error in eStiff_spsa (line 65)
+    KE = feval(ker, elements, nodes, zeros(sets.sz*sets.nel, 1, sets.dTN,
+    'gpuArray'));
+    
+    Error in ETestLNX_GSd32_363 (line 17)
+    Ke = eStiff_spsa(elementsGPU, nodesGPU, c, sets);
+================================================================================
+.
+================================================================================
+Error occurred in ETestLNX_GSd32_363/EStiff_GPU_Scalar_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the
+    GPU, use 'gpuDevice()'. If the problem persists, reset the GPU by calling
+    'gpuDevice(1)'.
+    
+    Error in eStiff_spsa (line 65)
+    KE = feval(ker, elements, nodes, zeros(sets.sz*sets.nel, 1, sets.dTN,
+    'gpuArray'));
+    
+    Error in ETestLNX_GSd32_363 (line 17)
+    Ke = eStiff_spsa(elementsGPU, nodesGPU, c, sets);
+================================================================================
+.
+Done ETestLNX_GSd32_363
+__________
+
+Failure Summary:
+
+     Name                                           Failed  Incomplete  Reason(s)
+    ==============================================================================
+     ETestLNX_GSd32_363/EStiff_GPU_Scalar_Symmetry    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'ETestLNX_GSd32_363/EStiff_GPU_Scalar_Symmetry'
+           Valid: 0
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   7.5885 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 364x364x364 (48228544)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running ETestLNX_GSd32_364
+	Mesh created successfully with 48228544 Hex8 elements and 48627125 nodes!
+
+
+================================================================================
+Error occurred in ETestLNX_GSd32_364/EStiff_GPU_Scalar_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the
+    GPU, use 'gpuDevice()'. If the problem persists, reset the GPU by calling
+    'gpuDevice(1)'.
+    
+    Error in eStiff_spsa (line 65)
+    KE = feval(ker, elements, nodes, zeros(sets.sz*sets.nel, 1, sets.dTN,
+    'gpuArray'));
+    
+    Error in ETestLNX_GSd32_364 (line 17)
+    Ke = eStiff_spsa(elementsGPU, nodesGPU, c, sets);
+================================================================================
+.
+================================================================================
+Error occurred in ETestLNX_GSd32_364/EStiff_GPU_Scalar_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the
+    GPU, use 'gpuDevice()'. If the problem persists, reset the GPU by calling
+    'gpuDevice(1)'.
+    
+    Error in eStiff_spsa (line 65)
+    KE = feval(ker, elements, nodes, zeros(sets.sz*sets.nel, 1, sets.dTN,
+    'gpuArray'));
+    
+    Error in ETestLNX_GSd32_364 (line 17)
+    Ke = eStiff_spsa(elementsGPU, nodesGPU, c, sets);
+================================================================================
+.
+================================================================================
+Error occurred in ETestLNX_GSd32_364/EStiff_GPU_Scalar_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the
+    GPU, use 'gpuDevice()'. If the problem persists, reset the GPU by calling
+    'gpuDevice(1)'.
+    
+    Error in eStiff_spsa (line 65)
+    KE = feval(ker, elements, nodes, zeros(sets.sz*sets.nel, 1, sets.dTN,
+    'gpuArray'));
+    
+    Error in ETestLNX_GSd32_364 (line 17)
+    Ke = eStiff_spsa(elementsGPU, nodesGPU, c, sets);
+================================================================================
+.
+================================================================================
+Error occurred in ETestLNX_GSd32_364/EStiff_GPU_Scalar_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the
+    GPU, use 'gpuDevice()'. If the problem persists, reset the GPU by calling
+    'gpuDevice(1)'.
+    
+    Error in eStiff_spsa (line 65)
+    KE = feval(ker, elements, nodes, zeros(sets.sz*sets.nel, 1, sets.dTN,
+    'gpuArray'));
+    
+    Error in ETestLNX_GSd32_364 (line 17)
+    Ke = eStiff_spsa(elementsGPU, nodesGPU, c, sets);
+================================================================================
+.
+================================================================================
+Error occurred in ETestLNX_GSd32_364/EStiff_GPU_Scalar_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the
+    GPU, use 'gpuDevice()'. If the problem persists, reset the GPU by calling
+    'gpuDevice(1)'.
+    
+    Error in eStiff_spsa (line 65)
+    KE = feval(ker, elements, nodes, zeros(sets.sz*sets.nel, 1, sets.dTN,
+    'gpuArray'));
+    
+    Error in ETestLNX_GSd32_364 (line 17)
+    Ke = eStiff_spsa(elementsGPU, nodesGPU, c, sets);
+================================================================================
+.
+================================================================================
+Error occurred in ETestLNX_GSd32_364/EStiff_GPU_Scalar_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the
+    GPU, use 'gpuDevice()'. If the problem persists, reset the GPU by calling
+    'gpuDevice(1)'.
+    
+    Error in eStiff_spsa (line 65)
+    KE = feval(ker, elements, nodes, zeros(sets.sz*sets.nel, 1, sets.dTN,
+    'gpuArray'));
+    
+    Error in ETestLNX_GSd32_364 (line 17)
+    Ke = eStiff_spsa(elementsGPU, nodesGPU, c, sets);
+================================================================================
+.
+================================================================================
+Error occurred in ETestLNX_GSd32_364/EStiff_GPU_Scalar_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the
+    GPU, use 'gpuDevice()'. If the problem persists, reset the GPU by calling
+    'gpuDevice(1)'.
+    
+    Error in eStiff_spsa (line 65)
+    KE = feval(ker, elements, nodes, zeros(sets.sz*sets.nel, 1, sets.dTN,
+    'gpuArray'));
+    
+    Error in ETestLNX_GSd32_364 (line 17)
+    Ke = eStiff_spsa(elementsGPU, nodesGPU, c, sets);
+================================================================================
+.
+================================================================================
+Error occurred in ETestLNX_GSd32_364/EStiff_GPU_Scalar_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the
+    GPU, use 'gpuDevice()'. If the problem persists, reset the GPU by calling
+    'gpuDevice(1)'.
+    
+    Error in eStiff_spsa (line 65)
+    KE = feval(ker, elements, nodes, zeros(sets.sz*sets.nel, 1, sets.dTN,
+    'gpuArray'));
+    
+    Error in ETestLNX_GSd32_364 (line 17)
+    Ke = eStiff_spsa(elementsGPU, nodesGPU, c, sets);
+================================================================================
+.
+Done ETestLNX_GSd32_364
+__________
+
+Failure Summary:
+
+     Name                                           Failed  Incomplete  Reason(s)
+    ==============================================================================
+     ETestLNX_GSd32_364/EStiff_GPU_Scalar_Symmetry    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'ETestLNX_GSd32_364/EStiff_GPU_Scalar_Symmetry'
+           Valid: 0
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   7.48 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 365x365x365 (48627125)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running ETestLNX_GSd32_365
+	Mesh created successfully with 48627125 Hex8 elements and 49027896 nodes!
+
+
+================================================================================
+Error occurred in ETestLNX_GSd32_365/EStiff_GPU_Scalar_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the
+    GPU, use 'gpuDevice()'. If the problem persists, reset the GPU by calling
+    'gpuDevice(1)'.
+    
+    Error in eStiff_spsa (line 65)
+    KE = feval(ker, elements, nodes, zeros(sets.sz*sets.nel, 1, sets.dTN,
+    'gpuArray'));
+    
+    Error in ETestLNX_GSd32_365 (line 17)
+    Ke = eStiff_spsa(elementsGPU, nodesGPU, c, sets);
+================================================================================
+.
+================================================================================
+Error occurred in ETestLNX_GSd32_365/EStiff_GPU_Scalar_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the
+    GPU, use 'gpuDevice()'. If the problem persists, reset the GPU by calling
+    'gpuDevice(1)'.
+    
+    Error in eStiff_spsa (line 65)
+    KE = feval(ker, elements, nodes, zeros(sets.sz*sets.nel, 1, sets.dTN,
+    'gpuArray'));
+    
+    Error in ETestLNX_GSd32_365 (line 17)
+    Ke = eStiff_spsa(elementsGPU, nodesGPU, c, sets);
+================================================================================
+.
+================================================================================
+Error occurred in ETestLNX_GSd32_365/EStiff_GPU_Scalar_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the
+    GPU, use 'gpuDevice()'. If the problem persists, reset the GPU by calling
+    'gpuDevice(1)'.
+    
+    Error in eStiff_spsa (line 65)
+    KE = feval(ker, elements, nodes, zeros(sets.sz*sets.nel, 1, sets.dTN,
+    'gpuArray'));
+    
+    Error in ETestLNX_GSd32_365 (line 17)
+    Ke = eStiff_spsa(elementsGPU, nodesGPU, c, sets);
+================================================================================
+.
+================================================================================
+Error occurred in ETestLNX_GSd32_365/EStiff_GPU_Scalar_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the
+    GPU, use 'gpuDevice()'. If the problem persists, reset the GPU by calling
+    'gpuDevice(1)'.
+    
+    Error in eStiff_spsa (line 65)
+    KE = feval(ker, elements, nodes, zeros(sets.sz*sets.nel, 1, sets.dTN,
+    'gpuArray'));
+    
+    Error in ETestLNX_GSd32_365 (line 17)
+    Ke = eStiff_spsa(elementsGPU, nodesGPU, c, sets);
+================================================================================
+.
+================================================================================
+Error occurred in ETestLNX_GSd32_365/EStiff_GPU_Scalar_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the
+    GPU, use 'gpuDevice()'. If the problem persists, reset the GPU by calling
+    'gpuDevice(1)'.
+    
+    Error in eStiff_spsa (line 65)
+    KE = feval(ker, elements, nodes, zeros(sets.sz*sets.nel, 1, sets.dTN,
+    'gpuArray'));
+    
+    Error in ETestLNX_GSd32_365 (line 17)
+    Ke = eStiff_spsa(elementsGPU, nodesGPU, c, sets);
+================================================================================
+.
+================================================================================
+Error occurred in ETestLNX_GSd32_365/EStiff_GPU_Scalar_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the
+    GPU, use 'gpuDevice()'. If the problem persists, reset the GPU by calling
+    'gpuDevice(1)'.
+    
+    Error in eStiff_spsa (line 65)
+    KE = feval(ker, elements, nodes, zeros(sets.sz*sets.nel, 1, sets.dTN,
+    'gpuArray'));
+    
+    Error in ETestLNX_GSd32_365 (line 17)
+    Ke = eStiff_spsa(elementsGPU, nodesGPU, c, sets);
+================================================================================
+.
+================================================================================
+Error occurred in ETestLNX_GSd32_365/EStiff_GPU_Scalar_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the
+    GPU, use 'gpuDevice()'. If the problem persists, reset the GPU by calling
+    'gpuDevice(1)'.
+    
+    Error in eStiff_spsa (line 65)
+    KE = feval(ker, elements, nodes, zeros(sets.sz*sets.nel, 1, sets.dTN,
+    'gpuArray'));
+    
+    Error in ETestLNX_GSd32_365 (line 17)
+    Ke = eStiff_spsa(elementsGPU, nodesGPU, c, sets);
+================================================================================
+.
+================================================================================
+Error occurred in ETestLNX_GSd32_365/EStiff_GPU_Scalar_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the
+    GPU, use 'gpuDevice()'. If the problem persists, reset the GPU by calling
+    'gpuDevice(1)'.
+    
+    Error in eStiff_spsa (line 65)
+    KE = feval(ker, elements, nodes, zeros(sets.sz*sets.nel, 1, sets.dTN,
+    'gpuArray'));
+    
+    Error in ETestLNX_GSd32_365 (line 17)
+    Ke = eStiff_spsa(elementsGPU, nodesGPU, c, sets);
+================================================================================
+.
+Done ETestLNX_GSd32_365
+__________
+
+Failure Summary:
+
+     Name                                           Failed  Incomplete  Reason(s)
+    ==============================================================================
+     ETestLNX_GSd32_365/EStiff_GPU_Scalar_Symmetry    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'ETestLNX_GSd32_365/EStiff_GPU_Scalar_Symmetry'
+           Valid: 0
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   7.619 seconds testing time.
+
+
+
+ A total of 6 time experiments was executed!
+Date and time at the beginning of the process: 	07-May-2020 12:31:08 
+Date and time at the end of the process: 	07-May-2020 12:32:21
+
+
+ans =
+
+  6x7 table
+
+                        Name                         SampleSize     Mean      StandardDeviation      Min      Median       Max  
+    _____________________________________________    __________    _______    _________________    _______    _______    _______
+
+    ETestLNX_GSd32_360/EStiff_GPU_Scalar_Symmetry        4         0.51904        0.0092992        0.50965    0.51968    0.52713
+    ETestLNX_GSd32_361/EStiff_GPU_Scalar_Symmetry        4         0.52508        0.0043057        0.52084    0.52482    0.52985
+    ETestLNX_GSd32_362/EStiff_GPU_Scalar_Symmetry        4         0.55937        0.0011909         0.5584    0.55906    0.56098
+    ETestLNX_GSd32_363/EStiff_GPU_Scalar_Symmetry        4             NaN              NaN            NaN        NaN        NaN
+    ETestLNX_GSd32_364/EStiff_GPU_Scalar_Symmetry        4             NaN              NaN            NaN        NaN        NaN
+    ETestLNX_GSd32_365/EStiff_GPU_Scalar_Symmetry        4             NaN              NaN            NaN        NaN        NaN
+

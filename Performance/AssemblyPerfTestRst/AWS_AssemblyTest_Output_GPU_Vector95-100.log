@@ -1,0 +1,208 @@
+[Warning: Directory already exists.] 
+[> In runAssemblyTest (line 28)] 
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 195x195x195 (7414875)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running ATestLNX_G_Sd32_195
+	Mesh created successfully with 7414875 Hex8 elements and 7529536 nodes!
+
+........
+Done ATestLNX_G_Sd32_195
+__________
+
+  TimeResult with properties:
+
+            Name: 'ATestLNX_G_Sd32_195/Assembly_GPU_Scalar_Symmetry'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   6.1149 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 196x196x196 (7529536)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running ATestLNX_G_Sd32_196
+	Mesh created successfully with 7529536 Hex8 elements and 7645373 nodes!
+
+.
+Done ATestLNX_G_Sd32_196
+__________
+
+  TimeResult with properties:
+
+            Name: 'ATestLNX_G_Sd32_196/Assembly_GPU_Scalar_Symmetry'
+           Valid: 1
+         Samples: [1x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   2.4774 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 197x197x197 (7645373)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running ATestLNX_G_Sd32_197
+	Mesh created successfully with 7645373 Hex8 elements and 7762392 nodes!
+
+.
+Done ATestLNX_G_Sd32_197
+__________
+
+  TimeResult with properties:
+
+            Name: 'ATestLNX_G_Sd32_197/Assembly_GPU_Scalar_Symmetry'
+           Valid: 1
+         Samples: [1x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   2.5531 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 198x198x198 (7762392)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running ATestLNX_G_Sd32_198
+	Mesh created successfully with 7762392 Hex8 elements and 7880599 nodes!
+
+.
+Done ATestLNX_G_Sd32_198
+__________
+
+  TimeResult with properties:
+
+            Name: 'ATestLNX_G_Sd32_198/Assembly_GPU_Scalar_Symmetry'
+           Valid: 1
+         Samples: [1x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   2.515 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 199x199x199 (7880599)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running ATestLNX_G_Sd32_199
+	Mesh created successfully with 7880599 Hex8 elements and 8000000 nodes!
+
+.
+Done ATestLNX_G_Sd32_199
+__________
+
+  TimeResult with properties:
+
+            Name: 'ATestLNX_G_Sd32_199/Assembly_GPU_Scalar_Symmetry'
+           Valid: 1
+         Samples: [1x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   2.5179 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 200x200x200 (8000000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running ATestLNX_G_Sd32_200
+	Mesh created successfully with 8000000 Hex8 elements and 8120601 nodes!
+
+
+================================================================================
+Error occurred in ATestLNX_G_Sd32_200/Assembly_GPU_Scalar_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'MATLAB:nomem'
+    --------------
+    Error Details:
+    --------------
+    Out of memory. Type "help memory" for your options.
+    
+    Error in AssemblyStiffMa (line 25)
+        K = accumarray([iK,jK], Ke, [], [], [], 1);
+    
+    Error in ATestLNX_G_Sd32_200 (line 17)
+    K = AssemblyStiffMa(iKd, jKd, Ked, sets.dTE, sets.dTN);
+================================================================================
+.
+Done ATestLNX_G_Sd32_200
+__________
+
+Failure Summary:
+
+     Name                                              Failed  Incomplete  Reason(s)
+    =================================================================================
+     ATestLNX_G_Sd32_200/Assembly_GPU_Scalar_Symmetry    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'ATestLNX_G_Sd32_200/Assembly_GPU_Scalar_Symmetry'
+           Valid: 0
+         Samples: [1x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   1.8667 seconds testing time.
+
+
+
+A total of 6 time experiments was executed!
+Date and time at the beginning of the process: 	12-May-2020 18:47:05 
+Date and time at the end of the process: 	12-May-2020 18:47:38
+
+
+ans =
+
+  6x7 table
+
+                          Name                          SampleSize     Mean      StandardDeviation      Min      Median       Max  
+    ________________________________________________    __________    _______    _________________    _______    _______    _______
+
+    ATestLNX_G_Sd32_195/Assembly_GPU_Scalar_Symmetry        4         0.48707        0.006488         0.48019     0.4867    0.49471
+    ATestLNX_G_Sd32_196/Assembly_GPU_Scalar_Symmetry        1          0.7344               0          0.7344     0.7344     0.7344
+    ATestLNX_G_Sd32_197/Assembly_GPU_Scalar_Symmetry        1         0.73199               0         0.73199    0.73199    0.73199
+    ATestLNX_G_Sd32_198/Assembly_GPU_Scalar_Symmetry        1         0.72535               0         0.72535    0.72535    0.72535
+    ATestLNX_G_Sd32_199/Assembly_GPU_Scalar_Symmetry        1         0.71037               0         0.71037    0.71037    0.71037
+    ATestLNX_G_Sd32_200/Assembly_GPU_Scalar_Symmetry        1             NaN             NaN             NaN        NaN        NaN
+

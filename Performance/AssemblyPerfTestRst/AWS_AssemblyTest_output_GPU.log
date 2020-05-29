@@ -1,0 +1,454 @@
+[Warning: Directory already exists.] 
+[> In runAssemblyTest (line 28)] 
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 10x10x10 (1000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+
+Running ATestLNX_G_Sd32_10
+	Mesh created successfully with 1000 Hex8 elements and 1331 nodes!
+
+........
+================================================================================
+ATestLNX_G_Sd32_10/Assembly_GPU_Scalar_Symmetry was filtered.
+    Test Diagnostic: The MeasuredTime should not be too close to the precision of the framework.
+================================================================================
+
+Done ATestLNX_G_Sd32_10
+__________
+
+Failure Summary:
+
+     Name                                             Failed  Incomplete  Reason(s)
+    ==============================================================================================
+     ATestLNX_G_Sd32_10/Assembly_GPU_Scalar_Symmetry              X       Filtered by assumption.
+  TimeResult with properties:
+
+            Name: 'ATestLNX_G_Sd32_10/Assembly_GPU_Scalar_Symmetry'
+           Valid: 0
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   1.379 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 10x10x10 (1000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+
+Running ATestLNX_G_Vd32_10
+	Mesh created successfully with 1000 Hex8 elements and 1331 nodes!
+
+........
+================================================================================
+ATestLNX_G_Vd32_10/Assembly_GPU_Vector_Symmetry was filtered.
+    Test Diagnostic: The MeasuredTime should not be too close to the precision of the framework.
+================================================================================
+
+Done ATestLNX_G_Vd32_10
+__________
+
+Failure Summary:
+
+     Name                                             Failed  Incomplete  Reason(s)
+    ==============================================================================================
+     ATestLNX_G_Vd32_10/Assembly_GPU_Vector_Symmetry              X       Filtered by assumption.
+  TimeResult with properties:
+
+            Name: 'ATestLNX_G_Vd32_10/Assembly_GPU_Vector_Symmetry'
+           Valid: 0
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   0.68217 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 20x20x20 (8000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+
+Running ATestLNX_G_Sd32_20
+	Mesh created successfully with 8000 Hex8 elements and 9261 nodes!
+
+........
+================================================================================
+ATestLNX_G_Sd32_20/Assembly_GPU_Scalar_Symmetry was filtered.
+    Test Diagnostic: The MeasuredTime should not be too close to the precision of the framework.
+================================================================================
+
+Done ATestLNX_G_Sd32_20
+__________
+
+Failure Summary:
+
+     Name                                             Failed  Incomplete  Reason(s)
+    ==============================================================================================
+     ATestLNX_G_Sd32_20/Assembly_GPU_Scalar_Symmetry              X       Filtered by assumption.
+  TimeResult with properties:
+
+            Name: 'ATestLNX_G_Sd32_20/Assembly_GPU_Scalar_Symmetry'
+           Valid: 0
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   0.48844 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 20x20x20 (8000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+
+Running ATestLNX_G_Vd32_20
+	Mesh created successfully with 8000 Hex8 elements and 9261 nodes!
+
+........
+Done ATestLNX_G_Vd32_20
+__________
+
+  TimeResult with properties:
+
+            Name: 'ATestLNX_G_Vd32_20/Assembly_GPU_Vector_Symmetry'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   0.51092 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 40x40x40 (64000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+
+Running ATestLNX_G_Sd32_40
+	Mesh created successfully with 64000 Hex8 elements and 68921 nodes!
+
+.........
+Done ATestLNX_G_Sd32_40
+__________
+
+  TimeResult with properties:
+
+            Name: 'ATestLNX_G_Sd32_40/Assembly_GPU_Scalar_Symmetry'
+           Valid: 1
+         Samples: [5x7 table]
+    TestActivity: [9x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   0.46677 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 40x40x40 (64000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+
+Running ATestLNX_G_Vd32_40
+	Mesh created successfully with 64000 Hex8 elements and 68921 nodes!
+
+........
+Done ATestLNX_G_Vd32_40
+__________
+
+  TimeResult with properties:
+
+            Name: 'ATestLNX_G_Vd32_40/Assembly_GPU_Vector_Symmetry'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   0.69262 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 80x80x80 (512000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+
+Running ATestLNX_G_Sd32_80
+	Mesh created successfully with 512000 Hex8 elements and 531441 nodes!
+
+........
+Done ATestLNX_G_Sd32_80
+__________
+
+  TimeResult with properties:
+
+            Name: 'ATestLNX_G_Sd32_80/Assembly_GPU_Scalar_Symmetry'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   0.68467 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 80x80x80 (512000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+
+Running ATestLNX_G_Vd32_80
+	Mesh created successfully with 512000 Hex8 elements and 531441 nodes!
+
+........
+Done ATestLNX_G_Vd32_80
+__________
+
+  TimeResult with properties:
+
+            Name: 'ATestLNX_G_Vd32_80/Assembly_GPU_Vector_Symmetry'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   2.5203 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 160x160x160 (4096000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+
+Running ATestLNX_G_Sd32_160
+	Mesh created successfully with 4096000 Hex8 elements and 4173281 nodes!
+
+........
+Done ATestLNX_G_Sd32_160
+__________
+
+  TimeResult with properties:
+
+            Name: 'ATestLNX_G_Sd32_160/Assembly_GPU_Scalar_Symmetry'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   2.7391 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 160x160x160 (4096000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+
+Running ATestLNX_G_Vd32_160
+	Mesh created successfully with 4096000 Hex8 elements and 4173281 nodes!
+
+
+================================================================================
+Error occurred while setting up or tearing down ATestLNX_G_Vd32_160.
+As a result, all ATestLNX_G_Vd32_160 tests failed and did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the
+    GPU, use 'gpuDevice()'. If the problem persists, reset the GPU by calling
+    'gpuDevice(1)'.
+    
+    Error in eStiff_vpsa (line 56)
+    Ke = feval(kernel, elements, nodes, zeros(sets.sz*sets.nel, 1, sets.dTN,
+    'gpuArray'));% GPU code execution
+    
+    Error in ATestLNX_G_Vd32_160 (line 15)
+    Ked = eStiff_vpsa(gpuArray(Mesh.elements'), gpuArray(Mesh.nodes'), MP,
+    sets);
+================================================================================
+
+Done ATestLNX_G_Vd32_160
+__________
+
+Failure Summary:
+
+     Name                                              Failed  Incomplete  Reason(s)
+    =================================================================================
+     ATestLNX_G_Vd32_160/Assembly_GPU_Vector_Symmetry    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'ATestLNX_G_Vd32_160/Assembly_GPU_Vector_Symmetry'
+           Valid: 0
+         Samples: [0x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   2.1565 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 320x320x320 (32768000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+
+Running ATestLNX_G_Sd32_320
+	Mesh created successfully with 32768000 Hex8 elements and 33076161 nodes!
+
+
+================================================================================
+Error occurred while setting up or tearing down ATestLNX_G_Sd32_320.
+As a result, all ATestLNX_G_Sd32_320 tests failed and did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the
+    GPU, use 'gpuDevice()'. If the problem persists, reset the GPU by calling
+    'gpuDevice(1)'.
+    
+    Error in eStiff_spsa (line 65)
+    KE = feval(ker, elements, nodes, zeros(sets.sz*sets.nel, 1, sets.dTN,
+    'gpuArray'));
+    
+    Error in ATestLNX_G_Sd32_320 (line 14)
+    Ked = eStiff_spsa(gpuArray(Mesh.elements'), gpuArray(Mesh.nodes'), c, sets);
+================================================================================
+
+Done ATestLNX_G_Sd32_320
+__________
+
+Failure Summary:
+
+     Name                                              Failed  Incomplete  Reason(s)
+    =================================================================================
+     ATestLNX_G_Sd32_320/Assembly_GPU_Scalar_Symmetry    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'ATestLNX_G_Sd32_320/Assembly_GPU_Scalar_Symmetry'
+           Valid: 0
+         Samples: [0x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   7.2416 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 320x320x320 (32768000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+
+Running ATestLNX_G_Vd32_320
+	Mesh created successfully with 32768000 Hex8 elements and 33076161 nodes!
+
+
+================================================================================
+Error occurred while setting up or tearing down ATestLNX_G_Vd32_320.
+As a result, all ATestLNX_G_Vd32_320 tests failed and did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in Index_vpsa (line 53)
+    iK  = zeros(sets.sz*sets.nel, 1, sets.dTE, 'gpuArray');     % Stores row
+    indices (initialized directly on GPU)
+    
+    Error in ATestLNX_G_Vd32_320 (line 14)
+    [iKd, jKd] = Index_vpsa(gpuArray(Mesh.elements'), sets);
+================================================================================
+
+Done ATestLNX_G_Vd32_320
+__________
+
+Failure Summary:
+
+     Name                                              Failed  Incomplete  Reason(s)
+    =================================================================================
+     ATestLNX_G_Vd32_320/Assembly_GPU_Vector_Symmetry    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'ATestLNX_G_Vd32_320/Assembly_GPU_Vector_Symmetry'
+           Valid: 0
+         Samples: [0x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   4.7555 seconds testing time.
+
+
+
+A total of 12 time experiments was executed!
+Date and time at the beginning of the process: 	10-May-2020 13:45:50 
+Date and time at the end of the process: 	10-May-2020 13:46:39
+
+
+ans =
+
+  12x7 table
+
+                          Name                          SampleSize      Mean       StandardDeviation      Min        Median       Max   
+    ________________________________________________    __________    _________    _________________    ________    ________    ________
+
+    ATestLNX_G_Sd32_10/Assembly_GPU_Scalar_Symmetry         4         0.0017185       0.00063911        0.001349    0.001425    0.002675
+    ATestLNX_G_Vd32_10/Assembly_GPU_Vector_Symmetry         4         0.0016953       0.00012931        0.001582     0.00167    0.001859
+    ATestLNX_G_Sd32_20/Assembly_GPU_Scalar_Symmetry         4         0.0016187       0.00034632        0.001437     0.00145    0.002138
+    ATestLNX_G_Vd32_20/Assembly_GPU_Vector_Symmetry         4         0.0029693       8.6569e-05        0.002888     0.00295    0.003089
+    ATestLNX_G_Sd32_40/Assembly_GPU_Scalar_Symmetry         5         0.0034622       0.00013935        0.003386    0.003405    0.003711
+    ATestLNX_G_Vd32_40/Assembly_GPU_Vector_Symmetry         4           0.02266       0.00014402        0.022564    0.022602     0.02287
+    ATestLNX_G_Sd32_80/Assembly_GPU_Scalar_Symmetry         4          0.022325       0.00038037        0.022118    0.022143    0.022895
+    ATestLNX_G_Vd32_80/Assembly_GPU_Vector_Symmetry         4           0.19174       0.00084631         0.19078     0.19168     0.19284
+    ATestLNX_G_Sd32_160/Assembly_GPU_Scalar_Symmetry        4           0.18279       0.00057863         0.18212     0.18278     0.18349
+    ATestLNX_G_Vd32_160/Assembly_GPU_Vector_Symmetry        0               NaN              NaN             NaN         NaN         NaN
+    ATestLNX_G_Sd32_320/Assembly_GPU_Scalar_Symmetry        0               NaN              NaN             NaN         NaN         NaN
+    ATestLNX_G_Vd32_320/Assembly_GPU_Vector_Symmetry        0               NaN              NaN             NaN         NaN         NaN
+

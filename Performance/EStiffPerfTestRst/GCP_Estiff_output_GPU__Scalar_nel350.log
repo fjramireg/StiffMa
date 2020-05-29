@@ -1,0 +1,73 @@
+[Warning: Directory already exists.] 
+[> In runEStiffTest (line 28)] 
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 350x350x350 (42875000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running ETestLNX_GSs32_350
+
+Mesh created successfully with 42875000 Hex8 elements and 43243551 nodes!
+.......... ..
+Done ETestLNX_GSs32_350
+__________
+
+  TimeResult with properties:
+
+            Name: 'ETestLNX_GSs32_350/EStiff_GPU_Scalar_Symmetry'
+           Valid: 1
+         Samples: [8x7 table]
+    TestActivity: [12x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   9.337 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 350x350x350 (42875000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running ETestLNX_GSd32_350
+
+Mesh created successfully with 42875000 Hex8 elements and 43243551 nodes!
+........
+Done ETestLNX_GSd32_350
+__________
+
+  TimeResult with properties:
+
+            Name: 'ETestLNX_GSd32_350/EStiff_GPU_Scalar_Symmetry'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   12.8044 seconds testing time.
+
+
+
+ A total of 2 time experiments was executed!
+Date and time at the beginning of the process: 	18-Feb-2020 15:20:56 
+Date and time at the end of the process: 	18-Feb-2020 15:21:29
+
+
+ans =
+
+  2x7 table
+
+                        Name                         SampleSize     Mean      StandardDeviation      Min      Median       Max  
+    _____________________________________________    __________    _______    _________________    _______    _______    _______
+
+    ETestLNX_GSs32_350/EStiff_GPU_Scalar_Symmetry        8         0.11223        0.007624         0.10443    0.11005    0.12988
+    ETestLNX_GSd32_350/EStiff_GPU_Scalar_Symmetry        4         0.46591        0.010718         0.45006    0.46992    0.47373
+

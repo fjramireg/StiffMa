@@ -1,0 +1,1188 @@
+[Warning: Directory already exists.] 
+[> In runStiffMaTest2 (line 28)] 
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 250x250x250 (15625000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running StiffMa2_LNX_Sca250
+	Mesh created successfully with 15625000 Hex8 elements and 15813251 nodes!
+
+The global stiffness matrix will be computed with 20 chunk(s).
+Available memory on GPU before computations begin (MB): 16435.839
+Processing the SCALAR problem with 250x250x250 elements
+	 Processing Chunk 1 of 20...
+	 Processing Chunk 2 of 20...
+	 Processing Chunk 3 of 20...
+	 Processing Chunk 4 of 20...
+	 Processing Chunk 5 of 20...
+	 Processing Chunk 6 of 20...
+	 Processing Chunk 7 of 20...
+	 Processing Chunk 8 of 20...
+	 Processing Chunk 9 of 20...
+	 Processing Chunk 10 of 20...
+	 Processing Chunk 11 of 20...
+	 Processing Chunk 12 of 20...
+	 Processing Chunk 13 of 20...
+	 Processing Chunk 14 of 20...
+	 Processing Chunk 15 of 20...
+	 Processing Chunk 16 of 20...
+	 Processing Chunk 17 of 20...
+	 Processing Chunk 18 of 20...
+	 Processing Chunk 19 of 20...
+	 Processing Chunk 20 of 20...
+.	 Processing Chunk 1 of 20...
+	 Processing Chunk 2 of 20...
+	 Processing Chunk 3 of 20...
+	 Processing Chunk 4 of 20...
+	 Processing Chunk 5 of 20...
+	 Processing Chunk 6 of 20...
+	 Processing Chunk 7 of 20...
+	 Processing Chunk 8 of 20...
+	 Processing Chunk 9 of 20...
+	 Processing Chunk 10 of 20...
+	 Processing Chunk 11 of 20...
+	 Processing Chunk 12 of 20...
+	 Processing Chunk 13 of 20...
+	 Processing Chunk 14 of 20...
+	 Processing Chunk 15 of 20...
+	 Processing Chunk 16 of 20...
+	 Processing Chunk 17 of 20...
+	 Processing Chunk 18 of 20...
+	 Processing Chunk 19 of 20...
+	 Processing Chunk 20 of 20...
+.	 Processing Chunk 1 of 20...
+	 Processing Chunk 2 of 20...
+	 Processing Chunk 3 of 20...
+	 Processing Chunk 4 of 20...
+	 Processing Chunk 5 of 20...
+	 Processing Chunk 6 of 20...
+	 Processing Chunk 7 of 20...
+	 Processing Chunk 8 of 20...
+	 Processing Chunk 9 of 20...
+	 Processing Chunk 10 of 20...
+	 Processing Chunk 11 of 20...
+	 Processing Chunk 12 of 20...
+	 Processing Chunk 13 of 20...
+	 Processing Chunk 14 of 20...
+	 Processing Chunk 15 of 20...
+	 Processing Chunk 16 of 20...
+	 Processing Chunk 17 of 20...
+	 Processing Chunk 18 of 20...
+	 Processing Chunk 19 of 20...
+	 Processing Chunk 20 of 20...
+.	 Processing Chunk 1 of 20...
+	 Processing Chunk 2 of 20...
+	 Processing Chunk 3 of 20...
+	 Processing Chunk 4 of 20...
+	 Processing Chunk 5 of 20...
+	 Processing Chunk 6 of 20...
+	 Processing Chunk 7 of 20...
+	 Processing Chunk 8 of 20...
+	 Processing Chunk 9 of 20...
+	 Processing Chunk 10 of 20...
+	 Processing Chunk 11 of 20...
+	 Processing Chunk 12 of 20...
+	 Processing Chunk 13 of 20...
+	 Processing Chunk 14 of 20...
+	 Processing Chunk 15 of 20...
+	 Processing Chunk 16 of 20...
+	 Processing Chunk 17 of 20...
+	 Processing Chunk 18 of 20...
+	 Processing Chunk 19 of 20...
+	 Processing Chunk 20 of 20...
+.	 Processing Chunk 1 of 20...
+	 Processing Chunk 2 of 20...
+	 Processing Chunk 3 of 20...
+	 Processing Chunk 4 of 20...
+	 Processing Chunk 5 of 20...
+	 Processing Chunk 6 of 20...
+	 Processing Chunk 7 of 20...
+	 Processing Chunk 8 of 20...
+	 Processing Chunk 9 of 20...
+	 Processing Chunk 10 of 20...
+	 Processing Chunk 11 of 20...
+	 Processing Chunk 12 of 20...
+	 Processing Chunk 13 of 20...
+	 Processing Chunk 14 of 20...
+	 Processing Chunk 15 of 20...
+	 Processing Chunk 16 of 20...
+	 Processing Chunk 17 of 20...
+	 Processing Chunk 18 of 20...
+	 Processing Chunk 19 of 20...
+	 Processing Chunk 20 of 20...
+.	 Processing Chunk 1 of 20...
+	 Processing Chunk 2 of 20...
+	 Processing Chunk 3 of 20...
+	 Processing Chunk 4 of 20...
+	 Processing Chunk 5 of 20...
+	 Processing Chunk 6 of 20...
+	 Processing Chunk 7 of 20...
+	 Processing Chunk 8 of 20...
+	 Processing Chunk 9 of 20...
+	 Processing Chunk 10 of 20...
+	 Processing Chunk 11 of 20...
+	 Processing Chunk 12 of 20...
+	 Processing Chunk 13 of 20...
+	 Processing Chunk 14 of 20...
+	 Processing Chunk 15 of 20...
+	 Processing Chunk 16 of 20...
+	 Processing Chunk 17 of 20...
+	 Processing Chunk 18 of 20...
+	 Processing Chunk 19 of 20...
+	 Processing Chunk 20 of 20...
+.	 Processing Chunk 1 of 20...
+	 Processing Chunk 2 of 20...
+	 Processing Chunk 3 of 20...
+	 Processing Chunk 4 of 20...
+	 Processing Chunk 5 of 20...
+	 Processing Chunk 6 of 20...
+	 Processing Chunk 7 of 20...
+	 Processing Chunk 8 of 20...
+	 Processing Chunk 9 of 20...
+	 Processing Chunk 10 of 20...
+	 Processing Chunk 11 of 20...
+	 Processing Chunk 12 of 20...
+	 Processing Chunk 13 of 20...
+	 Processing Chunk 14 of 20...
+	 Processing Chunk 15 of 20...
+	 Processing Chunk 16 of 20...
+	 Processing Chunk 17 of 20...
+	 Processing Chunk 18 of 20...
+	 Processing Chunk 19 of 20...
+	 Processing Chunk 20 of 20...
+.	 Processing Chunk 1 of 20...
+	 Processing Chunk 2 of 20...
+	 Processing Chunk 3 of 20...
+	 Processing Chunk 4 of 20...
+	 Processing Chunk 5 of 20...
+	 Processing Chunk 6 of 20...
+	 Processing Chunk 7 of 20...
+	 Processing Chunk 8 of 20...
+	 Processing Chunk 9 of 20...
+	 Processing Chunk 10 of 20...
+	 Processing Chunk 11 of 20...
+	 Processing Chunk 12 of 20...
+	 Processing Chunk 13 of 20...
+	 Processing Chunk 14 of 20...
+	 Processing Chunk 15 of 20...
+	 Processing Chunk 16 of 20...
+	 Processing Chunk 17 of 20...
+	 Processing Chunk 18 of 20...
+	 Processing Chunk 19 of 20...
+	 Processing Chunk 20 of 20...
+.
+Done StiffMa2_LNX_Sca250
+__________
+
+  TimeResult with properties:
+
+            Name: 'StiffMa2_LNX_Sca250/StiffMa'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   65.9161 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 260x260x260 (17576000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running StiffMa2_LNX_Sca260
+	Mesh created successfully with 17576000 Hex8 elements and 17779581 nodes!
+
+The global stiffness matrix will be computed with 13 chunk(s).
+Available memory on GPU before computations begin (MB): 16435.839
+Processing the SCALAR problem with 260x260x260 elements
+	 Processing Chunk 1 of 13...
+
+================================================================================
+Error occurred in StiffMa2_LNX_Sca260/StiffMa and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'MATLAB:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using gpuArray/accumarray
+    Maximum variable size allowed by the program is exceeded.
+    
+    Error in AssemblyStiffMa (line 26)
+        K = accumarray([iK,jK], Ke, [sets.tdofs sets.tdofs], [], [], 1);
+    
+    Error in StiffMa2_LNX_Sca260 (line 72)
+            K = K + AssemblyStiffMa(iKd, jKd, Ked, sets);
+================================================================================
+.	 Processing Chunk 1 of 13...
+
+================================================================================
+Error occurred in StiffMa2_LNX_Sca260/StiffMa and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'MATLAB:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using gpuArray/accumarray
+    Maximum variable size allowed by the program is exceeded.
+    
+    Error in AssemblyStiffMa (line 26)
+        K = accumarray([iK,jK], Ke, [sets.tdofs sets.tdofs], [], [], 1);
+    
+    Error in StiffMa2_LNX_Sca260 (line 72)
+            K = K + AssemblyStiffMa(iKd, jKd, Ked, sets);
+================================================================================
+.	 Processing Chunk 1 of 13...
+
+================================================================================
+Error occurred in StiffMa2_LNX_Sca260/StiffMa and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'MATLAB:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using gpuArray/accumarray
+    Maximum variable size allowed by the program is exceeded.
+    
+    Error in AssemblyStiffMa (line 26)
+        K = accumarray([iK,jK], Ke, [sets.tdofs sets.tdofs], [], [], 1);
+    
+    Error in StiffMa2_LNX_Sca260 (line 72)
+            K = K + AssemblyStiffMa(iKd, jKd, Ked, sets);
+================================================================================
+.	 Processing Chunk 1 of 13...
+
+================================================================================
+Error occurred in StiffMa2_LNX_Sca260/StiffMa and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'MATLAB:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using gpuArray/accumarray
+    Maximum variable size allowed by the program is exceeded.
+    
+    Error in AssemblyStiffMa (line 26)
+        K = accumarray([iK,jK], Ke, [sets.tdofs sets.tdofs], [], [], 1);
+    
+    Error in StiffMa2_LNX_Sca260 (line 72)
+            K = K + AssemblyStiffMa(iKd, jKd, Ked, sets);
+================================================================================
+.	 Processing Chunk 1 of 13...
+
+================================================================================
+Error occurred in StiffMa2_LNX_Sca260/StiffMa and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'MATLAB:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using gpuArray/accumarray
+    Maximum variable size allowed by the program is exceeded.
+    
+    Error in AssemblyStiffMa (line 26)
+        K = accumarray([iK,jK], Ke, [sets.tdofs sets.tdofs], [], [], 1);
+    
+    Error in StiffMa2_LNX_Sca260 (line 72)
+            K = K + AssemblyStiffMa(iKd, jKd, Ked, sets);
+================================================================================
+.	 Processing Chunk 1 of 13...
+
+================================================================================
+Error occurred in StiffMa2_LNX_Sca260/StiffMa and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'MATLAB:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using gpuArray/accumarray
+    Maximum variable size allowed by the program is exceeded.
+    
+    Error in AssemblyStiffMa (line 26)
+        K = accumarray([iK,jK], Ke, [sets.tdofs sets.tdofs], [], [], 1);
+    
+    Error in StiffMa2_LNX_Sca260 (line 72)
+            K = K + AssemblyStiffMa(iKd, jKd, Ked, sets);
+================================================================================
+.	 Processing Chunk 1 of 13...
+
+================================================================================
+Error occurred in StiffMa2_LNX_Sca260/StiffMa and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'MATLAB:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using gpuArray/accumarray
+    Maximum variable size allowed by the program is exceeded.
+    
+    Error in AssemblyStiffMa (line 26)
+        K = accumarray([iK,jK], Ke, [sets.tdofs sets.tdofs], [], [], 1);
+    
+    Error in StiffMa2_LNX_Sca260 (line 72)
+            K = K + AssemblyStiffMa(iKd, jKd, Ked, sets);
+================================================================================
+.	 Processing Chunk 1 of 13...
+
+================================================================================
+Error occurred in StiffMa2_LNX_Sca260/StiffMa and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'MATLAB:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using gpuArray/accumarray
+    Maximum variable size allowed by the program is exceeded.
+    
+    Error in AssemblyStiffMa (line 26)
+        K = accumarray([iK,jK], Ke, [sets.tdofs sets.tdofs], [], [], 1);
+    
+    Error in StiffMa2_LNX_Sca260 (line 72)
+            K = K + AssemblyStiffMa(iKd, jKd, Ked, sets);
+================================================================================
+.
+Done StiffMa2_LNX_Sca260
+__________
+
+Failure Summary:
+
+     Name                         Failed  Incomplete  Reason(s)
+    ============================================================
+     StiffMa2_LNX_Sca260/StiffMa    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'StiffMa2_LNX_Sca260/StiffMa'
+           Valid: 0
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   3.3031 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 270x270x270 (19683000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running StiffMa2_LNX_Sca270
+	Mesh created successfully with 19683000 Hex8 elements and 19902511 nodes!
+
+The global stiffness matrix will be computed with 15 chunk(s).
+Available memory on GPU before computations begin (MB): 16435.839
+Processing the SCALAR problem with 270x270x270 elements
+	 Processing Chunk 1 of 15...
+
+================================================================================
+Error occurred in StiffMa2_LNX_Sca270/StiffMa and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'MATLAB:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using gpuArray/accumarray
+    Maximum variable size allowed by the program is exceeded.
+    
+    Error in AssemblyStiffMa (line 26)
+        K = accumarray([iK,jK], Ke, [sets.tdofs sets.tdofs], [], [], 1);
+    
+    Error in StiffMa2_LNX_Sca270 (line 72)
+            K = K + AssemblyStiffMa(iKd, jKd, Ked, sets);
+================================================================================
+.	 Processing Chunk 1 of 15...
+
+================================================================================
+Error occurred in StiffMa2_LNX_Sca270/StiffMa and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'MATLAB:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using gpuArray/accumarray
+    Maximum variable size allowed by the program is exceeded.
+    
+    Error in AssemblyStiffMa (line 26)
+        K = accumarray([iK,jK], Ke, [sets.tdofs sets.tdofs], [], [], 1);
+    
+    Error in StiffMa2_LNX_Sca270 (line 72)
+            K = K + AssemblyStiffMa(iKd, jKd, Ked, sets);
+================================================================================
+.	 Processing Chunk 1 of 15...
+
+================================================================================
+Error occurred in StiffMa2_LNX_Sca270/StiffMa and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'MATLAB:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using gpuArray/accumarray
+    Maximum variable size allowed by the program is exceeded.
+    
+    Error in AssemblyStiffMa (line 26)
+        K = accumarray([iK,jK], Ke, [sets.tdofs sets.tdofs], [], [], 1);
+    
+    Error in StiffMa2_LNX_Sca270 (line 72)
+            K = K + AssemblyStiffMa(iKd, jKd, Ked, sets);
+================================================================================
+.	 Processing Chunk 1 of 15...
+
+================================================================================
+Error occurred in StiffMa2_LNX_Sca270/StiffMa and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'MATLAB:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using gpuArray/accumarray
+    Maximum variable size allowed by the program is exceeded.
+    
+    Error in AssemblyStiffMa (line 26)
+        K = accumarray([iK,jK], Ke, [sets.tdofs sets.tdofs], [], [], 1);
+    
+    Error in StiffMa2_LNX_Sca270 (line 72)
+            K = K + AssemblyStiffMa(iKd, jKd, Ked, sets);
+================================================================================
+.	 Processing Chunk 1 of 15...
+
+================================================================================
+Error occurred in StiffMa2_LNX_Sca270/StiffMa and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'MATLAB:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using gpuArray/accumarray
+    Maximum variable size allowed by the program is exceeded.
+    
+    Error in AssemblyStiffMa (line 26)
+        K = accumarray([iK,jK], Ke, [sets.tdofs sets.tdofs], [], [], 1);
+    
+    Error in StiffMa2_LNX_Sca270 (line 72)
+            K = K + AssemblyStiffMa(iKd, jKd, Ked, sets);
+================================================================================
+.	 Processing Chunk 1 of 15...
+
+================================================================================
+Error occurred in StiffMa2_LNX_Sca270/StiffMa and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'MATLAB:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using gpuArray/accumarray
+    Maximum variable size allowed by the program is exceeded.
+    
+    Error in AssemblyStiffMa (line 26)
+        K = accumarray([iK,jK], Ke, [sets.tdofs sets.tdofs], [], [], 1);
+    
+    Error in StiffMa2_LNX_Sca270 (line 72)
+            K = K + AssemblyStiffMa(iKd, jKd, Ked, sets);
+================================================================================
+.	 Processing Chunk 1 of 15...
+
+================================================================================
+Error occurred in StiffMa2_LNX_Sca270/StiffMa and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'MATLAB:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using gpuArray/accumarray
+    Maximum variable size allowed by the program is exceeded.
+    
+    Error in AssemblyStiffMa (line 26)
+        K = accumarray([iK,jK], Ke, [sets.tdofs sets.tdofs], [], [], 1);
+    
+    Error in StiffMa2_LNX_Sca270 (line 72)
+            K = K + AssemblyStiffMa(iKd, jKd, Ked, sets);
+================================================================================
+.	 Processing Chunk 1 of 15...
+
+================================================================================
+Error occurred in StiffMa2_LNX_Sca270/StiffMa and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'MATLAB:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using gpuArray/accumarray
+    Maximum variable size allowed by the program is exceeded.
+    
+    Error in AssemblyStiffMa (line 26)
+        K = accumarray([iK,jK], Ke, [sets.tdofs sets.tdofs], [], [], 1);
+    
+    Error in StiffMa2_LNX_Sca270 (line 72)
+            K = K + AssemblyStiffMa(iKd, jKd, Ked, sets);
+================================================================================
+.
+Done StiffMa2_LNX_Sca270
+__________
+
+Failure Summary:
+
+     Name                         Failed  Incomplete  Reason(s)
+    ============================================================
+     StiffMa2_LNX_Sca270/StiffMa    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'StiffMa2_LNX_Sca270/StiffMa'
+           Valid: 0
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   3.5378 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 280x280x280 (21952000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running StiffMa2_LNX_Sca280
+	Mesh created successfully with 21952000 Hex8 elements and 22188041 nodes!
+
+The global stiffness matrix will be computed with 14 chunk(s).
+Available memory on GPU before computations begin (MB): 16435.839
+Processing the SCALAR problem with 280x280x280 elements
+	 Processing Chunk 1 of 14...
+
+================================================================================
+Error occurred in StiffMa2_LNX_Sca280/StiffMa and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'MATLAB:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using gpuArray/accumarray
+    Maximum variable size allowed by the program is exceeded.
+    
+    Error in AssemblyStiffMa (line 26)
+        K = accumarray([iK,jK], Ke, [sets.tdofs sets.tdofs], [], [], 1);
+    
+    Error in StiffMa2_LNX_Sca280 (line 72)
+            K = K + AssemblyStiffMa(iKd, jKd, Ked, sets);
+================================================================================
+.	 Processing Chunk 1 of 14...
+
+================================================================================
+Error occurred in StiffMa2_LNX_Sca280/StiffMa and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'MATLAB:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using gpuArray/accumarray
+    Maximum variable size allowed by the program is exceeded.
+    
+    Error in AssemblyStiffMa (line 26)
+        K = accumarray([iK,jK], Ke, [sets.tdofs sets.tdofs], [], [], 1);
+    
+    Error in StiffMa2_LNX_Sca280 (line 72)
+            K = K + AssemblyStiffMa(iKd, jKd, Ked, sets);
+================================================================================
+.	 Processing Chunk 1 of 14...
+
+================================================================================
+Error occurred in StiffMa2_LNX_Sca280/StiffMa and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'MATLAB:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using gpuArray/accumarray
+    Maximum variable size allowed by the program is exceeded.
+    
+    Error in AssemblyStiffMa (line 26)
+        K = accumarray([iK,jK], Ke, [sets.tdofs sets.tdofs], [], [], 1);
+    
+    Error in StiffMa2_LNX_Sca280 (line 72)
+            K = K + AssemblyStiffMa(iKd, jKd, Ked, sets);
+================================================================================
+.	 Processing Chunk 1 of 14...
+
+================================================================================
+Error occurred in StiffMa2_LNX_Sca280/StiffMa and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'MATLAB:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using gpuArray/accumarray
+    Maximum variable size allowed by the program is exceeded.
+    
+    Error in AssemblyStiffMa (line 26)
+        K = accumarray([iK,jK], Ke, [sets.tdofs sets.tdofs], [], [], 1);
+    
+    Error in StiffMa2_LNX_Sca280 (line 72)
+            K = K + AssemblyStiffMa(iKd, jKd, Ked, sets);
+================================================================================
+.	 Processing Chunk 1 of 14...
+
+================================================================================
+Error occurred in StiffMa2_LNX_Sca280/StiffMa and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'MATLAB:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using gpuArray/accumarray
+    Maximum variable size allowed by the program is exceeded.
+    
+    Error in AssemblyStiffMa (line 26)
+        K = accumarray([iK,jK], Ke, [sets.tdofs sets.tdofs], [], [], 1);
+    
+    Error in StiffMa2_LNX_Sca280 (line 72)
+            K = K + AssemblyStiffMa(iKd, jKd, Ked, sets);
+================================================================================
+.	 Processing Chunk 1 of 14...
+
+================================================================================
+Error occurred in StiffMa2_LNX_Sca280/StiffMa and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'MATLAB:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using gpuArray/accumarray
+    Maximum variable size allowed by the program is exceeded.
+    
+    Error in AssemblyStiffMa (line 26)
+        K = accumarray([iK,jK], Ke, [sets.tdofs sets.tdofs], [], [], 1);
+    
+    Error in StiffMa2_LNX_Sca280 (line 72)
+            K = K + AssemblyStiffMa(iKd, jKd, Ked, sets);
+================================================================================
+.	 Processing Chunk 1 of 14...
+
+================================================================================
+Error occurred in StiffMa2_LNX_Sca280/StiffMa and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'MATLAB:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using gpuArray/accumarray
+    Maximum variable size allowed by the program is exceeded.
+    
+    Error in AssemblyStiffMa (line 26)
+        K = accumarray([iK,jK], Ke, [sets.tdofs sets.tdofs], [], [], 1);
+    
+    Error in StiffMa2_LNX_Sca280 (line 72)
+            K = K + AssemblyStiffMa(iKd, jKd, Ked, sets);
+================================================================================
+.	 Processing Chunk 1 of 14...
+
+================================================================================
+Error occurred in StiffMa2_LNX_Sca280/StiffMa and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'MATLAB:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using gpuArray/accumarray
+    Maximum variable size allowed by the program is exceeded.
+    
+    Error in AssemblyStiffMa (line 26)
+        K = accumarray([iK,jK], Ke, [sets.tdofs sets.tdofs], [], [], 1);
+    
+    Error in StiffMa2_LNX_Sca280 (line 72)
+            K = K + AssemblyStiffMa(iKd, jKd, Ked, sets);
+================================================================================
+.
+Done StiffMa2_LNX_Sca280
+__________
+
+Failure Summary:
+
+     Name                         Failed  Incomplete  Reason(s)
+    ============================================================
+     StiffMa2_LNX_Sca280/StiffMa    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'StiffMa2_LNX_Sca280/StiffMa'
+           Valid: 0
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   3.9488 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 290x290x290 (24389000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running StiffMa2_LNX_Sca290
+	Mesh created successfully with 24389000 Hex8 elements and 24642171 nodes!
+
+The global stiffness matrix will be computed with 20 chunk(s).
+Available memory on GPU before computations begin (MB): 16435.839
+Processing the SCALAR problem with 290x290x290 elements
+	 Processing Chunk 1 of 20...
+
+================================================================================
+Error occurred in StiffMa2_LNX_Sca290/StiffMa and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'MATLAB:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using gpuArray/accumarray
+    Maximum variable size allowed by the program is exceeded.
+    
+    Error in AssemblyStiffMa (line 26)
+        K = accumarray([iK,jK], Ke, [sets.tdofs sets.tdofs], [], [], 1);
+    
+    Error in StiffMa2_LNX_Sca290 (line 72)
+            K = K + AssemblyStiffMa(iKd, jKd, Ked, sets);
+================================================================================
+.	 Processing Chunk 1 of 20...
+
+================================================================================
+Error occurred in StiffMa2_LNX_Sca290/StiffMa and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'MATLAB:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using gpuArray/accumarray
+    Maximum variable size allowed by the program is exceeded.
+    
+    Error in AssemblyStiffMa (line 26)
+        K = accumarray([iK,jK], Ke, [sets.tdofs sets.tdofs], [], [], 1);
+    
+    Error in StiffMa2_LNX_Sca290 (line 72)
+            K = K + AssemblyStiffMa(iKd, jKd, Ked, sets);
+================================================================================
+.	 Processing Chunk 1 of 20...
+
+================================================================================
+Error occurred in StiffMa2_LNX_Sca290/StiffMa and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'MATLAB:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using gpuArray/accumarray
+    Maximum variable size allowed by the program is exceeded.
+    
+    Error in AssemblyStiffMa (line 26)
+        K = accumarray([iK,jK], Ke, [sets.tdofs sets.tdofs], [], [], 1);
+    
+    Error in StiffMa2_LNX_Sca290 (line 72)
+            K = K + AssemblyStiffMa(iKd, jKd, Ked, sets);
+================================================================================
+.	 Processing Chunk 1 of 20...
+
+================================================================================
+Error occurred in StiffMa2_LNX_Sca290/StiffMa and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'MATLAB:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using gpuArray/accumarray
+    Maximum variable size allowed by the program is exceeded.
+    
+    Error in AssemblyStiffMa (line 26)
+        K = accumarray([iK,jK], Ke, [sets.tdofs sets.tdofs], [], [], 1);
+    
+    Error in StiffMa2_LNX_Sca290 (line 72)
+            K = K + AssemblyStiffMa(iKd, jKd, Ked, sets);
+================================================================================
+.	 Processing Chunk 1 of 20...
+
+================================================================================
+Error occurred in StiffMa2_LNX_Sca290/StiffMa and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'MATLAB:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using gpuArray/accumarray
+    Maximum variable size allowed by the program is exceeded.
+    
+    Error in AssemblyStiffMa (line 26)
+        K = accumarray([iK,jK], Ke, [sets.tdofs sets.tdofs], [], [], 1);
+    
+    Error in StiffMa2_LNX_Sca290 (line 72)
+            K = K + AssemblyStiffMa(iKd, jKd, Ked, sets);
+================================================================================
+.	 Processing Chunk 1 of 20...
+
+================================================================================
+Error occurred in StiffMa2_LNX_Sca290/StiffMa and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'MATLAB:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using gpuArray/accumarray
+    Maximum variable size allowed by the program is exceeded.
+    
+    Error in AssemblyStiffMa (line 26)
+        K = accumarray([iK,jK], Ke, [sets.tdofs sets.tdofs], [], [], 1);
+    
+    Error in StiffMa2_LNX_Sca290 (line 72)
+            K = K + AssemblyStiffMa(iKd, jKd, Ked, sets);
+================================================================================
+.	 Processing Chunk 1 of 20...
+
+================================================================================
+Error occurred in StiffMa2_LNX_Sca290/StiffMa and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'MATLAB:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using gpuArray/accumarray
+    Maximum variable size allowed by the program is exceeded.
+    
+    Error in AssemblyStiffMa (line 26)
+        K = accumarray([iK,jK], Ke, [sets.tdofs sets.tdofs], [], [], 1);
+    
+    Error in StiffMa2_LNX_Sca290 (line 72)
+            K = K + AssemblyStiffMa(iKd, jKd, Ked, sets);
+================================================================================
+.	 Processing Chunk 1 of 20...
+
+================================================================================
+Error occurred in StiffMa2_LNX_Sca290/StiffMa and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'MATLAB:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using gpuArray/accumarray
+    Maximum variable size allowed by the program is exceeded.
+    
+    Error in AssemblyStiffMa (line 26)
+        K = accumarray([iK,jK], Ke, [sets.tdofs sets.tdofs], [], [], 1);
+    
+    Error in StiffMa2_LNX_Sca290 (line 72)
+            K = K + AssemblyStiffMa(iKd, jKd, Ked, sets);
+================================================================================
+.
+Done StiffMa2_LNX_Sca290
+__________
+
+Failure Summary:
+
+     Name                         Failed  Incomplete  Reason(s)
+    ============================================================
+     StiffMa2_LNX_Sca290/StiffMa    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'StiffMa2_LNX_Sca290/StiffMa'
+           Valid: 0
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   4.1864 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 300x300x300 (27000000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running StiffMa2_LNX_Sca300
+	Mesh created successfully with 27000000 Hex8 elements and 27270901 nodes!
+
+The global stiffness matrix will be computed with 15 chunk(s).
+Available memory on GPU before computations begin (MB): 16435.839
+Processing the SCALAR problem with 300x300x300 elements
+	 Processing Chunk 1 of 15...
+
+================================================================================
+Error occurred in StiffMa2_LNX_Sca300/StiffMa and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'MATLAB:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using gpuArray/accumarray
+    Maximum variable size allowed by the program is exceeded.
+    
+    Error in AssemblyStiffMa (line 26)
+        K = accumarray([iK,jK], Ke, [sets.tdofs sets.tdofs], [], [], 1);
+    
+    Error in StiffMa2_LNX_Sca300 (line 72)
+            K = K + AssemblyStiffMa(iKd, jKd, Ked, sets);
+================================================================================
+.	 Processing Chunk 1 of 15...
+
+================================================================================
+Error occurred in StiffMa2_LNX_Sca300/StiffMa and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'MATLAB:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using gpuArray/accumarray
+    Maximum variable size allowed by the program is exceeded.
+    
+    Error in AssemblyStiffMa (line 26)
+        K = accumarray([iK,jK], Ke, [sets.tdofs sets.tdofs], [], [], 1);
+    
+    Error in StiffMa2_LNX_Sca300 (line 72)
+            K = K + AssemblyStiffMa(iKd, jKd, Ked, sets);
+================================================================================
+.	 Processing Chunk 1 of 15...
+
+================================================================================
+Error occurred in StiffMa2_LNX_Sca300/StiffMa and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'MATLAB:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using gpuArray/accumarray
+    Maximum variable size allowed by the program is exceeded.
+    
+    Error in AssemblyStiffMa (line 26)
+        K = accumarray([iK,jK], Ke, [sets.tdofs sets.tdofs], [], [], 1);
+    
+    Error in StiffMa2_LNX_Sca300 (line 72)
+            K = K + AssemblyStiffMa(iKd, jKd, Ked, sets);
+================================================================================
+.	 Processing Chunk 1 of 15...
+
+================================================================================
+Error occurred in StiffMa2_LNX_Sca300/StiffMa and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'MATLAB:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using gpuArray/accumarray
+    Maximum variable size allowed by the program is exceeded.
+    
+    Error in AssemblyStiffMa (line 26)
+        K = accumarray([iK,jK], Ke, [sets.tdofs sets.tdofs], [], [], 1);
+    
+    Error in StiffMa2_LNX_Sca300 (line 72)
+            K = K + AssemblyStiffMa(iKd, jKd, Ked, sets);
+================================================================================
+.	 Processing Chunk 1 of 15...
+
+================================================================================
+Error occurred in StiffMa2_LNX_Sca300/StiffMa and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'MATLAB:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using gpuArray/accumarray
+    Maximum variable size allowed by the program is exceeded.
+    
+    Error in AssemblyStiffMa (line 26)
+        K = accumarray([iK,jK], Ke, [sets.tdofs sets.tdofs], [], [], 1);
+    
+    Error in StiffMa2_LNX_Sca300 (line 72)
+            K = K + AssemblyStiffMa(iKd, jKd, Ked, sets);
+================================================================================
+.	 Processing Chunk 1 of 15...
+
+================================================================================
+Error occurred in StiffMa2_LNX_Sca300/StiffMa and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'MATLAB:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using gpuArray/accumarray
+    Maximum variable size allowed by the program is exceeded.
+    
+    Error in AssemblyStiffMa (line 26)
+        K = accumarray([iK,jK], Ke, [sets.tdofs sets.tdofs], [], [], 1);
+    
+    Error in StiffMa2_LNX_Sca300 (line 72)
+            K = K + AssemblyStiffMa(iKd, jKd, Ked, sets);
+================================================================================
+.	 Processing Chunk 1 of 15...
+
+================================================================================
+Error occurred in StiffMa2_LNX_Sca300/StiffMa and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'MATLAB:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using gpuArray/accumarray
+    Maximum variable size allowed by the program is exceeded.
+    
+    Error in AssemblyStiffMa (line 26)
+        K = accumarray([iK,jK], Ke, [sets.tdofs sets.tdofs], [], [], 1);
+    
+    Error in StiffMa2_LNX_Sca300 (line 72)
+            K = K + AssemblyStiffMa(iKd, jKd, Ked, sets);
+================================================================================
+.	 Processing Chunk 1 of 15...
+
+================================================================================
+Error occurred in StiffMa2_LNX_Sca300/StiffMa and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'MATLAB:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using gpuArray/accumarray
+    Maximum variable size allowed by the program is exceeded.
+    
+    Error in AssemblyStiffMa (line 26)
+        K = accumarray([iK,jK], Ke, [sets.tdofs sets.tdofs], [], [], 1);
+    
+    Error in StiffMa2_LNX_Sca300 (line 72)
+            K = K + AssemblyStiffMa(iKd, jKd, Ked, sets);
+================================================================================
+.
+Done StiffMa2_LNX_Sca300
+__________
+
+Failure Summary:
+
+     Name                         Failed  Incomplete  Reason(s)
+    ============================================================
+     StiffMa2_LNX_Sca300/StiffMa    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'StiffMa2_LNX_Sca300/StiffMa'
+           Valid: 0
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   4.6973 seconds testing time.
+
+
+
+A total of 6 time experiments was executed!
+Date and time at the beginning of the process: 	22-May-2020 12:49:12 
+Date and time at the end of the process: 	22-May-2020 12:50:53
+
+
+ans =
+
+  6x7 table
+
+               Name                SampleSize     Mean     StandardDeviation     Min     Median     Max  
+    ___________________________    __________    ______    _________________    _____    ______    ______
+
+    StiffMa2_LNX_Sca250/StiffMa        4         7.8522        0.0030338        7.848    7.853     7.8548
+    StiffMa2_LNX_Sca260/StiffMa        4            NaN              NaN          NaN      NaN        NaN
+    StiffMa2_LNX_Sca270/StiffMa        4            NaN              NaN          NaN      NaN        NaN
+    StiffMa2_LNX_Sca280/StiffMa        4            NaN              NaN          NaN      NaN        NaN
+    StiffMa2_LNX_Sca290/StiffMa        4            NaN              NaN          NaN      NaN        NaN
+    StiffMa2_LNX_Sca300/StiffMa        4            NaN              NaN          NaN      NaN        NaN
+

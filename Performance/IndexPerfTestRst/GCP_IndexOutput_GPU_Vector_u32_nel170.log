@@ -1,0 +1,45 @@
+[Warning: Directory already exists.] 
+[> In runIndexTest (line 28)] 
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 170x170x170 (4913000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running ITestLNX_GVs32_170
+
+Mesh created successfully with 4913000 Hex8 elements and 5000211 nodes!
+........
+Done ITestLNX_GVs32_170
+__________
+
+  TimeResult with properties:
+
+            Name: 'ITestLNX_GVs32_170/Index_GPU_Vector_Symmetry'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   15.4444 seconds testing time.
+
+
+
+A total of 1 time experiments was executed!
+Date and time at the beginning of the process: 	18-Feb-2020 15:48:15 
+Date and time at the end of the process: 	18-Feb-2020 15:48:38
+
+
+ans =
+
+  1x7 table
+
+                        Name                        SampleSize     Mean     StandardDeviation     Min      Median     Max  
+    ____________________________________________    __________    ______    _________________    ______    ______    ______
+
+    ITestLNX_GVs32_170/Index_GPU_Vector_Symmetry        4         1.8337        0.0079267        1.8252    1.8341    1.8412
+

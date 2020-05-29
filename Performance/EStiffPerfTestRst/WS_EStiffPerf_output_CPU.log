@@ -1,0 +1,597 @@
+[Warning: Directory already exists.] 
+[> In runEStiffTest (line 28)] 
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 10x10x10 (1000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Processor type: 'CPU'
+
+Running ETestWIN_CSs32_10
+
+Mesh created successfully with 1000 Hex8 elements and 1331 nodes!
+.......... ......
+Done ETestWIN_CSs32_10
+__________
+
+  1x2 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   2 Valid, 0 Invalid.
+   2.6071 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 10x10x10 (1000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Vector'
+Processor type: 'CPU'
+
+Running ETestWIN_CVs32_10
+
+Mesh created successfully with 1000 Hex8 elements and 1331 nodes!
+.......... ......
+Done ETestWIN_CVs32_10
+__________
+
+  1x2 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   2 Valid, 0 Invalid.
+   14.7053 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 10x10x10 (1000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'CPU'
+
+Running ETestWIN_CSd32_10
+
+Mesh created successfully with 1000 Hex8 elements and 1331 nodes!
+.......... ......
+Done ETestWIN_CSd32_10
+__________
+
+  1x2 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   2 Valid, 0 Invalid.
+   1.9425 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 10x10x10 (1000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Processor type: 'CPU'
+
+Running ETestWIN_CVd32_10
+
+Mesh created successfully with 1000 Hex8 elements and 1331 nodes!
+.......... ......
+Done ETestWIN_CVd32_10
+__________
+
+  1x2 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   2 Valid, 0 Invalid.
+   12.1336 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 20x20x20 (8000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Processor type: 'CPU'
+
+Running ETestWIN_CSs32_20
+
+Mesh created successfully with 8000 Hex8 elements and 9261 nodes!
+.......... ......
+Done ETestWIN_CSs32_20
+__________
+
+  1x2 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   2 Valid, 0 Invalid.
+   16.5428 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 20x20x20 (8000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Vector'
+Processor type: 'CPU'
+
+Running ETestWIN_CVs32_20
+
+Mesh created successfully with 8000 Hex8 elements and 9261 nodes!
+.......... ......
+Done ETestWIN_CVs32_20
+__________
+
+  1x2 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   2 Valid, 0 Invalid.
+   116.0967 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 20x20x20 (8000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'CPU'
+
+Running ETestWIN_CSd32_20
+
+Mesh created successfully with 8000 Hex8 elements and 9261 nodes!
+.......... ......
+Done ETestWIN_CSd32_20
+__________
+
+  1x2 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   2 Valid, 0 Invalid.
+   15.1051 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 20x20x20 (8000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Processor type: 'CPU'
+
+Running ETestWIN_CVd32_20
+
+Mesh created successfully with 8000 Hex8 elements and 9261 nodes!
+.......... ......
+Done ETestWIN_CVd32_20
+__________
+
+  1x2 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   2 Valid, 0 Invalid.
+   95.9846 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 40x40x40 (64000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Processor type: 'CPU'
+
+Running ETestWIN_CSs32_40
+
+Mesh created successfully with 64000 Hex8 elements and 68921 nodes!
+..
+Done ETestWIN_CSs32_40
+__________
+
+  1x2 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   2 Valid, 0 Invalid.
+   14.5447 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 40x40x40 (64000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Vector'
+Processor type: 'CPU'
+
+Running ETestWIN_CVs32_40
+
+Mesh created successfully with 64000 Hex8 elements and 68921 nodes!
+..
+Done ETestWIN_CVs32_40
+__________
+
+  1x2 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   2 Valid, 0 Invalid.
+   103.1253 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 40x40x40 (64000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'CPU'
+
+Running ETestWIN_CSd32_40
+
+Mesh created successfully with 64000 Hex8 elements and 68921 nodes!
+..
+Done ETestWIN_CSd32_40
+__________
+
+  1x2 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   2 Valid, 0 Invalid.
+   13.4141 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 40x40x40 (64000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Processor type: 'CPU'
+
+Running ETestWIN_CVd32_40
+
+Mesh created successfully with 64000 Hex8 elements and 68921 nodes!
+..
+Done ETestWIN_CVd32_40
+__________
+
+  1x2 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   2 Valid, 0 Invalid.
+   85.0696 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 80x80x80 (512000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Processor type: 'CPU'
+
+Running ETestWIN_CSs32_80
+
+Mesh created successfully with 512000 Hex8 elements and 531441 nodes!
+..
+Done ETestWIN_CSs32_80
+__________
+
+  1x2 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   2 Valid, 0 Invalid.
+   114.2152 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 80x80x80 (512000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Vector'
+Processor type: 'CPU'
+
+Running ETestWIN_CVs32_80
+
+Mesh created successfully with 512000 Hex8 elements and 531441 nodes!
+..
+Done ETestWIN_CVs32_80
+__________
+
+  1x2 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   2 Valid, 0 Invalid.
+   822.76 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 80x80x80 (512000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'CPU'
+
+Running ETestWIN_CSd32_80
+
+Mesh created successfully with 512000 Hex8 elements and 531441 nodes!
+..
+Done ETestWIN_CSd32_80
+__________
+
+  1x2 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   2 Valid, 0 Invalid.
+   105.9325 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 80x80x80 (512000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Processor type: 'CPU'
+
+Running ETestWIN_CVd32_80
+
+Mesh created successfully with 512000 Hex8 elements and 531441 nodes!
+..
+Done ETestWIN_CVd32_80
+__________
+
+  1x2 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   2 Valid, 0 Invalid.
+   677.7215 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 160x160x160 (4096000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Processor type: 'CPU'
+
+Running ETestWIN_CSs32_160
+
+Mesh created successfully with 4096000 Hex8 elements and 4173281 nodes!
+..
+Done ETestWIN_CSs32_160
+__________
+
+  1x2 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   2 Valid, 0 Invalid.
+   942.5886 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 160x160x160 (4096000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Vector'
+Processor type: 'CPU'
+
+Running ETestWIN_CVs32_160
+
+Mesh created successfully with 4096000 Hex8 elements and 4173281 nodes!
+..
+Done ETestWIN_CVs32_160
+__________
+
+  1x2 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   2 Valid, 0 Invalid.
+   6584.1628 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 160x160x160 (4096000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'CPU'
+
+Running ETestWIN_CSd32_160
+
+Mesh created successfully with 4096000 Hex8 elements and 4173281 nodes!
+..
+Done ETestWIN_CSd32_160
+__________
+
+  1x2 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   2 Valid, 0 Invalid.
+   909.2408 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 160x160x160 (4096000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Processor type: 'CPU'
+
+Running ETestWIN_CVd32_160
+
+Mesh created successfully with 4096000 Hex8 elements and 4173281 nodes!
+..
+Done ETestWIN_CVd32_160
+__________
+
+  1x2 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   2 Valid, 0 Invalid.
+   5438.4839 seconds testing time.
+
+
+
+ A total of 20 time experiments was executed!
+Date and time at the beginning of the process: 	15-Feb-2020 12:55:50 
+Date and time at the end of the process: 	15-Feb-2020 17:24:29
+
+
+ans =
+
+  40x7 table
+
+                        Name                         SampleSize      Mean      StandardDeviation      Min        Median       Max   
+    _____________________________________________    __________    ________    _________________    ________    ________    ________
+
+    ETestWIN_CSs32_10/EStiff_CPU_Scalar                  4         0.093532        0.0011361        0.092366    0.093366    0.095031
+    ETestWIN_CSs32_10/EStiff_CPU_Scalar_Symmetry         4          0.15142        0.0028124         0.14767     0.15217     0.15365
+    ETestWIN_CVs32_10/EStiff_CPU_Vector                  4          0.22903        0.0022764         0.22701     0.22841     0.23227
+    ETestWIN_CVs32_10/EStiff_CPU_Vector_Symmetry         4           1.4033         0.022216          1.3756      1.4061      1.4253
+    ETestWIN_CSd32_10/EStiff_CPU_Scalar                  4         0.074886       0.00047226        0.074527    0.074735    0.075549
+    ETestWIN_CSd32_10/EStiff_CPU_Scalar_Symmetry         4          0.12837       0.00027251         0.12811     0.12834     0.12869
+    ETestWIN_CVd32_10/EStiff_CPU_Vector                  4           0.1724        0.0038481         0.16998     0.17074     0.17814
+    ETestWIN_CVd32_10/EStiff_CPU_Vector_Symmetry         4           1.1469         0.011745          1.1388      1.1425      1.1637
+    ETestWIN_CSs32_20/EStiff_CPU_Scalar                  4          0.63423        0.0038445         0.63005     0.63445     0.63796
+    ETestWIN_CSs32_20/EStiff_CPU_Scalar_Symmetry         4           1.1806        0.0073836          1.1708      1.1816      1.1886
+    ETestWIN_CVs32_20/EStiff_CPU_Vector                  4           1.8435        0.0049771           1.839      1.8425        1.85
+    ETestWIN_CVs32_20/EStiff_CPU_Vector_Symmetry         4           11.021          0.02091          11.004      11.014      11.051
+    ETestWIN_CSd32_20/EStiff_CPU_Scalar                  4          0.61344        0.0024087         0.61212     0.61229     0.61704
+    ETestWIN_CSd32_20/EStiff_CPU_Scalar_Symmetry         4            1.057         0.020386          1.0365       1.054      1.0836
+    ETestWIN_CVd32_20/EStiff_CPU_Vector                  4           1.4291         0.010246          1.4191      1.4295      1.4381
+    ETestWIN_CVd32_20/EStiff_CPU_Vector_Symmetry         4           9.2247         0.038179          9.1969      9.2107      9.2806
+    ETestWIN_CSs32_40/EStiff_CPU_Scalar                  1           5.1274                0          5.1274      5.1274      5.1274
+    ETestWIN_CSs32_40/EStiff_CPU_Scalar_Symmetry         1           9.3906                0          9.3906      9.3906      9.3906
+    ETestWIN_CVs32_40/EStiff_CPU_Vector                  1           14.875                0          14.875      14.875      14.875
+    ETestWIN_CVs32_40/EStiff_CPU_Vector_Symmetry         1           88.225                0          88.225      88.225      88.225
+    ETestWIN_CSd32_40/EStiff_CPU_Scalar                  1           5.0129                0          5.0129      5.0129      5.0129
+    ETestWIN_CSd32_40/EStiff_CPU_Scalar_Symmetry         1           8.3749                0          8.3749      8.3749      8.3749
+    ETestWIN_CVd32_40/EStiff_CPU_Vector                  1           11.388                0          11.388      11.388      11.388
+    ETestWIN_CVd32_40/EStiff_CPU_Vector_Symmetry         1           73.659                0          73.659      73.659      73.659
+    ETestWIN_CSs32_80/EStiff_CPU_Scalar                  1           39.804                0          39.804      39.804      39.804
+    ETestWIN_CSs32_80/EStiff_CPU_Scalar_Symmetry         1           74.347                0          74.347      74.347      74.347
+    ETestWIN_CVs32_80/EStiff_CPU_Vector                  1           118.45                0          118.45      118.45      118.45
+    ETestWIN_CVs32_80/EStiff_CPU_Vector_Symmetry         1           704.25                0          704.25      704.25      704.25
+    ETestWIN_CSd32_80/EStiff_CPU_Scalar                  1           39.155                0          39.155      39.155      39.155
+    ETestWIN_CSd32_80/EStiff_CPU_Scalar_Symmetry         1           66.713                0          66.713      66.713      66.713
+    ETestWIN_CVd32_80/EStiff_CPU_Vector                  1           90.661                0          90.661      90.661      90.661
+    ETestWIN_CVd32_80/EStiff_CPU_Vector_Symmetry         1              587                0             587         587         587
+    ETestWIN_CSs32_160/EStiff_CPU_Scalar                 1           312.02                0          312.02      312.02      312.02
+    ETestWIN_CSs32_160/EStiff_CPU_Scalar_Symmetry        1           630.31                0          630.31      630.31      630.31
+    ETestWIN_CVs32_160/EStiff_CPU_Vector                 1           933.94                0          933.94      933.94      933.94
+    ETestWIN_CVs32_160/EStiff_CPU_Vector_Symmetry        1           5649.9                0          5649.9      5649.9      5649.9
+    ETestWIN_CSd32_160/EStiff_CPU_Scalar                 1              372                0             372         372         372
+    ETestWIN_CSd32_160/EStiff_CPU_Scalar_Symmetry        1           536.88                0          536.88      536.88      536.88
+    ETestWIN_CVd32_160/EStiff_CPU_Vector                 1           730.09                0          730.09      730.09      730.09
+    ETestWIN_CVd32_160/EStiff_CPU_Vector_Symmetry        1           4708.1                0          4708.1      4708.1      4708.1
+

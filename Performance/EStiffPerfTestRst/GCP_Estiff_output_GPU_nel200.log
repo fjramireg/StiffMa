@@ -1,0 +1,459 @@
+[Warning: Directory already exists.] 
+[> In runEStiffTest (line 28)] 
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 200x200x200 (8000000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running ETestLNX_GSs32_200
+
+Mesh created successfully with 8000000 Hex8 elements and 8120601 nodes!
+.......... .......... ........
+Done ETestLNX_GSs32_200
+__________
+
+  TimeResult with properties:
+
+            Name: 'ETestLNX_GSs32_200/EStiff_GPU_Scalar_Symmetry'
+           Valid: 1
+         Samples: [24x7 table]
+    TestActivity: [28x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   2.6701 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 200x200x200 (8000000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running ETestLNX_GVs32_200
+
+Mesh created successfully with 8000000 Hex8 elements and 8120601 nodes!
+
+================================================================================
+Error occurred in ETestLNX_GVs32_200/EStiff_GPU_Vector_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in eStiff_vpsa (line 64)
+    Ke = feval(kernel, elements, nodes, zeros(sets.sz*sets.nel, 1, sets.dTN,
+    'gpuArray'));% GPU code execution
+    
+    Error in ETestLNX_GVs32_200 (line 18)
+    Ke = eStiff_vpsa(elementsGPU, nodesGPU, MP, sets);
+================================================================================
+.
+================================================================================
+Error occurred in ETestLNX_GVs32_200/EStiff_GPU_Vector_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in eStiff_vpsa (line 64)
+    Ke = feval(kernel, elements, nodes, zeros(sets.sz*sets.nel, 1, sets.dTN,
+    'gpuArray'));% GPU code execution
+    
+    Error in ETestLNX_GVs32_200 (line 18)
+    Ke = eStiff_vpsa(elementsGPU, nodesGPU, MP, sets);
+================================================================================
+.
+================================================================================
+Error occurred in ETestLNX_GVs32_200/EStiff_GPU_Vector_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in eStiff_vpsa (line 64)
+    Ke = feval(kernel, elements, nodes, zeros(sets.sz*sets.nel, 1, sets.dTN,
+    'gpuArray'));% GPU code execution
+    
+    Error in ETestLNX_GVs32_200 (line 18)
+    Ke = eStiff_vpsa(elementsGPU, nodesGPU, MP, sets);
+================================================================================
+.
+================================================================================
+Error occurred in ETestLNX_GVs32_200/EStiff_GPU_Vector_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in eStiff_vpsa (line 64)
+    Ke = feval(kernel, elements, nodes, zeros(sets.sz*sets.nel, 1, sets.dTN,
+    'gpuArray'));% GPU code execution
+    
+    Error in ETestLNX_GVs32_200 (line 18)
+    Ke = eStiff_vpsa(elementsGPU, nodesGPU, MP, sets);
+================================================================================
+.
+================================================================================
+Error occurred in ETestLNX_GVs32_200/EStiff_GPU_Vector_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in eStiff_vpsa (line 64)
+    Ke = feval(kernel, elements, nodes, zeros(sets.sz*sets.nel, 1, sets.dTN,
+    'gpuArray'));% GPU code execution
+    
+    Error in ETestLNX_GVs32_200 (line 18)
+    Ke = eStiff_vpsa(elementsGPU, nodesGPU, MP, sets);
+================================================================================
+.
+================================================================================
+Error occurred in ETestLNX_GVs32_200/EStiff_GPU_Vector_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in eStiff_vpsa (line 64)
+    Ke = feval(kernel, elements, nodes, zeros(sets.sz*sets.nel, 1, sets.dTN,
+    'gpuArray'));% GPU code execution
+    
+    Error in ETestLNX_GVs32_200 (line 18)
+    Ke = eStiff_vpsa(elementsGPU, nodesGPU, MP, sets);
+================================================================================
+.
+================================================================================
+Error occurred in ETestLNX_GVs32_200/EStiff_GPU_Vector_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in eStiff_vpsa (line 64)
+    Ke = feval(kernel, elements, nodes, zeros(sets.sz*sets.nel, 1, sets.dTN,
+    'gpuArray'));% GPU code execution
+    
+    Error in ETestLNX_GVs32_200 (line 18)
+    Ke = eStiff_vpsa(elementsGPU, nodesGPU, MP, sets);
+================================================================================
+.
+================================================================================
+Error occurred in ETestLNX_GVs32_200/EStiff_GPU_Vector_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in eStiff_vpsa (line 64)
+    Ke = feval(kernel, elements, nodes, zeros(sets.sz*sets.nel, 1, sets.dTN,
+    'gpuArray'));% GPU code execution
+    
+    Error in ETestLNX_GVs32_200 (line 18)
+    Ke = eStiff_vpsa(elementsGPU, nodesGPU, MP, sets);
+================================================================================
+.
+Done ETestLNX_GVs32_200
+__________
+
+Failure Summary:
+
+     Name                                           Failed  Incomplete  Reason(s)
+    ==============================================================================
+     ETestLNX_GVs32_200/EStiff_GPU_Vector_Symmetry    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'ETestLNX_GVs32_200/EStiff_GPU_Vector_Symmetry'
+           Valid: 0
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   1.817 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 200x200x200 (8000000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running ETestLNX_GSd32_200
+
+Mesh created successfully with 8000000 Hex8 elements and 8120601 nodes!
+.......... .
+Done ETestLNX_GSd32_200
+__________
+
+  TimeResult with properties:
+
+            Name: 'ETestLNX_GSd32_200/EStiff_GPU_Scalar_Symmetry'
+           Valid: 1
+         Samples: [7x7 table]
+    TestActivity: [11x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   2.1972 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 200x200x200 (8000000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running ETestLNX_GVd32_200
+
+Mesh created successfully with 8000000 Hex8 elements and 8120601 nodes!
+
+================================================================================
+Error occurred in ETestLNX_GVd32_200/EStiff_GPU_Vector_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in eStiff_vpsa (line 64)
+    Ke = feval(kernel, elements, nodes, zeros(sets.sz*sets.nel, 1, sets.dTN,
+    'gpuArray'));% GPU code execution
+    
+    Error in ETestLNX_GVd32_200 (line 18)
+    Ke = eStiff_vpsa(elementsGPU, nodesGPU, MP, sets);
+================================================================================
+.
+================================================================================
+Error occurred in ETestLNX_GVd32_200/EStiff_GPU_Vector_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in eStiff_vpsa (line 64)
+    Ke = feval(kernel, elements, nodes, zeros(sets.sz*sets.nel, 1, sets.dTN,
+    'gpuArray'));% GPU code execution
+    
+    Error in ETestLNX_GVd32_200 (line 18)
+    Ke = eStiff_vpsa(elementsGPU, nodesGPU, MP, sets);
+================================================================================
+.
+================================================================================
+Error occurred in ETestLNX_GVd32_200/EStiff_GPU_Vector_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in eStiff_vpsa (line 64)
+    Ke = feval(kernel, elements, nodes, zeros(sets.sz*sets.nel, 1, sets.dTN,
+    'gpuArray'));% GPU code execution
+    
+    Error in ETestLNX_GVd32_200 (line 18)
+    Ke = eStiff_vpsa(elementsGPU, nodesGPU, MP, sets);
+================================================================================
+.
+================================================================================
+Error occurred in ETestLNX_GVd32_200/EStiff_GPU_Vector_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in eStiff_vpsa (line 64)
+    Ke = feval(kernel, elements, nodes, zeros(sets.sz*sets.nel, 1, sets.dTN,
+    'gpuArray'));% GPU code execution
+    
+    Error in ETestLNX_GVd32_200 (line 18)
+    Ke = eStiff_vpsa(elementsGPU, nodesGPU, MP, sets);
+================================================================================
+.
+================================================================================
+Error occurred in ETestLNX_GVd32_200/EStiff_GPU_Vector_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in eStiff_vpsa (line 64)
+    Ke = feval(kernel, elements, nodes, zeros(sets.sz*sets.nel, 1, sets.dTN,
+    'gpuArray'));% GPU code execution
+    
+    Error in ETestLNX_GVd32_200 (line 18)
+    Ke = eStiff_vpsa(elementsGPU, nodesGPU, MP, sets);
+================================================================================
+.
+================================================================================
+Error occurred in ETestLNX_GVd32_200/EStiff_GPU_Vector_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in eStiff_vpsa (line 64)
+    Ke = feval(kernel, elements, nodes, zeros(sets.sz*sets.nel, 1, sets.dTN,
+    'gpuArray'));% GPU code execution
+    
+    Error in ETestLNX_GVd32_200 (line 18)
+    Ke = eStiff_vpsa(elementsGPU, nodesGPU, MP, sets);
+================================================================================
+.
+================================================================================
+Error occurred in ETestLNX_GVd32_200/EStiff_GPU_Vector_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in eStiff_vpsa (line 64)
+    Ke = feval(kernel, elements, nodes, zeros(sets.sz*sets.nel, 1, sets.dTN,
+    'gpuArray'));% GPU code execution
+    
+    Error in ETestLNX_GVd32_200 (line 18)
+    Ke = eStiff_vpsa(elementsGPU, nodesGPU, MP, sets);
+================================================================================
+.
+================================================================================
+Error occurred in ETestLNX_GVd32_200/EStiff_GPU_Vector_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in eStiff_vpsa (line 64)
+    Ke = feval(kernel, elements, nodes, zeros(sets.sz*sets.nel, 1, sets.dTN,
+    'gpuArray'));% GPU code execution
+    
+    Error in ETestLNX_GVd32_200 (line 18)
+    Ke = eStiff_vpsa(elementsGPU, nodesGPU, MP, sets);
+================================================================================
+.
+Done ETestLNX_GVd32_200
+__________
+
+Failure Summary:
+
+     Name                                           Failed  Incomplete  Reason(s)
+    ==============================================================================
+     ETestLNX_GVd32_200/EStiff_GPU_Vector_Symmetry    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'ETestLNX_GVd32_200/EStiff_GPU_Vector_Symmetry'
+           Valid: 0
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   1.905 seconds testing time.
+
+
+
+ A total of 4 time experiments was executed!
+Date and time at the beginning of the process: 	18-Feb-2020 15:11:56 
+Date and time at the end of the process: 	18-Feb-2020 15:12:21
+
+
+ans =
+
+  4x7 table
+
+                        Name                         SampleSize      Mean      StandardDeviation      Min        Median       Max   
+    _____________________________________________    __________    ________    _________________    ________    ________    ________
+
+    ETestLNX_GSs32_200/EStiff_GPU_Scalar_Symmetry        24        0.024047        0.0033932        0.022737    0.023044    0.039527
+    ETestLNX_GVs32_200/EStiff_GPU_Vector_Symmetry         4             NaN              NaN             NaN         NaN         NaN
+    ETestLNX_GSd32_200/EStiff_GPU_Scalar_Symmetry         7        0.032932        0.0019091        0.031216    0.032137    0.036968
+    ETestLNX_GVd32_200/EStiff_GPU_Vector_Symmetry         4             NaN              NaN             NaN         NaN         NaN
+

@@ -23,26 +23,18 @@ function Ke = eStiff_vpsa(elements, nodes, MP, sets)
 
 %   Written by Francisco Javier Ramirez-Gil, fjramireg@gmail.com
 %   Universidad Nacional de Colombia - Medellin
-% 	Modified: 30/01/2020. Version: 1.4. Name changed, Doc improved
-%   Modified: 28/01/2019. Version: 1.3
+% 	Modified: 09/05/2020. Version: 1.4. Name changed, Doc improved, Support
+% 	for only uint32 (removed uint64)
 % 	Created: 16/01/2019. Version: 1.0
 
 % MATLAB KERNEL CREATION
 if ( strcmp(sets.dTE,'uint32') && strcmp(sets.dTN,'single') )       % Indices: 'uint32'. NNZ: 'single'
-    kernel = parallel.gpu.CUDAKernel('eStiff_vpss.ptx',...             % PTXFILE
-        'const unsigned int *, const float *, float *',...          % C prototype for kernel
-        'Hex8vectorIfj');                                           % Specify entry point
+    kernel = parallel.gpu.CUDAKernel('eStiff_vpss.ptx', 'eStiff_vpss.cu');
     sets.nel = single(sets.nel);                                    % Converts to 'single' precision
 elseif ( strcmp(sets.dTE,'uint32') && strcmp(sets.dTN,'double') )   % Indices: 'uint32'. NNZ: 'double'
-    kernel = parallel.gpu.CUDAKernel('eStiff_vps.ptx',...
-        'const unsigned int *, const double *, double *',...
-        'Hex8vectorIdj');
-elseif ( strcmp(sets.dTE,'uint64') && strcmp(sets.dTN,'double') )   % Indices: 'uint64'. NNZ: 'double'
-    kernel = parallel.gpu.CUDAKernel('eStiff_vps.ptx',...
-        'const unsigned long long int*, const double *, double *',...
-        'Hex8vectorIdy');
+    kernel = parallel.gpu.CUDAKernel('eStiff_vpsd.ptx', 'eStiff_vpsd.cu');
 else
-    error('Input "elements" must be defined as "uint32", "uint64" or "double" and "nodes" as "single" or "double"');
+    error('Input "elements" must be defined as "uint32" and "nodes" as "single" or "double"');
 end
 
 % MATLAB KERNEL CONFIGURATION

@@ -1,10 +1,12 @@
-function K = AssemblyStiffMa(iK, jK, Ke, dTE, dTN)
+function K = AssemblyStiffMa(iK, jK, Ke, sets)
 % ASSEMBLYSTIFFMA Assembly a global sparse stiffness matrix K.
 %   ASSEMBLYSTIFFMA(iK,jK,Ke,dTE,dTN) returns a sparse matrix K that is computed
 %   on the CPU or on the GPU according to the input data, where "iK", "jK", and
 %   "Ke" are column vectors containing the row index,  colomn index and non-zero
-%   value of each entry of the sparse matrix. Whilst dTE and dTN are the data
-%   type defined to connectivity and nodal coordinates matrices, respectively. 
+%   value of each entry of the sparse matrix. Whilst sets.dTE and sets.dTN
+%   are the data type defined to connectivity and nodal coordinates
+%   matrices, respectively. sets.tdofs is the total number of degree of
+%   freedoms, which dtermines the size of the sparse matrix. 
 %
 %   See also SPARSE, ACCUMARRAY
 %
@@ -13,16 +15,15 @@ function K = AssemblyStiffMa(iK, jK, Ke, dTE, dTN)
 
 %   Written by Francisco Javier Ramirez-Gil, fjramireg@gmail.com
 %   Universidad Nacional de Colombia - Medellin
-% 	Modified: 07/12/2019. Version: 1.4. Doc improved
-% 	Modified: 21/01/2019. Version: 1.3
+% 	Modified: 14/05/2020. Version: 1.4. Less inputs, Doc improved
 %   Created:  10/12/2018. Version: 1.0
 
 %% Assembly of global sparse matrix
-if ( strcmp(dTE,'double') && strcmp(dTN,'double') )
-    K = sparse(iK, jK, Ke);
+if ( strcmp(sets.dTE,'double') && strcmp(sets.dTN,'double') )
+    K = sparse(iK, jK, Ke, sets.tdofs, sets.tdofs);
     
-elseif ( (strcmp(dTE,'uint32') || strcmp(dTE,'uint64')) && strcmp(dTN,'double') )
-    K = accumarray([iK,jK], Ke, [], [], [], 1);
+elseif ( strcmp(sets.dTE,'uint32') && strcmp(sets.dTN,'double') )
+    K = accumarray([iK,jK], Ke, [sets.tdofs sets.tdofs], [], [], 1);
     
 else
     error('MATLAB currently does not support "single" data precision for sparse matrices!');

@@ -1,0 +1,45 @@
+[Warning: Directory already exists.] 
+[> In runEStiffTest (line 28)] 
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 390x390x390 (59319000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running ETestLNX_GSs32_390
+
+Mesh created successfully with 59319000 Hex8 elements and 59776471 nodes!
+........
+Done ETestLNX_GSs32_390
+__________
+
+  TimeResult with properties:
+
+            Name: 'ETestLNX_GSs32_390/EStiff_GPU_Scalar_Symmetry'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   13.3916 seconds testing time.
+
+
+
+ A total of 1 time experiments was executed!
+Date and time at the beginning of the process: 	18-Feb-2020 15:26:47 
+Date and time at the end of the process: 	18-Feb-2020 15:27:08
+
+
+ans =
+
+  1x7 table
+
+                        Name                         SampleSize     Mean     StandardDeviation      Min      Median     Max  
+    _____________________________________________    __________    ______    _________________    _______    ______    ______
+
+    ETestLNX_GSs32_390/EStiff_GPU_Scalar_Symmetry        4         0.3113        0.009247         0.29899    0.3124    0.3214
+

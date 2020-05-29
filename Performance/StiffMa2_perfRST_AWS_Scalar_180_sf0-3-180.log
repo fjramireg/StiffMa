@@ -1,0 +1,2030 @@
+[Warning: Directory already exists.] 
+[> In runStiffMaTest2 (line 29)] 
+	Mesh created successfully with 5832000 Hex8 elements and 5929741 nodes!
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 180x180x180 (5832000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running StiffMa2_LNX_Sca_sf0_nel180
+	Mesh created successfully with 5832000 Hex8 elements and 5929741 nodes!
+
+The global stiffness matrix will be computed with 1 chunk(s).
+Available memory on GPU before computations begin (MB): 16435.839
+Processing the SCALAR problem with 180x180x180 elements
+........
+Done StiffMa2_LNX_Sca_sf0_nel180
+__________
+
+  TimeResult with properties:
+
+            Name: 'StiffMa2_LNX_Sca_sf0_nel180/StiffMa'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   5.0957 seconds testing time.
+
+	Mesh created successfully with 5832000 Hex8 elements and 5929741 nodes!
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 180x180x180 (5832000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running StiffMa2_LNX_Sca_sf3_nel180
+	Mesh created successfully with 5832000 Hex8 elements and 5929741 nodes!
+
+The global stiffness matrix will be computed with 4 chunk(s).
+Available memory on GPU before computations begin (MB): 16435.839
+Processing the SCALAR problem with 180x180x180 elements
+........
+Done StiffMa2_LNX_Sca_sf3_nel180
+__________
+
+  TimeResult with properties:
+
+            Name: 'StiffMa2_LNX_Sca_sf3_nel180/StiffMa'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   7.7838 seconds testing time.
+
+	Mesh created successfully with 5832000 Hex8 elements and 5929741 nodes!
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 180x180x180 (5832000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running StiffMa2_LNX_Sca_sf6_nel180
+	Mesh created successfully with 5832000 Hex8 elements and 5929741 nodes!
+
+The global stiffness matrix will be computed with 8 chunk(s).
+Available memory on GPU before computations begin (MB): 16435.839
+Processing the SCALAR problem with 180x180x180 elements
+........
+Done StiffMa2_LNX_Sca_sf6_nel180
+__________
+
+  TimeResult with properties:
+
+            Name: 'StiffMa2_LNX_Sca_sf6_nel180/StiffMa'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   12.23 seconds testing time.
+
+	Mesh created successfully with 5832000 Hex8 elements and 5929741 nodes!
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 180x180x180 (5832000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running StiffMa2_LNX_Sca_sf9_nel180
+	Mesh created successfully with 5832000 Hex8 elements and 5929741 nodes!
+
+The global stiffness matrix will be computed with 10 chunk(s).
+Available memory on GPU before computations begin (MB): 16435.839
+Processing the SCALAR problem with 180x180x180 elements
+........
+Done StiffMa2_LNX_Sca_sf9_nel180
+__________
+
+  TimeResult with properties:
+
+            Name: 'StiffMa2_LNX_Sca_sf9_nel180/StiffMa'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   14.3739 seconds testing time.
+
+	Mesh created successfully with 5832000 Hex8 elements and 5929741 nodes!
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 180x180x180 (5832000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running StiffMa2_LNX_Sca_sf12_nel180
+	Mesh created successfully with 5832000 Hex8 elements and 5929741 nodes!
+
+The global stiffness matrix will be computed with 15 chunk(s).
+Available memory on GPU before computations begin (MB): 16435.839
+Processing the SCALAR problem with 180x180x180 elements
+........
+Done StiffMa2_LNX_Sca_sf12_nel180
+__________
+
+  TimeResult with properties:
+
+            Name: 'StiffMa2_LNX_Sca_sf12_nel180/StiffMa'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   20.0572 seconds testing time.
+
+	Mesh created successfully with 5832000 Hex8 elements and 5929741 nodes!
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 180x180x180 (5832000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running StiffMa2_LNX_Sca_sf15_nel180
+	Mesh created successfully with 5832000 Hex8 elements and 5929741 nodes!
+
+The global stiffness matrix will be computed with 16 chunk(s).
+Available memory on GPU before computations begin (MB): 16435.839
+Processing the SCALAR problem with 180x180x180 elements
+........
+Done StiffMa2_LNX_Sca_sf15_nel180
+__________
+
+  TimeResult with properties:
+
+            Name: 'StiffMa2_LNX_Sca_sf15_nel180/StiffMa'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   21.0911 seconds testing time.
+
+	Mesh created successfully with 5832000 Hex8 elements and 5929741 nodes!
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 180x180x180 (5832000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running StiffMa2_LNX_Sca_sf18_nel180
+	Mesh created successfully with 5832000 Hex8 elements and 5929741 nodes!
+
+The global stiffness matrix will be computed with 20 chunk(s).
+Available memory on GPU before computations begin (MB): 16435.839
+Processing the SCALAR problem with 180x180x180 elements
+........
+Done StiffMa2_LNX_Sca_sf18_nel180
+__________
+
+  TimeResult with properties:
+
+            Name: 'StiffMa2_LNX_Sca_sf18_nel180/StiffMa'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   25.5818 seconds testing time.
+
+	Mesh created successfully with 5832000 Hex8 elements and 5929741 nodes!
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 180x180x180 (5832000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running StiffMa2_LNX_Sca_sf21_nel180
+	Mesh created successfully with 5832000 Hex8 elements and 5929741 nodes!
+
+The global stiffness matrix will be computed with 24 chunk(s).
+Available memory on GPU before computations begin (MB): 16435.839
+Processing the SCALAR problem with 180x180x180 elements
+........
+Done StiffMa2_LNX_Sca_sf21_nel180
+__________
+
+  TimeResult with properties:
+
+            Name: 'StiffMa2_LNX_Sca_sf21_nel180/StiffMa'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   29.9008 seconds testing time.
+
+	Mesh created successfully with 5832000 Hex8 elements and 5929741 nodes!
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 180x180x180 (5832000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running StiffMa2_LNX_Sca_sf24_nel180
+	Mesh created successfully with 5832000 Hex8 elements and 5929741 nodes!
+
+The global stiffness matrix will be computed with 25 chunk(s).
+Available memory on GPU before computations begin (MB): 16435.839
+Processing the SCALAR problem with 180x180x180 elements
+........
+Done StiffMa2_LNX_Sca_sf24_nel180
+__________
+
+  TimeResult with properties:
+
+            Name: 'StiffMa2_LNX_Sca_sf24_nel180/StiffMa'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   31.0242 seconds testing time.
+
+	Mesh created successfully with 5832000 Hex8 elements and 5929741 nodes!
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 180x180x180 (5832000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running StiffMa2_LNX_Sca_sf27_nel180
+	Mesh created successfully with 5832000 Hex8 elements and 5929741 nodes!
+
+The global stiffness matrix will be computed with 30 chunk(s).
+Available memory on GPU before computations begin (MB): 16435.839
+Processing the SCALAR problem with 180x180x180 elements
+........
+Done StiffMa2_LNX_Sca_sf27_nel180
+__________
+
+  TimeResult with properties:
+
+            Name: 'StiffMa2_LNX_Sca_sf27_nel180/StiffMa'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   36.5498 seconds testing time.
+
+	Mesh created successfully with 5832000 Hex8 elements and 5929741 nodes!
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 180x180x180 (5832000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running StiffMa2_LNX_Sca_sf30_nel180
+	Mesh created successfully with 5832000 Hex8 elements and 5929741 nodes!
+
+The global stiffness matrix will be computed with 32 chunk(s).
+Available memory on GPU before computations begin (MB): 16435.839
+Processing the SCALAR problem with 180x180x180 elements
+........
+Done StiffMa2_LNX_Sca_sf30_nel180
+__________
+
+  TimeResult with properties:
+
+            Name: 'StiffMa2_LNX_Sca_sf30_nel180/StiffMa'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   38.8531 seconds testing time.
+
+	Mesh created successfully with 5832000 Hex8 elements and 5929741 nodes!
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 180x180x180 (5832000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running StiffMa2_LNX_Sca_sf33_nel180
+	Mesh created successfully with 5832000 Hex8 elements and 5929741 nodes!
+
+The global stiffness matrix will be computed with 36 chunk(s).
+Available memory on GPU before computations begin (MB): 16435.839
+Processing the SCALAR problem with 180x180x180 elements
+........
+Done StiffMa2_LNX_Sca_sf33_nel180
+__________
+
+  TimeResult with properties:
+
+            Name: 'StiffMa2_LNX_Sca_sf33_nel180/StiffMa'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   43.2419 seconds testing time.
+
+	Mesh created successfully with 5832000 Hex8 elements and 5929741 nodes!
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 180x180x180 (5832000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running StiffMa2_LNX_Sca_sf36_nel180
+	Mesh created successfully with 5832000 Hex8 elements and 5929741 nodes!
+
+The global stiffness matrix will be computed with 40 chunk(s).
+Available memory on GPU before computations begin (MB): 16435.839
+Processing the SCALAR problem with 180x180x180 elements
+........
+Done StiffMa2_LNX_Sca_sf36_nel180
+__________
+
+  TimeResult with properties:
+
+            Name: 'StiffMa2_LNX_Sca_sf36_nel180/StiffMa'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   47.9304 seconds testing time.
+
+	Mesh created successfully with 5832000 Hex8 elements and 5929741 nodes!
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 180x180x180 (5832000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running StiffMa2_LNX_Sca_sf39_nel180
+	Mesh created successfully with 5832000 Hex8 elements and 5929741 nodes!
+
+The global stiffness matrix will be computed with 40 chunk(s).
+Available memory on GPU before computations begin (MB): 16435.839
+Processing the SCALAR problem with 180x180x180 elements
+........
+Done StiffMa2_LNX_Sca_sf39_nel180
+__________
+
+  TimeResult with properties:
+
+            Name: 'StiffMa2_LNX_Sca_sf39_nel180/StiffMa'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   47.6754 seconds testing time.
+
+	Mesh created successfully with 5832000 Hex8 elements and 5929741 nodes!
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 180x180x180 (5832000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running StiffMa2_LNX_Sca_sf42_nel180
+	Mesh created successfully with 5832000 Hex8 elements and 5929741 nodes!
+
+The global stiffness matrix will be computed with 45 chunk(s).
+Available memory on GPU before computations begin (MB): 16435.839
+Processing the SCALAR problem with 180x180x180 elements
+........
+Done StiffMa2_LNX_Sca_sf42_nel180
+__________
+
+  TimeResult with properties:
+
+            Name: 'StiffMa2_LNX_Sca_sf42_nel180/StiffMa'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   53.3153 seconds testing time.
+
+	Mesh created successfully with 5832000 Hex8 elements and 5929741 nodes!
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 180x180x180 (5832000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running StiffMa2_LNX_Sca_sf45_nel180
+	Mesh created successfully with 5832000 Hex8 elements and 5929741 nodes!
+
+The global stiffness matrix will be computed with 48 chunk(s).
+Available memory on GPU before computations begin (MB): 16435.839
+Processing the SCALAR problem with 180x180x180 elements
+........
+Done StiffMa2_LNX_Sca_sf45_nel180
+__________
+
+  TimeResult with properties:
+
+            Name: 'StiffMa2_LNX_Sca_sf45_nel180/StiffMa'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   56.7447 seconds testing time.
+
+	Mesh created successfully with 5832000 Hex8 elements and 5929741 nodes!
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 180x180x180 (5832000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running StiffMa2_LNX_Sca_sf48_nel180
+	Mesh created successfully with 5832000 Hex8 elements and 5929741 nodes!
+
+The global stiffness matrix will be computed with 50 chunk(s).
+Available memory on GPU before computations begin (MB): 16435.839
+Processing the SCALAR problem with 180x180x180 elements
+........
+Done StiffMa2_LNX_Sca_sf48_nel180
+__________
+
+  TimeResult with properties:
+
+            Name: 'StiffMa2_LNX_Sca_sf48_nel180/StiffMa'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   58.7013 seconds testing time.
+
+	Mesh created successfully with 5832000 Hex8 elements and 5929741 nodes!
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 180x180x180 (5832000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running StiffMa2_LNX_Sca_sf51_nel180
+	Mesh created successfully with 5832000 Hex8 elements and 5929741 nodes!
+
+The global stiffness matrix will be computed with 54 chunk(s).
+Available memory on GPU before computations begin (MB): 16435.839
+Processing the SCALAR problem with 180x180x180 elements
+.
+Done StiffMa2_LNX_Sca_sf51_nel180
+__________
+
+  TimeResult with properties:
+
+            Name: 'StiffMa2_LNX_Sca_sf51_nel180/StiffMa'
+           Valid: 1
+         Samples: [1x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   8.9183 seconds testing time.
+
+	Mesh created successfully with 5832000 Hex8 elements and 5929741 nodes!
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 180x180x180 (5832000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running StiffMa2_LNX_Sca_sf54_nel180
+	Mesh created successfully with 5832000 Hex8 elements and 5929741 nodes!
+
+The global stiffness matrix will be computed with 60 chunk(s).
+Available memory on GPU before computations begin (MB): 16435.839
+Processing the SCALAR problem with 180x180x180 elements
+.
+Done StiffMa2_LNX_Sca_sf54_nel180
+__________
+
+  TimeResult with properties:
+
+            Name: 'StiffMa2_LNX_Sca_sf54_nel180/StiffMa'
+           Valid: 1
+         Samples: [1x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   9.7373 seconds testing time.
+
+	Mesh created successfully with 5832000 Hex8 elements and 5929741 nodes!
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 180x180x180 (5832000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running StiffMa2_LNX_Sca_sf57_nel180
+	Mesh created successfully with 5832000 Hex8 elements and 5929741 nodes!
+
+The global stiffness matrix will be computed with 60 chunk(s).
+Available memory on GPU before computations begin (MB): 16435.839
+Processing the SCALAR problem with 180x180x180 elements
+.
+Done StiffMa2_LNX_Sca_sf57_nel180
+__________
+
+  TimeResult with properties:
+
+            Name: 'StiffMa2_LNX_Sca_sf57_nel180/StiffMa'
+           Valid: 1
+         Samples: [1x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   9.7472 seconds testing time.
+
+	Mesh created successfully with 5832000 Hex8 elements and 5929741 nodes!
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 180x180x180 (5832000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running StiffMa2_LNX_Sca_sf60_nel180
+	Mesh created successfully with 5832000 Hex8 elements and 5929741 nodes!
+
+The global stiffness matrix will be computed with 64 chunk(s).
+Available memory on GPU before computations begin (MB): 16435.839
+Processing the SCALAR problem with 180x180x180 elements
+.
+Done StiffMa2_LNX_Sca_sf60_nel180
+__________
+
+  TimeResult with properties:
+
+            Name: 'StiffMa2_LNX_Sca_sf60_nel180/StiffMa'
+           Valid: 1
+         Samples: [1x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   10.302 seconds testing time.
+
+	Mesh created successfully with 5832000 Hex8 elements and 5929741 nodes!
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 180x180x180 (5832000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running StiffMa2_LNX_Sca_sf63_nel180
+	Mesh created successfully with 5832000 Hex8 elements and 5929741 nodes!
+
+The global stiffness matrix will be computed with 64 chunk(s).
+Available memory on GPU before computations begin (MB): 16435.839
+Processing the SCALAR problem with 180x180x180 elements
+.
+Done StiffMa2_LNX_Sca_sf63_nel180
+__________
+
+  TimeResult with properties:
+
+            Name: 'StiffMa2_LNX_Sca_sf63_nel180/StiffMa'
+           Valid: 1
+         Samples: [1x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   10.3483 seconds testing time.
+
+	Mesh created successfully with 5832000 Hex8 elements and 5929741 nodes!
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 180x180x180 (5832000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running StiffMa2_LNX_Sca_sf66_nel180
+	Mesh created successfully with 5832000 Hex8 elements and 5929741 nodes!
+
+The global stiffness matrix will be computed with 72 chunk(s).
+Available memory on GPU before computations begin (MB): 16435.839
+Processing the SCALAR problem with 180x180x180 elements
+.
+Done StiffMa2_LNX_Sca_sf66_nel180
+__________
+
+  TimeResult with properties:
+
+            Name: 'StiffMa2_LNX_Sca_sf66_nel180/StiffMa'
+           Valid: 1
+         Samples: [1x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   11.5076 seconds testing time.
+
+	Mesh created successfully with 5832000 Hex8 elements and 5929741 nodes!
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 180x180x180 (5832000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running StiffMa2_LNX_Sca_sf69_nel180
+	Mesh created successfully with 5832000 Hex8 elements and 5929741 nodes!
+
+The global stiffness matrix will be computed with 72 chunk(s).
+Available memory on GPU before computations begin (MB): 16435.839
+Processing the SCALAR problem with 180x180x180 elements
+.
+Done StiffMa2_LNX_Sca_sf69_nel180
+__________
+
+  TimeResult with properties:
+
+            Name: 'StiffMa2_LNX_Sca_sf69_nel180/StiffMa'
+           Valid: 1
+         Samples: [1x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   11.4465 seconds testing time.
+
+	Mesh created successfully with 5832000 Hex8 elements and 5929741 nodes!
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 180x180x180 (5832000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running StiffMa2_LNX_Sca_sf72_nel180
+	Mesh created successfully with 5832000 Hex8 elements and 5929741 nodes!
+
+The global stiffness matrix will be computed with 75 chunk(s).
+Available memory on GPU before computations begin (MB): 16435.839
+Processing the SCALAR problem with 180x180x180 elements
+.
+Done StiffMa2_LNX_Sca_sf72_nel180
+__________
+
+  TimeResult with properties:
+
+            Name: 'StiffMa2_LNX_Sca_sf72_nel180/StiffMa'
+           Valid: 1
+         Samples: [1x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   11.9719 seconds testing time.
+
+	Mesh created successfully with 5832000 Hex8 elements and 5929741 nodes!
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 180x180x180 (5832000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running StiffMa2_LNX_Sca_sf75_nel180
+	Mesh created successfully with 5832000 Hex8 elements and 5929741 nodes!
+
+The global stiffness matrix will be computed with 80 chunk(s).
+Available memory on GPU before computations begin (MB): 16435.839
+Processing the SCALAR problem with 180x180x180 elements
+.
+Done StiffMa2_LNX_Sca_sf75_nel180
+__________
+
+  TimeResult with properties:
+
+            Name: 'StiffMa2_LNX_Sca_sf75_nel180/StiffMa'
+           Valid: 1
+         Samples: [1x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   12.5508 seconds testing time.
+
+	Mesh created successfully with 5832000 Hex8 elements and 5929741 nodes!
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 180x180x180 (5832000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running StiffMa2_LNX_Sca_sf78_nel180
+	Mesh created successfully with 5832000 Hex8 elements and 5929741 nodes!
+
+The global stiffness matrix will be computed with 80 chunk(s).
+Available memory on GPU before computations begin (MB): 16435.839
+Processing the SCALAR problem with 180x180x180 elements
+.
+Done StiffMa2_LNX_Sca_sf78_nel180
+__________
+
+  TimeResult with properties:
+
+            Name: 'StiffMa2_LNX_Sca_sf78_nel180/StiffMa'
+           Valid: 1
+         Samples: [1x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   12.5868 seconds testing time.
+
+	Mesh created successfully with 5832000 Hex8 elements and 5929741 nodes!
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 180x180x180 (5832000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running StiffMa2_LNX_Sca_sf81_nel180
+	Mesh created successfully with 5832000 Hex8 elements and 5929741 nodes!
+
+The global stiffness matrix will be computed with 90 chunk(s).
+Available memory on GPU before computations begin (MB): 16435.839
+Processing the SCALAR problem with 180x180x180 elements
+.
+Done StiffMa2_LNX_Sca_sf81_nel180
+__________
+
+  TimeResult with properties:
+
+            Name: 'StiffMa2_LNX_Sca_sf81_nel180/StiffMa'
+           Valid: 1
+         Samples: [1x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   13.8594 seconds testing time.
+
+	Mesh created successfully with 5832000 Hex8 elements and 5929741 nodes!
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 180x180x180 (5832000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running StiffMa2_LNX_Sca_sf84_nel180
+	Mesh created successfully with 5832000 Hex8 elements and 5929741 nodes!
+
+The global stiffness matrix will be computed with 90 chunk(s).
+Available memory on GPU before computations begin (MB): 16435.839
+Processing the SCALAR problem with 180x180x180 elements
+.
+Done StiffMa2_LNX_Sca_sf84_nel180
+__________
+
+  TimeResult with properties:
+
+            Name: 'StiffMa2_LNX_Sca_sf84_nel180/StiffMa'
+           Valid: 1
+         Samples: [1x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   13.8838 seconds testing time.
+
+	Mesh created successfully with 5832000 Hex8 elements and 5929741 nodes!
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 180x180x180 (5832000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running StiffMa2_LNX_Sca_sf87_nel180
+	Mesh created successfully with 5832000 Hex8 elements and 5929741 nodes!
+
+The global stiffness matrix will be computed with 90 chunk(s).
+Available memory on GPU before computations begin (MB): 16435.839
+Processing the SCALAR problem with 180x180x180 elements
+.
+Done StiffMa2_LNX_Sca_sf87_nel180
+__________
+
+  TimeResult with properties:
+
+            Name: 'StiffMa2_LNX_Sca_sf87_nel180/StiffMa'
+           Valid: 1
+         Samples: [1x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   13.8756 seconds testing time.
+
+	Mesh created successfully with 5832000 Hex8 elements and 5929741 nodes!
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 180x180x180 (5832000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running StiffMa2_LNX_Sca_sf90_nel180
+	Mesh created successfully with 5832000 Hex8 elements and 5929741 nodes!
+
+The global stiffness matrix will be computed with 96 chunk(s).
+Available memory on GPU before computations begin (MB): 16435.839
+Processing the SCALAR problem with 180x180x180 elements
+.
+Done StiffMa2_LNX_Sca_sf90_nel180
+__________
+
+  TimeResult with properties:
+
+            Name: 'StiffMa2_LNX_Sca_sf90_nel180/StiffMa'
+           Valid: 1
+         Samples: [1x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   14.722 seconds testing time.
+
+	Mesh created successfully with 5832000 Hex8 elements and 5929741 nodes!
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 180x180x180 (5832000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running StiffMa2_LNX_Sca_sf93_nel180
+	Mesh created successfully with 5832000 Hex8 elements and 5929741 nodes!
+
+The global stiffness matrix will be computed with 96 chunk(s).
+Available memory on GPU before computations begin (MB): 16435.839
+Processing the SCALAR problem with 180x180x180 elements
+.
+Done StiffMa2_LNX_Sca_sf93_nel180
+__________
+
+  TimeResult with properties:
+
+            Name: 'StiffMa2_LNX_Sca_sf93_nel180/StiffMa'
+           Valid: 1
+         Samples: [1x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   14.7776 seconds testing time.
+
+	Mesh created successfully with 5832000 Hex8 elements and 5929741 nodes!
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 180x180x180 (5832000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running StiffMa2_LNX_Sca_sf96_nel180
+	Mesh created successfully with 5832000 Hex8 elements and 5929741 nodes!
+
+The global stiffness matrix will be computed with 100 chunk(s).
+Available memory on GPU before computations begin (MB): 16435.839
+Processing the SCALAR problem with 180x180x180 elements
+.
+Done StiffMa2_LNX_Sca_sf96_nel180
+__________
+
+  TimeResult with properties:
+
+            Name: 'StiffMa2_LNX_Sca_sf96_nel180/StiffMa'
+           Valid: 1
+         Samples: [1x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   15.3204 seconds testing time.
+
+	Mesh created successfully with 5832000 Hex8 elements and 5929741 nodes!
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 180x180x180 (5832000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running StiffMa2_LNX_Sca_sf99_nel180
+	Mesh created successfully with 5832000 Hex8 elements and 5929741 nodes!
+
+The global stiffness matrix will be computed with 100 chunk(s).
+Available memory on GPU before computations begin (MB): 16435.839
+Processing the SCALAR problem with 180x180x180 elements
+.
+Done StiffMa2_LNX_Sca_sf99_nel180
+__________
+
+  TimeResult with properties:
+
+            Name: 'StiffMa2_LNX_Sca_sf99_nel180/StiffMa'
+           Valid: 1
+         Samples: [1x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   15.2506 seconds testing time.
+
+	Mesh created successfully with 5832000 Hex8 elements and 5929741 nodes!
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 180x180x180 (5832000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running StiffMa2_LNX_Sca_sf102_nel180
+	Mesh created successfully with 5832000 Hex8 elements and 5929741 nodes!
+
+The global stiffness matrix will be computed with 108 chunk(s).
+Available memory on GPU before computations begin (MB): 16435.839
+Processing the SCALAR problem with 180x180x180 elements
+.
+Done StiffMa2_LNX_Sca_sf102_nel180
+__________
+
+  TimeResult with properties:
+
+            Name: 'StiffMa2_LNX_Sca_sf102_nel180/StiffMa'
+           Valid: 1
+         Samples: [1x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   16.567 seconds testing time.
+
+	Mesh created successfully with 5832000 Hex8 elements and 5929741 nodes!
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 180x180x180 (5832000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running StiffMa2_LNX_Sca_sf105_nel180
+	Mesh created successfully with 5832000 Hex8 elements and 5929741 nodes!
+
+The global stiffness matrix will be computed with 108 chunk(s).
+Available memory on GPU before computations begin (MB): 16435.839
+Processing the SCALAR problem with 180x180x180 elements
+.
+Done StiffMa2_LNX_Sca_sf105_nel180
+__________
+
+  TimeResult with properties:
+
+            Name: 'StiffMa2_LNX_Sca_sf105_nel180/StiffMa'
+           Valid: 1
+         Samples: [1x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   16.4254 seconds testing time.
+
+	Mesh created successfully with 5832000 Hex8 elements and 5929741 nodes!
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 180x180x180 (5832000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running StiffMa2_LNX_Sca_sf108_nel180
+	Mesh created successfully with 5832000 Hex8 elements and 5929741 nodes!
+
+The global stiffness matrix will be computed with 120 chunk(s).
+Available memory on GPU before computations begin (MB): 16435.839
+Processing the SCALAR problem with 180x180x180 elements
+.
+Done StiffMa2_LNX_Sca_sf108_nel180
+__________
+
+  TimeResult with properties:
+
+            Name: 'StiffMa2_LNX_Sca_sf108_nel180/StiffMa'
+           Valid: 1
+         Samples: [1x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   18.1819 seconds testing time.
+
+	Mesh created successfully with 5832000 Hex8 elements and 5929741 nodes!
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 180x180x180 (5832000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running StiffMa2_LNX_Sca_sf111_nel180
+	Mesh created successfully with 5832000 Hex8 elements and 5929741 nodes!
+
+The global stiffness matrix will be computed with 120 chunk(s).
+Available memory on GPU before computations begin (MB): 16435.839
+Processing the SCALAR problem with 180x180x180 elements
+.
+Done StiffMa2_LNX_Sca_sf111_nel180
+__________
+
+  TimeResult with properties:
+
+            Name: 'StiffMa2_LNX_Sca_sf111_nel180/StiffMa'
+           Valid: 1
+         Samples: [1x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   18.1041 seconds testing time.
+
+	Mesh created successfully with 5832000 Hex8 elements and 5929741 nodes!
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 180x180x180 (5832000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running StiffMa2_LNX_Sca_sf114_nel180
+	Mesh created successfully with 5832000 Hex8 elements and 5929741 nodes!
+
+The global stiffness matrix will be computed with 120 chunk(s).
+Available memory on GPU before computations begin (MB): 16435.839
+Processing the SCALAR problem with 180x180x180 elements
+.
+Done StiffMa2_LNX_Sca_sf114_nel180
+__________
+
+  TimeResult with properties:
+
+            Name: 'StiffMa2_LNX_Sca_sf114_nel180/StiffMa'
+           Valid: 1
+         Samples: [1x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   18.1368 seconds testing time.
+
+	Mesh created successfully with 5832000 Hex8 elements and 5929741 nodes!
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 180x180x180 (5832000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running StiffMa2_LNX_Sca_sf117_nel180
+	Mesh created successfully with 5832000 Hex8 elements and 5929741 nodes!
+
+The global stiffness matrix will be computed with 120 chunk(s).
+Available memory on GPU before computations begin (MB): 16435.839
+Processing the SCALAR problem with 180x180x180 elements
+.
+Done StiffMa2_LNX_Sca_sf117_nel180
+__________
+
+  TimeResult with properties:
+
+            Name: 'StiffMa2_LNX_Sca_sf117_nel180/StiffMa'
+           Valid: 1
+         Samples: [1x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   18.0402 seconds testing time.
+
+	Mesh created successfully with 5832000 Hex8 elements and 5929741 nodes!
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 180x180x180 (5832000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running StiffMa2_LNX_Sca_sf120_nel180
+	Mesh created successfully with 5832000 Hex8 elements and 5929741 nodes!
+
+The global stiffness matrix will be computed with 125 chunk(s).
+Available memory on GPU before computations begin (MB): 16435.839
+Processing the SCALAR problem with 180x180x180 elements
+.
+Done StiffMa2_LNX_Sca_sf120_nel180
+__________
+
+  TimeResult with properties:
+
+            Name: 'StiffMa2_LNX_Sca_sf120_nel180/StiffMa'
+           Valid: 1
+         Samples: [1x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   18.7896 seconds testing time.
+
+	Mesh created successfully with 5832000 Hex8 elements and 5929741 nodes!
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 180x180x180 (5832000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running StiffMa2_LNX_Sca_sf123_nel180
+	Mesh created successfully with 5832000 Hex8 elements and 5929741 nodes!
+
+The global stiffness matrix will be computed with 125 chunk(s).
+Available memory on GPU before computations begin (MB): 16435.839
+Processing the SCALAR problem with 180x180x180 elements
+.
+Done StiffMa2_LNX_Sca_sf123_nel180
+__________
+
+  TimeResult with properties:
+
+            Name: 'StiffMa2_LNX_Sca_sf123_nel180/StiffMa'
+           Valid: 1
+         Samples: [1x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   18.7353 seconds testing time.
+
+	Mesh created successfully with 5832000 Hex8 elements and 5929741 nodes!
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 180x180x180 (5832000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running StiffMa2_LNX_Sca_sf126_nel180
+	Mesh created successfully with 5832000 Hex8 elements and 5929741 nodes!
+
+The global stiffness matrix will be computed with 135 chunk(s).
+Available memory on GPU before computations begin (MB): 16435.839
+Processing the SCALAR problem with 180x180x180 elements
+.
+Done StiffMa2_LNX_Sca_sf126_nel180
+__________
+
+  TimeResult with properties:
+
+            Name: 'StiffMa2_LNX_Sca_sf126_nel180/StiffMa'
+           Valid: 1
+         Samples: [1x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   20.1547 seconds testing time.
+
+	Mesh created successfully with 5832000 Hex8 elements and 5929741 nodes!
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 180x180x180 (5832000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running StiffMa2_LNX_Sca_sf129_nel180
+	Mesh created successfully with 5832000 Hex8 elements and 5929741 nodes!
+
+The global stiffness matrix will be computed with 135 chunk(s).
+Available memory on GPU before computations begin (MB): 16435.839
+Processing the SCALAR problem with 180x180x180 elements
+.
+Done StiffMa2_LNX_Sca_sf129_nel180
+__________
+
+  TimeResult with properties:
+
+            Name: 'StiffMa2_LNX_Sca_sf129_nel180/StiffMa'
+           Valid: 1
+         Samples: [1x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   20.1272 seconds testing time.
+
+	Mesh created successfully with 5832000 Hex8 elements and 5929741 nodes!
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 180x180x180 (5832000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running StiffMa2_LNX_Sca_sf132_nel180
+	Mesh created successfully with 5832000 Hex8 elements and 5929741 nodes!
+
+The global stiffness matrix will be computed with 135 chunk(s).
+Available memory on GPU before computations begin (MB): 16435.839
+Processing the SCALAR problem with 180x180x180 elements
+.
+Done StiffMa2_LNX_Sca_sf132_nel180
+__________
+
+  TimeResult with properties:
+
+            Name: 'StiffMa2_LNX_Sca_sf132_nel180/StiffMa'
+           Valid: 1
+         Samples: [1x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   20.149 seconds testing time.
+
+	Mesh created successfully with 5832000 Hex8 elements and 5929741 nodes!
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 180x180x180 (5832000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running StiffMa2_LNX_Sca_sf135_nel180
+	Mesh created successfully with 5832000 Hex8 elements and 5929741 nodes!
+
+The global stiffness matrix will be computed with 144 chunk(s).
+Available memory on GPU before computations begin (MB): 16435.839
+Processing the SCALAR problem with 180x180x180 elements
+.
+Done StiffMa2_LNX_Sca_sf135_nel180
+__________
+
+  TimeResult with properties:
+
+            Name: 'StiffMa2_LNX_Sca_sf135_nel180/StiffMa'
+           Valid: 1
+         Samples: [1x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   21.3736 seconds testing time.
+
+	Mesh created successfully with 5832000 Hex8 elements and 5929741 nodes!
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 180x180x180 (5832000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running StiffMa2_LNX_Sca_sf138_nel180
+	Mesh created successfully with 5832000 Hex8 elements and 5929741 nodes!
+
+The global stiffness matrix will be computed with 144 chunk(s).
+Available memory on GPU before computations begin (MB): 16435.839
+Processing the SCALAR problem with 180x180x180 elements
+.
+Done StiffMa2_LNX_Sca_sf138_nel180
+__________
+
+  TimeResult with properties:
+
+            Name: 'StiffMa2_LNX_Sca_sf138_nel180/StiffMa'
+           Valid: 1
+         Samples: [1x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   21.498 seconds testing time.
+
+	Mesh created successfully with 5832000 Hex8 elements and 5929741 nodes!
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 180x180x180 (5832000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running StiffMa2_LNX_Sca_sf141_nel180
+	Mesh created successfully with 5832000 Hex8 elements and 5929741 nodes!
+
+The global stiffness matrix will be computed with 144 chunk(s).
+Available memory on GPU before computations begin (MB): 16435.839
+Processing the SCALAR problem with 180x180x180 elements
+.
+Done StiffMa2_LNX_Sca_sf141_nel180
+__________
+
+  TimeResult with properties:
+
+            Name: 'StiffMa2_LNX_Sca_sf141_nel180/StiffMa'
+           Valid: 1
+         Samples: [1x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   21.357 seconds testing time.
+
+	Mesh created successfully with 5832000 Hex8 elements and 5929741 nodes!
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 180x180x180 (5832000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running StiffMa2_LNX_Sca_sf144_nel180
+	Mesh created successfully with 5832000 Hex8 elements and 5929741 nodes!
+
+The global stiffness matrix will be computed with 150 chunk(s).
+Available memory on GPU before computations begin (MB): 16435.839
+Processing the SCALAR problem with 180x180x180 elements
+.
+Done StiffMa2_LNX_Sca_sf144_nel180
+__________
+
+  TimeResult with properties:
+
+            Name: 'StiffMa2_LNX_Sca_sf144_nel180/StiffMa'
+           Valid: 1
+         Samples: [1x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   22.2505 seconds testing time.
+
+	Mesh created successfully with 5832000 Hex8 elements and 5929741 nodes!
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 180x180x180 (5832000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running StiffMa2_LNX_Sca_sf147_nel180
+	Mesh created successfully with 5832000 Hex8 elements and 5929741 nodes!
+
+The global stiffness matrix will be computed with 150 chunk(s).
+Available memory on GPU before computations begin (MB): 16435.839
+Processing the SCALAR problem with 180x180x180 elements
+.
+Done StiffMa2_LNX_Sca_sf147_nel180
+__________
+
+  TimeResult with properties:
+
+            Name: 'StiffMa2_LNX_Sca_sf147_nel180/StiffMa'
+           Valid: 1
+         Samples: [1x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   22.2327 seconds testing time.
+
+	Mesh created successfully with 5832000 Hex8 elements and 5929741 nodes!
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 180x180x180 (5832000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running StiffMa2_LNX_Sca_sf150_nel180
+	Mesh created successfully with 5832000 Hex8 elements and 5929741 nodes!
+
+The global stiffness matrix will be computed with 160 chunk(s).
+Available memory on GPU before computations begin (MB): 16435.839
+Processing the SCALAR problem with 180x180x180 elements
+.
+Done StiffMa2_LNX_Sca_sf150_nel180
+__________
+
+  TimeResult with properties:
+
+            Name: 'StiffMa2_LNX_Sca_sf150_nel180/StiffMa'
+           Valid: 1
+         Samples: [1x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   23.6484 seconds testing time.
+
+	Mesh created successfully with 5832000 Hex8 elements and 5929741 nodes!
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 180x180x180 (5832000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running StiffMa2_LNX_Sca_sf153_nel180
+	Mesh created successfully with 5832000 Hex8 elements and 5929741 nodes!
+
+The global stiffness matrix will be computed with 160 chunk(s).
+Available memory on GPU before computations begin (MB): 16435.839
+Processing the SCALAR problem with 180x180x180 elements
+.
+Done StiffMa2_LNX_Sca_sf153_nel180
+__________
+
+  TimeResult with properties:
+
+            Name: 'StiffMa2_LNX_Sca_sf153_nel180/StiffMa'
+           Valid: 1
+         Samples: [1x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   23.6481 seconds testing time.
+
+	Mesh created successfully with 5832000 Hex8 elements and 5929741 nodes!
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 180x180x180 (5832000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running StiffMa2_LNX_Sca_sf156_nel180
+	Mesh created successfully with 5832000 Hex8 elements and 5929741 nodes!
+
+The global stiffness matrix will be computed with 160 chunk(s).
+Available memory on GPU before computations begin (MB): 16435.839
+Processing the SCALAR problem with 180x180x180 elements
+.
+Done StiffMa2_LNX_Sca_sf156_nel180
+__________
+
+  TimeResult with properties:
+
+            Name: 'StiffMa2_LNX_Sca_sf156_nel180/StiffMa'
+           Valid: 1
+         Samples: [1x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   23.7479 seconds testing time.
+
+	Mesh created successfully with 5832000 Hex8 elements and 5929741 nodes!
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 180x180x180 (5832000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running StiffMa2_LNX_Sca_sf159_nel180
+	Mesh created successfully with 5832000 Hex8 elements and 5929741 nodes!
+
+The global stiffness matrix will be computed with 160 chunk(s).
+Available memory on GPU before computations begin (MB): 16435.839
+Processing the SCALAR problem with 180x180x180 elements
+.
+Done StiffMa2_LNX_Sca_sf159_nel180
+__________
+
+  TimeResult with properties:
+
+            Name: 'StiffMa2_LNX_Sca_sf159_nel180/StiffMa'
+           Valid: 1
+         Samples: [1x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   23.6527 seconds testing time.
+
+	Mesh created successfully with 5832000 Hex8 elements and 5929741 nodes!
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 180x180x180 (5832000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running StiffMa2_LNX_Sca_sf162_nel180
+	Mesh created successfully with 5832000 Hex8 elements and 5929741 nodes!
+
+The global stiffness matrix will be computed with 180 chunk(s).
+Available memory on GPU before computations begin (MB): 16435.839
+Processing the SCALAR problem with 180x180x180 elements
+.
+Done StiffMa2_LNX_Sca_sf162_nel180
+__________
+
+  TimeResult with properties:
+
+            Name: 'StiffMa2_LNX_Sca_sf162_nel180/StiffMa'
+           Valid: 1
+         Samples: [1x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   26.3534 seconds testing time.
+
+	Mesh created successfully with 5832000 Hex8 elements and 5929741 nodes!
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 180x180x180 (5832000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running StiffMa2_LNX_Sca_sf165_nel180
+	Mesh created successfully with 5832000 Hex8 elements and 5929741 nodes!
+
+The global stiffness matrix will be computed with 180 chunk(s).
+Available memory on GPU before computations begin (MB): 16435.839
+Processing the SCALAR problem with 180x180x180 elements
+.
+Done StiffMa2_LNX_Sca_sf165_nel180
+__________
+
+  TimeResult with properties:
+
+            Name: 'StiffMa2_LNX_Sca_sf165_nel180/StiffMa'
+           Valid: 1
+         Samples: [1x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   26.3866 seconds testing time.
+
+	Mesh created successfully with 5832000 Hex8 elements and 5929741 nodes!
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 180x180x180 (5832000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running StiffMa2_LNX_Sca_sf168_nel180
+	Mesh created successfully with 5832000 Hex8 elements and 5929741 nodes!
+
+The global stiffness matrix will be computed with 180 chunk(s).
+Available memory on GPU before computations begin (MB): 16435.839
+Processing the SCALAR problem with 180x180x180 elements
+.
+Done StiffMa2_LNX_Sca_sf168_nel180
+__________
+
+  TimeResult with properties:
+
+            Name: 'StiffMa2_LNX_Sca_sf168_nel180/StiffMa'
+           Valid: 1
+         Samples: [1x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   26.4415 seconds testing time.
+
+	Mesh created successfully with 5832000 Hex8 elements and 5929741 nodes!
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 180x180x180 (5832000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running StiffMa2_LNX_Sca_sf171_nel180
+	Mesh created successfully with 5832000 Hex8 elements and 5929741 nodes!
+
+The global stiffness matrix will be computed with 180 chunk(s).
+Available memory on GPU before computations begin (MB): 16435.839
+Processing the SCALAR problem with 180x180x180 elements
+.
+Done StiffMa2_LNX_Sca_sf171_nel180
+__________
+
+  TimeResult with properties:
+
+            Name: 'StiffMa2_LNX_Sca_sf171_nel180/StiffMa'
+           Valid: 1
+         Samples: [1x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   26.3824 seconds testing time.
+
+	Mesh created successfully with 5832000 Hex8 elements and 5929741 nodes!
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 180x180x180 (5832000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running StiffMa2_LNX_Sca_sf174_nel180
+	Mesh created successfully with 5832000 Hex8 elements and 5929741 nodes!
+
+The global stiffness matrix will be computed with 180 chunk(s).
+Available memory on GPU before computations begin (MB): 16435.839
+Processing the SCALAR problem with 180x180x180 elements
+.
+Done StiffMa2_LNX_Sca_sf174_nel180
+__________
+
+  TimeResult with properties:
+
+            Name: 'StiffMa2_LNX_Sca_sf174_nel180/StiffMa'
+           Valid: 1
+         Samples: [1x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   26.5577 seconds testing time.
+
+	Mesh created successfully with 5832000 Hex8 elements and 5929741 nodes!
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 180x180x180 (5832000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running StiffMa2_LNX_Sca_sf177_nel180
+	Mesh created successfully with 5832000 Hex8 elements and 5929741 nodes!
+
+The global stiffness matrix will be computed with 180 chunk(s).
+Available memory on GPU before computations begin (MB): 16435.839
+Processing the SCALAR problem with 180x180x180 elements
+.
+Done StiffMa2_LNX_Sca_sf177_nel180
+__________
+
+  TimeResult with properties:
+
+            Name: 'StiffMa2_LNX_Sca_sf177_nel180/StiffMa'
+           Valid: 1
+         Samples: [1x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   26.4567 seconds testing time.
+
+	Mesh created successfully with 5832000 Hex8 elements and 5929741 nodes!
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 180x180x180 (5832000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running StiffMa2_LNX_Sca_sf180_nel180
+	Mesh created successfully with 5832000 Hex8 elements and 5929741 nodes!
+
+The global stiffness matrix will be computed with 192 chunk(s).
+Available memory on GPU before computations begin (MB): 16435.839
+Processing the SCALAR problem with 180x180x180 elements
+.
+Done StiffMa2_LNX_Sca_sf180_nel180
+__________
+
+  TimeResult with properties:
+
+            Name: 'StiffMa2_LNX_Sca_sf180_nel180/StiffMa'
+           Valid: 1
+         Samples: [1x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   28.181 seconds testing time.
+
+
+
+A total of 61 time experiments was executed!
+Date and time at the beginning of the process: 	24-May-2020 12:39:44 
+Date and time at the end of the process: 	24-May-2020 13:04:24
+
+
+ans =
+
+  61x7 table
+
+                    Name                     SampleSize     Mean      StandardDeviation      Min      Median       Max  
+    _____________________________________    __________    _______    _________________    _______    _______    _______
+
+    StiffMa2_LNX_Sca_sf0_nel180/StiffMa          4         0.46068         0.012511         0.4439    0.46267    0.47347
+    StiffMa2_LNX_Sca_sf3_nel180/StiffMa          4         0.81978       0.00059894        0.81934    0.81957    0.82067
+    StiffMa2_LNX_Sca_sf6_nel180/StiffMa          4          1.3828        0.0018255         1.3815     1.3822     1.3855
+    StiffMa2_LNX_Sca_sf9_nel180/StiffMa          4          1.6555       0.00077584         1.6543     1.6559     1.6559
+    StiffMa2_LNX_Sca_sf12_nel180/StiffMa         4          2.3648        0.0026458         2.3632     2.3637     2.3688
+    StiffMa2_LNX_Sca_sf15_nel180/StiffMa         4          2.4931        0.0010543         2.4916     2.4933     2.4941
+    StiffMa2_LNX_Sca_sf18_nel180/StiffMa         4          3.0532        0.0017596         3.0507     3.0538     3.0545
+    StiffMa2_LNX_Sca_sf21_nel180/StiffMa         4          3.5944         0.010113         3.5855     3.5922     3.6078
+    StiffMa2_LNX_Sca_sf24_nel180/StiffMa         4          3.7272        0.0028909         3.7241     3.7275     3.7297
+    StiffMa2_LNX_Sca_sf27_nel180/StiffMa         4          4.4107        0.0015887         4.4097       4.41     4.4131
+    StiffMa2_LNX_Sca_sf30_nel180/StiffMa         4          4.7043        0.0033871         4.7021     4.7028     4.7093
+    StiffMa2_LNX_Sca_sf33_nel180/StiffMa         4          5.2452        0.0034099         5.2421      5.245     5.2489
+    StiffMa2_LNX_Sca_sf36_nel180/StiffMa         4          5.8355         0.004585         5.8318     5.8341      5.842
+    StiffMa2_LNX_Sca_sf39_nel180/StiffMa         4          5.7973        0.0031274         5.7927     5.7988     5.7992
+    StiffMa2_LNX_Sca_sf42_nel180/StiffMa         4          6.5188        0.0038156         6.5156     6.5177     6.5243
+    StiffMa2_LNX_Sca_sf45_nel180/StiffMa         4          6.9415          0.00669         6.9333     6.9418     6.9491
+    StiffMa2_LNX_Sca_sf48_nel180/StiffMa         4          7.1831        0.0039314           7.18      7.182     7.1884
+    StiffMa2_LNX_Sca_sf51_nel180/StiffMa         1           8.004                0          8.004      8.004      8.004
+    StiffMa2_LNX_Sca_sf54_nel180/StiffMa         1          8.8022                0         8.8022     8.8022     8.8022
+    StiffMa2_LNX_Sca_sf57_nel180/StiffMa         1          8.8404                0         8.8404     8.8404     8.8404
+    StiffMa2_LNX_Sca_sf60_nel180/StiffMa         1          9.3726                0         9.3726     9.3726     9.3726
+    StiffMa2_LNX_Sca_sf63_nel180/StiffMa         1          9.4273                0         9.4273     9.4273     9.4273
+    StiffMa2_LNX_Sca_sf66_nel180/StiffMa         1          10.549                0         10.549     10.549     10.549
+    StiffMa2_LNX_Sca_sf69_nel180/StiffMa         1          10.521                0         10.521     10.521     10.521
+    StiffMa2_LNX_Sca_sf72_nel180/StiffMa         1          11.028                0         11.028     11.028     11.028
+    StiffMa2_LNX_Sca_sf75_nel180/StiffMa         1          11.619                0         11.619     11.619     11.619
+    StiffMa2_LNX_Sca_sf78_nel180/StiffMa         1          11.653                0         11.653     11.653     11.653
+    StiffMa2_LNX_Sca_sf81_nel180/StiffMa         1          12.932                0         12.932     12.932     12.932
+    StiffMa2_LNX_Sca_sf84_nel180/StiffMa         1          12.952                0         12.952     12.952     12.952
+    StiffMa2_LNX_Sca_sf87_nel180/StiffMa         1           12.96                0          12.96      12.96      12.96
+    StiffMa2_LNX_Sca_sf90_nel180/StiffMa         1           13.79                0          13.79      13.79      13.79
+    StiffMa2_LNX_Sca_sf93_nel180/StiffMa         1          13.805                0         13.805     13.805     13.805
+    StiffMa2_LNX_Sca_sf96_nel180/StiffMa         1          14.383                0         14.383     14.383     14.383
+    StiffMa2_LNX_Sca_sf99_nel180/StiffMa         1          14.321                0         14.321     14.321     14.321
+    StiffMa2_LNX_Sca_sf102_nel180/StiffMa        1          15.473                0         15.473     15.473     15.473
+    StiffMa2_LNX_Sca_sf105_nel180/StiffMa        1          15.513                0         15.513     15.513     15.513
+    StiffMa2_LNX_Sca_sf108_nel180/StiffMa        1          17.216                0         17.216     17.216     17.216
+    StiffMa2_LNX_Sca_sf111_nel180/StiffMa        1          17.173                0         17.173     17.173     17.173
+    StiffMa2_LNX_Sca_sf114_nel180/StiffMa        1          17.194                0         17.194     17.194     17.194
+    StiffMa2_LNX_Sca_sf117_nel180/StiffMa        1          17.116                0         17.116     17.116     17.116
+    StiffMa2_LNX_Sca_sf120_nel180/StiffMa        1          17.851                0         17.851     17.851     17.851
+    StiffMa2_LNX_Sca_sf123_nel180/StiffMa        1          17.838                0         17.838     17.838     17.838
+    StiffMa2_LNX_Sca_sf126_nel180/StiffMa        1          19.199                0         19.199     19.199     19.199
+    StiffMa2_LNX_Sca_sf129_nel180/StiffMa        1          19.217                0         19.217     19.217     19.217
+    StiffMa2_LNX_Sca_sf132_nel180/StiffMa        1          19.219                0         19.219     19.219     19.219
+    StiffMa2_LNX_Sca_sf135_nel180/StiffMa        1          20.445                0         20.445     20.445     20.445
+    StiffMa2_LNX_Sca_sf138_nel180/StiffMa        1          20.539                0         20.539     20.539     20.539
+    StiffMa2_LNX_Sca_sf141_nel180/StiffMa        1          20.434                0         20.434     20.434     20.434
+    StiffMa2_LNX_Sca_sf144_nel180/StiffMa        1          21.314                0         21.314     21.314     21.314
+    StiffMa2_LNX_Sca_sf147_nel180/StiffMa        1          21.313                0         21.313     21.313     21.313
+    StiffMa2_LNX_Sca_sf150_nel180/StiffMa        1          22.706                0         22.706     22.706     22.706
+    StiffMa2_LNX_Sca_sf153_nel180/StiffMa        1          22.711                0         22.711     22.711     22.711
+    StiffMa2_LNX_Sca_sf156_nel180/StiffMa        1          22.803                0         22.803     22.803     22.803
+    StiffMa2_LNX_Sca_sf159_nel180/StiffMa        1          22.737                0         22.737     22.737     22.737
+    StiffMa2_LNX_Sca_sf162_nel180/StiffMa        1          25.459                0         25.459     25.459     25.459
+    StiffMa2_LNX_Sca_sf165_nel180/StiffMa        1          25.452                0         25.452     25.452     25.452
+    StiffMa2_LNX_Sca_sf168_nel180/StiffMa        1           25.49                0          25.49      25.49      25.49
+    StiffMa2_LNX_Sca_sf171_nel180/StiffMa        1          25.457                0         25.457     25.457     25.457
+    StiffMa2_LNX_Sca_sf174_nel180/StiffMa        1          25.606                0         25.606     25.606     25.606
+    StiffMa2_LNX_Sca_sf177_nel180/StiffMa        1          25.534                0         25.534     25.534     25.534
+    StiffMa2_LNX_Sca_sf180_nel180/StiffMa        1          27.246                0         27.246     27.246     27.246
+

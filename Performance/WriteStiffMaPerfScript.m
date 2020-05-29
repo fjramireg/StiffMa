@@ -6,7 +6,7 @@ function WriteStiffMaPerfScript(sets)
 %
 %   Written by Francisco Javier Ramirez-Gil, fjramireg@gmail.com
 %   Universidad Nacional de Colombia - Medellin
-%   Created:  12/02/2020. Version: 1.4
+%   Created:  18/02/2020. Version: 1.4
 
 Filename = [sets.name,'.m'];
 fileID = fopen(Filename,'w');
@@ -20,20 +20,20 @@ fprintf(fileID,'sets.nel = %d;\n',sets.nel^3);
 if strcmp(sets.prob_type,'Scalar')
     fprintf(fileID,"sets.sz = %d;\n",36);
     fprintf(fileID,"sets.edof = %d;\n",8);
-    fprintf(fileID,"c = %d;\n",1);
+    fprintf(fileID,"c = %d;\n",384.1);
     
     % 'Scalar'-'CPU'
     if strcmp(sets.proc_type,'CPU')
         fprintf(fileID,'\n%s\n','%% StiffMa-CPU-Scalar');
-        fprintf(fileID,'[iK, jK] = Index_ssa(Mesh.elements, sets);\n');
+        fprintf(fileID,"[iK, jK] = Index_sa(Mesh.elements', sets);\n");
         fprintf(fileID,'Ke = eStiff_ssa(Mesh, c, sets);\n');
         fprintf(fileID,'K = AssemblyStiffMa(iK, jK, Ke, sets.dTE, sets.dTN);\n');
         
         % 'Scalar'-'CPU'-'Symmetry'
         fprintf(fileID,'\n%s\n','%% StiffMa-CPU-Scalar-Symmetry');
-        fprintf(fileID,'[iK, jK] = Index_sssa(Mesh.elements, sets);\n');
-        fprintf(fileID,'Ke = eStiff_sssa(Mesh, c, sets);\n');
-        fprintf(fileID,'K = AssemblyStiffMa(iK, jK, Ke, sets.dTE, sets.dTN);\n');
+        fprintf(fileID,'[iKs, jKs] = Index_sssa(Mesh.elements, sets);\n');
+        fprintf(fileID,'Kes = eStiff_sssa(Mesh, c, sets);\n');
+        fprintf(fileID,'Ks = AssemblyStiffMa(iKs, jKs, Kes, sets.dTE, sets.dTN);\n');
         
         % 'Scalar'-'GPU'-'Symmetry'
     elseif strcmp(sets.proc_type,'GPU')
@@ -46,7 +46,8 @@ if strcmp(sets.prob_type,'Scalar')
         fprintf(fileID,'\n%s\n','%% StiffMa-GPU-Scalar-Symmetry');
         fprintf(fileID,'[iKd, jKd] = Index_spsa(elementsGPU, sets);\n');
         fprintf(fileID,'Ked = eStiff_spsa(elementsGPU, nodesGPU, c, sets);\n');
-        fprintf(fileID,'clear elementsGPU nodesGPU;\n');
+        % fprintf(fileID,'clear elementsGPU nodesGPU;\n');
+        fprintf(fileID,'wait(d);\n');
         fprintf(fileID,'K = AssemblyStiffMa(iKd, jKd, Ked, sets.dTE, sets.dTN);\n');
         fprintf(fileID,'wait(d);\n');
         
@@ -64,15 +65,15 @@ elseif strcmp(sets.prob_type,'Vector')
     % 'Vector'-'CPU'
     if strcmp(sets.proc_type,'CPU')
         fprintf(fileID,'\n%s\n','%% StiffMa-CPU-Vector');
-        fprintf(fileID,'[iK, jK] = Index_vsa(elements, sets);\n');
-        fprintf(fileID,'Ke = eStiff_vsa(Mesh, c, sets);\n');
+        fprintf(fileID,"[iK, jK] = Index_va(Mesh.elements', sets);\n");
+        fprintf(fileID,'Ke = eStiff_vsa(Mesh, MP, sets);\n');
         fprintf(fileID,'K = AssemblyStiffMa(iK, jK, Ke, sets.dTE, sets.dTN);\n');
         
         % 'Vector'-'CPU'-'Symmetry'
         fprintf(fileID,'\n%s\n','%% StiffMa-CPU-Vector-Symmetry');
-        fprintf(fileID,'[iK, jK] = Index_vssa(Mesh.elements, sets);\n');
-        fprintf(fileID,'Ke = eStiff_vssa(Mesh, c, sets);\n');
-        fprintf(fileID,'K = AssemblyStiffMa(iK, jK, Ke, sets.dTE, sets.dTN);\n');
+        fprintf(fileID,'[iKs, jKs] = Index_vssa(Mesh.elements, sets);\n');
+        fprintf(fileID,'Kes = eStiff_vssa(Mesh, MP, sets);\n');
+        fprintf(fileID,'Ks = AssemblyStiffMa(iKs, jKs, Kes, sets.dTE, sets.dTN);\n');
         
         % 'Vector'-'GPU'-'Symmetry'
     elseif strcmp(sets.proc_type,'GPU')
@@ -85,7 +86,8 @@ elseif strcmp(sets.prob_type,'Vector')
         fprintf(fileID,'\n%s\n','%% StiffMa-GPU-Vector-Symmetry');
         fprintf(fileID,'[iKd, jKd] = Index_vpsa(elementsGPU, sets);\n');
         fprintf(fileID,'Ked = eStiff_vpsa(elementsGPU, nodesGPU, MP, sets);\n');
-        fprintf(fileID,'clear elementsGPU nodesGPU;\n');
+        % fprintf(fileID,'clear elementsGPU nodesGPU;\n');
+        fprintf(fileID,'wait(d);\n');
         fprintf(fileID,'K = AssemblyStiffMa(iKd, jKd, Ked, sets.dTE, sets.dTN);\n');
         fprintf(fileID,'wait(d);\n');
         

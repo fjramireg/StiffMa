@@ -26,7 +26,7 @@ function K = StiffMa_vs(Mesh, MP, sets)
 %   Created:  16/01/2019. Version: 1.0
 
 %% Index computation
-[iK, jK] = Index_vs(Mesh.elements, sets);              % Row/column indices of tril(K)
+[iK, jK] = Index_va(Mesh.elements, sets);              % Row/column indices of tril(K)
 
 %% Element stiffness matrix computation
 Ke = eStiff_vsa(Mesh, MP, sets);                       % Entries of tril(K)

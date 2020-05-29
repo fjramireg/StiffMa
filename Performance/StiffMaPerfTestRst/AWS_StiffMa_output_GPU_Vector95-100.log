@@ -1,0 +1,208 @@
+[Warning: Directory already exists.] 
+[> In runStiffMaTest (line 28)] 
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 95x95x95 (857375)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running StiffMaLNX_GVdu32_95
+	Mesh created successfully with 857375 Hex8 elements and 884736 nodes!
+
+........
+Done StiffMaLNX_GVdu32_95
+__________
+
+  TimeResult with properties:
+
+            Name: 'StiffMaLNX_GVdu32_95/StiffMa_GPU_Vector_Symmetry'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   10.9012 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 96x96x96 (884736)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running StiffMaLNX_GVdu32_96
+	Mesh created successfully with 884736 Hex8 elements and 912673 nodes!
+
+.
+Done StiffMaLNX_GVdu32_96
+__________
+
+  TimeResult with properties:
+
+            Name: 'StiffMaLNX_GVdu32_96/StiffMa_GPU_Vector_Symmetry'
+           Valid: 1
+         Samples: [1x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   1.7888 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 97x97x97 (912673)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running StiffMaLNX_GVdu32_97
+	Mesh created successfully with 912673 Hex8 elements and 941192 nodes!
+
+.
+Done StiffMaLNX_GVdu32_97
+__________
+
+  TimeResult with properties:
+
+            Name: 'StiffMaLNX_GVdu32_97/StiffMa_GPU_Vector_Symmetry'
+           Valid: 1
+         Samples: [1x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   1.7928 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 98x98x98 (941192)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running StiffMaLNX_GVdu32_98
+	Mesh created successfully with 941192 Hex8 elements and 970299 nodes!
+
+.
+Done StiffMaLNX_GVdu32_98
+__________
+
+  TimeResult with properties:
+
+            Name: 'StiffMaLNX_GVdu32_98/StiffMa_GPU_Vector_Symmetry'
+           Valid: 1
+         Samples: [1x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   1.8512 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 99x99x99 (970299)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running StiffMaLNX_GVdu32_99
+	Mesh created successfully with 970299 Hex8 elements and 1000000 nodes!
+
+.
+Done StiffMaLNX_GVdu32_99
+__________
+
+  TimeResult with properties:
+
+            Name: 'StiffMaLNX_GVdu32_99/StiffMa_GPU_Vector_Symmetry'
+           Valid: 1
+         Samples: [1x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   1.8862 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 100x100x100 (1000000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running StiffMaLNX_GVdu32_100
+	Mesh created successfully with 1000000 Hex8 elements and 1030301 nodes!
+
+
+================================================================================
+Error occurred in StiffMaLNX_GVdu32_100/StiffMa_GPU_Vector_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'MATLAB:nomem'
+    --------------
+    Error Details:
+    --------------
+    Out of memory. Type "help memory" for your options.
+    
+    Error in AssemblyStiffMa (line 25)
+        K = accumarray([iK,jK], Ke, [], [], [], 1);
+    
+    Error in StiffMaLNX_GVdu32_100 (line 21)
+    K = AssemblyStiffMa(iKd, jKd, Ked, sets.dTE, sets.dTN);
+================================================================================
+.
+Done StiffMaLNX_GVdu32_100
+__________
+
+Failure Summary:
+
+     Name                                               Failed  Incomplete  Reason(s)
+    ==================================================================================
+     StiffMaLNX_GVdu32_100/StiffMa_GPU_Vector_Symmetry    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'StiffMaLNX_GVdu32_100/StiffMa_GPU_Vector_Symmetry'
+           Valid: 0
+         Samples: [1x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   1.2587 seconds testing time.
+
+
+
+A total of 6 time experiments was executed!
+Date and time at the beginning of the process: 	12-May-2020 22:57:26 
+Date and time at the end of the process: 	12-May-2020 22:58:01
+
+
+ans =
+
+  6x7 table
+
+                          Name                           SampleSize     Mean     StandardDeviation     Min      Median     Max  
+    _________________________________________________    __________    ______    _________________    ______    ______    ______
+
+    StiffMaLNX_GVdu32_95/StiffMa_GPU_Vector_Symmetry         4         1.2734        0.0081348        1.2637    1.2732    1.2836
+    StiffMaLNX_GVdu32_96/StiffMa_GPU_Vector_Symmetry         1         1.6397                0        1.6397    1.6397    1.6397
+    StiffMaLNX_GVdu32_97/StiffMa_GPU_Vector_Symmetry         1         1.6675                0        1.6675    1.6675    1.6675
+    StiffMaLNX_GVdu32_98/StiffMa_GPU_Vector_Symmetry         1         1.7122                0        1.7122    1.7122    1.7122
+    StiffMaLNX_GVdu32_99/StiffMa_GPU_Vector_Symmetry         1         1.7516                0        1.7516    1.7516    1.7516
+    StiffMaLNX_GVdu32_100/StiffMa_GPU_Vector_Symmetry        1            NaN              NaN           NaN       NaN       NaN
+

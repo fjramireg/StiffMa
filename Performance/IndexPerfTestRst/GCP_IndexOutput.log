@@ -1,0 +1,1078 @@
+[Warning: Directory already exists.] 
+[> In runIndexTest (line 28)] 
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 10x10x10 (1000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Processor type: 'CPU'
+
+Running ITestLNX_CSs32_10
+
+Mesh created successfully with 1000 Hex8 elements and 1331 nodes!
+.......... ...
+================================================================================
+ITestLNX_CSs32_10/Index_CPU_Scalar was filtered.
+    Test Diagnostic: The MeasuredTime should not be too close to the precision of the framework.
+================================================================================
+....... ..
+================================================================================
+ITestLNX_CSs32_10/Index_CPU_Scalar_Symmetry was filtered.
+    Test Diagnostic: The MeasuredTime should not be too close to the precision of the framework.
+================================================================================
+
+Done ITestLNX_CSs32_10
+__________
+
+Failure Summary:
+
+     Name                                         Failed  Incomplete  Reason(s)
+    ==========================================================================================
+     ITestLNX_CSs32_10/Index_CPU_Scalar                       X       Filtered by assumption.
+    ------------------------------------------------------------------------------------------
+     ITestLNX_CSs32_10/Index_CPU_Scalar_Symmetry              X       Filtered by assumption.
+  1x2 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   0 Valid, 2 Invalid.
+   0.36347 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 10x10x10 (1000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running ITestLNX_GSs32_10
+
+Mesh created successfully with 1000 Hex8 elements and 1331 nodes!
+.......... .......... .....
+Done ITestLNX_GSs32_10
+__________
+
+  TimeResult with properties:
+
+            Name: 'ITestLNX_GSs32_10/Index_GPU_Scalar_Symmetry'
+           Valid: 1
+         Samples: [21x7 table]
+    TestActivity: [25x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   0.58921 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 10x10x10 (1000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Vector'
+Processor type: 'CPU'
+
+Running ITestLNX_CVs32_10
+
+Mesh created successfully with 1000 Hex8 elements and 1331 nodes!
+.......... .......... .......... .......... ..........
+.......... .......... .......... .......... ..........
+.......... .......... .......... .......... ..........
+.......... .......... ..
+Done ITestLNX_CVs32_10
+__________
+
+  1x2 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   2 Valid, 0 Invalid.
+   2.973 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 10x10x10 (1000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running ITestLNX_GVs32_10
+
+Mesh created successfully with 1000 Hex8 elements and 1331 nodes!
+........
+Done ITestLNX_GVs32_10
+__________
+
+  TimeResult with properties:
+
+            Name: 'ITestLNX_GVs32_10/Index_GPU_Vector_Symmetry'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   0.29507 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 10x10x10 (1000)
+Date type for 'elements': 'uint64'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Processor type: 'CPU'
+
+Running ITestLNX_CSs64_10
+
+Mesh created successfully with 1000 Hex8 elements and 1331 nodes!
+.......... .......... .......... .......... ..........
+.......... .......... .......... .......... ..........
+.......... .......... .......... .......... ..........
+.......... .......... .......... .......... ..........
+.......... .......... .......... .......... ..........
+..........[Warning: Target Relative Margin of Error not met after running the MaxSamples
+for ITestLNX_CSs64_10/Index_CPU_Scalar.] 
+ ........
+Done ITestLNX_CSs64_10
+__________
+
+  1x2 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   2 Valid, 0 Invalid.
+   3.7425 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 10x10x10 (1000)
+Date type for 'elements': 'uint64'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running ITestLNX_GSs64_10
+
+Mesh created successfully with 1000 Hex8 elements and 1331 nodes!
+.......... .......... .......... .......... ..........
+.......... .......... .......... ..
+Done ITestLNX_GSs64_10
+__________
+
+  TimeResult with properties:
+
+            Name: 'ITestLNX_GSs64_10/Index_GPU_Scalar_Symmetry'
+           Valid: 1
+         Samples: [78x7 table]
+    TestActivity: [82x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   1.143 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 10x10x10 (1000)
+Date type for 'elements': 'uint64'
+Date type for 'nodes': 'single'
+Problem type: 'Vector'
+Processor type: 'CPU'
+
+Running ITestLNX_CVs64_10
+
+Mesh created successfully with 1000 Hex8 elements and 1331 nodes!
+.......... .......... .......... .......... ..........
+.......... .......... ..........
+Done ITestLNX_CVs64_10
+__________
+
+  1x2 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   2 Valid, 0 Invalid.
+   6.3252 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 10x10x10 (1000)
+Date type for 'elements': 'uint64'
+Date type for 'nodes': 'single'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running ITestLNX_GVs64_10
+
+Mesh created successfully with 1000 Hex8 elements and 1331 nodes!
+.......... .......... .......... .......... .....
+Done ITestLNX_GVs64_10
+__________
+
+  TimeResult with properties:
+
+            Name: 'ITestLNX_GVs64_10/Index_GPU_Vector_Symmetry'
+           Valid: 1
+         Samples: [41x7 table]
+    TestActivity: [45x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   0.64407 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 20x20x20 (8000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Processor type: 'CPU'
+
+Running ITestLNX_CSs32_20
+
+Mesh created successfully with 8000 Hex8 elements and 9261 nodes!
+.......... .......... .......... .......... ..........
+.......... .......... ........
+Done ITestLNX_CSs32_20
+__________
+
+  1x2 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   2 Valid, 0 Invalid.
+   2.1851 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 20x20x20 (8000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running ITestLNX_GSs32_20
+
+Mesh created successfully with 8000 Hex8 elements and 9261 nodes!
+.......... .......... .......... .......... ..........
+.......... .......... ..
+Done ITestLNX_GSs32_20
+__________
+
+  TimeResult with properties:
+
+            Name: 'ITestLNX_GSs32_20/Index_GPU_Scalar_Symmetry'
+           Valid: 1
+         Samples: [68x7 table]
+    TestActivity: [72x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   0.95587 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 20x20x20 (8000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Vector'
+Processor type: 'CPU'
+
+Running ITestLNX_CVs32_20
+
+Mesh created successfully with 8000 Hex8 elements and 9261 nodes!
+.......... .......... .......... .......... ..........
+...
+Done ITestLNX_CVs32_20
+__________
+
+  1x2 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   2 Valid, 0 Invalid.
+   10.2661 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 20x20x20 (8000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running ITestLNX_GVs32_20
+
+Mesh created successfully with 8000 Hex8 elements and 9261 nodes!
+.......... .......... .......... .......... ..........
+.......... .......... .......... .......... ..........
+.......... ..
+Done ITestLNX_GVs32_20
+__________
+
+  TimeResult with properties:
+
+            Name: 'ITestLNX_GVs32_20/Index_GPU_Vector_Symmetry'
+           Valid: 1
+         Samples: [108x7 table]
+    TestActivity: [112x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   1.7702 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 20x20x20 (8000)
+Date type for 'elements': 'uint64'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Processor type: 'CPU'
+
+Running ITestLNX_CSs64_20
+
+Mesh created successfully with 8000 Hex8 elements and 9261 nodes!
+.......... .......... .......... .......... ..........
+.......... .......... ......
+Done ITestLNX_CSs64_20
+__________
+
+  1x2 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   2 Valid, 0 Invalid.
+   20.9848 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 20x20x20 (8000)
+Date type for 'elements': 'uint64'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running ITestLNX_GSs64_20
+
+Mesh created successfully with 8000 Hex8 elements and 9261 nodes!
+.........
+Done ITestLNX_GSs64_20
+__________
+
+  TimeResult with properties:
+
+            Name: 'ITestLNX_GSs64_20/Index_GPU_Scalar_Symmetry'
+           Valid: 1
+         Samples: [5x7 table]
+    TestActivity: [9x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   0.12884 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 20x20x20 (8000)
+Date type for 'elements': 'uint64'
+Date type for 'nodes': 'single'
+Problem type: 'Vector'
+Processor type: 'CPU'
+
+Running ITestLNX_CVs64_20
+
+Mesh created successfully with 8000 Hex8 elements and 9261 nodes!
+.......... .......... .......... .......... ..........
+.....
+Done ITestLNX_CVs64_20
+__________
+
+  1x2 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   2 Valid, 0 Invalid.
+   63.267 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 20x20x20 (8000)
+Date type for 'elements': 'uint64'
+Date type for 'nodes': 'single'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running ITestLNX_GVs64_20
+
+Mesh created successfully with 8000 Hex8 elements and 9261 nodes!
+........
+Done ITestLNX_GVs64_20
+__________
+
+  TimeResult with properties:
+
+            Name: 'ITestLNX_GVs64_20/Index_GPU_Vector_Symmetry'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   0.13782 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 40x40x40 (64000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Processor type: 'CPU'
+
+Running ITestLNX_CSs32_40
+
+Mesh created successfully with 64000 Hex8 elements and 68921 nodes!
+.......... .......... .......... .......... ..........
+.......... ..........
+Done ITestLNX_CSs32_40
+__________
+
+  1x2 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   2 Valid, 0 Invalid.
+   9.3173 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 40x40x40 (64000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running ITestLNX_GSs32_40
+
+Mesh created successfully with 64000 Hex8 elements and 68921 nodes!
+........
+Done ITestLNX_GSs32_40
+__________
+
+  TimeResult with properties:
+
+            Name: 'ITestLNX_GSs32_40/Index_GPU_Scalar_Symmetry'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   0.15514 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 40x40x40 (64000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Vector'
+Processor type: 'CPU'
+
+Running ITestLNX_CVs32_40
+
+Mesh created successfully with 64000 Hex8 elements and 68921 nodes!
+.......... .........
+Done ITestLNX_CVs32_40
+__________
+
+  1x2 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   2 Valid, 0 Invalid.
+   17.5268 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 40x40x40 (64000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running ITestLNX_GVs32_40
+
+Mesh created successfully with 64000 Hex8 elements and 68921 nodes!
+..........
+Done ITestLNX_GVs32_40
+__________
+
+  TimeResult with properties:
+
+            Name: 'ITestLNX_GVs32_40/Index_GPU_Vector_Symmetry'
+           Valid: 1
+         Samples: [6x7 table]
+    TestActivity: [10x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   0.29805 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 40x40x40 (64000)
+Date type for 'elements': 'uint64'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Processor type: 'CPU'
+
+Running ITestLNX_CSs64_40
+
+Mesh created successfully with 64000 Hex8 elements and 68921 nodes!
+.......... .......... .......... .......... ..........
+.......
+Done ITestLNX_CSs64_40
+__________
+
+  1x2 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   2 Valid, 0 Invalid.
+   72.0688 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 40x40x40 (64000)
+Date type for 'elements': 'uint64'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running ITestLNX_GSs64_40
+
+Mesh created successfully with 64000 Hex8 elements and 68921 nodes!
+.......... .......... ...
+Done ITestLNX_GSs64_40
+__________
+
+  TimeResult with properties:
+
+            Name: 'ITestLNX_GSs64_40/Index_GPU_Scalar_Symmetry'
+           Valid: 1
+         Samples: [19x7 table]
+    TestActivity: [23x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   0.31072 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 40x40x40 (64000)
+Date type for 'elements': 'uint64'
+Date type for 'nodes': 'single'
+Problem type: 'Vector'
+Processor type: 'CPU'
+
+Running ITestLNX_CVs64_40
+
+Mesh created successfully with 64000 Hex8 elements and 68921 nodes!
+.......... .......... .
+Done ITestLNX_CVs64_40
+__________
+
+  1x2 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   2 Valid, 0 Invalid.
+   266.1253 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 40x40x40 (64000)
+Date type for 'elements': 'uint64'
+Date type for 'nodes': 'single'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running ITestLNX_GVs64_40
+
+Mesh created successfully with 64000 Hex8 elements and 68921 nodes!
+........
+Done ITestLNX_GVs64_40
+__________
+
+  TimeResult with properties:
+
+            Name: 'ITestLNX_GVs64_40/Index_GPU_Vector_Symmetry'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   0.26936 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 80x80x80 (512000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Processor type: 'CPU'
+
+Running ITestLNX_CSs32_80
+
+Mesh created successfully with 512000 Hex8 elements and 531441 nodes!
+..
+Done ITestLNX_CSs32_80
+__________
+
+  1x2 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   2 Valid, 0 Invalid.
+   2.6919 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 80x80x80 (512000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running ITestLNX_GSs32_80
+
+Mesh created successfully with 512000 Hex8 elements and 531441 nodes!
+........
+Done ITestLNX_GSs32_80
+__________
+
+  TimeResult with properties:
+
+            Name: 'ITestLNX_GSs32_80/Index_GPU_Scalar_Symmetry'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   0.23323 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 80x80x80 (512000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Vector'
+Processor type: 'CPU'
+
+Running ITestLNX_CVs32_80
+
+Mesh created successfully with 512000 Hex8 elements and 531441 nodes!
+..
+Done ITestLNX_CVs32_80
+__________
+
+  1x2 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   2 Valid, 0 Invalid.
+   16.3388 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 80x80x80 (512000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running ITestLNX_GVs32_80
+
+Mesh created successfully with 512000 Hex8 elements and 531441 nodes!
+........
+Done ITestLNX_GVs32_80
+__________
+
+  TimeResult with properties:
+
+            Name: 'ITestLNX_GVs32_80/Index_GPU_Vector_Symmetry'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   1.4309 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 80x80x80 (512000)
+Date type for 'elements': 'uint64'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Processor type: 'CPU'
+
+Running ITestLNX_CSs64_80
+
+Mesh created successfully with 512000 Hex8 elements and 531441 nodes!
+..
+Done ITestLNX_CSs64_80
+__________
+
+  1x2 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   2 Valid, 0 Invalid.
+   30.4032 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 80x80x80 (512000)
+Date type for 'elements': 'uint64'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running ITestLNX_GSs64_80
+
+Mesh created successfully with 512000 Hex8 elements and 531441 nodes!
+........
+Done ITestLNX_GSs64_80
+__________
+
+  TimeResult with properties:
+
+            Name: 'ITestLNX_GSs64_80/Index_GPU_Scalar_Symmetry'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   0.31033 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 80x80x80 (512000)
+Date type for 'elements': 'uint64'
+Date type for 'nodes': 'single'
+Problem type: 'Vector'
+Processor type: 'CPU'
+
+Running ITestLNX_CVs64_80
+
+Mesh created successfully with 512000 Hex8 elements and 531441 nodes!
+..
+Done ITestLNX_CVs64_80
+__________
+
+  1x2 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   2 Valid, 0 Invalid.
+   253.0885 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 80x80x80 (512000)
+Date type for 'elements': 'uint64'
+Date type for 'nodes': 'single'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running ITestLNX_GVs64_80
+
+Mesh created successfully with 512000 Hex8 elements and 531441 nodes!
+........
+Done ITestLNX_GVs64_80
+__________
+
+  TimeResult with properties:
+
+            Name: 'ITestLNX_GVs64_80/Index_GPU_Vector_Symmetry'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   1.4931 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 160x160x160 (4096000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Processor type: 'CPU'
+
+Running ITestLNX_CSs32_160
+
+Mesh created successfully with 4096000 Hex8 elements and 4173281 nodes!
+..
+Done ITestLNX_CSs32_160
+__________
+
+  1x2 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   2 Valid, 0 Invalid.
+   19.0715 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 160x160x160 (4096000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running ITestLNX_GSs32_160
+
+Mesh created successfully with 4096000 Hex8 elements and 4173281 nodes!
+........
+Done ITestLNX_GSs32_160
+__________
+
+  TimeResult with properties:
+
+            Name: 'ITestLNX_GSs32_160/Index_GPU_Scalar_Symmetry'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   1.4202 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 160x160x160 (4096000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Vector'
+Processor type: 'CPU'
+
+Running ITestLNX_CVs32_160
+
+Mesh created successfully with 4096000 Hex8 elements and 4173281 nodes!
+..
+Done ITestLNX_CVs32_160
+__________
+
+  1x2 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   2 Valid, 0 Invalid.
+   127.886 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 160x160x160 (4096000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running ITestLNX_GVs32_160
+
+Mesh created successfully with 4096000 Hex8 elements and 4173281 nodes!
+........
+Done ITestLNX_GVs32_160
+__________
+
+  TimeResult with properties:
+
+            Name: 'ITestLNX_GVs32_160/Index_GPU_Vector_Symmetry'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   12.6526 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 160x160x160 (4096000)
+Date type for 'elements': 'uint64'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Processor type: 'CPU'
+
+Running ITestLNX_CSs64_160
+
+Mesh created successfully with 4096000 Hex8 elements and 4173281 nodes!
+..
+Done ITestLNX_CSs64_160
+__________
+
+  1x2 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   2 Valid, 0 Invalid.
+   253.0544 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 160x160x160 (4096000)
+Date type for 'elements': 'uint64'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running ITestLNX_GSs64_160
+
+Mesh created successfully with 4096000 Hex8 elements and 4173281 nodes!
+........
+Done ITestLNX_GSs64_160
+__________
+
+  TimeResult with properties:
+
+            Name: 'ITestLNX_GSs64_160/Index_GPU_Scalar_Symmetry'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   2.0986 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 160x160x160 (4096000)
+Date type for 'elements': 'uint64'
+Date type for 'nodes': 'single'
+Problem type: 'Vector'
+Processor type: 'CPU'
+
+Running ITestLNX_CVs64_160
+
+Mesh created successfully with 4096000 Hex8 elements and 4173281 nodes!

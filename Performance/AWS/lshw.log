@@ -1,0 +1,170 @@
+ip-172-31-39-7
+    description: Computer
+    product: HVM domU
+    vendor: Xen
+    version: 4.2.amazon
+    serial: ec23d898-245b-1297-62a8-a906a35f69d1
+    width: 64 bits
+    capabilities: smbios-2.7 dmi-2.7 smp vsyscall32
+    configuration: boot=normal uuid=98D823EC-5B24-9712-62A8-A906A35F69D1
+  *-core
+       description: Motherboard
+       physical id: 0
+     *-firmware
+          description: BIOS
+          vendor: Xen
+          physical id: 0
+          version: 4.2.amazon
+          date: 08/24/2006
+          size: 96KiB
+          capabilities: pci edd
+     *-cpu:0
+          description: CPU
+          product: Intel(R) Xeon(R) CPU E5-2686 v4 @ 2.30GHz
+          vendor: Intel Corp.
+          physical id: 401
+          bus info: cpu@0
+          slot: CPU 1
+          size: 2700MHz
+          capacity: 3GHz
+          width: 64 bits
+          capabilities: fpu fpu_exception wp vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx pdpe1gb rdtscp x86-64 constant_tsc rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch cpuid_fault invpcid_single pti fsgsbase bmi1 hle avx2 smep bmi2 erms invpcid rtm rdseed adx xsaveopt cpufreq
+     *-cpu:1
+          description: CPU
+          vendor: Intel
+          physical id: 402
+          bus info: cpu@1
+          slot: CPU 2
+          size: 2700MHz
+          capacity: 3GHz
+          capabilities: cpufreq
+     *-memory
+          description: System Memory
+          physical id: 1000
+          size: 61GiB
+          capabilities: ecc
+          configuration: errordetection=multi-bit-ecc
+        *-bank:0
+             description: DIMM RAM
+             physical id: 0
+             slot: DIMM 0
+             size: 16GiB
+             width: 64 bits
+        *-bank:1
+             description: DIMM RAM
+             physical id: 1
+             slot: DIMM 1
+             size: 16GiB
+             width: 64 bits
+        *-bank:2
+             description: DIMM RAM
+             physical id: 2
+             slot: DIMM 2
+             size: 16GiB
+             width: 64 bits
+        *-bank:3
+             description: DIMM RAM
+             physical id: 3
+             slot: DIMM 3
+             size: 13GiB
+             width: 64 bits
+     *-pci
+          description: Host bridge
+          product: 440FX - 82441FX PMC [Natoma]
+          vendor: Intel Corporation
+          physical id: 100
+          bus info: pci@0000:00:00.0
+          version: 02
+          width: 32 bits
+          clock: 33MHz
+        *-isa
+             description: ISA bridge
+             product: 82371SB PIIX3 ISA [Natoma/Triton II]
+             vendor: Intel Corporation
+             physical id: 1
+             bus info: pci@0000:00:01.0
+             version: 00
+             width: 32 bits
+             clock: 33MHz
+             capabilities: isa bus_master
+             configuration: latency=0
+        *-ide
+             description: IDE interface
+             product: 82371SB PIIX3 IDE [Natoma/Triton II]
+             vendor: Intel Corporation
+             physical id: 1.1
+             bus info: pci@0000:00:01.1
+             version: 00
+             width: 32 bits
+             clock: 33MHz
+             capabilities: ide isa_compatibility_mode-only_controller__supports_bus_mastering bus_master
+             configuration: driver=ata_piix latency=64
+             resources: irq:0 ioport:1f0(size=8) ioport:3f6 ioport:170(size=8) ioport:376 ioport:c100(size=16)
+        *-bridge UNCLAIMED
+             description: Bridge
+             product: 82371AB/EB/MB PIIX4 ACPI
+             vendor: Intel Corporation
+             physical id: 1.3
+             bus info: pci@0000:00:01.3
+             version: 01
+             width: 32 bits
+             clock: 33MHz
+             capabilities: bridge bus_master
+             configuration: latency=0
+        *-display:0 UNCLAIMED
+             description: VGA compatible controller
+             product: GD 5446
+             vendor: Cirrus Logic
+             physical id: 2
+             bus info: pci@0000:00:02.0
+             version: 00
+             width: 32 bits
+             clock: 33MHz
+             capabilities: vga_controller bus_master
+             configuration: latency=0
+             resources: memory:80000000-81ffffff memory:86004000-86004fff memory:c0000-dffff
+        *-network
+             description: Ethernet interface
+             product: Elastic Network Adapter (ENA)
+             vendor: Amazon.com, Inc.
+             physical id: 3
+             bus info: pci@0000:00:03.0
+             logical name: ens3
+             version: 00
+             serial: 0e:7a:99:90:67:83
+             width: 32 bits
+             clock: 33MHz
+             capabilities: pciexpress msix bus_master cap_list ethernet physical
+             configuration: broadcast=yes driver=ena driverversion=2.1.0K ip=172.31.39.7 latency=0 link=yes multicast=yes
+             resources: irq:0 memory:86000000-86003fff
+        *-display:1
+             description: 3D controller
+             product: GV100GL [Tesla V100 SXM2 16GB]
+             vendor: NVIDIA Corporation
+             physical id: 1e
+             bus info: pci@0000:00:1e.0
+             version: a1
+             width: 64 bits
+             clock: 33MHz
+             capabilities: pm msi pciexpress bus_master cap_list
+             configuration: driver=nvidia latency=248
+             resources: iomemory:100-ff irq:65 memory:84000000-84ffffff memory:1000000000-13ffffffff memory:82000000-83ffffff
+        *-generic
+             description: Unassigned class
+             product: Xen Platform Device
+             vendor: XenSource, Inc.
+             physical id: 1f
+             bus info: pci@0000:00:1f.0
+             version: 01
+             width: 32 bits
+             clock: 33MHz
+             capabilities: bus_master
+             configuration: driver=xen-platform-pci latency=0
+             resources: irq:47 ioport:c000(size=256) memory:85000000-85ffffff
+  *-network
+       description: Ethernet interface
+       physical id: 1
+       logical name: docker0
+       serial: 02:42:8c:1e:c4:e3
+       capabilities: ethernet physical
+       configuration: broadcast=yes driver=bridge driverversion=2.3 firmware=N/A ip=172.17.0.1 link=no multicast=yes

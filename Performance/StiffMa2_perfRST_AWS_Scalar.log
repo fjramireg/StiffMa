@@ -1,0 +1,695 @@
+[Warning: Directory already exists.] 
+[> In runStiffMaTest2 (line 28)] 
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 10x10x10 (1000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running StiffMa2_LNX_Sca10
+	Mesh created successfully with 1000 Hex8 elements and 1331 nodes!
+
+The global stiffness matrix will be computed with 1 chunk(s).
+Available memory on GPU before computations begin (MB): 16435.839
+Processing the SCALAR problem with 10x10x10 elements
+.......... .......... .......... ...
+Done StiffMa2_LNX_Sca10
+__________
+
+  TimeResult with properties:
+
+            Name: 'StiffMa2_LNX_Sca10/StiffMa'
+           Valid: 1
+         Samples: [29x7 table]
+    TestActivity: [33x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   1.3511 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 20x20x20 (8000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running StiffMa2_LNX_Sca20
+	Mesh created successfully with 8000 Hex8 elements and 9261 nodes!
+
+The global stiffness matrix will be computed with 1 chunk(s).
+Available memory on GPU before computations begin (MB): 16435.839
+Processing the SCALAR problem with 20x20x20 elements
+.........
+Done StiffMa2_LNX_Sca20
+__________
+
+  TimeResult with properties:
+
+            Name: 'StiffMa2_LNX_Sca20/StiffMa'
+           Valid: 1
+         Samples: [5x7 table]
+    TestActivity: [9x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   0.65951 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 40x40x40 (64000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running StiffMa2_LNX_Sca40
+	Mesh created successfully with 64000 Hex8 elements and 68921 nodes!
+
+The global stiffness matrix will be computed with 1 chunk(s).
+Available memory on GPU before computations begin (MB): 16435.839
+Processing the SCALAR problem with 40x40x40 elements
+.......... .......... .......... .......... ..........
+.......... .......... .......... .......... ..........
+.......... .......... .......... .......... ..........
+.......... .......... .......... .......... ..........
+.......... .......... ......
+Done StiffMa2_LNX_Sca40
+__________
+
+  TimeResult with properties:
+
+            Name: 'StiffMa2_LNX_Sca40/StiffMa'
+           Valid: 1
+         Samples: [222x7 table]
+    TestActivity: [226x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   5.44 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 80x80x80 (512000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running StiffMa2_LNX_Sca80
+	Mesh created successfully with 512000 Hex8 elements and 531441 nodes!
+
+The global stiffness matrix will be computed with 1 chunk(s).
+Available memory on GPU before computations begin (MB): 16435.839
+Processing the SCALAR problem with 80x80x80 elements
+.......... .......... .......... .......... ..........
+.......... .......... .......... .......... ..........
+..........
+Done StiffMa2_LNX_Sca80
+__________
+
+  TimeResult with properties:
+
+            Name: 'StiffMa2_LNX_Sca80/StiffMa'
+           Valid: 1
+         Samples: [106x7 table]
+    TestActivity: [110x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   6.5564 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 160x160x160 (4096000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running StiffMa2_LNX_Sca160
+	Mesh created successfully with 4096000 Hex8 elements and 4173281 nodes!
+
+The global stiffness matrix will be computed with 1 chunk(s).
+Available memory on GPU before computations begin (MB): 16435.839
+Processing the SCALAR problem with 160x160x160 elements
+........
+Done StiffMa2_LNX_Sca160
+__________
+
+  TimeResult with properties:
+
+            Name: 'StiffMa2_LNX_Sca160/StiffMa'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   3.5718 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 320x320x320 (32768000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running StiffMa2_LNX_Sca320
+	Mesh created successfully with 32768000 Hex8 elements and 33076161 nodes!
+
+
+================================================================================
+Error occurred while setting up or tearing down StiffMa2_LNX_Sca320.
+As a result, all StiffMa2_LNX_Sca320 tests failed and did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    ''
+    --------------
+    Error Details:
+    --------------
+    Error using StiffMa2_LNX_Sca320 (line 45)
+    No enough memory on the GPU to process the mesh.
+================================================================================
+
+Done StiffMa2_LNX_Sca320
+__________
+
+Failure Summary:
+
+     Name                         Failed  Incomplete  Reason(s)
+    ============================================================
+     StiffMa2_LNX_Sca320/StiffMa    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'StiffMa2_LNX_Sca320/StiffMa'
+           Valid: 0
+         Samples: [0x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   4.2129 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 324x324x324 (34012224)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running StiffMa2_LNX_Sca324
+	Mesh created successfully with 34012224 Hex8 elements and 34328125 nodes!
+
+
+================================================================================
+Error occurred while setting up or tearing down StiffMa2_LNX_Sca324.
+As a result, all StiffMa2_LNX_Sca324 tests failed and did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    ''
+    --------------
+    Error Details:
+    --------------
+    Error using StiffMa2_LNX_Sca324 (line 45)
+    No enough memory on the GPU to process the mesh.
+================================================================================
+
+Done StiffMa2_LNX_Sca324
+__________
+
+Failure Summary:
+
+     Name                         Failed  Incomplete  Reason(s)
+    ============================================================
+     StiffMa2_LNX_Sca324/StiffMa    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'StiffMa2_LNX_Sca324/StiffMa'
+           Valid: 0
+         Samples: [0x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   4.349 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 328x328x328 (35287552)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running StiffMa2_LNX_Sca328
+	Mesh created successfully with 35287552 Hex8 elements and 35611289 nodes!
+
+
+================================================================================
+Error occurred while setting up or tearing down StiffMa2_LNX_Sca328.
+As a result, all StiffMa2_LNX_Sca328 tests failed and did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    ''
+    --------------
+    Error Details:
+    --------------
+    Error using StiffMa2_LNX_Sca328 (line 45)
+    No enough memory on the GPU to process the mesh.
+================================================================================
+
+Done StiffMa2_LNX_Sca328
+__________
+
+Failure Summary:
+
+     Name                         Failed  Incomplete  Reason(s)
+    ============================================================
+     StiffMa2_LNX_Sca328/StiffMa    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'StiffMa2_LNX_Sca328/StiffMa'
+           Valid: 0
+         Samples: [0x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   4.5235 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 332x332x332 (36594368)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running StiffMa2_LNX_Sca332
+	Mesh created successfully with 36594368 Hex8 elements and 36926037 nodes!
+
+
+================================================================================
+Error occurred while setting up or tearing down StiffMa2_LNX_Sca332.
+As a result, all StiffMa2_LNX_Sca332 tests failed and did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    ''
+    --------------
+    Error Details:
+    --------------
+    Error using StiffMa2_LNX_Sca332 (line 45)
+    No enough memory on the GPU to process the mesh.
+================================================================================
+
+Done StiffMa2_LNX_Sca332
+__________
+
+Failure Summary:
+
+     Name                         Failed  Incomplete  Reason(s)
+    ============================================================
+     StiffMa2_LNX_Sca332/StiffMa    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'StiffMa2_LNX_Sca332/StiffMa'
+           Valid: 0
+         Samples: [0x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   4.615 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 336x336x336 (37933056)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running StiffMa2_LNX_Sca336
+	Mesh created successfully with 37933056 Hex8 elements and 38272753 nodes!
+
+
+================================================================================
+Error occurred while setting up or tearing down StiffMa2_LNX_Sca336.
+As a result, all StiffMa2_LNX_Sca336 tests failed and did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    ''
+    --------------
+    Error Details:
+    --------------
+    Error using StiffMa2_LNX_Sca336 (line 45)
+    No enough memory on the GPU to process the mesh.
+================================================================================
+
+Done StiffMa2_LNX_Sca336
+__________
+
+Failure Summary:
+
+     Name                         Failed  Incomplete  Reason(s)
+    ============================================================
+     StiffMa2_LNX_Sca336/StiffMa    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'StiffMa2_LNX_Sca336/StiffMa'
+           Valid: 0
+         Samples: [0x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   4.7929 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 340x340x340 (39304000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running StiffMa2_LNX_Sca340
+	Mesh created successfully with 39304000 Hex8 elements and 39651821 nodes!
+
+
+================================================================================
+Error occurred while setting up or tearing down StiffMa2_LNX_Sca340.
+As a result, all StiffMa2_LNX_Sca340 tests failed and did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    ''
+    --------------
+    Error Details:
+    --------------
+    Error using StiffMa2_LNX_Sca340 (line 45)
+    No enough memory on the GPU to process the mesh.
+================================================================================
+
+Done StiffMa2_LNX_Sca340
+__________
+
+Failure Summary:
+
+     Name                         Failed  Incomplete  Reason(s)
+    ============================================================
+     StiffMa2_LNX_Sca340/StiffMa    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'StiffMa2_LNX_Sca340/StiffMa'
+           Valid: 0
+         Samples: [0x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   4.9349 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 344x344x344 (40707584)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running StiffMa2_LNX_Sca344
+	Mesh created successfully with 40707584 Hex8 elements and 41063625 nodes!
+
+
+================================================================================
+Error occurred while setting up or tearing down StiffMa2_LNX_Sca344.
+As a result, all StiffMa2_LNX_Sca344 tests failed and did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    ''
+    --------------
+    Error Details:
+    --------------
+    Error using StiffMa2_LNX_Sca344 (line 45)
+    No enough memory on the GPU to process the mesh.
+================================================================================
+
+Done StiffMa2_LNX_Sca344
+__________
+
+Failure Summary:
+
+     Name                         Failed  Incomplete  Reason(s)
+    ============================================================
+     StiffMa2_LNX_Sca344/StiffMa    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'StiffMa2_LNX_Sca344/StiffMa'
+           Valid: 0
+         Samples: [0x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   5.3217 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 348x348x348 (42144192)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running StiffMa2_LNX_Sca348
+	Mesh created successfully with 42144192 Hex8 elements and 42508549 nodes!
+
+
+================================================================================
+Error occurred while setting up or tearing down StiffMa2_LNX_Sca348.
+As a result, all StiffMa2_LNX_Sca348 tests failed and did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    ''
+    --------------
+    Error Details:
+    --------------
+    Error using StiffMa2_LNX_Sca348 (line 45)
+    No enough memory on the GPU to process the mesh.
+================================================================================
+
+Done StiffMa2_LNX_Sca348
+__________
+
+Failure Summary:
+
+     Name                         Failed  Incomplete  Reason(s)
+    ============================================================
+     StiffMa2_LNX_Sca348/StiffMa    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'StiffMa2_LNX_Sca348/StiffMa'
+           Valid: 0
+         Samples: [0x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   5.1942 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 352x352x352 (43614208)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running StiffMa2_LNX_Sca352
+	Mesh created successfully with 43614208 Hex8 elements and 43986977 nodes!
+
+
+================================================================================
+Error occurred while setting up or tearing down StiffMa2_LNX_Sca352.
+As a result, all StiffMa2_LNX_Sca352 tests failed and did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    ''
+    --------------
+    Error Details:
+    --------------
+    Error using StiffMa2_LNX_Sca352 (line 45)
+    No enough memory on the GPU to process the mesh.
+================================================================================
+
+Done StiffMa2_LNX_Sca352
+__________
+
+Failure Summary:
+
+     Name                         Failed  Incomplete  Reason(s)
+    ============================================================
+     StiffMa2_LNX_Sca352/StiffMa    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'StiffMa2_LNX_Sca352/StiffMa'
+           Valid: 0
+         Samples: [0x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   5.3371 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 356x356x356 (45118016)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running StiffMa2_LNX_Sca356
+	Mesh created successfully with 45118016 Hex8 elements and 45499293 nodes!
+
+
+================================================================================
+Error occurred while setting up or tearing down StiffMa2_LNX_Sca356.
+As a result, all StiffMa2_LNX_Sca356 tests failed and did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    ''
+    --------------
+    Error Details:
+    --------------
+    Error using StiffMa2_LNX_Sca356 (line 45)
+    No enough memory on the GPU to process the mesh.
+================================================================================
+
+Done StiffMa2_LNX_Sca356
+__________
+
+Failure Summary:
+
+     Name                         Failed  Incomplete  Reason(s)
+    ============================================================
+     StiffMa2_LNX_Sca356/StiffMa    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'StiffMa2_LNX_Sca356/StiffMa'
+           Valid: 0
+         Samples: [0x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   5.4882 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 360x360x360 (46656000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running StiffMa2_LNX_Sca360
+	Mesh created successfully with 46656000 Hex8 elements and 47045881 nodes!
+
+
+================================================================================
+Error occurred while setting up or tearing down StiffMa2_LNX_Sca360.
+As a result, all StiffMa2_LNX_Sca360 tests failed and did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    ''
+    --------------
+    Error Details:
+    --------------
+    Error using StiffMa2_LNX_Sca360 (line 45)
+    No enough memory on the GPU to process the mesh.
+================================================================================
+
+Done StiffMa2_LNX_Sca360
+__________
+
+Failure Summary:
+
+     Name                         Failed  Incomplete  Reason(s)
+    ============================================================
+     StiffMa2_LNX_Sca360/StiffMa    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'StiffMa2_LNX_Sca360/StiffMa'
+           Valid: 0
+         Samples: [0x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   5.6856 seconds testing time.
+
+
+
+A total of 16 time experiments was executed!
+Date and time at the beginning of the process: 	22-May-2020 12:29:52 
+Date and time at the end of the process: 	22-May-2020 12:31:38
+
+
+ans =
+
+  16x7 table
+
+               Name                SampleSize      Mean      StandardDeviation      Min        Median       Max   
+    ___________________________    __________    ________    _________________    ________    ________    ________
+
+    StiffMa2_LNX_Sca10/StiffMa         29        0.011829        0.0018538        0.011106    0.011315    0.021208
+    StiffMa2_LNX_Sca20/StiffMa          5        0.012162       0.00057035        0.011669     0.01205     0.01307
+    StiffMa2_LNX_Sca40/StiffMa        222        0.016126        0.0072427        0.014812    0.015306     0.12063
+    StiffMa2_LNX_Sca80/StiffMa        106        0.048215         0.014936        0.044387    0.045069     0.13577
+    StiffMa2_LNX_Sca160/StiffMa         4         0.31162       0.00058078         0.31101     0.31154     0.31238
+    StiffMa2_LNX_Sca320/StiffMa         0             NaN              NaN             NaN         NaN         NaN
+    StiffMa2_LNX_Sca324/StiffMa         0             NaN              NaN             NaN         NaN         NaN
+    StiffMa2_LNX_Sca328/StiffMa         0             NaN              NaN             NaN         NaN         NaN
+    StiffMa2_LNX_Sca332/StiffMa         0             NaN              NaN             NaN         NaN         NaN
+    StiffMa2_LNX_Sca336/StiffMa         0             NaN              NaN             NaN         NaN         NaN
+    StiffMa2_LNX_Sca340/StiffMa         0             NaN              NaN             NaN         NaN         NaN
+    StiffMa2_LNX_Sca344/StiffMa         0             NaN              NaN             NaN         NaN         NaN
+    StiffMa2_LNX_Sca348/StiffMa         0             NaN              NaN             NaN         NaN         NaN
+    StiffMa2_LNX_Sca352/StiffMa         0             NaN              NaN             NaN         NaN         NaN
+    StiffMa2_LNX_Sca356/StiffMa         0             NaN              NaN             NaN         NaN         NaN
+    StiffMa2_LNX_Sca360/StiffMa         0             NaN              NaN             NaN         NaN         NaN
+

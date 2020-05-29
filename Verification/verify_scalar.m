@@ -54,42 +54,65 @@ elements = [1 5 9 8 10 14 18 17;% Element 1
     18 15 12 16 27 24 21 25;    % Element 7
     17 18 16 13 26 27 25 22];   % Element 8
 
+%% Settings
+dTE = 'uint32';     % Data precision for "elements" ['uint32', 'uint64']
+dTN = 'double';     % Data precision for "nodes" ['single' or 'double']
+Mesh.nodes = nodes;
+Mesh.elements = uint32(elements);
+[nel, nxe] = size(Mesh.elements);
+dxn = 1;            % For vector 3 (UX, UY, UZ). For scalar 1 (Temp)
+sets.dTE = dTE;     % Data precision for computing
+sets.dTN = dTN;     % Data precision for computing
+sets.nel = nel;     % Number of finite elements
+sets.nxe = nxe;     % Number of nodes per element
+sets.dxn = dxn;     % Number of DOFs per node 
+sets.edof= dxn*nxe; % Number of DOFs per element 
+sets.sz  = sets.edof * (sets.edof + 1) / 2; % Number of symmetry entries
+
+%% GPU Settings
+d = gpuDevice;
+sets.tbs      = d.MaxThreadsPerBlock;   % Max. Thread Block Size
+sets.numSMs   = d.MultiprocessorCount;  % Number of multiprocessors on the device
+sets.WarpSize = d.SIMDWidth;            % The warp size in threads
+
 %%  Stiffness matrix generation
 
 % ANSYS Computation
 % StiffMansys_mac(elements,nodes,c);                % ANSYS macro to generate tril(K)
+% !ansys171 -b -i StiffMaansys.mac -o StiffMaansys.out  % Execute ANSYS (must be on systeme path)
+% Copy generated files to the folder "ANSYS_vrst"
+
+% ANSYS importation
 % K_as = hb_to_msm ('ANSYS_rst/STIFF_ANSYS.HB');      % Import ANSYS result: tril(K)
 K_af = mm_to_msm ('ANSYS_rst/STIFF_ANSYS.mmf');     % Import ANSYS result: K
 % K_af2= StiffMansys_import('ANSYS_rst/');            % Import ANSYS result: K (built from element matrices)
 [~,MapVec,~] = importMappingFile('ANSYS_rst/STIFF_ANSYS.mapping'); % Import the ANSYS reorder vector
 
 % MATLAB Computation on serial CPU
-K_hf = StiffMas(elements,nodes,c);                  % MATLAB assembly on CPU: K
-K_hf2= K_hf(MapVec,MapVec);                         % Reorder K in MATLAB as ANSYS result
-K_hs = StiffMass(elements,nodes,c);                 % MATLAB assembly on CPU: tril(K)
-% K_hs2= tril((K_hs(MapVec,MapVec) + K_hs(MapVec,MapVec)')/2);                         % Reorder K in MATLAB as ANSYS result
+K_hf = StiffMa_ss(Mesh, c, sets);                   % MATLAB assembly on CPU: K
+K_hs = StiffMa_sss(Mesh, c, sets);                  % MATLAB assembly on CPU: tril(K)
 
-% Graphical comparison
-figure('color',[1,1,1]); spy(K_af,'or'); hold on;   % ANSYS vs MATLAB: 2D
+% MATLAB Computation on parallel GPU
+elementsGPU = gpuArray(Mesh.elements');
+nodesGPU = gpuArray(Mesh.nodes');
+K_ds = StiffMa_sps(elementsGPU, nodesGPU, c, sets); % MATLAB stiffness matrix on GPU (tril(K))
+K_ds2 = gather(K_ds);
+
+%% Comparison
+
+% Graphical comparison                              % ANSYS vs MATLAB: 2D
+figure('color',[1,1,1]); 
+spy(K_af,'or'); hold on;   
+K_hf2 = K_hf(MapVec,MapVec);                         % Reorder K in MATLAB as ANSYS result
 spy(K_hf2,'.b'); legend('ANSYS','MATLAB'); hold off; 
 
-figure('color',[1,1,1]); spy3(K_af,'or'); hold on;  % ANSYS vs MATLAB: 3D
+% Graphical comparison                              % ANSYS vs MATLAB: 3D
+figure('color',[1,1,1]); 
+spy3(K_af,'or'); hold on;  
 spy3(K_hf2,'.b'); legend('ANSYS','MATLAB'); hold off; 
 fprintf("ANSYS vs MATLAB. Difference: %u\n",norm(K_af(:)-K_hf2(:)));
 
-% figure('color',[1,1,1]); spy3D(tril(K_hf2));        % ANSYS vs MATLAB: 3D bars of tril(K)
-
-% MATLAB tril(K_f) vs sym(K)
-K_hs2 = tril(K_hf);
-figure('color',[1,1,1]); spy3(K_hs2,'or'); hold on;
-spy3(K_hs,'.b'); legend('MATLAB tril(K_hf)','MATLAB sym(K)'); hold off; 
-fprintf("MATLAB: tril(K_f) vs sym(K). Difference: %u\n",norm(K_hs2(:)-K_hs(:)));
-
-% MATLAB. CPU vs GPU
-elementsGPU = gpuArray(elements');
-nodesGPU = gpuArray(nodes');
-K_ds = StiffMaps(elementsGPU,nodesGPU,c,216);            % MATLAB stiffness matrix on GPU (tril(K))
-K_ds2 = gather(K_ds);
-figure('color',[1,1,1]); spy3(K_hs,'or'); hold on;
+figure('color',[1,1,1]); 
+spy3(K_hs,'or'); hold on;
 spy3(K_ds2,'.b'); legend('CPU','GPU'); hold off; 
 fprintf("MATLAB. CPU vs GPU. Difference: %u\n",norm(K_hs(:)-K_ds2(:)));

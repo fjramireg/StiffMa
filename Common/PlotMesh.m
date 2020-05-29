@@ -41,6 +41,7 @@ patch('Vertices',nodes,'Faces',Faces,'EdgeColor','k','FaceColor',[.8,.9,1]);
 view(3); axis equal; axis tight; alpha(0.3); hold on;
 
 if PlotN == 1       % Plot the nodes and their numbers
+    nodes = double(nodes);
     plot3(nodes(:,1),nodes(:,2),nodes(:,3),'MarkerFaceColor',[0 0 0],'Marker','o','LineStyle','none');
     text(nodes(:,1),nodes(:,2),nodes(:,3),num2str([1:length(nodes)]'),'fontsize',8,'color','k');
 end

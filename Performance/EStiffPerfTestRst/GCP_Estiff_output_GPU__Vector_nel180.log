@@ -1,0 +1,73 @@
+[Warning: Directory already exists.] 
+[> In runEStiffTest (line 28)] 
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 180x180x180 (5832000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running ETestLNX_GVs32_180
+
+Mesh created successfully with 5832000 Hex8 elements and 5929741 nodes!
+........
+Done ETestLNX_GVs32_180
+__________
+
+  TimeResult with properties:
+
+            Name: 'ETestLNX_GVs32_180/EStiff_GPU_Vector_Symmetry'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   43.8638 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 180x180x180 (5832000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running ETestLNX_GVd32_180
+
+Mesh created successfully with 5832000 Hex8 elements and 5929741 nodes!
+........
+Done ETestLNX_GVd32_180
+__________
+
+  TimeResult with properties:
+
+            Name: 'ETestLNX_GVd32_180/EStiff_GPU_Vector_Symmetry'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   32.6878 seconds testing time.
+
+
+
+ A total of 2 time experiments was executed!
+Date and time at the beginning of the process: 	18-Feb-2020 15:32:27 
+Date and time at the end of the process: 	18-Feb-2020 15:33:53
+
+
+ans =
+
+  2x7 table
+
+                        Name                         SampleSize     Mean     StandardDeviation     Min      Median     Max  
+    _____________________________________________    __________    ______    _________________    ______    ______    ______
+
+    ETestLNX_GVs32_180/EStiff_GPU_Vector_Symmetry        4         5.3306        0.0066911        5.3253    5.3284    5.3404
+    ETestLNX_GVd32_180/EStiff_GPU_Vector_Symmetry        4         3.9578        0.0093809        3.9446    3.9604    3.9656
+

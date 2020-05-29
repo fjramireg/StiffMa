@@ -1,0 +1,73 @@
+[Warning: Directory already exists.] 
+[> In runEStiffTest (line 28)] 
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 300x300x300 (27000000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running ETestLNX_GSs32_300
+
+Mesh created successfully with 27000000 Hex8 elements and 27270901 nodes!
+.......... ..........
+Done ETestLNX_GSs32_300
+__________
+
+  TimeResult with properties:
+
+            Name: 'ETestLNX_GSs32_300/EStiff_GPU_Scalar_Symmetry'
+           Valid: 1
+         Samples: [16x7 table]
+    TestActivity: [20x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   6.3805 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 300x300x300 (27000000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running ETestLNX_GSd32_300
+
+Mesh created successfully with 27000000 Hex8 elements and 27270901 nodes!
+........
+Done ETestLNX_GSd32_300
+__________
+
+  TimeResult with properties:
+
+            Name: 'ETestLNX_GSd32_300/EStiff_GPU_Scalar_Symmetry'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   8.1289 seconds testing time.
+
+
+
+ A total of 2 time experiments was executed!
+Date and time at the beginning of the process: 	18-Feb-2020 15:16:25 
+Date and time at the end of the process: 	18-Feb-2020 15:16:50
+
+
+ans =
+
+  2x7 table
+
+                        Name                         SampleSize      Mean      StandardDeviation      Min        Median       Max   
+    _____________________________________________    __________    ________    _________________    ________    ________    ________
+
+    ETestLNX_GSs32_300/EStiff_GPU_Scalar_Symmetry        16        0.057397        0.0064327        0.054934    0.055427    0.081298
+    ETestLNX_GSd32_300/EStiff_GPU_Scalar_Symmetry         4         0.28304        0.0013418         0.28128     0.28324     0.28437
+

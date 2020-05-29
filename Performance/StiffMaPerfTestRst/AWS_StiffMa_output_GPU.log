@@ -1,0 +1,337 @@
+[Warning: Directory already exists.] 
+[> In runStiffMaTest (line 28)] 
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 10x10x10 (1000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running StiffMaLNX_GSdu32_10
+	Mesh created successfully with 1000 Hex8 elements and 1331 nodes!
+
+.......... .......... .......... ....
+Done StiffMaLNX_GSdu32_10
+__________
+
+  TimeResult with properties:
+
+            Name: 'StiffMaLNX_GSdu32_10/StiffMa_GPU_Scalar_Symmetry'
+           Valid: 1
+         Samples: [30x7 table]
+    TestActivity: [34x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   1.8429 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 10x10x10 (1000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running StiffMaLNX_GVdu32_10
+	Mesh created successfully with 1000 Hex8 elements and 1331 nodes!
+
+.......... .......... ........
+Done StiffMaLNX_GVdu32_10
+__________
+
+  TimeResult with properties:
+
+            Name: 'StiffMaLNX_GVdu32_10/StiffMa_GPU_Vector_Symmetry'
+           Valid: 1
+         Samples: [24x7 table]
+    TestActivity: [28x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   1.3192 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 20x20x20 (8000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running StiffMaLNX_GSdu32_20
+	Mesh created successfully with 8000 Hex8 elements and 9261 nodes!
+
+.......... .......... .......... .......... ..........
+.......... .......... .......... .......... ..........
+.......... .......... .......... .......... ..........
+.......... .......... .......... .......... ..........
+.......... .......... .......... .......... ..........
+..........
+Done StiffMaLNX_GSdu32_20
+__________
+
+  TimeResult with properties:
+
+            Name: 'StiffMaLNX_GSdu32_20/StiffMa_GPU_Scalar_Symmetry'
+           Valid: 1
+         Samples: [256x7 table]
+    TestActivity: [260x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   4.8879 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 20x20x20 (8000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running StiffMaLNX_GVdu32_20
+	Mesh created successfully with 8000 Hex8 elements and 9261 nodes!
+
+.......... .......... .......... .......... ..........
+.......... .......... .......... .......... ..........
+.......... .......... .......... .......... ..........
+.......... .......... .......... .......... ......
+Done StiffMaLNX_GVdu32_20
+__________
+
+  TimeResult with properties:
+
+            Name: 'StiffMaLNX_GVdu32_20/StiffMa_GPU_Vector_Symmetry'
+           Valid: 1
+         Samples: [192x7 table]
+    TestActivity: [196x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   5.5008 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 40x40x40 (64000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running StiffMaLNX_GSdu32_40
+	Mesh created successfully with 64000 Hex8 elements and 68921 nodes!
+
+.......... .......... .......... .......... ..........
+.......... .......... .......... .......... ..........
+.......... .......... .......... .......... ..........
+.......... .......... .......... .......... ..........
+.......... ....
+Done StiffMaLNX_GSdu32_40
+__________
+
+  TimeResult with properties:
+
+            Name: 'StiffMaLNX_GSdu32_40/StiffMa_GPU_Scalar_Symmetry'
+           Valid: 1
+         Samples: [210x7 table]
+    TestActivity: [214x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   4.8204 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 40x40x40 (64000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running StiffMaLNX_GVdu32_40
+	Mesh created successfully with 64000 Hex8 elements and 68921 nodes!
+
+.......... .......... .......... .......... ...
+Done StiffMaLNX_GVdu32_40
+__________
+
+  TimeResult with properties:
+
+            Name: 'StiffMaLNX_GVdu32_40/StiffMa_GPU_Vector_Symmetry'
+           Valid: 1
+         Samples: [39x7 table]
+    TestActivity: [43x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   4.9349 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 80x80x80 (512000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running StiffMaLNX_GSdu32_80
+	Mesh created successfully with 512000 Hex8 elements and 531441 nodes!
+
+.......... .......... .......... .......... ..........
+.......... .......... .......... .......... ...
+Done StiffMaLNX_GSdu32_80
+__________
+
+  TimeResult with properties:
+
+            Name: 'StiffMaLNX_GSdu32_80/StiffMa_GPU_Scalar_Symmetry'
+           Valid: 1
+         Samples: [89x7 table]
+    TestActivity: [93x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   5.5377 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 80x80x80 (512000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running StiffMaLNX_GVdu32_80
+	Mesh created successfully with 512000 Hex8 elements and 531441 nodes!
+
+........
+Done StiffMaLNX_GVdu32_80
+__________
+
+  TimeResult with properties:
+
+            Name: 'StiffMaLNX_GVdu32_80/StiffMa_GPU_Vector_Symmetry'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   6.2534 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 160x160x160 (4096000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running StiffMaLNX_GSdu32_160
+	Mesh created successfully with 4096000 Hex8 elements and 4173281 nodes!
+
+........
+Done StiffMaLNX_GSdu32_160
+__________
+
+  TimeResult with properties:
+
+            Name: 'StiffMaLNX_GSdu32_160/StiffMa_GPU_Scalar_Symmetry'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   3.6654 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 160x160x160 (4096000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running StiffMaLNX_GVdu32_160
+	Mesh created successfully with 4096000 Hex8 elements and 4173281 nodes!
+
+
+================================================================================
+Error occurred in StiffMaLNX_GVdu32_160/StiffMa_GPU_Vector_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the
+    GPU, use 'gpuDevice()'. If the problem persists, reset the GPU by calling
+    'gpuDevice(1)'.
+    
+    Error in eStiff_vpsa (line 56)
+    Ke = feval(kernel, elements, nodes, zeros(sets.sz*sets.nel, 1, sets.dTN,
+    'gpuArray'));% GPU code execution
+    
+    Error in StiffMaLNX_GVdu32_160 (line 19)
+    Ked = eStiff_vpsa(elementsGPU, nodesGPU, MP, sets);
+================================================================================
+.
+Done StiffMaLNX_GVdu32_160
+__________
+
+Failure Summary:
+
+     Name                                               Failed  Incomplete  Reason(s)
+    ==================================================================================
+     StiffMaLNX_GVdu32_160/StiffMa_GPU_Vector_Symmetry    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'StiffMaLNX_GVdu32_160/StiffMa_GPU_Vector_Symmetry'
+           Valid: 0
+         Samples: [1x7 table]
+    TestActivity: [1x12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   2.236 seconds testing time.
+
+
+
+A total of 10 time experiments was executed!
+Date and time at the beginning of the process: 	12-May-2020 22:48:30 
+Date and time at the end of the process: 	12-May-2020 22:49:50
+
+
+ans =
+
+  10x7 table
+
+                          Name                           SampleSize      Mean      StandardDeviation      Min        Median       Max   
+    _________________________________________________    __________    ________    _________________    ________    ________    ________
+
+    StiffMaLNX_GSdu32_10/StiffMa_GPU_Scalar_Symmetry         30        0.011207        0.0017735        0.010693    0.010743    0.020347
+    StiffMaLNX_GVdu32_10/StiffMa_GPU_Vector_Symmetry         24        0.017334        0.0024059        0.016403    0.016531    0.028125
+    StiffMaLNX_GSdu32_20/StiffMa_GPU_Scalar_Symmetry        256        0.011947        0.0057762        0.011083    0.011267    0.084663
+    StiffMaLNX_GVdu32_20/StiffMa_GPU_Vector_Symmetry        192        0.020401        0.0085386        0.018765    0.019057    0.088206
+    StiffMaLNX_GSdu32_40/StiffMa_GPU_Scalar_Symmetry        210        0.015186        0.0066482        0.014308    0.014443    0.090275
+    StiffMaLNX_GVdu32_40/StiffMa_GPU_Vector_Symmetry         39        0.095025         0.017308        0.088188    0.090618     0.17167
+    StiffMaLNX_GSdu32_80/StiffMa_GPU_Scalar_Symmetry         89        0.047038         0.013233        0.043988    0.044376     0.12963
+    StiffMaLNX_GVdu32_80/StiffMa_GPU_Vector_Symmetry          4         0.70676        0.0024567         0.70458     0.70655     0.70937
+    StiffMaLNX_GSdu32_160/StiffMa_GPU_Scalar_Symmetry         4         0.31621        0.0002206           0.316     0.31619     0.31648
+    StiffMaLNX_GVdu32_160/StiffMa_GPU_Vector_Symmetry         1             NaN              NaN             NaN         NaN         NaN
+

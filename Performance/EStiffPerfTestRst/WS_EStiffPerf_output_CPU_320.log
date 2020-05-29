@@ -1,0 +1,181 @@
+[Warning: Directory already exists.] 
+[> In runEStiffTest (line 28)] 
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In parallel.internal.gpu.selectDevice
+  In parallel.gpu/GPUDevice/current (line 44)
+  In gpuDevice (line 23)
+  In runEStiffTest (line 35)] 
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 320x320x320 (32768000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Scalar'
+Processor type: 'CPU'
+
+Running ETestWIN_CSs32_320
+	Mesh created successfully with 32768000 Hex8 elements and 33076161 nodes!
+
+..
+Done ETestWIN_CSs32_320
+__________
+
+  1x2 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   2 Valid, 0 Invalid.
+   8747.7651 seconds testing time.
+
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In runEStiffTest (line 115)] 
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 320x320x320 (32768000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'single'
+Problem type: 'Vector'
+Processor type: 'CPU'
+
+Running ETestWIN_CVs32_320
+	Mesh created successfully with 32768000 Hex8 elements and 33076161 nodes!
+
+..
+Done ETestWIN_CVs32_320
+__________
+
+  1x2 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   2 Valid, 0 Invalid.
+   57506.1854 seconds testing time.
+
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In runEStiffTest (line 115)] 
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 320x320x320 (32768000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'CPU'
+
+Running ETestWIN_CSd32_320
+	Mesh created successfully with 32768000 Hex8 elements and 33076161 nodes!
+
+..
+Done ETestWIN_CSd32_320
+__________
+
+  1x2 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   2 Valid, 0 Invalid.
+   7961.3877 seconds testing time.
+
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In runEStiffTest (line 115)] 
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 320x320x320 (32768000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Processor type: 'CPU'
+
+Running ETestWIN_CVd32_320
+	Mesh created successfully with 32768000 Hex8 elements and 33076161 nodes!
+
+
+================================================================================
+Error occurred in ETestWIN_CVd32_320/EStiff_CPU_Vector and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'MATLAB:array:SizeLimitExceeded'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Requested 24x24x32768000 (140.6GB) array exceeds maximum array size preference. Creation of arrays greater than this limit may take a
+    long time and cause MATLAB to become unresponsive.
+    
+    Error in eStiff_vsa (line 29)
+    Ke = zeros(sets.edof, sets.edof, sets.nel, sets.dTN);                   % Stores the NNZ values
+    
+    Error in ETestWIN_CVd32_320 (line 12)
+    Ke = eStiff_vsa(Mesh, MP, sets);
+================================================================================
+..
+Done ETestWIN_CVd32_320
+__________
+
+Failure Summary:
+
+     Name                                  Failed  Incomplete  Reason(s)
+    =====================================================================
+     ETestWIN_CVd32_320/EStiff_CPU_Vector    X         X       Errored.
+  1x2 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   1 Valid, 1 Invalid.
+   42997.6703 seconds testing time.
+
+[Warning: Support for GPU devices with Compute Capability 3.0 will be removed in a future MATLAB release. For more information on GPU
+support, see <a href="matlab:web('http://www.mathworks.com/help/parallel-computing/gpu-support-by-release.html','-browser')">GPU Support
+by Release</a>.] 
+[> In runEStiffTest (line 115)] 
+
+
+ A total of 4 time experiments was executed!
+Date and time at the beginning of the process: 	07-May-2020 06:58:15 
+Date and time at the end of the process: 	08-May-2020 15:32:08
+
+
+ans =
+
+  8x7 table
+
+                        Name                         SampleSize     Mean     StandardDeviation     Min      Median     Max  
+    _____________________________________________    __________    ______    _________________    ______    ______    ______
+
+    ETestWIN_CSs32_320/EStiff_CPU_Scalar                 1         2781.9             0           2781.9    2781.9    2781.9
+    ETestWIN_CSs32_320/EStiff_CPU_Scalar_Symmetry        1         5963.8             0           5963.8    5963.8    5963.8
+    ETestWIN_CVs32_320/EStiff_CPU_Vector                 1         8331.3             0           8331.3    8331.3    8331.3
+    ETestWIN_CVs32_320/EStiff_CPU_Vector_Symmetry        1          49173             0            49173     49173     49173
+    ETestWIN_CSd32_320/EStiff_CPU_Scalar                 1         2919.7             0           2919.7    2919.7    2919.7
+    ETestWIN_CSd32_320/EStiff_CPU_Scalar_Symmetry        1         5038.9             0           5038.9    5038.9    5038.9
+    ETestWIN_CVd32_320/EStiff_CPU_Vector                 1            NaN           NaN              NaN       NaN       NaN
+    ETestWIN_CVd32_320/EStiff_CPU_Vector_Symmetry        1          42995             0            42995     42995     42995
+

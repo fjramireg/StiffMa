@@ -1,0 +1,147 @@
+=============================================================================
+       __|  __|_  )
+       _|  (     /   Deep Learning AMI (Ubuntu 18.04) Version 28.0
+      ___|\___|___|
+=============================================================================
+
+Welcome to Ubuntu 18.04.4 LTS (GNU/Linux 4.15.0-1065-aws x86_64v)
+
+Please use one of the following commands to start the required environment with the framework of your choice:
+for MXNet(+Keras2) with Python3 (CUDA 10.1 and Intel MKL-DNN) ____________________________________ source activate mxnet_p36
+for MXNet(+Keras2) with Python2 (CUDA 10.1 and Intel MKL-DNN) ____________________________________ source activate mxnet_p27
+for MXNet(+AWS Neuron) with Python3 ___________________________________________________ source activate aws_neuron_mxnet_p36
+for TensorFlow(+Keras2) with Python3 (CUDA 10.0 and Intel MKL-DNN) __________________________ source activate tensorflow_p36
+for TensorFlow(+Keras2) with Python2 (CUDA 10.0 and Intel MKL-DNN) __________________________ source activate tensorflow_p27
+for Tensorflow(+AWS Neuron) with Python3 _________________________________________ source activate aws_neuron_tensorflow_p36
+for TensorFlow 2(+Keras2) with Python3 (CUDA 10.1 and Intel MKL-DNN) _______________________ source activate tensorflow2_p36
+for TensorFlow 2(+Keras2) with Python2 (CUDA 10.1 and Intel MKL-DNN) _______________________ source activate tensorflow2_p27
+for PyTorch with Python3 (CUDA 10.1 and Intel MKL) _____________________________________________ source activate pytorch_p36
+for PyTorch with Python2 (CUDA 10.1 and Intel MKL) _____________________________________________ source activate pytorch_p27
+for PyTorch (+AWS Neuron) with Python3 ______________________________________________ source activate aws_neuron_pytorch_p36
+for Chainer with Python2 (CUDA 10.0 and Intel iDeep) ___________________________________________ source activate chainer_p27
+for Chainer with Python3 (CUDA 10.0 and Intel iDeep) ___________________________________________ source activate chainer_p36
+for base Python2 (CUDA 10.0) _______________________________________________________________________ source activate python2
+for base Python3 (CUDA 10.0) _______________________________________________________________________ source activate python3
+
+Official Conda User Guide: https://docs.conda.io/projects/conda/en/latest/user-guide/
+AWS Deep Learning AMI Homepage: https://aws.amazon.com/machine-learning/amis/
+Developer Guide and Release Notes: https://docs.aws.amazon.com/dlami/latest/devguide/what-is-dlami.html
+Support: https://forums.aws.amazon.com/forum.jspa?forumID=263
+For a fully managed experience, check out Amazon SageMaker at https://aws.amazon.com/sagemaker
+When using INF1 type instances, please update regularly using the instructions at: https://github.com/aws/aws-neuron-sdk/tree/master/release-notes
+=============================================================================
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Sat May  2 19:30:53 UTC 2020
+
+  System load:  1.6                Processes:              127
+  Usage of /:   65.7% of 87.18GB   Users logged in:        0
+  Memory usage: 0%                 IP address for ens3:    172.31.39.7
+  Swap usage:   0%                 IP address for docker0: 172.17.0.1
+
+ * Ubuntu 20.04 LTS is out, raising the bar on performance, security,
+   and optimisation for Intel, AMD, Nvidia, ARM64 and Z15 as well as
+   AWS, Azure and Google Cloud.
+
+     https://ubuntu.com/blog/ubuntu-20-04-lts-arrives
+
+
+9 packages can be updated.
+7 updates are security updates.
+
+
+
+The programs included with the Ubuntu system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Ubuntu comes with ABSOLUTELY NO WARRANTY, to the extent permitted by
+applicable law.
+
+
+
+
+
+nvidia-smi
+Sat May  2 19:38:05 2020
++-----------------------------------------------------------------------------+
+| NVIDIA-SMI 440.33.01    Driver Version: 440.33.01    CUDA Version: 10.2     |
+|-------------------------------+----------------------+----------------------+
+| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
+|===============================+======================+======================|
+|   0  Tesla V100-SXM2...  On   | 00000000:00:1E.0 Off |                    0 |
+| N/A   30C    P0    24W / 300W |      0MiB / 16160MiB |      0%      Default |
++-------------------------------+----------------------+----------------------+
+
++-----------------------------------------------------------------------------+
+| Processes:                                                       GPU Memory |
+|  GPU       PID   Type   Process name                             Usage      |
+|=============================================================================|
+|  No running processes found                                                 |
++-----------------------------------------------------------------------------+
+
+
+
+sudo docker pull nvcr.io/partners/matlab:r2019b
+r2019b: Pulling from partners/matlab
+35c102085707: Pull complete                                                                                                                                             251f5509d51d: Pull complete                                                                                                                                             8e829fe70a46: Pull complete                                                                                                                                             6001e1789921: Pull complete                                                                                                                                             9f0a21d58e5d: Pull complete                                                                                                                                             47b91ac70c27: Pull complete                                                                                                                                             a0529eb74f28: Pull complete                                                                                                                                             23bff6dcced5: Pull complete                                                                                                                                             2137cd2bcba9: Pull complete                                                                                                                                             534a428e13b2: Pull complete                                                                                                                                             f65a887dcb70: Pull complete                                                                                                                                             9418fbd03db8: Pull complete                                                                                                                                             6a974b6cc99e: Pull complete                                                                                                                                             e76a5721d9fe: Pull complete                                                                                                                                             3ba92306f5a4: Pull complete                                                                                                                                             7b748f47cb35: Pull complete                                                                                                                                             31fc245c593a: Pull complete                                                                                                                                             16210eaf11b0: Pull complete                                                                                                                                             ca44d564a31d: Pull complete                                                                                                                                             403142471e1d: Pull complete                                                                                                                                             c5f45f2b50b9: Pull complete                                                                                                                                             db400ae568fb: Pull complete                                                                                                                                             1b0162e5f069: Pull complete                                                                                                                                             361ebefa9fc0: Pull complete                                                                                                                                             c96f3b11c1be: Pull complete                                                                                                                                             5eb4948facb5: Pull complete                                                                                                                                             9947c627cc61: Pull complete                                                                                                                                             82c8d70d9f08: Pull complete                                                                                                                                             19946107ebdd: Pull complete                                                                                                                                             2b19b8dede93: Pull complete                                                                                                                                             f588b0a63a9d: Pull complete                                                                                                                                             Digest: sha256:956343f9248d4bd38b32d43133cfc230b3b0f77442c55caad88695cffe8fa2e4
+Status: Downloaded newer image for nvcr.io/partners/matlab:r2019b
+nvcr.io/partners/matlab:r2019b
+
+
+
+
+docker run -v ~/Dropbox/Code:/mnt/StiffMa_code --gpus all -it -p 5901:5901 -p 6080:6080 --shm-size=512M nvcr.io/partners/matlab:r2019b
+----------------------------------------------------
+Welcome to the MATLAB Deep Learning Container on NVIDIA GPU Cloud
+
+This container includes commercial software products of The MathWorks,
+Inc. ("MathWorks Programs") and related materials. MathWorks Programs are
+licensed under the MathWorks Software License Agreement, available in the
+MATLAB installation in this container. Related materials in this
+container are licensed under separate licenses which can be found in
+their respective folders.
+
+To run MATLAB desktop in this container, make sure you have exposed port
+5901 and 6080 in the container using a docker run command of the form
+
+    nvidia-docker run -it --rm -p 5901:5901 -p 6080:6080 --shm-size=512M nvcr.io/partners/matlab:r2019b
+
+To get started using the desktop in this container you can either
+
+    1. Point a browser to port 6080 of the docker host machine running
+       this container
+
+        http://hostname:6080
+
+    2. Use a VNC client to connect to display 1 of the docker host
+       machine
+
+        hostname:1
+
+The default password to access the container desktop is
+
+    matlab
+
+Launch MATLAB using the MATLAB icon on the desktop.
+
+To securely access the desktop from a browser or using VNC, you can use
+an SSH tunnel from your client machine to either port 6080 (for browser
+connection) or port 5901 (for VNC connection) on the docker host machine.
+See the MATLAB Deep Learning Container documentation for more
+information.
+
+You can also launch MATLAB in this terminal using the command
+
+matlab
+
+The documentation for this container can be found here
+https://www.mathworks.com/help/cloudcenter/matlab-deep-learning-container-on-nvidia-gpu-cloud.html
+
+For any issues, please contact: cloud-support@mathworks.com
+----------------------------------------------------
+matlab@867b9c4cf38d:~/Documents/MATLAB$

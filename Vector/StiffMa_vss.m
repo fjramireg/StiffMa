@@ -27,10 +27,10 @@ function K = StiffMa_vss(Mesh, MP, sets)
 %   Created:  16/01/2019. Version: 1.0
 
 %% Index computation
-[iK, jK] = Index_vss(Mesh.elements, sets);              % Row/column indices of tril(K)
+[iK, jK] = Index_vssa(Mesh.elements, sets);              % Row/column indices of tril(K)
 
 %% Element stiffness matrix computation
-Ke = eStiffa_vss(Mesh, MP, sets);                       % Entries of tril(K)
+Ke = eStiff_vssa(Mesh, MP, sets);                       % Entries of tril(K)
 
 %% Assembly of global sparse matrix on CPU  % Lower Triangular sparse matrix
 K = AssemblyStiffMa(iK, jK, Ke, sets.dTE, sets.dTN);	% Global stiffness matrix K assembly

@@ -1,0 +1,1704 @@
+[Warning: Directory already exists.] 
+[> In runAssemblyTest (line 28)] 
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 160x160x160 (4096000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+
+Running ATestLNX_G_Sd32_160
+	Mesh created successfully with 4096000 Hex8 elements and 4173281 nodes!
+
+........
+Done ATestLNX_G_Sd32_160
+__________
+
+  TimeResult with properties:
+
+            Name: 'ATestLNX_G_Sd32_160/Assembly_GPU_Scalar_Symmetry'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   2.8604 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 161x161x161 (4173281)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+
+Running ATestLNX_G_Sd32_161
+	Mesh created successfully with 4173281 Hex8 elements and 4251528 nodes!
+
+........
+Done ATestLNX_G_Sd32_161
+__________
+
+  TimeResult with properties:
+
+            Name: 'ATestLNX_G_Sd32_161/Assembly_GPU_Scalar_Symmetry'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   2.8277 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 162x162x162 (4251528)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+
+Running ATestLNX_G_Sd32_162
+	Mesh created successfully with 4251528 Hex8 elements and 4330747 nodes!
+
+........
+Done ATestLNX_G_Sd32_162
+__________
+
+  TimeResult with properties:
+
+            Name: 'ATestLNX_G_Sd32_162/Assembly_GPU_Scalar_Symmetry'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   2.9104 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 163x163x163 (4330747)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+
+Running ATestLNX_G_Sd32_163
+	Mesh created successfully with 4330747 Hex8 elements and 4410944 nodes!
+
+........
+Done ATestLNX_G_Sd32_163
+__________
+
+  TimeResult with properties:
+
+            Name: 'ATestLNX_G_Sd32_163/Assembly_GPU_Scalar_Symmetry'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   2.9299 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 164x164x164 (4410944)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+
+Running ATestLNX_G_Sd32_164
+	Mesh created successfully with 4410944 Hex8 elements and 4492125 nodes!
+
+........
+Done ATestLNX_G_Sd32_164
+__________
+
+  TimeResult with properties:
+
+            Name: 'ATestLNX_G_Sd32_164/Assembly_GPU_Scalar_Symmetry'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   3.0333 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 165x165x165 (4492125)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+
+Running ATestLNX_G_Sd32_165
+	Mesh created successfully with 4492125 Hex8 elements and 4574296 nodes!
+
+........
+Done ATestLNX_G_Sd32_165
+__________
+
+  TimeResult with properties:
+
+            Name: 'ATestLNX_G_Sd32_165/Assembly_GPU_Scalar_Symmetry'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   3.0555 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 166x166x166 (4574296)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+
+Running ATestLNX_G_Sd32_166
+	Mesh created successfully with 4574296 Hex8 elements and 4657463 nodes!
+
+........
+Done ATestLNX_G_Sd32_166
+__________
+
+  TimeResult with properties:
+
+            Name: 'ATestLNX_G_Sd32_166/Assembly_GPU_Scalar_Symmetry'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   3.1308 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 167x167x167 (4657463)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+
+Running ATestLNX_G_Sd32_167
+	Mesh created successfully with 4657463 Hex8 elements and 4741632 nodes!
+
+........
+Done ATestLNX_G_Sd32_167
+__________
+
+  TimeResult with properties:
+
+            Name: 'ATestLNX_G_Sd32_167/Assembly_GPU_Scalar_Symmetry'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   3.1757 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 168x168x168 (4741632)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+
+Running ATestLNX_G_Sd32_168
+	Mesh created successfully with 4741632 Hex8 elements and 4826809 nodes!
+
+........
+Done ATestLNX_G_Sd32_168
+__________
+
+  TimeResult with properties:
+
+            Name: 'ATestLNX_G_Sd32_168/Assembly_GPU_Scalar_Symmetry'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   3.1964 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 169x169x169 (4826809)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+
+Running ATestLNX_G_Sd32_169
+	Mesh created successfully with 4826809 Hex8 elements and 4913000 nodes!
+
+........
+Done ATestLNX_G_Sd32_169
+__________
+
+  TimeResult with properties:
+
+            Name: 'ATestLNX_G_Sd32_169/Assembly_GPU_Scalar_Symmetry'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   3.2892 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 170x170x170 (4913000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+
+Running ATestLNX_G_Sd32_170
+	Mesh created successfully with 4913000 Hex8 elements and 5000211 nodes!
+
+........
+Done ATestLNX_G_Sd32_170
+__________
+
+  TimeResult with properties:
+
+            Name: 'ATestLNX_G_Sd32_170/Assembly_GPU_Scalar_Symmetry'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   3.2567 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 171x171x171 (5000211)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+
+Running ATestLNX_G_Sd32_171
+	Mesh created successfully with 5000211 Hex8 elements and 5088448 nodes!
+
+........
+Done ATestLNX_G_Sd32_171
+__________
+
+  TimeResult with properties:
+
+            Name: 'ATestLNX_G_Sd32_171/Assembly_GPU_Scalar_Symmetry'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   3.3653 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 172x172x172 (5088448)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+
+Running ATestLNX_G_Sd32_172
+	Mesh created successfully with 5088448 Hex8 elements and 5177717 nodes!
+
+.......... .
+Done ATestLNX_G_Sd32_172
+__________
+
+  TimeResult with properties:
+
+            Name: 'ATestLNX_G_Sd32_172/Assembly_GPU_Scalar_Symmetry'
+           Valid: 1
+         Samples: [7x7 table]
+    TestActivity: [11x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   4.0806 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 173x173x173 (5177717)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+
+Running ATestLNX_G_Sd32_173
+	Mesh created successfully with 5177717 Hex8 elements and 5268024 nodes!
+
+........
+Done ATestLNX_G_Sd32_173
+__________
+
+  TimeResult with properties:
+
+            Name: 'ATestLNX_G_Sd32_173/Assembly_GPU_Scalar_Symmetry'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   3.481 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 174x174x174 (5268024)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+
+Running ATestLNX_G_Sd32_174
+	Mesh created successfully with 5268024 Hex8 elements and 5359375 nodes!
+
+........
+Done ATestLNX_G_Sd32_174
+__________
+
+  TimeResult with properties:
+
+            Name: 'ATestLNX_G_Sd32_174/Assembly_GPU_Scalar_Symmetry'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   3.4902 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 175x175x175 (5359375)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+
+Running ATestLNX_G_Sd32_175
+	Mesh created successfully with 5359375 Hex8 elements and 5451776 nodes!
+
+........
+Done ATestLNX_G_Sd32_175
+__________
+
+  TimeResult with properties:
+
+            Name: 'ATestLNX_G_Sd32_175/Assembly_GPU_Scalar_Symmetry'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   3.541 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 176x176x176 (5451776)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+
+Running ATestLNX_G_Sd32_176
+	Mesh created successfully with 5451776 Hex8 elements and 5545233 nodes!
+
+........
+Done ATestLNX_G_Sd32_176
+__________
+
+  TimeResult with properties:
+
+            Name: 'ATestLNX_G_Sd32_176/Assembly_GPU_Scalar_Symmetry'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   3.579 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 177x177x177 (5545233)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+
+Running ATestLNX_G_Sd32_177
+	Mesh created successfully with 5545233 Hex8 elements and 5639752 nodes!
+
+..........
+Done ATestLNX_G_Sd32_177
+__________
+
+  TimeResult with properties:
+
+            Name: 'ATestLNX_G_Sd32_177/Assembly_GPU_Scalar_Symmetry'
+           Valid: 1
+         Samples: [6x7 table]
+    TestActivity: [10x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   4.601 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 178x178x178 (5639752)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+
+Running ATestLNX_G_Sd32_178
+	Mesh created successfully with 5639752 Hex8 elements and 5735339 nodes!
+
+........
+Done ATestLNX_G_Sd32_178
+__________
+
+  TimeResult with properties:
+
+            Name: 'ATestLNX_G_Sd32_178/Assembly_GPU_Scalar_Symmetry'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   4.0377 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 179x179x179 (5735339)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+
+Running ATestLNX_G_Sd32_179
+	Mesh created successfully with 5735339 Hex8 elements and 5832000 nodes!
+
+........
+Done ATestLNX_G_Sd32_179
+__________
+
+  TimeResult with properties:
+
+            Name: 'ATestLNX_G_Sd32_179/Assembly_GPU_Scalar_Symmetry'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   4.3696 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 180x180x180 (5832000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+
+Running ATestLNX_G_Sd32_180
+	Mesh created successfully with 5832000 Hex8 elements and 5929741 nodes!
+
+.........
+Done ATestLNX_G_Sd32_180
+__________
+
+  TimeResult with properties:
+
+            Name: 'ATestLNX_G_Sd32_180/Assembly_GPU_Scalar_Symmetry'
+           Valid: 1
+         Samples: [5x7 table]
+    TestActivity: [9x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   4.7681 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 181x181x181 (5929741)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+
+Running ATestLNX_G_Sd32_181
+	Mesh created successfully with 5929741 Hex8 elements and 6028568 nodes!
+
+........
+Done ATestLNX_G_Sd32_181
+__________
+
+  TimeResult with properties:
+
+            Name: 'ATestLNX_G_Sd32_181/Assembly_GPU_Scalar_Symmetry'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   4.5067 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 182x182x182 (6028568)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+
+Running ATestLNX_G_Sd32_182
+	Mesh created successfully with 6028568 Hex8 elements and 6128487 nodes!
+
+.........
+Done ATestLNX_G_Sd32_182
+__________
+
+  TimeResult with properties:
+
+            Name: 'ATestLNX_G_Sd32_182/Assembly_GPU_Scalar_Symmetry'
+           Valid: 1
+         Samples: [5x7 table]
+    TestActivity: [9x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   5.0077 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 183x183x183 (6128487)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+
+Running ATestLNX_G_Sd32_183
+	Mesh created successfully with 6128487 Hex8 elements and 6229504 nodes!
+
+........
+Done ATestLNX_G_Sd32_183
+__________
+
+  TimeResult with properties:
+
+            Name: 'ATestLNX_G_Sd32_183/Assembly_GPU_Scalar_Symmetry'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   4.644 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 184x184x184 (6229504)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+
+Running ATestLNX_G_Sd32_184
+	Mesh created successfully with 6229504 Hex8 elements and 6331625 nodes!
+
+........
+Done ATestLNX_G_Sd32_184
+__________
+
+  TimeResult with properties:
+
+            Name: 'ATestLNX_G_Sd32_184/Assembly_GPU_Scalar_Symmetry'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   4.6549 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 185x185x185 (6331625)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+
+Running ATestLNX_G_Sd32_185
+	Mesh created successfully with 6331625 Hex8 elements and 6434856 nodes!
+
+........
+Done ATestLNX_G_Sd32_185
+__________
+
+  TimeResult with properties:
+
+            Name: 'ATestLNX_G_Sd32_185/Assembly_GPU_Scalar_Symmetry'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   4.7725 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 186x186x186 (6434856)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+
+Running ATestLNX_G_Sd32_186
+	Mesh created successfully with 6434856 Hex8 elements and 6539203 nodes!
+
+........
+Done ATestLNX_G_Sd32_186
+__________
+
+  TimeResult with properties:
+
+            Name: 'ATestLNX_G_Sd32_186/Assembly_GPU_Scalar_Symmetry'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   4.8789 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 187x187x187 (6539203)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+
+Running ATestLNX_G_Sd32_187
+	Mesh created successfully with 6539203 Hex8 elements and 6644672 nodes!
+
+........
+Done ATestLNX_G_Sd32_187
+__________
+
+  TimeResult with properties:
+
+            Name: 'ATestLNX_G_Sd32_187/Assembly_GPU_Scalar_Symmetry'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   5.6842 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 188x188x188 (6644672)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+
+Running ATestLNX_G_Sd32_188
+	Mesh created successfully with 6644672 Hex8 elements and 6751269 nodes!
+
+........
+Done ATestLNX_G_Sd32_188
+__________
+
+  TimeResult with properties:
+
+            Name: 'ATestLNX_G_Sd32_188/Assembly_GPU_Scalar_Symmetry'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   5.4695 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 189x189x189 (6751269)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+
+Running ATestLNX_G_Sd32_189
+	Mesh created successfully with 6751269 Hex8 elements and 6859000 nodes!
+
+........
+Done ATestLNX_G_Sd32_189
+__________
+
+  TimeResult with properties:
+
+            Name: 'ATestLNX_G_Sd32_189/Assembly_GPU_Scalar_Symmetry'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   5.5887 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 190x190x190 (6859000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+
+Running ATestLNX_G_Sd32_190
+	Mesh created successfully with 6859000 Hex8 elements and 6967871 nodes!
+
+........
+Done ATestLNX_G_Sd32_190
+__________
+
+  TimeResult with properties:
+
+            Name: 'ATestLNX_G_Sd32_190/Assembly_GPU_Scalar_Symmetry'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   5.4314 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 191x191x191 (6967871)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+
+Running ATestLNX_G_Sd32_191
+	Mesh created successfully with 6967871 Hex8 elements and 7077888 nodes!
+
+........
+Done ATestLNX_G_Sd32_191
+__________
+
+  TimeResult with properties:
+
+            Name: 'ATestLNX_G_Sd32_191/Assembly_GPU_Scalar_Symmetry'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   5.6245 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 192x192x192 (7077888)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+
+Running ATestLNX_G_Sd32_192
+	Mesh created successfully with 7077888 Hex8 elements and 7189057 nodes!
+
+........
+Done ATestLNX_G_Sd32_192
+__________
+
+  TimeResult with properties:
+
+            Name: 'ATestLNX_G_Sd32_192/Assembly_GPU_Scalar_Symmetry'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   5.6751 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 193x193x193 (7189057)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+
+Running ATestLNX_G_Sd32_193
+	Mesh created successfully with 7189057 Hex8 elements and 7301384 nodes!
+
+........
+Done ATestLNX_G_Sd32_193
+__________
+
+  TimeResult with properties:
+
+            Name: 'ATestLNX_G_Sd32_193/Assembly_GPU_Scalar_Symmetry'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   5.8705 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 194x194x194 (7301384)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+
+Running ATestLNX_G_Sd32_194
+	Mesh created successfully with 7301384 Hex8 elements and 7414875 nodes!
+
+........
+Done ATestLNX_G_Sd32_194
+__________
+
+  TimeResult with properties:
+
+            Name: 'ATestLNX_G_Sd32_194/Assembly_GPU_Scalar_Symmetry'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   5.9141 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 195x195x195 (7414875)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+
+Running ATestLNX_G_Sd32_195
+	Mesh created successfully with 7414875 Hex8 elements and 7529536 nodes!
+
+........
+Done ATestLNX_G_Sd32_195
+__________
+
+  TimeResult with properties:
+
+            Name: 'ATestLNX_G_Sd32_195/Assembly_GPU_Scalar_Symmetry'
+           Valid: 1
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   6.0434 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 196x196x196 (7529536)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+
+Running ATestLNX_G_Sd32_196
+	Mesh created successfully with 7529536 Hex8 elements and 7645373 nodes!
+
+.
+================================================================================
+Error occurred in ATestLNX_G_Sd32_196/Assembly_GPU_Scalar_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'MATLAB:nomem'
+    --------------
+    Error Details:
+    --------------
+    Out of memory. Type "help memory" for your options.
+    
+    Error in AssemblyStiffMa (line 25)
+        K = accumarray([iK,jK], Ke, [], [], [], 1);
+    
+    Error in ATestLNX_G_Sd32_196 (line 17)
+    K = AssemblyStiffMa(iKd, jKd, Ked, sets.dTE, sets.dTN);
+================================================================================
+.
+================================================================================
+Error occurred in ATestLNX_G_Sd32_196/Assembly_GPU_Scalar_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:kernel:LaunchFailure'
+    --------------
+    Error Details:
+    --------------
+    Error using gpuArray/accumarray
+    An unexpected error occurred trying to launch a kernel. The CUDA error was:
+    out of memory
+    
+    Error in AssemblyStiffMa (line 25)
+        K = accumarray([iK,jK], Ke, [], [], [], 1);
+    
+    Error in ATestLNX_G_Sd32_196 (line 17)
+    K = AssemblyStiffMa(iKd, jKd, Ked, sets.dTE, sets.dTN);
+================================================================================
+..
+================================================================================
+Error occurred in ATestLNX_G_Sd32_196/Assembly_GPU_Scalar_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'MATLAB:nomem'
+    --------------
+    Error Details:
+    --------------
+    Out of memory. Type "help memory" for your options.
+    
+    Error in AssemblyStiffMa (line 25)
+        K = accumarray([iK,jK], Ke, [], [], [], 1);
+    
+    Error in ATestLNX_G_Sd32_196 (line 17)
+    K = AssemblyStiffMa(iKd, jKd, Ked, sets.dTE, sets.dTN);
+================================================================================
+.
+================================================================================
+Error occurred in ATestLNX_G_Sd32_196/Assembly_GPU_Scalar_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:kernel:LaunchFailure'
+    --------------
+    Error Details:
+    --------------
+    Error using gpuArray/accumarray
+    An unexpected error occurred trying to launch a kernel. The CUDA error was:
+    out of memory
+    
+    Error in AssemblyStiffMa (line 25)
+        K = accumarray([iK,jK], Ke, [], [], [], 1);
+    
+    Error in ATestLNX_G_Sd32_196 (line 17)
+    K = AssemblyStiffMa(iKd, jKd, Ked, sets.dTE, sets.dTN);
+================================================================================
+..
+================================================================================
+Error occurred in ATestLNX_G_Sd32_196/Assembly_GPU_Scalar_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'MATLAB:nomem'
+    --------------
+    Error Details:
+    --------------
+    Out of memory. Type "help memory" for your options.
+    
+    Error in AssemblyStiffMa (line 25)
+        K = accumarray([iK,jK], Ke, [], [], [], 1);
+    
+    Error in ATestLNX_G_Sd32_196 (line 17)
+    K = AssemblyStiffMa(iKd, jKd, Ked, sets.dTE, sets.dTN);
+================================================================================
+.
+Done ATestLNX_G_Sd32_196
+__________
+
+Failure Summary:
+
+     Name                                              Failed  Incomplete  Reason(s)
+    =================================================================================
+     ATestLNX_G_Sd32_196/Assembly_GPU_Scalar_Symmetry    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'ATestLNX_G_Sd32_196/Assembly_GPU_Scalar_Symmetry'
+           Valid: 0
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   3.6954 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 197x197x197 (7645373)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+
+Running ATestLNX_G_Sd32_197
+	Mesh created successfully with 7645373 Hex8 elements and 7762392 nodes!
+
+
+================================================================================
+Error occurred in ATestLNX_G_Sd32_197/Assembly_GPU_Scalar_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:kernel:LaunchFailure'
+    --------------
+    Error Details:
+    --------------
+    Error using gpuArray/accumarray
+    An unexpected error occurred trying to launch a kernel. The CUDA error was:
+    out of memory
+    
+    Error in AssemblyStiffMa (line 25)
+        K = accumarray([iK,jK], Ke, [], [], [], 1);
+    
+    Error in ATestLNX_G_Sd32_197 (line 17)
+    K = AssemblyStiffMa(iKd, jKd, Ked, sets.dTE, sets.dTN);
+================================================================================
+..
+================================================================================
+Error occurred in ATestLNX_G_Sd32_197/Assembly_GPU_Scalar_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'MATLAB:nomem'
+    --------------
+    Error Details:
+    --------------
+    Out of memory. Type "help memory" for your options.
+    
+    Error in AssemblyStiffMa (line 25)
+        K = accumarray([iK,jK], Ke, [], [], [], 1);
+    
+    Error in ATestLNX_G_Sd32_197 (line 17)
+    K = AssemblyStiffMa(iKd, jKd, Ked, sets.dTE, sets.dTN);
+================================================================================
+.
+================================================================================
+Error occurred in ATestLNX_G_Sd32_197/Assembly_GPU_Scalar_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:kernel:LaunchFailure'
+    --------------
+    Error Details:
+    --------------
+    Error using gpuArray/accumarray
+    An unexpected error occurred trying to launch a kernel. The CUDA error was:
+    out of memory
+    
+    Error in AssemblyStiffMa (line 25)
+        K = accumarray([iK,jK], Ke, [], [], [], 1);
+    
+    Error in ATestLNX_G_Sd32_197 (line 17)
+    K = AssemblyStiffMa(iKd, jKd, Ked, sets.dTE, sets.dTN);
+================================================================================
+..
+================================================================================
+Error occurred in ATestLNX_G_Sd32_197/Assembly_GPU_Scalar_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'MATLAB:nomem'
+    --------------
+    Error Details:
+    --------------
+    Out of memory. Type "help memory" for your options.
+    
+    Error in AssemblyStiffMa (line 25)
+        K = accumarray([iK,jK], Ke, [], [], [], 1);
+    
+    Error in ATestLNX_G_Sd32_197 (line 17)
+    K = AssemblyStiffMa(iKd, jKd, Ked, sets.dTE, sets.dTN);
+================================================================================
+.
+================================================================================
+Error occurred in ATestLNX_G_Sd32_197/Assembly_GPU_Scalar_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:kernel:LaunchFailure'
+    --------------
+    Error Details:
+    --------------
+    Error using gpuArray/accumarray
+    An unexpected error occurred trying to launch a kernel. The CUDA error was:
+    out of memory
+    
+    Error in AssemblyStiffMa (line 25)
+        K = accumarray([iK,jK], Ke, [], [], [], 1);
+    
+    Error in ATestLNX_G_Sd32_197 (line 17)
+    K = AssemblyStiffMa(iKd, jKd, Ked, sets.dTE, sets.dTN);
+================================================================================
+..
+================================================================================
+Error occurred in ATestLNX_G_Sd32_197/Assembly_GPU_Scalar_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'MATLAB:nomem'
+    --------------
+    Error Details:
+    --------------
+    Out of memory. Type "help memory" for your options.
+    
+    Error in AssemblyStiffMa (line 25)
+        K = accumarray([iK,jK], Ke, [], [], [], 1);
+    
+    Error in ATestLNX_G_Sd32_197 (line 17)
+    K = AssemblyStiffMa(iKd, jKd, Ked, sets.dTE, sets.dTN);
+================================================================================
+.
+Done ATestLNX_G_Sd32_197
+__________
+
+Failure Summary:
+
+     Name                                              Failed  Incomplete  Reason(s)
+    =================================================================================
+     ATestLNX_G_Sd32_197/Assembly_GPU_Scalar_Symmetry    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'ATestLNX_G_Sd32_197/Assembly_GPU_Scalar_Symmetry'
+           Valid: 0
+         Samples: [5x7 table]
+    TestActivity: [9x12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   3.8915 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 198x198x198 (7762392)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+
+Running ATestLNX_G_Sd32_198
+	Mesh created successfully with 7762392 Hex8 elements and 7880599 nodes!
+
+
+================================================================================
+Error occurred in ATestLNX_G_Sd32_198/Assembly_GPU_Scalar_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:kernel:LaunchFailure'
+    --------------
+    Error Details:
+    --------------
+    Error using gpuArray/accumarray
+    An unexpected error occurred trying to launch a kernel. The CUDA error was:
+    out of memory
+    
+    Error in AssemblyStiffMa (line 25)
+        K = accumarray([iK,jK], Ke, [], [], [], 1);
+    
+    Error in ATestLNX_G_Sd32_198 (line 17)
+    K = AssemblyStiffMa(iKd, jKd, Ked, sets.dTE, sets.dTN);
+================================================================================
+..
+================================================================================
+Error occurred in ATestLNX_G_Sd32_198/Assembly_GPU_Scalar_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'MATLAB:nomem'
+    --------------
+    Error Details:
+    --------------
+    Out of memory. Type "help memory" for your options.
+    
+    Error in AssemblyStiffMa (line 25)
+        K = accumarray([iK,jK], Ke, [], [], [], 1);
+    
+    Error in ATestLNX_G_Sd32_198 (line 17)
+    K = AssemblyStiffMa(iKd, jKd, Ked, sets.dTE, sets.dTN);
+================================================================================
+.
+================================================================================
+Error occurred in ATestLNX_G_Sd32_198/Assembly_GPU_Scalar_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:kernel:LaunchFailure'
+    --------------
+    Error Details:
+    --------------
+    Error using gpuArray/accumarray
+    An unexpected error occurred trying to launch a kernel. The CUDA error was:
+    out of memory
+    
+    Error in AssemblyStiffMa (line 25)
+        K = accumarray([iK,jK], Ke, [], [], [], 1);
+    
+    Error in ATestLNX_G_Sd32_198 (line 17)
+    K = AssemblyStiffMa(iKd, jKd, Ked, sets.dTE, sets.dTN);
+================================================================================
+..
+================================================================================
+Error occurred in ATestLNX_G_Sd32_198/Assembly_GPU_Scalar_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'MATLAB:nomem'
+    --------------
+    Error Details:
+    --------------
+    Out of memory. Type "help memory" for your options.
+    
+    Error in AssemblyStiffMa (line 25)
+        K = accumarray([iK,jK], Ke, [], [], [], 1);
+    
+    Error in ATestLNX_G_Sd32_198 (line 17)
+    K = AssemblyStiffMa(iKd, jKd, Ked, sets.dTE, sets.dTN);
+================================================================================
+.
+================================================================================
+Error occurred in ATestLNX_G_Sd32_198/Assembly_GPU_Scalar_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:kernel:LaunchFailure'
+    --------------
+    Error Details:
+    --------------
+    Error using gpuArray/accumarray
+    An unexpected error occurred trying to launch a kernel. The CUDA error was:
+    out of memory
+    
+    Error in AssemblyStiffMa (line 25)
+        K = accumarray([iK,jK], Ke, [], [], [], 1);
+    
+    Error in ATestLNX_G_Sd32_198 (line 17)
+    K = AssemblyStiffMa(iKd, jKd, Ked, sets.dTE, sets.dTN);
+================================================================================
+..
+================================================================================
+Error occurred in ATestLNX_G_Sd32_198/Assembly_GPU_Scalar_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'MATLAB:nomem'
+    --------------
+    Error Details:
+    --------------
+    Out of memory. Type "help memory" for your options.
+    
+    Error in AssemblyStiffMa (line 25)
+        K = accumarray([iK,jK], Ke, [], [], [], 1);
+    
+    Error in ATestLNX_G_Sd32_198 (line 17)
+    K = AssemblyStiffMa(iKd, jKd, Ked, sets.dTE, sets.dTN);
+================================================================================
+.
+Done ATestLNX_G_Sd32_198
+__________
+
+Failure Summary:
+
+     Name                                              Failed  Incomplete  Reason(s)
+    =================================================================================
+     ATestLNX_G_Sd32_198/Assembly_GPU_Scalar_Symmetry    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'ATestLNX_G_Sd32_198/Assembly_GPU_Scalar_Symmetry'
+           Valid: 0
+         Samples: [5x7 table]
+    TestActivity: [9x12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   3.8294 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 199x199x199 (7880599)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+
+Running ATestLNX_G_Sd32_199
+	Mesh created successfully with 7880599 Hex8 elements and 8000000 nodes!
+
+
+================================================================================
+Error occurred in ATestLNX_G_Sd32_199/Assembly_GPU_Scalar_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:kernel:LaunchFailure'
+    --------------
+    Error Details:
+    --------------
+    Error using gpuArray/accumarray
+    An unexpected error occurred trying to launch a kernel. The CUDA error was:
+    out of memory
+    
+    Error in AssemblyStiffMa (line 25)
+        K = accumarray([iK,jK], Ke, [], [], [], 1);
+    
+    Error in ATestLNX_G_Sd32_199 (line 17)
+    K = AssemblyStiffMa(iKd, jKd, Ked, sets.dTE, sets.dTN);
+================================================================================
+..
+================================================================================
+Error occurred in ATestLNX_G_Sd32_199/Assembly_GPU_Scalar_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'MATLAB:nomem'
+    --------------
+    Error Details:
+    --------------
+    Out of memory. Type "help memory" for your options.
+    
+    Error in AssemblyStiffMa (line 25)
+        K = accumarray([iK,jK], Ke, [], [], [], 1);
+    
+    Error in ATestLNX_G_Sd32_199 (line 17)
+    K = AssemblyStiffMa(iKd, jKd, Ked, sets.dTE, sets.dTN);
+================================================================================
+.
+================================================================================
+Error occurred in ATestLNX_G_Sd32_199/Assembly_GPU_Scalar_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:kernel:LaunchFailure'
+    --------------
+    Error Details:
+    --------------
+    Error using gpuArray/accumarray
+    An unexpected error occurred trying to launch a kernel. The CUDA error was:
+    out of memory
+    
+    Error in AssemblyStiffMa (line 25)
+        K = accumarray([iK,jK], Ke, [], [], [], 1);
+    
+    Error in ATestLNX_G_Sd32_199 (line 17)
+    K = AssemblyStiffMa(iKd, jKd, Ked, sets.dTE, sets.dTN);
+================================================================================
+..
+================================================================================
+Error occurred in ATestLNX_G_Sd32_199/Assembly_GPU_Scalar_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'MATLAB:nomem'
+    --------------
+    Error Details:
+    --------------
+    Out of memory. Type "help memory" for your options.
+    
+    Error in AssemblyStiffMa (line 25)
+        K = accumarray([iK,jK], Ke, [], [], [], 1);
+    
+    Error in ATestLNX_G_Sd32_199 (line 17)
+    K = AssemblyStiffMa(iKd, jKd, Ked, sets.dTE, sets.dTN);
+================================================================================
+.
+================================================================================
+Error occurred in ATestLNX_G_Sd32_199/Assembly_GPU_Scalar_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:kernel:LaunchFailure'
+    --------------
+    Error Details:
+    --------------
+    Error using gpuArray/accumarray
+    An unexpected error occurred trying to launch a kernel. The CUDA error was:
+    out of memory
+    
+    Error in AssemblyStiffMa (line 25)
+        K = accumarray([iK,jK], Ke, [], [], [], 1);
+    
+    Error in ATestLNX_G_Sd32_199 (line 17)
+    K = AssemblyStiffMa(iKd, jKd, Ked, sets.dTE, sets.dTN);
+================================================================================
+..
+================================================================================
+Error occurred in ATestLNX_G_Sd32_199/Assembly_GPU_Scalar_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'MATLAB:nomem'
+    --------------
+    Error Details:
+    --------------
+    Out of memory. Type "help memory" for your options.
+    
+    Error in AssemblyStiffMa (line 25)
+        K = accumarray([iK,jK], Ke, [], [], [], 1);
+    
+    Error in ATestLNX_G_Sd32_199 (line 17)
+    K = AssemblyStiffMa(iKd, jKd, Ked, sets.dTE, sets.dTN);
+================================================================================
+.
+Done ATestLNX_G_Sd32_199
+__________
+
+Failure Summary:
+
+     Name                                              Failed  Incomplete  Reason(s)
+    =================================================================================
+     ATestLNX_G_Sd32_199/Assembly_GPU_Scalar_Symmetry    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'ATestLNX_G_Sd32_199/Assembly_GPU_Scalar_Symmetry'
+           Valid: 0
+         Samples: [5x7 table]
+    TestActivity: [9x12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   3.9297 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 200x200x200 (8000000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+
+Running ATestLNX_G_Sd32_200
+	Mesh created successfully with 8000000 Hex8 elements and 8120601 nodes!
+
+
+================================================================================
+Error occurred in ATestLNX_G_Sd32_200/Assembly_GPU_Scalar_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:kernel:LaunchFailure'
+    --------------
+    Error Details:
+    --------------
+    Error using gpuArray/accumarray
+    An unexpected error occurred trying to launch a kernel. The CUDA error was:
+    out of memory
+    
+    Error in AssemblyStiffMa (line 25)
+        K = accumarray([iK,jK], Ke, [], [], [], 1);
+    
+    Error in ATestLNX_G_Sd32_200 (line 17)
+    K = AssemblyStiffMa(iKd, jKd, Ked, sets.dTE, sets.dTN);
+================================================================================
+.
+================================================================================
+Error occurred in ATestLNX_G_Sd32_200/Assembly_GPU_Scalar_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'MATLAB:nomem'
+    --------------
+    Error Details:
+    --------------
+    Out of memory. Type "help memory" for your options.
+    
+    Error in AssemblyStiffMa (line 25)
+        K = accumarray([iK,jK], Ke, [], [], [], 1);
+    
+    Error in ATestLNX_G_Sd32_200 (line 17)
+    K = AssemblyStiffMa(iKd, jKd, Ked, sets.dTE, sets.dTN);
+================================================================================
+.
+================================================================================
+Error occurred in ATestLNX_G_Sd32_200/Assembly_GPU_Scalar_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:kernel:LaunchFailure'
+    --------------
+    Error Details:
+    --------------
+    Error using gpuArray/accumarray
+    An unexpected error occurred trying to launch a kernel. The CUDA error was:
+    out of memory
+    
+    Error in AssemblyStiffMa (line 25)
+        K = accumarray([iK,jK], Ke, [], [], [], 1);
+    
+    Error in ATestLNX_G_Sd32_200 (line 17)
+    K = AssemblyStiffMa(iKd, jKd, Ked, sets.dTE, sets.dTN);
+================================================================================
+..
+================================================================================
+Error occurred in ATestLNX_G_Sd32_200/Assembly_GPU_Scalar_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'MATLAB:nomem'
+    --------------
+    Error Details:
+    --------------
+    Out of memory. Type "help memory" for your options.
+    
+    Error in AssemblyStiffMa (line 25)
+        K = accumarray([iK,jK], Ke, [], [], [], 1);
+    
+    Error in ATestLNX_G_Sd32_200 (line 17)
+    K = AssemblyStiffMa(iKd, jKd, Ked, sets.dTE, sets.dTN);
+================================================================================
+.
+================================================================================
+Error occurred in ATestLNX_G_Sd32_200/Assembly_GPU_Scalar_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:kernel:LaunchFailure'
+    --------------
+    Error Details:
+    --------------
+    Error using gpuArray/accumarray
+    An unexpected error occurred trying to launch a kernel. The CUDA error was:
+    out of memory
+    
+    Error in AssemblyStiffMa (line 25)
+        K = accumarray([iK,jK], Ke, [], [], [], 1);
+    
+    Error in ATestLNX_G_Sd32_200 (line 17)
+    K = AssemblyStiffMa(iKd, jKd, Ked, sets.dTE, sets.dTN);
+================================================================================
+..
+================================================================================
+Error occurred in ATestLNX_G_Sd32_200/Assembly_GPU_Scalar_Symmetry and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'MATLAB:nomem'
+    --------------
+    Error Details:
+    --------------
+    Out of memory. Type "help memory" for your options.
+    
+    Error in AssemblyStiffMa (line 25)
+        K = accumarray([iK,jK], Ke, [], [], [], 1);
+    
+    Error in ATestLNX_G_Sd32_200 (line 17)
+    K = AssemblyStiffMa(iKd, jKd, Ked, sets.dTE, sets.dTN);
+================================================================================
+.
+Done ATestLNX_G_Sd32_200
+__________
+
+Failure Summary:
+
+     Name                                              Failed  Incomplete  Reason(s)
+    =================================================================================
+     ATestLNX_G_Sd32_200/Assembly_GPU_Scalar_Symmetry    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'ATestLNX_G_Sd32_200/Assembly_GPU_Scalar_Symmetry'
+           Valid: 0
+         Samples: [4x7 table]
+    TestActivity: [8x12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   3.3806 seconds testing time.
+
+
+
+A total of 41 time experiments was executed!
+Date and time at the beginning of the process: 	10-May-2020 13:50:30 
+Date and time at the end of the process: 	10-May-2020 13:54:29
+
+
+ans =
+
+  46x7 table
+
+                          Name                          SampleSize     Mean      StandardDeviation      Min      Median       Max  
+    ________________________________________________    __________    _______    _________________    _______    _______    _______
+
+    ATestLNX_G_Sd32_160/Assembly_GPU_Scalar_Symmetry        4         0.18271       0.00068529        0.18177    0.18285    0.18335
+    ATestLNX_G_Sd32_161/Assembly_GPU_Scalar_Symmetry        4         0.18965       0.00065009        0.18904    0.18951    0.19052
+    ATestLNX_G_Sd32_162/Assembly_GPU_Scalar_Symmetry        4         0.19477       0.00046612        0.19419    0.19481    0.19529
+    ATestLNX_G_Sd32_163/Assembly_GPU_Scalar_Symmetry        4          0.2004        0.0010948        0.19905    0.20054    0.20146
+    ATestLNX_G_Sd32_164/Assembly_GPU_Scalar_Symmetry        4         0.20304       0.00070146        0.20202    0.20325    0.20363
+    ATestLNX_G_Sd32_165/Assembly_GPU_Scalar_Symmetry        4         0.20939       0.00048093        0.20893    0.20938    0.20986
+    ATestLNX_G_Sd32_166/Assembly_GPU_Scalar_Symmetry        4         0.20874       0.00048244        0.20806    0.20887    0.20918
+    ATestLNX_G_Sd32_167/Assembly_GPU_Scalar_Symmetry        4         0.21806       0.00027964        0.21783    0.21798    0.21846
+    ATestLNX_G_Sd32_168/Assembly_GPU_Scalar_Symmetry        4          0.2194       0.00035205        0.21893    0.21944    0.21977
+    ATestLNX_G_Sd32_169/Assembly_GPU_Scalar_Symmetry        4         0.22125       0.00049076        0.22056    0.22138    0.22167
+    ATestLNX_G_Sd32_170/Assembly_GPU_Scalar_Symmetry        4         0.22199       0.00084472        0.22146    0.22163    0.22325
+    ATestLNX_G_Sd32_171/Assembly_GPU_Scalar_Symmetry        4         0.23161       0.00042728        0.23117    0.23155    0.23216
+    ATestLNX_G_Sd32_172/Assembly_GPU_Scalar_Symmetry        7         0.23242         0.014214         0.2254    0.22755    0.26458
+    ATestLNX_G_Sd32_173/Assembly_GPU_Scalar_Symmetry        4          0.2395       8.6062e-05        0.23941     0.2395    0.23961
+    ATestLNX_G_Sd32_174/Assembly_GPU_Scalar_Symmetry        4         0.23592       0.00015687        0.23572    0.23594    0.23608
+    ATestLNX_G_Sd32_175/Assembly_GPU_Scalar_Symmetry        4         0.24075       0.00057265        0.24011    0.24073    0.24142
+    ATestLNX_G_Sd32_176/Assembly_GPU_Scalar_Symmetry        4         0.24901       0.00043725        0.24845    0.24905    0.24949
+    ATestLNX_G_Sd32_177/Assembly_GPU_Scalar_Symmetry        6         0.29838         0.015293        0.27939    0.29956    0.31277
+    ATestLNX_G_Sd32_178/Assembly_GPU_Scalar_Symmetry        4         0.29944         0.010766        0.28984    0.29929    0.30934
+    ATestLNX_G_Sd32_179/Assembly_GPU_Scalar_Symmetry        4         0.34694        0.0009529        0.34589     0.3469    0.34807
+    ATestLNX_G_Sd32_180/Assembly_GPU_Scalar_Symmetry        5         0.34749          0.01483        0.33627    0.33723    0.36391
+    ATestLNX_G_Sd32_181/Assembly_GPU_Scalar_Symmetry        4         0.35723       0.00094269        0.35592    0.35751    0.35796
+    ATestLNX_G_Sd32_182/Assembly_GPU_Scalar_Symmetry        5         0.36088         0.014615        0.34615    0.35321    0.37909
+    ATestLNX_G_Sd32_183/Assembly_GPU_Scalar_Symmetry        4         0.37453       0.00059746        0.37364    0.37478    0.37491
+    ATestLNX_G_Sd32_184/Assembly_GPU_Scalar_Symmetry        4          0.3757        0.0024602        0.37244    0.37609    0.37818
+    ATestLNX_G_Sd32_185/Assembly_GPU_Scalar_Symmetry        4          0.3833        0.0013668        0.38177    0.38317     0.3851
+    ATestLNX_G_Sd32_186/Assembly_GPU_Scalar_Symmetry        4         0.38266        0.0029753        0.37988      0.382    0.38677
+    ATestLNX_G_Sd32_187/Assembly_GPU_Scalar_Symmetry        4         0.47927        0.0048405        0.47584    0.47741    0.48641
+    ATestLNX_G_Sd32_188/Assembly_GPU_Scalar_Symmetry        4         0.47479        0.0034798        0.47127    0.47496    0.47798
+    ATestLNX_G_Sd32_189/Assembly_GPU_Scalar_Symmetry        4         0.48262       0.00065354        0.48189     0.4827    0.48321
+    ATestLNX_G_Sd32_190/Assembly_GPU_Scalar_Symmetry        4         0.45667       0.00086946        0.45555    0.45676    0.45761
+    ATestLNX_G_Sd32_191/Assembly_GPU_Scalar_Symmetry        4          0.4729         0.004879        0.46751    0.47299    0.47811
+    ATestLNX_G_Sd32_192/Assembly_GPU_Scalar_Symmetry        4         0.47708        0.0022229          0.474     0.4778    0.47872
+    ATestLNX_G_Sd32_193/Assembly_GPU_Scalar_Symmetry        4         0.49987       0.00091412        0.49851    0.50023     0.5005
+    ATestLNX_G_Sd32_194/Assembly_GPU_Scalar_Symmetry        4         0.49723        0.0024836        0.49517    0.49651    0.50074
+    ATestLNX_G_Sd32_195/Assembly_GPU_Scalar_Symmetry        4         0.51709        0.0038494        0.51265    0.51713    0.52145
+    ATestLNX_G_Sd32_196/Assembly_GPU_Scalar_Symmetry        1         0.38565                0        0.38565    0.38565    0.38565
+    ATestLNX_G_Sd32_196/Assembly_GPU_Scalar_Symmetry        3             NaN              NaN            NaN        NaN        NaN
+    ATestLNX_G_Sd32_197/Assembly_GPU_Scalar_Symmetry        3             NaN              NaN            NaN        NaN        NaN
+    ATestLNX_G_Sd32_197/Assembly_GPU_Scalar_Symmetry        2         0.45084         0.010083        0.44371    0.45084    0.45797
+    ATestLNX_G_Sd32_198/Assembly_GPU_Scalar_Symmetry        3             NaN              NaN            NaN        NaN        NaN
+    ATestLNX_G_Sd32_198/Assembly_GPU_Scalar_Symmetry        2         0.44586         0.016973        0.43386    0.44586    0.45786
+    ATestLNX_G_Sd32_199/Assembly_GPU_Scalar_Symmetry        3             NaN              NaN            NaN        NaN        NaN
+    ATestLNX_G_Sd32_199/Assembly_GPU_Scalar_Symmetry        2         0.45646        0.0071425        0.45141    0.45646    0.46151
+    ATestLNX_G_Sd32_200/Assembly_GPU_Scalar_Symmetry        3             NaN              NaN            NaN        NaN        NaN
+    ATestLNX_G_Sd32_200/Assembly_GPU_Scalar_Symmetry        1         0.47653                0        0.47653    0.47653    0.47653
+
