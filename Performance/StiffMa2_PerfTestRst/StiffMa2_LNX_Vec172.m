@@ -1,6 +1,6 @@
 % Inputs
 nel = 172;
-sets.sf = 1000;
+sets.sf = 100;
 sets.dTE = 'uint32';
 sets.dTN = 'double';
 MP.c = 384.1;
