@@ -22,20 +22,20 @@ nelz = 10;          % Number of elements on Z-direction
 dTE = 'uint32';     % Data precision for "elements" ['uint32', 'uint64']
 dTN = 'double';     % Data precision for "nodes" ['single' or 'double']
 [Mesh.elements, Mesh.nodes] = CreateMesh(nelx,nely,nelz,dTE,dTN);
-[nel, nxe] = size(Mesh.elements);
 
 %% Material properties
 MP.E = 200e9;      	% Elastic modulus (homogeneous, linear, isotropic material)
 MP.nu = 0.3;       	% Poisson ratio
 
 %% Settings
-sets.dTE = dTE;     % Data precision for computing
-sets.dTN = dTN;     % Data precision for computing
-sets.nel = nel;     % Number of finite elements
-sets.nxe = nxe;     % Number of nodes per element
-sets.dxn = dxn;     % Number of DOFs per node 
-sets.edof= dxn*nxe; % Number of DOFs per element 
-sets.sz  = sets.edof * (sets.edof + 1) / 2; % Number of symmetry entries
+sets.dTE = dTE;                             % Data precision for computing
+sets.dTN = dTN;                             % Data precision for computing
+[sets.nel, sets.nxe]  = size(Mesh.elements);% Number of elements in the mesh & Number of nodes per element
+[sets.nnod, sets.dim] = size(Mesh.nodes);  	% Number of nodes in the mesh & Space dimension
+sets.dxn = 3;                             	% Number of DOFs per node for the vector problem
+sets.edof = sets.dxn * sets.nxe;           	% Number of DOFs per element
+sets.sz = (sets.edof * (sets.edof + 1) )/2;	% Number of NNZ values for each Ke using simmetry
+sets.tdofs = sets.nnod * sets.dxn;         	% Number of total DOFs in the mesh
 
 %% Creation of global stiffness matrix on CPU (serial)
 tic;

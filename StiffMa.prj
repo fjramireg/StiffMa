@@ -1,0 +1,198 @@
+<deployment-project plugin="plugin.toolbox" plugin-version="1.0">
+  <configuration build-checksum="3465761098" file="B:\Francisco\Documents\Dropbox (Universidad Nacional)\StiffMa\Code\StiffMa.prj" location="B:\Francisco\Documents\Dropbox (Universidad Nacional)\StiffMa\Code" name="StiffMa" target="target.toolbox" target-name="Package Toolbox">
+    <param.appname>StiffMa</param.appname>
+    <param.authnamewatermark>Francisco Ramírez</param.authnamewatermark>
+    <param.email>francisco.ramirez@pascualbravo.edu.co</param.email>
+    <param.company>Institución Universitaria Pascual Bravo</param.company>
+    <param.summary>StiffMa: Fast finite element STIFFness MAtrix generation in MATLAB by using GPU computing.</param.summary>
+    <param.description>StiffMa: Fast finite element STIFFness MAtrix construction in MATLAB
+
+The finite element method (FEM) is a well established numerical technique for solving partial differential equations (PDEs) in a wide range of complex science and engineering applications. This method has two costly operation that are the construction of global matrices and vectors to form the system of linear or nonlinear equations (assemblage), and their solution (solver). Many efforts have been directed to accelerate the solver. However, the assembly stage has been less investigated although it may represent a serious bottleneck in iterative processes such as non-linear and time-dependent phenomena, and in optimization procedures involving FEM with unstructured meshes. Thus, a fast technique for the global FEM matrices construction is proposed herein by using parallel computing on graphics processing units (GPUs). This work focuses on matrices that arise by solving elliptic PDEs, what is commonly known as stiffness matrix. For performance tests, a scalar problem typically represented by the thermal conduction phenomenon and a vector problem represented by the structural elasticity are considered in a three-dimensional (3D) domain. Unstructured meshes with 8-node hexahedral elements are used to discretize the domain. The MATLAB Parallel Computing Toolbox (PCT) is used to program the CUDA code. The stiffness matrix are built with three GPU kernels that are the indices computation, the numerical integration and the global assembly. Symmetry and adequate data precision are used to save memory and runtime. This proposed methodology allows generating global stiffness matrices from meshes with more than 16.3 millions elements in less than 3 seconds for the scalar problem and up to 3.1 millions for the vector one in 6 seconds using an Nvidia Tesla V100 GPU with 16 GB of memory.
+Large speedups are obtained compared with a non-optimized CPU code.</param.description>
+    <param.screenshot>${PROJECT_ROOT}\StiffMa_logo.png</param.screenshot>
+    <param.version>1.5</param.version>
+    <param.output>${PROJECT_ROOT}\StiffMa.mltbx</param.output>
+    <param.products.name>
+      <item>MATLAB</item>
+      <item>Parallel Computing Toolbox</item>
+    </param.products.name>
+    <param.products.id>
+      <item>1</item>
+      <item>80</item>
+    </param.products.id>
+    <param.products.version>
+      <item>9.8</item>
+      <item>7.2</item>
+    </param.products.version>
+    <param.platforms />
+    <param.guid>0f1270f7-9280-4376-a635-aefdbce7ff1b</param.guid>
+    <param.exclude.filters>% List files contained in your toolbox folder that you would like to exclude
+% from packaging.  Excludes should be listed relative to the toolbox folder.
+% Some examples of how to specify excludes are provided below:
+%
+% A single file in the toolbox folder:
+% .svn
+.gitignore
+desktop.ini
+%
+% A single file in a subfolder of the toolbox folder:
+% example/.svn
+%
+% All files in a subfolder of the toolbox folder:
+% example/*
+.git/*
+.github/*
+%
+% All files of a certain name in all subfolders of the toolbox folder:
+% **/.svn
+%
+% All files matching a pattern in all subfolders of the toolbox folder:
+% **/*.bak
+%</param.exclude.filters>
+    <param.exclude.pcodedmfiles>true</param.exclude.pcodedmfiles>
+    <param.examples>&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;examples&gt;
+   &lt;exampleCategory name="StiffMa"&gt;
+      &lt;example name="runStiffMa" type="html"&gt;
+         &lt;file type="source"&gt;/StiffMa/html/runStiffMa.html&lt;/file&gt;
+         &lt;file type="main"&gt;/StiffMa/runStiffMa.m&lt;/file&gt;
+         &lt;file type="thumbnail"/&gt;
+      &lt;/example&gt;
+   &lt;/exampleCategory&gt;
+   &lt;exampleCategory name="Vector"&gt;
+      &lt;example name="runVectorOnCPU" type="html"&gt;
+         &lt;file type="source"&gt;/Vector/html/runVectorOnCPU.html&lt;/file&gt;
+         &lt;file type="main"&gt;/Vector/runVectorOnCPU.m&lt;/file&gt;
+         &lt;file type="thumbnail"/&gt;
+      &lt;/example&gt;
+      &lt;example name="runVectorOnGPU" type="html"&gt;
+         &lt;file type="source"&gt;/Vector/html/runVectorOnGPU.html&lt;/file&gt;
+         &lt;file type="main"&gt;/Vector/runVectorOnGPU.m&lt;/file&gt;
+         &lt;file type="thumbnail"/&gt;
+      &lt;/example&gt;
+   &lt;/exampleCategory&gt;
+   &lt;exampleCategory name="Scalar"&gt;
+      &lt;example name="runScalarOnCPU" type="html"&gt;
+         &lt;file type="source"&gt;/Scalar/html/runScalarOnCPU.html&lt;/file&gt;
+         &lt;file type="main"&gt;/Scalar/runScalarOnCPU.m&lt;/file&gt;
+         &lt;file type="thumbnail"/&gt;
+      &lt;/example&gt;
+      &lt;example name="runScalarOnGPU" type="html"&gt;
+         &lt;file type="source"&gt;/Scalar/html/runScalarOnGPU.html&lt;/file&gt;
+         &lt;file type="main"&gt;/Scalar/runScalarOnGPU.m&lt;/file&gt;
+         &lt;file type="thumbnail"/&gt;
+      &lt;/example&gt;
+   &lt;/exampleCategory&gt;
+&lt;/examples&gt;</param.examples>
+    <param.demosxml />
+    <param.apps />
+    <param.registered.apps />
+    <param.docs />
+    <param.getting.started.guide>${PROJECT_ROOT}\doc\GettingStarted.mlx</param.getting.started.guide>
+    <param.matlabpath.excludes />
+    <param.javaclasspath.excludes />
+    <param.exported.on.package>true</param.exported.on.package>
+    <param.required.addons />
+    <param.matlab.project.id />
+    <param.matlab.project.name />
+    <param.release.start>R2015b</param.release.start>
+    <param.release.end>latest</param.release.end>
+    <param.release.current.only>false</param.release.current.only>
+    <param.compatiblity.windows>true</param.compatiblity.windows>
+    <param.compatiblity.macos>true</param.compatiblity.macos>
+    <param.compatiblity.linux>true</param.compatiblity.linux>
+    <param.compatiblity.matlabonline>true</param.compatiblity.matlabonline>
+    <param.installation.map />
+    <param.additional.sw.names />
+    <param.additional.sw.licenses />
+    <param.additional.sw.win.url />
+    <param.additional.sw.mac.url />
+    <param.additional.sw.linux.url />
+    <unset>
+      <param.authnamewatermark />
+      <param.email />
+      <param.company />
+      <param.output />
+      <param.platforms />
+      <param.exclude.pcodedmfiles />
+      <param.demosxml />
+      <param.apps />
+      <param.registered.apps />
+      <param.docs />
+      <param.matlabpath.excludes />
+      <param.javaclasspath.excludes />
+      <param.required.addons />
+      <param.matlab.project.id />
+      <param.matlab.project.name />
+      <param.release.current.only />
+      <param.compatiblity.windows />
+      <param.compatiblity.macos />
+      <param.compatiblity.linux />
+      <param.compatiblity.matlabonline />
+      <param.additional.sw.names />
+      <param.additional.sw.licenses />
+      <param.additional.sw.win.url />
+      <param.additional.sw.mac.url />
+      <param.additional.sw.linux.url />
+    </unset>
+    <fileset.rootdir>
+      <file>${PROJECT_ROOT}</file>
+    </fileset.rootdir>
+    <fileset.rootfiles>
+      <file>${PROJECT_ROOT}\.git</file>
+      <file>${PROJECT_ROOT}\.github</file>
+      <file>${PROJECT_ROOT}\Common</file>
+      <file>${PROJECT_ROOT}\Contents.m</file>
+      <file>${PROJECT_ROOT}\create_StiffMa_logo.m</file>
+      <file>${PROJECT_ROOT}\demos.xml</file>
+      <file>${PROJECT_ROOT}\doc</file>
+      <file>${PROJECT_ROOT}\GPUCoder</file>
+      <file>${PROJECT_ROOT}\LICENSE</file>
+      <file>${PROJECT_ROOT}\Log.txt</file>
+      <file>${PROJECT_ROOT}\Performance</file>
+      <file>${PROJECT_ROOT}\Profile</file>
+      <file>${PROJECT_ROOT}\README.md</file>
+      <file>${PROJECT_ROOT}\Scalar</file>
+      <file>${PROJECT_ROOT}\StiffMa</file>
+      <file>${PROJECT_ROOT}\StiffMa_logo.fig</file>
+      <file>${PROJECT_ROOT}\StiffMa_logo.pdf</file>
+      <file>${PROJECT_ROOT}\StiffMa_logo.png</file>
+      <file>${PROJECT_ROOT}\Utils</file>
+      <file>${PROJECT_ROOT}\Vector</file>
+      <file>${PROJECT_ROOT}\Verification</file>
+    </fileset.rootfiles>
+    <fileset.depfun.included />
+    <fileset.depfun.excluded />
+    <fileset.package />
+    <build-deliverables>
+      <file location="${PROJECT_ROOT}" name="StiffMa.mltbx" optional="false">B:\Francisco\Documents\Dropbox (Universidad Nacional)\StiffMa\Code\StiffMa.mltbx</file>
+    </build-deliverables>
+    <workflow />
+    <matlab>
+      <root>C:\Program Files\MATLAB\R2020a</root>
+      <toolboxes>
+        <toolbox name="matlabcoder" />
+      </toolboxes>
+      <toolbox>
+        <matlabcoder>
+          <enabled>true</enabled>
+        </matlabcoder>
+      </toolbox>
+    </matlab>
+    <platform>
+      <unix>false</unix>
+      <mac>false</mac>
+      <windows>true</windows>
+      <win2k>false</win2k>
+      <winxp>false</winxp>
+      <vista>false</vista>
+      <linux>false</linux>
+      <solaris>false</solaris>
+      <osver>10.0</osver>
+      <os32>false</os32>
+      <os64>true</os64>
+      <arch>win64</arch>
+      <matlab>true</matlab>
+    </platform>
+  </configuration>
+</deployment-project>

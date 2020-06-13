@@ -31,4 +31,4 @@ function K = StiffMa_ss(Mesh, c, sets)
 Ke = eStiff_ssa(Mesh, c, sets);
 
 %% Assembly of global sparse matrix on CPU - Global stiffness matrix K
-K = AssemblyStiffMa(iK, jK, Ke, sets.dTE, sets.dTN);
+K = AssemblyStiffMa(iK, jK, Ke, sets);

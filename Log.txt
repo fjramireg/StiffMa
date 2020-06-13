@@ -1,0 +1,3 @@
+Beginning packaging process...
+Packaging Failed
+Cannot write to destination: B:\Francisco\Documents\Dropbox (Universidad Nacional)\StiffMa\Code.  Use the 'f' option to override.

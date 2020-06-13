@@ -23,17 +23,19 @@ dTE = 'uint32';     % Data precision for "elements" ['uint32', 'uint64']
 dTN = 'double';     % Data precision for "nodes" ['single' or 'double']
 [Mesh.elements, Mesh.nodes] = CreateMesh2(nelx,nely,nelz,dTE,dTN);
 [nel, nxe] = size(Mesh.elements);
+[nnod, dim] = size(Mesh.nodes);
 
 %% Material properties
 c = 1.0;            % Conductivity (homogeneous, linear, isotropic material)
 
 %% Settings
-sets.dTE = dTE;     % Data precision for computing
-sets.dTN = dTN;     % Data precision for computing
-sets.nel = nel;     % Number of finite elements
-sets.nxe = nxe;     % Number of nodes per element
-sets.dxn = dxn;     % Number of DOFs per node 
-sets.edof= dxn*nxe; % Number of DOFs per element 
+sets.dTE = dTE;         % Data precision for computing
+sets.dTN = dTN;         % Data precision for computing
+sets.nel = nel;         % Number of finite elements
+sets.nxe = nxe;         % Number of nodes per element
+sets.dxn = dxn;         % Number of DOFs per node 
+sets.edof= dxn*nxe;     % Number of DOFs per element 
+sets.tdofs = nnod;        % Number of total DOFs
 sets.sz  = sets.edof * (sets.edof + 1) / 2; % Number of symmetry entries
 
 %% Creation of global stiffness matrix on CPU (serial)

@@ -33,4 +33,4 @@ function K = StiffMa_vss(Mesh, MP, sets)
 Ke = eStiff_vssa(Mesh, MP, sets);                       % Entries of tril(K)
 
 %% Assembly of global sparse matrix on CPU  % Lower Triangular sparse matrix
-K = AssemblyStiffMa(iK, jK, Ke, sets.dTE, sets.dTN);	% Global stiffness matrix K assembly
+K = AssemblyStiffMa(iK, jK, Ke, sets);	% Global stiffness matrix K assembly
