@@ -1,5 +1,7 @@
 # StiffMa: Fast finite element STIFFness MAtrix construction in MATLAB
 
+[![View StiffMa on File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://www.mathworks.com/matlabcentral/fileexchange/76947-stiffma)
+
 The finite element method (FEM) is a well established numerical technique for solving partial differential equations (PDEs) in a wide range of complex science and engineering applications. 
 This method has two costly operation that are the construction of global matrices and vectors to form the system of linear or nonlinear equations (assemblage), and their solution (solver). 
 Many efforts have been directed to accelerate the solver.
