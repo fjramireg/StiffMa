@@ -1,5 +1,5 @@
 <deployment-project plugin="plugin.toolbox" plugin-version="1.0">
-  <configuration build-checksum="1817583441" file="B:\Francisco\Documents\Dropbox (Universidad Nacional)\StiffMa\Code\StiffMa.prj" location="B:\Francisco\Documents\Dropbox (Universidad Nacional)\StiffMa\Code" name="StiffMa" target="target.toolbox" target-name="Package Toolbox">
+  <configuration build-checksum="633909627" file="B:\Francisco\Documents\Dropbox (Universidad Nacional)\StiffMa\Code\StiffMa.prj" location="B:\Francisco\Documents\Dropbox (Universidad Nacional)\StiffMa\Code" name="StiffMa" target="target.toolbox" target-name="Package Toolbox">
     <param.appname>StiffMa</param.appname>
     <param.authnamewatermark>Francisco Ramírez</param.authnamewatermark>
     <param.email>francisco.ramirez@pascualbravo.edu.co</param.email>
@@ -59,27 +59,10 @@ desktop.ini
          &lt;file type="thumbnail"/&gt;
       &lt;/example&gt;
    &lt;/exampleCategory&gt;
-   &lt;exampleCategory name="Vector"&gt;
-      &lt;example name="runVectorOnCPU" type="html"&gt;
-         &lt;file type="source"&gt;/Vector/html/runVectorOnCPU.html&lt;/file&gt;
-         &lt;file type="main"&gt;/Vector/runVectorOnCPU.m&lt;/file&gt;
-         &lt;file type="thumbnail"/&gt;
-      &lt;/example&gt;
-      &lt;example name="runVectorOnGPU" type="html"&gt;
-         &lt;file type="source"&gt;/Vector/html/runVectorOnGPU.html&lt;/file&gt;
-         &lt;file type="main"&gt;/Vector/runVectorOnGPU.m&lt;/file&gt;
-         &lt;file type="thumbnail"/&gt;
-      &lt;/example&gt;
-   &lt;/exampleCategory&gt;
-   &lt;exampleCategory name="Scalar"&gt;
-      &lt;example name="runScalarOnCPU" type="html"&gt;
-         &lt;file type="source"&gt;/Scalar/html/runScalarOnCPU.html&lt;/file&gt;
-         &lt;file type="main"&gt;/Scalar/runScalarOnCPU.m&lt;/file&gt;
-         &lt;file type="thumbnail"/&gt;
-      &lt;/example&gt;
-      &lt;example name="runScalarOnGPU" type="html"&gt;
-         &lt;file type="source"&gt;/Scalar/html/runScalarOnGPU.html&lt;/file&gt;
-         &lt;file type="main"&gt;/Scalar/runScalarOnGPU.m&lt;/file&gt;
+   &lt;exampleCategory name="doc"&gt;
+      &lt;example name="GettingStarted" type="html"&gt;
+         &lt;file type="source"&gt;/doc/html/GettingStarted.html&lt;/file&gt;
+         &lt;file type="main"&gt;/doc/GettingStarted.mlx&lt;/file&gt;
          &lt;file type="thumbnail"/&gt;
       &lt;/example&gt;
    &lt;/exampleCategory&gt;
@@ -87,12 +70,18 @@ desktop.ini
     <param.demosxml />
     <param.apps />
     <param.registered.apps />
-    <param.docs />
-    <param.getting.started.guide>${PROJECT_ROOT}\doc\GettingStarted.mlx</param.getting.started.guide>
-    <param.matlabpath.excludes />
+    <param.docs>${PROJECT_ROOT}\tbx\doc\info.xml</param.docs>
+    <param.getting.started.guide>${PROJECT_ROOT}\tbx\doc\GettingStarted.mlx</param.getting.started.guide>
+    <param.matlabpath.excludes>
+      <item>/</item>
+    </param.matlabpath.excludes>
     <param.javaclasspath.excludes />
     <param.exported.on.package>true</param.exported.on.package>
-    <param.required.addons />
+    <param.required.addons>
+      <requiredaddons>
+        <requiredAddOn earliest="earliest" fromRepository="true" id="e57df569-4a80-11e4-9553-005056977bd0" include="false" latest="latest">Postprocessing in FEM</requiredAddOn>
+      </requiredaddons>
+    </param.required.addons>
     <param.matlab.project.id />
     <param.matlab.project.name />
     <param.release.start>R2015b</param.release.start>
@@ -118,10 +107,7 @@ desktop.ini
       <param.demosxml />
       <param.apps />
       <param.registered.apps />
-      <param.docs />
-      <param.matlabpath.excludes />
       <param.javaclasspath.excludes />
-      <param.required.addons />
       <param.matlab.project.id />
       <param.matlab.project.name />
       <param.release.current.only />
@@ -136,30 +122,12 @@ desktop.ini
       <param.additional.sw.linux.url />
     </unset>
     <fileset.rootdir>
-      <file>${PROJECT_ROOT}</file>
+      <file>${PROJECT_ROOT}\tbx</file>
     </fileset.rootdir>
     <fileset.rootfiles>
-      <file>${PROJECT_ROOT}\.git</file>
-      <file>${PROJECT_ROOT}\.github</file>
-      <file>${PROJECT_ROOT}\Common</file>
-      <file>${PROJECT_ROOT}\Contents.m</file>
-      <file>${PROJECT_ROOT}\create_StiffMa_logo.m</file>
-      <file>${PROJECT_ROOT}\demos.xml</file>
-      <file>${PROJECT_ROOT}\doc</file>
-      <file>${PROJECT_ROOT}\GPUCoder</file>
-      <file>${PROJECT_ROOT}\LICENSE</file>
-      <file>${PROJECT_ROOT}\Log.txt</file>
-      <file>${PROJECT_ROOT}\Performance</file>
-      <file>${PROJECT_ROOT}\Profile</file>
-      <file>${PROJECT_ROOT}\README.md</file>
-      <file>${PROJECT_ROOT}\Scalar</file>
-      <file>${PROJECT_ROOT}\StiffMa</file>
-      <file>${PROJECT_ROOT}\StiffMa_logo.fig</file>
-      <file>${PROJECT_ROOT}\StiffMa_logo.pdf</file>
-      <file>${PROJECT_ROOT}\StiffMa_logo.png</file>
-      <file>${PROJECT_ROOT}\Utils</file>
-      <file>${PROJECT_ROOT}\Vector</file>
-      <file>${PROJECT_ROOT}\Verification</file>
+      <file>${PROJECT_ROOT}\tbx\demos.xml</file>
+      <file>${PROJECT_ROOT}\tbx\doc</file>
+      <file>${PROJECT_ROOT}\tbx\StiffMa</file>
     </fileset.rootfiles>
     <fileset.depfun.included />
     <fileset.depfun.excluded />

@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,IE=9,chrome=1"><meta name="generator" content="MATLAB R2020a"><title>Runs the whole assembly scalar code on the CPU</title><style type="text/css">.rtcContent { padding: 30px; } .S0 { margin: 3px 10px 5px 4px; padding: 0px; line-height: 28.8px; min-height: 0px; white-space: pre-wrap; color: rgb(213, 80, 0); font-family: Helvetica, Arial, sans-serif; font-style: normal; font-size: 24px; font-weight: 400; text-align: left;  }
+.S1 { margin: 2px 10px 9px 4px; padding: 0px; line-height: 21px; min-height: 0px; white-space: pre-wrap; color: rgb(0, 0, 0); font-family: Helvetica, Arial, sans-serif; font-style: normal; font-size: 14px; font-weight: 400; text-align: left;  }
+.S2 { margin: 3px 10px 5px 4px; padding: 0px; line-height: 20px; min-height: 0px; white-space: pre-wrap; color: rgb(60, 60, 60); font-family: Helvetica, Arial, sans-serif; font-style: normal; font-size: 20px; font-weight: 700; text-align: left;  }
+.CodeBlock { background-color: #F7F7F7; margin: 10px 0 10px 0;}
+.S3 { border-left: 1px solid rgb(233, 233, 233); border-right: 1px solid rgb(233, 233, 233); border-top: 1px solid rgb(233, 233, 233); border-bottom: 1px solid rgb(233, 233, 233); border-radius: 4px; padding: 6px 45px 4px 13px; line-height: 17.234px; min-height: 18px; white-space: nowrap; color: rgb(0, 0, 0); font-family: Menlo, Monaco, Consolas, "Courier New", monospace; font-size: 14px;  }
+.S4 { border-left: 1px solid rgb(233, 233, 233); border-right: 1px solid rgb(233, 233, 233); border-top: 1px solid rgb(233, 233, 233); border-bottom: 0px none rgb(0, 0, 0); border-radius: 4px 4px 0px 0px; padding: 6px 45px 0px 13px; line-height: 17.234px; min-height: 18px; white-space: nowrap; color: rgb(0, 0, 0); font-family: Menlo, Monaco, Consolas, "Courier New", monospace; font-size: 14px;  }
+.S5 { border-left: 1px solid rgb(233, 233, 233); border-right: 1px solid rgb(233, 233, 233); border-top: 0px none rgb(0, 0, 0); border-bottom: 0px none rgb(0, 0, 0); border-radius: 0px; padding: 0px 45px 0px 13px; line-height: 17.234px; min-height: 18px; white-space: nowrap; color: rgb(0, 0, 0); font-family: Menlo, Monaco, Consolas, "Courier New", monospace; font-size: 14px;  }
+.S6 { border-left: 1px solid rgb(233, 233, 233); border-right: 1px solid rgb(233, 233, 233); border-top: 0px none rgb(0, 0, 0); border-bottom: 1px solid rgb(233, 233, 233); border-radius: 0px; padding: 0px 45px 4px 13px; line-height: 17.234px; min-height: 18px; white-space: nowrap; color: rgb(0, 0, 0); font-family: Menlo, Monaco, Consolas, "Courier New", monospace; font-size: 14px;  }
+.S7 { color: rgb(64, 64, 64); padding: 10px 0px 6px 17px; background: rgb(255, 255, 255) none repeat scroll 0% 0% / auto padding-box border-box; font-family: Menlo, Monaco, Consolas, "Courier New", monospace; font-size: 14px; overflow-x: hidden; line-height: 17.234px;  }
+.embeddedOutputsErrorElement {min-height: 18px; max-height: 250px; overflow: auto;}
+.embeddedOutputsErrorElement.inlineElement {}
+.embeddedOutputsErrorElement.rightPaneElement {}
+.embeddedOutputsWarningElement{min-height: 18px; max-height: 250px; overflow: auto;}
+.embeddedOutputsWarningElement.inlineElement {}
+.embeddedOutputsWarningElement.rightPaneElement {}
+.diagnosticMessage-wrapper {font-family: Menlo, Monaco, Consolas, "Courier New", monospace; font-size: 12px;}
+.diagnosticMessage-wrapper.diagnosticMessage-warningType {color: rgb(255,100,0);}
+.diagnosticMessage-wrapper.diagnosticMessage-warningType a {color: rgb(255,100,0); text-decoration: underline;}
+.diagnosticMessage-wrapper.diagnosticMessage-errorType {color: rgb(230,0,0);}
+.diagnosticMessage-wrapper.diagnosticMessage-errorType a {color: rgb(230,0,0); text-decoration: underline;}
+.diagnosticMessage-wrapper .diagnosticMessage-messagePart,.diagnosticMessage-wrapper .diagnosticMessage-causePart {white-space: pre-wrap;}
+.diagnosticMessage-wrapper .diagnosticMessage-stackPart {white-space: pre;}
+.embeddedOutputsTextElement,.embeddedOutputsVariableStringElement {white-space: pre; word-wrap: initial; min-height: 18px; max-height: 250px; overflow: auto;}
+.textElement,.rtcDataTipElement .textElement {padding-top: 3px;}
+.embeddedOutputsTextElement.inlineElement,.embeddedOutputsVariableStringElement.inlineElement {}
+.inlineElement .textElement {}
+.embeddedOutputsTextElement.rightPaneElement,.embeddedOutputsVariableStringElement.rightPaneElement {min-height: 16px;}
+.rightPaneElement .textElement {padding-top: 2px; padding-left: 9px;}
+.S8 { border-left: 1px solid rgb(233, 233, 233); border-right: 1px solid rgb(233, 233, 233); border-top: 0px none rgb(0, 0, 0); border-bottom: 1px solid rgb(233, 233, 233); border-radius: 0px 0px 4px 4px; padding: 0px 45px 4px 13px; line-height: 17.234px; min-height: 18px; white-space: nowrap; color: rgb(0, 0, 0); font-family: Menlo, Monaco, Consolas, "Courier New", monospace; font-size: 14px;  }</style></head><body><div class = rtcContent><h1  class = 'S0'><span>Runs the whole assembly scalar code on the CPU</span></h1><div  class = 'S1'><span></span></div><div  class = 'S1'><span>This script is used to generate the global stiffness matrix </span><span texencoding="$\mathbf{K}$" style="vertical-align:-5px"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB0AAAAkCAYAAAB15jFqAAAB3klEQVRYR+3WPciOYRQH8N8rq0VJJmWRIgaxKDKZSFlEpIgshFBIFsnnQD6LlI9FiY2iKMlmk4GYZGGQRIpOXXfdXe6P535vT+/wvGe9rnP+1/lf5/zPGTMBNjYBmCZBh8r66NI7ByewBLNrOP6IJ9iHr1iDXViI6ZnPNzzFHrwvzuronYaz2JoFuYQDiGC5zccdLMAjnMZz/MovNv3pJtzMHCKrhzUMrMQtXMUpfK+rxibQDSlI2XcZXlQEm4fruI3L+N1U/v8DdC6uJVaCmUbAeExf0Ci2C+kPWzNsK6Q4b6N3Jq7gJc4MkmFf0AA8j7c4jh9dJGw89L5JvbwND7Adn4cJugqrsbMEEtQews9Bgbtm+gmzKlRnB+7izyDAXUFDkd4ltSnHD2ncjGfDAA1xeI2TGcWBFaKxER/agLtmWihS0S4hi2W7iP1NEthXHBbjXsU0OtjWt+PNtHjw+qS1MZUKiwm0Do+HJfhTsTf1bRnjFbYgevof65NpEWxGksO1WfRa4egKujwN5vz1MdpuYGl2EBJ5NNflrpvDORypqM4pOIbDgwhHDho7Ukz9FRX7ThHvS9Lc+Muw6NmYqYtQLqhyYd3H7rRTTW74bULW73x0N/x+vA3oPTr0/gUOhHElRPbQjgAAAABJRU5ErkJggg==" width="14.5" height="18" /></span><span> for the SCALAR problem (linear static elasticiy).</span></div><div  class = 'S1'><span>For more information, see the </span><a href = "https://github.com/fjramireg/StiffMa"><span>StiffMa</span></a><span> web site.</span></div><div  class = 'S1'><span>Written by </span><span style=' font-weight: bold;'>Francisco Javier Ramirez-Gil</span><span>, </span><a href = "http://fjramireg@gmail.com"><span>fjramireg@gmail.com</span></a></div><div  class = 'S1'><span>Universidad Nacional de Colombia - Medellin</span></div><div  class = 'S1'><span>Created:  28/01/2020. Version: 1.4</span></div><div  class = 'S1'><span>Modified: 13/06/2020. Version: 1.5</span></div><h2  class = 'S2'><span>Add requiered folders to paths</span></h2><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S3'><span style="white-space: pre;"><span>addpath(</span><span style="color: rgb(58, 217, 0);">'../../StiffMa/Common'</span><span>);</span></span></div></div></div><h2  class = 'S2'><span>Mesh generation</span></h2><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre;"><span>dxn = 1;            </span><span style="color: rgb(0, 136, 255);">% For vector 3 (UX, UY, UZ). For scalar 1 (Temp)</span></span></div></div><div class="inlineWrapper"><div  class = 'S5'><span style="white-space: pre;"><span>nelx = 10;          </span><span style="color: rgb(0, 136, 255);">% Number of elements on X-direction</span></span></div></div><div class="inlineWrapper"><div  class = 'S5'><span style="white-space: pre;"><span>nely = 10;          </span><span style="color: rgb(0, 136, 255);">% Number of elements on Y-direction</span></span></div></div><div class="inlineWrapper"><div  class = 'S5'><span style="white-space: pre;"><span>nelz = 10;          </span><span style="color: rgb(0, 136, 255);">% Number of elements on Z-direction</span></span></div></div><div class="inlineWrapper"><div  class = 'S5'><span style="white-space: pre;"><span>dTE = </span><span style="color: rgb(58, 217, 0);">'uint32'</span><span>;     </span><span style="color: rgb(0, 136, 255);">% Data precision for "elements" ['uint32', 'uint64']</span></span></div></div><div class="inlineWrapper"><div  class = 'S5'><span style="white-space: pre;"><span>dTN = </span><span style="color: rgb(58, 217, 0);">'double'</span><span>;     </span><span style="color: rgb(0, 136, 255);">% Data precision for "nodes" ['single' or 'double']</span></span></div></div><div class="inlineWrapper outputs"><div  class = 'S6'><span style="white-space: pre;"><span>[Mesh.elements, Mesh.nodes] = CreateMesh2(nelx,nely,nelz,dTE,dTN);</span></span></div><div  class = 'S7'><div class="inlineElement eoOutputWrapper embeddedOutputsTextElement" uid="F18041FD" data-scroll-top="null" data-scroll-left="null" contenteditable="false" data-testid="output_0" data-width="507" data-height="18" data-hashorizontaloverflow="false" style="width: 537px; max-height: 261px;"><div class="textElement">	Mesh created successfully with 1000 Hex8 elements and 1331 nodes!</div></div></div></div></div><h2  class = 'S2'><span>Material properties</span></h2><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S3'><span style="white-space: pre;"><span>c = 1.0;            </span><span style="color: rgb(0, 136, 255);">% Conductivity (homogeneous, linear, isotropic material)</span></span></div></div></div><h2  class = 'S2'><span>Settings</span></h2><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre;"><span>[nel, nxe] = size(Mesh.elements);</span></span></div></div><div class="inlineWrapper"><div  class = 'S5'><span style="white-space: pre;"><span>[nnod, dim] = size(Mesh.nodes);</span></span></div></div><div class="inlineWrapper"><div  class = 'S5'><span style="white-space: pre;"><span>sets.dTE = dTE;         </span><span style="color: rgb(0, 136, 255);">% Data precision for computing</span></span></div></div><div class="inlineWrapper"><div  class = 'S5'><span style="white-space: pre;"><span>sets.dTN = dTN;         </span><span style="color: rgb(0, 136, 255);">% Data precision for computing</span></span></div></div><div class="inlineWrapper"><div  class = 'S5'><span style="white-space: pre;"><span>sets.nel = nel;         </span><span style="color: rgb(0, 136, 255);">% Number of finite elements</span></span></div></div><div class="inlineWrapper"><div  class = 'S5'><span style="white-space: pre;"><span>sets.nxe = nxe;         </span><span style="color: rgb(0, 136, 255);">% Number of nodes per element</span></span></div></div><div class="inlineWrapper"><div  class = 'S5'><span style="white-space: pre;"><span>sets.dxn = dxn;         </span><span style="color: rgb(0, 136, 255);">% Number of DOFs per node </span></span></div></div><div class="inlineWrapper"><div  class = 'S5'><span style="white-space: pre;"><span>sets.edof= dxn*nxe;     </span><span style="color: rgb(0, 136, 255);">% Number of DOFs per element </span></span></div></div><div class="inlineWrapper"><div  class = 'S5'><span style="white-space: pre;"><span>sets.tdofs = nnod;        </span><span style="color: rgb(0, 136, 255);">% Number of total DOFs</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span>sets.sz  = sets.edof * (sets.edof + 1) / 2; </span><span style="color: rgb(0, 136, 255);">% Number of symmetry entries</span></span></div></div></div><h2  class = 'S2'><span>Creation of global stiffness matrix on CPU (serial)</span></h2><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre;"><span>tic;</span></span></div></div><div class="inlineWrapper"><div  class = 'S5'><span style="white-space: pre;"><span>K_f = StiffMa_ss(Mesh, c, sets);	</span><span style="color: rgb(0, 136, 255);">% Assembly on CPU: K</span></span></div></div><div class="inlineWrapper"><div  class = 'S5'><span style="white-space: pre;"><span>time = toc;</span></span></div></div><div class="inlineWrapper outputs"><div  class = 'S6'><span style="white-space: pre;"><span>fprintf(</span><span style="color: rgb(58, 217, 0);">'\nElapsed time for building K on serial CPU: %f\n'</span><span>,time);</span></span></div><div  class = 'S7'><div class="inlineElement eoOutputWrapper embeddedOutputsTextElement" uid="50E7AB9A" data-scroll-top="null" data-scroll-left="null" contenteditable="false" data-testid="output_1" style="width: 537px; max-height: 261px;" data-width="507" data-height="18" data-hashorizontaloverflow="false"><div class="textElement">Elapsed time for building K on serial CPU: 0.298632</div></div></div></div></div><h2  class = 'S2'><span>Creation of global stiffness matrix on CPU (serial) taking advantage of symmetry</span></h2><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S4'><span style="white-space: pre;"><span>tic;</span></span></div></div><div class="inlineWrapper"><div  class = 'S5'><span style="white-space: pre;"><span>K_s = StiffMa_sss(Mesh, c, sets);  </span><span style="color: rgb(0, 136, 255);">% Assembly on CPU (tril(K))</span></span></div></div><div class="inlineWrapper"><div  class = 'S5'><span style="white-space: pre;"><span>times = toc;</span></span></div></div><div class="inlineWrapper outputs"><div  class = 'S6'><span style="white-space: pre;"><span>fprintf(</span><span style="color: rgb(58, 217, 0);">'Elapsed time for building tril(K) on serial CPU: %f\n'</span><span>,times);</span></span></div><div  class = 'S7'><div class="inlineElement eoOutputWrapper embeddedOutputsTextElement" uid="069FA69A" data-scroll-top="null" data-scroll-left="null" contenteditable="false" data-testid="output_2" style="width: 537px; max-height: 261px;" data-width="507" data-height="18" data-hashorizontaloverflow="false"><div class="textElement">Elapsed time for building tril(K) on serial CPU: 0.457934</div></div></div></div></div></div>
+<br>
+<!-- 
+##### SOURCE BEGIN #####
+%% Runs the whole assembly scalar code on the CPU
+% 
+% 
+% This script is used to generate the global stiffness matrix $$\mathbf{K}$$ 
+% for the SCALAR problem (linear static elasticiy).
+% 
+% For more information, see the <https://github.com/fjramireg/StiffMa StiffMa> 
+% web site.
+% 
+% Written by *Francisco Javier Ramirez-Gil*, <http://fjramireg@gmail.com fjramireg@gmail.com>
+% 
+% Universidad Nacional de Colombia - Medellin
+% 
+% Created:  28/01/2020. Version: 1.4
+% 
+% Modified: 13/06/2020. Version: 1.5
+%% Add requiered folders to paths
+
+addpath('../../StiffMa/Common');
+%% Mesh generation
+
+dxn = 1;            % For vector 3 (UX, UY, UZ). For scalar 1 (Temp)
+nelx = 10;          % Number of elements on X-direction
+nely = 10;          % Number of elements on Y-direction
+nelz = 10;          % Number of elements on Z-direction
+dTE = 'uint32';     % Data precision for "elements" ['uint32', 'uint64']
+dTN = 'double';     % Data precision for "nodes" ['single' or 'double']
+[Mesh.elements, Mesh.nodes] = CreateMesh2(nelx,nely,nelz,dTE,dTN);
+%% Material properties
+
+c = 1.0;            % Conductivity (homogeneous, linear, isotropic material)
+%% Settings
+
+[nel, nxe] = size(Mesh.elements);
+[nnod, dim] = size(Mesh.nodes);
+sets.dTE = dTE;         % Data precision for computing
+sets.dTN = dTN;         % Data precision for computing
+sets.nel = nel;         % Number of finite elements
+sets.nxe = nxe;         % Number of nodes per element
+sets.dxn = dxn;         % Number of DOFs per node 
+sets.edof= dxn*nxe;     % Number of DOFs per element 
+sets.tdofs = nnod;        % Number of total DOFs
+sets.sz  = sets.edof * (sets.edof + 1) / 2; % Number of symmetry entries
+%% Creation of global stiffness matrix on CPU (serial)
+
+tic;
+K_f = StiffMa_ss(Mesh, c, sets);	% Assembly on CPU: K
+time = toc;
+fprintf('\nElapsed time for building K on serial CPU: %f\n',time);
+%% Creation of global stiffness matrix on CPU (serial) taking advantage of symmetry
+
+tic;
+K_s = StiffMa_sss(Mesh, c, sets);  % Assembly on CPU (tril(K))
+times = toc;
+fprintf('Elapsed time for building tril(K) on serial CPU: %f\n',times);
+##### SOURCE END #####
+--></body></html>
