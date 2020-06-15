@@ -1,4 +1,4 @@
-function [elements, nodes] = CreateMesh2(nelx,nely,nelz,dTE,dTN)
+function [elements, nodes] = CreateMesh2(nelx,nely,nelz,sets)
 % CREATEMESH2 is a simple mesher of a unit cubic with configurable and structured
 % discretization with Hex8 elements. It is faster than CREATEMESH.
 % 
@@ -18,27 +18,29 @@ function [elements, nodes] = CreateMesh2(nelx,nely,nelz,dTE,dTN)
 
 %   Written by Francisco Javier Ramirez-Gil, fjramireg@gmail.com
 %   Universidad Nacional de Colombia - Medellin
-%   Created:  08/02/2020. Version: 1.0
+%   Created:  08 February 2020. Version: 1.0
+%   Modified: June 15th, 2020. Version: 1.1. Less inputs: sets instead of
+%   dTN and dTE
 
 %% INPUTS CHECK
 if ~( mod(nelx,1)==0 && mod(nely,1)==0 && mod(nelz,1)==0 )   % Check if inputs "nel" are integers
     error('Error. Inputs "nelx", "nely" and "nely" must be integers');
 elseif ( nelx<0 || nely<0 || nelz<0 )                        % Check if "nel" are positives
     error('Error. Inputs "nelx", "nely" and "nely" must be positives');
-elseif ~( strcmp(dTN,'single') || strcmp(dTN,'double') )
+elseif ~( strcmp(sets.dTN,'single') || strcmp(sets.dTN,'double') )
     error('Error. Input "dTN" must be "single" or "double"');
-elseif ~( strcmp(dTE,'uint32') || strcmp(dTE,'uint64') )
+elseif ~( strcmp(sets.dTE,'uint32') || strcmp(sets.dTE,'uint64') )
     error('Error. Input "dTE" must be "uint32", "uint64"');
 end
 
 %% NODES
-sX = ones(1,1,dTN); sY = sX; sZ = sX; % Size of the paralelepiped on X-Y-Z direction
+sX = ones(1,1,sets.dTN); sY = sX; sZ = sX; % Size of the paralelepiped on X-Y-Z direction
 selX = sX/nelx; selY = sY/nely; selZ = sZ/nelz; % Element size
 [X,Y,Z]= ndgrid(selX*(0:nelx),selY*(0:nely),selZ*(0:nelz));
 nodes = [X(:), Y(:), Z(:)];
 
 %% ELEMENTS
-if strcmp(dTE,'uint32')
+if strcmp(sets.dTE,'uint32')
     nx = uint32(nelx+1);
     ny = uint32(nely+1);
     nz = uint32(nelz+1);    
@@ -50,7 +52,7 @@ end
 nnod = nx*ny*nz;
 n = 1:nnod;                     % Selects all nodes at base of all elements
 fx = nx:nx:nnod;                % Nodes at face X=Sx
-fy = zeros(1,nz*nx,dTE);        % Nodes at face Y=Sy
+fy = zeros(1,nz*nx,sets.dTE);        % Nodes at face Y=Sy
 nfy = nx*ny-ny:nx*ny:nnod;      % Node at edge X=0, Y=Sy
 for i=1:nz
     fy((i-1)*nx+1:(i-1)*nx+nx) = (1:nx)+(nfy(i)-1);

@@ -3,7 +3,6 @@ function release()
 folder = fileparts( mfilename( "fullpath" ) );
 tlbxPrj = fullfile( folder, "StiffMa.prj" );
 version = matlab.addons.toolbox.toolboxVersion( tlbxPrj );
-mltbx = fullfile( folder, "releases", ...
-    "StiffMa" + version + ".mltbx" );
+mltbx = fullfile( folder, "releases", "StiffMa" + version + ".mltbx" );
 matlab.addons.toolbox.packageToolbox( tlbxPrj, mltbx );
 end % release

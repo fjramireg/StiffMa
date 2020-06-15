@@ -1,0 +1,109 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,IE=9,chrome=1"><meta name="generator" content="MATLAB R2020a"><title>Runs the whole assembly VECTOR code on the GPU</title><style type="text/css">.rtcContent { padding: 30px; } .S0 { margin: 3px 10px 5px 4px; padding: 0px; line-height: 28.8px; min-height: 0px; white-space: pre-wrap; color: rgb(213, 80, 0); font-family: Helvetica, Arial, sans-serif; font-style: normal; font-size: 24px; font-weight: 400; text-align: left;  }
+.S1 { margin: 2px 10px 9px 4px; padding: 0px; line-height: 21px; min-height: 0px; white-space: pre-wrap; color: rgb(0, 0, 0); font-family: Helvetica, Arial, sans-serif; font-style: normal; font-size: 14px; font-weight: 400; text-align: left;  }
+.S2 { margin-bottom: 20px; padding-bottom: 4px;  }
+.S3 { margin: 0px; padding: 10px 0px 10px 5px; line-height: 21px; min-height: 0px; white-space: pre-wrap; color: rgb(0, 0, 0); font-family: Helvetica, Arial, sans-serif; font-style: normal; font-size: 14px; font-weight: 700; text-align: start;  }
+.S4 { margin: -1px 0px 0px; padding: 10px 0px 10px 7px; line-height: 21px; min-height: 0px; white-space: pre-wrap; color: rgb(0, 0, 0); font-family: Helvetica, Arial, sans-serif; font-style: normal; font-size: 14px; font-weight: 400; text-align: start;  }
+.S5 { margin: 3px 10px 5px 4px; padding: 0px; line-height: 20px; min-height: 0px; white-space: pre-wrap; color: rgb(60, 60, 60); font-family: Helvetica, Arial, sans-serif; font-style: normal; font-size: 20px; font-weight: 700; text-align: left;  }
+.CodeBlock { background-color: #F7F7F7; margin: 10px 0 10px 0;}
+.S6 { border-left: 1px solid rgb(233, 233, 233); border-right: 1px solid rgb(233, 233, 233); border-top: 1px solid rgb(233, 233, 233); border-bottom: 0px none rgb(0, 0, 0); border-radius: 4px 4px 0px 0px; padding: 6px 45px 0px 13px; line-height: 17.234px; min-height: 18px; white-space: nowrap; color: rgb(0, 0, 0); font-family: Menlo, Monaco, Consolas, "Courier New", monospace; font-size: 14px;  }
+.S7 { border-left: 1px solid rgb(233, 233, 233); border-right: 1px solid rgb(233, 233, 233); border-top: 0px none rgb(0, 0, 0); border-bottom: 0px none rgb(0, 0, 0); border-radius: 0px; padding: 0px 45px 0px 13px; line-height: 17.234px; min-height: 18px; white-space: nowrap; color: rgb(0, 0, 0); font-family: Menlo, Monaco, Consolas, "Courier New", monospace; font-size: 14px;  }
+.S8 { border-left: 1px solid rgb(233, 233, 233); border-right: 1px solid rgb(233, 233, 233); border-top: 0px none rgb(0, 0, 0); border-bottom: 1px solid rgb(233, 233, 233); border-radius: 0px 0px 4px 4px; padding: 0px 45px 4px 13px; line-height: 17.234px; min-height: 18px; white-space: nowrap; color: rgb(0, 0, 0); font-family: Menlo, Monaco, Consolas, "Courier New", monospace; font-size: 14px;  }
+.S9 { border-left: 1px solid rgb(233, 233, 233); border-right: 1px solid rgb(233, 233, 233); border-top: 1px solid rgb(233, 233, 233); border-bottom: 1px solid rgb(233, 233, 233); border-radius: 4px 4px 0px 0px; padding: 6px 45px 4px 13px; line-height: 17.234px; min-height: 18px; white-space: nowrap; color: rgb(0, 0, 0); font-family: Menlo, Monaco, Consolas, "Courier New", monospace; font-size: 14px;  }
+.S10 { color: rgb(64, 64, 64); padding: 10px 0px 6px 17px; background: rgb(255, 255, 255) none repeat scroll 0% 0% / auto padding-box border-box; font-family: Menlo, Monaco, Consolas, "Courier New", monospace; font-size: 14px; overflow-x: hidden; line-height: 17.234px;  }
+.embeddedOutputsErrorElement {min-height: 18px; max-height: 250px; overflow: auto;}
+.embeddedOutputsErrorElement.inlineElement {}
+.embeddedOutputsErrorElement.rightPaneElement {}
+.embeddedOutputsWarningElement{min-height: 18px; max-height: 250px; overflow: auto;}
+.embeddedOutputsWarningElement.inlineElement {}
+.embeddedOutputsWarningElement.rightPaneElement {}
+.diagnosticMessage-wrapper {font-family: Menlo, Monaco, Consolas, "Courier New", monospace; font-size: 12px;}
+.diagnosticMessage-wrapper.diagnosticMessage-warningType {color: rgb(255,100,0);}
+.diagnosticMessage-wrapper.diagnosticMessage-warningType a {color: rgb(255,100,0); text-decoration: underline;}
+.diagnosticMessage-wrapper.diagnosticMessage-errorType {color: rgb(230,0,0);}
+.diagnosticMessage-wrapper.diagnosticMessage-errorType a {color: rgb(230,0,0); text-decoration: underline;}
+.diagnosticMessage-wrapper .diagnosticMessage-messagePart,.diagnosticMessage-wrapper .diagnosticMessage-causePart {white-space: pre-wrap;}
+.diagnosticMessage-wrapper .diagnosticMessage-stackPart {white-space: pre;}
+.embeddedOutputsTextElement,.embeddedOutputsVariableStringElement {white-space: pre; word-wrap: initial; min-height: 18px; max-height: 250px; overflow: auto;}
+.textElement,.rtcDataTipElement .textElement {padding-top: 3px;}
+.embeddedOutputsTextElement.inlineElement,.embeddedOutputsVariableStringElement.inlineElement {}
+.inlineElement .textElement {}
+.embeddedOutputsTextElement.rightPaneElement,.embeddedOutputsVariableStringElement.rightPaneElement {min-height: 16px;}
+.rightPaneElement .textElement {padding-top: 2px; padding-left: 9px;}
+.S11 { border-left: 1px solid rgb(233, 233, 233); border-right: 1px solid rgb(233, 233, 233); border-top: 0px none rgb(0, 0, 0); border-bottom: 1px solid rgb(233, 233, 233); border-radius: 0px; padding: 0px 45px 4px 13px; line-height: 17.234px; min-height: 18px; white-space: nowrap; color: rgb(0, 0, 0); font-family: Menlo, Monaco, Consolas, "Courier New", monospace; font-size: 14px;  }
+.S12 { margin: 10px 0px 20px; padding-left: 0px; font-family: Helvetica, Arial, sans-serif; font-size: 14px;  }
+.S13 { margin-left: 56px; line-height: 21px; min-height: 0px; text-align: left; white-space: pre-wrap;  }</style></head><body><div class = rtcContent><h1  class = 'S0' id = 'T_72ACB972' ><span>Runs the whole assembly VECTOR code on the GPU</span></h1><div  class = 'S1'><span></span></div><div  class = 'S1'><span>This script is used to generate the global stiffness matrix </span><span texencoding="$\mathbf{K}$" style="vertical-align:-5px"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB0AAAAkCAYAAAB15jFqAAAB3klEQVRYR+3WPciOYRQH8N8rq0VJJmWRIgaxKDKZSFlEpIgshFBIFsnnQD6LlI9FiY2iKMlmk4GYZGGQRIpOXXfdXe6P535vT+/wvGe9rnP+1/lf5/zPGTMBNjYBmCZBh8r66NI7ByewBLNrOP6IJ9iHr1iDXViI6ZnPNzzFHrwvzuronYaz2JoFuYQDiGC5zccdLMAjnMZz/MovNv3pJtzMHCKrhzUMrMQtXMUpfK+rxibQDSlI2XcZXlQEm4fruI3L+N1U/v8DdC6uJVaCmUbAeExf0Ci2C+kPWzNsK6Q4b6N3Jq7gJc4MkmFf0AA8j7c4jh9dJGw89L5JvbwND7Adn4cJugqrsbMEEtQews9Bgbtm+gmzKlRnB+7izyDAXUFDkd4ltSnHD2ncjGfDAA1xeI2TGcWBFaKxER/agLtmWihS0S4hi2W7iP1NEthXHBbjXsU0OtjWt+PNtHjw+qS1MZUKiwm0Do+HJfhTsTf1bRnjFbYgevof65NpEWxGksO1WfRa4egKujwN5vz1MdpuYGl2EBJ5NNflrpvDORypqM4pOIbDgwhHDho7Ukz9FRX7ThHvS9Lc+Muw6NmYqYtQLqhyYd3H7rRTTW74bULW73x0N/x+vA3oPTr0/gUOhHElRPbQjgAAAABJRU5ErkJggg==" width="14.5" height="18" /></span><span> for the VECTOR problem (linear elasticity) on the GPU.</span></div><div  class = 'S1'><span>For more information, see the </span><a href = "https://github.com/fjramireg/StiffMa"><span>StiffMa</span></a><span> web site.</span></div><div  class = 'S2'><div  class = 'S3'><span style=' font-weight: bold;'>Table of Contents</span></div><div  class = 'S4'><a href = "#H_83581889"><span>Inputs
+</span></a><a href = "#H_0EE8089F"><span>Mesh generation
+</span></a><a href = "#H_D584400C"><span>Material properties
+</span></a><a href = "#H_638E11C5"><span>General Settings
+</span></a><a href = "#H_B41C36B4"><span>GPU Settings
+</span></a><a href = "#H_507C404F"><span>Creation of global stiffness matrix on GPU
+</span></a><a href = "#H_DC2DCC8A"><span>Credits</span></a></div></div><div  class = 'S1'><span></span></div><h2  class = 'S5' id = 'H_83581889' ><span>Inputs</span></h2><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S6'><span style="white-space: pre;"><span>nelx = 10;              </span><span style="color: rgb(60, 118, 61);">% Number of elements on X-direction</span></span></div></div><div class="inlineWrapper"><div  class = 'S7'><span style="white-space: pre;"><span>nely = 10;              </span><span style="color: rgb(60, 118, 61);">% Number of elements on Y-direction</span></span></div></div><div class="inlineWrapper"><div  class = 'S7'><span style="white-space: pre;"><span>nelz = 10;              </span><span style="color: rgb(60, 118, 61);">% Number of elements on Z-direction</span></span></div></div><div class="inlineWrapper"><div  class = 'S7'><span style="white-space: pre;"><span>sets.dTE = </span><span style="color: rgb(160, 32, 240);">'uint32'</span><span>;    </span><span style="color: rgb(60, 118, 61);">% Data precision for "elements" ['uint32', 'uint64']</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span>sets.dTN = </span><span style="color: rgb(160, 32, 240);">'double'</span><span>;    </span><span style="color: rgb(60, 118, 61);">% Data precision for "nodes" ['single' or 'double']</span></span></div></div></div><h2  class = 'S5' id = 'H_0EE8089F' ><span>Mesh generation</span></h2><div class="CodeBlock"><div class="inlineWrapper outputs"><div  class = 'S9'><span style="white-space: pre;"><span>[Mesh.elements, Mesh.nodes] = CreateMesh2(nelx, nely, nelz, sets);</span></span></div><div  class = 'S10'><div class="inlineElement eoOutputWrapper embeddedOutputsTextElement scrollableOutput" uid="FD8AFF1E" contenteditable="false" data-testid="output_0" data-width="428" data-height="18" data-hashorizontaloverflow="true" style="width: 458px; max-height: 261px;"><div class="textElement">	Mesh created successfully with 1000 Hex8 elements and 1331 nodes!</div></div></div></div></div><h2  class = 'S5' id = 'H_D584400C' ><span>Material properties</span></h2><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S6'><span style="white-space: pre;"><span>MP.E = 200e9;      	</span><span style="color: rgb(60, 118, 61);">% Elastic modulus (homogeneous, linear, isotropic material)</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span>MP.nu = 0.3;       	</span><span style="color: rgb(60, 118, 61);">% Poisson ratio</span></span></div></div></div><h2  class = 'S5' id = 'H_638E11C5' ><span>General Settings</span></h2><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S6'><span style="white-space: pre;"><span>[sets.nel, sets.nxe]  = size(Mesh.elements);    </span><span style="color: rgb(60, 118, 61);">% Number of elements in the mesh &amp; Number of nodes per element</span></span></div></div><div class="inlineWrapper"><div  class = 'S7'><span style="white-space: pre;"><span>[sets.nnod, sets.dim] = size(Mesh.nodes);       </span><span style="color: rgb(60, 118, 61);">% Number of nodes in the mesh &amp; Space dimension</span></span></div></div><div class="inlineWrapper"><div  class = 'S7'><span style="white-space: pre;"><span>sets.dxn = 3;                                   </span><span style="color: rgb(60, 118, 61);">% Number of DOFs per node for the vector problem</span></span></div></div><div class="inlineWrapper"><div  class = 'S7'><span style="white-space: pre;"><span>sets.edof = sets.dxn * sets.nxe;                </span><span style="color: rgb(60, 118, 61);">% Number of DOFs per element</span></span></div></div><div class="inlineWrapper"><div  class = 'S7'><span style="white-space: pre;"><span>sets.sz = (sets.edof * (sets.edof + 1) )/2;     </span><span style="color: rgb(60, 118, 61);">% Number of NNZ values for each Ke using simmetry</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span>sets.tdofs = sets.nnod * sets.dxn;              </span><span style="color: rgb(60, 118, 61);">% Number of total DOFs in the mesh</span></span></div></div></div><h2  class = 'S5' id = 'H_B41C36B4' ><span>GPU Settings</span></h2><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S6'><span style="white-space: pre;"><span>d = gpuDevice;                          </span><span style="color: rgb(60, 118, 61);">% Selects the GPU device </span></span></div></div><div class="inlineWrapper"><div  class = 'S7'><span style="white-space: pre;"><span>sets.tbs      = d.MaxThreadsPerBlock;   </span><span style="color: rgb(60, 118, 61);">% Thread Block Size</span></span></div></div><div class="inlineWrapper"><div  class = 'S7'><span style="white-space: pre;"><span>sets.numSMs   = d.MultiprocessorCount;  </span><span style="color: rgb(60, 118, 61);">% Number of multiprocessors on the device</span></span></div></div><div class="inlineWrapper"><div  class = 'S8'><span style="white-space: pre;"><span>sets.WarpSize = d.SIMDWidth;            </span><span style="color: rgb(60, 118, 61);">% The warp size in threads</span></span></div></div></div><h2  class = 'S5' id = 'H_507C404F' ><span>Creation of global stiffness matrix on GPU</span></h2><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S6'><span style="white-space: pre;"><span>tic;</span></span></div></div><div class="inlineWrapper"><div  class = 'S7'><span style="white-space: pre;"><span>elementsGPU = gpuArray(Mesh.elements');	</span><span style="color: rgb(60, 118, 61);">% Transfer to GPU memory</span></span></div></div><div class="inlineWrapper"><div  class = 'S7'><span style="white-space: pre;"><span>nodesGPU    = gpuArray(Mesh.nodes');  	</span><span style="color: rgb(60, 118, 61);">% Transfer to GPU memory</span></span></div></div><div class="inlineWrapper"><div  class = 'S7'><span style="white-space: pre;"><span>K_d = StiffMa_vps(elementsGPU, nodesGPU, MP, sets);      </span><span style="color: rgb(60, 118, 61);">% Assembly on GPU (symmetric)</span></span></div></div><div class="inlineWrapper"><div  class = 'S7'><span style="white-space: pre;"><span>time_d = toc;</span></span></div></div><div class="inlineWrapper"><div  class = 'S7'><span style="white-space: pre;"><span>wait(d);</span></span></div></div><div class="inlineWrapper outputs"><div  class = 'S11'><span style="white-space: pre;"><span>fprintf(</span><span style="color: rgb(160, 32, 240);">'Elapsed time for building tril(K) on parallel GPU: %f\n'</span><span>,time_d);</span></span></div><div  class = 'S10'><div class="inlineElement eoOutputWrapper embeddedOutputsTextElement" uid="B47947BA" contenteditable="false" data-testid="output_1" style="width: 458px; max-height: 261px;" data-width="428" data-height="18" data-hashorizontaloverflow="false"><div class="textElement">Elapsed time for building tril(K) on parallel GPU: 0.101495</div></div></div></div></div><h2  class = 'S5' id = 'H_DC2DCC8A' ><span>Credits</span></h2><div  class = 'S1'><span>Written by </span><span style=' font-weight: bold;'>Francisco Javier Ramírez-Gil</span><span>, </span><a href = "http://fjramireg@gmail.com"><span>fjramireg@gmail.com</span></a></div><div  class = 'S1'><span>Code site:</span></div><ul  class = 'S12'><li  class = 'S13'><a href = "https://github.com/fjramireg/StiffMa"><span>https://github.com/fjramireg/StiffMa</span></a></li><li  class = 'S13'><a href = "https://www.mathworks.com/matlabcentral/fileexchange/76947-stiffma"><span>https://www.mathworks.com/matlabcentral/fileexchange/76947-stiffma</span></a></li></ul><div  class = 'S1'><span>Sponsors: </span></div><ul  class = 'S12'><li  class = 'S13'><a href = "https://pascualbravo.edu.co/"><span>Institución Universitaria Pascual Bravo</span></a></li><li  class = 'S13'><a href = "https://medellin.unal.edu.co/"><span>Universidad Nacional de Colombia - Medellin</span></a></li></ul><div  class = 'S1'><span>Created:  28/01/2020. Version: 1.4</span></div><div  class = 'S1'><span>Modified: 13/06/2020. Version: 1.5</span></div></div>
+<br>
+<!-- 
+##### SOURCE BEGIN #####
+%% Runs the whole assembly VECTOR code on the GPU
+% 
+% 
+% This script is used to generate the global stiffness matrix $$\mathbf{K}$$ 
+% for the VECTOR problem (linear elasticity) on the GPU.
+% 
+% For more information, see the <https://github.com/fjramireg/StiffMa StiffMa> 
+% web site.
+%% 
+% 
+%% Inputs
+
+nelx = 10;              % Number of elements on X-direction
+nely = 10;              % Number of elements on Y-direction
+nelz = 10;              % Number of elements on Z-direction
+sets.dTE = 'uint32';    % Data precision for "elements" ['uint32', 'uint64']
+sets.dTN = 'double';    % Data precision for "nodes" ['single' or 'double']
+%% Mesh generation
+
+[Mesh.elements, Mesh.nodes] = CreateMesh2(nelx, nely, nelz, sets);
+%% Material properties
+
+MP.E = 200e9;      	% Elastic modulus (homogeneous, linear, isotropic material)
+MP.nu = 0.3;       	% Poisson ratio
+%% General Settings
+
+[sets.nel, sets.nxe]  = size(Mesh.elements);    % Number of elements in the mesh & Number of nodes per element
+[sets.nnod, sets.dim] = size(Mesh.nodes);       % Number of nodes in the mesh & Space dimension
+sets.dxn = 3;                                   % Number of DOFs per node for the vector problem
+sets.edof = sets.dxn * sets.nxe;                % Number of DOFs per element
+sets.sz = (sets.edof * (sets.edof + 1) )/2;     % Number of NNZ values for each Ke using simmetry
+sets.tdofs = sets.nnod * sets.dxn;              % Number of total DOFs in the mesh
+%% GPU Settings
+
+d = gpuDevice;                          % Selects the GPU device 
+sets.tbs      = d.MaxThreadsPerBlock;   % Thread Block Size
+sets.numSMs   = d.MultiprocessorCount;  % Number of multiprocessors on the device
+sets.WarpSize = d.SIMDWidth;            % The warp size in threads
+%% Creation of global stiffness matrix on GPU
+
+tic;
+elementsGPU = gpuArray(Mesh.elements');	% Transfer to GPU memory
+nodesGPU    = gpuArray(Mesh.nodes');  	% Transfer to GPU memory
+K_d = StiffMa_vps(elementsGPU, nodesGPU, MP, sets);      % Assembly on GPU (symmetric)
+time_d = toc;
+wait(d);
+fprintf('Elapsed time for building tril(K) on parallel GPU: %f\n',time_d);
+%% Credits
+% Written by *Francisco Javier Ramírez-Gil*, <http://fjramireg@gmail.com fjramireg@gmail.com>
+% 
+% Code site:
+%% 
+% * <https://github.com/fjramireg/StiffMa https://github.com/fjramireg/StiffMa>
+% * <https://www.mathworks.com/matlabcentral/fileexchange/76947-stiffma https://www.mathworks.com/matlabcentral/fileexchange/76947-stiffma>
+%% 
+% Sponsors: 
+%% 
+% * <https://pascualbravo.edu.co/ Institución Universitaria Pascual Bravo>
+% * <https://medellin.unal.edu.co/ Universidad Nacional de Colombia - Medellin>
+%% 
+% Created:  28/01/2020. Version: 1.4
+% 
+% Modified: 13/06/2020. Version: 1.5
+##### SOURCE END #####
+--></body></html>

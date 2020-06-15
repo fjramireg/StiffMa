@@ -1,8 +1,8 @@
 <deployment-project plugin="plugin.toolbox" plugin-version="1.0">
-  <configuration build-checksum="633909627" file="B:\Francisco\Documents\Dropbox (Universidad Nacional)\StiffMa\Code\StiffMa.prj" location="B:\Francisco\Documents\Dropbox (Universidad Nacional)\StiffMa\Code" name="StiffMa" target="target.toolbox" target-name="Package Toolbox">
+  <configuration build-checksum="233970263" file="C:\Users\Francisco\Dropbox\StiffMa\Code\StiffMa.prj" location="C:\Users\Francisco\Dropbox\StiffMa\Code" name="StiffMa" target="target.toolbox" target-name="Package Toolbox">
     <param.appname>StiffMa</param.appname>
-    <param.authnamewatermark>Francisco Ramírez</param.authnamewatermark>
-    <param.email>francisco.ramirez@pascualbravo.edu.co</param.email>
+    <param.authnamewatermark>Francisco Javier Ramírez-Gil</param.authnamewatermark>
+    <param.email>fjramireg@gmail.com</param.email>
     <param.company>Institución Universitaria Pascual Bravo</param.company>
     <param.summary>StiffMa: Fast finite element STIFFness MAtrix generation in MATLAB by using GPU computing.</param.summary>
     <param.description>StiffMa: Fast finite element STIFFness MAtrix construction in MATLAB
@@ -10,7 +10,7 @@
 The finite element method (FEM) is a well established numerical technique for solving partial differential equations (PDEs) in a wide range of complex science and engineering applications. This method has two costly operation that are the construction of global matrices and vectors to form the system of linear or nonlinear equations (assemblage), and their solution (solver). Many efforts have been directed to accelerate the solver. However, the assembly stage has been less investigated although it may represent a serious bottleneck in iterative processes such as non-linear and time-dependent phenomena, and in optimization procedures involving FEM with unstructured meshes. Thus, a fast technique for the global FEM matrices construction is proposed herein by using parallel computing on graphics processing units (GPUs). This work focuses on matrices that arise by solving elliptic PDEs, what is commonly known as stiffness matrix. For performance tests, a scalar problem typically represented by the thermal conduction phenomenon and a vector problem represented by the structural elasticity are considered in a three-dimensional (3D) domain. Unstructured meshes with 8-node hexahedral elements are used to discretize the domain. The MATLAB Parallel Computing Toolbox (PCT) is used to program the CUDA code. The stiffness matrix are built with three GPU kernels that are the indices computation, the numerical integration and the global assembly. Symmetry and adequate data precision are used to save memory and runtime. This proposed methodology allows generating global stiffness matrices from meshes with more than 16.3 millions elements in less than 3 seconds for the scalar problem and up to 3.1 millions for the vector one in 6 seconds using an Nvidia Tesla V100 GPU with 16 GB of memory.
 Large speedups are obtained compared with a non-optimized CPU code.</param.description>
     <param.screenshot>${PROJECT_ROOT}\StiffMa_logo.png</param.screenshot>
-    <param.version>1.5</param.version>
+    <param.version>1.6</param.version>
     <param.output>${PROJECT_ROOT}\StiffMa.mltbx</param.output>
     <param.products.name>
       <item>MATLAB</item>
@@ -52,10 +52,95 @@ desktop.ini
     <param.exclude.pcodedmfiles>true</param.exclude.pcodedmfiles>
     <param.examples>&lt;?xml version="1.0" encoding="utf-8"?&gt;
 &lt;examples&gt;
-   &lt;exampleCategory name="StiffMa"&gt;
-      &lt;example name="runStiffMa" type="html"&gt;
-         &lt;file type="source"&gt;/StiffMa/html/runStiffMa.html&lt;/file&gt;
-         &lt;file type="main"&gt;/StiffMa/runStiffMa.m&lt;/file&gt;
+   &lt;exampleCategory name="examples"&gt;
+      &lt;example name="runESTiffScalarCPUvsGPU" type="html"&gt;
+         &lt;file type="source"&gt;/doc/examples/html/runESTiffScalarCPUvsGPU.html&lt;/file&gt;
+         &lt;file type="main"&gt;/doc/examples/runESTiffScalarCPUvsGPU.mlx&lt;/file&gt;
+         &lt;file type="thumbnail"/&gt;
+      &lt;/example&gt;
+      &lt;example name="runEStiffScalarOnCPU" type="html"&gt;
+         &lt;file type="source"&gt;/doc/examples/html/runEStiffScalarOnCPU.html&lt;/file&gt;
+         &lt;file type="main"&gt;/doc/examples/runEStiffScalarOnCPU.mlx&lt;/file&gt;
+         &lt;file type="thumbnail"/&gt;
+      &lt;/example&gt;
+      &lt;example name="runEStiffScalarOnGPU" type="html"&gt;
+         &lt;file type="source"&gt;/doc/examples/html/runEStiffScalarOnGPU.html&lt;/file&gt;
+         &lt;file type="main"&gt;/doc/examples/runEStiffScalarOnGPU.mlx&lt;/file&gt;
+         &lt;file type="thumbnail"/&gt;
+      &lt;/example&gt;
+      &lt;example name="runEStiffVectorCPUvsGPU" type="html"&gt;
+         &lt;file type="source"&gt;/doc/examples/html/runEStiffVectorCPUvsGPU.html&lt;/file&gt;
+         &lt;file type="main"&gt;/doc/examples/runEStiffVectorCPUvsGPU.mlx&lt;/file&gt;
+         &lt;file type="thumbnail"/&gt;
+      &lt;/example&gt;
+      &lt;example name="runEStiffVectorOnCPU" type="html"&gt;
+         &lt;file type="source"&gt;/doc/examples/html/runEStiffVectorOnCPU.html&lt;/file&gt;
+         &lt;file type="main"&gt;/doc/examples/runEStiffVectorOnCPU.mlx&lt;/file&gt;
+         &lt;file type="thumbnail"/&gt;
+      &lt;/example&gt;
+      &lt;example name="runEStiffVectorOnGPU" type="html"&gt;
+         &lt;file type="source"&gt;/doc/examples/html/runEStiffVectorOnGPU.html&lt;/file&gt;
+         &lt;file type="main"&gt;/doc/examples/runEStiffVectorOnGPU.mlx&lt;/file&gt;
+         &lt;file type="thumbnail"/&gt;
+      &lt;/example&gt;
+      &lt;example name="runIndexScalarCPUvsGPU" type="html"&gt;
+         &lt;file type="source"&gt;/doc/examples/html/runIndexScalarCPUvsGPU.html&lt;/file&gt;
+         &lt;file type="main"&gt;/doc/examples/runIndexScalarCPUvsGPU.mlx&lt;/file&gt;
+         &lt;file type="thumbnail"/&gt;
+      &lt;/example&gt;
+      &lt;example name="runIndexScalarOnCPU" type="html"&gt;
+         &lt;file type="source"&gt;/doc/examples/html/runIndexScalarOnCPU.html&lt;/file&gt;
+         &lt;file type="main"&gt;/doc/examples/runIndexScalarOnCPU.mlx&lt;/file&gt;
+         &lt;file type="thumbnail"/&gt;
+      &lt;/example&gt;
+      &lt;example name="runIndexScalarOnGPU" type="html"&gt;
+         &lt;file type="source"&gt;/doc/examples/html/runIndexScalarOnGPU.html&lt;/file&gt;
+         &lt;file type="main"&gt;/doc/examples/runIndexScalarOnGPU.mlx&lt;/file&gt;
+         &lt;file type="thumbnail"/&gt;
+      &lt;/example&gt;
+      &lt;example name="runIndexVectorCPUvsGPU" type="html"&gt;
+         &lt;file type="source"&gt;/doc/examples/html/runIndexVectorCPUvsGPU.html&lt;/file&gt;
+         &lt;file type="main"&gt;/doc/examples/runIndexVectorCPUvsGPU.mlx&lt;/file&gt;
+         &lt;file type="thumbnail"/&gt;
+      &lt;/example&gt;
+      &lt;example name="runIndexVectorOnCPU" type="html"&gt;
+         &lt;file type="source"&gt;/doc/examples/html/runIndexVectorOnCPU.html&lt;/file&gt;
+         &lt;file type="main"&gt;/doc/examples/runIndexVectorOnCPU.mlx&lt;/file&gt;
+         &lt;file type="thumbnail"/&gt;
+      &lt;/example&gt;
+      &lt;example name="runIndexVectorOnGPU" type="html"&gt;
+         &lt;file type="source"&gt;/doc/examples/html/runIndexVectorOnGPU.html&lt;/file&gt;
+         &lt;file type="main"&gt;/doc/examples/runIndexVectorOnGPU.mlx&lt;/file&gt;
+         &lt;file type="thumbnail"/&gt;
+      &lt;/example&gt;
+      &lt;example name="runScalarCPUvsGPU" type="html"&gt;
+         &lt;file type="source"&gt;/doc/examples/html/runScalarCPUvsGPU.html&lt;/file&gt;
+         &lt;file type="main"&gt;/doc/examples/runScalarCPUvsGPU.mlx&lt;/file&gt;
+         &lt;file type="thumbnail"/&gt;
+      &lt;/example&gt;
+      &lt;example name="runScalarOnCPU" type="html"&gt;
+         &lt;file type="source"&gt;/doc/examples/html/runScalarOnCPU.html&lt;/file&gt;
+         &lt;file type="main"&gt;/doc/examples/runScalarOnCPU.mlx&lt;/file&gt;
+         &lt;file type="thumbnail"/&gt;
+      &lt;/example&gt;
+      &lt;example name="runScalarOnGPU" type="html"&gt;
+         &lt;file type="source"&gt;/doc/examples/html/runScalarOnGPU.html&lt;/file&gt;
+         &lt;file type="main"&gt;/doc/examples/runScalarOnGPU.mlx&lt;/file&gt;
+         &lt;file type="thumbnail"/&gt;
+      &lt;/example&gt;
+      &lt;example name="runVectorCPUvsGPU" type="html"&gt;
+         &lt;file type="source"&gt;/doc/examples/html/runVectorCPUvsGPU.html&lt;/file&gt;
+         &lt;file type="main"&gt;/doc/examples/runVectorCPUvsGPU.mlx&lt;/file&gt;
+         &lt;file type="thumbnail"/&gt;
+      &lt;/example&gt;
+      &lt;example name="runVectorOnCPU" type="html"&gt;
+         &lt;file type="source"&gt;/doc/examples/html/runVectorOnCPU.html&lt;/file&gt;
+         &lt;file type="main"&gt;/doc/examples/runVectorOnCPU.mlx&lt;/file&gt;
+         &lt;file type="thumbnail"/&gt;
+      &lt;/example&gt;
+      &lt;example name="runVectorOnGPU" type="html"&gt;
+         &lt;file type="source"&gt;/doc/examples/html/runVectorOnGPU.html&lt;/file&gt;
+         &lt;file type="main"&gt;/doc/examples/runVectorOnGPU.mlx&lt;/file&gt;
          &lt;file type="thumbnail"/&gt;
       &lt;/example&gt;
    &lt;/exampleCategory&gt;
@@ -98,9 +183,6 @@ desktop.ini
     <param.additional.sw.mac.url />
     <param.additional.sw.linux.url />
     <unset>
-      <param.authnamewatermark />
-      <param.email />
-      <param.company />
       <param.output />
       <param.platforms />
       <param.exclude.pcodedmfiles />
@@ -133,18 +215,24 @@ desktop.ini
     <fileset.depfun.excluded />
     <fileset.package />
     <build-deliverables>
-      <file location="${PROJECT_ROOT}" name="StiffMa.mltbx" optional="false">B:\Francisco\Documents\Dropbox (Universidad Nacional)\StiffMa\Code\StiffMa.mltbx</file>
+      <file location="${PROJECT_ROOT}" name="StiffMa.mltbx" optional="false">C:\Users\Francisco\Dropbox\StiffMa\Code\StiffMa.mltbx</file>
     </build-deliverables>
     <workflow />
     <matlab>
       <root>C:\Program Files\MATLAB\R2020a</root>
       <toolboxes>
         <toolbox name="matlabcoder" />
+        <toolbox name="gpucoder" />
       </toolboxes>
       <toolbox>
         <matlabcoder>
           <enabled>true</enabled>
         </matlabcoder>
+      </toolbox>
+      <toolbox>
+        <gpucoder>
+          <enabled>true</enabled>
+        </gpucoder>
       </toolbox>
     </matlab>
     <platform>

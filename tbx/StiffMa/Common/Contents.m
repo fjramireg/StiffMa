@@ -3,5 +3,9 @@
 % Version 1.3 21-Jan-2019
 % 
 % Files
-%   CreateMesh - Simple mesher of a unit cubic with configurable and structured discretization [Hex8]
-%   dNdrst     - Compute the shape functions derivatives with respect to r,s,t (Hex8)
+
+%   dNdrst          - Compute the shape functions derivatives with respect to r,s,t (Hex8)
+%   AssemblyStiffMa - Assembly a global sparse stiffness matrix K.
+%   CreateMesh2     - is a simple mesher of a unit cubic with configurable and structured
+%   PlotMesh        - plots the domain with its discretization using Hex8 elements
+

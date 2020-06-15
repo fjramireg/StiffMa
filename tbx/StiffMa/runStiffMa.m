@@ -17,13 +17,6 @@ MP.c = 384.1;               % Thermal conductivity (only for scalar problem)
 MP.E = 200e9;               % Young's modulus (only for vector problem)
 MP.nu = 0.3;                % Poisson's ratio (only for vector problem)
 
-%% Adding folders to the path
-addpath('../Scalar/');
-addpath('../Vector/');
-addpath('../Common');
-addpath('../Utils');
-addpath(pwd);
-
 %% Mesh generation
 [Mesh.elements, Mesh.nodes] = CreateMesh2(nel, nel, nel, sets.dTE, sets.dTN);
 [sets.nel, sets.nxe]  = size(Mesh.elements);        % Number of elements in the mesh & Number of nodes per element

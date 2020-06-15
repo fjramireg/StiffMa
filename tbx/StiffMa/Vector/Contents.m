@@ -20,38 +20,23 @@
 
 %% Functions Files
 %
-%   DMatrix                - Compute the isotropic material matrix for the VECTOR problem.
-%
-% --- INDEX COMPUTATION ---
-%   Index_vss              - Compute the row/column indices of tril(K) in a vector (v)
-%   Index_vps              - Compute the row/column indices of tril(K) in a vector (v)
-%
-% --- ELEMENT STIFFNESS COMPUTATION ---
-%   eStiff_vs              - Compute the element stiffness matrix for a VECTOR (s) problem
-%   eStiff_vss             - Compute the element stiffness matrix for a VECTOR (v) problem in
-%   eStiffa_vps            - Compute ALL (a) element stiffness matrices for a VECTOR (v)
-%   eStiffa_vs             - Compute ALL (a) the element stiffness matrices for a VECTOR (v)
-%   eStiffa_vss            - Compute ALL (a) the element stiffness matrices for a VECTOR (v)
-%
-% --- GLOBAL STIFFNESS COMPUTATION ---
-%   StiffMa_vps            - Create the global stiffness matrix for a VECTOR (v) problem
-%   StiffMa_vs             - Create the global stiffness matrix K for a VECTOR (v) problem
-%   StiffMa_vss            - Create the global stiffness matrix for a VECTOR (v) problem
+%   DMatrix     - Compute the isotropic material matrix for the VECTOR problem.
 
+%% --- INDEX COMPUTATION ---
+%   Index_va    - Computes the row/column indices of K for a VECTOR (s) problem on the
+%   Index_vpsa  - Compute the row/column indices of tril(K) in a vector (v) problem
+%   Index_vsa   - Computes the row/column indices of K for a VECTOR (s) problem using
+%   Index_vssa  - Compute the row/column indices of tril(K) in a vector (v) problem
+%   eStiff_vpsa - Compute the element stiffness matrices for a VECTOR (v) problem
+%   eStiff_vsa  - Computes the element stiffness matrices for a VECTOR (v) problem
+%   eStiff_vssa - ESTIFFA_VSS Compute ALL (a) the element stiffness matrices for a VECTOR (v)
 
-%% Script Files used to run the functions
-%
-% --- INDEX COMPUTATION ---
-%   runIndexVectorOnCPU    - Runs the INDEX vector code on the CPU
-%   runIndexVectorOnGPU    - Runs the INDEX vector code on the GPU
-%   runIndexVectorCPUvsGPU - Runs the INDEX vector code. CPU vs GPU
-%
-% --- ELEMENT STIFFNESS COMPUTATION ---
-%   runHex8VectorOnCPU     - Script to run the HEX8 (ke) code on the CPU
-%   runHex8VectorOnGPU     - Script to run the HEX8 (ke) code on the GPU
-%   runHex8VectorCPUvsGPU  - Script to run the HEX8 (ke) code. CPU vs GPU
-%
-% --- GLOBAL STIFFNESS COMPUTATION ---
-%   runVectorOnCPU         - Runs the whole assembly vector code on the CPU
-%   runVectorOnGPU         - Runs the whole assembly vector code on the GPU
-%   runVectorCPUvsGPU      - Runs the whole assembly vector code on the CPU and GPU (comparison)
+%% --- ELEMENT STIFFNESS COMPUTATION ---
+%   eStiff_vs   - Compute the element stiffness matrix for a VECTOR (s) problem
+%   eStiff_vss  - Compute the element stiffness matrix for a VECTOR (v) problem in
+
+%% --- GLOBAL STIFFNESS COMPUTATION ---
+%   StiffMa_vps - Create the global stiffness matrix for a VECTOR (v) problem
+%   StiffMa_vs  - Create the global stiffness matrix K for a VECTOR (v) problem
+%   StiffMa_vss - Create the global stiffness matrix for a VECTOR (v) problem
+

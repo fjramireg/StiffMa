@@ -1,12 +1,42 @@
 function K = StiffMa(Mesh, MP, dev, sets)
-% Script to test the StiffMa code by dividing [iK, jK, Ke] arrays
+% STIFFMA Creates the global sparse stiffness matrix on the GPU by dividing
+% [iK, jK, Ke] arrays if the device memory is not enough to process all data
+% together.
+% 
+%   K = STIFFMA(Mesh, MP, dev, sets) returns the lower-triangle of a sparse
+%   matrix K from finite element analysis of scalar/vector problems in a 
+%   three-dimensional domain taking advantage of simmetry and GPU
+%   computing, where the required inputs are:
+%   - "Mesh.elements" is the connectivity matrix,
+%   - "Mesh.nodes" is the nodal coordinates, 
+%   - "MP.E" is the Young's modulus and
+%   - "MP.nu" is the Poisson ratio are the material property for an isotropic
+%   material in the vector case, while 
+%   - "MP.c" (thermal conductivity) is needed for the scalar problem. The
+%   struct "sets" must contain several similation parameters: 
+%   - sets.prob_type defines the problem type 'Scalar' or 'Vector'
+%   - sets.sf is the safety factor. Positive integer to add more partitions
+%   - sets.dTE is the data precision of "Mesh.elements"
+%   - sets.dTN is the data precision of "Mesh.nodes"
+%   - sets.nel is the number of finite elements
+%   - sets.nxe is the number of nodes per element
+%   - sets.nnod is the number of nodes in the mesh 
+%   - sets.dim is the space dimension
+%   - sets.dxn is the number of DOFs per node. 1 for the scalar problem or 3 for the vector problem
+%   - sets.edof is the umber of DOFs per element
+%   - sets.tdofs is the number of total DOFs in the mesh
+%   - sets.sz  is the number of symmetry entries
+%   - sets.tbs is the Thread Block Size
+%   - sets.numSMs is the number of multiprocessors on the device
+%   - sets.WarpSize is the GPU warp size
 
 %   For more information, see the <a href="matlab:
 %   web('https://github.com/fjramireg/StiffMa')">StiffMa</a> web site.
 %
 %   Written by Francisco Javier Ramirez-Gil, fjramireg@gmail.com
 %   Universidad Nacional de Colombia - Medellin
-%   Created:  21/05/2020. Version: 1.0
+%   Created:  21 May 2020. Version: 1.0
+%   Modified: 15 June 2020. Version: 1.1
 
 
 %% Determination of number of chunks based on current GPU memory

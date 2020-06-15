@@ -9,8 +9,9 @@ function K = StiffMa_vps(elements, nodes, MP, sets)
 %   the material property for an isotropic material. The struct "sets" must
 %   contain several similation parameters:
 %   - sets.dTE is the data precision of "elements"
+%   - sets.dTN is the data precision of "nodes"
 %   - sets.nel is the number of finite elements
-%   - sets.sz  is the umber of symmetry entries.
+%   - sets.sz  is the number of symmetry entries.
 %   - sets.tbs is the Thread Block Size
 %   - sets.numSMs is the number of multiprocessors on the device
 %   - sets.WarpSize is the warp size
