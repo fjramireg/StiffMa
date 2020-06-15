@@ -2,6 +2,8 @@
 
 [![View StiffMa on File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://www.mathworks.com/matlabcentral/fileexchange/76947-stiffma)
 
+![StiffMa_logo](https://github.com/fjramireg/StiffMa/blob/master/StiffMa_logo.png)
+
 The finite element method (FEM) is a well established numerical technique for solving partial differential equations (PDEs) in a wide range of complex science and engineering applications. 
 This method has two costly operation that are the construction of global matrices and vectors to form the system of linear or nonlinear equations (assemblage), and their solution (solver). 
 Many efforts have been directed to accelerate the solver.
@@ -22,3 +24,8 @@ Large speedups are obtained compared with a non-optimized CPU code.
 + Sparse matrix generation
 + Parallel computing
 + Graphics processing unit
+
+
+## Installation
++ ***Option 1***: Clone the GitHub repository and use the code directly on MATLAB.
++ ***Option 2***: Search in the `release` folder and download the MATLAB package, e.g. `StiffMa1.6.mltb`. After double clic on the downloaded file, it automatically will be installed on MATLAB as a Toolbox.
