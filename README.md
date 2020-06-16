@@ -28,4 +28,53 @@ Large speedups are obtained compared with a non-optimized CPU code.
 
 ## Installation
 + ***Option 1***: Clone the GitHub repository and use the code directly on MATLAB.
-+ ***Option 2***: Search in the `release` folder and download the MATLAB package, e.g. `StiffMa1.6.mltb`. After double clic on the downloaded file, it automatically will be installed on MATLAB as a Toolbox.
++ ***Option 2***: Search in the `releases` folder and download the latest MATLAB package, e.g. [`StiffMa1.6.mltb`](https://github.com/fjramireg/StiffMa/blob/master/releases/StiffMa1.6.mltbx). After the file is downloaded, double clic on it and it automatically will be installed on MATLAB as a Toolbox.
+
+## Example: getting started guide
+~~~
+%% Inputs
+nel = 90;                   % Number of elements at each direction
+sets.sf = 1;                % Safety factor. Positive integer to add more partitions
+sets.prob_type = 'Vector';  % 'Scalar' or 'Vector'
+sets.dTE = 'uint32';        % Data precision for "elements"
+sets.dTN = 'double';        % Data precision for "nodes"
+MP.c = 384.1;               % Thermal conductivity (only for scalar problem)
+MP.E = 200e9;               % Young's modulus (only for vector problem)
+MP.nu = 0.3;                % Poisson's ratio (only for vector problem)
+
+%% Mesh generation
+[Mesh.elements, Mesh.nodes] = CreateMesh2(nel, nel, nel, sets.dTE, sets.dTN);
+Settings
+[sets.nel, sets.nxe]  = size(Mesh.elements);    % Number of elements in the mesh & Number of nodes per element
+[sets.nnod, sets.dim] = size(Mesh.nodes);       % Number of nodes in the mesh & Space dimension
+if strcmp(sets.prob_type,'Scalar')
+    sets.dxn = 1;                               % Number of DOFs per node for the scalar problem
+elseif strcmp(sets.prob_type,'Vector')
+    sets.dxn = 3;                               % Number of DOFs per node for the vector problem
+else
+    error('Problem not defined!');
+end
+sets.edof = sets.dxn * sets.nxe;                % Number of DOFs per element
+sets.sz = (sets.edof * (sets.edof + 1) )/2;     % Number of NNZ values for each Ke using simmetry
+sets.tdofs = sets.nnod * sets.dxn;              % Number of total DOFs in the mesh
+
+%% GPU setup
+dev = gpuDevice;                            % Selects the GPU device            
+sets.tbs = dev.MaxThreadsPerBlock;          % Thread block size
+sets.numSMs   = dev.MultiprocessorCount;    % Number of GPU multiprocessors
+sets.WarpSize = dev.SIMDWidth;              % Warp size
+
+%% Stiffness Matrix generation
+K = StiffMa(Mesh, MP, dev, sets);
+~~~
+
+## Credits
+Written by Francisco Javier Ramírez-Gil, [fjramireg@gmail.com](fjramireg@gmail.com)
+
+***Code site***:
++ [https://github.com/fjramireg/StiffMa](https://github.com/fjramireg/StiffMa)
++ [https://www.mathworks.com/matlabcentral/fileexchange/76947-stiffma](https://www.mathworks.com/matlabcentral/fileexchange/76947-stiffma)
+
+***Sponsors***: 
++ [Institución Universitaria Pascual Bravo](https://pascualbravo.edu.co/)
++ [Universidad Nacional de Colombia - Medellin](https://medellin.unal.edu.co/)
