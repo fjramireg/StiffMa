@@ -1,0 +1,3 @@
+[submodule "stenglib"]
+	path = stenglib
+	url = https://github.com/stefanengblom/stenglib.git
