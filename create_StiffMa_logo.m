@@ -8,6 +8,7 @@ figure1 = figure('Color',[1 1 1]);
 axes1 = axes('Parent',figure1);
 
 % Create plot
+rng;
 spy(tril(sprand(100,100,0.05)));
 
 % Set axes properties
