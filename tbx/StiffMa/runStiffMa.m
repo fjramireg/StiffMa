@@ -18,7 +18,7 @@ MP.E = 200e9;               % Young's modulus (only for vector problem)
 MP.nu = 0.3;                % Poisson's ratio (only for vector problem)
 
 %% Mesh generation
-[Mesh.elements, Mesh.nodes] = CreateMesh2(nel, nel, nel, sets.dTE, sets.dTN);
+[Mesh.elements, Mesh.nodes] = CreateMesh2(nel, nel, nel, sets);
 [sets.nel, sets.nxe]  = size(Mesh.elements);        % Number of elements in the mesh & Number of nodes per element
 [sets.nnod, sets.dim] = size(Mesh.nodes);           % Number of nodes in the mesh & Space dimension
 if strcmp(sets.prob_type,'Scalar')

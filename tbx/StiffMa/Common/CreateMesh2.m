@@ -19,7 +19,7 @@ function [elements, nodes] = CreateMesh2(nelx,nely,nelz,sets)
 %   Written by Francisco Javier Ramirez-Gil, fjramireg@gmail.com
 %   Universidad Nacional de Colombia - Medellin
 %   Created:  February 08, 2020.    Version: 1.0
-%   Modified: June 22, 2020.        Versión: 1.1
+%   Modified: June 22, 2020.        Versión: 1.1. Less inputs. Improved doc
 % 
 
 %% INPUTS CHECK

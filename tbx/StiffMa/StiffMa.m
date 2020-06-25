@@ -5,7 +5,7 @@ function K = StiffMa(Mesh, MP, dev, sets)
 % 
 %   K = STIFFMA(Mesh, MP, dev, sets) returns the lower-triangle of a sparse
 %   matrix K from finite element analysis of scalar/vector problems in a 
-%   three-dimensional domain taking advantage of simmetry and GPU
+%   three-dimensional domain taking advantage of symmetry and GPU
 %   computing, where the required inputs are:
 %   - "Mesh.elements" is the connectivity matrix,
 %   - "Mesh.nodes" is the nodal coordinates, 
