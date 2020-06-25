@@ -10,12 +10,12 @@ function fullTable = runStiffMa_CPUvsGPU
 %
 
 %% Variables for performance tests
-nel_all  = [10];        % Cases for mesh size. Limited by GPU memory
+nel_all  = [10:10:100];        %#ok Cases for mesh size. Limited by GPU memory
 sets.sf  = 1;                   % Safety factor. Positive integer to add more partitions
 prob_all = {'Vector'};          % Cases for problem type
 sets.dTE = 'uint32';            % Cases for "element" data type
 sets.dTN = 'double';            % Cases for "nodes" data type
-proc_type = {'CPU'};	% Cases for processor type
+proc_type = {'CPU','GPU'};	% Cases for processor type
 
 %% Adding folders to the path
 addpath(pwd);

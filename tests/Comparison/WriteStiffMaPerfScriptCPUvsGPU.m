@@ -81,7 +81,7 @@ elseif strcmp(sets.proc_type, 'CPU')
     fprintf(fileID,'Keall = eStiff_vosa(MP, tnel);\n');
     
     % Assembly
-    fprintf(fileID,'\n%s\n','%% Assembly GPU');
+    fprintf(fileID,'\n%s\n','%% Assembly CPU');
     fprintf(fileID,'K = AssemblyStiffMa_CPUo(Iar(:,1), Iar(:,2), Ke, tdof);\n');
     
 end
