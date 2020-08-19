@@ -1,0 +1,812 @@
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 10x10x10 (1000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Processor type: 'CPU'
+
+Running Testing_CPU
+.......... ......
+================================================================================
+Testing_CPU/LocalKeCPU was filtered.
+    Test Diagnostic: The MeasuredTime should not be too close to the precision of the framework.
+================================================================================
+.... .......... ..
+Done Testing_CPU
+__________
+
+Failure Summary:
+
+     Name                    Failed  Incomplete  Reason(s)
+    =====================================================================
+     Testing_CPU/LocalKeCPU              X       Filtered by assumption.
+  1x3 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   2 Valid, 1 Invalid.
+   0.60835 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 10x10x10 (1000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running Testing_GPU
+
+ Mesh created successfully!
+	 Number of elements: 1000
+	 Number of nodes   : 1331
+
+.......... .......... ....
+================================================================================
+Testing_GPU/AssemblyGPU was filtered.
+    Test Diagnostic: The MeasuredTime should not be too close to the precision of the framework.
+================================================================================
+
+Done Testing_GPU
+__________
+
+Failure Summary:
+
+     Name                     Failed  Incomplete  Reason(s)
+    ======================================================================
+     Testing_GPU/AssemblyGPU              X       Filtered by assumption.
+  1x3 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   2 Valid, 1 Invalid.
+   6.2833 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 20x20x20 (8000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Processor type: 'CPU'
+
+Running Testing_CPU
+.......... ......
+================================================================================
+Testing_CPU/LocalKeCPU was filtered.
+    Test Diagnostic: The MeasuredTime should not be too close to the precision of the framework.
+================================================================================
+.... ....
+Done Testing_CPU
+__________
+
+Failure Summary:
+
+     Name                    Failed  Incomplete  Reason(s)
+    =====================================================================
+     Testing_CPU/LocalKeCPU              X       Filtered by assumption.
+  1x3 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   2 Valid, 1 Invalid.
+   0.73945 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 20x20x20 (8000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running Testing_GPU
+
+ Mesh created successfully!
+	 Number of elements: 8000
+	 Number of nodes   : 9261
+
+.......... .......... ....
+Done Testing_GPU
+__________
+
+  1x3 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   3 Valid, 0 Invalid.
+   0.55701 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 30x30x30 (27000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Processor type: 'CPU'
+
+Running Testing_CPU
+.......... .......... ....
+Done Testing_CPU
+__________
+
+  1x3 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   3 Valid, 0 Invalid.
+   3.0271 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 30x30x30 (27000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running Testing_GPU
+
+ Mesh created successfully!
+	 Number of elements: 27000
+	 Number of nodes   : 29791
+
+.......... .......... .......
+Done Testing_GPU
+__________
+
+  1x3 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   3 Valid, 0 Invalid.
+   0.79563 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 40x40x40 (64000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Processor type: 'CPU'
+
+Running Testing_CPU
+.......... .......... ....
+Done Testing_CPU
+__________
+
+  1x3 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   3 Valid, 0 Invalid.
+   7.1193 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 40x40x40 (64000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running Testing_GPU
+
+ Mesh created successfully!
+	 Number of elements: 64000
+	 Number of nodes   : 68921
+
+.......... .......... ....
+Done Testing_GPU
+__________
+
+  1x3 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   3 Valid, 0 Invalid.
+   1.1605 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 50x50x50 (125000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Processor type: 'CPU'
+
+Running Testing_CPU
+.......... .......... ....
+Done Testing_CPU
+__________
+
+  1x3 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   3 Valid, 0 Invalid.
+   14.0805 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 50x50x50 (125000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running Testing_GPU
+
+ Mesh created successfully!
+	 Number of elements: 125000
+	 Number of nodes   : 132651
+
+.......... .......... ....
+Done Testing_GPU
+__________
+
+  1x3 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   3 Valid, 0 Invalid.
+   1.8897 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 60x60x60 (216000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Processor type: 'CPU'
+
+Running Testing_CPU
+.......... .......... ....
+Done Testing_CPU
+__________
+
+  1x3 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   3 Valid, 0 Invalid.
+   24.1851 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 60x60x60 (216000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running Testing_GPU
+
+ Mesh created successfully!
+	 Number of elements: 216000
+	 Number of nodes   : 226981
+
+.......... .......... ....
+Done Testing_GPU
+__________
+
+  1x3 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   3 Valid, 0 Invalid.
+   2.8642 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 70x70x70 (343000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Processor type: 'CPU'
+
+Running Testing_CPU
+.......... .......... ....
+Done Testing_CPU
+__________
+
+  1x3 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   3 Valid, 0 Invalid.
+   38.4837 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 70x70x70 (343000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running Testing_GPU
+
+ Mesh created successfully!
+	 Number of elements: 343000
+	 Number of nodes   : 357911
+
+.......... .......... ....
+Done Testing_GPU
+__________
+
+  1x3 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   3 Valid, 0 Invalid.
+   4.2961 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 80x80x80 (512000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Processor type: 'CPU'
+
+Running Testing_CPU
+.......... .......... ....
+Done Testing_CPU
+__________
+
+  1x3 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   3 Valid, 0 Invalid.
+   57.4384 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 80x80x80 (512000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running Testing_GPU
+
+ Mesh created successfully!
+	 Number of elements: 512000
+	 Number of nodes   : 531441
+
+.......... .......... ....
+Done Testing_GPU
+__________
+
+  1x3 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   3 Valid, 0 Invalid.
+   6.4538 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 90x90x90 (729000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Processor type: 'CPU'
+
+Running Testing_CPU
+.......... .......... ....
+Done Testing_CPU
+__________
+
+  1x3 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   3 Valid, 0 Invalid.
+   83.3787 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 90x90x90 (729000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running Testing_GPU
+
+ Mesh created successfully!
+	 Number of elements: 729000
+	 Number of nodes   : 753571
+
+.......... .......... ....
+Done Testing_GPU
+__________
+
+  1x3 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   3 Valid, 0 Invalid.
+   9.6343 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 100x100x100 (1000000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Processor type: 'CPU'
+
+Running Testing_CPU
+.......... .......... ....
+Done Testing_CPU
+__________
+
+  1x3 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   3 Valid, 0 Invalid.
+   114.7048 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 100x100x100 (1000000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Vector'
+Processor type: 'GPU'
+
+Running Testing_GPU
+
+ Mesh created successfully!
+	 Number of elements: 1000000
+	 Number of nodes   : 1030301
+
+.......... ......
+================================================================================
+Error occurred in Testing_GPU/AssemblyGPU and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'MATLAB:nomem'
+    --------------
+    Error Details:
+    --------------
+    Out of memory.
+    
+    Error in AssemblyStiffMa (line 26)
+        K = accumarray([iK,jK], Ke, [sets.tdofs sets.tdofs], [], [], 1);
+    
+    Error in Testing_GPU (line 41)
+    K = AssemblyStiffMa(iKd, jKd, Ked, sets);
+================================================================================
+.
+================================================================================
+Error occurred in Testing_GPU/AssemblyGPU and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:kernel:LaunchFailure'
+    --------------
+    Error Details:
+    --------------
+    Error using gpuArray/accumarray
+    An unexpected error occurred trying to launch a kernel. The CUDA error was:
+    out of memory
+    
+    Error in AssemblyStiffMa (line 26)
+        K = accumarray([iK,jK], Ke, [sets.tdofs sets.tdofs], [], [], 1);
+    
+    Error in Testing_GPU (line 41)
+    K = AssemblyStiffMa(iKd, jKd, Ked, sets);
+================================================================================
+.
+================================================================================
+Error occurred in Testing_GPU/AssemblyGPU and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'MATLAB:nomem'
+    --------------
+    Error Details:
+    --------------
+    Out of memory.
+    
+    Error in AssemblyStiffMa (line 26)
+        K = accumarray([iK,jK], Ke, [sets.tdofs sets.tdofs], [], [], 1);
+    
+    Error in Testing_GPU (line 41)
+    K = AssemblyStiffMa(iKd, jKd, Ked, sets);
+================================================================================
+.
+================================================================================
+Error occurred in Testing_GPU/AssemblyGPU and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:kernel:LaunchFailure'
+    --------------
+    Error Details:
+    --------------
+    Error using gpuArray/accumarray
+    An unexpected error occurred trying to launch a kernel. The CUDA error was:
+    out of memory
+    
+    Error in AssemblyStiffMa (line 26)
+        K = accumarray([iK,jK], Ke, [sets.tdofs sets.tdofs], [], [], 1);
+    
+    Error in Testing_GPU (line 41)
+    K = AssemblyStiffMa(iKd, jKd, Ked, sets);
+================================================================================
+. 
+================================================================================
+Error occurred in Testing_GPU/AssemblyGPU and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'MATLAB:nomem'
+    --------------
+    Error Details:
+    --------------
+    Out of memory.
+    
+    Error in AssemblyStiffMa (line 26)
+        K = accumarray([iK,jK], Ke, [sets.tdofs sets.tdofs], [], [], 1);
+    
+    Error in Testing_GPU (line 41)
+    K = AssemblyStiffMa(iKd, jKd, Ked, sets);
+================================================================================
+.
+================================================================================
+Error occurred in Testing_GPU/AssemblyGPU and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:kernel:LaunchFailure'
+    --------------
+    Error Details:
+    --------------
+    Error using gpuArray/accumarray
+    An unexpected error occurred trying to launch a kernel. The CUDA error was:
+    out of memory
+    
+    Error in AssemblyStiffMa (line 26)
+        K = accumarray([iK,jK], Ke, [sets.tdofs sets.tdofs], [], [], 1);
+    
+    Error in Testing_GPU (line 41)
+    K = AssemblyStiffMa(iKd, jKd, Ked, sets);
+================================================================================
+.
+================================================================================
+Error occurred in Testing_GPU/AssemblyGPU and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'MATLAB:nomem'
+    --------------
+    Error Details:
+    --------------
+    Out of memory.
+    
+    Error in AssemblyStiffMa (line 26)
+        K = accumarray([iK,jK], Ke, [sets.tdofs sets.tdofs], [], [], 1);
+    
+    Error in Testing_GPU (line 41)
+    K = AssemblyStiffMa(iKd, jKd, Ked, sets);
+================================================================================
+.
+================================================================================
+Error occurred in Testing_GPU/AssemblyGPU and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:kernel:LaunchFailure'
+    --------------
+    Error Details:
+    --------------
+    Error using gpuArray/accumarray
+    An unexpected error occurred trying to launch a kernel. The CUDA error was:
+    out of memory
+    
+    Error in AssemblyStiffMa (line 26)
+        K = accumarray([iK,jK], Ke, [sets.tdofs sets.tdofs], [], [], 1);
+    
+    Error in Testing_GPU (line 41)
+    K = AssemblyStiffMa(iKd, jKd, Ked, sets);
+================================================================================
+.
+Done Testing_GPU
+__________
+
+Failure Summary:
+
+     Name                     Failed  Incomplete  Reason(s)
+    ========================================================
+     Testing_GPU/AssemblyGPU    X         X       Errored.
+  1x3 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   2 Valid, 1 Invalid.
+   9.0519 seconds testing time.
+
+
+
+A total of 20 time experiments was executed!
+Date and time at the beginning of the process: 	25-Jun-2020 16:49:49 
+Date and time at the end of the process: 	25-Jun-2020 16:56:49
+
+
+ans =
+
+  60x7 table
+
+             Name              SampleSize       Mean       StandardDeviation      Min        Median        Max   
+    _______________________    __________    __________    _________________    ________    _________    ________
+
+    Testing_CPU/IndexCPU            4         0.0058535       0.00021992        0.005645     0.005814    0.006141
+    Testing_CPU/LocalKeCPU          4        0.00046425       0.00028991        0.000303     0.000328    0.000898
+    Testing_CPU/AssemblyCPU        12         0.0035513       0.00033598        0.003246     0.003456    0.004363
+    Testing_GPU/IndexGPU            4         0.0059455       0.00018976         0.00578    0.0059045    0.006193
+    Testing_GPU/LocalKeGPU          4         0.0093955       0.00026861        0.009205    0.0092925    0.009792
+    Testing_GPU/AssemblyGPU         4         0.0019935       0.00087703        0.001545      0.00156    0.003309
+    Testing_CPU/IndexCPU            4          0.036712       0.00029355        0.036505     0.036598    0.037147
+    Testing_CPU/LocalKeCPU          4         0.0014703       1.7914e-05         0.00145     0.001471    0.001489
+    Testing_CPU/AssemblyCPU         4          0.032183        0.0002359        0.031955     0.032143    0.032494
+    Testing_GPU/IndexGPU            4         0.0059127       3.4062e-05        0.005888       0.0059    0.005963
+    Testing_GPU/LocalKeGPU          4          0.010942       0.00019511         0.01079     0.010877    0.011226
+    Testing_GPU/AssemblyGPU         4         0.0026342       2.3557e-05        0.002608    0.0026325    0.002664
+    Testing_CPU/IndexCPU            4           0.15315        0.0010341         0.15202      0.15303     0.15451
+    Testing_CPU/LocalKeCPU          4          0.017099       6.6204e-05        0.017031     0.017088     0.01719
+    Testing_CPU/AssemblyCPU         4           0.17077       0.00050599          0.1701      0.17087     0.17125
+    Testing_GPU/IndexGPU            4         0.0084898       3.7669e-05        0.008466    0.0084735    0.008546
+    Testing_GPU/LocalKeGPU          7          0.020386        0.0013769        0.019673     0.019943    0.023496
+    Testing_GPU/AssemblyGPU         4          0.009795       0.00011339        0.009644    0.0098115    0.009913
+    Testing_CPU/IndexCPU            4            0.4022         0.002144         0.40093      0.40123     0.40539
+    Testing_CPU/LocalKeCPU          4          0.029255       0.00099407        0.028622     0.028831    0.030739
+    Testing_CPU/AssemblyCPU         4           0.38618       0.00050992         0.38579      0.38601     0.38693
+    Testing_GPU/IndexGPU            4             0.021       0.00013964        0.020889     0.020958    0.021194
+    Testing_GPU/LocalKeGPU          4          0.047361       0.00053194        0.046783     0.047321     0.04802
+    Testing_GPU/AssemblyGPU         4          0.021713        2.996e-05        0.021681     0.021712    0.021746
+    Testing_CPU/IndexCPU            4           0.79003         0.002222         0.78701      0.79053     0.79208
+    Testing_CPU/LocalKeCPU          4           0.05601        0.0013911        0.055125     0.055426    0.058063
+    Testing_CPU/AssemblyCPU         4           0.79622        0.0019628         0.79442       0.7958     0.79886
+    Testing_GPU/IndexGPU            4          0.043517       0.00032066        0.043295     0.043391     0.04399
+    Testing_GPU/LocalKeGPU          4           0.08427       0.00038828        0.083838     0.084243    0.084755
+    Testing_GPU/AssemblyGPU         4          0.041524       0.00015103        0.041321     0.041565    0.041646
+    Testing_CPU/IndexCPU            4            1.3566        0.0024772          1.3549       1.3557      1.3603
+    Testing_CPU/LocalKeCPU          4          0.095918        0.0013767        0.094491     0.095882    0.097416
+    Testing_CPU/AssemblyCPU         4            1.3781        0.0021984          1.3755       1.3781      1.3808
+    Testing_GPU/IndexGPU            4          0.070537       0.00032262        0.070227     0.070465     0.07099
+    Testing_GPU/LocalKeGPU          4           0.14043       0.00047316         0.13989      0.14046      0.1409
+    Testing_GPU/AssemblyGPU         4          0.071989        0.0002039        0.071724     0.072009    0.072216
+    Testing_CPU/IndexCPU            4            2.1701        0.0043178          2.1648       2.1706      2.1742
+    Testing_CPU/LocalKeCPU          4           0.15127        0.0018242         0.14974      0.15089     0.15355
+    Testing_CPU/AssemblyCPU         4            2.1855        0.0029928          2.1821       2.1852      2.1894
+    Testing_GPU/IndexGPU            4           0.11203       0.00013818         0.11183      0.11209     0.11213
+    Testing_GPU/LocalKeGPU          4           0.22007        0.0009517         0.21911      0.21991     0.22135
+    Testing_GPU/AssemblyGPU         4             0.114        0.0001002         0.11389        0.114      0.1141
+    Testing_CPU/IndexCPU            4            3.2273        0.0066053          3.2203       3.2275      3.2339
+    Testing_CPU/LocalKeCPU          4           0.22712        0.0055456         0.22296      0.22523     0.23504
+    Testing_CPU/AssemblyCPU         4            3.2882        0.0058726          3.2795       3.2904      3.2924
+    Testing_GPU/IndexGPU            4           0.16584        0.0004926         0.16511      0.16606     0.16614
+    Testing_GPU/LocalKeGPU          4            0.3321        0.0011359         0.33083      0.33199     0.33358
+    Testing_GPU/AssemblyGPU         4           0.19027       0.00060956         0.18968      0.19021     0.19099
+    Testing_CPU/IndexCPU            4            4.6389        0.0048071          4.6347       4.6378      4.6452
+    Testing_CPU/LocalKeCPU          4           0.31835        0.0013586         0.31744      0.31781     0.32034
+    Testing_CPU/AssemblyCPU         4             4.834        0.0063387          4.8286       4.8328      4.8418
+    Testing_GPU/IndexGPU            4           0.23298       0.00012775         0.23281        0.233     0.23312
+    Testing_GPU/LocalKeGPU          4           0.46585       0.00099736         0.46453      0.46596     0.46695
+    Testing_GPU/AssemblyGPU         4           0.37079        0.0010163         0.36929       0.3712     0.37149
+    Testing_CPU/IndexCPU            4            6.3283        0.0045731          6.3251       6.3265      6.3351
+    Testing_CPU/LocalKeCPU          4            0.4376       0.00018939         0.43741      0.43757     0.43786
+    Testing_CPU/AssemblyCPU         4            6.7421         0.027095           6.718       6.7355      6.7795
+    Testing_GPU/IndexGPU            4           0.31979       0.00038352         0.31924      0.31993     0.32009
+    Testing_GPU/LocalKeGPU          4           0.63657        0.0043705         0.63249       0.6357     0.64239
+    Testing_GPU/AssemblyGPU         4               NaN              NaN             NaN          NaN         NaN
+

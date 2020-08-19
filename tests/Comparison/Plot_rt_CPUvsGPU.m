@@ -2,7 +2,7 @@
 % Comparison between optimized CPU code and GPU implementation
 
 %% Load data
-load('StiffMa_CPUvsGPU/Comparison-rst.mat');
+load('StiffMa_CPUvsGPU_R2020a/Comparison-rst.mat');
 
 %% Clasify data
 % CPU
@@ -41,40 +41,42 @@ y_aGPU = tab_assem_GPU.Mean;
 e_aGPU = tab_assem_GPU.StandardDeviation;
 
 %% Plot figure
-% figure1 = figure('color',[1,1,1]);
-% axes1 = axes('Parent',figure1);
-% 
-% pt = plot(  x, y_iCPU, '-k*', ...
-%             x, y_iGPU, '-.k+', ...
-%             x, y_kCPU, '-bs', ...
-%             x, y_kGPU, '--bo', ...
-%             x, y_aCPU, '-rx',...
-%             x, y_aGPU, ':r^');
-% 
-% for i=1:6
-%     pt(i).LineWidth = 2;
-% end
-% 
-% % Labels
-% xlabel('Number of elements');
-% ylabel('Runtime (s)');
-% 
-% % Create legend
-% legend('Indices on CPU', 'Indices on GPU',...
-%        'Numerical integration on CPU', 'Numerical integration on GPU',...
-%        'Assembly on CPU (fsparse)', 'Assembly on GPU (sparse)');
-% legend1 = legend(axes1,'show');
-% set(legend1, 'NumColumns',1,'Location','northwest','Interpreter','latex');
-% 
-% % Set the remaining axes properties
-% box(axes1,'on');
-% ylim(axes1,[4e-4 11]);
-% set(axes1,'XGrid','on','XMinorTick','on','XScale','log',...
-%           'YGrid','on','YMinorTick','on','YScale','log');
+figure1 = figure('color',[1,1,1]);
+axes1 = axes('Parent',figure1);
+
+pt = plot(  x, y_iCPU, '-.ko', ...
+            x, y_iGPU, '-k+', ...
+            x, y_kCPU, '--bs', ...
+            x, y_kGPU, '-b*', ...
+            x, y_aCPU, ':rx',...
+            x, y_aGPU, '-r^');
+
+for i=1:6
+    pt(i).LineWidth = 2;
+end
+
+% Labels
+xlabel('Number of elements');
+ylabel('Runtime (s)');
+
+% Create legend
+legend('Indices on CPU', 'Indices on GPU',...
+       'Numerical integration on CPU', 'Numerical integration on GPU',...
+       'Assembly on CPU (fsparse)', 'Assembly on GPU (sparse)');
+legend1 = legend(axes1,'show');
+set(legend1, 'NumColumns',1,'Location','northwest','Interpreter','latex');
+
+% Set the remaining axes properties
+box(axes1,'on');
+ylim(axes1,[4e-4 10]);
+set(axes1,'XGrid','on','XMinorTick','on','XScale','log',...
+          'YGrid','on','YMinorTick','on','YScale','log');
+      
+      
 
 %% Bar
-figure1 = figure('Color',[1,1,1],'Position', [1 1 1200 300]);%[18 246 1332 420]
-axes1 = axes('Parent',figure1);
+figure2 = figure('Color',[1,1,1],'Position', [1 1 1200 300]);%[18 246 1332 420]
+axes2 = axes('Parent',figure2);
 
 % CPU
 pCPU = y_iCPU + y_kCPU + y_aCPU;    % 100%
@@ -121,7 +123,7 @@ b = bar(nel2(:), y, 1, 'stacked' );
 %        
 % h = my_xticklabels(gca,[10 20 30 40 50 60 70 80 90 100],xtl);
 % 
-set(axes1,'XTickLabel',...
+set(axes2,'XTickLabel',...
     {'10\times10\times10','20\times20\times20','30\times30\times30','40\times40\times40','50\times50\times50','60\times60\times60','70\times70\times70','80\times80\times80','90\times90\times90','100\times100\times100'});
 
 % Labels
@@ -154,16 +156,26 @@ text(xtips3,ytips3,labels3,'FontSize',8,'FontWeight','bold',...
 
 % Create legend
 legend('Index computation', 'Numerical integration', 'Assembly');
-legend1 = legend(axes1,'show');
+legend2 = legend(axes2,'show');
 % title(legend1,'Legend')
-set(legend1,'Orientation','horizontal','Location','northoutside','Interpreter','latex');
+set(legend2,'Orientation','horizontal','Location','northoutside','Interpreter','latex');
 
 
 % Set the remaining axes properties
-box(axes1,'on');
-ylim(axes1,[0 100]);
-xlim(axes1,[3 103]);
+box(axes2,'on');
+ylim(axes2,[0 100]);
+xlim(axes2,[3 103]);
 
+
+%% Speddup ratio
+% Index
+Sind = y_iCPU./y_iGPU;
+% NI
+Snit = y_kCPU./y_kGPU;
+% Assembly
+Sass = y_aCPU./y_aGPU;
+% StiffMa
+Sstiff = pCPU./pGPU;
 
 
 

@@ -23,8 +23,8 @@ addpath(genpath('../../stenglib'));	% fparse
 addpath(genpath('../../tbx'));      % StiffMa
 
 %% Move to results folder
-mkdir 'StiffMa_CPUvsGPU';
-cd 'StiffMa_CPUvsGPU';
+mkdir 'StiffMa_CPUvsGPU_R2020a';
+cd 'StiffMa_CPUvsGPU_R2020a';
 
 %% Runs all tests
 t = now;                                % Current date and time at starting the process
