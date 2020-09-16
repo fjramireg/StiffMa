@@ -1,0 +1,20 @@
+ - update ex_sparse, include blocked spmv version
+
+ - sparse_create + sparse_convert in one
+
+ - sparse_create that updates the matrix with (small) blocks of element matrices at a time.
+   Aelem needs not be allocated, which saves a lot of time and memory.
+
+ - local memory allocation inside mex files causes memory leaks if mex function exits with an
+   error and the memory is not freed before.
+
+ - sparse_convert segfaults. test case: block_size=2, symmetric=0, A=tril(A)
+   it also segfaults when given a block size of 2 for a non-blocked matrix.
+   verification of nnz(A) must be wrong.
+
+ - sparse_create: add an element permutation vector/map, just like there is one for dofs.
+   important for efficient parallel sparse_create, but MATLAB is slow here. Also, move
+   computation of iperm to the MEX file
+
+ - quadtree/octree: add creation of trees from elements directly to avoid computing element centers
+   in matlab - that part takes significant amount of time and is unnecessary

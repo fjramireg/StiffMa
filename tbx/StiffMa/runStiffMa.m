@@ -8,7 +8,7 @@
 %   Created:  15/02/2020. Version: 1.0
 
 %% Inputs
-nel = 90;                  % Number of elements at each direction
+nel = 10;                  % Number of elements at each direction
 sets.sf = 1;                % Safety factor. Positive integer to add more partitions
 sets.prob_type = 'Vector';  % 'Scalar' or 'Vector'
 sets.dTE = 'uint32';        % Data precision for "elements"

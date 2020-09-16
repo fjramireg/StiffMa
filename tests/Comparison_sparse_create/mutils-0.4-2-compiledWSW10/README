@@ -1,0 +1,134 @@
+May 2, 2014. mutils-0.4-2
+------------------------ 
+- Voronoi diagram output in triangle mex file. triangle returns -1
+  for 'infinite ray' edges. In the triangle mex file this value is 
+  converted to 0.
+
+- Exact predicates by Shewtchuk added to point location routines.
+  In this release exact predicates are used by default. The code is
+  routhly twice slower, but robust in cases when points lie very close
+  to triangle edges/tetrahedron sides. NOTE: next release will 
+  not have exact predicates turned on by default, since the native
+  mutils code will be made more robust in the hard cases.
+
+- Point in tetrahedron implemented for tsearch2 - see
+  ex_tsearch_3d in examples directory.
+
+- bug fixes
+
+The MEX files provided with the release are compiled as follows:
+ - Linux: Ubuntu 14.04, gcc 4.8, with OpenMP
+ - MacOS: OS X Maverics, Xcode 5.0.2, no Openmp
+ - Windows: Windows 7, with OpenMP
+
+
+Sep 6, 2013. mutils-0.4-1
+------------------------ 
+This is a minor bugfix release:
+
+- fix compilation on MacOS with XCode only (no gcc from macports)
+- the default compiled mex files for Mac are compiled using Xcode 4.6 on 
+  Mountain Lion 10.8.2 WITH NO OPENMP SUPPORT. There is a better change 
+  they will run out of the box. Previously, mex files compiled with macports 
+  lacked libraries on some systems.
+
+Mex files are compiled WITHOUT OpenMP support on Windows and Mac, 
+and WITH OpenMP on Linux. To change compile options, edit mutils_config.m.
+
+Jun 20, 2013. mutils-0.4 
+------------------------ 
+This release contains several new features and significant code changes:
+
+- cpu affinity in parallelized mex files if off by default. It can be
+turned on by an option passed to the mex function.
+- number of threads in OpenMP parallelized mex files can now be set using
+nthreads field of opts structure
+- FEM interpolation implemented using SSE2/AVX on supporting CPUs, for
+triangular and quad elements, which gives significant speedups. 
+- sorted lists implemented using SSE/AVX: considerable speed
+improvements 
+- einterp returns local coordinates of markers in containing elements 
+- sparse_create is parallelized (see ex_sparse)
+- METIS is patched to use 64-bit integers, hence it works for large
+matrices with more than 2^32 non-zero entries. This applies both to
+metis_part, and to SuiteSparse metis interface. To disable 64-bit
+metis in SuiteSparse, in suitesparse_install.m comment out copyfile
+lines below "% apply 64-bit patch for METIS 4" comment
+
+The mex files distributed by default are compiled with SSE2 only.
+If your compiler and CPU support it, you might want to recompile
+with appropriate compiler options. You can change them in mutils_config.m.
+
+Oct 23, 2012. mutils-0.3
+------------------------
+This release contains several new features and bug fixes:
+
+- parallel SpMV (look at ex_spmv example)
+- METIS graph partitioning MEX function (metis_part)
+- fast RCM reordering MEX function (mrcm)
+- einterp MEX function now supports a range of different elements:
+tri3, tri7, quad4, quad9 for 1 and 2 degrees of freedom per node
+(number of interpolated values per node)
+- compiles on Windows (VS), Linux (gcc) and Mac 
+(needs Xcode + additionally installed gcc, see INSTALL for details)
+
+Also improved documentation
+
+- extensive documentation in the MATLAB scripts
+- HTML reports generated for all scripts in examples/ directory.
+Can be found in Documentation.
+
+
+Aug 31, 2012. mutils-0.2
+------------------------
+This is a quick bugfix release. There were some problems with 
+quadtree('locate') that caused segfaults in certain cases.
+
+In addition, this distribution contains binary compiled mex files
+for Windows (using the Windows SDK compiler), and for Linux using
+gcc. 
+
+Note that the Windows binaries are NOT compiled with OpenMP support,
+so there are only sequential MEX files.
+
+
+Aug 8, 2012.  mutils-0.1
+------------------------
+MUTILS is a package that provides a set of utilities we find useful
+for high-resolution modeling. The tools are written in C and made
+available in MATLAB through the MEX interface, hence installation
+requires a working MEX compiler. The code is optimized for modern
+multi-core CPUs. Some functions are parallelized using OpenMP. 
+
+Initial release contains the following functions:
+
+sparse_create   a routine that assembles sparse matrices resulting
+from the Finite Element Method. It is significantly
+faster than MATLABs sparse, and uses a lot less
+memory.
+
+quadtree        a 2D quad-tree implementation with point-in-triangle
+location and spatial reordering functionality.
+
+tsearch2        a quad-tree based point-in-triangle location routine,
+similar to MATLAB’s tsearch, but significantly
+faster and parallelized with OpenMP.
+
+einterp         a FEM interpolation routine using SSE2 instructions and
+OpenMP parallelization. Currently only the 7-node
+triangular element is supported, with more elements
+coming at users request.
+
+A short documentation of the MEX functions is available in the *.m
+files and can be accessed from MATLAB by typing e.g., help quadtree.
+
+mutils come with a set of examples - have a look in the examples/
+directory.
+
+In addition, mutils provide scripts to download and install external
+software packages: 
+
+triangle by Jonathan Richard Shewchuk. The mutils package provides
+MEX interface for triangle
+
+SuiteSparse by Tim Davis.

@@ -1,0 +1,273 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <!--
+This HTML was auto-generated from MATLAB code.
+To make changes, update the MATLAB code and republish this document.
+      --><title>Building quad-trees and using them as a reordering technique</title><meta name="generator" content="MATLAB 7.13"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2013-06-19"><meta name="DC.source" content="ex_quadtree.m"><style type="text/css">
+
+body {
+  background-color: white;
+  margin:10px;
+}
+
+h1 {
+  color: #990000; 
+  font-size: x-large;
+}
+
+h2 {
+  color: #990000;
+  font-size: medium;
+}
+
+/* Make the text shrink to fit narrow windows, but not stretch too far in 
+wide windows. */ 
+p,h1,h2,div.content div {
+  max-width: 600px;
+  /* Hack for IE6 */
+  width: auto !important; width: 600px;
+}
+
+pre.codeinput {
+  background: #EEEEEE;
+  padding: 10px;
+}
+@media print {
+  pre.codeinput {word-wrap:break-word; width:100%;}
+} 
+
+span.keyword {color: #0000FF}
+span.comment {color: #228B22}
+span.string {color: #A020F0}
+span.untermstring {color: #B20000}
+span.syscmd {color: #B28C00}
+
+pre.codeoutput {
+  color: #666666;
+  padding: 10px;
+}
+
+pre.error {
+  color: red;
+}
+
+p.footer {
+  text-align: right;
+  font-size: xx-small;
+  font-weight: lighter;
+  font-style: italic;
+  color: gray;
+}
+
+  </style></head><body><div class="content"><h1>Building quad-trees and using them as a reordering technique</h1><!--introduction--><p>ex_quadtree shows how to</p><div><ul><li>build a quadtree structure based on nodes and markers</li><li>renumber nodes and markers based on the quadtree</li></ul></div><!--/introduction--><h2>Contents</h2><div><ul><li><a href="#1">Generate unstructured triangular mesh</a></li><li><a href="#3">Create and show mesh connectivity graph (sparse matrix)</a></li><li><a href="#4">Build quad-tree based on the mesh nodes and renumber the nodes</a></li><li><a href="#5">Renumber random cloud of points using quadtree ordering</a></li></ul></div><h2>Generate unstructured triangular mesh<a name="1"></a></h2><p>The example setup is a square domain with a finely-resolved circular inclusion in the center.</p><pre class="codeinput"><span class="comment">% Setup domain - square box</span>
+x_min        = 0;
+x_max        = 1;
+y_min        = 0;
+y_max        = 1;
+points   = [
+    x_min y_min;
+    x_max y_min;
+    x_max y_max;
+    x_min y_max]';
+segments = [1 2; 2 3; 3 4; 4 1]';
+
+<span class="comment">% Add a circular inclusion in the center</span>
+no_pts_incl  = 150;
+radius       = 0.1;
+alpha        = 0.5;
+
+theta        = linspace(0,2*pi,no_pts_incl);
+theta(end)   = [];
+xx           = cos(theta);
+yy           = sin(theta);
+center_x     = alpha*x_max+(1-alpha)*x_min;
+center_y     = 0.5*(y_max+y_min);
+INCLUSION    = [center_x + radius*xx; center_y + radius*yy];
+no_pts       = size(INCLUSION,2);
+pts_u        = 4 + no_pts;
+pts_l        = 5;
+INCLUSION_s  = [pts_l:pts_u;pts_l+1:pts_u+1];
+INCLUSION_s(2,end) = pts_l;
+points       = [points INCLUSION];
+segments     = [segments INCLUSION_s];
+
+<span class="comment">% Set triangle input</span>
+tristr.points         = points;
+tristr.segments       = uint32(segments);
+
+<span class="comment">% Set triangle options</span>
+opts = [];
+opts.element_type     = <span class="string">'tri3'</span>;
+opts.gen_neighbors    = 1;
+opts.triangulate_poly = 1;
+opts.min_angle        = 30;
+opts.max_tri_area     = 0.01;
+</pre><p>Generate and show the mesh:</p><pre class="codeinput"><span class="comment">% Generate the mesh using triangle</span>
+MESH = mtriangle(opts, tristr);
+
+<span class="comment">% Show the mesh</span>
+ncorners = 3;
+nel = length(MESH.ELEMS);
+X   = reshape(MESH.NODES(1,MESH.ELEMS(1:ncorners,:)), ncorners, nel);
+Y   = reshape(MESH.NODES(2,MESH.ELEMS(1:ncorners,:)), ncorners, nel);
+C   = zeros(size(X));
+figure(1); clf;
+h = patch(X, Y, C);
+axis <span class="string">square</span>
+</pre><img vspace="5" hspace="5" src="ex_quadtree_01.png" alt=""> <h2>Create and show mesh connectivity graph (sparse matrix)<a name="3"></a></h2><p>Create the connectivity matrix for the created mesh. The non-zeros in the sparse matrix indicate the connectivities between the mesh nodes: matrix entry at <tt>(i, j)</tt> denotes a connection between nodes <tt>i</tt> and <tt>j</tt>.</p><pre class="codeinput">Aconn = sparse_create(MESH.ELEMS);
+spy(Aconn);
+</pre><img vspace="5" hspace="5" src="ex_quadtree_02.png" alt=""> <h2>Build quad-tree based on the mesh nodes and renumber the nodes<a name="4"></a></h2><p>Create a quadtree based on the nodes. The quadtree is finely adapted (maximum of 1 node in a quadrant is allowed). The quadtree is used to reorder the nodes to achieve 2D spatial locality.</p><pre class="codeinput">qtree_nodes = quadtree(<span class="string">'create'</span>, MESH.NODES, x_min, x_max, y_min, y_max, 1);
+
+<span class="comment">% save qtree in a VTK file. View it with e.g., Paraview</span>
+quadtree(<span class="string">'vtkwrite'</span>, qtree_nodes, <span class="string">'example'</span>);
+
+<span class="comment">% get quadtree node ordering</span>
+perm = quadtree(<span class="string">'reorder'</span>, qtree_nodes);
+
+<span class="comment">% renumber the nodes</span>
+iperm(perm) = 1:numel(perm);
+MESH.ELEMS  = uint32(iperm(MESH.ELEMS));
+MESH.NODES  = MESH.NODES(:,perm);
+
+<span class="comment">% create and show sparse matrix for renumbered nodes</span>
+Aconn = sparse_create(MESH.ELEMS);
+spy(Aconn);
+</pre><img vspace="5" hspace="5" src="ex_quadtree_03.png" alt=""> <h2>Renumber random cloud of points using quadtree ordering<a name="5"></a></h2><p>Create a quadtree based on the markers. The quadtree is only roughly adapted (maximum of 4096 markers in a quadrant are allowed). The quadtree is used to reorder the markers to achieve 2D spatial locality.</p><pre class="codeinput"><span class="comment">% randomize markers</span>
+n_markers = 1e6;
+markers   = 0.01+0.98*rand(2, n_markers);
+
+<span class="comment">% create the quadtree</span>
+qtree_markers = quadtree(<span class="string">'create'</span>, markers, x_min, x_max, y_min, y_max, 4096);
+
+<span class="comment">% find marker ordering based on quadtree traversal</span>
+I = quadtree(<span class="string">'reorder'</span>, qtree_markers);
+markers = markers(:,I);
+</pre><p class="footer"><br>
+      Published with MATLAB&reg; 7.13<br></p></div><!--
+##### SOURCE BEGIN #####
+%% Building quad-trees and using them as a reordering technique
+% ex_quadtree shows how to
+%
+% * build a quadtree structure based on nodes and markers
+% * renumber nodes and markers based on the quadtree
+
+
+%% Generate unstructured triangular mesh
+% The example setup is a square domain with a finely-resolved circular
+% inclusion in the center.
+
+% Setup domain - square box
+x_min        = 0; 
+x_max        = 1;
+y_min        = 0; 
+y_max        = 1;
+points   = [
+    x_min y_min;
+    x_max y_min;
+    x_max y_max;
+    x_min y_max]';
+segments = [1 2; 2 3; 3 4; 4 1]';
+
+% Add a circular inclusion in the center
+no_pts_incl  = 150;
+radius       = 0.1;
+alpha        = 0.5;
+
+theta        = linspace(0,2*pi,no_pts_incl);
+theta(end)   = [];
+xx           = cos(theta);
+yy           = sin(theta);
+center_x     = alpha*x_max+(1-alpha)*x_min;
+center_y     = 0.5*(y_max+y_min);
+INCLUSION    = [center_x + radius*xx; center_y + radius*yy];
+no_pts       = size(INCLUSION,2);
+pts_u        = 4 + no_pts;
+pts_l        = 5;
+INCLUSION_s  = [pts_l:pts_u;pts_l+1:pts_u+1];
+INCLUSION_s(2,end) = pts_l;
+points       = [points INCLUSION];
+segments     = [segments INCLUSION_s];
+
+% Set triangle input
+tristr.points         = points;
+tristr.segments       = uint32(segments);
+
+% Set triangle options
+opts = [];
+opts.element_type     = 'tri3';
+opts.gen_neighbors    = 1;
+opts.triangulate_poly = 1;
+opts.min_angle        = 30;
+opts.max_tri_area     = 0.01;
+
+
+%%
+% Generate and show the mesh:
+
+% Generate the mesh using triangle
+MESH = mtriangle(opts, tristr);
+
+% Show the mesh
+ncorners = 3;
+nel = length(MESH.ELEMS);
+X   = reshape(MESH.NODES(1,MESH.ELEMS(1:ncorners,:)), ncorners, nel);
+Y   = reshape(MESH.NODES(2,MESH.ELEMS(1:ncorners,:)), ncorners, nel);
+C   = zeros(size(X));
+figure(1); clf;
+h = patch(X, Y, C);
+axis square
+
+%% Create and show mesh connectivity graph (sparse matrix)
+% Create the connectivity matrix for the created mesh. The non-zeros in the
+% sparse matrix indicate the connectivities between the mesh nodes: matrix
+% entry at |(i, j)| denotes a connection between nodes |i| and |j|.
+
+Aconn = sparse_create(MESH.ELEMS);
+spy(Aconn);
+
+
+%% Build quad-tree based on the mesh nodes and renumber the nodes
+% Create a quadtree based on the nodes.
+% The quadtree is finely adapted (maximum of 1 node in a quadrant is allowed). 
+% The quadtree is used to reorder the nodes to achieve 2D spatial locality.
+
+qtree_nodes = quadtree('create', MESH.NODES, x_min, x_max, y_min, y_max, 1);
+
+% save qtree in a VTK file. View it with e.g., Paraview
+quadtree('vtkwrite', qtree_nodes, 'example');
+
+% get quadtree node ordering
+perm = quadtree('reorder', qtree_nodes);
+
+% renumber the nodes
+iperm(perm) = 1:numel(perm);
+MESH.ELEMS  = uint32(iperm(MESH.ELEMS));
+MESH.NODES  = MESH.NODES(:,perm);
+
+% create and show sparse matrix for renumbered nodes
+Aconn = sparse_create(MESH.ELEMS);
+spy(Aconn);
+
+
+%% Renumber random cloud of points using quadtree ordering
+% Create a quadtree based on the markers.
+% The quadtree is only roughly adapted (maximum of 4096 markers
+% in a quadrant are allowed). The quadtree is used to reorder the
+% markers to achieve 2D spatial locality.
+
+% randomize markers
+n_markers = 1e6;
+markers   = 0.01+0.98*rand(2, n_markers);
+
+% create the quadtree
+qtree_markers = quadtree('create', markers, x_min, x_max, y_min, y_max, 4096);
+
+% find marker ordering based on quadtree traversal
+I = quadtree('reorder', qtree_markers);
+markers = markers(:,I);
+
+##### SOURCE END #####
+--></body></html>

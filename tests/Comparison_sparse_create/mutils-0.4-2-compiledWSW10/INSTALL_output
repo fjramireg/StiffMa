@@ -1,0 +1,395 @@
+mex -setup
+MEX configured to use 'Microsoft Visual C++ 2017 (C)' for C language compilation.
+
+To choose a different C compiler, select one from the following:
+MinGW64 Compiler (C)  mex -setup:'C:\Program Files\MATLAB\R2020a\bin\win64\mexopts\mingw64.xml' C
+Microsoft Visual C++ 2017 (C)  mex -setup:C:\Users\Francisco\AppData\Roaming\MathWorks\MATLAB\R2020a\mex_C_win64.xml C
+
+To choose a different language, select one from the following:
+ mex -setup C++ 
+ mex -setup FORTRAN
+MEX configured to use 'Microsoft Visual C++ 2017' for C++ language compilation.
+
+To choose a different C++ compiler, select one from the following:
+MinGW64 Compiler (C++)  mex -setup:'C:\Program Files\MATLAB\R2020a\bin\win64\mexopts\mingw64_g++.xml' C++
+MinGW64 Compiler with Windows 10 SDK or later (C++)  mex -setup:'C:\Program Files\MATLAB\R2020a\bin\win64\mexopts\mingw64_g++_sdk10+.xml' C++
+Microsoft Visual C++ 2017  mex -setup:C:\Users\Francisco\AppData\Roaming\MathWorks\MATLAB\R2020a\mex_C++_win64.xml C++
+clean
+install
+Building with 'Microsoft Visual C++ 2017 (C)'.
+MEX completed successfully.
+triangle MEX file is already installed on this system.
+Using existing MEX file.
+triangle available
+ 
+All required SuiteSparse components are already installed on this system.
+Using existing MEX files.
+SuiteSparse available
+ 
+Warning: Old version of quadtree.mexw64 already installed on this system will be ignored 
+> In quadtree_install (line 45)
+  In mutils_install (line 35)
+  In install (line 76) 
+Warning: Old version of octree.mexw64 already installed on this system will be ignored 
+> In quadtree_install (line 45)
+  In mutils_install (line 35)
+  In install (line 76) 
+compiling D:\\Francisco\\Dropbox\\StiffMa\\Code\\tests\\Comparison_sparse_create\\mutils-0.4-2-compiledWSW10\\mutils\\libutils\\cpuaffinity.c
+Building with 'Microsoft Visual C++ 2017 (C)'.
+MEX completed successfully.
+compiling D:\\Francisco\\Dropbox\\StiffMa\\Code\\tests\\Comparison_sparse_create\\mutils-0.4-2-compiledWSW10\\mutils\\libutils\\debug_defs.c
+Building with 'Microsoft Visual C++ 2017 (C)'.
+MEX completed successfully.
+compiling D:\\Francisco\\Dropbox\\StiffMa\\Code\\tests\\Comparison_sparse_create\\mutils-0.4-2-compiledWSW10\\mutils\\libutils\\memutils.c
+Building with 'Microsoft Visual C++ 2017 (C)'.
+MEX completed successfully.
+compiling D:\\Francisco\\Dropbox\\StiffMa\\Code\\tests\\Comparison_sparse_create\\mutils-0.4-2-compiledWSW10\\mutils\\libutils\\mtypes.c
+Building with 'Microsoft Visual C++ 2017 (C)'.
+MEX completed successfully.
+compiling D:\\Francisco\\Dropbox\\StiffMa\\Code\\tests\\Comparison_sparse_create\\mutils-0.4-2-compiledWSW10\\mutils\\libutils\\parallel.c
+Building with 'Microsoft Visual C++ 2017 (C)'.
+MEX completed successfully.
+compiling D:\\Francisco\\Dropbox\\StiffMa\\Code\\tests\\Comparison_sparse_create\\mutils-0.4-2-compiledWSW10\\mutils\\libutils\\params.c
+Building with 'Microsoft Visual C++ 2017 (C)'.
+MEX completed successfully.
+compiling D:\\Francisco\\Dropbox\\StiffMa\\Code\\tests\\Comparison_sparse_create\\mutils-0.4-2-compiledWSW10\\mutils\\libutils\\predicates.c
+Building with 'Microsoft Visual C++ 2017 (C)'.
+MEX completed successfully.
+compiling D:\\Francisco\\Dropbox\\StiffMa\\Code\\tests\\Comparison_sparse_create\\mutils-0.4-2-compiledWSW10\\mutils\\libutils\\sorted_list.c
+Building with 'Microsoft Visual C++ 2017 (C)'.
+MEX completed successfully.
+compiling D:\\Francisco\\Dropbox\\StiffMa\\Code\\tests\\Comparison_sparse_create\\mutils-0.4-2-compiledWSW10\\mutils\\libutils\\sorted_list_merge.c
+Building with 'Microsoft Visual C++ 2017 (C)'.
+MEX completed successfully.
+compiling D:\\Francisco\\Dropbox\\StiffMa\\Code\\tests\\Comparison_sparse_create\\mutils-0.4-2-compiledWSW10\\mutils\\libutils\\tictoc.c
+Building with 'Microsoft Visual C++ 2017 (C)'.
+MEX completed successfully.
+compiling D:\\Francisco\\Dropbox\\StiffMa\\Code\\tests\\Comparison_sparse_create\\mutils-0.4-2-compiledWSW10\\mutils\\libutils\\utils.c
+Building with 'Microsoft Visual C++ 2017 (C)'.
+MEX completed successfully.
+compiling D:\\Francisco\\Dropbox\\StiffMa\\Code\\tests\\Comparison_sparse_create\\mutils-0.4-2-compiledWSW10\\mutils\\libutils\\vector_ops.c
+Building with 'Microsoft Visual C++ 2017 (C)'.
+MEX completed successfully.
+compiling D:\\Francisco\\Dropbox\\StiffMa\\Code\\tests\\Comparison_sparse_create\\mutils-0.4-2-compiledWSW10\\mutils\\libmatlab\\mesh.c
+Building with 'Microsoft Visual C++ 2017 (C)'.
+MEX completed successfully.
+compiling D:\\Francisco\\Dropbox\\StiffMa\\Code\\tests\\Comparison_sparse_create\\mutils-0.4-2-compiledWSW10\\mutils\\libmatlab\\mexparams.c
+Building with 'Microsoft Visual C++ 2017 (C)'.
+MEX completed successfully.
+compiling octree_opts.c
+Building with 'Microsoft Visual C++ 2017 (C)'.
+MEX completed successfully.
+compiling octree_mex.c
+Building with 'Microsoft Visual C++ 2017 (C)'.
+MEX completed successfully.
+compiling octree_mex.c
+Building with 'Microsoft Visual C++ 2017 (C)'.
+MEX completed successfully.
+quadtree compiled successfully
+ 
+Warning: Old version of einterp.mexw64 already installed on this system will be ignored 
+> In interp_install (line 44)
+  In mutils_install (line 35)
+  In install (line 76) 
+compiling einterp_quad.c
+Building with 'Microsoft Visual C++ 2017 (C)'.
+MEX completed successfully.
+compiling einterp_tri.c
+Building with 'Microsoft Visual C++ 2017 (C)'.
+MEX completed successfully.
+compiling interp_opts.c
+Building with 'Microsoft Visual C++ 2017 (C)'.
+MEX completed successfully.
+compiling einterp_mex.c
+Building with 'Microsoft Visual C++ 2017 (C)'.
+MEX completed successfully.
+interp compiled successfully
+ 
+Warning: Old version of metis_part.mexw64 already installed on this system will be ignored 
+> In reorder_install (line 49)
+  In mutils_install (line 35)
+  In install (line 76) 
+Warning: Old version of mrcm.mexw64 already installed on this system will be ignored 
+> In reorder_install (line 49)
+  In mutils_install (line 35)
+  In install (line 76) 
+compiling D:\\Francisco\\Dropbox\\StiffMa\\Code\\tests\\Comparison_sparse_create\\mutils-0.4-2-compiledWSW10\\mutils\\reorder\\sources\\Lib\\balance.c
+Building with 'Microsoft Visual C++ 2017 (C)'.
+MEX completed successfully.
+compiling D:\\Francisco\\Dropbox\\StiffMa\\Code\\tests\\Comparison_sparse_create\\mutils-0.4-2-compiledWSW10\\mutils\\reorder\\sources\\Lib\\bucketsort.c
+Building with 'Microsoft Visual C++ 2017 (C)'.
+MEX completed successfully.
+compiling D:\\Francisco\\Dropbox\\StiffMa\\Code\\tests\\Comparison_sparse_create\\mutils-0.4-2-compiledWSW10\\mutils\\reorder\\sources\\Lib\\ccgraph.c
+Building with 'Microsoft Visual C++ 2017 (C)'.
+MEX completed successfully.
+compiling D:\\Francisco\\Dropbox\\StiffMa\\Code\\tests\\Comparison_sparse_create\\mutils-0.4-2-compiledWSW10\\mutils\\reorder\\sources\\Lib\\coarsen.c
+Building with 'Microsoft Visual C++ 2017 (C)'.
+MEX completed successfully.
+compiling D:\\Francisco\\Dropbox\\StiffMa\\Code\\tests\\Comparison_sparse_create\\mutils-0.4-2-compiledWSW10\\mutils\\reorder\\sources\\Lib\\compress.c
+Building with 'Microsoft Visual C++ 2017 (C)'.
+MEX completed successfully.
+compiling D:\\Francisco\\Dropbox\\StiffMa\\Code\\tests\\Comparison_sparse_create\\mutils-0.4-2-compiledWSW10\\mutils\\reorder\\sources\\Lib\\debug.c
+Building with 'Microsoft Visual C++ 2017 (C)'.
+MEX completed successfully.
+compiling D:\\Francisco\\Dropbox\\StiffMa\\Code\\tests\\Comparison_sparse_create\\mutils-0.4-2-compiledWSW10\\mutils\\reorder\\sources\\Lib\\estmem.c
+Building with 'Microsoft Visual C++ 2017 (C)'.
+MEX completed successfully.
+compiling D:\\Francisco\\Dropbox\\StiffMa\\Code\\tests\\Comparison_sparse_create\\mutils-0.4-2-compiledWSW10\\mutils\\reorder\\sources\\Lib\\fm.c
+Building with 'Microsoft Visual C++ 2017 (C)'.
+MEX completed successfully.
+compiling D:\\Francisco\\Dropbox\\StiffMa\\Code\\tests\\Comparison_sparse_create\\mutils-0.4-2-compiledWSW10\\mutils\\reorder\\sources\\Lib\\fortran.c
+Building with 'Microsoft Visual C++ 2017 (C)'.
+MEX completed successfully.
+compiling D:\\Francisco\\Dropbox\\StiffMa\\Code\\tests\\Comparison_sparse_create\\mutils-0.4-2-compiledWSW10\\mutils\\reorder\\sources\\Lib\\frename.c
+Building with 'Microsoft Visual C++ 2017 (C)'.
+MEX completed successfully.
+compiling D:\\Francisco\\Dropbox\\StiffMa\\Code\\tests\\Comparison_sparse_create\\mutils-0.4-2-compiledWSW10\\mutils\\reorder\\sources\\Lib\\graph.c
+Building with 'Microsoft Visual C++ 2017 (C)'.
+MEX completed successfully.
+compiling D:\\Francisco\\Dropbox\\StiffMa\\Code\\tests\\Comparison_sparse_create\\mutils-0.4-2-compiledWSW10\\mutils\\reorder\\sources\\Lib\\initpart.c
+Building with 'Microsoft Visual C++ 2017 (C)'.
+MEX completed successfully.
+compiling D:\\Francisco\\Dropbox\\StiffMa\\Code\\tests\\Comparison_sparse_create\\mutils-0.4-2-compiledWSW10\\mutils\\reorder\\sources\\Lib\\kmetis.c
+Building with 'Microsoft Visual C++ 2017 (C)'.
+MEX completed successfully.
+compiling D:\\Francisco\\Dropbox\\StiffMa\\Code\\tests\\Comparison_sparse_create\\mutils-0.4-2-compiledWSW10\\mutils\\reorder\\sources\\Lib\\kvmetis.c
+Building with 'Microsoft Visual C++ 2017 (C)'.
+MEX completed successfully.
+compiling D:\\Francisco\\Dropbox\\StiffMa\\Code\\tests\\Comparison_sparse_create\\mutils-0.4-2-compiledWSW10\\mutils\\reorder\\sources\\Lib\\kwayfm.c
+Building with 'Microsoft Visual C++ 2017 (C)'.
+MEX completed successfully.
+compiling D:\\Francisco\\Dropbox\\StiffMa\\Code\\tests\\Comparison_sparse_create\\mutils-0.4-2-compiledWSW10\\mutils\\reorder\\sources\\Lib\\kwayrefine.c
+Building with 'Microsoft Visual C++ 2017 (C)'.
+MEX completed successfully.
+compiling D:\\Francisco\\Dropbox\\StiffMa\\Code\\tests\\Comparison_sparse_create\\mutils-0.4-2-compiledWSW10\\mutils\\reorder\\sources\\Lib\\kwayvolfm.c
+Building with 'Microsoft Visual C++ 2017 (C)'.
+MEX completed successfully.
+compiling D:\\Francisco\\Dropbox\\StiffMa\\Code\\tests\\Comparison_sparse_create\\mutils-0.4-2-compiledWSW10\\mutils\\reorder\\sources\\Lib\\kwayvolrefine.c
+Building with 'Microsoft Visual C++ 2017 (C)'.
+MEX completed successfully.
+compiling D:\\Francisco\\Dropbox\\StiffMa\\Code\\tests\\Comparison_sparse_create\\mutils-0.4-2-compiledWSW10\\mutils\\reorder\\sources\\Lib\\match.c
+Building with 'Microsoft Visual C++ 2017 (C)'.
+MEX completed successfully.
+compiling D:\\Francisco\\Dropbox\\StiffMa\\Code\\tests\\Comparison_sparse_create\\mutils-0.4-2-compiledWSW10\\mutils\\reorder\\sources\\Lib\\mbalance.c
+Building with 'Microsoft Visual C++ 2017 (C)'.
+MEX completed successfully.
+compiling D:\\Francisco\\Dropbox\\StiffMa\\Code\\tests\\Comparison_sparse_create\\mutils-0.4-2-compiledWSW10\\mutils\\reorder\\sources\\Lib\\mbalance2.c
+Building with 'Microsoft Visual C++ 2017 (C)'.
+MEX completed successfully.
+compiling D:\\Francisco\\Dropbox\\StiffMa\\Code\\tests\\Comparison_sparse_create\\mutils-0.4-2-compiledWSW10\\mutils\\reorder\\sources\\Lib\\mcoarsen.c
+Building with 'Microsoft Visual C++ 2017 (C)'.
+MEX completed successfully.
+compiling D:\\Francisco\\Dropbox\\StiffMa\\Code\\tests\\Comparison_sparse_create\\mutils-0.4-2-compiledWSW10\\mutils\\reorder\\sources\\Lib\\memory.c
+Building with 'Microsoft Visual C++ 2017 (C)'.
+MEX completed successfully.
+compiling D:\\Francisco\\Dropbox\\StiffMa\\Code\\tests\\Comparison_sparse_create\\mutils-0.4-2-compiledWSW10\\mutils\\reorder\\sources\\Lib\\mesh.c
+Building with 'Microsoft Visual C++ 2017 (C)'.
+MEX completed successfully.
+compiling D:\\Francisco\\Dropbox\\StiffMa\\Code\\tests\\Comparison_sparse_create\\mutils-0.4-2-compiledWSW10\\mutils\\reorder\\sources\\Lib\\meshpart.c
+Building with 'Microsoft Visual C++ 2017 (C)'.
+MEX completed successfully.
+compiling D:\\Francisco\\Dropbox\\StiffMa\\Code\\tests\\Comparison_sparse_create\\mutils-0.4-2-compiledWSW10\\mutils\\reorder\\sources\\Lib\\mfm.c
+Building with 'Microsoft Visual C++ 2017 (C)'.
+MEX completed successfully.
+compiling D:\\Francisco\\Dropbox\\StiffMa\\Code\\tests\\Comparison_sparse_create\\mutils-0.4-2-compiledWSW10\\mutils\\reorder\\sources\\Lib\\mfm2.c
+Building with 'Microsoft Visual C++ 2017 (C)'.
+MEX completed successfully.
+compiling D:\\Francisco\\Dropbox\\StiffMa\\Code\\tests\\Comparison_sparse_create\\mutils-0.4-2-compiledWSW10\\mutils\\reorder\\sources\\Lib\\mincover.c
+Building with 'Microsoft Visual C++ 2017 (C)'.
+MEX completed successfully.
+compiling D:\\Francisco\\Dropbox\\StiffMa\\Code\\tests\\Comparison_sparse_create\\mutils-0.4-2-compiledWSW10\\mutils\\reorder\\sources\\Lib\\minitpart.c
+Building with 'Microsoft Visual C++ 2017 (C)'.
+MEX completed successfully.
+compiling D:\\Francisco\\Dropbox\\StiffMa\\Code\\tests\\Comparison_sparse_create\\mutils-0.4-2-compiledWSW10\\mutils\\reorder\\sources\\Lib\\minitpart2.c
+Building with 'Microsoft Visual C++ 2017 (C)'.
+MEX completed successfully.
+compiling D:\\Francisco\\Dropbox\\StiffMa\\Code\\tests\\Comparison_sparse_create\\mutils-0.4-2-compiledWSW10\\mutils\\reorder\\sources\\Lib\\mkmetis.c
+Building with 'Microsoft Visual C++ 2017 (C)'.
+MEX completed successfully.
+compiling D:\\Francisco\\Dropbox\\StiffMa\\Code\\tests\\Comparison_sparse_create\\mutils-0.4-2-compiledWSW10\\mutils\\reorder\\sources\\Lib\\mkwayfmh.c
+Building with 'Microsoft Visual C++ 2017 (C)'.
+MEX completed successfully.
+compiling D:\\Francisco\\Dropbox\\StiffMa\\Code\\tests\\Comparison_sparse_create\\mutils-0.4-2-compiledWSW10\\mutils\\reorder\\sources\\Lib\\mkwayrefine.c
+Building with 'Microsoft Visual C++ 2017 (C)'.
+MEX completed successfully.
+compiling D:\\Francisco\\Dropbox\\StiffMa\\Code\\tests\\Comparison_sparse_create\\mutils-0.4-2-compiledWSW10\\mutils\\reorder\\sources\\Lib\\mmatch.c
+Building with 'Microsoft Visual C++ 2017 (C)'.
+MEX completed successfully.
+compiling D:\\Francisco\\Dropbox\\StiffMa\\Code\\tests\\Comparison_sparse_create\\mutils-0.4-2-compiledWSW10\\mutils\\reorder\\sources\\Lib\\mmd.c
+Building with 'Microsoft Visual C++ 2017 (C)'.
+MEX completed successfully.
+compiling D:\\Francisco\\Dropbox\\StiffMa\\Code\\tests\\Comparison_sparse_create\\mutils-0.4-2-compiledWSW10\\mutils\\reorder\\sources\\Lib\\mpmetis.c
+Building with 'Microsoft Visual C++ 2017 (C)'.
+MEX completed successfully.
+compiling D:\\Francisco\\Dropbox\\StiffMa\\Code\\tests\\Comparison_sparse_create\\mutils-0.4-2-compiledWSW10\\mutils\\reorder\\sources\\Lib\\mrefine.c
+Building with 'Microsoft Visual C++ 2017 (C)'.
+MEX completed successfully.
+compiling D:\\Francisco\\Dropbox\\StiffMa\\Code\\tests\\Comparison_sparse_create\\mutils-0.4-2-compiledWSW10\\mutils\\reorder\\sources\\Lib\\mrefine2.c
+Building with 'Microsoft Visual C++ 2017 (C)'.
+MEX completed successfully.
+compiling D:\\Francisco\\Dropbox\\StiffMa\\Code\\tests\\Comparison_sparse_create\\mutils-0.4-2-compiledWSW10\\mutils\\reorder\\sources\\Lib\\mutil.c
+Building with 'Microsoft Visual C++ 2017 (C)'.
+MEX completed successfully.
+compiling D:\\Francisco\\Dropbox\\StiffMa\\Code\\tests\\Comparison_sparse_create\\mutils-0.4-2-compiledWSW10\\mutils\\reorder\\sources\\Lib\\myqsort.c
+Building with 'Microsoft Visual C++ 2017 (C)'.
+MEX completed successfully.
+compiling D:\\Francisco\\Dropbox\\StiffMa\\Code\\tests\\Comparison_sparse_create\\mutils-0.4-2-compiledWSW10\\mutils\\reorder\\sources\\Lib\\ometis.c
+Building with 'Microsoft Visual C++ 2017 (C)'.
+MEX completed successfully.
+compiling D:\\Francisco\\Dropbox\\StiffMa\\Code\\tests\\Comparison_sparse_create\\mutils-0.4-2-compiledWSW10\\mutils\\reorder\\sources\\Lib\\parmetis.c
+Building with 'Microsoft Visual C++ 2017 (C)'.
+MEX completed successfully.
+compiling D:\\Francisco\\Dropbox\\StiffMa\\Code\\tests\\Comparison_sparse_create\\mutils-0.4-2-compiledWSW10\\mutils\\reorder\\sources\\Lib\\pmetis.c
+Building with 'Microsoft Visual C++ 2017 (C)'.
+MEX completed successfully.
+compiling D:\\Francisco\\Dropbox\\StiffMa\\Code\\tests\\Comparison_sparse_create\\mutils-0.4-2-compiledWSW10\\mutils\\reorder\\sources\\Lib\\pqueue.c
+Building with 'Microsoft Visual C++ 2017 (C)'.
+MEX completed successfully.
+compiling D:\\Francisco\\Dropbox\\StiffMa\\Code\\tests\\Comparison_sparse_create\\mutils-0.4-2-compiledWSW10\\mutils\\reorder\\sources\\Lib\\refine.c
+Building with 'Microsoft Visual C++ 2017 (C)'.
+MEX completed successfully.
+compiling D:\\Francisco\\Dropbox\\StiffMa\\Code\\tests\\Comparison_sparse_create\\mutils-0.4-2-compiledWSW10\\mutils\\reorder\\sources\\Lib\\separator.c
+Building with 'Microsoft Visual C++ 2017 (C)'.
+MEX completed successfully.
+compiling D:\\Francisco\\Dropbox\\StiffMa\\Code\\tests\\Comparison_sparse_create\\mutils-0.4-2-compiledWSW10\\mutils\\reorder\\sources\\Lib\\sfm.c
+Building with 'Microsoft Visual C++ 2017 (C)'.
+MEX completed successfully.
+compiling D:\\Francisco\\Dropbox\\StiffMa\\Code\\tests\\Comparison_sparse_create\\mutils-0.4-2-compiledWSW10\\mutils\\reorder\\sources\\Lib\\srefine.c
+Building with 'Microsoft Visual C++ 2017 (C)'.
+MEX completed successfully.
+compiling D:\\Francisco\\Dropbox\\StiffMa\\Code\\tests\\Comparison_sparse_create\\mutils-0.4-2-compiledWSW10\\mutils\\reorder\\sources\\Lib\\stat.c
+Building with 'Microsoft Visual C++ 2017 (C)'.
+MEX completed successfully.
+compiling D:\\Francisco\\Dropbox\\StiffMa\\Code\\tests\\Comparison_sparse_create\\mutils-0.4-2-compiledWSW10\\mutils\\reorder\\sources\\Lib\\subdomains.c
+Building with 'Microsoft Visual C++ 2017 (C)'.
+MEX completed successfully.
+compiling D:\\Francisco\\Dropbox\\StiffMa\\Code\\tests\\Comparison_sparse_create\\mutils-0.4-2-compiledWSW10\\mutils\\reorder\\sources\\Lib\\timing.c
+Building with 'Microsoft Visual C++ 2017 (C)'.
+MEX completed successfully.
+compiling D:\\Francisco\\Dropbox\\StiffMa\\Code\\tests\\Comparison_sparse_create\\mutils-0.4-2-compiledWSW10\\mutils\\reorder\\sources\\Lib\\util.c
+Building with 'Microsoft Visual C++ 2017 (C)'.
+MEX completed successfully.
+compiling reorder_metis.c
+Building with 'Microsoft Visual C++ 2017 (C)'.
+MEX completed successfully.
+compiling reorder_rcm.c
+Building with 'Microsoft Visual C++ 2017 (C)'.
+MEX completed successfully.
+compiling metis_part_mex.c
+Building with 'Microsoft Visual C++ 2017 (C)'.
+MEX completed successfully.
+compiling mrcm_mex.c
+Building with 'Microsoft Visual C++ 2017 (C)'.
+MEX completed successfully.
+reorder compiled successfully
+ 
+Warning: Old version of sparse_convert.mexw64 already installed on this system will be ignored 
+> In sparse_install (line 44)
+  In mutils_install (line 35)
+  In install (line 76) 
+Warning: Old version of spmv.mexw64 already installed on this system will be ignored 
+> In sparse_install (line 44)
+  In mutils_install (line 35)
+  In install (line 76) 
+Warning: Old version of sparse_info.mexw64 already installed on this system will be ignored 
+> In sparse_install (line 44)
+  In mutils_install (line 35)
+  In install (line 76) 
+compiling sparse_opts.c
+Building with 'Microsoft Visual C++ 2017 (C)'.
+MEX completed successfully.
+compiling mexio.c
+Building with 'Microsoft Visual C++ 2017 (C)'.
+MEX completed successfully.
+compiling sparse_utils.c
+Building with 'Microsoft Visual C++ 2017 (C)'.
+MEX completed successfully.
+compiling comm.c
+Building with 'Microsoft Visual C++ 2017 (C)'.
+MEX completed successfully.
+compiling sp_matv.c
+Building with 'Microsoft Visual C++ 2017 (C)'.
+MEX completed successfully.
+compiling sparse_convert_mex.c
+Building with 'Microsoft Visual C++ 2017 (C)'.
+MEX completed successfully.
+compiling spmv_mex.c
+Building with 'Microsoft Visual C++ 2017 (C)'.
+MEX completed successfully.
+compiling sparse_info_mex.c
+Building with 'Microsoft Visual C++ 2017 (C)'.
+MEX completed successfully.
+Warning: Old version of sparse_create.mexw64 already installed on this system will be ignored 
+> In sparse_create_install (line 51)
+  In sparse_install (line 117)
+  In mutils_install (line 35)
+  In install (line 76) 
+compiling D:\\Francisco\\Dropbox\\StiffMa\\Code\\tests\\Comparison_sparse_create\\mutils-0.4-2-compiledWSW10\\mutils\\libutils\\cpuaffinity.c
+Building with 'Microsoft Visual C++ 2017 (C)'.
+MEX completed successfully.
+compiling D:\\Francisco\\Dropbox\\StiffMa\\Code\\tests\\Comparison_sparse_create\\mutils-0.4-2-compiledWSW10\\mutils\\libutils\\debug_defs.c
+Building with 'Microsoft Visual C++ 2017 (C)'.
+MEX completed successfully.
+compiling D:\\Francisco\\Dropbox\\StiffMa\\Code\\tests\\Comparison_sparse_create\\mutils-0.4-2-compiledWSW10\\mutils\\libutils\\memutils.c
+Building with 'Microsoft Visual C++ 2017 (C)'.
+MEX completed successfully.
+compiling D:\\Francisco\\Dropbox\\StiffMa\\Code\\tests\\Comparison_sparse_create\\mutils-0.4-2-compiledWSW10\\mutils\\libutils\\mtypes.c
+Building with 'Microsoft Visual C++ 2017 (C)'.
+MEX completed successfully.
+compiling D:\\Francisco\\Dropbox\\StiffMa\\Code\\tests\\Comparison_sparse_create\\mutils-0.4-2-compiledWSW10\\mutils\\libutils\\parallel.c
+Building with 'Microsoft Visual C++ 2017 (C)'.
+MEX completed successfully.
+compiling D:\\Francisco\\Dropbox\\StiffMa\\Code\\tests\\Comparison_sparse_create\\mutils-0.4-2-compiledWSW10\\mutils\\libutils\\params.c
+Building with 'Microsoft Visual C++ 2017 (C)'.
+MEX completed successfully.
+compiling D:\\Francisco\\Dropbox\\StiffMa\\Code\\tests\\Comparison_sparse_create\\mutils-0.4-2-compiledWSW10\\mutils\\libutils\\predicates.c
+Building with 'Microsoft Visual C++ 2017 (C)'.
+MEX completed successfully.
+compiling D:\\Francisco\\Dropbox\\StiffMa\\Code\\tests\\Comparison_sparse_create\\mutils-0.4-2-compiledWSW10\\mutils\\libutils\\sorted_list.c
+Building with 'Microsoft Visual C++ 2017 (C)'.
+MEX completed successfully.
+compiling D:\\Francisco\\Dropbox\\StiffMa\\Code\\tests\\Comparison_sparse_create\\mutils-0.4-2-compiledWSW10\\mutils\\libutils\\sorted_list_merge.c
+Building with 'Microsoft Visual C++ 2017 (C)'.
+MEX completed successfully.
+compiling D:\\Francisco\\Dropbox\\StiffMa\\Code\\tests\\Comparison_sparse_create\\mutils-0.4-2-compiledWSW10\\mutils\\libutils\\tictoc.c
+Building with 'Microsoft Visual C++ 2017 (C)'.
+MEX completed successfully.
+compiling D:\\Francisco\\Dropbox\\StiffMa\\Code\\tests\\Comparison_sparse_create\\mutils-0.4-2-compiledWSW10\\mutils\\libutils\\utils.c
+Building with 'Microsoft Visual C++ 2017 (C)'.
+MEX completed successfully.
+compiling D:\\Francisco\\Dropbox\\StiffMa\\Code\\tests\\Comparison_sparse_create\\mutils-0.4-2-compiledWSW10\\mutils\\libutils\\vector_ops.c
+Building with 'Microsoft Visual C++ 2017 (C)'.
+MEX completed successfully.
+compiling D:\\Francisco\\Dropbox\\StiffMa\\Code\\tests\\Comparison_sparse_create\\mutils-0.4-2-compiledWSW10\\mutils\\libmatlab\\mesh.c
+Building with 'Microsoft Visual C++ 2017 (C)'.
+MEX completed successfully.
+compiling D:\\Francisco\\Dropbox\\StiffMa\\Code\\tests\\Comparison_sparse_create\\mutils-0.4-2-compiledWSW10\\mutils\\libmatlab\\mexparams.c
+Building with 'Microsoft Visual C++ 2017 (C)'.
+MEX completed successfully.
+compiling sparse_opts.c
+Building with 'Microsoft Visual C++ 2017 (C)'.
+MEX completed successfully.
+compiling sparse_create_mex.c
+Building with 'Microsoft Visual C++ 2017 (C)'.
+MEX completed successfully.
+sparse compiled successfully
+ 
+mutils available
+ 
+ 
+--------------------------------------------------------------------
+Paths required by mutils have been added to your MATLAB environment.
+You need to either save the path from menu File->Set Path,
+or add the following lines to your code whenever you want to use
+mutils:
+ 
+    addpath('D:\Francisco\Dropbox\StiffMa\Code\tests\Comparison_sparse_create\mutils-0.4-2-compiledWSW10')
+    addpath('D:\Francisco\Dropbox\StiffMa\Code\tests\Comparison_sparse_create\mutils-0.4-2-compiledWSW10\triangle')
+    addpath('D:\Francisco\Dropbox\StiffMa\Code\tests\Comparison_sparse_create\mutils-0.4-2-compiledWSW10\SuiteSparse')
+    addpath('D:\Francisco\Dropbox\StiffMa\Code\tests\Comparison_sparse_create\mutils-0.4-2-compiledWSW10\mutils')
+    addpath('D:\Francisco\Dropbox\StiffMa\Code\tests\Comparison_sparse_create\mutils-0.4-2-compiledWSW10\mutils\quadtree')
+    addpath('D:\Francisco\Dropbox\StiffMa\Code\tests\Comparison_sparse_create\mutils-0.4-2-compiledWSW10\mutils\libutils')
+    addpath('D:\Francisco\Dropbox\StiffMa\Code\tests\Comparison_sparse_create\mutils-0.4-2-compiledWSW10\mutils\libmatlab')
+    addpath('D:\Francisco\Dropbox\StiffMa\Code\tests\Comparison_sparse_create\mutils-0.4-2-compiledWSW10\mutils\interp')
+    addpath('D:\Francisco\Dropbox\StiffMa\Code\tests\Comparison_sparse_create\mutils-0.4-2-compiledWSW10\mutils\reorder')
+    addpath('D:\Francisco\Dropbox\StiffMa\Code\tests\Comparison_sparse_create\mutils-0.4-2-compiledWSW10\mutils\sparse')

@@ -1,0 +1,39 @@
+install
+Building with 'Microsoft Visual C++ 2019 (C)'.
+MEX completed successfully.
+Warning: File not found or permission denied 
+> In install (line 50) 
+triangle MEX file is already installed on this system.
+Using existing MEX file.
+triangle available
+ 
+All required SuiteSparse components are already installed on this system.
+Using existing MEX files.
+SuiteSparse available
+ 
+quadtree compiled successfully
+ 
+interp compiled successfully
+ 
+reorder compiled successfully
+ 
+sparse compiled successfully
+ 
+mutils available
+ 
+ 
+--------------------------------------------------------------------
+Paths required by mutils have been added to your MATLAB environment.
+You need to either save the path from menu File->Set Path,
+or add the following lines to your code whenever you want to use
+mutils:
+ 
+    addpath('B:\Francisco\Documents\Dropbox (Universidad Nacional)\StiffMa\Code\tests\Comparison_sparse_create\mutils-0.4-2_precompiled')
+    addpath('B:\Francisco\Documents\Dropbox (Universidad Nacional)\StiffMa\Code\tests\Comparison_sparse_create\mutils-0.4-2_precompiled\triangle')
+    addpath('B:\Francisco\Documents\Dropbox (Universidad Nacional)\StiffMa\Code\tests\Comparison_sparse_create\mutils-0.4-2_precompiled\SuiteSparse')
+    addpath('B:\Francisco\Documents\Dropbox (Universidad Nacional)\StiffMa\Code\tests\Comparison_sparse_create\mutils-0.4-2_precompiled\mutils')
+    addpath('B:\Francisco\Documents\Dropbox (Universidad Nacional)\StiffMa\Code\tests\Comparison_sparse_create\mutils-0.4-2_precompiled\mutils\quadtree')
+    addpath('B:\Francisco\Documents\Dropbox (Universidad Nacional)\StiffMa\Code\tests\Comparison_sparse_create\mutils-0.4-2_precompiled\mutils\interp')
+    addpath('B:\Francisco\Documents\Dropbox (Universidad Nacional)\StiffMa\Code\tests\Comparison_sparse_create\mutils-0.4-2_precompiled\mutils\reorder')
+    addpath('B:\Francisco\Documents\Dropbox (Universidad Nacional)\StiffMa\Code\tests\Comparison_sparse_create\mutils-0.4-2_precompiled\mutils\sparse')
+>>

@@ -1,0 +1,3 @@
+- Memory leaks in mex files that allocate dynamic local memory (i.e., not
+using MATLABs interface) and fail on the way without freeing it, e.g.
+due to an out-of-memory error.

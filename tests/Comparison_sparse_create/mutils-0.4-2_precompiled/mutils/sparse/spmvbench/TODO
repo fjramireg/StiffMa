@@ -1,0 +1,17 @@
+- data types are not synchronized with rest of mutils in the MATLAB case. 
+  dimType is a 64-bit value here, and we want it rather to be 32 bit.
+  In sparse_create Int is used instead of dimType, and dimType is only
+  used to translate data to/from MATLAB
+
+- NUMA support missing
+
+- other types of data distributions. Currently only 'copy' distribution is
+  supported: every thread works on a local copy of the matrix part. 
+  Other interesting distributions are e.g. Shared Memory, where every
+  thread accesses required data in the shared matrix data structure.
+
+- use sorted_list in matrix modifications (transpose, permute etc).
+
+- error messages: unify with MUTILS
+
+- use SCOTCH

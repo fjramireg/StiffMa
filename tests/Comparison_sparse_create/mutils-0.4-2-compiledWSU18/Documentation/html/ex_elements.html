@@ -1,0 +1,552 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <!--
+This HTML was auto-generated from MATLAB code.
+To make changes, update the MATLAB code and republish this document.
+      --><title>ex_elements</title><meta name="generator" content="MATLAB 7.13"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2013-06-19"><meta name="DC.source" content="ex_elements.m"><style type="text/css">
+
+body {
+  background-color: white;
+  margin:10px;
+}
+
+h1 {
+  color: #990000; 
+  font-size: x-large;
+}
+
+h2 {
+  color: #990000;
+  font-size: medium;
+}
+
+/* Make the text shrink to fit narrow windows, but not stretch too far in 
+wide windows. */ 
+p,h1,h2,div.content div {
+  max-width: 600px;
+  /* Hack for IE6 */
+  width: auto !important; width: 600px;
+}
+
+pre.codeinput {
+  background: #EEEEEE;
+  padding: 10px;
+}
+@media print {
+  pre.codeinput {word-wrap:break-word; width:100%;}
+} 
+
+span.keyword {color: #0000FF}
+span.comment {color: #228B22}
+span.string {color: #A020F0}
+span.untermstring {color: #B20000}
+span.syscmd {color: #B28C00}
+
+pre.codeoutput {
+  color: #666666;
+  padding: 10px;
+}
+
+pre.error {
+  color: red;
+}
+
+p.footer {
+  text-align: right;
+  font-size: xx-small;
+  font-weight: lighter;
+  font-style: italic;
+  color: gray;
+}
+
+  </style></head><body><div class="content"><h2>Contents</h2><div><ul><li><a href="#3">3 node triangle</a></li><li><a href="#4">6 node triangle</a></li><li><a href="#5">7 node triangle</a></li><li><a href="#6">4 node quad</a></li><li><a href="#7">8 node quad</a></li><li><a href="#8">9 node quad</a></li><li><a href="#9">4 node tetra</a></li><li><a href="#10">10 node tetra</a></li><li><a href="#11">14 node tetra</a></li><li><a href="#12">15 node tetra</a></li><li><a href="#13">8 node brick</a></li><li><a href="#14">20 node brick</a></li><li><a href="#15">26 node brick</a></li><li><a href="#16">27 node brick</a></li><li><a href="#18">Definitions of reference elements</a></li></ul></div><pre class="codeinput"><span class="keyword">function</span> reference_elements
+</pre><h2>3 node triangle<a name="3"></a></h2><pre class="codeinput">draw_reference_element(<span class="string">'tri3'</span>);
+</pre><img vspace="5" hspace="5" src="ex_elements_01.png" alt=""> <h2>6 node triangle<a name="4"></a></h2><pre class="codeinput">draw_reference_element(<span class="string">'tri6'</span>);
+</pre><img vspace="5" hspace="5" src="ex_elements_02.png" alt=""> <h2>7 node triangle<a name="5"></a></h2><pre class="codeinput">draw_reference_element(<span class="string">'tri7'</span>);
+</pre><img vspace="5" hspace="5" src="ex_elements_03.png" alt=""> <h2>4 node quad<a name="6"></a></h2><pre class="codeinput">draw_reference_element(<span class="string">'quad4'</span>);
+</pre><img vspace="5" hspace="5" src="ex_elements_04.png" alt=""> <h2>8 node quad<a name="7"></a></h2><pre class="codeinput">draw_reference_element(<span class="string">'quad8'</span>);
+</pre><img vspace="5" hspace="5" src="ex_elements_05.png" alt=""> <h2>9 node quad<a name="8"></a></h2><pre class="codeinput">draw_reference_element(<span class="string">'quad9'</span>);
+</pre><img vspace="5" hspace="5" src="ex_elements_06.png" alt=""> <h2>4 node tetra<a name="9"></a></h2><pre class="codeinput">draw_reference_element(<span class="string">'tet4'</span>);
+</pre><img vspace="5" hspace="5" src="ex_elements_07.png" alt=""> <h2>10 node tetra<a name="10"></a></h2><pre class="codeinput">draw_reference_element(<span class="string">'tet10'</span>);
+</pre><img vspace="5" hspace="5" src="ex_elements_08.png" alt=""> <h2>14 node tetra<a name="11"></a></h2><pre class="codeinput">draw_reference_element(<span class="string">'tet14'</span>);
+</pre><img vspace="5" hspace="5" src="ex_elements_09.png" alt=""> <h2>15 node tetra<a name="12"></a></h2><pre class="codeinput">draw_reference_element(<span class="string">'tet15'</span>);
+</pre><img vspace="5" hspace="5" src="ex_elements_10.png" alt=""> <h2>8 node brick<a name="13"></a></h2><pre class="codeinput">draw_reference_element(<span class="string">'brick8'</span>);
+</pre><img vspace="5" hspace="5" src="ex_elements_11.png" alt=""> <h2>20 node brick<a name="14"></a></h2><pre class="codeinput">draw_reference_element(<span class="string">'brick20'</span>);
+</pre><img vspace="5" hspace="5" src="ex_elements_12.png" alt=""> <h2>26 node brick<a name="15"></a></h2><pre class="codeinput">draw_reference_element(<span class="string">'brick26'</span>);
+</pre><img vspace="5" hspace="5" src="ex_elements_13.png" alt=""> <h2>27 node brick<a name="16"></a></h2><pre class="codeinput">draw_reference_element(<span class="string">'brick27'</span>);
+</pre><img vspace="5" hspace="5" src="ex_elements_14.png" alt=""> <pre class="codeinput"><span class="keyword">end</span>
+</pre><h2>Definitions of reference elements<a name="18"></a></h2><p>The below function includes definitions of the used elements, i.e., coordinates of nodes in reference elements and node order in element, edge, and face definitions. Notation:</p><pre>* NODES: node coordinates in conventional order
+* EDGES: edge definitions using node ids, in conventional order
+* FACES: face definitions using node ids, in conventional order</pre><pre class="codeinput"><span class="keyword">function</span> draw_reference_element(elemtype, NODES, EDGES)
+
+<span class="keyword">switch</span> elemtype
+    <span class="keyword">case</span> <span class="string">'tri3'</span>
+        NODES = [0 0; 1 0; 0 1]';
+        EDGES = [2 3; 3 1; 1 2 ]';
+
+    <span class="keyword">case</span> <span class="string">'tri6'</span>
+        NODES = [0 0; 1 0; 0 1; 0.5 0.5; 0 0.5; 0.5 0]';
+        EDGES = [2 4 3; 3 5 1; 1 6 2]';
+
+    <span class="keyword">case</span> <span class="string">'tri7'</span>
+        NODES = [0 0; 1 0; 0 1; 0.5 0.5; 0 0.5; 0.5 0]';
+        EDGES = [2 4 3; 3 5 1; 1 6 2]';
+        <span class="comment">% coordinates of central node</span>
+        ncorners = 3;
+        NODES = [NODES [<span class="keyword">...</span>
+            mean(NODES(1, 1:ncorners)); <span class="keyword">...</span>
+            mean(NODES(2, 1:ncorners))]];
+
+    <span class="keyword">case</span> <span class="string">'quad4'</span>
+        NODES = [-1 -1; 1 -1; 1 1; -1 1; ]';
+        EDGES = [1 2; 2 3; 3 4; 4 1]';
+
+    <span class="keyword">case</span> <span class="string">'quad8'</span>
+        NODES = [-1 -1; 1 -1; 1 1; -1 1; 0 -1; 1 0; 0 1; -1 0]';
+        EDGES = [1 5 2; 2 6 3; 3 7 4; 4 8 1]';
+
+    <span class="keyword">case</span> <span class="string">'quad9'</span>
+        NODES = [-1 -1; 1 -1; 1 1; -1 1; 0 -1; 1 0; 0 1; -1 0]';
+        EDGES = [1 5 2; 2 6 3; 3 7 4; 4 8 1]';
+        <span class="comment">% coordinates of central node</span>
+        ncorners = 4;
+        NODES = [NODES [<span class="keyword">...</span>
+            mean(NODES(1, 1:ncorners)); <span class="keyword">...</span>
+            mean(NODES(2, 1:ncorners))]];
+
+    <span class="keyword">case</span> <span class="string">'tet4'</span>
+        NODES = [0 0 0; 1 0 0; 0 1 0; 0 0 1]';
+        EDGES = [1 2; 2 3; 3 1; 1 4; 2 4; 3 4]';
+        FACES = [2 3 4; 1 4 3; 1 2 4; 1 3 2]';
+
+    <span class="keyword">case</span> <span class="string">'tet10'</span>
+        NODES = [0 0 0; 1 0 0; 0 1 0; 0 0 1; 0.5 0 0; 0.5 0.5 0; 0 0.5 0; 0 0 0.5; 0.5 0 0.5; 0 0.5 0.5]';
+        EDGES = [1 5 2; 2 6 3; 3 7 1; 1 8 4; 2 9 4; 3 10 4]';
+        FACES = [
+            1     1     2     1
+            3     2     3     4
+            2     4     4     3
+            7     5     6     8
+            6     9    10    10
+            5     8     9     7];
+
+    <span class="keyword">case</span> <span class="string">'tet14'</span>
+        NODES = [0 0 0; 1 0 0; 0 1 0; 0 0 1; 0.5 0 0; 0.5 0.5 0; 0 0.5 0; 0 0 0.5; 0.5 0 0.5; 0 0.5 0.5;]';
+        EDGES = [1 5 2; 2 6 3; 3 7 1; 1 8 4; 2 9 4; 3 10 4]';
+        FACES = [
+            1     1     2     1
+            3     2     3     4
+            2     4     4     3
+            7     5     6     8
+            6     9    10    10
+            5     8     9     7
+            11    12    13    14];
+
+
+        <span class="comment">% coordinates of midface nodes</span>
+        NODES = [NODES [<span class="keyword">...</span>
+            mean(reshape(NODES(1, FACES(1:3,:)), 3, 4)); <span class="keyword">...</span>
+            mean(reshape(NODES(2, FACES(1:3,:)), 3, 4));<span class="keyword">...</span>
+            mean(reshape(NODES(3, FACES(1:3,:)), 3, 4))]];
+
+    <span class="keyword">case</span> <span class="string">'tet15'</span>
+        NODES = [0 0 0; 1 0 0; 0 1 0; 0 0 1; 0.5 0 0; 0.5 0.5 0; 0 0.5 0; 0 0 0.5; 0.5 0 0.5; 0 0.5 0.5;]';
+        EDGES = [1 5 2; 2 6 3; 3 7 1; 1 8 4; 2 9 4; 3 10 4]';
+        FACES = [
+            1     1     2     1
+            3     2     3     4
+            2     4     4     3
+            7     5     6     8
+            6     9    10    10
+            5     8     9     7
+            11    12    13    14];
+
+        <span class="comment">% coordinates of midface nodes</span>
+        NODES = [NODES [<span class="keyword">...</span>
+            mean(reshape(NODES(1, FACES(1:3,:)), 3, 4)); <span class="keyword">...</span>
+            mean(reshape(NODES(2, FACES(1:3,:)), 3, 4));<span class="keyword">...</span>
+            mean(reshape(NODES(3, FACES(1:3,:)), 3, 4))]];
+        <span class="comment">% coordinates of central node</span>
+        ncorners = 4;
+        NODES = [NODES [<span class="keyword">...</span>
+            mean(NODES(1, 1:ncorners)); <span class="keyword">...</span>
+            mean(NODES(2, 1:ncorners));<span class="keyword">...</span>
+            mean(NODES(3, 1:ncorners))]];
+
+    <span class="keyword">case</span> <span class="string">'brick8'</span>
+        NODES = [-1 -1 -1; 1 -1 -1; 1 1 -1; -1 1 -1; -1 -1 1; 1 -1 1; 1 1 1; -1 1 1]';
+        EDGES = [1 2; 2 3; 3 4; 4 1; 5 6; 6 7; 7 8; 8 5; 1 5; 2 6; 3 7; 4 8]';
+        FACES = [1 2 3 4; 5 6 7 8; 1 2 6 5; 3 4 8 7; 1 4 8 5; 2 3 7 6]';
+
+    <span class="keyword">case</span> <span class="string">'brick20'</span>
+        NODES = [-1 -1 -1; 1 -1 -1; 1 1 -1; -1 1 -1; -1 -1 1; 1 -1 1; 1 1 1; -1 1 1;<span class="keyword">...</span>
+            0 -1 -1; 1 0 -1; 0 1 -1; -1 0 -1; 0 -1 1; 1 0 1; 0 1 1; -1 0 1; <span class="keyword">...</span>
+            -1 -1 0; 1 -1 0; 1 1 0; -1 1 0]';
+        EDGES = [1 9 2; 2 10 3; 3 11 4; 4 12 1; 5 13 6; 6 14 7; 7 15 8; 8 16 5; 1 17 5; 2 18 6; 3 19 7; 4 20 8]';
+        FACES = [<span class="keyword">...</span>
+            1     5     1     3     1     2
+            2     6     2     4     4     3
+            3     7     6     8     8     7
+            4     8     5     7     5     6
+            9    13     9    11    12    10
+            10    14    18    20    20    19
+            11    15    13    15    16    14
+            12    16    17    19    17    18];
+
+    <span class="keyword">case</span> <span class="string">'brick26'</span>
+        NODES = [-1 -1 -1; 1 -1 -1; 1 1 -1; -1 1 -1; -1 -1 1; 1 -1 1; 1 1 1; -1 1 1;<span class="keyword">...</span>
+            0 -1 -1; 1 0 -1; 0 1 -1; -1 0 -1; 0 -1 1; 1 0 1; 0 1 1; -1 0 1; <span class="keyword">...</span>
+            -1 -1 0; 1 -1 0; 1 1 0; -1 1 0]';
+        EDGES = [1 9 2; 2 10 3; 3 11 4; 4 12 1; 5 13 6; 6 14 7; 7 15 8; 8 16 5; 1 17 5; 2 18 6; 3 19 7; 4 20 8]';
+        FACES = [<span class="keyword">...</span>
+            1     5     1     3     1     2
+            2     6     2     4     4     3
+            3     7     6     8     8     7
+            4     8     5     7     5     6
+            9    13     9    11    12    10
+            10    14    18    20    20    19
+            11    15    13    15    16    14
+            12    16    17    19    17    18
+            21    22    23    24    25    26];
+        <span class="comment">% coordinates of midface nodes</span>
+        NODES = [NODES [<span class="keyword">...</span>
+            mean(reshape(NODES(1, FACES(1:4,:)), 4, 6)); <span class="keyword">...</span>
+            mean(reshape(NODES(2, FACES(1:4,:)), 4, 6));<span class="keyword">...</span>
+            mean(reshape(NODES(3, FACES(1:4,:)), 4, 6))]];
+
+    <span class="keyword">case</span> <span class="string">'brick27'</span>
+        NODES = [-1 -1 -1; 1 -1 -1; 1 1 -1; -1 1 -1; -1 -1 1; 1 -1 1; 1 1 1; -1 1 1;<span class="keyword">...</span>
+            0 -1 -1; 1 0 -1; 0 1 -1; -1 0 -1; 0 -1 1; 1 0 1; 0 1 1; -1 0 1; <span class="keyword">...</span>
+            -1 -1 0; 1 -1 0; 1 1 0; -1 1 0]';
+        EDGES = [1 9 2; 2 10 3; 3 11 4; 4 12 1; 5 13 6; 6 14 7; 7 15 8; 8 16 5; 1 17 5; 2 18 6; 3 19 7; 4 20 8]';
+        FACES = [<span class="keyword">...</span>
+            1     5     1     3     1     2
+            2     6     2     4     4     3
+            3     7     6     8     8     7
+            4     8     5     7     5     6
+            9    13     9    11    12    10
+            10    14    18    20    20    19
+            11    15    13    15    16    14
+            12    16    17    19    17    18
+            21    22    23    24    25    26];
+        <span class="comment">% coordinates of midface nodes</span>
+        NODES = [NODES [<span class="keyword">...</span>
+            mean(reshape(NODES(1, FACES(1:4,:)), 4, 6)); <span class="keyword">...</span>
+            mean(reshape(NODES(2, FACES(1:4,:)), 4, 6));<span class="keyword">...</span>
+            mean(reshape(NODES(3, FACES(1:4,:)), 4, 6))]];
+        <span class="comment">% coordinates of central node</span>
+        ncorners = 8;
+        NODES = [NODES [<span class="keyword">...</span>
+            mean(NODES(1, 1:ncorners)); <span class="keyword">...</span>
+            mean(NODES(2, 1:ncorners));<span class="keyword">...</span>
+            mean(NODES(3, 1:ncorners))]];
+
+    <span class="keyword">otherwise</span>
+        error([<span class="string">'element '</span> elemtype <span class="string">' is not supported.'</span>])
+<span class="keyword">end</span>
+
+<span class="comment">% plot</span>
+clf;
+<span class="keyword">if</span> size(NODES, 1)==2
+    plot(NODES(1, EDGES), NODES(2, EDGES), <span class="string">'-'</span>);
+    hold <span class="string">on</span>;
+    plot(NODES(1, :)', NODES(2, :)', <span class="string">'o'</span>, <span class="string">'MarkerSize'</span>, 6, <span class="string">'MarkerFaceColor'</span>, <span class="string">'blue'</span>);
+    minx = min(NODES(1,:));
+    maxx = max(NODES(1,:));
+    miny = min(NODES(2,:));
+    maxy = max(NODES(2,:));
+    axis <span class="string">square</span>; axis([minx-0.1 maxx+0.1 miny-0.1 maxy+0.1]);
+    <span class="keyword">for</span> i=1:size(NODES, 2)
+        text(NODES(1, i)+0.02, NODES(2, i)+0.07, num2str(i), <span class="string">'FontSize'</span>, 14);
+    <span class="keyword">end</span>
+<span class="keyword">else</span>
+    hold <span class="string">on</span>;
+    <span class="keyword">for</span> e=1:size(EDGES, 2)
+        plot3(NODES(1, EDGES(:,e)), NODES(2, EDGES(:,e)), NODES(3, EDGES(:,e)), <span class="string">'-'</span>);
+    <span class="keyword">end</span>
+    plot3(NODES(1, :), NODES(2, :), NODES(3, :), <span class="string">'o'</span>, <span class="string">'MarkerSize'</span>, 6, <span class="string">'MarkerFaceColor'</span>, <span class="string">'blue'</span>);
+    minx = min(NODES(1,:));
+    maxx = max(NODES(1,:));
+    miny = min(NODES(2,:));
+    maxy = max(NODES(2,:));
+    minz = min(NODES(3,:));
+    maxz = max(NODES(3,:));
+    axis <span class="string">square</span>; axis([minx-0.1 maxx+0.1 miny-0.1 maxy+0.1 minz-0.1 maxz+0.1 ]);
+    <span class="keyword">for</span> i=1:size(NODES, 2)
+        text(NODES(1, i)+0.01, NODES(2, i)+0.05, NODES(3, i)+0.04, num2str(i), <span class="string">'FontSize'</span>, 14);
+    <span class="keyword">end</span>
+    view(125, 15);
+<span class="keyword">end</span>
+
+title(elemtype, <span class="string">'FontSize'</span>, 14);
+<span class="keyword">end</span>
+</pre><p class="footer"><br>
+      Published with MATLAB&reg; 7.13<br></p></div><!--
+##### SOURCE BEGIN #####
+function reference_elements
+
+%% 3 node triangle
+draw_reference_element('tri3');
+
+
+%% 6 node triangle
+draw_reference_element('tri6');
+
+
+%% 7 node triangle
+draw_reference_element('tri7');
+
+%% 4 node quad
+draw_reference_element('quad4');
+
+%% 8 node quad
+draw_reference_element('quad8');
+
+%% 9 node quad
+draw_reference_element('quad9');
+
+%% 4 node tetra
+draw_reference_element('tet4');
+
+%% 10 node tetra
+draw_reference_element('tet10');
+
+%% 14 node tetra
+draw_reference_element('tet14');
+
+%% 15 node tetra
+draw_reference_element('tet15');
+
+%% 8 node brick
+draw_reference_element('brick8');
+
+%% 20 node brick
+draw_reference_element('brick20');
+
+%% 26 node brick
+draw_reference_element('brick26');
+
+%% 27 node brick
+draw_reference_element('brick27');
+
+end
+
+%% Definitions of reference elements
+% The below function includes definitions of the used elements, i.e.,
+% coordinates of nodes in reference elements and node order in element,
+% edge, and face definitions. Notation:
+%
+%  * NODES: node coordinates in conventional order
+%  * EDGES: edge definitions using node ids, in conventional order
+%  * FACES: face definitions using node ids, in conventional order
+%
+
+function draw_reference_element(elemtype, NODES, EDGES)
+
+switch elemtype
+    case 'tri3'
+        NODES = [0 0; 1 0; 0 1]';
+        EDGES = [2 3; 3 1; 1 2 ]';
+        
+    case 'tri6'
+        NODES = [0 0; 1 0; 0 1; 0.5 0.5; 0 0.5; 0.5 0]';
+        EDGES = [2 4 3; 3 5 1; 1 6 2]';
+        
+    case 'tri7'
+        NODES = [0 0; 1 0; 0 1; 0.5 0.5; 0 0.5; 0.5 0]';
+        EDGES = [2 4 3; 3 5 1; 1 6 2]';
+        % coordinates of central node
+        ncorners = 3;
+        NODES = [NODES [...
+            mean(NODES(1, 1:ncorners)); ...
+            mean(NODES(2, 1:ncorners))]];
+        
+    case 'quad4'
+        NODES = [-1 -1; 1 -1; 1 1; -1 1; ]';
+        EDGES = [1 2; 2 3; 3 4; 4 1]';
+        
+    case 'quad8'
+        NODES = [-1 -1; 1 -1; 1 1; -1 1; 0 -1; 1 0; 0 1; -1 0]';
+        EDGES = [1 5 2; 2 6 3; 3 7 4; 4 8 1]';
+        
+    case 'quad9'
+        NODES = [-1 -1; 1 -1; 1 1; -1 1; 0 -1; 1 0; 0 1; -1 0]';
+        EDGES = [1 5 2; 2 6 3; 3 7 4; 4 8 1]';
+        % coordinates of central node
+        ncorners = 4;
+        NODES = [NODES [...
+            mean(NODES(1, 1:ncorners)); ...
+            mean(NODES(2, 1:ncorners))]];
+        
+    case 'tet4'
+        NODES = [0 0 0; 1 0 0; 0 1 0; 0 0 1]';
+        EDGES = [1 2; 2 3; 3 1; 1 4; 2 4; 3 4]';
+        FACES = [2 3 4; 1 4 3; 1 2 4; 1 3 2]';
+        
+    case 'tet10'
+        NODES = [0 0 0; 1 0 0; 0 1 0; 0 0 1; 0.5 0 0; 0.5 0.5 0; 0 0.5 0; 0 0 0.5; 0.5 0 0.5; 0 0.5 0.5]';
+        EDGES = [1 5 2; 2 6 3; 3 7 1; 1 8 4; 2 9 4; 3 10 4]';
+        FACES = [
+            1     1     2     1
+            3     2     3     4
+            2     4     4     3
+            7     5     6     8
+            6     9    10    10
+            5     8     9     7];
+        
+    case 'tet14'
+        NODES = [0 0 0; 1 0 0; 0 1 0; 0 0 1; 0.5 0 0; 0.5 0.5 0; 0 0.5 0; 0 0 0.5; 0.5 0 0.5; 0 0.5 0.5;]';
+        EDGES = [1 5 2; 2 6 3; 3 7 1; 1 8 4; 2 9 4; 3 10 4]';
+        FACES = [
+            1     1     2     1
+            3     2     3     4
+            2     4     4     3
+            7     5     6     8
+            6     9    10    10
+            5     8     9     7
+            11    12    13    14];
+        
+        
+        % coordinates of midface nodes
+        NODES = [NODES [...
+            mean(reshape(NODES(1, FACES(1:3,:)), 3, 4)); ...
+            mean(reshape(NODES(2, FACES(1:3,:)), 3, 4));...
+            mean(reshape(NODES(3, FACES(1:3,:)), 3, 4))]];
+        
+    case 'tet15'
+        NODES = [0 0 0; 1 0 0; 0 1 0; 0 0 1; 0.5 0 0; 0.5 0.5 0; 0 0.5 0; 0 0 0.5; 0.5 0 0.5; 0 0.5 0.5;]';
+        EDGES = [1 5 2; 2 6 3; 3 7 1; 1 8 4; 2 9 4; 3 10 4]';
+        FACES = [
+            1     1     2     1
+            3     2     3     4
+            2     4     4     3
+            7     5     6     8
+            6     9    10    10
+            5     8     9     7
+            11    12    13    14];
+        
+        % coordinates of midface nodes
+        NODES = [NODES [...
+            mean(reshape(NODES(1, FACES(1:3,:)), 3, 4)); ...
+            mean(reshape(NODES(2, FACES(1:3,:)), 3, 4));...
+            mean(reshape(NODES(3, FACES(1:3,:)), 3, 4))]];
+        % coordinates of central node
+        ncorners = 4;
+        NODES = [NODES [...
+            mean(NODES(1, 1:ncorners)); ...
+            mean(NODES(2, 1:ncorners));...
+            mean(NODES(3, 1:ncorners))]];
+        
+    case 'brick8'
+        NODES = [-1 -1 -1; 1 -1 -1; 1 1 -1; -1 1 -1; -1 -1 1; 1 -1 1; 1 1 1; -1 1 1]';
+        EDGES = [1 2; 2 3; 3 4; 4 1; 5 6; 6 7; 7 8; 8 5; 1 5; 2 6; 3 7; 4 8]';
+        FACES = [1 2 3 4; 5 6 7 8; 1 2 6 5; 3 4 8 7; 1 4 8 5; 2 3 7 6]';
+
+    case 'brick20'
+        NODES = [-1 -1 -1; 1 -1 -1; 1 1 -1; -1 1 -1; -1 -1 1; 1 -1 1; 1 1 1; -1 1 1;...
+            0 -1 -1; 1 0 -1; 0 1 -1; -1 0 -1; 0 -1 1; 1 0 1; 0 1 1; -1 0 1; ...
+            -1 -1 0; 1 -1 0; 1 1 0; -1 1 0]';
+        EDGES = [1 9 2; 2 10 3; 3 11 4; 4 12 1; 5 13 6; 6 14 7; 7 15 8; 8 16 5; 1 17 5; 2 18 6; 3 19 7; 4 20 8]';
+        FACES = [...
+            1     5     1     3     1     2
+            2     6     2     4     4     3
+            3     7     6     8     8     7
+            4     8     5     7     5     6
+            9    13     9    11    12    10
+            10    14    18    20    20    19
+            11    15    13    15    16    14
+            12    16    17    19    17    18];
+        
+    case 'brick26'
+        NODES = [-1 -1 -1; 1 -1 -1; 1 1 -1; -1 1 -1; -1 -1 1; 1 -1 1; 1 1 1; -1 1 1;...
+            0 -1 -1; 1 0 -1; 0 1 -1; -1 0 -1; 0 -1 1; 1 0 1; 0 1 1; -1 0 1; ...
+            -1 -1 0; 1 -1 0; 1 1 0; -1 1 0]';
+        EDGES = [1 9 2; 2 10 3; 3 11 4; 4 12 1; 5 13 6; 6 14 7; 7 15 8; 8 16 5; 1 17 5; 2 18 6; 3 19 7; 4 20 8]';
+        FACES = [...
+            1     5     1     3     1     2
+            2     6     2     4     4     3
+            3     7     6     8     8     7
+            4     8     5     7     5     6
+            9    13     9    11    12    10
+            10    14    18    20    20    19
+            11    15    13    15    16    14
+            12    16    17    19    17    18
+            21    22    23    24    25    26];
+        % coordinates of midface nodes
+        NODES = [NODES [...
+            mean(reshape(NODES(1, FACES(1:4,:)), 4, 6)); ...
+            mean(reshape(NODES(2, FACES(1:4,:)), 4, 6));...
+            mean(reshape(NODES(3, FACES(1:4,:)), 4, 6))]];
+
+    case 'brick27'
+        NODES = [-1 -1 -1; 1 -1 -1; 1 1 -1; -1 1 -1; -1 -1 1; 1 -1 1; 1 1 1; -1 1 1;...
+            0 -1 -1; 1 0 -1; 0 1 -1; -1 0 -1; 0 -1 1; 1 0 1; 0 1 1; -1 0 1; ...
+            -1 -1 0; 1 -1 0; 1 1 0; -1 1 0]';
+        EDGES = [1 9 2; 2 10 3; 3 11 4; 4 12 1; 5 13 6; 6 14 7; 7 15 8; 8 16 5; 1 17 5; 2 18 6; 3 19 7; 4 20 8]';
+        FACES = [...
+            1     5     1     3     1     2
+            2     6     2     4     4     3
+            3     7     6     8     8     7
+            4     8     5     7     5     6
+            9    13     9    11    12    10
+            10    14    18    20    20    19
+            11    15    13    15    16    14
+            12    16    17    19    17    18
+            21    22    23    24    25    26];
+        % coordinates of midface nodes
+        NODES = [NODES [...
+            mean(reshape(NODES(1, FACES(1:4,:)), 4, 6)); ...
+            mean(reshape(NODES(2, FACES(1:4,:)), 4, 6));...
+            mean(reshape(NODES(3, FACES(1:4,:)), 4, 6))]];
+        % coordinates of central node
+        ncorners = 8;
+        NODES = [NODES [...
+            mean(NODES(1, 1:ncorners)); ...
+            mean(NODES(2, 1:ncorners));...
+            mean(NODES(3, 1:ncorners))]];
+        
+    otherwise
+        error(['element ' elemtype ' is not supported.'])
+end
+
+% plot
+clf;
+if size(NODES, 1)==2
+    plot(NODES(1, EDGES), NODES(2, EDGES), '-');
+    hold on;
+    plot(NODES(1, :)', NODES(2, :)', 'o', 'MarkerSize', 6, 'MarkerFaceColor', 'blue');
+    minx = min(NODES(1,:));
+    maxx = max(NODES(1,:));
+    miny = min(NODES(2,:));
+    maxy = max(NODES(2,:));
+    axis square; axis([minx-0.1 maxx+0.1 miny-0.1 maxy+0.1]);
+    for i=1:size(NODES, 2)
+        text(NODES(1, i)+0.02, NODES(2, i)+0.07, num2str(i), 'FontSize', 14);
+    end
+else
+    hold on;
+    for e=1:size(EDGES, 2)
+        plot3(NODES(1, EDGES(:,e)), NODES(2, EDGES(:,e)), NODES(3, EDGES(:,e)), '-');
+    end
+    plot3(NODES(1, :), NODES(2, :), NODES(3, :), 'o', 'MarkerSize', 6, 'MarkerFaceColor', 'blue');
+    minx = min(NODES(1,:));
+    maxx = max(NODES(1,:));
+    miny = min(NODES(2,:));
+    maxy = max(NODES(2,:));
+    minz = min(NODES(3,:));
+    maxz = max(NODES(3,:));
+    axis square; axis([minx-0.1 maxx+0.1 miny-0.1 maxy+0.1 minz-0.1 maxz+0.1 ]);
+    for i=1:size(NODES, 2)
+        text(NODES(1, i)+0.01, NODES(2, i)+0.05, NODES(3, i)+0.04, num2str(i), 'FontSize', 14);
+    end
+    view(125, 15);
+end
+
+title(elemtype, 'FontSize', 14);
+end
+
+##### SOURCE END #####
+--></body></html>

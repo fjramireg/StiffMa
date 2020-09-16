@@ -1,0 +1,536 @@
+
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+   <!--
+This HTML was auto-generated from MATLAB code.
+To make changes, update the MATLAB code and republish this document.
+      --><title>ex_sparse</title><meta name="generator" content="MATLAB 7.13"><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/"><meta name="DC.date" content="2013-06-19"><meta name="DC.source" content="ex_sparse.m"><style type="text/css">
+
+body {
+  background-color: white;
+  margin:10px;
+}
+
+h1 {
+  color: #990000; 
+  font-size: x-large;
+}
+
+h2 {
+  color: #990000;
+  font-size: medium;
+}
+
+/* Make the text shrink to fit narrow windows, but not stretch too far in 
+wide windows. */ 
+p,h1,h2,div.content div {
+  max-width: 600px;
+  /* Hack for IE6 */
+  width: auto !important; width: 600px;
+}
+
+pre.codeinput {
+  background: #EEEEEE;
+  padding: 10px;
+}
+@media print {
+  pre.codeinput {word-wrap:break-word; width:100%;}
+} 
+
+span.keyword {color: #0000FF}
+span.comment {color: #228B22}
+span.string {color: #A020F0}
+span.untermstring {color: #B20000}
+span.syscmd {color: #B28C00}
+
+pre.codeoutput {
+  color: #666666;
+  padding: 10px;
+}
+
+pre.error {
+  color: red;
+}
+
+p.footer {
+  text-align: right;
+  font-size: xx-small;
+  font-weight: lighter;
+  font-style: italic;
+  color: gray;
+}
+
+  </style></head><body><div class="content"><h2>Contents</h2><div><ul><li><a href="#1">Create sparse matrices for FEM models</a></li><li><a href="#3">Generate unstructured triangular mesh</a></li><li><a href="#4">Create symbolic sparse matrix using <tt>sparse_create</tt></a></li><li><a href="#5">Assemble sparse matrix from element matrices</a></li><li><a href="#9">Parallel assembly of sparse matrices</a></li><li><a href="#12">Native MATLAB <tt>sparse</tt> function</a></li><li><a href="#15"><tt>sparse2</tt> function from SuiteSparse</a></li><li><a href="#20">Auxiliary functions</a></li></ul></div><h2>Create sparse matrices for FEM models<a name="1"></a></h2><p>ex_sparse shows how to use sparse_create to</p><div><ul><li>create a symbolic sparse matrix, i.e., mesh connectivity graph</li><li>assemble general and symmetric sparse matrices from mesh information and element matrices</li><li>use parallel capabilities of sparse_create</li></ul></div><p>Brief performance comparison between sparse_create, sparse, and sparse2 are shown</p><pre class="codeinput"><span class="keyword">function</span> ex_sparse
+</pre><h2>Generate unstructured triangular mesh<a name="3"></a></h2><pre class="codeinput"><span class="comment">% Set triangle options</span>
+opts = [];
+opts.max_tri_area  = 0.00002;
+opts.element_type  = <span class="string">'tri3'</span>;
+opts.gen_edges     = 0;
+
+<span class="comment">% Setup domain - rectangular box</span>
+tristr.points   = [-2 2 2 -2; -1 -1 1 1];
+tristr.segments = uint32([1 2 3 4; 2 3 4 1]);
+
+<span class="comment">% Generate the mesh using triangle</span>
+MESH = mtriangle(opts, tristr);
+</pre><h2>Create symbolic sparse matrix using <tt>sparse_create</tt><a name="4"></a></h2><p>Symbolic sparse matrix has a non-zero entry for every pair of neighboring nodes <tt>(i, j)</tt>. It is a logical matrix, in which all non-zero entries are equal 1. It is useful e.g., for reordering purposes.</p><pre class="codeinput"><span class="comment">% create general 'symbolic' non-zero connectivity matrix</span>
+<span class="comment">% with 1 degree of freedom per node</span>
+t = tic;
+Ag = sparse_create(MESH.ELEMS);
+disp([<span class="string">'general symbolic sparse matrix (1 dof per node):   '</span> num2str(toc(t))]);
+
+<span class="comment">% Verify that Ag is a symmetric sparse matrix</span>
+<span class="keyword">if</span> nnz(Ag-Ag')
+    error(<span class="string">'Symbolic general matrix created by sparse_create is not symmetric'</span>);
+<span class="keyword">end</span>
+
+<span class="comment">% create symmetric lower-triangular connectivity matrix</span>
+opts.symmetric  = 1;
+t = tic;
+As = sparse_create(MESH.ELEMS, 1, opts);
+disp([<span class="string">'symmetric symbolic sparse matrix (1 dof per node): '</span> num2str(toc(t))]);
+
+<span class="comment">% lower-triangular part of Ag should be the same as As</span>
+<span class="keyword">if</span> nnz(As-tril(Ag))
+    error(<span class="string">'symmetric and general matrices created by sparse_create differ.'</span>);
+<span class="keyword">end</span>
+</pre><pre class="codeoutput">general symbolic sparse matrix (1 dof per node):   0.12612
+symmetric symbolic sparse matrix (1 dof per node): 0.085383
+</pre><h2>Assemble sparse matrix from element matrices<a name="5"></a></h2><p><tt>sparse_create</tt> can be used to assemble FEM matrices given the element list and individual element matrices. This can be done both for symmetric and general matrix storage.</p><pre class="codeinput">nnod     = size(MESH.NODES, 2)  <span class="comment">% number of nodes</span>
+nel      = size(MESH.ELEMS, 2)  <span class="comment">% number of elements</span>
+ndof     = 3;                   <span class="comment">% number of degrees of freedom per node</span>
+nnodel   = size(MESH.ELEMS, 1); <span class="comment">% number of nodes per element</span>
+nelemdof = nnodel*ndof;
+
+<span class="comment">% generate synthetic symmetric element matrix</span>
+<span class="comment">% the same element matrix is used for all elements</span>
+Aelem = rand(nelemdof,nelemdof);
+Aelem = Aelem+Aelem';
+Aelem = repmat(Aelem(:), 1, nel);
+</pre><pre class="codeoutput">
+nnod =
+
+      311927
+
+
+nel =
+
+      622343
+
+</pre><pre class="codeinput"><span class="comment">% assemble general sparse matrix</span>
+opts.symmetric = 0;
+opts.n_node_dof = ndof;
+t = tic;
+Ag = sparse_create(MESH.ELEMS, Aelem, opts);
+disp([<span class="string">'assemble   general sparse matrix (3 dof per node): '</span> num2str(toc(t))]);
+
+<span class="comment">% extract the lower-triangular part from the element matrices</span>
+loidx   = find(tril(true(nnodel*ndof)));
+Aelem_s = Aelem(loidx,:);
+
+<span class="comment">% assemble symmetric sparse matrix</span>
+opts.symmetric = 1;
+t = tic;
+As = sparse_create(MESH.ELEMS, Aelem_s, opts);
+disp([<span class="string">'assemble symmetric sparse matrix (3 dof per node): '</span> num2str(toc(t))]);
+</pre><pre class="codeoutput">assemble   general sparse matrix (3 dof per node): 1.245
+assemble symmetric sparse matrix (3 dof per node): 0.73505
+</pre><pre class="codeinput">spy(Ag)
+</pre><img vspace="5" hspace="5" src="ex_sparse_01.png" alt=""> <pre class="codeinput">spy(As)
+
+<span class="keyword">if</span> nnz(As-tril(Ag))
+    error(<span class="string">'symmetric and general matrices created by sparse_create differ.'</span>);
+<span class="keyword">end</span>
+</pre><img vspace="5" hspace="5" src="ex_sparse_02.png" alt=""> <h2>Parallel assembly of sparse matrices<a name="9"></a></h2><p>For best scalability on even a moderate number of cpus the nodes need to be initially reordered using geometric renumbering. Unlike other reorderings, this one only depends on node coordinates, and not on node connectivities. Hence, it can be used to improve the performance of <tt>sparse_create</tt> without the need to first create the symbolic sparse matrix. Note that this ordering also improves the performance in the sequential case due to a better cache reuse.</p><pre class="codeinput"><span class="comment">% compute geometric renumbering and reorder the mesh nodes and elements</span>
+[perm,iperm] = geom_order(MESH.NODES);
+MESHp = permute_nodes(MESH, perm, iperm);
+MESHp = permute_elems(MESHp);
+</pre><pre class="codeinput"><span class="comment">% Create a symmetric sparse matrix based on the renumbered mesh</span>
+opts.nthreads = 1;  <span class="comment">% sequential execution</span>
+t = tic;
+As = sparse_create(MESHp.ELEMS, Aelem_s, opts);
+disp([<span class="string">'1 CPU,  assemble renumbered symmetric sparse matrix (3 dof per node): '</span> num2str(toc(t))]);
+
+<span class="comment">% Parallel assembly of symmetric sparse matrix is executed by setting the</span>
+<span class="comment">% desired number of threads in opts structure.</span>
+opts.nthreads = 2;  <span class="comment">% parallel execution</span>
+t = tic;
+As_par = sparse_create(MESHp.ELEMS, Aelem_s, opts);
+disp([<span class="string">'2 CPUs, assemble renumbered symmetric sparse matrix (3 dof per node): '</span> num2str(toc(t))]);
+
+<span class="comment">% compare the results to the sequential version.</span>
+<span class="keyword">if</span> max(max(abs(As_par-As)))&gt;1e-14
+    error(<span class="string">'sequential and parallel sparse_create gave signifficantly different results.'</span>);
+<span class="keyword">end</span>
+</pre><pre class="codeoutput">1 CPU,  assemble renumbered symmetric sparse matrix (3 dof per node): 0.50602
+2 CPUs, assemble renumbered symmetric sparse matrix (3 dof per node): 0.27791
+</pre><pre class="codeinput"><span class="comment">% Structure of the sparse matrix with nodes renumbered using geometric</span>
+<span class="comment">% reordering</span>
+spy(As_par)
+clear <span class="string">As</span> <span class="string">Aelem_s</span> <span class="string">As_perm</span> <span class="string">As_par</span>;
+</pre><img vspace="5" hspace="5" src="ex_sparse_03.png" alt=""> <h2>Native MATLAB <tt>sparse</tt> function<a name="12"></a></h2><p>To use <tt>sparse</tt> the triplet sparse format has to be prepared. For every element indices of the connectivities between all element degrees of freedom are explicitly enumerated.</p><pre class="codeinput"><span class="comment">% number the element degrees of freedom</span>
+t = tic;
+ELEM_DOF = zeros(nelemdof, nel);
+<span class="keyword">for</span> dof=1:ndof
+    ELEM_DOF(dof:ndof:end,:) = ndof*(MESH.ELEMS-1)+dof;
+<span class="keyword">end</span>
+
+<span class="comment">% create connectivities between element degree of freedom</span>
+[indx_j indx_i] = meshgrid(1:nnodel*ndof);
+A_i = ELEM_DOF(indx_i,:);
+A_j = ELEM_DOF(indx_j,:);
+disp([<span class="string">'triplet indices: '</span> num2str(toc(t))]);
+</pre><pre class="codeoutput">triplet indices: 1.868
+</pre><pre class="codeinput"><span class="comment">% assemble general sparse matrix</span>
+t=tic;
+A = sparse(A_i, A_j, Aelem);
+disp([<span class="string">'assemble general sparse matrix (sparse): '</span> num2str(toc(t))]);
+</pre><pre class="codeoutput">assemble general sparse matrix (sparse): 5.5109
+</pre><pre class="codeinput"><span class="comment">% compare to the results obtained by sparse_create</span>
+<span class="keyword">if</span> max(max(abs(A-Ag))) &gt; 1e-14
+    warning(<span class="string">'sparse matrices created by sparse and sparse_create differ too much.'</span>);
+<span class="keyword">end</span>
+clear <span class="string">Ag</span> <span class="string">Ad</span>;
+</pre><h2><tt>sparse2</tt> function from SuiteSparse<a name="15"></a></h2><pre class="codeinput"><span class="keyword">if</span> exist([<span class="string">'sparse2.'</span> mexext]) == 3
+</pre><pre class="codeinput">    <span class="comment">% assemble general sparse matrix</span>
+    t=tic;
+    Ag = sparse2(A_i, A_j, Aelem);
+    disp([<span class="string">'assemble general sparse matrix (sparse2): '</span> num2str(toc(t))]);
+</pre><pre class="codeoutput">assemble general sparse matrix (sparse2): 1.6969
+</pre><pre class="codeinput">    <span class="comment">% compare to the results obtained by sparse</span>
+    <span class="keyword">if</span> max(max(abs(A-Ag))) &gt; 1e-14
+        warning(<span class="string">'sparse matrices created by sparse and sparse2 differ too much.'</span>);
+    <span class="keyword">end</span>
+</pre><pre class="codeinput"><span class="keyword">end</span>
+</pre><pre class="codeinput"><span class="keyword">end</span> <span class="comment">% function ex_sparse</span>
+</pre><h2>Auxiliary functions<a name="20"></a></h2><p>Functions used to renumber mesh nodes and elements.</p><pre class="codeinput"><span class="keyword">function</span> MESH = permute_nodes(MESH, perm, iperm)
+
+<span class="comment">% node list permutation</span>
+<span class="comment">% element definition permutation</span>
+<span class="comment">% reshape needed for 1 element - iperm() returns a row-vector</span>
+MESH.ELEMS = reshape(iperm(MESH.ELEMS), size(MESH.ELEMS));
+
+<span class="keyword">if</span> isfield(MESH, <span class="string">'NODES'</span>)
+    MESH.NODES = MESH.NODES(:,perm);
+<span class="keyword">end</span>
+<span class="keyword">if</span> isfield(MESH, <span class="string">'node_markers'</span>)
+    MESH.node_markers = MESH.node_markers(:,perm);
+<span class="keyword">end</span>
+
+<span class="comment">% edges and facets definition permutation</span>
+<span class="keyword">if</span> isfield(MESH, <span class="string">'EDGES'</span>)
+    MESH.EDGES = iperm(MESH.EDGES);
+<span class="keyword">end</span>
+<span class="keyword">if</span> isfield(MESH, <span class="string">'SEGMENTS'</span>)
+    MESH.SEGMENTS = iperm(MESH.SEGMENTS);
+<span class="keyword">end</span>
+<span class="keyword">if</span> isfield(MESH, <span class="string">'FACETS'</span>)
+    MESH.FACETS = iperm(MESH.FACETS);
+<span class="keyword">end</span>
+<span class="keyword">if</span> isfield(MESH, <span class="string">'FACES'</span>)
+    MESH.FACES = iperm(MESH.FACES);
+<span class="keyword">end</span>
+<span class="keyword">end</span>
+
+
+<span class="keyword">function</span> MESH = permute_elems(MESH)
+
+[~, permel]  = sort(max(MESH.ELEMS));
+permel = uint32(permel);
+
+MESH.ELEMS  = MESH.ELEMS(:,permel);
+
+<span class="keyword">if</span> isfield(MESH, <span class="string">'elem_markers'</span>)
+    MESH.elem_markers = MESH.elem_markers(permel);
+<span class="keyword">end</span>
+
+<span class="keyword">if</span> isfield(MESH, <span class="string">'ELEMS_EDGES'</span>)
+    MESH.ELEMS_EDGES = MESH.ELEMS_EDGES(:, permel);
+<span class="keyword">end</span>
+
+<span class="keyword">if</span> isfield(MESH, <span class="string">'ELEMS_FACES'</span>)
+    MESH.ELEMS_FACES = MESH.ELEMS_FACES(:, permel);
+<span class="keyword">end</span>
+
+<span class="keyword">if</span> isfield(MESH, <span class="string">'NEIGHBORS'</span>)
+    <span class="comment">% first permute the elements</span>
+    MESH.NEIGHBORS = MESH.NEIGHBORS(:, permel);
+
+    <span class="comment">% now the neighbor information for every element</span>
+    noneighbor = (MESH.NEIGHBORS==0);
+    MESH.NEIGHBORS(noneighbor) = 1;
+    ipermel(permel)= uint32(1:length(permel));
+    MESH.NEIGHBORS = ipermel(MESH.NEIGHBORS);
+    MESH.NEIGHBORS(noneighbor) = 0;
+<span class="keyword">end</span>
+<span class="keyword">end</span>
+</pre><p class="footer"><br>
+      Published with MATLAB&reg; 7.13<br></p></div><!--
+##### SOURCE BEGIN #####
+%% Create sparse matrices for FEM models
+% ex_sparse shows how to use sparse_create to
+%
+% * create a symbolic sparse matrix, i.e., mesh connectivity graph
+% * assemble general and symmetric sparse matrices from mesh information
+% and element matrices
+% * use parallel capabilities of sparse_create
+%
+% Brief performance comparison between sparse_create, sparse, and sparse2 
+% are shown
+
+function ex_sparse
+
+%% Generate unstructured triangular mesh
+
+% Set triangle options
+opts = [];
+opts.max_tri_area  = 0.00002;
+opts.element_type  = 'tri3';
+opts.gen_edges     = 0;
+
+% Setup domain - rectangular box
+tristr.points   = [-2 2 2 -2; -1 -1 1 1];
+tristr.segments = uint32([1 2 3 4; 2 3 4 1]);
+
+% Generate the mesh using triangle
+MESH = mtriangle(opts, tristr);
+
+
+%% Create symbolic sparse matrix using |sparse_create|
+% Symbolic sparse matrix has a non-zero entry for every pair of neighboring
+% nodes |(i, j)|. It is a logical matrix, in which all non-zero entries are
+% equal 1. It is useful e.g., for reordering purposes.
+
+% create general 'symbolic' non-zero connectivity matrix 
+% with 1 degree of freedom per node
+t = tic;
+Ag = sparse_create(MESH.ELEMS);
+disp(['general symbolic sparse matrix (1 dof per node):   ' num2str(toc(t))]);
+
+% Verify that Ag is a symmetric sparse matrix
+if nnz(Ag-Ag')
+    error('Symbolic general matrix created by sparse_create is not symmetric');
+end
+
+% create symmetric lower-triangular connectivity matrix
+opts.symmetric  = 1;
+t = tic;
+As = sparse_create(MESH.ELEMS, 1, opts);
+disp(['symmetric symbolic sparse matrix (1 dof per node): ' num2str(toc(t))]);
+
+% lower-triangular part of Ag should be the same as As
+if nnz(As-tril(Ag))
+    error('symmetric and general matrices created by sparse_create differ.');
+end
+
+%% Assemble sparse matrix from element matrices
+% |sparse_create| can be used to assemble FEM matrices given the element
+% list and individual element matrices. This can be done both for symmetric
+% and general matrix storage.
+
+nnod     = size(MESH.NODES, 2)  % number of nodes
+nel      = size(MESH.ELEMS, 2)  % number of elements
+ndof     = 3;                   % number of degrees of freedom per node
+nnodel   = size(MESH.ELEMS, 1); % number of nodes per element
+nelemdof = nnodel*ndof;
+
+% generate synthetic symmetric element matrix
+% the same element matrix is used for all elements
+Aelem = rand(nelemdof,nelemdof);
+Aelem = Aelem+Aelem';
+Aelem = repmat(Aelem(:), 1, nel);
+
+%%
+
+% assemble general sparse matrix
+opts.symmetric = 0;
+opts.n_node_dof = ndof;
+t = tic;
+Ag = sparse_create(MESH.ELEMS, Aelem, opts);   
+disp(['assemble   general sparse matrix (3 dof per node): ' num2str(toc(t))]);
+
+% extract the lower-triangular part from the element matrices
+loidx   = find(tril(true(nnodel*ndof)));
+Aelem_s = Aelem(loidx,:);
+
+% assemble symmetric sparse matrix
+opts.symmetric = 1;
+t = tic;
+As = sparse_create(MESH.ELEMS, Aelem_s, opts);   
+disp(['assemble symmetric sparse matrix (3 dof per node): ' num2str(toc(t))]);
+
+%%
+spy(Ag)
+
+%%
+spy(As)
+
+if nnz(As-tril(Ag))
+    error('symmetric and general matrices created by sparse_create differ.');
+end
+
+
+%% Parallel assembly of sparse matrices
+% For best scalability on even a moderate number of cpus the nodes need to be
+% initially reordered using geometric renumbering. Unlike other reorderings, 
+% this one only depends on node coordinates, and not on node connectivities.
+% Hence, it can be used to improve the performance of |sparse_create|
+% without the need to first create the symbolic sparse matrix.
+% Note that this ordering also improves the performance in the sequential 
+% case due to a better cache reuse.
+
+% compute geometric renumbering and reorder the mesh nodes and elements
+[perm,iperm] = geom_order(MESH.NODES);
+MESHp = permute_nodes(MESH, perm, iperm);
+MESHp = permute_elems(MESHp);
+
+%%
+
+% Create a symmetric sparse matrix based on the renumbered mesh
+opts.nthreads = 1;  % sequential execution
+t = tic;
+As = sparse_create(MESHp.ELEMS, Aelem_s, opts);   
+disp(['1 CPU,  assemble renumbered symmetric sparse matrix (3 dof per node): ' num2str(toc(t))]);
+
+% Parallel assembly of symmetric sparse matrix is executed by setting the
+% desired number of threads in opts structure.
+opts.nthreads = 2;  % parallel execution
+t = tic;
+As_par = sparse_create(MESHp.ELEMS, Aelem_s, opts);   
+disp(['2 CPUs, assemble renumbered symmetric sparse matrix (3 dof per node): ' num2str(toc(t))]);
+
+% compare the results to the sequential version.
+if max(max(abs(As_par-As)))>1e-14
+    error('sequential and parallel sparse_create gave signifficantly different results.');
+end
+
+%%
+
+% Structure of the sparse matrix with nodes renumbered using geometric
+% reordering
+spy(As_par)
+clear As Aelem_s As_perm As_par;
+
+
+%% Native MATLAB |sparse| function
+% To use |sparse| the triplet sparse format has to be prepared. 
+% For every element indices of the connectivities between all element 
+% degrees of freedom are explicitly enumerated.
+
+% number the element degrees of freedom
+t = tic;
+ELEM_DOF = zeros(nelemdof, nel);
+for dof=1:ndof
+    ELEM_DOF(dof:ndof:end,:) = ndof*(MESH.ELEMS-1)+dof;
+end
+
+% create connectivities between element degree of freedom
+[indx_j indx_i] = meshgrid(1:nnodel*ndof);
+A_i = ELEM_DOF(indx_i,:);
+A_j = ELEM_DOF(indx_j,:);
+disp(['triplet indices: ' num2str(toc(t))]);
+
+%%
+
+% assemble general sparse matrix
+t=tic;
+A = sparse(A_i, A_j, Aelem);
+disp(['assemble general sparse matrix (sparse): ' num2str(toc(t))]);
+
+%%
+
+% compare to the results obtained by sparse_create
+if max(max(abs(A-Ag))) > 1e-14
+    warning('sparse matrices created by sparse and sparse_create differ too much.');
+end
+clear Ag Ad;
+
+%% |sparse2| function from SuiteSparse
+
+if exist(['sparse2.' mexext]) == 3
+    
+    % assemble general sparse matrix
+    t=tic;
+    Ag = sparse2(A_i, A_j, Aelem);
+    disp(['assemble general sparse matrix (sparse2): ' num2str(toc(t))]);
+    
+    %%
+    
+    % compare to the results obtained by sparse
+    if max(max(abs(A-Ag))) > 1e-14
+        warning('sparse matrices created by sparse and sparse2 differ too much.');
+    end
+end
+
+end % function ex_sparse
+
+
+%% Auxiliary functions
+% Functions used to renumber mesh nodes and elements.
+
+function MESH = permute_nodes(MESH, perm, iperm)
+
+% node list permutation
+% element definition permutation
+% reshape needed for 1 element - iperm() returns a row-vector
+MESH.ELEMS = reshape(iperm(MESH.ELEMS), size(MESH.ELEMS));
+
+if isfield(MESH, 'NODES')
+    MESH.NODES = MESH.NODES(:,perm);
+end
+if isfield(MESH, 'node_markers')
+    MESH.node_markers = MESH.node_markers(:,perm);
+end
+
+% edges and facets definition permutation
+if isfield(MESH, 'EDGES')
+    MESH.EDGES = iperm(MESH.EDGES);
+end
+if isfield(MESH, 'SEGMENTS')
+    MESH.SEGMENTS = iperm(MESH.SEGMENTS);
+end
+if isfield(MESH, 'FACETS')
+    MESH.FACETS = iperm(MESH.FACETS);
+end
+if isfield(MESH, 'FACES')
+    MESH.FACES = iperm(MESH.FACES);
+end
+end
+
+
+function MESH = permute_elems(MESH)
+
+[~, permel]  = sort(max(MESH.ELEMS));
+permel = uint32(permel);
+
+MESH.ELEMS  = MESH.ELEMS(:,permel);
+
+if isfield(MESH, 'elem_markers')
+    MESH.elem_markers = MESH.elem_markers(permel);
+end
+
+if isfield(MESH, 'ELEMS_EDGES')
+    MESH.ELEMS_EDGES = MESH.ELEMS_EDGES(:, permel);
+end
+
+if isfield(MESH, 'ELEMS_FACES')
+    MESH.ELEMS_FACES = MESH.ELEMS_FACES(:, permel);
+end
+
+if isfield(MESH, 'NEIGHBORS')
+    % first permute the elements
+    MESH.NEIGHBORS = MESH.NEIGHBORS(:, permel);
+    
+    % now the neighbor information for every element
+    noneighbor = (MESH.NEIGHBORS==0);
+    MESH.NEIGHBORS(noneighbor) = 1;
+    ipermel(permel)= uint32(1:length(permel));
+    MESH.NEIGHBORS = ipermel(MESH.NEIGHBORS);
+    MESH.NEIGHBORS(noneighbor) = 0;
+end
+end
+
+##### SOURCE END #####
+--></body></html>

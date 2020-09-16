@@ -1,0 +1,24 @@
+LIB=-lm
+
+CC=icc
+
+PETSC_DIR=/home/bc2/martyk/petsc-2.3.2-p6/
+
+#FLAGS= -D_GNU_SOURCE -O3 -ffast-math -msse2 -Imlib -Ircm -I/usr/include
+FLAGS= -D_GNU_SOURCE -xW -funroll-loops -O3 -Imlib -Ircm -I/usr/include
+
+LDFLAGS=-Lmlib -lmlib -lpthread -lm
+LDOMP=-lpthread
+
+SRC = main.c sp_matv.c utils.c matrix_import.c distribute.c comm.c
+OBJ = main.o sp_matv.o utils.o matrix_import.o distribute.o comm.o
+
+.c.o:
+	$(CC) $(INC) $(FLAGS) $(OPTFLAGS) -c $<
+
+all: $(OBJ)
+	$(CC) $(OBJ) -o main $(LDFLAGS)
+
+clean:
+	rm $(OBJ) $(PROGRAM) *o
+	cd mlib && make clean

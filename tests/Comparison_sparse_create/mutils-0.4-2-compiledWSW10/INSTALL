@@ -1,0 +1,141 @@
+1. General installation instructions
+2. Installation on MacOS
+3. Parallel sparse_create
+
+
+---------------------
+1. General installation instructions
+---------------------
+mutils come with pre-compiled MEX functions for 64-bit Mac, Windows,
+and Linux. To make the MEX functions accessible in MATLAB, uncompress
+the ZIP package, in the MATLAB command window change the directory to
+the top mutils directory and type 'install'.
+
+The provided MEX files may not run on every system because of library
+and/or hardware incompatibilities. In that case you will need to
+re-compile mutils. Moreover, the compiled binaries use SSE2
+optimizations. If your CPU supports AVX instructions you might want to
+modify the compiler options in mutils_config.m file to get some speed
+advantage.
+
+Compilation of mutils requires MATLAB and a working C compiler that
+works with the MEX environment. To install mutils, uncompress the ZIP
+package, in the MATLAB command window change the directory to the top
+mutils directory and type 'clean' followed by 'install'.
+
+To prepare MATLAB MEX environment, start MATLAB and at the command
+line type
+
+  >> mex -setup
+
+From the list choose the relevant compiler configuration.
+
+The tools have been verified to compile with gcc on Linux and MacOS,
+and Visual Studio compiler on Windows. Support for other compilers
+will come if requested. 
+
+The compiler options can be changed in mutils/mutils_config.m
+
+
+---------------------
+2. Installation on MacOS
+---------------------
+mutils require a working gcc compiler for MacOS. This means you have
+to install Xcode (4+), but in addition you will need the gcc compiler.
+Due to a bug in Xcode, mutils do not compile with OpenMP support
+with the standard Xcode compilers 
+(see http://stackoverflow.com/questions/12932107/compilation-fails-with-openmp-on-mac-os-x-lion-memcpy-and-sse-intrinsics).
+
+Step-by-step MATLAB mex configuration with Xcode
+
+ - download and install the newest version of Xcode from 
+   https://developer.apple.com/xcode/
+ - install it in the /Applications folder
+ - run Xcode for the first time, accept terms and conditions
+ - from MATLAB command line run
+
+  >> mex -setup
+
+    Options files control which compiler to use, the compiler and link command
+    options, and the runtime libraries to link against.
+
+    Using the 'mex -setup' command selects an options file that is
+    placed in /Users/User/.matlab/R2012b and used by default for 'mex'. An options 
+    file in the current working directory or specified on the command line 
+    overrides the default options file in /Users/User/.matlab/R2012b.
+ 
+    To override the default options file, use the 'mex -f' command
+    (see 'mex -help' for more information).
+
+The options files available for mex are:
+
+  1: /Applications/MATLAB_R2012b.app/bin/mexopts.sh : 
+      Template Options file for building gcc MEX-files
+ 
+
+  0: Exit with no changes
+
+Enter the number of the compiler (0-1):
+
+ - choose 1
+
+/Applications/MATLAB_R2012b.app/bin/mexopts.sh is being copied to 
+/Users/User/.matlab/R2012b/mexopts.sh
+
+ - edit the mexopts.sh file in MATLAB (use the correct path MATLAB displays)
+
+>> edit /Users/User/.matlab/R2012b/mexopts.sh
+
+ - go to the maci64) section at the end of the file
+ - change 
+
+     CC='gcc-4.2' to 
+     CC='/Applications/Xcode.app/Contents/Developer/usr/bin/gcc'
+
+     CXX=g++-4.2 to 
+     CXX='/Applications/Xcode.app/Contents/Developer/usr/bin/g++'
+     
+     SDKROOT='/Developer/SDKs/MacOSX10.6.sdk' to 
+     SDKROOT='/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.7.sdk/'
+     or other, correct value for your system (e.g., MacOSX10.8)
+
+     MACOSX_DEPLOYMENT_TARGET='10.5' to correct value for your system
+
+ - save the file. 
+ - done.
+
+You should be able to compile mutils with these settings, however -
+with no OpenMP support. To disable OpenMP support, edit
+mutils_config.m, go to the if strcmp(cc, 'gcc') section and comment
+out two last lines, which enable OpenMP.
+
+If you want OpenMP support on Mac, either use the provided compiled
+MEX files, or install gcc 4.7 from e.g., macports. After that you need
+to appropriately update lines CC=... and CXX=... in mexopts.sh, 
+as described above.
+
+
+---------------------
+3. Parallel sparse_create
+---------------------
+Parallel sparse_create uses multi-threaded memory
+(re)allocation. Default libc malloc implementations are not
+thread-safe, hence thread synchronization is required. This fact badly
+affects the scalability of the code for even a moderate number of
+CPUs. In order to improve performance and scalability a threaded
+memory allocator is required. mutils use tcmalloc, available in
+gperftools
+
+http://code.google.com/p/gperftools/
+
+To use it, you need to place the static library libtcmalloc.a in
+mutils base directory, the same as mutils_config.m, and recompile the
+code. mutils do not distribute a compiled version of tcmalloc. If you
+can not compile tcmalloc yourself, ask your system administrator. As a
+note, configuring gperftools-2.0 with configure --with-pic
+--enable-frame-pointers produced a working library on 64-bit Ubuntu
+11.10 and 13.04 (with some minor compilation problems, see
+http://grokbase.com/p/cloudera/impala-user/135jn0akg6/invalid-conversion-from-void-int-siginfo-t-void-to-void-int-siginfo-void-fpe),
+and on Red Hat Enterprise Linux Server release 6.4 (Santiago).
+
+The sparse_create binary distributed with mutils is NOT linked with tcmalloc.
