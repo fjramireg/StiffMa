@@ -9,7 +9,7 @@ function ke = eStiff_ss(X,ct,dTN)
 %
 %   Example:
 %         X = [-1,-1,-1; 1,-1,-1; 1,1,-1; -1,1,-1; -1,-1,1; 1,-1,1; 1,1,1; -1,1,1]
-%         ke = Hex8scalars(X,1,'single')
+%         ke = eStiff_ss(X,1,'single')
 %
 %   See also STIFFMA_SS
 %

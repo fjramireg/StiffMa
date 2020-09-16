@@ -1,0 +1,1485 @@
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 10x10x10 (1000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'CPU'
+
+Running Testing_CPUScalar10
+........
+================================================================================
+Testing_CPUScalar10/IndexCPU was filtered.
+    Test Diagnostic: The MeasuredTime should not be too close to the precision of the framework.
+================================================================================
+.. ......
+================================================================================
+Testing_CPUScalar10/LocalKeCPU was filtered.
+    Test Diagnostic: The MeasuredTime should not be too close to the precision of the framework.
+================================================================================
+.... ....
+================================================================================
+Testing_CPUScalar10/AssemblyCPU was filtered.
+    Test Diagnostic: The MeasuredTime should not be too close to the precision of the framework.
+================================================================================
+
+Done Testing_CPUScalar10
+__________
+
+Failure Summary:
+
+     Name                             Failed  Incomplete  Reason(s)
+    ==============================================================================
+     Testing_CPUScalar10/IndexCPU                 X       Filtered by assumption.
+    ------------------------------------------------------------------------------
+     Testing_CPUScalar10/LocalKeCPU               X       Filtered by assumption.
+    ------------------------------------------------------------------------------
+     Testing_CPUScalar10/AssemblyCPU              X       Filtered by assumption.
+  1x3 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   0 Valid, 3 Invalid.
+   0.49457 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 10x10x10 (1000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running Testing_GPUScalar10
+
+ Mesh created successfully!
+	 Number of elements: 1000
+	 Number of nodes   : 1331
+
+.......... .......... ....
+================================================================================
+Testing_GPUScalar10/AssemblyGPU was filtered.
+    Test Diagnostic: The MeasuredTime should not be too close to the precision of the framework.
+================================================================================
+
+Done Testing_GPUScalar10
+__________
+
+Failure Summary:
+
+     Name                             Failed  Incomplete  Reason(s)
+    ==============================================================================
+     Testing_GPUScalar10/AssemblyGPU              X       Filtered by assumption.
+  1x3 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   2 Valid, 1 Invalid.
+   2.2775 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 20x20x20 (8000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'CPU'
+
+Running Testing_CPUScalar20
+.......... .........
+================================================================================
+Testing_CPUScalar20/LocalKeCPU was filtered.
+    Test Diagnostic: The MeasuredTime should not be too close to the precision of the framework.
+================================================================================
+. ........
+Done Testing_CPUScalar20
+__________
+
+Failure Summary:
+
+     Name                            Failed  Incomplete  Reason(s)
+    =============================================================================
+     Testing_CPUScalar20/LocalKeCPU              X       Filtered by assumption.
+  1x3 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   2 Valid, 1 Invalid.
+   0.29267 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 20x20x20 (8000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running Testing_GPUScalar20
+
+ Mesh created successfully!
+	 Number of elements: 8000
+	 Number of nodes   : 9261
+
+.......... .......... ....
+================================================================================
+Testing_GPUScalar20/AssemblyGPU was filtered.
+    Test Diagnostic: The MeasuredTime should not be too close to the precision of the framework.
+================================================================================
+
+Done Testing_GPUScalar20
+__________
+
+Failure Summary:
+
+     Name                             Failed  Incomplete  Reason(s)
+    ==============================================================================
+     Testing_GPUScalar20/AssemblyGPU              X       Filtered by assumption.
+  1x3 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   2 Valid, 1 Invalid.
+   0.94976 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 30x30x30 (27000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'CPU'
+
+Running Testing_CPUScalar30
+.......... ......
+================================================================================
+Testing_CPUScalar30/LocalKeCPU was filtered.
+    Test Diagnostic: The MeasuredTime should not be too close to the precision of the framework.
+================================================================================
+.... .........
+Done Testing_CPUScalar30
+__________
+
+Failure Summary:
+
+     Name                            Failed  Incomplete  Reason(s)
+    =============================================================================
+     Testing_CPUScalar30/LocalKeCPU              X       Filtered by assumption.
+  1x3 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   2 Valid, 1 Invalid.
+   0.45457 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 30x30x30 (27000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running Testing_GPUScalar30
+
+ Mesh created successfully!
+	 Number of elements: 27000
+	 Number of nodes   : 29791
+
+.......... .......... ....
+================================================================================
+Testing_GPUScalar30/AssemblyGPU was filtered.
+    Test Diagnostic: The MeasuredTime should not be too close to the precision of the framework.
+================================================================================
+
+Done Testing_GPUScalar30
+__________
+
+Failure Summary:
+
+     Name                             Failed  Incomplete  Reason(s)
+    ==============================================================================
+     Testing_GPUScalar30/AssemblyGPU              X       Filtered by assumption.
+  1x3 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   2 Valid, 1 Invalid.
+   0.95837 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 40x40x40 (64000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'CPU'
+
+Running Testing_CPUScalar40
+.......... ......
+================================================================================
+Testing_CPUScalar40/LocalKeCPU was filtered.
+    Test Diagnostic: The MeasuredTime should not be too close to the precision of the framework.
+================================================================================
+.... .......... ..........
+Done Testing_CPUScalar40
+__________
+
+Failure Summary:
+
+     Name                            Failed  Incomplete  Reason(s)
+    =============================================================================
+     Testing_CPUScalar40/LocalKeCPU              X       Filtered by assumption.
+  1x3 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   2 Valid, 1 Invalid.
+   1.2866 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 40x40x40 (64000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running Testing_GPUScalar40
+
+ Mesh created successfully!
+	 Number of elements: 64000
+	 Number of nodes   : 68921
+
+.......... .......... .....
+Done Testing_GPUScalar40
+__________
+
+  1x3 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   3 Valid, 0 Invalid.
+   0.98563 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 50x50x50 (125000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'CPU'
+
+Running Testing_CPUScalar50
+.......... .......... ....
+Done Testing_CPUScalar50
+__________
+
+  1x3 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   3 Valid, 0 Invalid.
+   1.5101 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 50x50x50 (125000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running Testing_GPUScalar50
+
+ Mesh created successfully!
+	 Number of elements: 125000
+	 Number of nodes   : 132651
+
+.......... .......... .......... .......... ..........
+.......... .......... .......... .......... ..........
+.......... .......... .......... .......... ..........
+..
+Done Testing_GPUScalar50
+__________
+
+  1x3 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   3 Valid, 0 Invalid.
+   2.4047 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 60x60x60 (216000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'CPU'
+
+Running Testing_CPUScalar60
+.......... .......... ..........
+Done Testing_CPUScalar60
+__________
+
+  1x3 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   3 Valid, 0 Invalid.
+   2.637 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 60x60x60 (216000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running Testing_GPUScalar60
+
+ Mesh created successfully!
+	 Number of elements: 216000
+	 Number of nodes   : 226981
+
+.......... .......... ....
+Done Testing_GPUScalar60
+__________
+
+  1x3 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   3 Valid, 0 Invalid.
+   1.0617 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 70x70x70 (343000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'CPU'
+
+Running Testing_CPUScalar70
+.......... .......... ....
+Done Testing_CPUScalar70
+__________
+
+  1x3 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   3 Valid, 0 Invalid.
+   4.0116 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 70x70x70 (343000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running Testing_GPUScalar70
+
+ Mesh created successfully!
+	 Number of elements: 343000
+	 Number of nodes   : 357911
+
+.......... .......... ....
+Done Testing_GPUScalar70
+__________
+
+  1x3 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   3 Valid, 0 Invalid.
+   0.98851 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 80x80x80 (512000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'CPU'
+
+Running Testing_CPUScalar80
+.......... .......... ....
+Done Testing_CPUScalar80
+__________
+
+  1x3 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   3 Valid, 0 Invalid.
+   6.2627 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 80x80x80 (512000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running Testing_GPUScalar80
+
+ Mesh created successfully!
+	 Number of elements: 512000
+	 Number of nodes   : 531441
+
+.......... .......... .....
+Done Testing_GPUScalar80
+__________
+
+  1x3 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   3 Valid, 0 Invalid.
+   1.1186 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 90x90x90 (729000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'CPU'
+
+Running Testing_CPUScalar90
+.......... .......... ....
+Done Testing_CPUScalar90
+__________
+
+  1x3 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   3 Valid, 0 Invalid.
+   8.856 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 90x90x90 (729000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running Testing_GPUScalar90
+
+ Mesh created successfully!
+	 Number of elements: 729000
+	 Number of nodes   : 753571
+
+.......... .......... .......... .......... ..........
+.......... .......... .......... .......... ..........
+.......... ...
+Done Testing_GPUScalar90
+__________
+
+  1x3 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   3 Valid, 0 Invalid.
+   2.512 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 100x100x100 (1000000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'CPU'
+
+Running Testing_CPUScalar100
+.......... .......... .......... .....
+Done Testing_CPUScalar100
+__________
+
+  1x3 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   3 Valid, 0 Invalid.
+   12.8798 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 100x100x100 (1000000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running Testing_GPUScalar100
+
+ Mesh created successfully!
+	 Number of elements: 1000000
+	 Number of nodes   : 1030301
+
+.......... .......... ....
+Done Testing_GPUScalar100
+__________
+
+  1x3 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   3 Valid, 0 Invalid.
+   1.4243 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 110x110x110 (1331000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'CPU'
+
+Running Testing_CPUScalar110
+.......... .......... .......... ....
+Done Testing_CPUScalar110
+__________
+
+  1x3 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   3 Valid, 0 Invalid.
+   17.2256 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 110x110x110 (1331000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running Testing_GPUScalar110
+
+ Mesh created successfully!
+	 Number of elements: 1331000
+	 Number of nodes   : 1367631
+
+.......... .......... .......... .......... ..........
+.......... .......... .......... .......... ..........
+.......... .......... .......... .......... ....
+Done Testing_GPUScalar110
+__________
+
+  1x3 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   3 Valid, 0 Invalid.
+   3.5993 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 120x120x120 (1728000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'CPU'
+
+Running Testing_CPUScalar120
+.......... .......... ....
+Done Testing_CPUScalar120
+__________
+
+  1x3 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   3 Valid, 0 Invalid.
+   21.1072 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 120x120x120 (1728000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running Testing_GPUScalar120
+
+ Mesh created successfully!
+	 Number of elements: 1728000
+	 Number of nodes   : 1771561
+
+.......... .......... .......... .......... ..........
+.......... .......... .......... .......... ..........
+.......... ..
+Done Testing_GPUScalar120
+__________
+
+  1x3 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   3 Valid, 0 Invalid.
+   3.4659 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 130x130x130 (2197000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'CPU'
+
+Running Testing_CPUScalar130
+.......... .......... ....
+Done Testing_CPUScalar130
+__________
+
+  1x3 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   3 Valid, 0 Invalid.
+   27.1723 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 130x130x130 (2197000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running Testing_GPUScalar130
+
+ Mesh created successfully!
+	 Number of elements: 2197000
+	 Number of nodes   : 2248091
+
+.......... .......... ....
+Done Testing_GPUScalar130
+__________
+
+  1x3 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   3 Valid, 0 Invalid.
+   2.2651 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 140x140x140 (2744000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'CPU'
+
+Running Testing_CPUScalar140
+.......... .......... ....
+Done Testing_CPUScalar140
+__________
+
+  1x3 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   3 Valid, 0 Invalid.
+   33.9543 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 140x140x140 (2744000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running Testing_GPUScalar140
+
+ Mesh created successfully!
+	 Number of elements: 2744000
+	 Number of nodes   : 2803221
+
+.......... .......... .......... ........
+Done Testing_GPUScalar140
+__________
+
+  1x3 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   3 Valid, 0 Invalid.
+   3.6101 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 150x150x150 (3375000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'CPU'
+
+Running Testing_CPUScalar150
+.......... .......... ....
+Done Testing_CPUScalar150
+__________
+
+  1x3 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   3 Valid, 0 Invalid.
+   41.8974 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 150x150x150 (3375000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running Testing_GPUScalar150
+
+ Mesh created successfully!
+	 Number of elements: 3375000
+	 Number of nodes   : 3442951
+
+.......... .......... ....
+Done Testing_GPUScalar150
+__________
+
+  1x3 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   3 Valid, 0 Invalid.
+   3.0046 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 160x160x160 (4096000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'CPU'
+
+Running Testing_CPUScalar160
+.......... .......... ....
+Done Testing_CPUScalar160
+__________
+
+  1x3 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   3 Valid, 0 Invalid.
+   50.7932 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 160x160x160 (4096000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running Testing_GPUScalar160
+
+ Mesh created successfully!
+	 Number of elements: 4096000
+	 Number of nodes   : 4173281
+
+.......... .......... ....
+Done Testing_GPUScalar160
+__________
+
+  1x3 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   3 Valid, 0 Invalid.
+   3.4959 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 170x170x170 (4913000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'CPU'
+
+Running Testing_CPUScalar170
+.......... .......... ....
+Done Testing_CPUScalar170
+__________
+
+  1x3 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   3 Valid, 0 Invalid.
+   61.0071 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 170x170x170 (4913000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running Testing_GPUScalar170
+
+ Mesh created successfully!
+	 Number of elements: 4913000
+	 Number of nodes   : 5000211
+
+.......... .......... ........
+Done Testing_GPUScalar170
+__________
+
+  1x3 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   3 Valid, 0 Invalid.
+   4.6453 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 180x180x180 (5832000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'CPU'
+
+Running Testing_CPUScalar180
+.......... .......... ....
+Done Testing_CPUScalar180
+__________
+
+  1x3 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   3 Valid, 0 Invalid.
+   72.3742 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 180x180x180 (5832000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running Testing_GPUScalar180
+
+ Mesh created successfully!
+	 Number of elements: 5832000
+	 Number of nodes   : 5929741
+
+.......... .......... ....
+Done Testing_GPUScalar180
+__________
+
+  1x3 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   3 Valid, 0 Invalid.
+   5.4245 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 190x190x190 (6859000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'CPU'
+
+Running Testing_CPUScalar190
+.......... .......... ....
+Done Testing_CPUScalar190
+__________
+
+  1x3 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   3 Valid, 0 Invalid.
+   85.8208 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 190x190x190 (6859000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running Testing_GPUScalar190
+
+ Mesh created successfully!
+	 Number of elements: 6859000
+	 Number of nodes   : 6967871
+
+.......... .......... ....
+Done Testing_GPUScalar190
+__________
+
+  1x3 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   3 Valid, 0 Invalid.
+   6.3617 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 200x200x200 (8000000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'CPU'
+
+Running Testing_CPUScalar200
+.......... .......... ....
+Done Testing_CPUScalar200
+__________
+
+  1x3 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   3 Valid, 0 Invalid.
+   98.7769 seconds testing time.
+
+
+
+Starting the performance measurement with the following parameters:
+Number of finine elements: 200x200x200 (8000000)
+Date type for 'elements': 'uint32'
+Date type for 'nodes': 'double'
+Problem type: 'Scalar'
+Processor type: 'GPU'
+
+Running Testing_GPUScalar200
+
+ Mesh created successfully!
+	 Number of elements: 8000000
+	 Number of nodes   : 8120601
+
+.......... ......
+================================================================================
+Error occurred in Testing_GPUScalar200/AssemblyGPU and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'MATLAB:nomem'
+    --------------
+    Error Details:
+    --------------
+    Out of memory.
+    
+    Error in AssemblyStiffMa (line 26)
+        K = accumarray([iK,jK], Ke, [sets.tdofs sets.tdofs], [], [], 1);
+    
+    Error in Testing_GPUScalar200 (line 42)
+    K = AssemblyStiffMa(iKd, jKd, Ked, sets);
+================================================================================
+.
+================================================================================
+Error occurred in Testing_GPUScalar200/AssemblyGPU and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:kernel:LaunchFailure'
+    --------------
+    Error Details:
+    --------------
+    Error using gpuArray/accumarray
+    An unexpected error occurred trying to launch a kernel. The CUDA error was:
+    out of memory
+    
+    Error in AssemblyStiffMa (line 26)
+        K = accumarray([iK,jK], Ke, [sets.tdofs sets.tdofs], [], [], 1);
+    
+    Error in Testing_GPUScalar200 (line 42)
+    K = AssemblyStiffMa(iKd, jKd, Ked, sets);
+================================================================================
+.
+================================================================================
+Error occurred in Testing_GPUScalar200/AssemblyGPU and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'MATLAB:nomem'
+    --------------
+    Error Details:
+    --------------
+    Out of memory.
+    
+    Error in AssemblyStiffMa (line 26)
+        K = accumarray([iK,jK], Ke, [sets.tdofs sets.tdofs], [], [], 1);
+    
+    Error in Testing_GPUScalar200 (line 42)
+    K = AssemblyStiffMa(iKd, jKd, Ked, sets);
+================================================================================
+.
+================================================================================
+Error occurred in Testing_GPUScalar200/AssemblyGPU and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:kernel:LaunchFailure'
+    --------------
+    Error Details:
+    --------------
+    Error using gpuArray/accumarray
+    An unexpected error occurred trying to launch a kernel. The CUDA error was:
+    out of memory
+    
+    Error in AssemblyStiffMa (line 26)
+        K = accumarray([iK,jK], Ke, [sets.tdofs sets.tdofs], [], [], 1);
+    
+    Error in Testing_GPUScalar200 (line 42)
+    K = AssemblyStiffMa(iKd, jKd, Ked, sets);
+================================================================================
+. 
+================================================================================
+Error occurred in Testing_GPUScalar200/AssemblyGPU and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'MATLAB:nomem'
+    --------------
+    Error Details:
+    --------------
+    Out of memory.
+    
+    Error in AssemblyStiffMa (line 26)
+        K = accumarray([iK,jK], Ke, [sets.tdofs sets.tdofs], [], [], 1);
+    
+    Error in Testing_GPUScalar200 (line 42)
+    K = AssemblyStiffMa(iKd, jKd, Ked, sets);
+================================================================================
+.
+================================================================================
+Error occurred in Testing_GPUScalar200/AssemblyGPU and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:kernel:LaunchFailure'
+    --------------
+    Error Details:
+    --------------
+    Error using gpuArray/accumarray
+    An unexpected error occurred trying to launch a kernel. The CUDA error was:
+    out of memory
+    
+    Error in AssemblyStiffMa (line 26)
+        K = accumarray([iK,jK], Ke, [sets.tdofs sets.tdofs], [], [], 1);
+    
+    Error in Testing_GPUScalar200 (line 42)
+    K = AssemblyStiffMa(iKd, jKd, Ked, sets);
+================================================================================
+.
+================================================================================
+Error occurred in Testing_GPUScalar200/AssemblyGPU and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'MATLAB:nomem'
+    --------------
+    Error Details:
+    --------------
+    Out of memory.
+    
+    Error in AssemblyStiffMa (line 26)
+        K = accumarray([iK,jK], Ke, [sets.tdofs sets.tdofs], [], [], 1);
+    
+    Error in Testing_GPUScalar200 (line 42)
+    K = AssemblyStiffMa(iKd, jKd, Ked, sets);
+================================================================================
+.
+================================================================================
+Error occurred in Testing_GPUScalar200/AssemblyGPU and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:kernel:LaunchFailure'
+    --------------
+    Error Details:
+    --------------
+    Error using gpuArray/accumarray
+    An unexpected error occurred trying to launch a kernel. The CUDA error was:
+    out of memory
+    
+    Error in AssemblyStiffMa (line 26)
+        K = accumarray([iK,jK], Ke, [sets.tdofs sets.tdofs], [], [], 1);
+    
+    Error in Testing_GPUScalar200 (line 42)
+    K = AssemblyStiffMa(iKd, jKd, Ked, sets);
+================================================================================
+.
+Done Testing_GPUScalar200
+__________
+
+Failure Summary:
+
+     Name                              Failed  Incomplete  Reason(s)
+    =================================================================
+     Testing_GPUScalar200/AssemblyGPU    X         X       Errored.
+  1x3 TimeResult array with properties:
+
+    Name
+    Valid
+    Samples
+    TestActivity
+
+Totals:
+   2 Valid, 1 Invalid.
+   3.2417 seconds testing time.
+
+
+
+A total of 40 time experiments was executed!
+Date and time at the beginning of the process: 	16-Sep-2020 23:11:47 
+Date and time at the end of the process: 	16-Sep-2020 23:23:04
+
+
+ans =
+
+  120x7 table
+
+                  Name                  SampleSize      Mean       StandardDeviation      Min        Median        Max   
+    ________________________________    __________    _________    _________________    ________    _________    ________
+
+    Testing_CPUScalar10/IndexCPU             4        0.0011962       0.00021418        0.001006    0.0011505    0.001478
+    Testing_CPUScalar10/LocalKeCPU           4        0.0007875       0.00013675        0.000658     0.000756     0.00098
+    Testing_CPUScalar10/AssemblyCPU          4        0.0009735       0.00048855        0.000718     0.000735    0.001706
+    Testing_GPUScalar10/IndexGPU             4        0.0057577       0.00023114        0.005548    0.0057505    0.005982
+    Testing_GPUScalar10/LocalKeGPU           4        0.0057235       0.00012089        0.005619    0.0056885    0.005898
+    Testing_GPUScalar10/AssemblyGPU          4        0.0017997        0.0008595        0.001367    0.0013715    0.003089
+    Testing_CPUScalar20/IndexCPU             7         0.004517       0.00029267        0.004326     0.004344    0.005105
+    Testing_CPUScalar20/LocalKeCPU           4        0.0010745       0.00012431         0.00099    0.0010245    0.001259
+    Testing_CPUScalar20/AssemblyCPU          5         0.004147        0.0002069        0.003975      0.00413    0.004485
+    Testing_GPUScalar20/IndexGPU             4         0.027988       0.00046174        0.027557     0.027877    0.028639
+    Testing_GPUScalar20/LocalKeGPU           4         0.028068       0.00058215        0.027663      0.02785     0.02891
+    Testing_GPUScalar20/AssemblyGPU          4        0.0018095       0.00017386        0.001671    0.0017555    0.002056
+    Testing_CPUScalar30/IndexCPU             4          0.01369       0.00044733          0.0132     0.013659    0.014243
+    Testing_CPUScalar30/LocalKeCPU           4         0.001155       0.00013191        0.001045     0.001115    0.001345
+    Testing_CPUScalar30/AssemblyCPU          9         0.011567       0.00089932        0.009172     0.011854    0.011954
+    Testing_GPUScalar30/IndexGPU             4         0.028218       0.00022611        0.027915     0.028258    0.028442
+    Testing_GPUScalar30/LocalKeGPU           4         0.028052       0.00018005        0.027928     0.027983    0.028313
+    Testing_GPUScalar30/AssemblyGPU          4        0.0020985       0.00018984        0.001985     0.002014    0.002381
+    Testing_CPUScalar40/IndexCPU             4         0.036524       0.00023796        0.036309     0.036497    0.036794
+    Testing_CPUScalar40/LocalKeCPU           4        0.0022357       0.00017024        0.002111     0.002175    0.002482
+    Testing_CPUScalar40/AssemblyCPU         20         0.027715        0.0035529         0.02359     0.030572    0.032425
+    Testing_GPUScalar40/IndexGPU             4          0.02737       0.00017651        0.027211     0.027335    0.027597
+    Testing_GPUScalar40/LocalKeGPU           5         0.029111        0.0013458        0.027443     0.029736    0.030279
+    Testing_GPUScalar40/AssemblyGPU          4         0.003734       0.00015336        0.003636      0.00367     0.00396
+    Testing_CPUScalar50/IndexCPU             4         0.068616       0.00038971        0.068215     0.068591    0.069065
+    Testing_CPUScalar50/LocalKeCPU           4         0.010714       0.00012074        0.010588     0.010697    0.010874
+    Testing_CPUScalar50/AssemblyCPU          4         0.077734       0.00037837        0.077398     0.077677    0.078186
+    Testing_GPUScalar50/IndexGPU             4         0.031233       0.00026964        0.030921     0.031237    0.031535
+    Testing_GPUScalar50/LocalKeGPU         132        0.0064694        0.0022423        0.005966    0.0061805    0.029129
+    Testing_GPUScalar50/AssemblyGPU          4        0.0059688       9.1405e-05        0.005836     0.005999    0.006041
+    Testing_CPUScalar60/IndexCPU             4          0.12423        0.0035379         0.12205      0.12267     0.12951
+    Testing_CPUScalar60/LocalKeCPU          10         0.013866        0.0011223        0.013071     0.013231    0.015632
+    Testing_CPUScalar60/AssemblyCPU          4            0.121       0.00075248         0.12021      0.12102     0.12173
+    Testing_GPUScalar60/IndexGPU             4         0.031474       0.00019037          0.0312     0.031544    0.031609
+    Testing_GPUScalar60/LocalKeGPU           4         0.027563       0.00032468         0.02722     0.027553    0.027927
+    Testing_GPUScalar60/AssemblyGPU          4        0.0097345       0.00016516        0.009611    0.0096745    0.009978
+    Testing_CPUScalar70/IndexCPU             4          0.26269         0.010415         0.25672       0.2579     0.27824
+    Testing_CPUScalar70/LocalKeCPU           4         0.026683        0.0001906        0.026512     0.026632    0.026956
+    Testing_CPUScalar70/AssemblyCPU          4          0.16072       0.00057921          0.1599      0.16086     0.16124
+    Testing_GPUScalar70/IndexGPU             4         0.036385       0.00055884        0.035795     0.036321    0.037101
+    Testing_GPUScalar70/LocalKeGPU           4        0.0070705       0.00011872        0.006979     0.007029    0.007245
+    Testing_GPUScalar70/AssemblyGPU          4         0.014982        0.0002473        0.014824      0.01488    0.015346
+    Testing_CPUScalar80/IndexCPU             4          0.38465        0.0031326         0.38175      0.38387     0.38909
+    Testing_CPUScalar80/LocalKeCPU           4         0.029406       0.00020574        0.029206     0.029381    0.029657
+    Testing_CPUScalar80/AssemblyCPU          4          0.29833        0.0027308         0.29605      0.29776     0.30176
+    Testing_GPUScalar80/IndexGPU             4         0.040423       0.00035172        0.040073     0.040367    0.040883
+    Testing_GPUScalar80/LocalKeGPU           4         0.007528       0.00019767        0.007334    0.0074875    0.007803
+    Testing_GPUScalar80/AssemblyGPU          5         0.022005       0.00093932        0.021534     0.021588    0.023684
+    Testing_CPUScalar90/IndexCPU             4          0.54687        0.0015065          0.5451      0.54703     0.54832
+    Testing_CPUScalar90/LocalKeCPU           4         0.041954        0.0012799        0.041226      0.04136    0.043872
+    Testing_CPUScalar90/AssemblyCPU          4          0.42455        0.0010818         0.42353      0.42455     0.42558
+    Testing_GPUScalar90/IndexGPU             4         0.046668       0.00090285         0.04618     0.046234    0.048021
+    Testing_GPUScalar90/LocalKeGPU          93        0.0083734         0.002405        0.007902     0.008035    0.030919
+    Testing_GPUScalar90/AssemblyGPU          4         0.030121       0.00018352        0.030003     0.030045    0.030391
+    Testing_CPUScalar100/IndexCPU            4           0.7522        0.0058142         0.74766      0.75035     0.76042
+    Testing_CPUScalar100/LocalKeCPU         15         0.060398         0.006488        0.056036       0.0566    0.077069
+    Testing_CPUScalar100/AssemblyCPU         4          0.58933        0.0082124         0.58172      0.58913     0.59734
+    Testing_GPUScalar100/IndexGPU            4         0.052372        0.0012848        0.051334     0.052026    0.054104
+    Testing_GPUScalar100/LocalKeGPU          4        0.0088107       0.00018536        0.008685    0.0087385    0.009081
+    Testing_GPUScalar100/AssemblyGPU         4         0.042218       0.00012536        0.042115     0.042187    0.042385
+    Testing_CPUScalar110/IndexCPU            4            1.004        0.0073209         0.99723       1.0024      1.0141
+    Testing_CPUScalar110/LocalKeCPU         14         0.080529        0.0084668        0.073785     0.074353    0.099363
+    Testing_CPUScalar110/AssemblyCPU         4            0.808        0.0015155         0.80673      0.80763     0.81001
+    Testing_GPUScalar110/IndexGPU            4         0.061769       0.00099142        0.061031     0.061408    0.063231
+    Testing_GPUScalar110/LocalKeGPU        124         0.010692         0.003571        0.009956     0.010139    0.037085
+    Testing_GPUScalar110/AssemblyGPU         4         0.054666       0.00029388        0.054484     0.054538    0.055104
+    Testing_CPUScalar120/IndexCPU            4           1.2819        0.0018633          1.2805       1.2813      1.2846
+    Testing_CPUScalar120/LocalKeCPU          4         0.098053        0.0018689        0.096372     0.097568      0.1007
+    Testing_CPUScalar120/AssemblyCPU         4           1.0699        0.0077985          1.0626       1.0698      1.0774
+    Testing_GPUScalar120/IndexGPU            4         0.068049        0.0015517        0.066863     0.067504    0.070323
+    Testing_GPUScalar120/LocalKeGPU         92         0.011932        0.0034187        0.011094     0.011287    0.033288
+    Testing_GPUScalar120/AssemblyGPU         4         0.070583       0.00017698         0.07045     0.070519    0.070843
+    Testing_CPUScalar130/IndexCPU            4           1.6691        0.0045617          1.6638       1.6689      1.6749
+    Testing_CPUScalar130/LocalKeCPU          4          0.12371        0.0017288         0.12265      0.12295     0.12629
+    Testing_CPUScalar130/AssemblyCPU         4           1.3669        0.0022607          1.3652       1.3661      1.3702
+    Testing_GPUScalar130/IndexGPU            4         0.079095       0.00020666        0.078864     0.079077    0.079361
+    Testing_GPUScalar130/LocalKeGPU          4         0.012678       0.00018533         0.01253     0.012616    0.012949
+    Testing_GPUScalar130/AssemblyGPU         4         0.091368       0.00017934        0.091211     0.091324    0.091613
+    Testing_CPUScalar140/IndexCPU            4           2.0811        0.0040792          2.0759       2.0812      2.0859
+    Testing_CPUScalar140/LocalKeCPU          4          0.15278       0.00073822         0.15203      0.15265      0.1538
+    Testing_CPUScalar140/AssemblyCPU         4           1.7094        0.0069723          1.7001       1.7107      1.7161
+    Testing_GPUScalar140/IndexGPU           18         0.071291        0.0082661        0.067466     0.067923    0.092862
+    Testing_GPUScalar140/LocalKeGPU          4         0.014454       0.00020695        0.014254      0.01441    0.014744
+    Testing_GPUScalar140/AssemblyGPU         4          0.11434       0.00012635         0.11424      0.11432      0.1145
+    Testing_CPUScalar150/IndexCPU            4           2.5713         0.006655          2.5645       2.5719      2.5771
+    Testing_CPUScalar150/LocalKeCPU          4          0.18725       0.00096518         0.18635      0.18709     0.18845
+    Testing_CPUScalar150/AssemblyCPU         4           2.1161        0.0096285          2.1063       2.1145      2.1293
+    Testing_GPUScalar150/IndexGPU            4          0.10442       0.00070195         0.10361      0.10437     0.10531
+    Testing_GPUScalar150/LocalKeGPU          4         0.016435       0.00018695        0.016256     0.016396    0.016693
+    Testing_GPUScalar150/AssemblyGPU         4          0.13796       0.00017968         0.13775      0.13796     0.13819
+    Testing_CPUScalar160/IndexCPU            4           3.1131        0.0094724          3.1048       3.1104      3.1267
+    Testing_CPUScalar160/LocalKeCPU          4          0.22669        0.0014952         0.22529      0.22637     0.22873
+    Testing_CPUScalar160/AssemblyCPU         4           2.5771        0.0024526          2.5742       2.5772      2.5796
+    Testing_GPUScalar160/IndexGPU            4         0.098506       0.00016363        0.098363     0.098465    0.098733
+    Testing_GPUScalar160/LocalKeGPU          4         0.018651       0.00012556        0.018536     0.018619    0.018829
+    Testing_GPUScalar160/AssemblyGPU         4           0.1836       0.00047094         0.18306      0.18361     0.18411
+    Testing_CPUScalar170/IndexCPU            4           3.7282        0.0070124          3.7235       3.7253      3.7387
+    Testing_CPUScalar170/LocalKeCPU          4          0.27304        0.0015745         0.27134      0.27306      0.2747
+    Testing_CPUScalar170/AssemblyCPU         4           3.1177        0.0026862          3.1155       3.1169      3.1215
+    Testing_GPUScalar170/IndexGPU            8          0.12161        0.0089401         0.11685      0.11718     0.14122
+    Testing_GPUScalar170/LocalKeGPU          4         0.021221       0.00015994          0.0211     0.021167    0.021447
+    Testing_GPUScalar170/AssemblyGPU         4          0.22193       0.00050455         0.22146      0.22186     0.22255
+    Testing_CPUScalar180/IndexCPU            4           4.3971        0.0050434          4.3896       4.3993      4.4003
+    Testing_CPUScalar180/LocalKeCPU          4          0.32476         0.004678         0.32136      0.32312     0.33146
+    Testing_CPUScalar180/AssemblyCPU         4           3.7118        0.0089911          3.6992       3.7137      3.7205
+    Testing_GPUScalar180/IndexGPU            4          0.14062        0.0056589         0.13767      0.13786     0.14911
+    Testing_GPUScalar180/LocalKeGPU          4         0.024276       0.00020274        0.024135     0.024196    0.024577
+    Testing_GPUScalar180/AssemblyGPU         4           0.3569         0.003532         0.35435      0.35564     0.36199
+    Testing_CPUScalar190/IndexCPU            4           5.2293         0.010099          5.2159       5.2305      5.2405
+    Testing_CPUScalar190/LocalKeCPU          4          0.41267          0.00464         0.40939      0.41093     0.41942
+    Testing_CPUScalar190/AssemblyCPU         4           4.3703        0.0086516          4.3619       4.3698      4.3798
+    Testing_GPUScalar190/IndexGPU            4          0.16082       0.00017273         0.16068      0.16078     0.16106
+    Testing_GPUScalar190/LocalKeGPU          4         0.027608       0.00019694        0.027487     0.027521    0.027902
+    Testing_GPUScalar190/AssemblyGPU         4          0.43121        0.0046657         0.42479      0.43215     0.43573
+    Testing_CPUScalar200/IndexCPU            4           5.9868         0.022212          5.9721       5.9778      6.0196
+    Testing_CPUScalar200/LocalKeCPU          4          0.48177        0.0043941         0.47859      0.48011     0.48827
+    Testing_CPUScalar200/AssemblyCPU         4           5.0663        0.0068292          5.0575       5.0674      5.0731
+    Testing_GPUScalar200/IndexGPU            4          0.18707       0.00055513         0.18628      0.18725     0.18749
+    Testing_GPUScalar200/LocalKeGPU          4         0.031275       0.00023418        0.031104     0.031193    0.031608
+    Testing_GPUScalar200/AssemblyGPU         4              NaN              NaN             NaN          NaN         NaN
+
