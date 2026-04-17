@@ -36,11 +36,11 @@ if ( input_unit < 0 )
     error ( 'HB_TO_MSM - Fatal error!' );
 end
 
-[ title, key, totcrd, ptrcrd, indcrd, valcrd, rhscrd, mxtype, ...
-    nrow, ncol, nnzero, neltvl, ptrfmt, indfmt, valfmt, rhsfmt, rhstyp, ...
-    nrhs, nrhsix, colptr, rowind, values, rhsval, rhsptr, rhsind, guess, ...
-    exact ] = hb_file_read ( input_unit );
+[ ~, ~, ~, ~, ~, ~, ~, ~, ...
+    nrow, ncol, ~, ~, ~, ~, ~, ~, ~, ...
+    ~, ~, colptr, rowind, values, rhsval ] = hb_file_read ( input_unit );
 
+colind = zeros ( size ( rowind ) );
 for col = 1 : ncol
     for k = colptr(col) : colptr(col+1) - 1
         colind(k) = col;
@@ -343,7 +343,7 @@ if ( 0 < rhscrd )
         
         exact = zeros ( nrow, nrhs );
         
-        [ p, code, w, m ] = s_to_format ( rhsfmt );
+        [ p, ~, w, ~ ] = s_to_format ( rhsfmt );
         
         if ( mxtype(1) == 'R' )
             
@@ -366,7 +366,7 @@ if ( 0 < rhscrd )
                         klo = khi + 1;
                         khi = min ( klo + w - 1, length ( line ) );
                         s = line(klo:khi);
-                        v = str2num ( s );
+                        v = parseNumericField ( s );
                         exact(j,irhs) = v;
                     end
                     
@@ -390,7 +390,7 @@ if ( 0 < rhscrd )
                     khi = min ( klo + w - 1, length ( line ) );
                     s = line(klo:khi);
                     real_num = real_num - 1;
-                    vr = str2num ( s );
+                    vr = parseNumericField ( s );
                     
                     if ( real_num < 1 )
                         line = fgetl ( input_unit );
@@ -401,7 +401,7 @@ if ( 0 < rhscrd )
                     khi = min ( klo + w - 1, length ( line ) );
                     s = line(klo:khi);
                     real_num = real_num - 1;
-                    vi = str2num ( s );
+                    vi = parseNumericField ( s );
                     
                     exact(j,irhs) = complex ( vr, vi );
                     
@@ -646,7 +646,7 @@ if ( 0 < rhscrd )
         
         guess = zeros ( nrow, nrhs );
         
-        [ p, code, w, m ] = s_to_format ( rhsfmt );
+        [ p, ~, w, ~ ] = s_to_format ( rhsfmt );
         
         if ( mxtype(1) == 'R' )
             
@@ -668,7 +668,7 @@ if ( 0 < rhscrd )
                         klo = khi + 1;
                         khi = min ( klo + w - 1, length ( line ) );
                         s = line(klo:khi);
-                        v = str2num ( s );
+                        v = parseNumericField ( s );
                         guess(j,irhs) = v;
                     end
                     
@@ -693,7 +693,7 @@ if ( 0 < rhscrd )
                     khi = min ( klo + w - 1, length ( line ) );
                     s = line(klo:khi);
                     real_num = real_num - 1;
-                    vr = str2num ( s );
+                    vr = parseNumericField ( s );
                     
                     if ( real_num < 1 )
                         line = fgetl ( input_unit );
@@ -704,7 +704,7 @@ if ( 0 < rhscrd )
                     khi = min ( klo + w - 1, length ( line ) );
                     s = line(klo:khi);
                     real_num = real_num - 1;
-                    vi = str2num ( s );
+                    vi = parseNumericField ( s );
                     
                     guess(j,irhs) = complex ( vr, vi );
                     
@@ -852,11 +852,11 @@ for i = line_num+1 : 80
     line(i) = ' ';
 end
 
-totcrd = str2num ( line( 1:14) );
-ptrcrd = str2num ( line(15:28) );
-indcrd = str2num ( line(29:42) );
-valcrd = str2num ( line(43:56) );
-rhscrd = str2num ( line(57:70) );
+totcrd = parseNumericField ( line( 1:14) );
+ptrcrd = parseNumericField ( line(15:28) );
+indcrd = parseNumericField ( line(29:42) );
+valcrd = parseNumericField ( line(43:56) );
+rhscrd = parseNumericField ( line(57:70) );
 
 line = fgetl ( input_unit );
 
@@ -873,10 +873,10 @@ for i = line_num+1 : 80
 end
 
 mxtype =           line( 1: 3);
-nrow   = str2num ( line(15:28) );
-ncol   = str2num ( line(29:42) );
-nnzero = str2num ( line(43:56) );
-neltvl = str2num ( line(57:70) );
+nrow   = parseNumericField ( line(15:28) );
+ncol   = parseNumericField ( line(29:42) );
+nnzero = parseNumericField ( line(43:56) );
+neltvl = parseNumericField ( line(57:70) );
 
 line = fgetl ( input_unit );
 
@@ -918,8 +918,8 @@ if ( 0 < rhscrd )
     end
     
     rhstyp =           line( 1: 3);
-    nrhs   = str2num ( line(15:28) );
-    nrhsix = str2num ( line(29:42) );
+    nrhs   = parseNumericField ( line(15:28) );
+    nrhsix = parseNumericField ( line(29:42) );
     
 else
     
@@ -1048,7 +1048,7 @@ if ( 0 < rhscrd )
         
         rhsval = zeros ( nrow, nrhs );
         
-        [ p, code, w, m ] = s_to_format ( rhsfmt );
+        [ p, ~, w, ~ ] = s_to_format ( rhsfmt );
         
         if ( mxtype(1) == 'R' )
             
@@ -1070,7 +1070,7 @@ if ( 0 < rhscrd )
                         klo = khi + 1;
                         khi = min ( klo + w - 1, length ( line ) );
                         s = line(klo:khi);
-                        v = str2num ( s );
+                        v = parseNumericField ( s );
                         rhsval(j,irhs) = v;
                     end
                     
@@ -1095,7 +1095,7 @@ if ( 0 < rhscrd )
                     khi = min ( klo + w - 1, length ( line ) );
                     s = line(klo:khi);
                     real_num = real_num - 1;
-                    vr = str2num ( s );
+                    vr = parseNumericField ( s );
                     
                     if ( real_num < 1 )
                         line = fgetl ( input_unit );
@@ -1106,7 +1106,7 @@ if ( 0 < rhscrd )
                     khi = min ( klo + w - 1, length ( line ) );
                     s = line(klo:khi);
                     real_num = real_num - 1;
-                    vi = str2num ( s );
+                    vi = parseNumericField ( s );
                     
                     rhsval(j,irhs) = complex ( vr, vi );
                     
@@ -1127,7 +1127,7 @@ if ( 0 < rhscrd )
             rhsind = zeros ( nrhsix, 1 );
             rhsval = zeros ( nrhsix, 1 );
             
-            [ p, code, w, m ] = s_to_format ( ptrfmt );
+            [ p, ~, w, ~ ] = s_to_format ( ptrfmt );
             
             line_num = 1 + floor ( ( nrhs + 1 - 1 ) / p );
             
@@ -1145,11 +1145,11 @@ if ( 0 < rhscrd )
                     klo = khi + 1;
                     khi = min ( klo + w - 1, length ( line ) );
                     s = line(klo:khi);
-                    rhsptr(j) = str2num ( s );
+                    rhsptr(j) = parseNumericField ( s );
                 end
             end
             
-            [ p, code, w, m ] = s_to_format ( indfmt );
+            [ p, ~, w, ~ ] = s_to_format ( indfmt );
             
             line_num = 1 + floor ( ( nrhsix - 1 ) / p );
             
@@ -1167,11 +1167,11 @@ if ( 0 < rhscrd )
                     klo = khi + 1;
                     khi = min ( klo + w - 1, length ( line ) );
                     s = line(klo:khi);
-                    rhsind(j) = str2num ( s );
+                    rhsind(j) = parseNumericField ( s );
                 end
             end
             
-            [ p, code, w, m ] = s_to_format ( rhsfmt );
+            [ p, ~, w, ~ ] = s_to_format ( rhsfmt );
             
             if ( mxtype(1) == 'R' )
                 
@@ -1191,7 +1191,7 @@ if ( 0 < rhscrd )
                         klo = khi + 1;
                         khi = min ( klo + w - 1, length ( line ) );
                         s = line(klo:khi);
-                        v = str2num ( s );
+                        v = parseNumericField ( s );
                         rhsval(j) = v;
                     end
                     
@@ -1212,7 +1212,7 @@ if ( 0 < rhscrd )
                     khi = min ( klo + w - 1, length ( line ) );
                     s = line(klo:khi);
                     real_num = real_num - 1;
-                    vr = str2num ( s );
+                    vr = parseNumericField ( s );
                     
                     if ( real_num < 1 )
                         line = fgetl ( input_unit );
@@ -1223,7 +1223,7 @@ if ( 0 < rhscrd )
                     khi = min ( klo + w - 1, length ( line ) );
                     s = line(klo:khi);
                     real_num = real_num - 1;
-                    vi = str2num ( s );
+                    vi = parseNumericField ( s );
                     
                     rhsval(j) = complex ( vr, vi );
                     
@@ -1237,7 +1237,7 @@ if ( 0 < rhscrd )
             
             rhsval = zeros ( nnzero, nrhs );
             
-            [ p, code, w, m ] = s_to_format ( rhsfmt );
+            [ p, ~, w, ~ ] = s_to_format ( rhsfmt );
             
             if ( mxtype(1) == 'R' )
                 
@@ -1259,7 +1259,7 @@ if ( 0 < rhscrd )
                             klo = khi + 1;
                             khi = min ( klo + w - 1, length ( line ) );
                             s = line(klo:khi);
-                            v = str2num ( s );
+                            v = parseNumericField ( s );
                             rhsval(j,irhs) = v;
                         end
                         
@@ -1283,7 +1283,7 @@ if ( 0 < rhscrd )
                         khi = min ( klo + w - 1, length ( line ) );
                         s = line(klo:khi);
                         real_num = real_num - 1;
-                        vr = str2num ( s );
+                        vr = parseNumericField ( s );
                         
                         if ( real_num < 1 )
                             line = fgetl ( input_unit );
@@ -1294,7 +1294,7 @@ if ( 0 < rhscrd )
                         khi = min ( klo + w - 1, length ( line ) );
                         s = line(klo:khi);
                         real_num = real_num - 1;
-                        vi = str2num ( s );
+                        vi = parseNumericField ( s );
                         
                         rhsval(j,irhs) = complex ( vr, vi );
                         
@@ -1329,7 +1329,7 @@ end
 return
 end
 function [ colptr, rowind ] = hb_structure_read ( input_unit, ncol, mxtype, ...
-    nnzero, neltvl, ptrcrd, ptrfmt, indcrd, indfmt )
+    nnzero, neltvl, ~, ptrfmt, ~, indfmt )
 
 %*****************************************************************************80
 %
@@ -1394,11 +1394,13 @@ function [ colptr, rowind ] = hb_structure_read ( input_unit, ncol, mxtype, ...
 %    Output, integer ROWIND(NNZERO) or ROWIND(NELTVL), the row index of
 %    each item.
 %
-[ p, code, w, m ] = s_to_format ( ptrfmt );
+[ p, ~, w, ~ ] = s_to_format ( ptrfmt );
 
 if ( mxtype(3) == 'A' )
+    colptr = zeros ( ncol + 1, 1 );
     line_num = 1 + floor ( ( ( ncol + 1 ) - 1 ) / p );
 else
+    colptr = zeros ( ncol, 1 );
     line_num = 1 + floor ( ( ( ncol     ) - 1 ) / p );
 end
 
@@ -1421,7 +1423,7 @@ for i = 1 : line_num
         klo = khi + 1;
         khi = min ( klo + w - 1, length ( line ) );
         s = line(klo:khi);
-        colptr(j) = str2num ( s );
+        colptr(j) = parseNumericField ( s );
     end
     
 end
@@ -1430,7 +1432,7 @@ if ( mxtype(3) == 'A' )
     
     rowind = zeros ( nnzero, 1 );
     
-    [ p, code, w, m ] = s_to_format ( indfmt );
+    [ p, ~, w, ~ ] = s_to_format ( indfmt );
     
     line_num = 1 + floor ( ( nnzero - 1 ) / p );
     
@@ -1448,7 +1450,7 @@ if ( mxtype(3) == 'A' )
             klo = khi + 1;
             khi = min ( klo + w - 1, length ( line ) );
             s = line(klo:khi);
-            rowind(j) = str2num ( s );
+            rowind(j) = parseNumericField ( s );
         end
         
     end
@@ -1457,7 +1459,7 @@ elseif ( mxtype(3) == 'E' )
     
     rowind = zeros ( neltvl, 1 );
     
-    [ p, code, w, m ] = s_to_format ( indfmt );
+    [ p, ~, w, ~ ] = s_to_format ( indfmt );
     number = colptr(ncol) - colptr(1);
     line_num = 1 + floor ( ( number - 1 ) / p );
     
@@ -1474,7 +1476,7 @@ elseif ( mxtype(3) == 'E' )
             klo = khi + 1;
             khi = min ( klo + w - 1, length ( line ) );
             s = line(klo:khi);
-            rowind(j) = str2num ( s );
+            rowind(j) = parseNumericField ( s );
         end
         
     end
@@ -1553,7 +1555,7 @@ function values = hb_values_read ( input_unit, valcrd, mxtype, nnzero, ...
 %    Output, real/complex VALUES(NNZERO) or VALUES(NELTVL), the nonzero values
 %    of the matrix.
 %
-[ p, code, w, m ] = s_to_format ( valfmt );
+[ p, ~, w, ~ ] = s_to_format ( valfmt );
 %
 %  Read the matrix values.
 %    case "A" = assembled;
@@ -1586,7 +1588,7 @@ if ( 0 < valcrd )
                     khi = min ( klo + w - 1, length ( line ) );
                     s = line(klo:khi);
                     
-                    v = str2num ( s );
+                    v = parseNumericField ( s );
                     values(j) = v;
                     
                 end
@@ -1613,7 +1615,7 @@ if ( 0 < valcrd )
                 khi = min ( klo + w - 1, length ( line ) );
                 s = line(klo:khi);
                 real_num = real_num - 1;
-                vr = str2num ( s );
+                vr = parseNumericField ( s );
                 
                 if ( real_num < 1 )
                     line = fgetl ( input_unit );
@@ -1624,7 +1626,7 @@ if ( 0 < valcrd )
                 khi = min ( klo + w - 1, length ( line ) );
                 s = line(klo:khi);
                 real_num = real_num - 1;
-                vi = str2num ( s );
+                vi = parseNumericField ( s );
                 
                 values(j) = complex ( vr, vi );
                 
@@ -1654,7 +1656,7 @@ if ( 0 < valcrd )
                     klo = khi + 1;
                     khi = min ( klo + w - 1, length ( line ) );
                     s = line(klo:khi);
-                    v = str2num ( s );
+                    v = parseNumericField ( s );
                     values(j) = v;
                 end
                 
@@ -1675,7 +1677,7 @@ if ( 0 < valcrd )
                 khi = min ( klo + w - 1, length ( line ) );
                 s = line(klo:khi);
                 real_num = real_num - 1;
-                vr = str2num ( s );
+                vr = parseNumericField ( s );
                 
                 if ( real_num < 1 )
                     line = fgetl ( input_unit );
@@ -1686,7 +1688,7 @@ if ( 0 < valcrd )
                 khi = min ( klo + w - 1, length ( line ) );
                 s = line(klo:khi);
                 real_num = real_num - 1;
-                vi = str2num ( s );
+                vi = parseNumericField ( s );
                 
                 values(j) = complex ( vr, vi );
                 
@@ -1703,6 +1705,29 @@ if ( 0 < valcrd )
         
     end
     
+end
+
+return
+end
+function value = parseNumericField ( s )
+
+%*****************************************************************************80
+%
+%% PARSENUMERICFIELD converts a fixed-width numeric field without eval.
+%
+%  Discussion:
+%
+%    Harwell-Boeing files may use FORTRAN D exponents.  STR2DOUBLE avoids
+%    the EVAL behavior of STR2NUM, but it does not accept D exponents unless
+%    they are normalized first.
+%
+trimmed = strtrim ( s );
+normalized = strrep ( strrep ( trimmed, 'D', 'E' ), 'd', 'e' );
+value = str2double ( normalized );
+
+if ( isnan ( value ) && ~strcmpi ( normalized, 'nan' ) )
+    error ( 'HB_TO_MSM:InvalidNumericField', ...
+        'Could not parse numeric field "%s".', trimmed );
 end
 
 return
@@ -1959,7 +1984,7 @@ end
 
 return
 end
-function ival = s_to_i4 ( s )
+function ival = s_to_i4 ( s ) %#ok<DEFNU>
 
 %*****************************************************************************80
 %
@@ -2019,7 +2044,6 @@ while ( i < s_len )
             fprintf ( '  Illegal character ''%c'' while in state %d.\n', c, state );
             fprintf ( '  Input string was "%s"\n', s );
             error ( 'S_TO_I4 - Fatal error!\n' );
-            return;
         end
         %
         %  Have read the sign, now expecting the first digit.
@@ -2037,7 +2061,6 @@ while ( i < s_len )
             fprintf ( '  Illegal character ''%c'' while in state %d.\n', c, state );
             fprintf ( '  Input string was "%s"\n', s );
             error ( 'S_TO_I4 - Fatal error!\n' );
-            return
         end
         %
         %  Have read at least one digit, expecting more.
@@ -2063,14 +2086,13 @@ if ( state ~= 2 )
     fprintf ( 1, '  Did not read enough information to define an integer!\n' );
     fprintf ( 1, '  Input string was "%s"\n', s );
     error ( 'S_TO_I4 - Fatal error!\n' );
-    return;
 end
 
 ival = sgn * ival;
 
 return
 end
-function [ r, lchar, ierror ] = s_to_r8 ( s )
+function [ r, lchar, ierror ] = s_to_r8 ( s ) %#ok<DEFNU>
 
 %*****************************************************************************80
 %
@@ -2148,7 +2170,6 @@ function [ r, lchar, ierror ] = s_to_r8 ( s )
 %
 s_length = s_len_trim ( s );
 ierror = 0;
-r = 0.0;
 lchar = -1;
 isgn = 1;
 rtop = 0.0;
@@ -2190,7 +2211,7 @@ while ( 1 )
         %
     elseif ( c == '-' )
         
-        if ( ihave == 1 );
+        if ( ihave == 1 )
             ihave = 2;
             isgn = -1;
         elseif ( ihave == 6 )
@@ -2288,7 +2309,6 @@ end
 %  Not if we terminated in states 1, 2, 6 or 7!
 %
 if ( ihave == 1 || ihave == 2 || ihave == 6 || ihave == 7 )
-    ierror = ihave;
     fprintf ( 1, '\n' );
     fprintf ( 1, 'S_TO_R8 - Fatal error!\n' );
     fprintf ( 1, '  IHAVE = %d\n', ihave );

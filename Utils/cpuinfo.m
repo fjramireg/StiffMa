@@ -49,10 +49,10 @@ function info = callWMIC( alias )
 
 % We move to a temporary folder since WMIC needs write access to the local
 % folder
-olddir = pwd();
+oldFolder = pwd();
+cleanup = onCleanup( @() cd( oldFolder ) );
 cd( tempdir );
 [~, sysinfo] = system(sprintf( 'wmic %s get /value', alias ));
-cd( olddir );
 fields = textscan( sysinfo, '%s', 'Delimiter', '\n' ); fields = fields{1};
 fields( cellfun( 'isempty', fields ) ) = [];
 % Each line has "field=value", so split them

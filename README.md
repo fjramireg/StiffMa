@@ -28,7 +28,7 @@ Large speedups are obtained compared with a non-optimized CPU code.
 
 ## Installation
 + ***Option 1***: Clone the GitHub repository and use the code directly on MATLAB.
-+ ***Option 2***: Search in the `releases` folder and download the latest MATLAB package, e.g. [`StiffMa1.6.mltb`](https://github.com/fjramireg/StiffMa/blob/master/releases/StiffMa1.6.mltbx). After the file is downloaded, double clic on it and it automatically will be installed on MATLAB as a Toolbox.
++ ***Option 2***: Search in the `releases` folder and download the latest MATLAB package, e.g. [`StiffMa1.6.mltbx`](https://github.com/fjramireg/StiffMa/blob/master/releases/StiffMa1.6.mltbx). After the file is downloaded, double click on it and it automatically will be installed on MATLAB as a Toolbox.
 
 ## Example: getting started guide
 ~~~

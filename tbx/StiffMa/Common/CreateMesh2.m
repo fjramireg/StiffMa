@@ -25,8 +25,8 @@ function [elements, nodes] = CreateMesh2(nelx,nely,nelz,sets)
 %% INPUTS CHECK
 if ~( mod(nelx,1)==0 && mod(nely,1)==0 && mod(nelz,1)==0 )          % Check if inputs "nelX" are integers
     error('Error. Inputs "nelx", "nely" and "nely" must be integers');
-elseif ( nelx<0 || nely<0 || nelz<0 )                               % Check if "nel" are positives
-    error('Error. Inputs "nelx", "nely" and "nely" must be positives');
+elseif ( nelx<=0 || nely<=0 || nelz<=0 )                               % Check if "nel" are positives
+    error('Error. The inputs "nelx", "nely" and "nely" must be integers greater than zero.');
 elseif ~( strcmp(sets.dTN,'single') || strcmp(sets.dTN,'double') )  % Check data presicion for nodal coord.
     error('Error. Input "sets.dTN" must be "single" or "double"');
 elseif ~( strcmp(sets.dTE,'uint32') || strcmp(sets.dTE,'uint64') )  % Check data presicion for connect. array

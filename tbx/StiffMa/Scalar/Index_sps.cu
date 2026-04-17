@@ -4,20 +4,34 @@
 *
 *
 ** DATA INPUT
-* 	elements[8][nel]      // Conectivity matrix of the mesh
+* 	elements[nel][8]      // Conectivity matrix of the mesh
 *
 ** DATA OUTPUT
 *	iK[36*nel]            // Row indices of the lower-triangular part of ke
 *	jK[36*nel]            // Colummn indices of the lower-triangular part of ke
 *
+** COMPILATION (requirements)
+*   c++ compiler (https://www.mathworks.com/support/requirements/supported-compilers.html)
+*       e.g. MSCPP: https://visualstudio.microsoft.com/ (!cl)
+*   nvcc compiler (CUDA Toolkit)
+*       e.g. https://developer.nvidia.com/cuda-downloads (!nvcc -V)
+*
 ** COMPILATION (Terminal)
 * 	Opt1:  nvcc -ptx Index_sps.cu
 * 	Opt2:  nvcc -ptx -v -arch=sm_50 --fmad=false -lineinfo -o Index_sps.ptx Index_sps.cu
 *
-** COMPILATION within MATLAB using NVCC
+** COMPILATION within MATLAB using NVCC (LINUX)
 * 	setenv('MW_NVCC_PATH','/usr/local/cuda-10.2/bin')
 *  	setenv('PATH',[getenv('PATH') ':/usr/local/cuda-10.2/bin'])
 *  	system('nvcc -ptx Index_sps.cu')
+*
+** COMPILATION within MATLAB using NVCC (Windows)
+* 	Add MSCPP compiler to the path, e.g. C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\bin\Hostx64\x64
+*  	system('nvcc -ptx -v Index_sps.cu')
+*   system('nvcc -ptx -v Index_sps.cu > Index_sps.log 2>&1'); % Redirect the command output to a log file (Windows and UNIX)
+*
+** COMPILATION within MATLAB using mexcuda (https://www.mathworks.com/help/parallel-computing/mexcuda.html)
+*   mexcuda -ptx -v Index_sps.cu
 *
 ** MATLAB KERNEL CREATION (inside MATLAB)
 *			kernel = parallel.gpu.CUDAKernel('Index_sps.ptx', 'Index_sps.cu');
@@ -41,7 +55,8 @@
 *** Please cite this code if you find it useful (See: https://github.com/fjramireg/StiffMa)
 *
 ** Date & version
-* 	Last modified: 08/02/2020. Version 1.4 (Error fix to use 'uint64')
+* 	Last modified: April 14, 2026. Version 1.5 (Re-compiled)
+*   Modified: 08/02/2020. Version 1.4 (Error fix to use 'uint64')
 *   Modified: 31/01/2020. Version 1.3 (added grid stride)
 * 	Modified: 21/01/2019, Version 1.2
 * 	Created: 30/11/2018. V 1.0
@@ -64,12 +79,12 @@ __global__ void IndexScalarGPU(const intT *elements,
     for (e = tid; e < nel; e += stride ){
 
         // Extracts nodes (DOFs) of element 'e'
-        for (i=0; i<8; i++) {n[i] = elements[i+8*e];}
+        for (i=0; i<8; i++) {n[i] = elements[i + 8*e];}
 
         // Computes row/column indices taking advantage of symmetry
         temp = 0;
-        for (j=0; j<8; j++){
-            for (i=j; i<8; i++){
+        for (j=0; j<8; ++j){
+            for (i=j; i<8; ++i){
                 idx = temp + i + 36*e;
                 if (n[i] >= n[j]){
                     iK[idx] = n[i];

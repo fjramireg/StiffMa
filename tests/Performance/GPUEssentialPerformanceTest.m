@@ -7,6 +7,20 @@ function GPUEssentialPerformanceTest
 % %     How fast can the GPU perform computations?
 % for more details see https://www.mathworks.com/help/distcomp/examples/measuring-gpu-performance.html
 
+%   Written by Francisco Javier Ramirez-Gil, fjramireg@gmail.com
+%   Institución Universitaria Pascual Bravo, Medellin-Colombia
+% Updated: April 13, 2026
+
+
+%% CPU, GPU and MATLAB info
+CPU=cpuinfo; disp(CPU);
+if ispc
+    [~,sys] = memory;
+    fprintf("Physical Memory (RAM): %i MB \n\n",int64(sys.PhysicalMemory.Total/1024^2))
+end
+GPU=gpuinfo; disp(GPU);
+configinfo;
+
 %% Setup
 gpu = gpuDevice();
 fprintf('Using a %s GPU.\n', gpu.Name)
@@ -135,3 +149,20 @@ title('Double precision matrix-matrix multiply')
 xlabel('Matrix size (numel)')
 ylabel('Calculation Rate (GFLOPS)')
 legend('GPU', 'Host', 'Location', 'NorthWest')
+
+%% GPUBench: MATLAB Central File Exchange.
+% MathWorks Parallel Computing Toolbox Team (2026). GPUBench
+% (https://www.mathworks.com/matlabcentral/fileexchange/34080-gpubench),
+
+if exist('gpuBench', 'file') ~= 2
+    error([ ...
+        'GPUBench is not installed. Install it from MATLAB Central ' ...
+        'File Exchange and then run this function again.' ...
+        ]);
+else
+    [outGPU,outHost] = gpuBench();
+    gpuBenchReport( outGPU );
+    gpuBenchReport( outHost );
+end
+
+    

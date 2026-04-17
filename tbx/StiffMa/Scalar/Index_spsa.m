@@ -53,8 +53,8 @@ ker.ThreadBlockSize = [sets.tbs, 1, 1];             % Threads per block
 ker.GridSize = [sets.WarpSize*sets.numSMs, 1, 1];  	% Blocks per grid
 
 % INITIALIZATION OF GPU VARIABLES
-iK  = zeros(36*sets.nel, 1, sets.dTE, 'gpuArray');	% Stores row indices (initialized directly on GPU)
-jK  = zeros(36*sets.nel, 1, sets.dTE, 'gpuArray');	% Stores column indices (initialized directly on GPU)
+iK  = zeros(sets.sz*sets.nel, 1, sets.dTE, 'gpuArray');	% Stores row indices (initialized directly on GPU)
+jK  = zeros(sets.sz*sets.nel, 1, sets.dTE, 'gpuArray');	% Stores column indices (initialized directly on GPU)
 
 % MATLAB KERNEL CALL
 [iK, jK] = feval(ker, elements, sets.nel, iK, jK);  % GPU code execution

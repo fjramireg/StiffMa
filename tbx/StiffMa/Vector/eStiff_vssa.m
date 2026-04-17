@@ -1,7 +1,7 @@
-function Ke = eStiffa_vss(Mesh, MP, sets)
-% ESTIFFA_VSS Compute ALL (a) the element stiffness matrices for a VECTOR (v)
+function Ke = eStiff_vssa(Mesh, MP, sets)
+% ESTIFF_VSSA Compute ALL (a) the element stiffness matrices for a VECTOR (v)
 % problem by using a serial (s) code on the CPU taking advantage of simmetry.
-%   ESTIFFA_VSS(Mesh, MP, sets) returns the element stiffness matrix "ke"
+%   ESTIFF_VSSA(Mesh, MP, sets) returns the element stiffness matrix "ke"
 %   for all elements in a finite element analysis of vector problems in a
 %   three-dimensional domain taking advantage of symmetry but in a serial
 %   manner on the CPU,  where Mesh is a strucutre variable containing the

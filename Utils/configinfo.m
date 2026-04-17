@@ -19,7 +19,7 @@ function configinfo
 % tested on GLNX86 PCWIN MAC SOL2 HPUX GLNXA64
 
 disp('MATLAB configuration information');
-disp(['This data was gathered on: ' datestr(now)]);
+disp(['This data was gathered on: ' char(datetime('now', 'Format', 'dd-MMM-yyyy HH:mm:ss'))]);
 disp(['MATLAB version: ' version]);
 disp(['MATLAB root: ' matlabroot]);
 if feature('accel')

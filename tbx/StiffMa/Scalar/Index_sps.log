@@ -1,0 +1,139 @@
+
+H:\My Drive\Research\Papers\MatGen paper\StiffMa\Code\tbx\StiffMa\Scalar>call "C:/Program Files/Microsoft Visual Studio/18/Community/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/../../../../../../../VC/Auxiliary/Build/vcvars64.bat" 
+**********************************************************************
+** Visual Studio 2026 Developer Command Prompt v18.4.3
+** Copyright (c) 2026 Microsoft Corporation
+**********************************************************************
+[vcvarsall.bat] Environment initialized for: 'x64'
+#$ C:/Program Files/Microsoft Visual Studio/18/Community/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/../../../../../../../VC/Auxiliary/Build/vcvars64.bat
+#$ ALLUSERSPROFILE=C:\ProgramData
+#$ ANSYS241_DIR=C:\Program Files\ANSYS Inc\ANSYS Student\v241\ANSYS
+#$ APPDATA=C:\Users\Francisco\AppData\Roaming
+#$ AWP_ROOT241=C:\Program Files\ANSYS Inc\ANSYS Student\v241
+#$ CADOE_LIBDIR241=C:\Program Files\ANSYS Inc\ANSYS Student\v241\CommonFiles\Language\en-us
+#$ CommandPromptType=Native
+#$ CommonProgramFiles=C:\Program Files\Common Files
+#$ CommonProgramFiles(x86)=C:\Program Files (x86)\Common Files
+#$ CommonProgramW6432=C:\Program Files\Common Files
+#$ COMPUTERNAME=IUPB-FRANCISCO
+#$ ComSpec=C:\WINDOWS\system32\cmd.exe
+#$ CUDA_PATH=C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v13.2
+#$ CUDA_PATH_V13_2=C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v13.2
+#$ DevEnvDir=C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\
+#$ DriverData=C:\Windows\System32\Drivers\DriverData
+#$ EFC_10016_1592913036=1
+#$ ExtensionSdkDir=C:\Program Files (x86)\Microsoft SDKs\Windows Kits\10\ExtensionSDKs
+#$ EXTERNAL_INCLUDE=C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include;C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\ATLMFC\include;C:\Program Files\Microsoft Visual Studio\18\Community\VC\Auxiliary\VS\include;C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt;C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um;C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\shared;C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\winrt;C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\cppwinrt
+#$ FLEXLM_TIMEOUT=1500000
+#$ Framework40Version=v4.0
+#$ FrameworkDir=C:\Windows\Microsoft.NET\Framework64\
+#$ FrameworkDir64=C:\Windows\Microsoft.NET\Framework64\
+#$ FrameworkVersion=v4.0.30319
+#$ FrameworkVersion64=v4.0.30319
+#$ HOMEDRIVE=C:
+#$ HOMEPATH=\Users\Francisco
+#$ ICU_TIMEZONE_FILES_DIR=C:\Program Files\MATLAB\R2025b/bin/icutzdata
+#$ INCLUDE=C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\include;C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\ATLMFC\include;C:\Program Files\Microsoft Visual Studio\18\Community\VC\Auxiliary\VS\include;C:\Program Files (x86)\Windows Kits\10\include\10.0.26100.0\ucrt;C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\um;C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\shared;C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\winrt;C:\Program Files (x86)\Windows Kits\10\\include\10.0.26100.0\\cppwinrt
+#$ KMP_BLOCKTIME=1
+#$ KMP_HANDLE_SIGNALS=0
+#$ KMP_STACKSIZE=512k
+#$ LIB=C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\ATLMFC\lib\x64;C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\lib\x64;C:\Program Files (x86)\Windows Kits\10\lib\10.0.26100.0\ucrt\x64;C:\Program Files (x86)\Windows Kits\10\\lib\10.0.26100.0\\um\x64
+#$ LIBPATH=C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\ATLMFC\lib\x64;C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\lib\x64;C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\lib\x86\store\references;C:\Program Files (x86)\Windows Kits\10\UnionMetadata\10.0.26100.0;C:\Program Files (x86)\Windows Kits\10\References\10.0.26100.0;C:\Windows\Microsoft.NET\Framework64\v4.0.30319
+#$ LOCALAPPDATA=C:\Users\Francisco\AppData\Local
+#$ LOGONSERVER=\\IUPB-FRANCISCO
+#$ LSTC_LICENSE=Ansys
+#$ MATLAB_ARCH=win64
+#$ MOZ_PLUGIN_PATH=C:\Program Files (x86)\Foxit Software\Foxit PDF Reader\plugins\
+#$ MSMPI_BENCHMARKS=C:\Program Files\Microsoft MPI\Benchmarks\
+#$ MSMPI_BIN=C:\Program Files\Microsoft MPI\Bin\
+#$ MSMPI_INC=C:\Program Files (x86)\Microsoft SDKs\MPI\Include\
+#$ MSMPI_LIB32=C:\Program Files (x86)\Microsoft SDKs\MPI\Lib\x86\
+#$ MSMPI_LIB64=C:\Program Files (x86)\Microsoft SDKs\MPI\Lib\x64\
+#$ MWAPIKEY=1ugR9UZX9SIijsqO
+#$ MWCONCP=437
+#$ MW_CONNECTOR_COOKIE_SETTINGS=[{"prefix":"ch_","suffix":"_32572"}]
+#$ NUMBER_OF_PROCESSORS=24
+#$ OMP_NUM_THREADS=24
+#$ OneDrive=D:\Francisco\Documents\OneDrive
+#$ OS=Windows_NT
+#$ Path=C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\bin\HostX64\x64;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\VC\VCPackages;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\TestWindow;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\TeamFoundation\Team Explorer;C:\Program Files\Microsoft Visual Studio\18\Community\MSBuild\Current\bin\Roslyn;C:\Program Files\Microsoft Visual Studio\18\Community\Team Tools\DiagnosticsHub\Collector;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\Extensions\Microsoft\CodeCoverage.Console;C:\Program Files (x86)\Windows Kits\10\bin\10.0.26100.0\\x64;C:\Program Files (x86)\Windows Kits\10\bin\\x64;C:\Program Files\Microsoft Visual Studio\18\Community\\MSBuild\Current\Bin\amd64;C:\Windows\Microsoft.NET\Framework64\v4.0.30319;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\Tools\;C:\Program Files\MATLAB\R2025b\bin\win64;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v13.2\bin\x64;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v13.2\bin;C:\Program Files\Microsoft MPI\Bin\;C:\Program Files (x86)\Common Files\Oracle\Java\java8path;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\MATLAB\MATLAB Runtime\R2024b\runtime\win64;C:\Program Files\MATLAB\R2025b\runtime\win64;C:\Program Files\MATLAB\R2025b\bin;C:\Users\Francisco\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Docker\Docker\resources\bin;C:\Program Files\Git\cmd;C:\Program Files\gs\gs10.01.2\bin;C:\Program Files\dotnet\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\NVIDIA Corporation\NVIDIA app\NvDLISR;C:\Program Files\PowerToys\DSCModules\;C:\Program Files\PowerShell\7\;C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\;C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\bin\Hostx64\x64;C:\Program Files\NVIDIA Corporation\Nsight Compute 2026.1.1\;C:\Users\Francisco\AppData\Local\Microsoft\WindowsApps;C:\Users\Francisco\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Francisco\AppData\Local\Programs\MiKTeX\miktex\bin\x64\;C:\Users\Francisco\AppData\Local\Pandoc\;C:\Users\Francisco\AppData\Roaming\Programs\Zero Install;C:\Users\Francisco\AppData\Local\Microsoft\WindowsApps;D:\MathWorks\Registro de software\GUI_PorousTopStat2D_FG\PorousStatTOP_2d\for_redistribution_files_only\DXFLib_v0.9.1;;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\Ninja;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\VC\Linux\bin\ConnectionManagerExe;C:\Program Files\Microsoft Visual Studio\18\Community\VC\vcpkg
+#$ PATHEXT=.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC
+#$ Platform=x64
+#$ POWERSHELL_DISTRIBUTION_CHANNEL=MSI:Windows 10 Pro
+#$ PROCESSOR_ARCHITECTURE=AMD64
+#$ PROCESSOR_IDENTIFIER=AMD64 Family 23 Model 113 Stepping 0, AuthenticAMD
+#$ PROCESSOR_LEVEL=23
+#$ PROCESSOR_REVISION=7100
+#$ ProgramData=C:\ProgramData
+#$ ProgramFiles=C:\Program Files
+#$ ProgramFiles(x86)=C:\Program Files (x86)
+#$ ProgramW6432=C:\Program Files
+#$ PROMPT=$P$G
+#$ PSModulePath=C:\Program Files\WindowsPowerShell\Modules;C:\WINDOWS\system32\WindowsPowerShell\v1.0\Modules
+#$ PUBLIC=C:\Users\Public
+#$ P_SCHEMA=C:\Program Files\ANSYS Inc\ANSYS Student\v241\AISOL\CADIntegration\Parasolid\PSchema
+#$ QT_QPA_PLATFORM=windows:fontengine=freetype
+#$ SESSIONNAME=Console
+#$ SL_HST_INSTALL_PATH=C:\Program Files\Altair\2023.1\hwdesktop\hst\bin\win64
+#$ SoS_debug_exe=C:\Program Files\ANSYS Inc\ANSYS Student\v241\optiSLang\sos\sos_console.exe
+#$ SoS_exe=C:\Program Files\ANSYS Inc\ANSYS Student\v241\optiSLang\sos\sos.exe
+#$ SoS_install_dir=C:\Program Files\ANSYS Inc\ANSYS Student\v241\optiSLang\sos
+#$ SystemDrive=C:
+#$ SystemRoot=C:\WINDOWS
+#$ UCRTVersion=10.0.26100.0
+#$ UGII_USER_DIR=C:\Program Files\Altair\2025\SimSolid2025\NX
+#$ UniversalCRTSdkDir=C:\Program Files (x86)\Windows Kits\10\
+#$ USERDOMAIN=IUPB-FRANCISCO
+#$ USERDOMAIN_ROAMINGPROFILE=IUPB-FRANCISCO
+#$ USERNAME=Francisco
+#$ USERPROFILE=C:\Users\Francisco
+#$ VCIDEInstallDir=C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\VC\
+#$ VCINSTALLDIR=C:\Program Files\Microsoft Visual Studio\18\Community\VC\
+#$ VCPKG_ROOT=C:\Program Files\Microsoft Visual Studio\18\Community\VC\vcpkg
+#$ VCToolsInstallDir=C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\
+#$ VCToolsRedistDir=C:\Program Files\Microsoft Visual Studio\18\Community\VC\Redist\MSVC\14.50.35710\
+#$ VCToolsVersion=14.50.35717
+#$ VisualStudioVersion=18.0
+#$ VS180COMNTOOLS=C:\Program Files\Microsoft Visual Studio\18\Community\Common7\Tools\
+#$ VSCMD_ARG_app_plat=Desktop
+#$ VSCMD_ARG_HOST_ARCH=x64
+#$ VSCMD_ARG_TGT_ARCH=x64
+#$ VSCMD_VER=18.4.3
+#$ VSINSTALLDIR=C:\Program Files\Microsoft Visual Studio\18\Community\
+#$ windir=C:\WINDOWS
+#$ WindowsLibPath=C:\Program Files (x86)\Windows Kits\10\UnionMetadata\10.0.26100.0;C:\Program Files (x86)\Windows Kits\10\References\10.0.26100.0
+#$ WindowsSdkBinPath=C:\Program Files (x86)\Windows Kits\10\bin\
+#$ WindowsSdkDir=C:\Program Files (x86)\Windows Kits\10\
+#$ WindowsSDKLibVersion=10.0.26100.0\
+#$ WindowsSdkVerBinPath=C:\Program Files (x86)\Windows Kits\10\bin\10.0.26100.0\
+#$ WindowsSDKVersion=10.0.26100.0\
+#$ __DOTNET_ADD_64BIT=1
+#$ __DOTNET_PREFERRED_BITNESS=64
+#$ __KMP_REGISTERED_LIB_5792=00007FFF045B4D04-cafe2bec-libiomp5md.dll
+#$ __VSCMD_PREINIT_PATH=C:\Program Files\MATLAB\R2025b\bin\win64;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v13.2\bin\x64;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v13.2\bin;C:\Program Files\Microsoft MPI\Bin\;C:\Program Files (x86)\Common Files\Oracle\Java\java8path;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\MATLAB\MATLAB Runtime\R2024b\runtime\win64;C:\Program Files\MATLAB\R2025b\runtime\win64;C:\Program Files\MATLAB\R2025b\bin;C:\Users\Francisco\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Docker\Docker\resources\bin;C:\Program Files\Git\cmd;C:\Program Files\gs\gs10.01.2\bin;C:\Program Files\dotnet\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\NVIDIA Corporation\NVIDIA app\NvDLISR;C:\Program Files\PowerToys\DSCModules\;C:\Program Files\PowerShell\7\;C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\;C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\bin\Hostx64\x64;C:\Program Files\NVIDIA Corporation\Nsight Compute 2026.1.1\;C:\Users\Francisco\AppData\Local\Microsoft\WindowsApps;C:\Users\Francisco\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Francisco\AppData\Local\Programs\MiKTeX\miktex\bin\x64\;C:\Users\Francisco\AppData\Local\Pandoc\;C:\Users\Francisco\AppData\Roaming\Programs\Zero Install;C:\Users\Francisco\AppData\Local\Microsoft\WindowsApps;D:\MathWorks\Registro de software\GUI_PorousTopStat2D_FG\PorousStatTOP_2d\for_redistribution_files_only\DXFLib_v0.9.1;
+#$ PATH=C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\bin\Hostx64\x64;C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\bin\HostX64\x64;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\VC\VCPackages;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\TestWindow;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\TeamFoundation\Team Explorer;C:\Program Files\Microsoft Visual Studio\18\Community\MSBuild\Current\bin\Roslyn;C:\Program Files\Microsoft Visual Studio\18\Community\Team Tools\DiagnosticsHub\Collector;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\Extensions\Microsoft\CodeCoverage.Console;C:\Program Files (x86)\Windows Kits\10\bin\10.0.26100.0\\x64;C:\Program Files (x86)\Windows Kits\10\bin\\x64;C:\Program Files\Microsoft Visual Studio\18\Community\\MSBuild\Current\Bin\amd64;C:\Windows\Microsoft.NET\Framework64\v4.0.30319;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\Tools\;C:\Program Files\MATLAB\R2025b\bin\win64;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v13.2\bin\x64;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v13.2\bin;C:\Program Files\Microsoft MPI\Bin\;C:\Program Files (x86)\Common Files\Oracle\Java\java8path;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\MATLAB\MATLAB Runtime\R2024b\runtime\win64;C:\Program Files\MATLAB\R2025b\runtime\win64;C:\Program Files\MATLAB\R2025b\bin;C:\Users\Francisco\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Docker\Docker\resources\bin;C:\Program Files\Git\cmd;C:\Program Files\gs\gs10.01.2\bin;C:\Program Files\dotnet\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\NVIDIA Corporation\NVIDIA app\NvDLISR;C:\Program Files\PowerToys\DSCModules\;C:\Program Files\PowerShell\7\;C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\;C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\bin\Hostx64\x64;C:\Program Files\NVIDIA Corporation\Nsight Compute 2026.1.1\;C:\Users\Francisco\AppData\Local\Microsoft\WindowsApps;C:\Users\Francisco\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Francisco\AppData\Local\Programs\MiKTeX\miktex\bin\x64\;C:\Users\Francisco\AppData\Local\Pandoc\;C:\Users\Francisco\AppData\Roaming\Programs\Zero Install;C:\Users\Francisco\AppData\Local\Microsoft\WindowsApps;D:\MathWorks\Registro de software\GUI_PorousTopStat2D_FG\PorousStatTOP_2d\for_redistribution_files_only\DXFLib_v0.9.1;;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\Ninja;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\VC\Linux\bin\ConnectionManagerExe;C:\Program Files\Microsoft Visual Studio\18\Community\VC\vcpkg
+#$ _NVVM_BRANCH_=nvvm
+#$ _SPACE_= 
+#$ _CUDART_=cudart
+#$ CUDA_ROOT=C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v13.2\bin
+#$ _HERE_=C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v13.2\bin
+#$ _THERE_=C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v13.2\bin
+#$ _TARGET_SIZE_=
+#$ _TARGET_DIR_=
+#$ _TARGET_SIZE_=64
+#$ _WIN_PLATFORM_=x64
+#$ TOP=C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v13.2\bin/..
+#$ CICC_PATH=C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v13.2\bin/../nvvm/bin
+#$ NVVMIR_LIBRARY_DIR=C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v13.2\bin/../nvvm/libdevice
+#$ PATH=C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v13.2\bin/../nvvm/bin;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v13.2\bin;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v13.2\bin/../lib;C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\bin\Hostx64\x64;C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\bin\HostX64\x64;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\VC\VCPackages;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\TestWindow;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\TeamFoundation\Team Explorer;C:\Program Files\Microsoft Visual Studio\18\Community\MSBuild\Current\bin\Roslyn;C:\Program Files\Microsoft Visual Studio\18\Community\Team Tools\DiagnosticsHub\Collector;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\Extensions\Microsoft\CodeCoverage.Console;C:\Program Files (x86)\Windows Kits\10\bin\10.0.26100.0\\x64;C:\Program Files (x86)\Windows Kits\10\bin\\x64;C:\Program Files\Microsoft Visual Studio\18\Community\\MSBuild\Current\Bin\amd64;C:\Windows\Microsoft.NET\Framework64\v4.0.30319;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\Tools\;C:\Program Files\MATLAB\R2025b\bin\win64;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v13.2\bin\x64;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v13.2\bin;C:\Program Files\Microsoft MPI\Bin\;C:\Program Files (x86)\Common Files\Oracle\Java\java8path;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\MATLAB\MATLAB Runtime\R2024b\runtime\win64;C:\Program Files\MATLAB\R2025b\runtime\win64;C:\Program Files\MATLAB\R2025b\bin;C:\Users\Francisco\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Docker\Docker\resources\bin;C:\Program Files\Git\cmd;C:\Program Files\gs\gs10.01.2\bin;C:\Program Files\dotnet\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\NVIDIA Corporation\NVIDIA app\NvDLISR;C:\Program Files\PowerToys\DSCModules\;C:\Program Files\PowerShell\7\;C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\;C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.50.35717\bin\Hostx64\x64;C:\Program Files\NVIDIA Corporation\Nsight Compute 2026.1.1\;C:\Users\Francisco\AppData\Local\Microsoft\WindowsApps;C:\Users\Francisco\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Francisco\AppData\Local\Programs\MiKTeX\miktex\bin\x64\;C:\Users\Francisco\AppData\Local\Pandoc\;C:\Users\Francisco\AppData\Roaming\Programs\Zero Install;C:\Users\Francisco\AppData\Local\Microsoft\WindowsApps;D:\MathWorks\Registro de software\GUI_PorousTopStat2D_FG\PorousStatTOP_2d\for_redistribution_files_only\DXFLib_v0.9.1;;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\Ninja;C:\Program Files\Microsoft Visual Studio\18\Community\Common7\IDE\VC\Linux\bin\ConnectionManagerExe;C:\Program Files\Microsoft Visual Studio\18\Community\VC\vcpkg
+#$ INCLUDES="-IC:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v13.2\bin/../include" "-IC:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v13.2\bin/../include/cccl"  
+#$ SYSTEM_INCLUDES= 
+#$ LIBRARIES=  "/LIBPATH:C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v13.2\bin/../lib/x64"
+#$ CUDAFE_FLAGS=
+#$ PTXAS_FLAGS=
+Index_sps.cu
+#$ resource file C:\Users\FRANCI~1\AppData\Local\Temp/tmpxft_00007f7c_00000000-12.res: [-D__CUDA_ARCH__=750 -D__CUDA_ARCH_LIST__=750 -nologo -E -TP  -DCUDA_DOUBLE_MATH_FUNCTIONS -EHsc -D__CUDACC__ -D__NVCC__  "-IC:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v13.2\bin/../include" "-IC:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v13.2\bin/../include/cccl"      -D__CUDACC_VER_MAJOR__=13 -D__CUDACC_VER_MINOR__=2 -D__CUDACC_VER_BUILD__=78 -D__CUDA_API_VER_MAJOR__=13 -D__CUDA_API_VER_MINOR__=2 -D__NVCC_DIAG_PRAGMA_SUPPORT__=1 -D__CUDACC_DEVICE_ATOMIC_BUILTINS__=1 -FI "cuda_runtime.h" "Index_sps.cu" ]
+#$ cl.exe @"C:\Users\FRANCI~1\AppData\Local\Temp/tmpxft_00007f7c_00000000-12.res" > "C:/Users/FRANCI~1/AppData/Local/Temp/tmpxft_00007f7c_00000000-11_Index_sps.cpp1.ii" 
+Index_sps.cu
+#$ erase C:\Users\FRANCI~1\AppData\Local\Temp/tmpxft_00007f7c_00000000-12.res
+#$ ""%CICC_PATH%\cicc" --ms_c++14 --static-host-stub --device-hidden-visibility --microsoft_version=1950 --msvc_target_version=1950 --compiler_bindir "C:/Program Files/Microsoft Visual Studio/18/Community/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/../../../../../../.." --sdk_dir "C:/Program Files (x86)/Windows Kits/10/" --display_error_number --orig_src_file_name "Index_sps.cu" --orig_src_path_name "H:\My Drive\Research\Papers\MatGen paper\StiffMa\Code\tbx\StiffMa\Scalar\Index_sps.cu" --allow_managed  -arch compute_75 -m64 --no-version-ident -ftz=0 -prec_div=1 -prec_sqrt=1 -fmad=1 --include_file_name "tmpxft_00007f7c_00000000-7_Index_sps.fatbin.c"  -tused --gen_module_id_file --module_id_file_name "C:/Users/FRANCI~1/AppData/Local/Temp/tmpxft_00007f7c_00000000-8_Index_sps.module_id"  "C:/Users/FRANCI~1/AppData/Local/Temp/tmpxft_00007f7c_00000000-11_Index_sps.cpp1.ii" -o "Index_sps.ptx""

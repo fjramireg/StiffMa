@@ -82,16 +82,15 @@ end
 [ head1, header ] = strtok ( header );
 [ rep,   header ] = strtok ( header );
 [ field, header ] = strtok ( header );
-[ symm,  header ] = strtok ( header );
+[ symm,  ~ ] = strtok ( header );
 %
 %  Force the strings to be in lowercase.
 %
-head1 = lower ( head1 );
 rep   = lower ( rep );
 field = lower ( field );
 symm  = lower ( symm );
 
-if ( length ( symm ) == 0 )
+if ( isempty ( symm ) )
     fprintf ( 1, '\n' );
     fprintf ( 1, 'MM_TO_MSM - Fatal error!\n' );
     fprintf ( 1, '  The header was not recognized.\n' );
@@ -106,11 +105,11 @@ if ( ~strcmp ( head0, '%%MatrixMarket' ) )
     error ( 'MM_TO_MSM - Not a valid MatrixMarket header.' )
 end
 
-if ( ~strcmp ( head1, 'matrix' ) )
+if ( ~strcmpi ( head1, 'matrix' ) )
     fprintf ( 1, '\n' );
     fprintf ( 1, 'MM_TO_MSM - Fatal error!\n' );
     fprintf ( 1, '  This Matrix Market file is not of type "matrix".\n' );
-    fprintf ( 1, '  It is of a type "%s", which this program cannot handle.\n', headl );
+    fprintf ( 1, '  It is of a type "%s", which this program cannot handle.\n', head1 );
     error ( 'MM_TO_MSM - Exit!' );
 end
 %
@@ -159,13 +158,13 @@ if ( strcmp ( rep, 'coordinate' ) )
     %
     %  Real/double precision/integer-valued entries.
     %
-    if  ( strcmp ( field, 'real' ) | ...
-            strcmp ( field, 'double' ) | ...
+    if  ( strcmp ( field, 'real' ) || ...
+            strcmp ( field, 'double' ) || ...
             strcmp ( field, 'integer' ) )
         
         T = fscanf ( mmfile, '%f' );
         
-        if ( size ( T ) ~= 3 * entries )
+        if ( numel ( T ) ~= 3 * entries )
             fprintf ( 1, '\n' );
             fprintf ( 1, 'MM_TO_MSM - Fatal error!\n' );
             fprintf ( 1, '  The data file does not contain the expected\n' );
@@ -184,7 +183,7 @@ if ( strcmp ( rep, 'coordinate' ) )
         
         T = fscanf ( mmfile, '%f', 4 );
         
-        if ( size ( T ) ~= 4 * entries )
+        if ( numel ( T ) ~= 4 * entries )
             fprintf ( 1, '\n' );
             fprintf ( 1, 'MM_TO_MSM - Fatal error!\n' );
             fprintf ( 1, '  File does not contain expected amount of data.\n' );
@@ -192,7 +191,7 @@ if ( strcmp ( rep, 'coordinate' ) )
         end
         
         T = reshape ( T, 4, entries )';
-        A = sparse ( T(:,1), T(:,2), T(:,3) + T(:,4) * i, rows, cols );
+        A = sparse ( T(:,1), T(:,2), T(:,3) + T(:,4) * 1i, rows, cols );
         %
         %  No values given.
         %
@@ -200,7 +199,7 @@ if ( strcmp ( rep, 'coordinate' ) )
         
         T = fscanf ( mmfile, '%f' );
         
-        if ( size ( T ) ~= 2 * entries )
+        if ( numel ( T ) ~= 2 * entries )
             fprintf ( 1, '\n' );
             fprintf ( 1, 'MM_TO_MSM - Fatal error!\n' );
             fprintf ( 1, '  File does not contain expected amount of data.\n' );
@@ -278,14 +277,12 @@ elseif ( strcmp ( rep, 'array' ) )
         %
     elseif ( strcmp ( field, 'complex' ) )
         
-        tmpr = fscanf ( mmfile, '%f', 1 );
-        tmpi = fscanf ( mmfile, '%f', 1 );
-        A  = tmpr + tmpi * i;
+        A = zeros ( entries, 1 );
         
-        for j = 1 : entries-1
+        for j = 1 : entries
             tmpr = fscanf ( mmfile, '%f', 1 );
             tmpi = fscanf ( mmfile, '%f', 1 );
-            A  = [ A; tmpr + tmpi * i ];
+            A(j) = tmpr + tmpi * 1i;
         end
         
         if ( strcmp ( symm, 'symmetric' ) || ...
