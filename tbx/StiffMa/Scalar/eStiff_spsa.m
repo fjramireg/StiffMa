@@ -44,7 +44,10 @@ elseif ( strcmp(sets.dTE,'uint64') && strcmp(sets.dTN,'double') )	% Indices: 'ui
         'const unsigned long long int*, const double *, double *',...
         'Hex8scalarIdy');
 else
-    error('Input "elements" must be defined as "uint32", "uint64" and Input "nodes" must be defined as "single" or "double" ');
+    msg = sprintf(['Input "elements" must be defined as "uint32" or "uint64", ',...
+        'while Input "nodes" must be defined as "single" or "double" when "uint32" is used. ',...
+        'However, if "uint64" is defined, only "double" is accepted.']);
+    error(msg);
 end
 
 % MATLAB KERNEL CONFIGURATION

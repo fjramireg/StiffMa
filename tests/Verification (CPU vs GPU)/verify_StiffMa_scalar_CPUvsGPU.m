@@ -1,8 +1,8 @@
 % This script is used to compare the results between CPU and GPU in MATLAB for the scalar problem.
-% 
+%
 %   For more information, see the <a href="matlab:
 %   web('https://github.com/fjramireg/StiffMa')">StiffMa</a> web site.
-% 
+%
 %   Written by Francisco Javier Ramirez-Gil, fjramireg@gmail.com
 %   Universidad Nacional de Colombia - Medellin
 %   Institución Universitaria Pascual Bravo, Medellin-Colombia
@@ -51,8 +51,8 @@ elements = [1 5 9 8 10 14 18 17;% Element 1
 
 %% Settings
 dTE = 'uint32';     % Data precision for "elements" ['uint32', 'uint64']
-dTN = 'double';     % Data precision for "nodes" ['single' or 'double']
-Mesh.nodes = nodes;
+dTN = 'single';     % Data precision for "nodes" ['single' or 'double']
+Mesh.nodes = single(nodes);
 Mesh.elements = uint32(elements);
 [nel, nxe] = size(Mesh.elements);
 dxn = 1;            % For vector 3 (UX, UY, UZ). For scalar 1 (Temp)
@@ -60,32 +60,59 @@ sets.dTE = dTE;     % Data precision for computing
 sets.dTN = dTN;     % Data precision for computing
 sets.nel = nel;     % Number of finite elements
 sets.nxe = nxe;     % Number of nodes per element
-sets.dxn = dxn;     % Number of DOFs per node 
-sets.edof= dxn*nxe; % Number of DOFs per element 
+sets.dxn = dxn;     % Number of DOFs per node
+sets.edof= dxn*nxe; % Number of DOFs per element
 sets.tdofs = dxn*size(nodes,1); % Number of total DOFs in the mesh
 sets.sz  = sets.edof * (sets.edof + 1) / 2; % Number of symmetry entries
 
-%% GPU Settings
-d = gpuDevice;
-sets.tbs      = d.MaxThreadsPerBlock;   % Max. Thread Block Size
-sets.numSMs   = d.MultiprocessorCount;  % Number of multiprocessors on the device
-sets.WarpSize = d.SIMDWidth;            % The warp size in threads
-
-%%  Stiffness matrix generation
+%%  Stiffness matrix generation on CPU
 
 % MATLAB Computation on serial CPU
-% K_hf = StiffMa_ss(Mesh, c, sets);                   % MATLAB assembly on CPU: K
 K_hs = StiffMa_sss(Mesh, c, sets);                  % MATLAB assembly on CPU: tril(K)
 
-% MATLAB Computation on parallel GPU
-elementsGPU = gpuArray(Mesh.elements);
-nodesGPU = gpuArray(Mesh.nodes');
-K_ds = StiffMa_sps(elementsGPU, nodesGPU, c, sets); % MATLAB stiffness matrix on GPU (tril(K))
-K_ds2 = gather(K_ds);
+%%  Stiffness matrix generation on GPU
+v = ver;
+if any(strcmp({v.Name}, 'Parallel Computing Toolbox'))
+
+    % GPU Settings
+    d = gpuDevice;
+    sets.tbs      = d.MaxThreadsPerBlock;   % Max. Thread Block Size
+    sets.numSMs   = d.MultiprocessorCount;  % Number of multiprocessors on the device
+    sets.WarpSize = d.SIMDWidth;            % The warp size in threads
+
+    % MATLAB Computation on parallel GPU
+    elementsGPU = gpuArray(Mesh.elements);
+    nodesGPU = gpuArray(Mesh.nodes);
+    K_ds = StiffMa_sps(elementsGPU, nodesGPU', c, sets); % MATLAB stiffness matrix on GPU (tril(K))
+    K_ds2 = gather(K_ds);
+
+    % MATLAB Computation on parallel GPU (Optimized version)
+    K = StiffMa_sps_opt(elementsGPU, nodesGPU, c, sets);
+
+end
 
 %% Comparison
 
-% figure('color',[1,1,1]); 
+% figure('color',[1,1,1]);
 % spy3(K_hs,'or'); hold on;
-% spy3(K_ds2,'.b'); legend('CPU','GPU'); hold off; 
+% spy3(K_ds2,'.b'); legend('CPU','GPU'); hold off;
 % fprintf("MATLAB. CPU vs GPU. Difference: %u\n",norm(K_hs(:)-K_ds2(:)));
+
+% %% Comparison: GPU
+% if any(strcmp({v.Name}, 'Parallel Computing Toolbox'))
+%     fig3 = figure('color','none','InvertHardcopy','off');   % figure background = transparent
+%     ax3 = axes('Parent',fig3,'Color','none');               % axes background = transparent
+%     hold on;
+%     spy3(K_hs,'or');                                    % K_tril from MATLAB on CPU
+%     spy3(gather(K_ds),'.b');                                    % K_tril from MATLAB on GPU
+%     legend({'CPU','GPU'},"Location","northeast"); hold off;
+%     fprintf("MATLAB. CPU vs GPU. Difference: %u\n",norm(K_hs(:)-K_ds(:)));
+%
+%     % fig4 = figure('color','none','InvertHardcopy','off');   % figure background = transparent
+%     % ax4 = axes('Parent',fig4,'Color','none');               % axes background = transparent
+%     % hold on;
+%     % spy3(gather(K_ds),'or');                                    % K_tril from MATLAB on CPU
+%     % spy3(gather(K_ds2),'.b');                                    % K_tril from MATLAB on GPU
+%     % legend({'CPU','GPU'},"Location","northeast"); hold off;
+%     % fprintf("MATLAB. CPU vs GPU. Difference: %u\n",norm(K_ds(:)-K_ds2(:)));
+% end

@@ -4,7 +4,7 @@ function [iK, jK] = Index_spsa_opt(elements, sets)
 % indices for the mesh using some CUDA optimization (opt) techniques: 
 %  1. coalesced reads/writes
 %  2. __restrict__ (to helps the compiler optimize memory accesses more aggressively)
-%  3. The indices shoud be reorganized to obtain the original MATLAB-style sz*e + t ordering, e.g.
+%  3. The indices should be reorganized to obtain the original MATLAB-style sz*e + t ordering, e.g.
 %       iKd_col = reshape(reshape(iKd, sets.nel, sets.sz).', [], 1);
 %       jKd_col = reshape(reshape(jKd, sets.nel, sets.sz).', [], 1); 
 % 

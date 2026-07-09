@@ -40,6 +40,8 @@
 ** COMPILATION within MATLAB using mexcuda (https://www.mathworks.com/help/parallel-computing/mexcuda.html)
 *   mexcuda -ptx -v Index_sps_opt.cu
 *
+* Available kernel entry points:
+*
 ** MATLAB KERNEL CREATION (inside MATLAB)
 *			kernel = parallel.gpu.CUDAKernel('Index_sps_opt.ptx', 'Index_sps_opt.cu');
 *
@@ -91,15 +93,14 @@ __global__ void IndexScalarGPU(const intT* __restrict__ elements,
         for (j=0; j<8; ++j){
             #pragma unroll
             for (i=j; i<8; ++i){
-                idx = temp*nel + e;                
+                idx = temp*nel + e; ++temp;
                 if (n[i] >= n[j]){
                     iK[idx] = n[i];
                     jK[idx] = n[j];}
                 else{
                     iK[idx] = n[j];
                     jK[idx] = n[i];
-                } // End of IF
-                ++temp;
+                } // End of IF conditional
             } // End of FOR LOOP i
         } // End of FOR LOOP j
     } // End of FOR LOOP e

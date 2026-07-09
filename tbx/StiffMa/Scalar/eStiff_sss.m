@@ -25,12 +25,11 @@ for i=1:8               % Loop over numerical integration
     Jac  = Li*X;        % Jacobian matrix
     detJ = det(Jac);    % Jacobian's determinant
     B = Jac\Li;         % B matrix
-    temp = 0;
+    idx = 0;
     for j=1:8           % Loops to compute the symmetric part of ke
         for k=j:8
-            idx = temp + k;
+            idx = idx + 1;
             ke(idx) = ke(idx) + c*detJ*(B(:,k)'*B(:,j));
         end
-        temp = temp + k - j;
     end
 end
