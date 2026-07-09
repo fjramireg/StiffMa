@@ -50,25 +50,37 @@ elements = [1 5 9 8 10 14 18 17;% Element 1
     17 18 16 13 26 27 25 22];   % Element 8
 
 %% Settings
-dTE = 'uint32';     % Data precision for "elements" ['uint32', 'uint64']
-dTN = 'single';     % Data precision for "nodes" ['single' or 'double']
-Mesh.nodes = single(nodes);
-Mesh.elements = uint32(elements);
-[nel, nxe] = size(Mesh.elements);
+
+% Data type
+dTE = 'uint32';      % Data precision for "elements" ['uint32', 'uint64']
+dTN = 'single';      % Data precision for "nodes" ['single' or 'double']
+fnE = str2func(dTE); % Function handle to manage "elements" data type
+fnN = str2func(dTN); % Function handle to manage "nodes" data type
+
+% Data type conversion
+Mesh.elements = fnE(elements);
+Mesh.nodes = fnN(nodes);
+c = fnN(c);
+
+% Setting variables
+[nel, nxe]    = size(Mesh.elements);
+[nnodes, dim] = size(Mesh.nodes);
 dxn = 1;            % For vector 3 (UX, UY, UZ). For scalar 1 (Temp)
-sets.dTE = dTE;     % Data precision for computing
-sets.dTN = dTN;     % Data precision for computing
+sets.dTE = dTE;     % Data precision for connectivity array
+sets.dTN = dTN;     % Data precision for nodal coordinated
 sets.nel = nel;     % Number of finite elements
+sets.nnodes = nnodes;  % Number of nodes
 sets.nxe = nxe;     % Number of nodes per element
+sets.dim = dim;     % Dimension (only 3D for now)
 sets.dxn = dxn;     % Number of DOFs per node
 sets.edof= dxn*nxe; % Number of DOFs per element
-sets.tdofs = dxn*size(nodes,1); % Number of total DOFs in the mesh
+sets.tdofs = dxn*nnodes; % Number of total DOFs in the mesh
 sets.sz  = sets.edof * (sets.edof + 1) / 2; % Number of symmetry entries
 
 %%  Stiffness matrix generation on CPU
 
 % MATLAB Computation on serial CPU
-K_hs = StiffMa_sss(Mesh, c, sets);                  % MATLAB assembly on CPU: tril(K)
+K_h = StiffMa_sss(Mesh, c, sets);                  % MATLAB assembly on CPU: tril(K)
 
 %%  Stiffness matrix generation on GPU
 v = ver;
@@ -83,36 +95,54 @@ if any(strcmp({v.Name}, 'Parallel Computing Toolbox'))
     % MATLAB Computation on parallel GPU
     elementsGPU = gpuArray(Mesh.elements);
     nodesGPU = gpuArray(Mesh.nodes);
-    K_ds = StiffMa_sps(elementsGPU, nodesGPU', c, sets); % MATLAB stiffness matrix on GPU (tril(K))
-    K_ds2 = gather(K_ds);
+    K_d = StiffMa_sps(elementsGPU', nodesGPU', c, sets); % MATLAB stiffness matrix on GPU (tril(K))
+    K_d2 = gather(K_d);
 
     % MATLAB Computation on parallel GPU (Optimized version)
-    K = StiffMa_sps_opt(elementsGPU, nodesGPU, c, sets);
-
+    K_dopt = StiffMa_sps_opt(elementsGPU, nodesGPU, c, sets);
+    K_dopt2 = gather(K_dopt);
 end
 
 %% Comparison
 
-% figure('color',[1,1,1]);
-% spy3(K_hs,'or'); hold on;
-% spy3(K_ds2,'.b'); legend('CPU','GPU'); hold off;
-% fprintf("MATLAB. CPU vs GPU. Difference: %u\n",norm(K_hs(:)-K_ds2(:)));
+if any(strcmp({v.Name}, 'Parallel Computing Toolbox'))
 
-% %% Comparison: GPU
-% if any(strcmp({v.Name}, 'Parallel Computing Toolbox'))
-%     fig3 = figure('color','none','InvertHardcopy','off');   % figure background = transparent
-%     ax3 = axes('Parent',fig3,'Color','none');               % axes background = transparent
-%     hold on;
-%     spy3(K_hs,'or');                                    % K_tril from MATLAB on CPU
-%     spy3(gather(K_ds),'.b');                                    % K_tril from MATLAB on GPU
-%     legend({'CPU','GPU'},"Location","northeast"); hold off;
-%     fprintf("MATLAB. CPU vs GPU. Difference: %u\n",norm(K_hs(:)-K_ds(:)));
-%
-%     % fig4 = figure('color','none','InvertHardcopy','off');   % figure background = transparent
-%     % ax4 = axes('Parent',fig4,'Color','none');               % axes background = transparent
-%     % hold on;
-%     % spy3(gather(K_ds),'or');                                    % K_tril from MATLAB on CPU
-%     % spy3(gather(K_ds2),'.b');                                    % K_tril from MATLAB on GPU
-%     % legend({'CPU','GPU'},"Location","northeast"); hold off;
-%     % fprintf("MATLAB. CPU vs GPU. Difference: %u\n",norm(K_ds(:)-K_ds2(:)));
-% end
+    [i_h,j_h,k_h] = find(K_h);
+    [i_d,j_d,k_d] = find(K_d2);
+    [i_do,j_do,k_do] = find(K_dopt2);
+
+    if ( sum(i_h == i_d) ~= numel(k_h) || sum(j_h == j_d) ~= numel(k_d) || ...
+            sum(i_h == i_do) ~= numel(k_h) || sum(j_h == j_do) ~= numel(k_do) )
+        error('Mismatch in indices between CPU and GPU computations.');
+    else
+        % Values
+        Diff_CPUvsGPU_vec = k_h - k_d;
+        Diff_CPUvsGPU_esc = norm(Diff_CPUvsGPU_vec);
+        Diff_CPUvsGPUopt_vec = k_h - k_do;
+        Diff_CPUvsGPUopt_esc = norm(Diff_CPUvsGPUopt_vec);
+        Diff_GPUvsGPUopt_vec = k_d - k_do;
+        Diff_GPUvsGPUopt_esc = norm(Diff_GPUvsGPUopt_vec);
+
+        % Show as tex
+        fprintf("K: CPU vs GPU. Difference: %u\n",Diff_CPUvsGPU_esc);
+        fprintf("K: CPU vs GPU optimized. Difference: %u\n",Diff_CPUvsGPUopt_esc);
+        fprintf("K: GPU vs GPU optimized. Difference: %u\n",Diff_GPUvsGPUopt_esc);
+
+        % Show as figure
+        fig = figure('color','none','InvertHardcopy','off');   % figure background = transparent
+        ax = axes('Parent',fig,'Color','none');               % axes background = transparent
+        nent = 1:length(k_h);
+        hold on
+        plot(ax, nent, Diff_CPUvsGPU_vec,'b','DisplayName', sprintf('CPU vs GPU. L_2-norm = %d', Diff_CPUvsGPU_esc ) );%,...
+        plot(ax, nent, Diff_CPUvsGPUopt_vec,':k','DisplayName', sprintf('CPU vs GPU opt. L_2-norm = %d', Diff_CPUvsGPUopt_esc ) );%,...
+        plot(ax, nent, Diff_GPUvsGPUopt_vec,'--r','DisplayName', sprintf('GPU vs GPU opt. L_2-norm = %d', Diff_GPUvsGPUopt_esc ) );%,...
+        legend(ax,'show',"Location","best")
+        title(ax, "Global Stiffness Matrix Comparison");
+        xlabel(ax, 'Entry Index');
+        ylabel(ax, 'Difference');
+        grid(ax, 'off');
+        box on;
+        hold off;
+    end
+
+end

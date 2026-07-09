@@ -1,11 +1,11 @@
 %% Verify the SCALAR implementation
-% 
+%
 % This script is used to compare the results between ANSYS and MATLAB, and
 % between CPU and GPU for the scalar problem.
-% 
+%
 %   For more information, see the <a href="matlab:
 %   web('https://github.com/fjramireg/StiffMa')">StiffMa</a> web site.
-% 
+%
 %   Written by Francisco Javier Ramirez-Gil, fjramireg@gmail.com
 %   Universidad Nacional de Colombia - Medellin
 %   Institución Universitaria Pascual Bravo, Medellin-Colombia
@@ -45,7 +45,8 @@ nodes = [0, 0, 0;   % node 1
     2, 0, 1;        % node 26
     2, 1, 1;];      % node 27
 
-elements = [1 5 9 8 10 14 18 17;% Element 1
+elements = [
+    1 5 9 8 10 14 18 17;        % Element 1
     5 2 6 9 14 11 15 18;        % Element 2
     9 6 3 7 18 15 12 16;        % Element 3
     8 9 7 4 17 18 16 13;        % Element 4
@@ -69,18 +70,12 @@ sets.dTE = dTE;     % Data precision for computing
 sets.dTN = dTN;     % Data precision for computing
 sets.nel = nel;     % Number of finite elements
 sets.nxe = nxe;     % Number of nodes per element
-sets.dxn = dxn;     % Number of DOFs per node 
-sets.edof= dxn*nxe; % Number of DOFs per element 
+sets.dxn = dxn;     % Number of DOFs per node
+sets.edof= dxn*nxe; % Number of DOFs per element
 sets.tdofs = dxn*size(nodes,1); % Number of total DOFs in the mesh
 sets.sz  = sets.edof * (sets.edof + 1) / 2; % Number of symmetry entries
 
-%% GPU Settings
-d = gpuDevice;
-sets.tbs      = d.MaxThreadsPerBlock;   % Max. Thread Block Size
-sets.numSMs   = d.MultiprocessorCount;  % Number of multiprocessors on the device
-sets.WarpSize = d.SIMDWidth;            % The warp size in threads
-
-%%  Stiffness matrix generation
+%%  Stiffness matrix generation on CPU
 
 % ANSYS Computation
 % StiffMansys_mac(elements,nodes,c);                % ANSYS macro to generate tril(K)
@@ -96,58 +91,48 @@ K_af = mm_to_msm ('ANSYS_rst/STIFF_ANSYS.mmf');     % Import ANSYS result: K
 % MATLAB Computation on serial CPU
 K_hf = StiffMa_ss(Mesh, c, sets);                   % MATLAB assembly on CPU: K
 K_hf2 = K_hf(MapVec,MapVec);                        % Reorder K in MATLAB as ANSYS result
+K_hfs = tril(K_hf);                                 % tril(K) Lower triangular of K from MATLAB
 K_hs = StiffMa_sss(Mesh, c, sets);                  % MATLAB assembly on CPU: tril(K)
 
-% MATLAB Computation on parallel GPU
-K_ds = StiffMa_sps(gpuArray(Mesh.elements'), gpuArray(Mesh.nodes'), c, sets); % MATLAB stiffness matrix on GPU (tril(K))
+%% 2D Graphical comparison: CPU
+% This graphs compare that the stiffness matrices have the same structure  
 
-% % MATLAB Computation on parallel GPU (Optimized version)
-% [iKd_opt, jKd_opt] = Index_spsa_opt(gpuArray(Mesh.elements), sets);     % indices for tril(K)
-% % Data shoud be reorganized to obtain the original MATLAB-style sz*e + t ordering, e.g. 
-% % Option 1:
-% % M = reshape(iKd, sets.nel, sets.sz);   % sets.nel-by-sets.sz
-% % T = M.';                                 % nonconjugate transpose
-% % iKd = T(:);                              % column vector
-% % M = reshape(jKd, sets.nel, sets.sz);   % sets.nel-by-sets.sz
-% % T = M.';                                 % nonconjugate transpose
-% % jKd = T(:);                              % column vector
-% % Option 2:
-% iKd_opt = reshape(reshape(iKd_opt, sets.nel, sets.sz).', [], 1);
-% jKd_opt = reshape(reshape(jKd_opt, sets.nel, sets.sz).', [], 1);
+% ANSYS vs MATLAB (K_full)
+fig1 = figure('color','none');   
+ax1 = axes('Parent',fig1,'Color','none');
+hold on;
+spy(K_af,'or');     % K_full from ANSYS
+spy(K_hf2,'.b');    % K_full from MATLAB
+legend('ANSYS','MATLAB');
+hold off;
 
+% tril(K_full) vs K_tril
+figt = figure('color','none');   
+axt = axes('Parent',figt,'Color','none');               
+hold on;
+spy(K_hfs,'or');    % tril(K_full) from MATLAB
+spy(K_hs,'.b');     % K_tril from MATLAB
+legend('tril(K_{full})','K_{tril}');
+hold off;
 
-%% Comparison
+%% 3D Graphical comparison: CPU
+% This graphs compare that the stiffness matrices have the same structure
+% and NNZ values
 
-% Graphical comparison                                  % ANSYS vs MATLAB: 2D
-fig1 = figure('color','none','InvertHardcopy','off');   % figure background = transparent
-ax1 = axes('Parent',fig1,'Color','none');               % axes background = transparent
-hold on; 
-spy(K_af,'or');                                    % K_full from ANSYS
-spy(K_hf2,'.b');                                   % K_full from MATLAB
-legend('ANSYS','MATLAB'); 
-hold off; 
-
-% Graphical comparison                              % ANSYS vs MATLAB: 3D
-fig2 = figure('color','none','InvertHardcopy','off');   % figure background = transparent
-ax2 = axes('Parent',fig2,'Color','none');               % axes background = transparent
-hold on;  
-spy3(K_af,'or');                                    % K_full from ANSYS
-spy3(K_hf2,'.b');                                   % K_full from MATLAB
-legend({'ANSYS','MATLAB'},"Location","northeast"); hold off; 
+% ANSYS vs MATLAB (K_full)
+fig2 = figure('color','none');  
+ax2 = axes('Parent',fig2,'Color','none');              
+hold on;
+spy3(K_af,'or');    % K_full from ANSYS
+spy3(K_hf2,'.b');   % K_full from MATLAB
+legend({'ANSYS','MATLAB'},"Location","northeast"); hold off;
 fprintf("ANSYS vs MATLAB. Difference: %u\n",norm(K_af(:)-K_hf2(:)));
 
-fig3 = figure('color','none','InvertHardcopy','off');   % figure background = transparent
-ax3 = axes('Parent',fig3,'Color','none');               % axes background = transparent
+% tril(K_full) vs K_tril
+fig4 = figure('color','none');  
+ax4 = axes('Parent',fig4,'Color','none');              
 hold on;
-spy3(K_hs,'or');                                    % K_tril from MATLAB on CPU
-spy3(gather(K_ds),'.b');                                    % K_tril from MATLAB on GPU
-legend({'CPU','GPU'},"Location","northeast"); hold off; 
-fprintf("MATLAB. CPU vs GPU. Difference: %u\n",norm(K_hs(:)-K_ds(:)));
-
-% fig4 = figure('color','none','InvertHardcopy','off');   % figure background = transparent
-% ax4 = axes('Parent',fig4,'Color','none');               % axes background = transparent
-% hold on;
-% spy3(gather(K_ds),'or');                                    % K_tril from MATLAB on CPU
-% spy3(gather(K_ds2),'.b');                                    % K_tril from MATLAB on GPU
-% legend({'CPU','GPU'},"Location","northeast"); hold off; 
-% fprintf("MATLAB. CPU vs GPU. Difference: %u\n",norm(K_ds(:)-K_ds2(:)));
+spy3(K_hfs,'or');   % tril(K_full) from MATLAB
+spy3(K_hs,'.b');    % K_tril from MATLAB
+legend('tril(K_{full})','K_{tril}');
+fprintf("tril(K_full) vs K_tril. Difference: %u\n",norm(K_hs(:)-K_hfs(:)));

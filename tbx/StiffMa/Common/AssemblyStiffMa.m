@@ -6,7 +6,7 @@ function K = AssemblyStiffMa(iK, jK, Ke, sets)
 %   value of each entry of the sparse matrix. Whilst sets.dTE and sets.dTN
 %   are the data type defined to connectivity and nodal coordinates
 %   matrices, respectively. sets.tdofs is the total number of degree of
-%   freedoms, which determines the size of the sparse matrix. 
+%   freedoms, which determines the size of the sparse matrix.
 %
 %   See also SPARSE, ACCUMARRAY
 %
@@ -19,12 +19,12 @@ function K = AssemblyStiffMa(iK, jK, Ke, sets)
 %   Created:  10/12/2018. Version: 1.0
 
 %% Assembly of global sparse matrix
-if ( strcmp(sets.dTE,'double') && strcmp(sets.dTN,'double') )
-    K = sparse(iK, jK, Ke, sets.tdofs, sets.tdofs);
-    
-elseif ( strcmp(sets.dTE,'uint32') && strcmp(sets.dTN,'double') )
-    K = accumarray([iK,jK], Ke, [sets.tdofs sets.tdofs], [], [], 1);
-    
-else
-    error('MATLAB currently does not support "single" data precision for sparse matrices!');
-end
+% if ( strcmp(sets.dTE,'double') && strcmp(sets.dTN,'double') )
+K = sparse(iK, jK, Ke, sets.tdofs, sets.tdofs);
+%
+% elseif ( strcmp(sets.dTE,'uint32') && strcmp(sets.dTN,'double') )
+%     K = accumarray([iK,jK], Ke, [sets.tdofs sets.tdofs], [], [], 1);
+%
+% else
+%     error('MATLAB currently does not support "single" data precision for sparse matrices!');
+% end
