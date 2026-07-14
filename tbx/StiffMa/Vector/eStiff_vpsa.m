@@ -5,10 +5,11 @@ function Ke = eStiff_vpsa(elements, nodes, MP, sets)
 %   Ke = ESTIFF_VPSA(elements, nodes, MP, sets) returns the element stiffness
 %   matrix "ke" for all elements in a finite element analysis of a vector
 %   problem in a three-dimensional domain taking advantage of symmetry and
-%   GPU computing, where "elements" is the connectivity matrix, "nodes" the
-%   nodal coordinates, and "MP.E" (Young's modulus) and "MP.nu" (Poisson
-%   ratio) the material  property for an isotropic material. The struct
-%   "sets" must contain several similation parameters:
+%   GPU computing, where "elements" is the connectivity matrix (8-by-nel),
+%   "nodes" the nodal coordinates (3-by-nnodes), and "MP.E" (Young's
+%   modulus) and "MP.nu" (Poisson ratio) the material  property for an
+%   isotropic material. The struct "sets" must contain several similation
+%   parameters: 
 %   - sets.dTE is the data precision of "Mesh.elements"
 %   - sets.dTN is the data precision of "Mesh.nodes"
 %   - sets.nel is the number of finite elements
@@ -30,11 +31,16 @@ function Ke = eStiff_vpsa(elements, nodes, MP, sets)
 % MATLAB KERNEL CREATION
 if ( strcmp(sets.dTE,'uint32') && strcmp(sets.dTN,'single') )       % Indices: 'uint32'. NNZ: 'single'
     kernel = parallel.gpu.CUDAKernel('eStiff_vpss.ptx', 'eStiff_vpss.cu');
-    sets.nel = single(sets.nel);                                    % Converts to 'single' precision
+    sets.nel = uint32(sets.nel);
+    
 elseif ( strcmp(sets.dTE,'uint32') && strcmp(sets.dTN,'double') )   % Indices: 'uint32'. NNZ: 'double'
     kernel = parallel.gpu.CUDAKernel('eStiff_vpsd.ptx', 'eStiff_vpsd.cu');
+
 else
-    error('Input "elements" must be defined as "uint32" and "nodes" as "single" or "double"');
+    msg = sprintf(['Input "elements" must be defined as "uint32" or "uint64", ',...
+        'while Input "nodes" must be defined as "single" or "double" when "uint32" is used. ',...
+        'However, if "uint64" is defined for "elements", only "double" is accepted for "nodes".']);
+    error(msg);
 end
 
 % MATLAB KERNEL CONFIGURATION

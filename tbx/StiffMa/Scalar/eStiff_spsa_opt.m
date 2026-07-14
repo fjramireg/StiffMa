@@ -31,18 +31,22 @@ if ( strcmp(sets.dTE,'uint32') && strcmp(sets.dTN,'single') )       % Indices: '
     ker = parallel.gpu.CUDAKernel('eStiff_sps_opt.ptx',...  % PTXFILE
         'const unsigned int *, const float *, unsigned int, unsigned int, float, float *',...	% C prototype for kernel
         'Hex8scalar_uint32_single');                        % Specify entry point
-    % sets.nel = single(sets.nel); c = single(c); sets.nnodes = single(size(nodes,1));             % Converts to 'single' precision
 
 elseif ( strcmp(sets.dTE,'uint32') && strcmp(sets.dTN,'double') )	% Indices: 'uint32'. NNZ: 'double'
     ker = parallel.gpu.CUDAKernel('eStiff_sps_opt.ptx',...
-        'const unsigned int *, const double *, unsigned int, unsigned int, double, double *', ... 
+        'const unsigned int *, const double *, unsigned int, unsigned int, double, double *', ...
         'Hex8scalar_uint32_double');
+
 elseif ( strcmp(sets.dTE,'uint64') && strcmp(sets.dTN,'double') )	% Indices: 'uint64'. NNZ: 'double'
     ker = parallel.gpu.CUDAKernel('eStiff_sps_opt.ptx',...
         'const unsigned long long int *, const double *, unsigned long long int, unsigned long long int, double, double *',...
         'Hex8scalar_uint64_double');
+
 else
-    error('Input "elements" must be defined as "uint32", "uint64" and Input "nodes" must be defined as "single" or "double" ');
+    msg = sprintf(['Input "elements" must be defined as "uint32" or "uint64", ',...
+        'while Input "nodes" must be defined as "single" or "double" when "uint32" is used. ',...
+        'However, if "uint64" is defined for "elements", only "double" is accepted for "nodes".']);
+    error(msg);
 end
 
 % MATLAB KERNEL CONFIGURATION

@@ -1,6 +1,7 @@
 function K = StiffMa_vss(Mesh, MP, sets)
 % STIFFMA_VSS Create the global stiffness matrix for a VECTOR (v) problem
 % in SERIAL (s) computing taking advantage of simmetry (s).
+% 
 %   STIFFMA_VSS(Mesh, MP, sets) returns the lower-triangle of a sparse matrix
 %   K from finite element analysis of vector problems in a three-dimensional
 %   domain taking advantage of simmetry, where Mesh is a structure variable

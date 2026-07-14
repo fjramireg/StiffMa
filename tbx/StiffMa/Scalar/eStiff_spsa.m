@@ -35,18 +35,21 @@ if ( strcmp(sets.dTE,'uint32') && strcmp(sets.dTN,'single') )       % Indices: '
         'Hex8scalarIfj');                                 	% Specify entry point
     sets.nel = single(sets.nel);                            % Converts to 'single' precision
     c = single(c);
+
 elseif ( strcmp(sets.dTE,'uint32') && strcmp(sets.dTN,'double') )	% Indices: 'uint32'. NNZ: 'double'
     ker = parallel.gpu.CUDAKernel('eStiff_sps.ptx',...
         'const unsigned int *, const double *, double *',...
         'Hex8scalarIdj');
+
 elseif ( strcmp(sets.dTE,'uint64') && strcmp(sets.dTN,'double') )	% Indices: 'uint64'. NNZ: 'double'
     ker = parallel.gpu.CUDAKernel('eStiff_sps.ptx',...
         'const unsigned long long int*, const double *, double *',...
         'Hex8scalarIdy');
+    
 else
     msg = sprintf(['Input "elements" must be defined as "uint32" or "uint64", ',...
         'while Input "nodes" must be defined as "single" or "double" when "uint32" is used. ',...
-        'However, if "uint64" is defined, only "double" is accepted.']);
+        'However, if "uint64" is defined for "elements", only "double" is accepted for "nodes".']);
     error(msg);
 end
 

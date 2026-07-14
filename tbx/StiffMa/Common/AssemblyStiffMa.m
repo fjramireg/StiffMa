@@ -14,17 +14,10 @@ function K = AssemblyStiffMa(iK, jK, Ke, sets)
 %   web('https://github.com/fjramireg/StiffMa')">StiffMa</a> web site.
 
 %   Written by Francisco Javier Ramirez-Gil, fjramireg@gmail.com
-%   Universidad Nacional de Colombia - Medellin
-% 	Modified: 14/05/2020. Version: 1.4. Less inputs, Doc improved
-%   Created:  10/12/2018. Version: 1.0
+%   Institución Universitaria Pascual Bravo, Medellin-Colombia
+%       Modified: July 10, 2026. Version: 1.2. Takes into account the MATLAB version
+% 	    Modified: 14/05/2020. Version: 1.1. Less inputs, Doc improved
+%       Created:  10/12/2018. Version: 1.0
 
 %% Assembly of global sparse matrix
-% if ( strcmp(sets.dTE,'double') && strcmp(sets.dTN,'double') )
 K = sparse(iK, jK, Ke, sets.tdofs, sets.tdofs);
-%
-% elseif ( strcmp(sets.dTE,'uint32') && strcmp(sets.dTN,'double') )
-%     K = accumarray([iK,jK], Ke, [sets.tdofs sets.tdofs], [], [], 1);
-%
-% else
-%     error('MATLAB currently does not support "single" data precision for sparse matrices!');
-% end

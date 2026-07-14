@@ -1,12 +1,16 @@
-% This script is used to compare the results between CPU and GPU in MATLAB for the scalar problem.
+% This script is used to compare the results between CPU and GPU in MATLAB for the VECTOR problem.
 %
 %   For more information, see the <a href="matlab:
 %   web('https://github.com/fjramireg/StiffMa')">StiffMa</a> web site.
 %
 %   Written by Francisco Javier Ramirez-Gil, fjramireg@gmail.com
 %   Institución Universitaria Pascual Bravo, Medellin-Colombia
-%       Created: April 14, 2026. Version: 1.0
+%       Created: July 10, 2026. Version: 1.0
 
+
+%% Problem setup
+MP.E = 1;          % Elastic modulus [Pa] (homogeneous, linear, isotropic material)
+MP.nu = 0.3;       % Poisson ratio []
 
 %% Mesh generation (connectivity array)
 elements = [
@@ -20,11 +24,11 @@ elements = [
     17 18 16 13 26 27 25 22];   % Element 8
 
 %% Settings
-dTE = 'uint32';      % Data precision for "elements" ['uint32', 'uint64']
+dTE = 'uint32';     % Data precision for "elements" ['uint32', 'uint64']
 fnE = str2func(dTE); % Function handle to manage "elements" data type
 Mesh.elements = fnE(elements);
 [nel, nxe] = size(Mesh.elements);
-dxn = 1;            % For vector 3 (UX, UY, UZ). For scalar 1 (Temp)
+dxn = 3;            % For vector 3 (UX, UY, UZ). For scalar 1 (Temp)
 sets.dTE = dTE;     % Data precision for computing
 sets.nel = nel;     % Number of finite elements
 sets.nxe = nxe;     % Number of nodes per element
@@ -35,25 +39,7 @@ sets.sz  = sets.edof * (sets.edof + 1) / 2; % Number of symmetry entries
 %% INDEX iK, jK for the Stiffness matrix generation on the CPU
 
 % MATLAB Computation on serial CPU (host)
-[iKh, jKh] = Index_sssa(Mesh.elements, sets);               % indices for tril(K). Size: 36-by-nel, 1. (REFERENCE)
-
-% MATLAB Computation on parallel CPU (host. Vectorized version)
-[iKh_vec, jKh_vec] = Index_ssat(Mesh.elements, sets);       % indices for tril(K). Size: nel-by-36
-
-% Comparison CPU vs CPU optimized
-if ( sum(iKh==iKh_vec) ~= length(iKh) ) || ( sum(jKh==jKh_vec) ~= numel(jKh) )
-    error('Mismatch in indices between CPU and vectorized CPU computations.');
-else
-    disp("Indices between CPU and vectorized CPU are correctly computed.")
-    figCPU = figure('color','none');
-    axCPU = axes('Parent',figCPU,'Color','none');
-    hold on;
-    spy(sparse(iKh,jKh,true),'or');         % K_tril from MATLAB Computation on serial CPU
-    spy(sparse(iKh_vec,jKh_vec,true),'.b'); % K_tril from MATLAB Computation on parallel CPU (host. Vectorized version)
-    title("CPU vs CPU optimized");
-    legend('Serial CPU','Vectorized CPU');
-    hold off;
-end
+[iKh, jKh] = Index_vssa(Mesh.elements, sets);               % indices for tril(K). Size: 300-by-nel, 1. (REFERENCE)
 
 %% INDEX iK, jK for the Stiffness matrix generation on the GPU
 v = ver;
@@ -67,10 +53,10 @@ if ( any(strcmp({v.Name}, 'Parallel Computing Toolbox')) && (gpuDeviceCount > 0)
     elementsGPU = gpuArray(Mesh.elements);  % Transfer from host-to-device memories
 
     % MATLAB Computation on parallel GPU (device. Old version)
-    [iKd, jKd] = Index_spsa(elementsGPU, sets);  % indices for tril(K). Size: 36-by-nel, 1
+    [iKd, jKd] = Index_vpsa(elementsGPU', sets);  % indices for tril(K). Size: 36-by-nel, 1
 
     % MATLAB Computation on parallel GPU (device. Optimized version)
-    [iKd_opt, jKd_opt] = Index_spsa_opt(elementsGPU, sets);     % indices for tril(K). Size: nel-by-36, 1
+    [iKd_opt, jKd_opt] = Index_vpsa_opt(elementsGPU, sets);     % indices for tril(K). Size: nel-by-300, 1
     % Data should be reorganized to obtain the original MATLAB-style sz*e + t ordering, e.g.
     % Option 1:
     % M = reshape(iKd, sets.nel, sets.sz);   % sets.nel-by-sets.sz
@@ -94,7 +80,7 @@ if ( any(strcmp({v.Name}, 'Parallel Computing Toolbox')) && (gpuDeviceCount > 0)
         axGPU = axes('Parent',figGPU,'Color','none');
         hold on;
         spy(sparse(iKh,jKh,true),'or');         % K_tril from MATLAB Computation on serial CPU
-        spy(sparse(iKd,jKd,1),'.b');         % K_tril from MATLAB Computation on parallel GPU (device. Old version)
+        spy(sparse(iKd,jKd,1),'.b');            % K_tril from MATLAB Computation on parallel GPU (device. Old version)
         title("CPU vs GPU");
         legend('Serial CPU','Parallel GPU (Old version)');
         hold off;

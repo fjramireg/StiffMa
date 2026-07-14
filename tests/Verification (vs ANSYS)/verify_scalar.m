@@ -1,13 +1,11 @@
 %% Verify the SCALAR implementation
 %
-% This script is used to compare the results between ANSYS and MATLAB, and
-% between CPU and GPU for the scalar problem.
+% This script is used to compare the results between ANSYS and MATLAB for the scalar problem.
 %
 %   For more information, see the <a href="matlab:
 %   web('https://github.com/fjramireg/StiffMa')">StiffMa</a> web site.
 %
 %   Written by Francisco Javier Ramirez-Gil, fjramireg@gmail.com
-%   Universidad Nacional de Colombia - Medellin
 %   Institución Universitaria Pascual Bravo, Medellin-Colombia
 %       Updated: April 14, 2026. Version: 1.1 (fix error: Unrecognized field name "tdofs".)
 %       Created:  16/12/2019. Version: 1.0
@@ -56,23 +54,30 @@ elements = [
     17 18 16 13 26 27 25 22];   % Element 8
 
 %% Settings
-dTE = 'uint32';     % Data precision for "elements" ['uint32', 'uint64']
-if strcmp(dTE,'uint32')
-    Mesh.elements = uint32(elements);
-else
-    Mesh.elements = uint64(elements);
-end
-dTN = 'double';     % Data precision for "nodes" ['single' or 'double']
-Mesh.nodes = nodes;
-[nel, nxe] = size(Mesh.elements);
+% Data type
+dTE = 'uint32';      % Data precision for "elements" ['uint32', 'uint64']
+dTN = 'single';      % Data precision for "nodes" ['single' or 'double']
+fnE = str2func(dTE); % Function handle to manage "elements" data type
+fnN = str2func(dTN); % Function handle to manage "nodes" data type
+
+% Data type conversion
+Mesh.elements = fnE(elements);
+Mesh.nodes = fnN(nodes);
+c = fnN(c);
+
+% Setting variables
+[nel, nxe]    = size(Mesh.elements);
+[nnodes, dim] = size(Mesh.nodes);
 dxn = 1;            % For vector 3 (UX, UY, UZ). For scalar 1 (Temp)
-sets.dTE = dTE;     % Data precision for computing
-sets.dTN = dTN;     % Data precision for computing
+sets.dTE = dTE;     % Data precision for connectivity array
+sets.dTN = dTN;     % Data precision for nodal coordinated
 sets.nel = nel;     % Number of finite elements
+sets.nnodes = nnodes;  % Number of nodes
 sets.nxe = nxe;     % Number of nodes per element
+sets.dim = dim;     % Dimension (only 3D for now)
 sets.dxn = dxn;     % Number of DOFs per node
 sets.edof= dxn*nxe; % Number of DOFs per element
-sets.tdofs = dxn*size(nodes,1); % Number of total DOFs in the mesh
+sets.tdofs = dxn*nnodes; % Number of total DOFs in the mesh
 sets.sz  = sets.edof * (sets.edof + 1) / 2; % Number of symmetry entries
 
 %%  Stiffness matrix generation on CPU
