@@ -6,23 +6,17 @@ function fullTable = runIndexTest
 %   web('https://github.com/fjramireg/StiffMa')">StiffMa</a> web site.
 %
 %   Written by Francisco Javier Ramirez-Gil, fjramireg@gmail.com
-%   Universidad Nacional de Colombia - Medellin
-%   Created:  13/02/2020. Version: 1.4
+%   Institución Universitaria Pascual Bravo, Medellin-Colombia
+%       Updated: July 24, 2026. 
+%       Created:  13/02/2020. Version: 1.4
 
 
 %% Variables for performance tests
-nel_all = [189];        % Cases for mesh size. Limited by GPU memory
-dTEall = {'uint32'};       % Cases for "element" data type
+nel_all = [10 20 40 80 160 189 320 371];        % Cases for mesh size. Limited by GPU memory
+dTEall = {'uint32','uint64'};       % Cases for "element" data type
 dTNall = {'single'};                % Cases for "nodes" data type
-prob_all = {'Vector'};     % Cases for problem type
-proc_all = {'CPU'};           % Cases for processor type
-
-%% Adding folders to the path
-addpath('../Scalar/');
-addpath('../Vector/');
-addpath('../Common');
-addpath('../Utils');
-addpath(pwd);
+prob_all = {'Scalar','Vector'};     % Cases for problem type
+proc_all = {'CPU','GPU'};           % Cases for processor type
 
 %% Save results in this folder
 mkdir 'IndexPerfTestRst/';
@@ -48,8 +42,8 @@ else
 end
 
 %% Runs all INDEX tests
-t = now;                                % Current date and time at starting the process
-it = 0;                                 % Couter
+t = datetime('now');                    % Current date and time at starting the process
+it = 0;                                 % Counter
 import matlab.perftest.TimeExperiment   % To customize the time experiment
 
 % Loop through mesh size
@@ -73,7 +67,7 @@ for k = 1:length(nel_all)
                     sets.proc_type = proc_all{proc};
                     
                     % Prepares the test
-                    sets.name = ['ITest',sets.pf,'_',sets.proc_type(1),sets.prob_type(1),...
+                    sets.name = ['IndexTest_2026',sets.pf,'_',sets.proc_type(1),sets.prob_type(1),...
                         sets.dTN(1),sets.dTE(end-1:end),'_',num2str(sets.nel)];
                     WriteIndexPerfScript(sets);
                     fprintf("\n\nStarting the performance measurement with the following parameters:\n");
@@ -110,9 +104,9 @@ for k = 1:length(nel_all)
                     else
                         fullTable = vertcat(fullTable, perf_rst.sampleSummary);  % Colects the statistics for all the test cases
                     end
-                    save(sets.name,'perf_rst','fullTable',...
-                        'sets','MWver','platform','infoCPU','infoGPU','sys_info','lshw'); % Save partial results
-                    reset(gpuDevice);                                                                           % Reset the GPU
+                    % save(sets.name,'perf_rst','fullTable',...
+                    %     'sets','MWver','platform','infoCPU','infoGPU','sys_info','lshw'); % Save partial results
+                    reset(gpuDevice);                                                     % Reset the GPU
                     
                 end
             end
@@ -121,8 +115,8 @@ for k = 1:length(nel_all)
 end
 
 %% Save total results
-fname = ['IndexPerfTest_',sets.pf];
-save(fname,'fullTable');
+fname = ['IndexPerfTest_2026_',sets.pf];
+save(fname,'fullTable','sets','MWver','platform','infoCPU','infoGPU','sys_info','lshw');
 fprintf('\n\nA total of %i time experiments was executed!\n',it)
-fprintf('Date and time at the beginning of the process: \t%s \n',datestr(t));
-fprintf('Date and time at the end of the process: \t%s\n\n',datestr(now));
+fprintf('Date and time at the beginning of the process: \t%s \n',t);
+fprintf('Date and time at the end of the process: \t%s\n\n',datetime('now'));

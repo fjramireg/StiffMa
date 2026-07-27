@@ -23,7 +23,7 @@ function K = StiffMa_sps_opt(elements, nodes, c, sets)
 %   web('https://github.com/fjramireg/StiffMa')">StiffMa</a> web site.
 
 %   Written by Francisco Javier Ramirez-Gil, fjramireg@gmail.com
-%   Universidad Nacional de Colombia - Medellin
+%   Institución Universitaria Pascual Bravo, Medellin-Colombia
 %   Created: July 8, 2026. Version: 1.0. Inclusion of some CUDA optimization techniques
 
 %% Inputs check
