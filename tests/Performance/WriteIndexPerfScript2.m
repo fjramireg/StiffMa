@@ -14,7 +14,7 @@ fileID = fopen(Filename,'w');
 fprintf(fileID,'sets.nel = %d;\n',sets.nel);
 fprintf(fileID,"sets.dTE = '%s';\n",sets.dTE);
 fprintf(fileID,"sets.dTN = '%s';\n",sets.dTN);
-fprintf(fileID,'[elements, ~] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets.dTE,sets.dTN);\n');
+fprintf(fileID,'[elements, ~] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);\n');
 fprintf(fileID,'sets.nel = %d;\n',sets.nel^3);
 
 %% 'Scalar'
@@ -25,13 +25,13 @@ if strcmp(sets.prob_type,'Scalar')
     % 'Scalar'-'CPU'
     if strcmp(sets.proc_type,'CPU')
         
-        % 'Scalar'-'CPU'-'Full'
-        fprintf(fileID,'\n%s\n','%% Index-CPU-Scalar-Full');
-        fprintf(fileID,'[iK, jK] = Index_ssa(elements, sets);\n');
-        
-        % 'Scalar'-'CPU'-'Vectorized'
-        fprintf(fileID,'\n%s\n','%% Index-CPU-Scalar-Vectorized');
-        fprintf(fileID,"[iK, jK] = Index_sa(elements', sets);\n");
+        % % 'Scalar'-'CPU'-'Full'
+        % fprintf(fileID,'\n%s\n','%% Index-CPU-Scalar-Full');
+        % fprintf(fileID,'[iK, jK] = Index_ssa(elements, sets);\n');
+        % 
+        % % 'Scalar'-'CPU'-'Vectorized'
+        % fprintf(fileID,'\n%s\n','%% Index-CPU-Scalar-Vectorized');
+        % fprintf(fileID,"[iK, jK] = Index_sa(elements', sets);\n");
         
         % 'Scalar'-'CPU'-'Symmetry'
         fprintf(fileID,'\n%s\n','%% Index-CPU-Scalar-Symmetry');
@@ -61,13 +61,13 @@ elseif strcmp(sets.prob_type,'Vector')
     % 'Vector'-'CPU'
     if strcmp(sets.proc_type,'CPU')
         
-        % 'Vector'-'CPU'-'Full'
-        fprintf(fileID,'\n%s\n','%% Index-CPU-Vector-Full');
-        fprintf(fileID,'[iK, jK] = Index_vsa(elements, sets);\n');
-        
-        % 'Vector'-'CPU'-'Vectorized'
-        fprintf(fileID,'\n%s\n','%% Index-CPU-Vector-Vectorized');
-        fprintf(fileID,"[iK, jK] = Index_va(elements', sets);\n");
+        % % 'Vector'-'CPU'-'Full'
+        % fprintf(fileID,'\n%s\n','%% Index-CPU-Vector-Full');
+        % fprintf(fileID,'[iK, jK] = Index_vsa(elements, sets);\n');
+        % 
+        % % 'Vector'-'CPU'-'Vectorized'
+        % fprintf(fileID,'\n%s\n','%% Index-CPU-Vector-Vectorized');
+        % fprintf(fileID,"[iK, jK] = Index_va(elements', sets);\n");
         
         % 'Vector'-'CPU'-'Symmetry'
         fprintf(fileID,'\n%s\n','%% Index-CPU-Vector-Symmetry');

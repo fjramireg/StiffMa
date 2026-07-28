@@ -1,17 +1,24 @@
-#!/bin/bash                                                                                                     
-#SBATCH   --job-name=Index_test                                                                                         
-#SBATCH   --partition=GPU                                                                                     
-#SBATCH   --nodes=1                                                                                               
-#SBATCH   --ntasks-per-node=1                                                                                     
-#SBATCH   --cpus-per-task=1                                                                                     
-#SBATCH   --time=01-01:01                                                                                         
+#!/bin/bash
+#SBATCH --job-name=Matlab_IndexTest       # Descriptive title of the work
+#SBATCH --partition=GPU                   # Queue/Assigned Partition
+#SBATCH --nodes=1                         # Number of nodes requested
+#SBATCH --exclusive                       # Assigns the node exclusively (without sharing)
+#SBATCH --gres=gpu:1                      # Requires 1 physical GPU (Tesla T4)
+#SBATCH --time=24:00:00                   # Maximum execution time (adjust as needed)
+#SBATCH --output=resultado_%j.out         # Standard output file (%j adds the Job ID)
+#SBATCH --error=errores_%j.err            # Standard Error Log
 
-ssh nodo-g1
-cd StiffMa 
-
+# 1. Load the necessary environment and modules
+# module avail
 module purge
-module load Matlab/R2025b
-matlab -nodesktop -nosplash
-addpath(genpath(pwd))
+module load Matlab/2025b
 
+# 2. Print useful information to the output log (optional; useful for debugging)
+echo "=== START OF WORK ==="
+echo "Date and time: $(date)"
+echo "Execution node: $SLURM_NODELIST"
+echo "Job Directory: $SLURM_SUBMIT_DIR"
+echo "=========================="
 
+# 3. Run the code in MATLAB
+matlab -batch 'runIndexTest' -logfile IndexTest2026.log

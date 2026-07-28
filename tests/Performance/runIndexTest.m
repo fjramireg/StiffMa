@@ -7,26 +7,32 @@ function fullTable = runIndexTest
 %
 %   Written by Francisco Javier Ramirez-Gil, fjramireg@gmail.com
 %   Institución Universitaria Pascual Bravo, Medellin-Colombia
-%       Updated: July 24, 2026. 
+%       Updated: July 24, 2026.
 %       Created:  13/02/2020. Version: 1.4
 
 
 %% Variables for performance tests
-nel_all = [10 20 40 80 160 189 320 371];        % Cases for mesh size. Limited by GPU memory
+nel_all = [5 10];        % Toy
+% nel_all = [10 20 40 80 160 189 320 371];        % Cases for mesh size. Limited by GPU memory
 dTEall = {'uint32','uint64'};       % Cases for "element" data type
 dTNall = {'single'};                % Cases for "nodes" data type
 prob_all = {'Scalar','Vector'};     % Cases for problem type
 proc_all = {'CPU','GPU'};           % Cases for processor type
 
 %% Save results in this folder
-mkdir 'IndexPerfTestRst/';
-cd 'IndexPerfTestRst/';
+folder = 'PerfTest_2026';
+if isfolder(folder)
+    cd(folder);
+else
+    mkdir(folder);
+    cd(folder);
+end
 
 %% Platform details
 MWver = ver;        % Version information for MathWorks products
 platform = system_dependent('getos');
-infoCPU = cpuinfo();
-infoGPU = gpuDevice();
+infoCPU = cpuinfo;
+infoGPU = gpuDevice;
 sys_info = evalc('configinfo'); % Write system information
 if ismac
     sets.pf = 'MAC';    % Code to run on Mac platform
@@ -42,41 +48,43 @@ else
 end
 
 %% Runs all INDEX tests
-t = datetime('now');                    % Current date and time at starting the process
+t0 = datetime('now');                   % Current date and time at starting the process
 it = 0;                                 % Counter
 import matlab.perftest.TimeExperiment   % To customize the time experiment
 
 % Loop through mesh size
 for k = 1:length(nel_all)
     sets.nel = nel_all(k);
-    
+
     % Loop through element conectivity precision
     for i = 1:length(dTEall)
         sets.dTE = dTEall{i};
-        
+
         % Loop through nodal coordinates precision
         for j = 1:length(dTNall)
             sets.dTN = dTNall{j};
-            
+
             % Loop through problem type
             for pbl = 1:length(prob_all)
                 sets.prob_type = prob_all{pbl};
-                
+
                 % Loop through processor type
                 for proc = 1:length(proc_all)
                     sets.proc_type = proc_all{proc};
-                    
+
                     % Prepares the test
-                    sets.name = ['IndexTest_2026',sets.pf,'_',sets.proc_type(1),sets.prob_type(1),...
-                        sets.dTN(1),sets.dTE(end-1:end),'_',num2str(sets.nel)];
-                    WriteIndexPerfScript(sets);
+                    sets.name = 'IndexTest';
+                    Filename = [sets.name,'.m'];
+                    WriteIndexPerfScript2(sets);
                     fprintf("\n\nStarting the performance measurement with the following parameters:\n");
                     fprintf("Number of finine elements: %dx%dx%d (%d)\n",sets.nel,sets.nel,sets.nel,sets.nel^3);
                     fprintf("Date type for 'elements': '%s'\n",sets.dTE);
                     fprintf("Date type for 'nodes': '%s'\n",sets.dTN);
                     fprintf("Problem type: '%s'\n",sets.prob_type);
-                    fprintf("Processor type: '%s'\n\n",sets.proc_type);
-                    
+                    fprintf("Processor type: '%s'\n",sets.proc_type);
+                    fprintf("Platform type: '%s'\n\n",sets.pf);
+                    type(Filename);
+
                     % Executes the performance test
                     if (strcmp(sets.proc_type,'CPU') && sets.nel > 40  )   % Takes long time to run the full test. So, only 1 execution is taken
                         numSamples = 1;                                         % Number of sample measurements to collect, specified as a positive integer.
@@ -85,7 +93,7 @@ for k = 1:length(nel_all)
                         experiment = TimeExperiment.withFixedSampleSize(numSamples,'NumWarmups',numWarmups);% Construct time experiment with fixed number of measurements
                         perf_rst = run(experiment,suite);
                         disp(perf_rst);
-                        
+
                     else                % Default experiment setup
                         % Number of warm-up measurements: 4
                         % Minimum number of samples: 4
@@ -94,9 +102,10 @@ for k = 1:length(nel_all)
                         % Confidence level for samples to be within relative margin of error: 0.95 (95%)
                         perf_rst = runperf(sets.name);
                         disp(perf_rst);
-                        
+                        reset(gpuDevice);
+
                     end
-                    
+
                     % Partial results
                     it = it + 1;
                     if it == 1
@@ -104,19 +113,19 @@ for k = 1:length(nel_all)
                     else
                         fullTable = vertcat(fullTable, perf_rst.sampleSummary);  % Colects the statistics for all the test cases
                     end
-                    % save(sets.name,'perf_rst','fullTable',...
-                    %     'sets','MWver','platform','infoCPU','infoGPU','sys_info','lshw'); % Save partial results
-                    reset(gpuDevice);                                                     % Reset the GPU
-                    
+
                 end
             end
         end
     end
 end
+delete(Filename);
+t1 = datetime('now');                   % Current date and time at the END of the process
 
 %% Save total results
-fname = ['IndexPerfTest_2026_',sets.pf];
+fname = ['IndexPerfTestOut_',sets.pf];
 save(fname,'fullTable','sets','MWver','platform','infoCPU','infoGPU','sys_info','lshw');
 fprintf('\n\nA total of %i time experiments was executed!\n',it)
-fprintf('Date and time at the beginning of the process: \t%s \n',t);
-fprintf('Date and time at the end of the process: \t%s\n\n',datetime('now'));
+fprintf('Date and time at the beginning of the process: \t%s \n',t0);
+fprintf('Date and time at the end of the process: \t%s\n',t1);
+fprintf('Elapsed time : \t%s\n\n',t1-t0);
