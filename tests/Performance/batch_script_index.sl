@@ -5,13 +5,13 @@
 #SBATCH --exclusive                       # Assigns the node exclusively (without sharing)
 #SBATCH --gres=gpu:1                      # Requires 1 physical GPU (Tesla T4)
 #SBATCH --time=24:00:00                   # Maximum execution time (adjust as needed)
-#SBATCH --output=resultado_%j.out         # Standard output file (%j adds the Job ID)
-#SBATCH --error=errores_%j.err            # Standard Error Log
+#SBATCH --output=Index_LogResult_%j.out   # Standard output file (%j adds the Job ID)
+#SBATCH --error=error_%j.err              # Standard Error Log
 
 # 1. Load the necessary environment and modules
 # module avail
 module purge
-module load Matlab/2025b
+module load Matlab/R2025b
 
 # 2. Print useful information to the output log (optional; useful for debugging)
 echo "=== START OF WORK ==="
