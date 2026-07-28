@@ -12,7 +12,7 @@ function configinfo
 %
 %   To capture the output in a MATLAB string, use
 %      res = evalc('configinfo');
-% 
+%
 % See more at <a href="matlab:
 % web('https://www.mathworks.com/matlabcentral/fileexchange/18510-matlab-performance-measurement')">Matlab Central</a>.
 
@@ -70,18 +70,25 @@ if strcmp(computer, 'GLNX86') || strcmp(computer, 'GLNXA64')
     [a,b] = unix('cat /proc/cpuinfo');
     if a == 0    % normal return from exec
         p  = strfind(b, 'cpu MHz');
-        np = regexp(b(p:end), '[0-9]+', 'once', 'match');
-        disp(['CPU speed is: ' np ' MHz']);
+        if ~isempty(p)
+            % Se utiliza p(1) para extraer solo la primera coincidencia
+            np = regexp(b(p(1):end), '[0-9]+', 'once', 'match');
+            disp(['CPU speed is: ' np ' MHz']);
+        end
     end
 
     [a,b] = unix('cat /proc/meminfo');
     if a == 0    % normal return from exec
         p     = strfind(b, 'MemTotal');
-        mem   = regexp(b(p:end), '[0-9]+', 'once', 'match');
-        disp(['RAM: ' mem ' kB']);
+        if ~isempty(p)
+            mem = regexp(b(p(1):end), '[0-9]+', 'once', 'match');
+            disp(['RAM: ' mem ' kB']);
+        end
         p     = strfind(b, 'SwapTotal');
-        mem   = regexp(b(p:end), '[0-9]+', 'once', 'match');
-        disp(['Swap space: ' mem ' kB']);
+        if ~isempty(p)
+            mem = regexp(b(p(1):end), '[0-9]+', 'once', 'match');
+            disp(['Swap space: ' mem ' kB']);
+        end
     end
 elseif strcmp(computer, 'PCWIN')
     np = getenv('NUMBER_OF_PROCESSORS');
