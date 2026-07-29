@@ -21,4 +21,7 @@ echo "Job Directory: $SLURM_SUBMIT_DIR"
 echo "=========================="
 
 # 3. Run the code in MATLAB
-matlab -batch 'runIndexTest' -logfile IndexTest2026.log
+matlab -batch 'runIndexTest'
+
+# 4. Sent to the queue 
+# using the command: sbatch batch_script_index.sh

@@ -53,7 +53,7 @@ elements = [1 5 9 8 10 14 18 17;% Element 1
 
 % Data type
 dTE = 'uint32';      % Data precision for "elements" ['uint32', 'uint64']
-dTN = 'single';      % Data precision for "nodes" ['single' or 'double']
+dTN = 'double';      % Data precision for "nodes" ['single' or 'double']
 fnE = str2func(dTE); % Function handle to manage "elements" data type
 fnN = str2func(dTN); % Function handle to manage "nodes" data type
 
@@ -156,7 +156,7 @@ if any(strcmp({v.Name}, 'Parallel Computing Toolbox'))
         ax4 = axes('Parent',fig4,'Color','none');               % axes background = transparent
         plot(n, f_sol_h2, 'or', n, f_sol_d2, '.b', n, f_sol_d2-f_sol_h2, '--y')
         legend(ax4,{'CPU','GPU', 'Diff.'},"Location","best")
-        title(ax4, "Global Stiffness Matrix Comparison: f = K \ u");
+        title(ax4, "Global Stiffness Matrix Comparison: f = K \\ u");
         xlabel(ax4, 'Entry Index');
         ylabel(ax4, 'Difference');
 

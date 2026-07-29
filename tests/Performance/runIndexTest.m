@@ -12,14 +12,18 @@ function fullTable = runIndexTest
 
 
 %% Variables for performance tests
-nel_all = [5 10];        % Toy
-% nel_all = [10 20 40 80 160 189 320 371];        % Cases for mesh size. Limited by GPU memory
+%nel_all = [5 10];        % Toy
+nel_all = [10 20 40 80 160 189 320 371];        % Cases for mesh size. Limited by GPU memory
 dTEall = {'uint32','uint64'};       % Cases for "element" data type
-dTNall = {'single'};                % Cases for "nodes" data type
+dTNall = {'single'};                % Cases for "nodes" data type. Donot matter for this test
 prob_all = {'Scalar','Vector'};     % Cases for problem type
 proc_all = {'CPU','GPU'};           % Cases for processor type
 
 %% Save results in this folder
+old = pwd;
+cd('../../')
+addpath(genpath(pwd));
+cd(old);
 folder = 'PerfTest_2026';
 if isfolder(folder)
     cd(folder);
