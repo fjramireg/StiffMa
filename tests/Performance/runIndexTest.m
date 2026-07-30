@@ -13,11 +13,11 @@ function fullTable = runIndexTest
 
 %% Variables for performance tests
 %nel_all = [5 10];        % Toy
-nel_all = [10 20 40 80 160 189 320 371];        % Cases for mesh size. Limited by GPU memory
-dTEall = {'uint32','uint64'};       % Cases for "element" data type
-dTNall = {'single'};                % Cases for "nodes" data type. Donot matter for this test
-prob_all = {'Scalar','Vector'};     % Cases for problem type
-proc_all = {'CPU','GPU'};           % Cases for processor type
+nel_all = [10 20 40 80 160 189 320 371];% Cases for mesh size. Limited by GPU memory
+dTEall  = {'uint32','uint64'};          % Cases for "element" data type
+dTNall  = {'single'};                   % Cases for "nodes" data type. Do not matter for this test
+prob_all= {'Scalar','Vector'};          % Cases for problem type
+proc_all= {'CPU','GPU'};                % Cases for processor type
 
 %% Save results in this folder
 old = pwd;
@@ -33,20 +33,20 @@ else
 end
 
 %% Platform details
-MWver = ver;        % Version information for MathWorks products
-platform = system_dependent('getos');
-infoCPU = cpuinfo;
-infoGPU = gpuDevice;
-sys_info = evalc('configinfo'); % Write system information
+MWver = ver;            %#ok % Version information for MathWorks products
+platform = system_dependent('getos'); %#ok<NASGU> % OS info
+infoCPU = cpuinfo;      %#ok % CPU info
+infoGPU = gpuDevice;    %#ok % CPU info
+sys_info = evalc('configinfo'); %#ok % Write system information
 if ismac
     sets.pf = 'MAC';    % Code to run on Mac platform
-    lshw = [];
+    lshw = [];          %#ok<NASGU>
 elseif isunix
     sets.pf = 'LNX';    % Code to run on Linux platform
-    lshw = evalc('!lshw'); % List hardware details
+    lshw = evalc('!lshw'); %#ok % List hardware details
 elseif ispc
     sets.pf = 'WIN';    % Code to run on Windows platform
-    lshw = [];
+    lshw = [];          %#ok<NASGU>
 else
     error('Platform not supported');
 end
@@ -60,7 +60,7 @@ import matlab.perftest.TimeExperiment   % To customize the time experiment
 for k = 1:length(nel_all)
     sets.nel = nel_all(k);
 
-    % Loop through element conectivity precision
+    % Loop through element connectivity precision
     for i = 1:length(dTEall)
         sets.dTE = dTEall{i};
 
@@ -127,8 +127,9 @@ delete(Filename);
 t1 = datetime('now');                   % Current date and time at the END of the process
 
 %% Save total results
-fname = ['IndexPerfTestOut_',sets.pf];
-save(fname,'fullTable','sets','MWver','platform','infoCPU','infoGPU','sys_info','lshw');
+fname = ['IndexPerfTestOut_',sets.pf,'2026.mat'];
+% save(fname,'fullTable','sets','MWver','platform','infoCPU','infoGPU','sys_info','lshw');
+save(fname);
 fprintf('\n\nA total of %i time experiments was executed!\n',it)
 fprintf('Date and time at the beginning of the process: \t%s \n',t0);
 fprintf('Date and time at the end of the process: \t%s\n',t1);
