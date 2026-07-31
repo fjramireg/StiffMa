@@ -24,4 +24,4 @@ if type==8 % Bytes for double/uint64
 else % =4 % Bytes for single/uint32
     [nmax, ~] = findMaxContiguousEntriesGPU(1);
 end
-nelmax =floor( (nmax/(sz*n))^(1/3) );
+nelmax =floor( (nmax/(sz*n+11))^(1/3) );

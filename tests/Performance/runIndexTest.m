@@ -10,11 +10,16 @@ function fullTable = runIndexTest
 %       Updated: July 24, 2026.
 %       Created:  13/02/2020. Version: 1.4
 
+%% Max teoretical nel
+nxSca32 = computeNelmaxGPU(4, 36, 2);
+nxVec32 = computeNelmaxGPU(4, 300, 2);
+nxSca64 = computeNelmaxGPU(8, 36, 2);
+nxVec64 = computeNelmaxGPU(8, 300, 2);
 
 %% Variables for performance tests
 %nel_all = [5 10];        % Toy
 %nel_all = [10 20 40 80 160 320];% Cases for mesh size. 
-nel_all = [140:147, 180:186, 290:299, 370:377]; % Limited by GPU memory
+nel_all = sort([nxSca32-10:nxSca32+5, nxVec32-10:nxVec32+5, nxSca64-10:nxSca64+5, nxVec64-10:nxVec64+5]); % Limited by GPU memory (OOM)
 dTEall  = {'uint32','uint64'};          % Cases for "element" data type
 dTNall  = {'single'};                   % Cases for "nodes" data type. Do not matter for this test
 prob_all= {'Scalar','Vector'};          % Cases for problem type
