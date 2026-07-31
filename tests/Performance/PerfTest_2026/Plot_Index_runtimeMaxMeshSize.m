@@ -1,11 +1,30 @@
-% function Plot_Index_runtimeMaxMeshSize
+function Plot_Index_runtimeMaxMeshSize
+%PLOT_INDEX_RUNTIMEMAXMESHSIZE Plot Index runtime versus maximum mesh size
+%   PLOT_INDEX_RUNTIMEMAXMESHSIZE loads precomputed performance data from
+%   "IndexPerfTestOut_LNXMax2026.mat" and generates a figure showing the
+%   runtime (seconds) as a function of mesh size for different
+%   implementations (scalar/vector, uint32/uint64).
+%
+%   The function expects the MAT-file to contain the following variables:
+%     - fullTable     : table with a 'Mean' column containing runtimes
+%     - nel_all       : array of mesh sizes (used as x-axis)
+%     - dTEall, dTNall: parameter arrays used to compute expected runs
+%     - prob_all      : problem identifiers array
+%     - proc_all      : processor counts array
+%
+%   No inputs or outputs. The function creates a figure with four plotted
+%   curves and annotated datatips at the last non-NaN point of each curve.
+%
+%   Example:
+%       Plot_Index_runtimeMaxMeshSize
+%
 
 %   Written by Francisco Javier Ramirez-Gil, fjramireg@gmail.com
 %   Institución Universitaria Pascual Bravo, Medellin-Colombia
 %   Created: July 30, 2026. Version: 1.0
 
 %% Data
-load("IndexPerfTestOut_LNXMax2026.mat"); 
+load("IndexPerfTestOut_LNXMax2026.mat"); %#ok
 
 % Build parameter arrays in the same nested-loop order used to produce fullTable
 nN = numel(nel_all);
@@ -54,16 +73,11 @@ for ii = 1:numel(h)
     if isempty(idx)
         continue
     end
-    % Create a datatip at (xdata(idx), ydata(idx))
-    dt = datatip(h(ii), xdata(idx), ydata(idx)); % R2020b+
-    % dt = datatip(h(ii), xdata(idx), ydata(idx),nels(idx)); % R2020b+
-    % dt = datatip(h(ii), idx); % R2020b+
 
+    dt = datatip(h(ii), xdata(idx), ydata(idx));
     % Optional styling
     % dt.FontSize = 12;
-    dt.Interpreter = inter;           % use your existing 'inter' (e.g. 'latex')
-    % dt.LineStyle = 'none';            % remove connecting line in the datatip
-    % dt.BackgroundColor = 'none';
+    dt.Interpreter = inter;
 end
 
 % Labels
@@ -78,9 +92,5 @@ lg.Location = 'best';
 lg.Interpreter = inter;
 
 % Set the remaining axes properties
-% axis(ax,'tight','square');
 set(ax,'XGrid','on','XMinorTick','on','XScale','lin',...
     'YGrid','on','YMinorTick','on','YScale','lin','FontSize',20,'TickLabelInterpreter',inter);
-
-%% save as PDF
-% exportgraphics(gcf,'IndexRuntime2026.pdf','BackgroundColor','none','ContentType','vector')
