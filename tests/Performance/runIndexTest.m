@@ -13,11 +13,13 @@ function fullTable = runIndexTest
 
 %% Variables for performance tests
 %nel_all = [5 10];        % Toy
-nel_all = [10 20 40 80 160 189 320 371];% Cases for mesh size. Limited by GPU memory
+%nel_all = [10 20 40 80 160 320];% Cases for mesh size. 
+nel_all = [140:147, 180:186, 290:299, 370:377]; % Limited by GPU memory
 dTEall  = {'uint32','uint64'};          % Cases for "element" data type
 dTNall  = {'single'};                   % Cases for "nodes" data type. Do not matter for this test
 prob_all= {'Scalar','Vector'};          % Cases for problem type
-proc_all= {'CPU','GPU'};                % Cases for processor type
+%proc_all= {'CPU','GPU'};                % Cases for processor type
+proc_all= {'GPU'};                % Cases for processor type
 
 %% Save results in this folder
 old = pwd;
@@ -127,7 +129,7 @@ delete(Filename);
 t1 = datetime('now');                   % Current date and time at the END of the process
 
 %% Save total results
-fname = ['IndexPerfTestOut_',sets.pf,'2026.mat'];
+fname = ['IndexPerfTestOut_',sets.pf,'Max2026.mat'];
 % save(fname,'fullTable','sets','MWver','platform','infoCPU','infoGPU','sys_info','lshw');
 save(fname);
 fprintf('\n\nA total of %i time experiments was executed!\n',it)

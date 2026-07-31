@@ -2,14 +2,14 @@
 #SBATCH --job-name=Matlab_IndexTest       # Descriptive title of the work
 #SBATCH --partition=GPU                   # Queue/Assigned Partition
 #SBATCH --nodes=1                         # Number of nodes requested
-##SBATCH --nodelist=NODO-G3                # Force SLURM to use ONLY the NODE-G3
+## SBATCH --nodelist=NODO-G3                # Force SLURM to use ONLY the NODE-G3
 #SBATCH --ntasks=1                        # A single main task (MATLAB)
-#SBATCH --cpus-per-task=64                # Assign 64 physical CPUs to this task
-##SBATCH --exclusive                       # Assigns the node exclusively (without sharing)
+#SBATCH --cpus-per-task=4                # Assign 64 physical CPUs to this task
+## SBATCH --exclusive                       # Assigns the node exclusively (without sharing)
 #SBATCH --gres=gpu:1                      # Requires 1 physical GPU (Tesla T4)
 #SBATCH --time=24:00:00                   # Maximum execution time (adjust as needed)
-#SBATCH --output=Index_LogResult_%j.out   # Standard output file (%j adds the Job ID)
-#SBATCH --error=error_%j.err              # Standard Error Log
+#SBATCH --output=Index_LogMaxResult_%j.out   # Standard output file (%j adds the Job ID)
+#SBATCH --error=errorMax_%j.err              # Standard Error Log
 
 # 1. Load the necessary environment and modules
 # module avail
