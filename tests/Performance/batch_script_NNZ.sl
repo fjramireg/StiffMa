@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --job-name=Matlab_IndexTest       # Descriptive title of the work
+#SBATCH --job-name=Matlab_NNZTest         # Descriptive title of the work
 #SBATCH --partition=GPU                   # Queue/Assigned Partition
 #SBATCH --nodes=1                         # Number of nodes requested
 ## SBATCH --nodelist=NODO-G3                # Force SLURM to use ONLY the NODE-G3
@@ -8,7 +8,7 @@
 ## SBATCH --exclusive                       # Assigns the node exclusively (without sharing)
 #SBATCH --gres=gpu:1                      # Requires 1 physical GPU (Tesla T4)
 #SBATCH --time=24:00:00                   # Maximum execution time (adjust as needed)
-#SBATCH --output=Index_LogMaxResult_%j.out   # Standard output file (%j adds the Job ID)
+#SBATCH --output=NNZ_LogResult_%j.out   # Standard output file (%j adds the Job ID)
 #SBATCH --error=errorMax_%j.err              # Standard Error Log
 
 # 1. Load the necessary environment and modules
@@ -24,7 +24,7 @@ echo "Job Directory: $SLURM_SUBMIT_DIR"
 echo "=========================="
 
 # 3. Run the code in MATLAB
-matlab -batch 'runIndexTest2026'
+matlab -batch 'runEStiffTest2026'
 
 # 4. Sent to the queue 
-# using the command: sbatch batch_script_index.sl
+# using the command: sbatch batch_script_NNZ.sl

@@ -1,10 +1,10 @@
-function fullTable = runIndexTest
+function fullTable = runIndexTest2026
 % Runs the INDEX code by varying problem size, data precision type, problem type
 % and processor type.
 %
 %   For more information, see the <a href="matlab:
 %   web('https://github.com/fjramireg/StiffMa')">StiffMa</a> web site.
-%
+
 %   Written by Francisco Javier Ramirez-Gil, fjramireg@gmail.com
 %   Institución Universitaria Pascual Bravo, Medellin-Colombia
 %       Updated: July 24, 2026.
@@ -90,14 +90,7 @@ for k = 1:length(nel_all)
                     % Prepares the test
                     sets.name = 'IndexTest';
                     Filename = [sets.name,'.m'];
-                    WriteIndexPerfScript2(sets);
-                    fprintf("\n\nStarting the performance measurement with the following parameters:\n");
-                    fprintf("Number of finine elements: %dx%dx%d (%d)\n",sets.nel,sets.nel,sets.nel,sets.nel^3);
-                    fprintf("Date type for 'elements': '%s'\n",sets.dTE);
-                    fprintf("Date type for 'nodes': '%s'\n",sets.dTN);
-                    fprintf("Problem type: '%s'\n",sets.prob_type);
-                    fprintf("Processor type: '%s'\n",sets.proc_type);
-                    fprintf("Platform type: '%s'\n\n",sets.pf);
+                    WriteIndexPerfScript2026(sets);                   
                     type(Filename);
 
                     % Executes the performance test
@@ -126,7 +119,7 @@ for k = 1:length(nel_all)
                     if it == 1
                         fullTable = vertcat(perf_rst.sampleSummary);
                     else
-                        fullTable = vertcat(fullTable, perf_rst.sampleSummary);  % Colects the statistics for all the test cases
+                        fullTable = vertcat(fullTable, perf_rst.sampleSummary);  % Collects the statistics for all the test cases
                     end
 
                 end

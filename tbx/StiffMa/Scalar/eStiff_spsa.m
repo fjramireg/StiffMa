@@ -8,7 +8,7 @@ function KE = eStiff_spsa(elements, nodes, c, sets)
 %   computing, where "elements" is the connectivity matrix of size 8xnel,
 %   "nodes" the nodal coordinates of size 3xN, "c" (conductivity) is the
 %   material property for an isotropic material (scalar). The struct "sets"
-%   must contain several similation parameters:
+%   must contain several simulation parameters:
 %   - sets.dTE is the data precision of "Mesh.elements"
 %   - sets.dTN is the data precision of "Mesh.nodes"
 %   - sets.nel is the number of finite elements
