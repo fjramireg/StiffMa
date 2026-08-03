@@ -53,6 +53,7 @@ fprintf(fileID,"sets.dTE = '%s';\n",sets.dTE);
 fprintf(fileID,"sets.dTN = '%s';\n",sets.dTN);
 fprintf(fileID,'[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);\n');
 fprintf(fileID,'sets.nel = %d;\n',sets.nel^3);
+fprintf(fileID,'sets.nnodes = %d;\n',(sets.nel+1)^3);
 testname = ['%% NNZ_',sets.proc_type,'_',sets.prob_type,'_',sets.dTN,'_',num2str(sets.nel)];
 
 %% 'Scalar'

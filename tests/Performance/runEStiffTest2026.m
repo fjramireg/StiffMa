@@ -14,7 +14,7 @@ nxSca32 = computeNelmaxGPU(4, 36, 1);  % uint32_scalar
 nxVec32 = computeNelmaxGPU(4, 300, 1); % uint32_vector
 nxSca64 = computeNelmaxGPU(8, 36, 1);  % uint64_scalar
 nxVec64 = computeNelmaxGPU(8, 300, 1); % uint64_vector
-% nel_all = sort([nxSca32-10:nxSca32+5, nxVec32-10:nxVec32+5, nxSca64-10:nxSca64+5, nxVec64-10:nxVec64+5]); % Limited by GPU memory (OOM)
+
 fprintf('\n\n The maximum theoretical number of finite elements is:\n')
 fprintf('       uint32_scalar: %i\n',nxSca32)
 fprintf('       uint32_vector: %i\n',nxVec32)
@@ -23,11 +23,13 @@ fprintf('       uint64_vector: %i\n',nxVec64)
 
 %% Variables for performance tests
 nel_all = [5 10];        % Toy
-% nel_all = [10,20,40,80,160,320];    % Cases for mesh size
+% nel_all0 = [10,20,40,80,160,320];    % Cases for mesh size
+% nel_all1 = [nxSca32-5:nxSca32+5, nxVec32-5:nxVec32+5, nxSca64-5:nxSca64+5, nxVec64-5:nxVec64+5]; % Limited by GPU memory (OOM)
+% nel_all = sort([nel_all0, nel_all1]);
 dTEall = {'uint32'};            % Cases for "element" data type
 dTNall = {'single','double'};   % Cases for "nodes" data type
 prob_all = {'Scalar','Vector'};	% Cases for problem type
-proc_all = {'CPU''GPU'};        % Cases for processor type
+proc_all = {'CPU','GPU'};        % Cases for processor type
 
 %% Save results in this folder
 old = pwd;
@@ -63,7 +65,7 @@ end
 
 %% Runs all NNZ tests
 t0 = datetime('now');                   % Current date and time at starting the process
-it = 0;                                 % Couter
+it = 0;                                 % Counter
 import matlab.perftest.TimeExperiment   % To customize the time experiment
 
 % Loop through mesh size
