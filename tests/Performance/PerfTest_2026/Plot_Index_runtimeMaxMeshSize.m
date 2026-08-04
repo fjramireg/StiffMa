@@ -47,22 +47,22 @@ nels = nel_all;
 fig = figure('color','none',Name='Index runtime (Max. mesh size)');
 ax  = axes('Parent',fig,'Color','none','Box','on');
 
-% h = plot(ax, ...
-%     nels, fullTable.Mean(1:stride:end),'-ob',...  % GPU_Scalar_uint32
-%     nels, fullTable.Mean(2:stride:end),'-+b',...  % GPU_Vector_uint32
-%     nels, fullTable.Mean(3:stride:end),'-or',...  % GPU_Scalar_uint64
-%     nels, fullTable.Mean(4:stride:end),'-+r');    % GPU_Vector_uint64
+h = plot(ax, ...
+    nels, fullTable.Mean(2:stride:end),'-ob',...  % GPU_Scalar_uint32
+    nels, fullTable.Mean(4:stride:end),'-+b',...  % GPU_Vector_uint32
+    nels, fullTable.Mean(6:stride:end),'-or',...  % GPU_Scalar_uint64
+    nels, fullTable.Mean(8:stride:end),'-+r');    % GPU_Vector_uint64
 
 
-h = plot(ax, ... 
-    nels, fullTable.Mean(1:stride:end),'--ob',...  % CPU_Scalar_uint32
-    nels, fullTable.Mean(2:stride:end),'-ob',...   % GPU_Scalar_uint32
-    nels, fullTable.Mean(3:stride:end),'--+b',...  % CPU_Vector_uint32
-    nels, fullTable.Mean(4:stride:end),'-+b',...   % GPU_Vector_uint32
-    nels, fullTable.Mean(5:stride:end),'--or',...  % CPU_Scalar_uint64
-    nels, fullTable.Mean(6:stride:end),'-or',...   % GPU_Scalar_uint64
-    nels, fullTable.Mean(7:stride:end),'--+r',...  % CPU_Vector_uint64
-    nels, fullTable.Mean(8:stride:end),'-+r');     % GPU_Vector_uint64
+% h = plot(ax, ... 
+%     nels, fullTable.Mean(1:stride:end),'--ob',...  % CPU_Scalar_uint32
+%     nels, fullTable.Mean(2:stride:end),'-ob',...   % GPU_Scalar_uint32
+%     nels, fullTable.Mean(3:stride:end),'--+b',...  % CPU_Vector_uint32
+%     nels, fullTable.Mean(4:stride:end),'-+b',...   % GPU_Vector_uint32
+%     nels, fullTable.Mean(5:stride:end),'--or',...  % CPU_Scalar_uint64
+%     nels, fullTable.Mean(6:stride:end),'-or',...   % GPU_Scalar_uint64
+%     nels, fullTable.Mean(7:stride:end),'--+r',...  % CPU_Vector_uint64
+%     nels, fullTable.Mean(8:stride:end),'-+r');     % GPU_Vector_uint64
 
 % Convection:
 %   --: for CPU (dashed line)

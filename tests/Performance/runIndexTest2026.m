@@ -23,10 +23,11 @@ fprintf('       uint64_scalar: %i\n',nxSca64)
 fprintf('       uint64_vector: %i\n',nxVec64)
 
 %% Variables for performance tests
-%nel_all = [5 10];        % Toy
-nel_all0 = [10 20 40 80 160 320];% Cases for mesh size. 
-nel_all1 = [nxSca32-1:nxSca32+5, nxVec32-1:nxVec32+5, nxSca64-1:nxSca64+5, nxVec64-1:nxVec64+5]; % Limited by GPU memory (OOM)
-nel_all = sort(unique([nel_all0, nel_all1]));
+nel_all = [5 10];        % Toy
+% nel_all0 = [10 20 40 80 160 320];% Cases for mesh size.
+% % nel_all1 = [nxSca32-5:nxSca32+5, nxVec32-5:nxVec32+5, nxSca64-5:nxSca64+5, nxVec64-5:nxVec64+5]; % Limited by GPU memory (OOM)
+% nel_all1 = [nxSca32, nxVec32, nxSca64, nxVec64]; % Limited by GPU memory (OOM)
+% nel_all = sort(unique([nel_all0, nel_all1]));
 dTEall  = {'uint32','uint64'};          % Cases for "element" data type
 dTNall  = {'single'};                   % Cases for "nodes" data type. Do not matter for this test
 prob_all= {'Scalar','Vector'};          % Cases for problem type
@@ -92,17 +93,15 @@ for k = 1:length(nel_all)
                     % Prepares the test
                     sets.name = 'IndexTest';
                     Filename = [sets.name,'.m'];
-                    WriteIndexPerfScript2026(sets);                   
+                    WriteIndexPerfScript2026(sets);
                     type(Filename);
+                    suite = testsuite(sets.name);                          % Construct an explicit test suite
 
                     % Executes the performance test
                     if (strcmp(sets.proc_type,'CPU') && sets.nel > 40  )   % Takes long time to run the full test. So, only 1 execution is taken
                         numSamples = 1;                                         % Number of sample measurements to collect, specified as a positive integer.
                         numWarmups = 0;                                         % Number of warm-up measurements, specified as a nonnegative integer.
-                        suite = testsuite(sets.name);                           % Construct an explicit test suite
                         experiment = TimeExperiment.withFixedSampleSize(numSamples,'NumWarmups',numWarmups);% Construct time experiment with fixed number of measurements
-                        perf_rst = run(experiment,suite);
-                        disp(perf_rst);
 
                     else                % Default experiment setup
                         % Number of warm-up measurements: 4
@@ -110,11 +109,17 @@ for k = 1:length(nel_all)
                         % Maximum number of samples collected in the event other statistical objectives are not met: 256
                         % Objective relative margin of error for samples: 0.05 (5%)
                         % Confidence level for samples to be within relative margin of error: 0.95 (95%)
-                        perf_rst = runperf(sets.name);
-                        disp(perf_rst);
-                        reset(gpuDevice);
-
+                        experiment = TimeExperiment.limitingSamplingError(...
+                            'NumWarmups', 4, ...
+                            'MinimumSampleCount', 4, ...
+                            'MaximumSampleCount', 256, ...
+                            'RelativeMarginOfError', 0.05, ...
+                            'ConfidenceLevel', 0.95);
                     end
+
+                    perf_rst = run(experiment,suite);
+                    disp(perf_rst);
+                    reset(gpuDevice);
 
                     % Partial results
                     it = it + 1;
@@ -133,8 +138,7 @@ delete(Filename);
 t1 = datetime('now');                   % Current date and time at the END of the process
 
 %% Save total results
-fname = ['IndexPerfTestOut_',sets.pf,'Max2026.mat'];
-% save(fname,'fullTable','sets','MWver','platform','infoCPU','infoGPU','sys_info','lshw');
+fname = ['IndexPerfTestOut_',sets.pf,'2026.mat'];
 save(fname);
 fprintf('\n\nA total of %i time experiments was executed!\n',it)
 fprintf('Date and time at the beginning of the process: \t%s \n',t0);
