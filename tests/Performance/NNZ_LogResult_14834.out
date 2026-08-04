@@ -1,0 +1,1491 @@
+=== START OF WORK ===
+Date and time: mar ago  4 13:36:30 EDT 2026
+Execution node: NODO-G3
+Job Directory: /exports/home/francisco.ramirez/StiffMa/tests/Performance
+==========================
+Total GPU Memory: 15642329088 bytes (15.64 GB)
+Available GPU Memory: 15534391296 bytes (15.53 GB)
+Estimated max entries (1-D) when single/uint32: 3883597824
+Estimated max entries (1-D) when double/uint64: 1941798912
+Total GPU Memory: 15642329088 bytes (15.64 GB)
+Available GPU Memory: 15534391296 bytes (15.53 GB)
+Estimated max entries (1-D) when single/uint32: 3883597824
+Estimated max entries (1-D) when double/uint64: 1941798912
+Total GPU Memory: 15642329088 bytes (15.64 GB)
+Available GPU Memory: 15534391296 bytes (15.53 GB)
+Estimated max entries (1-D) when single/uint32: 3883597824
+Estimated max entries (1-D) when double/uint64: 1941798912
+Total GPU Memory: 15642329088 bytes (15.64 GB)
+Available GPU Memory: 15534391296 bytes (15.53 GB)
+Estimated max entries (1-D) when single/uint32: 3883597824
+Estimated max entries (1-D) when double/uint64: 1941798912
+
+
+ The maximum theoretical number of finite elements is:
+       uint32_scalar: 435
+       uint32_vector: 232
+       uint64_scalar: 345
+       uint64_vector: 184
+
+sets.nel = 10;
+sets.dTE = 'uint32';
+sets.dTN = 'single';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 1000;
+sets.nnodes = 1331;
+sets.sz = 36;
+sets.edof = 8;
+c = 3.841000e+02;
+
+%% NNZ_CPU_Scalar_single_10
+Ke = eStiff_sssa(Mesh, c, sets);
+Running NNZ_Test
+
+ Mesh created successfully!
+	 Number of elements: 1000
+	 Number of nodes   : 1331
+
+.........
+Done NNZ_Test
+__________
+
+  TimeResult with properties:
+
+            Name: 'NNZ_Test/NNZ_CPU_Scalar_single_10'
+           Valid: 1
+         Samples: [4×7 table]
+    TestActivity: [9×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   2.3377 seconds testing time.
+
+
+sets.nel = 10;
+sets.dTE = 'uint32';
+sets.dTN = 'single';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 1000;
+sets.nnodes = 1331;
+sets.sz = 36;
+sets.edof = 8;
+c = 3.841000e+02;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+elementsGPU = gpuArray(Mesh.elements);
+nodesGPU = gpuArray(Mesh.nodes);
+
+%% NNZ_GPU_Scalar_single_10
+Ke = eStiff_spsa_opt(elementsGPU, nodesGPU, c, sets);
+wait(d);
+Running NNZ_Test
+
+ Mesh created successfully!
+	 Number of elements: 1000
+	 Number of nodes   : 1331
+
+.........
+Done NNZ_Test
+__________
+
+  TimeResult with properties:
+
+            Name: 'NNZ_Test/NNZ_GPU_Scalar_single_10'
+           Valid: 1
+         Samples: [4×7 table]
+    TestActivity: [9×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   0.91334 seconds testing time.
+
+
+sets.nel = 10;
+sets.dTE = 'uint32';
+sets.dTN = 'single';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 1000;
+sets.nnodes = 1331;
+sets.sz = 300;
+sets.edof = 24;
+MP.E = 200000000000;
+MP.nu = 3.000000e-01;
+
+%% NNZ_CPU_Vector_single_10
+Ke = eStiff_vssa(Mesh, MP, sets);
+Running NNZ_Test
+
+ Mesh created successfully!
+	 Number of elements: 1000
+	 Number of nodes   : 1331
+
+.........
+Done NNZ_Test
+__________
+
+  TimeResult with properties:
+
+            Name: 'NNZ_Test/NNZ_CPU_Vector_single_10'
+           Valid: 1
+         Samples: [4×7 table]
+    TestActivity: [9×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   14.4154 seconds testing time.
+
+
+sets.nel = 10;
+sets.dTE = 'uint32';
+sets.dTN = 'single';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 1000;
+sets.nnodes = 1331;
+sets.sz = 300;
+sets.edof = 24;
+MP.E = 200000000000;
+MP.nu = 3.000000e-01;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+elementsGPU = gpuArray(Mesh.elements);
+nodesGPU = gpuArray(Mesh.nodes);
+
+%% NNZ_GPU_Vector_single_10
+Ke = eStiff_vpsa_opt(elementsGPU, nodesGPU, MP, sets);
+wait(d);
+Running NNZ_Test
+
+ Mesh created successfully!
+	 Number of elements: 1000
+	 Number of nodes   : 1331
+
+.........
+Done NNZ_Test
+__________
+
+  TimeResult with properties:
+
+            Name: 'NNZ_Test/NNZ_GPU_Vector_single_10'
+           Valid: 1
+         Samples: [4×7 table]
+    TestActivity: [9×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   1.3927 seconds testing time.
+
+
+sets.nel = 10;
+sets.dTE = 'uint32';
+sets.dTN = 'double';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 1000;
+sets.nnodes = 1331;
+sets.sz = 36;
+sets.edof = 8;
+c = 3.841000e+02;
+
+%% NNZ_CPU_Scalar_double_10
+Ke = eStiff_sssa(Mesh, c, sets);
+Running NNZ_Test
+
+ Mesh created successfully!
+	 Number of elements: 1000
+	 Number of nodes   : 1331
+
+.........
+Done NNZ_Test
+__________
+
+  TimeResult with properties:
+
+            Name: 'NNZ_Test/NNZ_CPU_Scalar_double_10'
+           Valid: 1
+         Samples: [4×7 table]
+    TestActivity: [9×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   1.0836 seconds testing time.
+
+
+sets.nel = 10;
+sets.dTE = 'uint32';
+sets.dTN = 'double';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 1000;
+sets.nnodes = 1331;
+sets.sz = 36;
+sets.edof = 8;
+c = 3.841000e+02;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+elementsGPU = gpuArray(Mesh.elements);
+nodesGPU = gpuArray(Mesh.nodes);
+
+%% NNZ_GPU_Scalar_double_10
+Ke = eStiff_spsa_opt(elementsGPU, nodesGPU, c, sets);
+wait(d);
+Running NNZ_Test
+
+ Mesh created successfully!
+	 Number of elements: 1000
+	 Number of nodes   : 1331
+
+.........
+Done NNZ_Test
+__________
+
+  TimeResult with properties:
+
+            Name: 'NNZ_Test/NNZ_GPU_Scalar_double_10'
+           Valid: 1
+         Samples: [4×7 table]
+    TestActivity: [9×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   0.6804 seconds testing time.
+
+
+sets.nel = 10;
+sets.dTE = 'uint32';
+sets.dTN = 'double';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 1000;
+sets.nnodes = 1331;
+sets.sz = 300;
+sets.edof = 24;
+MP.E = 200000000000;
+MP.nu = 3.000000e-01;
+
+%% NNZ_CPU_Vector_double_10
+Ke = eStiff_vssa(Mesh, MP, sets);
+Running NNZ_Test
+
+ Mesh created successfully!
+	 Number of elements: 1000
+	 Number of nodes   : 1331
+
+.........
+Done NNZ_Test
+__________
+
+  TimeResult with properties:
+
+            Name: 'NNZ_Test/NNZ_CPU_Vector_double_10'
+           Valid: 1
+         Samples: [4×7 table]
+    TestActivity: [9×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   11.2134 seconds testing time.
+
+
+sets.nel = 10;
+sets.dTE = 'uint32';
+sets.dTN = 'double';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 1000;
+sets.nnodes = 1331;
+sets.sz = 300;
+sets.edof = 24;
+MP.E = 200000000000;
+MP.nu = 3.000000e-01;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+elementsGPU = gpuArray(Mesh.elements);
+nodesGPU = gpuArray(Mesh.nodes);
+
+%% NNZ_GPU_Vector_double_10
+Ke = eStiff_vpsa_opt(elementsGPU, nodesGPU, MP, sets);
+wait(d);
+Running NNZ_Test
+
+ Mesh created successfully!
+	 Number of elements: 1000
+	 Number of nodes   : 1331
+
+.........
+Done NNZ_Test
+__________
+
+  TimeResult with properties:
+
+            Name: 'NNZ_Test/NNZ_GPU_Vector_double_10'
+           Valid: 1
+         Samples: [4×7 table]
+    TestActivity: [9×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   1.4041 seconds testing time.
+
+
+sets.nel = 20;
+sets.dTE = 'uint32';
+sets.dTN = 'single';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 8000;
+sets.nnodes = 9261;
+sets.sz = 36;
+sets.edof = 8;
+c = 3.841000e+02;
+
+%% NNZ_CPU_Scalar_single_20
+Ke = eStiff_sssa(Mesh, c, sets);
+Running NNZ_Test
+
+ Mesh created successfully!
+	 Number of elements: 8000
+	 Number of nodes   : 9261
+
+.........
+Done NNZ_Test
+__________
+
+  TimeResult with properties:
+
+            Name: 'NNZ_Test/NNZ_CPU_Scalar_single_20'
+           Valid: 1
+         Samples: [4×7 table]
+    TestActivity: [9×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   11.4462 seconds testing time.
+
+
+sets.nel = 20;
+sets.dTE = 'uint32';
+sets.dTN = 'single';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 8000;
+sets.nnodes = 9261;
+sets.sz = 36;
+sets.edof = 8;
+c = 3.841000e+02;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+elementsGPU = gpuArray(Mesh.elements);
+nodesGPU = gpuArray(Mesh.nodes);
+
+%% NNZ_GPU_Scalar_single_20
+Ke = eStiff_spsa_opt(elementsGPU, nodesGPU, c, sets);
+wait(d);
+Running NNZ_Test
+
+ Mesh created successfully!
+	 Number of elements: 8000
+	 Number of nodes   : 9261
+
+.........
+Done NNZ_Test
+__________
+
+  TimeResult with properties:
+
+            Name: 'NNZ_Test/NNZ_GPU_Scalar_single_20'
+           Valid: 1
+         Samples: [4×7 table]
+    TestActivity: [9×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   0.66965 seconds testing time.
+
+
+sets.nel = 20;
+sets.dTE = 'uint32';
+sets.dTN = 'single';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 8000;
+sets.nnodes = 9261;
+sets.sz = 300;
+sets.edof = 24;
+MP.E = 200000000000;
+MP.nu = 3.000000e-01;
+
+%% NNZ_CPU_Vector_single_20
+Ke = eStiff_vssa(Mesh, MP, sets);
+Running NNZ_Test
+
+ Mesh created successfully!
+	 Number of elements: 8000
+	 Number of nodes   : 9261
+
+.........
+Done NNZ_Test
+__________
+
+  TimeResult with properties:
+
+            Name: 'NNZ_Test/NNZ_CPU_Vector_single_20'
+           Valid: 1
+         Samples: [4×7 table]
+    TestActivity: [9×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   114.2022 seconds testing time.
+
+
+sets.nel = 20;
+sets.dTE = 'uint32';
+sets.dTN = 'single';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 8000;
+sets.nnodes = 9261;
+sets.sz = 300;
+sets.edof = 24;
+MP.E = 200000000000;
+MP.nu = 3.000000e-01;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+elementsGPU = gpuArray(Mesh.elements);
+nodesGPU = gpuArray(Mesh.nodes);
+
+%% NNZ_GPU_Vector_single_20
+Ke = eStiff_vpsa_opt(elementsGPU, nodesGPU, MP, sets);
+wait(d);
+Running NNZ_Test
+
+ Mesh created successfully!
+	 Number of elements: 8000
+	 Number of nodes   : 9261
+
+.........
+Done NNZ_Test
+__________
+
+  TimeResult with properties:
+
+            Name: 'NNZ_Test/NNZ_GPU_Vector_single_20'
+           Valid: 1
+         Samples: [4×7 table]
+    TestActivity: [9×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   1.3826 seconds testing time.
+
+
+sets.nel = 20;
+sets.dTE = 'uint32';
+sets.dTN = 'double';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 8000;
+sets.nnodes = 9261;
+sets.sz = 36;
+sets.edof = 8;
+c = 3.841000e+02;
+
+%% NNZ_CPU_Scalar_double_20
+Ke = eStiff_sssa(Mesh, c, sets);
+Running NNZ_Test
+
+ Mesh created successfully!
+	 Number of elements: 8000
+	 Number of nodes   : 9261
+
+.........
+Done NNZ_Test
+__________
+
+  TimeResult with properties:
+
+            Name: 'NNZ_Test/NNZ_CPU_Scalar_double_20'
+           Valid: 1
+         Samples: [4×7 table]
+    TestActivity: [9×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   7.8211 seconds testing time.
+
+
+sets.nel = 20;
+sets.dTE = 'uint32';
+sets.dTN = 'double';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 8000;
+sets.nnodes = 9261;
+sets.sz = 36;
+sets.edof = 8;
+c = 3.841000e+02;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+elementsGPU = gpuArray(Mesh.elements);
+nodesGPU = gpuArray(Mesh.nodes);
+
+%% NNZ_GPU_Scalar_double_20
+Ke = eStiff_spsa_opt(elementsGPU, nodesGPU, c, sets);
+wait(d);
+Running NNZ_Test
+
+ Mesh created successfully!
+	 Number of elements: 8000
+	 Number of nodes   : 9261
+
+.........
+Done NNZ_Test
+__________
+
+  TimeResult with properties:
+
+            Name: 'NNZ_Test/NNZ_GPU_Scalar_double_20'
+           Valid: 1
+         Samples: [4×7 table]
+    TestActivity: [9×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   0.67587 seconds testing time.
+
+
+sets.nel = 20;
+sets.dTE = 'uint32';
+sets.dTN = 'double';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 8000;
+sets.nnodes = 9261;
+sets.sz = 300;
+sets.edof = 24;
+MP.E = 200000000000;
+MP.nu = 3.000000e-01;
+
+%% NNZ_CPU_Vector_double_20
+Ke = eStiff_vssa(Mesh, MP, sets);
+Running NNZ_Test
+
+ Mesh created successfully!
+	 Number of elements: 8000
+	 Number of nodes   : 9261
+
+.........
+Done NNZ_Test
+__________
+
+  TimeResult with properties:
+
+            Name: 'NNZ_Test/NNZ_CPU_Vector_double_20'
+           Valid: 1
+         Samples: [4×7 table]
+    TestActivity: [9×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   86.8556 seconds testing time.
+
+
+sets.nel = 20;
+sets.dTE = 'uint32';
+sets.dTN = 'double';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 8000;
+sets.nnodes = 9261;
+sets.sz = 300;
+sets.edof = 24;
+MP.E = 200000000000;
+MP.nu = 3.000000e-01;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+elementsGPU = gpuArray(Mesh.elements);
+nodesGPU = gpuArray(Mesh.nodes);
+
+%% NNZ_GPU_Vector_double_20
+Ke = eStiff_vpsa_opt(elementsGPU, nodesGPU, MP, sets);
+wait(d);
+Running NNZ_Test
+
+ Mesh created successfully!
+	 Number of elements: 8000
+	 Number of nodes   : 9261
+
+.........
+Done NNZ_Test
+__________
+
+  TimeResult with properties:
+
+            Name: 'NNZ_Test/NNZ_GPU_Vector_double_20'
+           Valid: 1
+         Samples: [4×7 table]
+    TestActivity: [9×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   1.3874 seconds testing time.
+
+
+sets.nel = 40;
+sets.dTE = 'uint32';
+sets.dTN = 'single';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 64000;
+sets.nnodes = 68921;
+sets.sz = 36;
+sets.edof = 8;
+c = 3.841000e+02;
+
+%% NNZ_CPU_Scalar_single_40
+Ke = eStiff_sssa(Mesh, c, sets);
+Running NNZ_Test
+
+ Mesh created successfully!
+	 Number of elements: 64000
+	 Number of nodes   : 68921
+
+.........
+Done NNZ_Test
+__________
+
+  TimeResult with properties:
+
+            Name: 'NNZ_Test/NNZ_CPU_Scalar_single_40'
+           Valid: 1
+         Samples: [4×7 table]
+    TestActivity: [9×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   91.2757 seconds testing time.
+
+
+sets.nel = 40;
+sets.dTE = 'uint32';
+sets.dTN = 'single';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 64000;
+sets.nnodes = 68921;
+sets.sz = 36;
+sets.edof = 8;
+c = 3.841000e+02;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+elementsGPU = gpuArray(Mesh.elements);
+nodesGPU = gpuArray(Mesh.nodes);
+
+%% NNZ_GPU_Scalar_single_40
+Ke = eStiff_spsa_opt(elementsGPU, nodesGPU, c, sets);
+wait(d);
+Running NNZ_Test
+
+ Mesh created successfully!
+	 Number of elements: 64000
+	 Number of nodes   : 68921
+
+.........
+Done NNZ_Test
+__________
+
+  TimeResult with properties:
+
+            Name: 'NNZ_Test/NNZ_GPU_Scalar_single_40'
+           Valid: 1
+         Samples: [4×7 table]
+    TestActivity: [9×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   0.67274 seconds testing time.
+
+
+sets.nel = 40;
+sets.dTE = 'uint32';
+sets.dTN = 'single';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 64000;
+sets.nnodes = 68921;
+sets.sz = 300;
+sets.edof = 24;
+MP.E = 200000000000;
+MP.nu = 3.000000e-01;
+
+%% NNZ_CPU_Vector_single_40
+Ke = eStiff_vssa(Mesh, MP, sets);
+Running NNZ_Test
+
+ Mesh created successfully!
+	 Number of elements: 64000
+	 Number of nodes   : 68921
+
+.........
+Done NNZ_Test
+__________
+
+  TimeResult with properties:
+
+            Name: 'NNZ_Test/NNZ_CPU_Vector_single_40'
+           Valid: 1
+         Samples: [4×7 table]
+    TestActivity: [9×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   908.1354 seconds testing time.
+
+
+sets.nel = 40;
+sets.dTE = 'uint32';
+sets.dTN = 'single';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 64000;
+sets.nnodes = 68921;
+sets.sz = 300;
+sets.edof = 24;
+MP.E = 200000000000;
+MP.nu = 3.000000e-01;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+elementsGPU = gpuArray(Mesh.elements);
+nodesGPU = gpuArray(Mesh.nodes);
+
+%% NNZ_GPU_Vector_single_40
+Ke = eStiff_vpsa_opt(elementsGPU, nodesGPU, MP, sets);
+wait(d);
+Running NNZ_Test
+
+ Mesh created successfully!
+	 Number of elements: 64000
+	 Number of nodes   : 68921
+
+.........
+Done NNZ_Test
+__________
+
+  TimeResult with properties:
+
+            Name: 'NNZ_Test/NNZ_GPU_Vector_single_40'
+           Valid: 1
+         Samples: [4×7 table]
+    TestActivity: [9×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   1.4588 seconds testing time.
+
+
+sets.nel = 40;
+sets.dTE = 'uint32';
+sets.dTN = 'double';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 64000;
+sets.nnodes = 68921;
+sets.sz = 36;
+sets.edof = 8;
+c = 3.841000e+02;
+
+%% NNZ_CPU_Scalar_double_40
+Ke = eStiff_sssa(Mesh, c, sets);
+Running NNZ_Test
+
+ Mesh created successfully!
+	 Number of elements: 64000
+	 Number of nodes   : 68921
+
+.........
+Done NNZ_Test
+__________
+
+  TimeResult with properties:
+
+            Name: 'NNZ_Test/NNZ_CPU_Scalar_double_40'
+           Valid: 1
+         Samples: [4×7 table]
+    TestActivity: [9×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   62.7727 seconds testing time.
+
+
+sets.nel = 40;
+sets.dTE = 'uint32';
+sets.dTN = 'double';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 64000;
+sets.nnodes = 68921;
+sets.sz = 36;
+sets.edof = 8;
+c = 3.841000e+02;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+elementsGPU = gpuArray(Mesh.elements);
+nodesGPU = gpuArray(Mesh.nodes);
+
+%% NNZ_GPU_Scalar_double_40
+Ke = eStiff_spsa_opt(elementsGPU, nodesGPU, c, sets);
+wait(d);
+Running NNZ_Test
+
+ Mesh created successfully!
+	 Number of elements: 64000
+	 Number of nodes   : 68921
+
+.........
+Done NNZ_Test
+__________
+
+  TimeResult with properties:
+
+            Name: 'NNZ_Test/NNZ_GPU_Scalar_double_40'
+           Valid: 1
+         Samples: [4×7 table]
+    TestActivity: [9×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   0.69817 seconds testing time.
+
+
+sets.nel = 40;
+sets.dTE = 'uint32';
+sets.dTN = 'double';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 64000;
+sets.nnodes = 68921;
+sets.sz = 300;
+sets.edof = 24;
+MP.E = 200000000000;
+MP.nu = 3.000000e-01;
+
+%% NNZ_CPU_Vector_double_40
+Ke = eStiff_vssa(Mesh, MP, sets);
+Running NNZ_Test
+
+ Mesh created successfully!
+	 Number of elements: 64000
+	 Number of nodes   : 68921
+
+.........
+Done NNZ_Test
+__________
+
+  TimeResult with properties:
+
+            Name: 'NNZ_Test/NNZ_CPU_Vector_double_40'
+           Valid: 1
+         Samples: [4×7 table]
+    TestActivity: [9×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   687.5837 seconds testing time.
+
+
+sets.nel = 40;
+sets.dTE = 'uint32';
+sets.dTN = 'double';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 64000;
+sets.nnodes = 68921;
+sets.sz = 300;
+sets.edof = 24;
+MP.E = 200000000000;
+MP.nu = 3.000000e-01;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+elementsGPU = gpuArray(Mesh.elements);
+nodesGPU = gpuArray(Mesh.nodes);
+
+%% NNZ_GPU_Vector_double_40
+Ke = eStiff_vpsa_opt(elementsGPU, nodesGPU, MP, sets);
+wait(d);
+Running NNZ_Test
+
+ Mesh created successfully!
+	 Number of elements: 64000
+	 Number of nodes   : 68921
+
+.........
+Done NNZ_Test
+__________
+
+  TimeResult with properties:
+
+            Name: 'NNZ_Test/NNZ_GPU_Vector_double_40'
+           Valid: 1
+         Samples: [4×7 table]
+    TestActivity: [9×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   1.6517 seconds testing time.
+
+
+sets.nel = 80;
+sets.dTE = 'uint32';
+sets.dTN = 'single';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 512000;
+sets.nnodes = 531441;
+sets.sz = 36;
+sets.edof = 8;
+c = 3.841000e+02;
+
+%% NNZ_CPU_Scalar_single_80
+Ke = eStiff_sssa(Mesh, c, sets);
+Running NNZ_Test
+
+ Mesh created successfully!
+	 Number of elements: 512000
+	 Number of nodes   : 531441
+
+.
+Done NNZ_Test
+__________
+
+  TimeResult with properties:
+
+            Name: 'NNZ_Test/NNZ_CPU_Scalar_single_80'
+           Valid: 1
+         Samples: [1×7 table]
+    TestActivity: [1×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   81.5758 seconds testing time.
+
+
+sets.nel = 80;
+sets.dTE = 'uint32';
+sets.dTN = 'single';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 512000;
+sets.nnodes = 531441;
+sets.sz = 36;
+sets.edof = 8;
+c = 3.841000e+02;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+elementsGPU = gpuArray(Mesh.elements);
+nodesGPU = gpuArray(Mesh.nodes);
+
+%% NNZ_GPU_Scalar_single_80
+Ke = eStiff_spsa_opt(elementsGPU, nodesGPU, c, sets);
+wait(d);
+Running NNZ_Test
+
+ Mesh created successfully!
+	 Number of elements: 512000
+	 Number of nodes   : 531441
+
+.......... .
+Done NNZ_Test
+__________
+
+  TimeResult with properties:
+
+            Name: 'NNZ_Test/NNZ_GPU_Scalar_single_80'
+           Valid: 1
+         Samples: [6×7 table]
+    TestActivity: [11×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   0.88416 seconds testing time.
+
+
+sets.nel = 80;
+sets.dTE = 'uint32';
+sets.dTN = 'single';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 512000;
+sets.nnodes = 531441;
+sets.sz = 300;
+sets.edof = 24;
+MP.E = 200000000000;
+MP.nu = 3.000000e-01;
+
+%% NNZ_CPU_Vector_single_80
+Ke = eStiff_vssa(Mesh, MP, sets);
+Running NNZ_Test
+
+ Mesh created successfully!
+	 Number of elements: 512000
+	 Number of nodes   : 531441
+
+.
+Done NNZ_Test
+__________
+
+  TimeResult with properties:
+
+            Name: 'NNZ_Test/NNZ_CPU_Vector_single_80'
+           Valid: 1
+         Samples: [1×7 table]
+    TestActivity: [1×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   806.3038 seconds testing time.
+
+
+sets.nel = 80;
+sets.dTE = 'uint32';
+sets.dTN = 'single';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 512000;
+sets.nnodes = 531441;
+sets.sz = 300;
+sets.edof = 24;
+MP.E = 200000000000;
+MP.nu = 3.000000e-01;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+elementsGPU = gpuArray(Mesh.elements);
+nodesGPU = gpuArray(Mesh.nodes);
+
+%% NNZ_GPU_Vector_single_80
+Ke = eStiff_vpsa_opt(elementsGPU, nodesGPU, MP, sets);
+wait(d);
+Running NNZ_Test
+
+ Mesh created successfully!
+	 Number of elements: 512000
+	 Number of nodes   : 531441
+
+.........
+Done NNZ_Test
+__________
+
+  TimeResult with properties:
+
+            Name: 'NNZ_Test/NNZ_GPU_Vector_single_80'
+           Valid: 1
+         Samples: [4×7 table]
+    TestActivity: [9×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   2.2116 seconds testing time.
+
+
+sets.nel = 80;
+sets.dTE = 'uint32';
+sets.dTN = 'double';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 512000;
+sets.nnodes = 531441;
+sets.sz = 36;
+sets.edof = 8;
+c = 3.841000e+02;
+
+%% NNZ_CPU_Scalar_double_80
+Ke = eStiff_sssa(Mesh, c, sets);
+Running NNZ_Test
+
+ Mesh created successfully!
+	 Number of elements: 512000
+	 Number of nodes   : 531441
+
+.
+Done NNZ_Test
+__________
+
+  TimeResult with properties:
+
+            Name: 'NNZ_Test/NNZ_CPU_Scalar_double_80'
+           Valid: 1
+         Samples: [1×7 table]
+    TestActivity: [1×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   55.8913 seconds testing time.
+
+
+sets.nel = 80;
+sets.dTE = 'uint32';
+sets.dTN = 'double';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 512000;
+sets.nnodes = 531441;
+sets.sz = 36;
+sets.edof = 8;
+c = 3.841000e+02;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+elementsGPU = gpuArray(Mesh.elements);
+nodesGPU = gpuArray(Mesh.nodes);
+
+%% NNZ_GPU_Scalar_double_80
+Ke = eStiff_spsa_opt(elementsGPU, nodesGPU, c, sets);
+wait(d);
+Running NNZ_Test
+
+ Mesh created successfully!
+	 Number of elements: 512000
+	 Number of nodes   : 531441
+
+.........
+Done NNZ_Test
+__________
+
+  TimeResult with properties:
+
+            Name: 'NNZ_Test/NNZ_GPU_Scalar_double_80'
+           Valid: 1
+         Samples: [4×7 table]
+    TestActivity: [9×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   1.0177 seconds testing time.
+
+
+sets.nel = 80;
+sets.dTE = 'uint32';
+sets.dTN = 'double';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 512000;
+sets.nnodes = 531441;
+sets.sz = 300;
+sets.edof = 24;
+MP.E = 200000000000;
+MP.nu = 3.000000e-01;
+
+%% NNZ_CPU_Vector_double_80
+Ke = eStiff_vssa(Mesh, MP, sets);
+Running NNZ_Test
+
+ Mesh created successfully!
+	 Number of elements: 512000
+	 Number of nodes   : 531441
+
+.
+Done NNZ_Test
+__________
+
+  TimeResult with properties:
+
+            Name: 'NNZ_Test/NNZ_CPU_Vector_double_80'
+           Valid: 1
+         Samples: [1×7 table]
+    TestActivity: [1×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   610.5268 seconds testing time.
+
+
+sets.nel = 80;
+sets.dTE = 'uint32';
+sets.dTN = 'double';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 512000;
+sets.nnodes = 531441;
+sets.sz = 300;
+sets.edof = 24;
+MP.E = 200000000000;
+MP.nu = 3.000000e-01;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+elementsGPU = gpuArray(Mesh.elements);
+nodesGPU = gpuArray(Mesh.nodes);
+
+%% NNZ_GPU_Vector_double_80
+Ke = eStiff_vpsa_opt(elementsGPU, nodesGPU, MP, sets);
+wait(d);
+Running NNZ_Test
+
+ Mesh created successfully!
+	 Number of elements: 512000
+	 Number of nodes   : 531441
+
+.........
+Done NNZ_Test
+__________
+
+  TimeResult with properties:
+
+            Name: 'NNZ_Test/NNZ_GPU_Vector_double_80'
+           Valid: 1
+         Samples: [4×7 table]
+    TestActivity: [9×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   2.7119 seconds testing time.
+
+
+sets.nel = 160;
+sets.dTE = 'uint32';
+sets.dTN = 'single';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 4096000;
+sets.nnodes = 4173281;
+sets.sz = 36;
+sets.edof = 8;
+c = 3.841000e+02;
+
+%% NNZ_CPU_Scalar_single_160
+Ke = eStiff_sssa(Mesh, c, sets);
+Running NNZ_Test
+
+ Mesh created successfully!
+	 Number of elements: 4096000
+	 Number of nodes   : 4173281
+
+.
+Done NNZ_Test
+__________
+
+  TimeResult with properties:
+
+            Name: 'NNZ_Test/NNZ_CPU_Scalar_single_160'
+           Valid: 1
+         Samples: [1×7 table]
+    TestActivity: [1×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   648.59 seconds testing time.
+
+
+sets.nel = 160;
+sets.dTE = 'uint32';
+sets.dTN = 'single';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 4096000;
+sets.nnodes = 4173281;
+sets.sz = 36;
+sets.edof = 8;
+c = 3.841000e+02;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+elementsGPU = gpuArray(Mesh.elements);
+nodesGPU = gpuArray(Mesh.nodes);
+
+%% NNZ_GPU_Scalar_single_160
+Ke = eStiff_spsa_opt(elementsGPU, nodesGPU, c, sets);
+wait(d);
+Running NNZ_Test
+
+ Mesh created successfully!
+	 Number of elements: 4096000
+	 Number of nodes   : 4173281
+
+.........
+Done NNZ_Test
+__________
+
+  TimeResult with properties:
+
+            Name: 'NNZ_Test/NNZ_GPU_Scalar_single_160'
+           Valid: 1
+         Samples: [4×7 table]
+    TestActivity: [9×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   0.89389 seconds testing time.
+
+
+sets.nel = 160;
+sets.dTE = 'uint32';
+sets.dTN = 'single';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 4096000;
+sets.nnodes = 4173281;
+sets.sz = 300;
+sets.edof = 24;
+MP.E = 200000000000;
+MP.nu = 3.000000e-01;
+
+%% NNZ_CPU_Vector_single_160
+Ke = eStiff_vssa(Mesh, MP, sets);
+Running NNZ_Test
+
+ Mesh created successfully!
+	 Number of elements: 4096000
+	 Number of nodes   : 4173281
+
+.
+Done NNZ_Test
+__________
+
+  TimeResult with properties:
+
+            Name: 'NNZ_Test/NNZ_CPU_Vector_single_160'
+           Valid: 1
+         Samples: [1×7 table]
+    TestActivity: [1×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   6452.0387 seconds testing time.
+
+
+sets.nel = 160;
+sets.dTE = 'uint32';
+sets.dTN = 'single';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 4096000;
+sets.nnodes = 4173281;
+sets.sz = 300;
+sets.edof = 24;
+MP.E = 200000000000;
+MP.nu = 3.000000e-01;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+elementsGPU = gpuArray(Mesh.elements);
+nodesGPU = gpuArray(Mesh.nodes);
+
+%% NNZ_GPU_Vector_single_160
+Ke = eStiff_vpsa_opt(elementsGPU, nodesGPU, MP, sets);
+wait(d);
+Running NNZ_Test
+
+ Mesh created successfully!
+	 Number of elements: 4096000
+	 Number of nodes   : 4173281
+
+.........
+Done NNZ_Test
+__________
+
+  TimeResult with properties:
+
+            Name: 'NNZ_Test/NNZ_GPU_Vector_single_160'
+           Valid: 1
+         Samples: [4×7 table]
+    TestActivity: [9×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   8.1703 seconds testing time.
+
+
+sets.nel = 160;
+sets.dTE = 'uint32';
+sets.dTN = 'double';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 4096000;
+sets.nnodes = 4173281;
+sets.sz = 36;
+sets.edof = 8;
+c = 3.841000e+02;
+
+%% NNZ_CPU_Scalar_double_160
+Ke = eStiff_sssa(Mesh, c, sets);
+Running NNZ_Test
+
+ Mesh created successfully!
+	 Number of elements: 4096000
+	 Number of nodes   : 4173281
+
+.
+Done NNZ_Test
+__________
+
+  TimeResult with properties:
+
+            Name: 'NNZ_Test/NNZ_CPU_Scalar_double_160'
+           Valid: 1
+         Samples: [1×7 table]
+    TestActivity: [1×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   443.269 seconds testing time.
+
+
+sets.nel = 160;
+sets.dTE = 'uint32';
+sets.dTN = 'double';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 4096000;
+sets.nnodes = 4173281;
+sets.sz = 36;
+sets.edof = 8;
+c = 3.841000e+02;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+elementsGPU = gpuArray(Mesh.elements);
+nodesGPU = gpuArray(Mesh.nodes);
+
+%% NNZ_GPU_Scalar_double_160
+Ke = eStiff_spsa_opt(elementsGPU, nodesGPU, c, sets);
+wait(d);
+Running NNZ_Test
+
+ Mesh created successfully!
+	 Number of elements: 4096000
+	 Number of nodes   : 4173281
+
+.........
+Done NNZ_Test
+__________
+
+  TimeResult with properties:
+
+            Name: 'NNZ_Test/NNZ_GPU_Scalar_double_160'
+           Valid: 1
+         Samples: [4×7 table]
+    TestActivity: [9×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   1.8686 seconds testing time.
+
+
+sets.nel = 160;
+sets.dTE = 'uint32';
+sets.dTN = 'double';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 4096000;
+sets.nnodes = 4173281;
+sets.sz = 300;
+sets.edof = 24;
+MP.E = 200000000000;
+MP.nu = 3.000000e-01;
+
+%% NNZ_CPU_Vector_double_160
+Ke = eStiff_vssa(Mesh, MP, sets);
+Running NNZ_Test
+
+ Mesh created successfully!
+	 Number of elements: 4096000
+	 Number of nodes   : 4173281
+

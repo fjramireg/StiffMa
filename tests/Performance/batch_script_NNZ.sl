@@ -11,6 +11,10 @@
 #SBATCH --output=NNZ_LogResult_%j.out   # Standard output file (%j adds the Job ID)
 #SBATCH --error=errorMax_%j.err              # Standard Error Log
 
+# Notification by Mail
+#SBATCH --mail-type=ALL
+#SBATCH --mail-user=francisco.ramirez@pascualbravo.edu.co
+
 # 1. Load the necessary environment and modules
 # module avail
 module purge
