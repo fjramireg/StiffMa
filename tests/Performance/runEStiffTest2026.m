@@ -22,10 +22,10 @@ fprintf('       uint64_scalar: %i\n',nxSca64)
 fprintf('       uint64_vector: %i\n',nxVec64)
 
 %% Variables for performance tests
-nel_all = [5 10];        % Toy
-% nel_all0 = [10,20,40,80,160,320];    % Cases for mesh size
-% nel_all1 = [nxSca32-5:nxSca32+5, nxVec32-5:nxVec32+5, nxSca64-5:nxSca64+5, nxVec64-5:nxVec64+5]; % Limited by GPU memory (OOM)
-% nel_all = sort([nel_all0, nel_all1]);
+%nel_all = [5 10];        % Toy
+nel_all0 = [10,20,40,80,160,320];    % Cases for mesh size
+nel_all1 = [nxSca32-5:nxSca32+5, nxVec32-5:nxVec32+5, nxSca64-5:nxSca64+5, nxVec64-5:nxVec64+5]; % Limited by GPU memory (OOM)
+nel_all = sort(unique([nel_all0, nel_all1]));
 dTEall = {'uint32'};            % Cases for "element" data type
 dTNall = {'single','double'};   % Cases for "nodes" data type
 prob_all = {'Scalar','Vector'};	% Cases for problem type
