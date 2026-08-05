@@ -15662,3 +15662,7 @@ ans =
     NNZ_Test/NNZ_GPU_Scalar_double_324        4           1.0581        0.0015422          1.0567      1.0579        1.06
     NNZ_Test/NNZ_GPU_Vector_double_324        4              NaN              NaN             NaN         NaN         NaN
 
+[master 6ddb284] Updated tests
+ 4 files changed, 15665 insertions(+), 1 deletion(-)
+ create mode 100644 tests/Performance/NNZ_LogResult_14868.out
+ create mode 100644 tests/Performance/errorMax_14868.err
