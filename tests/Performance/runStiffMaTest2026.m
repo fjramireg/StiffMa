@@ -21,7 +21,7 @@ fprintf('       double_scalar: %i\n',nxSca_double)
 fprintf('       double_vector: %i\n',nxVec_double)
 
 % nel_all1 = [nxSca32, nxVec32, nxSca64, nxVec64]; % Limited by GPU memory (OOM)
-nel_all = [nxSca_single-5:nxSca_single+5, nxVec_single-5:nxVec_single+5, nxSca_double-5:nxSca_double+5, nxVec_double-5:nxVec_double+5]; % Limited by GPU memory (OOM)
+nel_all = sort([nxSca_single-5:nxSca_single+5, nxVec_single-5:nxVec_single+5, nxSca_double-5:nxSca_double+5, nxVec_double-5:nxVec_double+5]); % Limited by GPU memory (OOM)
 % nel_all = sort(unique([nel_all0, nel_all1]));
 
 %% Variables for performance tests

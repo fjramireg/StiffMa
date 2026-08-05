@@ -11,23 +11,24 @@ function fullTable = runIndexTest2026
 %       Created:  13/02/2020. Version: 1.4
 
 %% Max theoretical nel
-nxSca32 = computeNelmaxGPU(4, 36, 2);  % uint32_scalar
-nxVec32 = computeNelmaxGPU(4, 300, 2); % uint32_vector
-nxSca64 = computeNelmaxGPU(8, 36, 2);  % uint64_scalar
-nxVec64 = computeNelmaxGPU(8, 300, 2); % uint64_vector
-
-fprintf('\n\n The maximum theoretical number of finite elements is:\n')
-fprintf('       uint32_scalar: %i\n',nxSca32)
-fprintf('       uint32_vector: %i\n',nxVec32)
-fprintf('       uint64_scalar: %i\n',nxSca64)
-fprintf('       uint64_vector: %i\n',nxVec64)
+% nxSca32 = computeNelmaxGPU(4, 36, 2);  % uint32_scalar
+% nxVec32 = computeNelmaxGPU(4, 300, 2); % uint32_vector
+% nxSca64 = computeNelmaxGPU(8, 36, 2);  % uint64_scalar
+% nxVec64 = computeNelmaxGPU(8, 300, 2); % uint64_vector
+% 
+% fprintf('\n\n The maximum theoretical number of finite elements is:\n')
+% fprintf('       uint32_scalar: %i\n',nxSca32)
+% fprintf('       uint32_vector: %i\n',nxVec32)
+% fprintf('       uint64_scalar: %i\n',nxSca64)
+% fprintf('       uint64_vector: %i\n',nxVec64)
+% 
+% nel_all = [nxSca32-5:nxSca32+5, nxVec32-5:nxVec32+5, nxSca64-5:nxSca64+5, nxVec64-5:nxVec64+5]; % Limited by GPU memory (OOM)
 
 %% Variables for performance tests
 % nel_all = [5 10];        % Toy
 nel_all0 = [10 20 40 80 160 320];% Cases for mesh size.
-% % nel_all1 = [nxSca32-5:nxSca32+5, nxVec32-5:nxVec32+5, nxSca64-5:nxSca64+5, nxVec64-5:nxVec64+5]; % Limited by GPU memory (OOM)
-nel_all1 = [nxSca32, nxVec32, nxSca64, nxVec64]; % Limited by GPU memory (OOM)
-nel_all = sort(unique([nel_all0, nel_all1]));
+nel_all1 = [147 185 289 364]; % Limited by GPU memory (OOM)
+nel_all = sort([nel_all0, nel_all1]);   % Cases for mesh size.
 dTEall  = {'uint32','uint64'};          % Cases for "element" data type
 dTNall  = {'single'};                   % Cases for "nodes" data type. Do not matter for this test
 prob_all= {'Scalar','Vector'};          % Cases for problem type
