@@ -10,23 +10,23 @@ function fullTable = runEStiffTest2026
 %       Created: August 03, 2026. Version: 1.0
 
 %% Max theoretical nel
-nxSca32 = computeNelmaxGPU(4, 36, 1);  % uint32_scalar
-nxVec32 = computeNelmaxGPU(4, 300, 1); % uint32_vector
-nxSca64 = computeNelmaxGPU(8, 36, 1);  % uint64_scalar
-nxVec64 = computeNelmaxGPU(8, 300, 1); % uint64_vector
+nxSca_single = computeNelmaxGPU(4, 36, 3);  % single_scalar
+nxVec_single = computeNelmaxGPU(4, 300, 3); % single_vector
+nxSca_double = computeNelmaxGPU(8, 36, 3);  % double_scalar
+nxVec_double = computeNelmaxGPU(8, 300, 3); % double_vector
 
 fprintf('\n\n The maximum theoretical number of finite elements is:\n')
-fprintf('       uint32_scalar: %i\n',nxSca32)
-fprintf('       uint32_vector: %i\n',nxVec32)
-fprintf('       uint64_scalar: %i\n',nxSca64)
-fprintf('       uint64_vector: %i\n',nxVec64)
+fprintf('       single_scalar: %i\n',nxSca_single)
+fprintf('       single_vector: %i\n',nxVec_single)
+fprintf('       double_scalar: %i\n',nxSca_double)
+fprintf('       double_vector: %i\n',nxVec_double)
+
+nel_all = sort([nxSca_single-5:nxSca_single+5, nxVec_single-5:nxVec_single+5, nxSca_double-5:nxSca_double+5, nxVec_double-5:nxVec_double+5]); % Limited by GPU memory (OOM)
+% nel_all = sort(unique([nel_all0, nel_all1]));
 
 %% Variables for performance tests
 %nel_all = [5 10];        % Toy
 % nel_all0 = [10,20,40,80,160,320];    % Cases for mesh size
-% nel_all1 = [nxSca32, nxVec32, nxSca64, nxVec64]; % Limited by GPU memory (OOM)
-nel_all = [nxSca32-5:nxSca32+5, nxVec32-5:nxVec32+5, nxSca64-5:nxSca64+5, nxVec64-5:nxVec64+5]; % Limited by GPU memory (OOM)
-% nel_all = sort(unique([nel_all0, nel_all1]));
 dTEall = {'uint32'};            % Cases for "element" data type
 dTNall = {'single','double'};   % Cases for "nodes" data type
 prob_all = {'Scalar','Vector'};	% Cases for problem type
@@ -131,7 +131,8 @@ delete(Filename);
 t1 = datetime('now');                   % Current date and time at the END of the process
 
 %% Save total results
-fname = ['NNZ_PerfTestOut_',sets.pf,'MaxMeshSize2026.mat'];
+fname = ['NNZ_PerfTestOut_',sets.pf,'2026.mat'];
+% fname = ['NNZ_PerfTestOut_',sets.pf,'MaxMeshSize2026.mat'];
 save(fname);
 fprintf('\n\nA total of %i time experiments was executed!\n',it)
 fprintf('Date and time at the beginning of the process: \t%s \n',t0);
