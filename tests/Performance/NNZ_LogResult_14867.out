@@ -25060,3 +25060,9 @@ ans =
     NNZ_Test/NNZ_GPU_Scalar_double_189        4          0.23394       0.00088256         0.23331     0.23361     0.23525
     NNZ_Test/NNZ_GPU_Vector_double_189        4              NaN              NaN             NaN         NaN         NaN
 
+[master 28d3244] Updated tests
+ 5 files changed, 25063 insertions(+), 14 deletions(-)
+ create mode 100644 tests/Performance/NNZ_LogResult_14867.out
+ create mode 100644 tests/Performance/PerfTest_2026/NNZ_PerfTestOut_LNXMaxMeshSize2026.mat
+ delete mode 100644 tests/Performance/PerfTest_2026/NNZ_Test.m
+ create mode 100644 tests/Performance/errorMax_14867.err
