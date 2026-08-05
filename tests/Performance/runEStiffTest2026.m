@@ -10,10 +10,10 @@ function fullTable = runEStiffTest2026
 %       Created: August 03, 2026. Version: 1.0
 
 %% Max theoretical nel
-nxSca_single = computeNelmaxGPU(4, 36, 3);  % single_scalar
-nxVec_single = computeNelmaxGPU(4, 300, 3); % single_vector
-nxSca_double = computeNelmaxGPU(8, 36, 3);  % double_scalar
-nxVec_double = computeNelmaxGPU(8, 300, 3); % double_vector
+nxSca_single = computeNelmaxGPU(4, 36, 1);  % single_scalar
+nxVec_single = computeNelmaxGPU(4, 300, 1); % single_vector
+nxSca_double = computeNelmaxGPU(8, 36, 1);  % double_scalar
+nxVec_double = computeNelmaxGPU(8, 300, 1); % double_vector
 
 fprintf('\n\n The maximum theoretical number of finite elements is:\n')
 fprintf('       single_scalar: %i\n',nxSca_single)
@@ -21,7 +21,7 @@ fprintf('       single_vector: %i\n',nxVec_single)
 fprintf('       double_scalar: %i\n',nxSca_double)
 fprintf('       double_vector: %i\n',nxVec_double)
 
-nel_all = sort([nxSca_single-5:nxSca_single+5, nxVec_single-5:nxVec_single+5, nxSca_double-5:nxSca_double+5, nxVec_double-5:nxVec_double+5]); % Limited by GPU memory (OOM)
+nel_all = sort([nxSca_single-1:nxSca_single+5, nxVec_single-1:nxVec_single+5, nxSca_double-1:nxSca_double+5, nxVec_double-1:nxVec_double+5]); % Limited by GPU memory (OOM)
 % nel_all = sort(unique([nel_all0, nel_all1]));
 
 %% Variables for performance tests
@@ -131,8 +131,8 @@ delete(Filename);
 t1 = datetime('now');                   % Current date and time at the END of the process
 
 %% Save total results
-fname = ['NNZ_PerfTestOut_',sets.pf,'2026.mat'];
-% fname = ['NNZ_PerfTestOut_',sets.pf,'MaxMeshSize2026.mat'];
+% fname = ['NNZ_PerfTestOut_',sets.pf,'2026.mat'];
+fname = ['NNZ_PerfTestOut_',sets.pf,'Max2026.mat'];
 save(fname);
 fprintf('\n\nA total of %i time experiments was executed!\n',it)
 fprintf('Date and time at the beginning of the process: \t%s \n',t0);

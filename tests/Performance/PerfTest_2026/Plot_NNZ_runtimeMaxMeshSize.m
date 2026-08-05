@@ -24,7 +24,7 @@ function Plot_NNZ_runtimeMaxMeshSize
 %   Created: July 30, 2026. Version: 1.0
 
 %% Data
-load("NNZ_PerfTestOut_LNXMaxMeshSize2026.mat"); %#ok
+load("NNZ_PerfTestOut_LNXMax2026.mat"); %#ok
 
 % Build parameter arrays in the same nested-loop order used to produce fullTable
 nN = numel(nel_all);
