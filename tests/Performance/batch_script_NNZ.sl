@@ -32,3 +32,8 @@ matlab -batch 'runEStiffTest2026'
 
 # 4. Sent to the queue 
 # using the command: sbatch batch_script_NNZ.sl
+
+# 5. Save on the Git repository 
+git add -A
+git commit -m "Updated tests"
+git push

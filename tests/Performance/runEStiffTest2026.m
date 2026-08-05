@@ -23,13 +23,14 @@ fprintf('       uint64_vector: %i\n',nxVec64)
 
 %% Variables for performance tests
 %nel_all = [5 10];        % Toy
-nel_all0 = [10,20,40,80,160,320];    % Cases for mesh size
-nel_all1 = [nxSca32, nxVec32, nxSca64, nxVec64]; % Limited by GPU memory (OOM)
-nel_all = sort(unique([nel_all0, nel_all1]));
+% nel_all0 = [10,20,40,80,160,320];    % Cases for mesh size
+% nel_all1 = [nxSca32, nxVec32, nxSca64, nxVec64]; % Limited by GPU memory (OOM)
+nel_all = [nxSca32-5:nxSca32+5, nxVec32-5:nxVec32+5, nxSca64-5:nxSca64+5, nxVec64-5:nxVec64+5]; % Limited by GPU memory (OOM)
+% nel_all = sort(unique([nel_all0, nel_all1]));
 dTEall = {'uint32'};            % Cases for "element" data type
 dTNall = {'single','double'};   % Cases for "nodes" data type
 prob_all = {'Scalar','Vector'};	% Cases for problem type
-proc_all = {'CPU','GPU'};        % Cases for processor type
+proc_all = {'GPU'};        % Cases for processor type
 
 %% Save results in this folder
 old = pwd;
@@ -130,7 +131,7 @@ delete(Filename);
 t1 = datetime('now');                   % Current date and time at the END of the process
 
 %% Save total results
-fname = ['NNZ_PerfTestOut_',sets.pf,'2026.mat'];
+fname = ['NNZ_PerfTestOut_',sets.pf,'MaxMeshSize2026.mat'];
 save(fname);
 fprintf('\n\nA total of %i time experiments was executed!\n',it)
 fprintf('Date and time at the beginning of the process: \t%s \n',t0);
