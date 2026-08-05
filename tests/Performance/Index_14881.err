@@ -1,0 +1,1 @@
+/var/spool/slurm/d/job14881/slurm_script: línea 31: 362131 Killed                  matlab -batch 'runIndexTest2026'
