@@ -1,6 +1,6 @@
-function fullTable = runEStiffTest2026
-% Runs the ESTIFF code by varying problem size, data precision type, problem type
-% and processor type.
+function fullTable = runAssemblyTest2026
+% Runs the ASSEMBLY code by varying problem size and problem type for both
+% processors CPU and GPU.
 %
 %   For more information, see the <a href="matlab:
 %   web('https://github.com/fjramireg/StiffMa')">StiffMa</a> web site.
@@ -10,10 +10,10 @@ function fullTable = runEStiffTest2026
 %       Created: August 03, 2026. Version: 1.0
 
 %% Max theoretical nel
-nxSca32 = computeNelmaxGPU(4, 36, 1);  % uint32_scalar
-nxVec32 = computeNelmaxGPU(4, 300, 1); % uint32_vector
-nxSca64 = computeNelmaxGPU(8, 36, 1);  % uint64_scalar
-nxVec64 = computeNelmaxGPU(8, 300, 1); % uint64_vector
+nxSca32 = computeNelmaxGPU(4, 36, 3);  % uint32_scalar
+nxVec32 = computeNelmaxGPU(4, 300, 3); % uint32_vector
+nxSca64 = computeNelmaxGPU(8, 36, 3);  % uint64_scalar
+nxVec64 = computeNelmaxGPU(8, 300, 3); % uint64_vector
 
 fprintf('\n\n The maximum theoretical number of finite elements is:\n')
 fprintf('       uint32_scalar: %i\n',nxSca32)
@@ -22,10 +22,10 @@ fprintf('       uint64_scalar: %i\n',nxSca64)
 fprintf('       uint64_vector: %i\n',nxVec64)
 
 %% Variables for performance tests
-%nel_all = [5 10];        % Toy
-nel_all0 = [10,20,40,80,160,320];    % Cases for mesh size
-nel_all1 = [nxSca32, nxVec32, nxSca64, nxVec64]; % Limited by GPU memory (OOM)
-nel_all = sort(unique([nel_all0, nel_all1]));
+nel_all = [5 10];        % Toy
+% nel_all0 = [10,20,40,80,160,320];    % Cases for mesh size
+% nel_all1 = [nxSca32, nxVec32, nxSca64, nxVec64]; % Limited by GPU memory (OOM)
+% nel_all = sort(unique([nel_all0, nel_all1]));
 dTEall = {'uint32'};            % Cases for "element" data type
 dTNall = {'single','double'};   % Cases for "nodes" data type
 prob_all = {'Scalar','Vector'};	% Cases for problem type
@@ -89,12 +89,15 @@ for k = 1:length(nel_all)
                     sets.proc_type = proc_all{proc};
 
                     % Prepares the test
-                    sets.name = 'NNZ_Test';
+                    sets.name = 'Assembly_Test';
                     Filename = [sets.name,'.m'];
-                    WriteEStiffPerfScript2026(sets);
+                    WriteAssemblyPerfScript2026(sets);
                     type(Filename);
 
                     % Executes the performance test
+                    % if ( ( strcmp(sets.proc_type,'CPU') && sets.nel > 40 ) ...
+                    % || ( strcmp(sets.proc_type,'GPU') && strcmp(sets.prob_type,'Scalar') && sets.nel > 195 ) ...
+                    % || ( strcmp(sets.proc_type,'GPU') && strcmp(sets.prob_type,'Vector') && sets.nel > 95 ) )   % Takes long time to run the full test or OOM. So, only 1 execution is taken
                     if ( strcmp(sets.proc_type,'CPU') && sets.nel > 40  )   % Takes long time to run the full test. So, only 1 execution is taken
                         numSamples = 1;                                         % Number of sample measurements to collect, specified as a positive integer.
                         numWarmups = 0;                                         % Number of warm-up measurements, specified as a nonnegative integer.
@@ -109,7 +112,7 @@ for k = 1:length(nel_all)
                         % Objective relative margin of error for samples: 0.05 (5%)
                         % Confidence level for samples to be within relative margin of error: 0.95 (95%)
                         perf_rst = runperf(sets.name);
-                        disp(perf_rst);                        
+                        disp(perf_rst);
                     end
 
                     % Partial results
@@ -130,9 +133,9 @@ delete(Filename);
 t1 = datetime('now');                   % Current date and time at the END of the process
 
 %% Save total results
-fname = ['NNZ_PerfTestOut_',sets.pf,'2026.mat'];
+fname = ['Assembly_PerfTest_',sets.pf,'2026.mat'];
 save(fname);
 fprintf('\n\nA total of %i time experiments was executed!\n',it)
 fprintf('Date and time at the beginning of the process: \t%s \n',t0);
-fprintf('Date and time at the end of the process: \t%s\n',t1);
+fprintf('Date and time at the end of the process: \t%s\n\n',t1);
 fprintf('Elapsed time : \t%s\n\n',t1-t0);
