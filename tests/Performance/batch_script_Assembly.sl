@@ -7,9 +7,9 @@
 #SBATCH --cpus-per-task=4                 # Assign 64 physical CPUs to this task
 ## SBATCH --exclusive                       # Assigns the node exclusively (without sharing)
 #SBATCH --gres=gpu:1                      # Requires 1 physical GPU (Tesla T4)
-#SBATCH --time=24:00:00                   # Maximum execution time (adjust as needed)
-#SBATCH --output=Assembly_LogResult_%j.out   # Standard output file (%j adds the Job ID)
-#SBATCH --error=Assembly_%j.err              # Standard Error Log
+## SBATCH --time=24:00:00                   # Maximum execution time (adjust as needed)
+#SBATCH --output=Assembly_LogMax_%j.out   # Standard output file (%j adds the Job ID)
+#SBATCH --error=Assembly_ErrMax_%j.err              # Standard Error Log
 
 # Notification by Mail
 #SBATCH --mail-type=ALL
@@ -34,6 +34,6 @@ matlab -batch 'runAssemblyTest2026'
 # using the command: sbatch batch_script_Assembly.sl
 
 # 5. Save on the Git repository 
-git add -A
-git commit -m "Updated tests"
-git push
+# git add -A
+# git commit -m "Updated tests"
+# git push
