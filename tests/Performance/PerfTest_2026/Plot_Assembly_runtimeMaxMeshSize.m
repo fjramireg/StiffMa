@@ -1,4 +1,4 @@
-function Plot_NNZ_runtimeMaxMeshSize
+function Plot_Assembly_runtimeMaxMeshSize
 %PLOT_INDEX_RUNTIMEMAXMESHSIZE Plot Index runtime versus maximum mesh size
 %   PLOT_INDEX_RUNTIMEMAXMESHSIZE loads precomputed performance data from
 %   "IndexPerfTestOut_LNXMax2026.mat" and generates a figure showing the
@@ -24,7 +24,7 @@ function Plot_NNZ_runtimeMaxMeshSize
 %   Created: July 30, 2026. Version: 1.0
 
 %% Data
-load("NNZ_PerfTestOut_LNXMax2026.mat"); %#ok
+load("Assembly_PerfTest_LNXMax2026.mat"); %#ok
 
 % Build parameter arrays in the same nested-loop order used to produce fullTable
 nN = numel(nel_all);

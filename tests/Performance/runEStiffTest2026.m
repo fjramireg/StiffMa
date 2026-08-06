@@ -14,14 +14,22 @@ nxSca_single = computeNelmaxGPU(4, 36, 1);  % single_scalar
 nxVec_single = computeNelmaxGPU(4, 300, 1); % single_vector
 nxSca_double = computeNelmaxGPU(8, 36, 1);  % double_scalar
 nxVec_double = computeNelmaxGPU(8, 300, 1); % double_vector
+nelmaxSca = floor( (double(intmax('int32'))/36)^(1/3) );
+nelmaxVec = floor( (double(intmax('int32'))/300)^(1/3) );
 
 fprintf('\n\n The maximum theoretical number of finite elements is:\n')
 fprintf('       single_scalar: %i\n',nxSca_single)
 fprintf('       single_vector: %i\n',nxVec_single)
 fprintf('       double_scalar: %i\n',nxSca_double)
 fprintf('       double_vector: %i\n',nxVec_double)
+fprintf('       nelMax_Scalar: %i\n',nelmaxSca)
+fprintf('       nelMax_vector: %i\n',nelmaxVec)
 
-nel_all = sort([nxSca_single-1:nxSca_single+5, nxVec_single-1:nxVec_single+5, nxSca_double-1:nxSca_double+5, nxVec_double-1:nxVec_double+5]); % Limited by GPU memory (OOM)
+
+nel_all = sort([nxSca_single-1:nxSca_single+10, nxVec_single-1:nxVec_single+10, ...
+    nxSca_double-1:nxSca_double+10, nxVec_double-1:nxVec_double+10 ...
+    nelmaxSca-5:nelmaxSca+1, nelmaxVec-5:nelmaxVec+1]); % Limited by GPU memory (OOM)
+nel_all = nel_all(nel_all <= nelmaxSca+1);
 % nel_all = sort(unique([nel_all0, nel_all1]));
 
 %% Variables for performance tests

@@ -54,7 +54,7 @@ h = plot(ax, ...
     nels, fullTable.Mean(8:stride:end),'-+r');    % GPU_Vector_uint64
 
 
-% h = plot(ax, ... 
+% h = plot(ax, ...
 %     nels, fullTable.Mean(1:stride:end),'--ob',...  % CPU_Scalar_uint32
 %     nels, fullTable.Mean(2:stride:end),'-ob',...   % GPU_Scalar_uint32
 %     nels, fullTable.Mean(3:stride:end),'--+b',...  % CPU_Vector_uint32
@@ -80,11 +80,10 @@ for ii = 1:numel(h)
     xdata = h(ii).XData;
     ydata = h(ii).YData;
     idx = find(isfinite(ydata), 1, 'last');     % last valid numeric entry
-    idxs(ii) = idx;
     if isempty(idx)
         continue
     end
-
+    idxs(ii) = idx;
     dt = datatip(h(ii), xdata(idx), ydata(idx));
     % Optional styling
     % dt.FontSize = 12;
