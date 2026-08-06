@@ -8,8 +8,8 @@
 ## SBATCH --exclusive                       # Assigns the node exclusively (without sharing)
 #SBATCH --gres=gpu:1                      # Requires 1 physical GPU (Tesla T4)
 ## SBATCH --time=24:00:00                   # Maximum execution time (adjust as needed)
-#SBATCH --output=Index_LogMaxResult_%j.out   # Standard output file (%j adds the Job ID)
-#SBATCH --error=Index_Max%j.err              # Standard Error Log
+#SBATCH --output=Index_LogResult_%j.out   # Standard output file (%j adds the Job ID)
+#SBATCH --error=Index_%j.err              # Standard Error Log
 
 # Notification by Mail
 #SBATCH --mail-type=ALL
@@ -34,6 +34,6 @@ matlab -batch 'runIndexTest2026'
 # using the command: sbatch batch_script_index.sl
 
 # 5. Save on the Git repository 
-# git add -A
-# git commit -m "Updated tests"
-# git push
+git add -A
+git commit -m "Updated tests"
+git push
