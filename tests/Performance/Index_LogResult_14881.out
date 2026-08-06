@@ -4614,3 +4614,8 @@ Running IndexTest
 	 Number of elements: 48228544
 	 Number of nodes   : 48627125
 
+[master 6d7bca1] Updated tests
+ 4 files changed, 4628 insertions(+), 1 deletion(-)
+ create mode 100644 tests/Performance/Index_14881.err
+ create mode 100644 tests/Performance/Index_LogResult_14881.out
+ create mode 100644 tests/Performance/PerfTest_2026/IndexTest.m
