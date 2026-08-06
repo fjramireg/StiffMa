@@ -26,8 +26,8 @@ fprintf('       uint64_vector: %i\n',nxVec64)
 fprintf('       nelMax_Scalar: %i\n',nelmaxSca)
 fprintf('       nelMax_vector: %i\n',nelmaxVec)
 
-nel_all = sort([nxSca32-1:nxSca32+10, nxVec32-1:nxVec32+10,
-    nxSca64-1:nxSca64+10, nxVec64-1:nxVec64+10
+nel_all = sort([nxSca32-1:nxSca32+10, nxVec32-1:nxVec32+10,...
+    nxSca64-1:nxSca64+10, nxVec64-1:nxVec64+10,...
     nelmaxSca-5:nelmaxSca+1, nelmaxVec-5:nelmaxVec+1]); % Limited by GPU memory (OOM)
 nel_all = nel_all(nel_all <= nelmaxSca+1);
 
