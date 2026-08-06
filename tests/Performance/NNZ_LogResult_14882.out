@@ -16348,3 +16348,8 @@ ans =
     NNZ_Test/NNZ_GPU_Scalar_double_440         4             NaN              NaN             NaN         NaN         NaN
     NNZ_Test/NNZ_GPU_Vector_double_440         4             NaN              NaN             NaN         NaN         NaN
 
+[master 2bc0057] Updated tests
+ 5 files changed, 16357 insertions(+)
+ create mode 100644 tests/Performance/NNZ_LogResult_14882.out
+ create mode 100644 tests/Performance/PerfTest_2026/NNZ_PerfTestOut_LNXMax2026.mat
+ create mode 100644 tests/Performance/errorMax_14882.err
