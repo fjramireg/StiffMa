@@ -25,9 +25,9 @@ fprintf('       double_vector: %i\n',nxVec_double)
 fprintf('       nelMax_Scalar: %i\n',nelmaxSca)
 fprintf('       nelMax_vector: %i\n',nelmaxVec)
 
-nel_all = sort([nxSca_single-1:nxSca_single+10, nxVec_single-1:nxVec_single+10, ...
+nel_all = sort(unique([nxSca_single-1:nxSca_single+10, nxVec_single-1:nxVec_single+10, ...
     nxSca_double-1:nxSca_double+10, nxVec_double-1:nxVec_double+10, ...
-    nelmaxSca-5:nelmaxSca+1, nelmaxVec-5:nelmaxVec+1]); % Limited by GPU memory (OOM)
+    nelmaxSca-5:nelmaxSca+1, nelmaxVec-5:nelmaxVec+10, 90:100])); % Limited by GPU memory (OOM)
 nel_all = nel_all(nel_all <= nelmaxSca+1);
 
 %% Variables for performance tests
