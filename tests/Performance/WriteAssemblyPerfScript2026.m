@@ -33,7 +33,7 @@ testname = ['%% Assembly_',sets.proc_type,'_',sets.prob_type,'_',sets.dTN,'_',nu
 if strcmp(sets.prob_type,'Scalar')
     fprintf(fileID,"sets.sz = %d;\n",36);
     fprintf(fileID,"sets.edof = %d;\n",8);
-    fprintf(fileID,"sets.tdofs = sets.nnodes * sets.edof;\n");
+    fprintf(fileID,"sets.tdofs = sets.nnodes * 1;\n");
     fprintf(fileID,"c = %d;\n",384.1);
     fprintf(fileID,"d = gpuDevice;\n");
     fprintf(fileID,"sets.tbs = d.MaxThreadsPerBlock;\n");
@@ -65,7 +65,7 @@ if strcmp(sets.prob_type,'Scalar')
 elseif strcmp(sets.prob_type,'Vector')
     fprintf(fileID,"sets.sz = %d;\n",300);
     fprintf(fileID,"sets.edof = %d;\n",24);
-    fprintf(fileID,"sets.tdofs = sets.nnodes * sets.edof;\n");
+    fprintf(fileID,"sets.tdofs = sets.nnodes * 3;\n");
     fprintf(fileID,"MP.E = %d;\n",200e9);
     fprintf(fileID,"MP.nu = %d;\n",0.3);
     fprintf(fileID,"d = gpuDevice;\n");

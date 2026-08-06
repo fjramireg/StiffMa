@@ -8,6 +8,7 @@
 ## SBATCH --exclusive                       # Assigns the node exclusively (without sharing)
 #SBATCH --gres=gpu:1                      # Requires 1 physical GPU (Tesla T4)
 ## SBATCH --time=24:00:00                   # Maximum execution time (adjust as needed)
+#SBATCH --time=UNLIMITED                  # in an equivalent manner: #SBATCH --time=0
 #SBATCH --output=Assembly_LogMax_%j.out   # Standard output file (%j adds the Job ID)
 #SBATCH --error=Assembly_ErrMax_%j.err              # Standard Error Log
 

@@ -37,6 +37,8 @@ totalRuns = nN * nTE * nTN * nP * nPr;
 nRows = height(fullTable);
 if nRows ~= totalRuns
     warning('fullTable rows (%d) do not match expected runs (%d).', nRows, totalRuns);
+    [~, idxUnicos] = unique(fullTable.Name, 'stable');
+    fullTable = fullTable(idxUnicos, :);
 end
 
 stride = totalRuns / nN;
