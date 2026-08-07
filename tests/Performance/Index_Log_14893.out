@@ -1,0 +1,4619 @@
+=== START OF WORK ===
+Date and time: jue ago  6 17:48:11 EDT 2026
+Execution node: NODO-G3
+Job Directory: /exports/home/francisco.ramirez/StiffMa/tests/Performance
+==========================
+
+sets.nel = 10;
+sets.dTE = 'uint32';
+sets.dTN = 'single';
+[elements, ~] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 1000;
+sets.sz = 36;
+sets.edof = 8;
+
+%% Index_CPU_Scalar_uint32_10
+[iK, jK] = Index_sssa(elements, sets);
+Running IndexTest
+
+ Mesh created successfully!
+	 Number of elements: 1000
+	 Number of nodes   : 1331
+
+.........
+================================================================================
+IndexTest/Index_CPU_Scalar_uint32_10 was filtered.
+    Test Diagnostic: The MeasuredTime should not be too close to the precision of the framework.
+================================================================================
+
+Done IndexTest
+__________
+
+Failure Summary:
+
+     Name                                  Failed  Incomplete  Reason(s)
+    ===================================================================================
+     IndexTest/Index_CPU_Scalar_uint32_10              X       Filtered by assumption.
+  TimeResult with properties:
+
+            Name: 'IndexTest/Index_CPU_Scalar_uint32_10'
+           Valid: 0
+         Samples: [4×7 table]
+    TestActivity: [9×12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   0.28914 seconds testing time.
+
+
+sets.nel = 10;
+sets.dTE = 'uint32';
+sets.dTN = 'single';
+[elements, ~] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 1000;
+sets.sz = 36;
+sets.edof = 8;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+elementsGPU = gpuArray(elements);
+
+%% Index_GPU_Scalar_uint32_10
+[iKd, jKd] = Index_spsa_opt(elementsGPU, sets);
+wait(d);
+Running IndexTest
+
+ Mesh created successfully!
+	 Number of elements: 1000
+	 Number of nodes   : 1331
+
+.........
+Done IndexTest
+__________
+
+  TimeResult with properties:
+
+            Name: 'IndexTest/Index_GPU_Scalar_uint32_10'
+           Valid: 1
+         Samples: [4×7 table]
+    TestActivity: [9×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   0.43035 seconds testing time.
+
+
+sets.nel = 10;
+sets.dTE = 'uint32';
+sets.dTN = 'single';
+[elements, ~] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 1000;
+sets.edof = 24;
+sets.sz = 300;
+
+%% Index_CPU_Vector_uint32_10
+[iK, jK] = Index_vssa(elements, sets);
+Running IndexTest
+
+ Mesh created successfully!
+	 Number of elements: 1000
+	 Number of nodes   : 1331
+
+.........
+Done IndexTest
+__________
+
+  TimeResult with properties:
+
+            Name: 'IndexTest/Index_CPU_Vector_uint32_10'
+           Valid: 1
+         Samples: [4×7 table]
+    TestActivity: [9×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   0.35479 seconds testing time.
+
+
+sets.nel = 10;
+sets.dTE = 'uint32';
+sets.dTN = 'single';
+[elements, ~] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 1000;
+sets.edof = 24;
+sets.sz = 300;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+elementsGPU = gpuArray(elements);
+
+%% Index_GPU_Vector_uint32_10
+[iKd, jKd] = Index_vpsa_opt(elementsGPU, sets);
+wait(d);
+Running IndexTest
+
+ Mesh created successfully!
+	 Number of elements: 1000
+	 Number of nodes   : 1331
+
+.........
+Done IndexTest
+__________
+
+  TimeResult with properties:
+
+            Name: 'IndexTest/Index_GPU_Vector_uint32_10'
+           Valid: 1
+         Samples: [4×7 table]
+    TestActivity: [9×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   0.40672 seconds testing time.
+
+
+sets.nel = 10;
+sets.dTE = 'uint64';
+sets.dTN = 'single';
+[elements, ~] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 1000;
+sets.sz = 36;
+sets.edof = 8;
+
+%% Index_CPU_Scalar_uint64_10
+[iK, jK] = Index_sssa(elements, sets);
+Running IndexTest
+
+ Mesh created successfully!
+	 Number of elements: 1000
+	 Number of nodes   : 1331
+
+.........
+Done IndexTest
+__________
+
+  TimeResult with properties:
+
+            Name: 'IndexTest/Index_CPU_Scalar_uint64_10'
+           Valid: 1
+         Samples: [4×7 table]
+    TestActivity: [9×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   0.27298 seconds testing time.
+
+
+sets.nel = 10;
+sets.dTE = 'uint64';
+sets.dTN = 'single';
+[elements, ~] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 1000;
+sets.sz = 36;
+sets.edof = 8;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+elementsGPU = gpuArray(elements);
+
+%% Index_GPU_Scalar_uint64_10
+[iKd, jKd] = Index_spsa_opt(elementsGPU, sets);
+wait(d);
+Running IndexTest
+
+ Mesh created successfully!
+	 Number of elements: 1000
+	 Number of nodes   : 1331
+
+.......... .......... .
+Done IndexTest
+__________
+
+  TimeResult with properties:
+
+            Name: 'IndexTest/Index_GPU_Scalar_uint64_10'
+           Valid: 1
+         Samples: [16×7 table]
+    TestActivity: [21×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   0.6383 seconds testing time.
+
+
+sets.nel = 10;
+sets.dTE = 'uint64';
+sets.dTN = 'single';
+[elements, ~] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 1000;
+sets.edof = 24;
+sets.sz = 300;
+
+%% Index_CPU_Vector_uint64_10
+[iK, jK] = Index_vssa(elements, sets);
+Running IndexTest
+
+ Mesh created successfully!
+	 Number of elements: 1000
+	 Number of nodes   : 1331
+
+..........
+Done IndexTest
+__________
+
+  TimeResult with properties:
+
+            Name: 'IndexTest/Index_CPU_Vector_uint64_10'
+           Valid: 1
+         Samples: [5×7 table]
+    TestActivity: [10×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   0.56144 seconds testing time.
+
+
+sets.nel = 10;
+sets.dTE = 'uint64';
+sets.dTN = 'single';
+[elements, ~] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 1000;
+sets.edof = 24;
+sets.sz = 300;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+elementsGPU = gpuArray(elements);
+
+%% Index_GPU_Vector_uint64_10
+[iKd, jKd] = Index_vpsa_opt(elementsGPU, sets);
+wait(d);
+Running IndexTest
+
+ Mesh created successfully!
+	 Number of elements: 1000
+	 Number of nodes   : 1331
+
+.......... .......... .......... .......... ..........
+.......... .......... .......... .......... ...
+Done IndexTest
+__________
+
+  TimeResult with properties:
+
+            Name: 'IndexTest/Index_GPU_Vector_uint64_10'
+           Valid: 1
+         Samples: [88×7 table]
+    TestActivity: [93×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   3.5891 seconds testing time.
+
+
+sets.nel = 20;
+sets.dTE = 'uint32';
+sets.dTN = 'single';
+[elements, ~] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 8000;
+sets.sz = 36;
+sets.edof = 8;
+
+%% Index_CPU_Scalar_uint32_20
+[iK, jK] = Index_sssa(elements, sets);
+Running IndexTest
+
+ Mesh created successfully!
+	 Number of elements: 8000
+	 Number of nodes   : 9261
+
+.........
+Done IndexTest
+__________
+
+  TimeResult with properties:
+
+            Name: 'IndexTest/Index_CPU_Scalar_uint32_20'
+           Valid: 1
+         Samples: [4×7 table]
+    TestActivity: [9×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   0.3865 seconds testing time.
+
+
+sets.nel = 20;
+sets.dTE = 'uint32';
+sets.dTN = 'single';
+[elements, ~] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 8000;
+sets.sz = 36;
+sets.edof = 8;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+elementsGPU = gpuArray(elements);
+
+%% Index_GPU_Scalar_uint32_20
+[iKd, jKd] = Index_spsa_opt(elementsGPU, sets);
+wait(d);
+Running IndexTest
+
+ Mesh created successfully!
+	 Number of elements: 8000
+	 Number of nodes   : 9261
+
+.......... .......... .......... ........
+Done IndexTest
+__________
+
+  TimeResult with properties:
+
+            Name: 'IndexTest/Index_GPU_Scalar_uint32_20'
+           Valid: 1
+         Samples: [33×7 table]
+    TestActivity: [38×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   1.0566 seconds testing time.
+
+
+sets.nel = 20;
+sets.dTE = 'uint32';
+sets.dTN = 'single';
+[elements, ~] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 8000;
+sets.edof = 24;
+sets.sz = 300;
+
+%% Index_CPU_Vector_uint32_20
+[iK, jK] = Index_vssa(elements, sets);
+Running IndexTest
+
+ Mesh created successfully!
+	 Number of elements: 8000
+	 Number of nodes   : 9261
+
+.........
+Done IndexTest
+__________
+
+  TimeResult with properties:
+
+            Name: 'IndexTest/Index_CPU_Vector_uint32_20'
+           Valid: 1
+         Samples: [4×7 table]
+    TestActivity: [9×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   1.9157 seconds testing time.
+
+
+sets.nel = 20;
+sets.dTE = 'uint32';
+sets.dTN = 'single';
+[elements, ~] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 8000;
+sets.edof = 24;
+sets.sz = 300;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+elementsGPU = gpuArray(elements);
+
+%% Index_GPU_Vector_uint32_20
+[iKd, jKd] = Index_vpsa_opt(elementsGPU, sets);
+wait(d);
+Running IndexTest
+
+ Mesh created successfully!
+	 Number of elements: 8000
+	 Number of nodes   : 9261
+
+.......... .......... .......... .......... ..........
+.
+Done IndexTest
+__________
+
+  TimeResult with properties:
+
+            Name: 'IndexTest/Index_GPU_Vector_uint32_20'
+           Valid: 1
+         Samples: [46×7 table]
+    TestActivity: [51×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   1.7506 seconds testing time.
+
+
+sets.nel = 20;
+sets.dTE = 'uint64';
+sets.dTN = 'single';
+[elements, ~] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 8000;
+sets.sz = 36;
+sets.edof = 8;
+
+%% Index_CPU_Scalar_uint64_20
+[iK, jK] = Index_sssa(elements, sets);
+Running IndexTest
+
+ Mesh created successfully!
+	 Number of elements: 8000
+	 Number of nodes   : 9261
+
+.........
+Done IndexTest
+__________
+
+  TimeResult with properties:
+
+            Name: 'IndexTest/Index_CPU_Scalar_uint64_20'
+           Valid: 1
+         Samples: [4×7 table]
+    TestActivity: [9×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   0.45476 seconds testing time.
+
+
+sets.nel = 20;
+sets.dTE = 'uint64';
+sets.dTN = 'single';
+[elements, ~] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 8000;
+sets.sz = 36;
+sets.edof = 8;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+elementsGPU = gpuArray(elements);
+
+%% Index_GPU_Scalar_uint64_20
+[iKd, jKd] = Index_spsa_opt(elementsGPU, sets);
+wait(d);
+Running IndexTest
+
+ Mesh created successfully!
+	 Number of elements: 8000
+	 Number of nodes   : 9261
+
+.......... .
+Done IndexTest
+__________
+
+  TimeResult with properties:
+
+            Name: 'IndexTest/Index_GPU_Scalar_uint64_20'
+           Valid: 1
+         Samples: [6×7 table]
+    TestActivity: [11×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   0.29145 seconds testing time.
+
+
+sets.nel = 20;
+sets.dTE = 'uint64';
+sets.dTN = 'single';
+[elements, ~] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 8000;
+sets.edof = 24;
+sets.sz = 300;
+
+%% Index_CPU_Vector_uint64_20
+[iK, jK] = Index_vssa(elements, sets);
+Running IndexTest
+
+ Mesh created successfully!
+	 Number of elements: 8000
+	 Number of nodes   : 9261
+
+.........
+Done IndexTest
+__________
+
+  TimeResult with properties:
+
+            Name: 'IndexTest/Index_CPU_Vector_uint64_20'
+           Valid: 1
+         Samples: [4×7 table]
+    TestActivity: [9×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   3.0343 seconds testing time.
+
+
+sets.nel = 20;
+sets.dTE = 'uint64';
+sets.dTN = 'single';
+[elements, ~] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 8000;
+sets.edof = 24;
+sets.sz = 300;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+elementsGPU = gpuArray(elements);
+
+%% Index_GPU_Vector_uint64_20
+[iKd, jKd] = Index_vpsa_opt(elementsGPU, sets);
+wait(d);
+Running IndexTest
+
+ Mesh created successfully!
+	 Number of elements: 8000
+	 Number of nodes   : 9261
+
+.........
+Done IndexTest
+__________
+
+  TimeResult with properties:
+
+            Name: 'IndexTest/Index_GPU_Vector_uint64_20'
+           Valid: 1
+         Samples: [4×7 table]
+    TestActivity: [9×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   0.48025 seconds testing time.
+
+
+sets.nel = 40;
+sets.dTE = 'uint32';
+sets.dTN = 'single';
+[elements, ~] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 64000;
+sets.sz = 36;
+sets.edof = 8;
+
+%% Index_CPU_Scalar_uint32_40
+[iK, jK] = Index_sssa(elements, sets);
+Running IndexTest
+
+ Mesh created successfully!
+	 Number of elements: 64000
+	 Number of nodes   : 68921
+
+.........
+Done IndexTest
+__________
+
+  TimeResult with properties:
+
+            Name: 'IndexTest/Index_CPU_Scalar_uint32_40'
+           Valid: 1
+         Samples: [4×7 table]
+    TestActivity: [9×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   2.0565 seconds testing time.
+
+
+sets.nel = 40;
+sets.dTE = 'uint32';
+sets.dTN = 'single';
+[elements, ~] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 64000;
+sets.sz = 36;
+sets.edof = 8;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+elementsGPU = gpuArray(elements);
+
+%% Index_GPU_Scalar_uint32_40
+[iKd, jKd] = Index_spsa_opt(elementsGPU, sets);
+wait(d);
+Running IndexTest
+
+ Mesh created successfully!
+	 Number of elements: 64000
+	 Number of nodes   : 68921
+
+.......... .......... .......... .......... ..........
+Done IndexTest
+__________
+
+  TimeResult with properties:
+
+            Name: 'IndexTest/Index_GPU_Scalar_uint32_40'
+           Valid: 1
+         Samples: [45×7 table]
+    TestActivity: [50×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   1.1663 seconds testing time.
+
+
+sets.nel = 40;
+sets.dTE = 'uint32';
+sets.dTN = 'single';
+[elements, ~] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 64000;
+sets.edof = 24;
+sets.sz = 300;
+
+%% Index_CPU_Vector_uint32_40
+[iK, jK] = Index_vssa(elements, sets);
+Running IndexTest
+
+ Mesh created successfully!
+	 Number of elements: 64000
+	 Number of nodes   : 68921
+
+.........
+Done IndexTest
+__________
+
+  TimeResult with properties:
+
+            Name: 'IndexTest/Index_CPU_Vector_uint32_40'
+           Valid: 1
+         Samples: [4×7 table]
+    TestActivity: [9×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   14.1869 seconds testing time.
+
+
+sets.nel = 40;
+sets.dTE = 'uint32';
+sets.dTN = 'single';
+[elements, ~] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 64000;
+sets.edof = 24;
+sets.sz = 300;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+elementsGPU = gpuArray(elements);
+
+%% Index_GPU_Vector_uint32_40
+[iKd, jKd] = Index_vpsa_opt(elementsGPU, sets);
+wait(d);
+Running IndexTest
+
+ Mesh created successfully!
+	 Number of elements: 64000
+	 Number of nodes   : 68921
+
+.........
+Done IndexTest
+__________
+
+  TimeResult with properties:
+
+            Name: 'IndexTest/Index_GPU_Vector_uint32_40'
+           Valid: 1
+         Samples: [4×7 table]
+    TestActivity: [9×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   0.37557 seconds testing time.
+
+
+sets.nel = 40;
+sets.dTE = 'uint64';
+sets.dTN = 'single';
+[elements, ~] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 64000;
+sets.sz = 36;
+sets.edof = 8;
+
+%% Index_CPU_Scalar_uint64_40
+[iK, jK] = Index_sssa(elements, sets);
+Running IndexTest
+
+ Mesh created successfully!
+	 Number of elements: 64000
+	 Number of nodes   : 68921
+
+.........
+Done IndexTest
+__________
+
+  TimeResult with properties:
+
+            Name: 'IndexTest/Index_CPU_Scalar_uint64_40'
+           Valid: 1
+         Samples: [4×7 table]
+    TestActivity: [9×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   2.8688 seconds testing time.
+
+
+sets.nel = 40;
+sets.dTE = 'uint64';
+sets.dTN = 'single';
+[elements, ~] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 64000;
+sets.sz = 36;
+sets.edof = 8;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+elementsGPU = gpuArray(elements);
+
+%% Index_GPU_Scalar_uint64_40
+[iKd, jKd] = Index_spsa_opt(elementsGPU, sets);
+wait(d);
+Running IndexTest
+
+ Mesh created successfully!
+	 Number of elements: 64000
+	 Number of nodes   : 68921
+
+.........
+Done IndexTest
+__________
+
+  TimeResult with properties:
+
+            Name: 'IndexTest/Index_GPU_Scalar_uint64_40'
+           Valid: 1
+         Samples: [4×7 table]
+    TestActivity: [9×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   0.25823 seconds testing time.
+
+
+sets.nel = 40;
+sets.dTE = 'uint64';
+sets.dTN = 'single';
+[elements, ~] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 64000;
+sets.edof = 24;
+sets.sz = 300;
+
+%% Index_CPU_Vector_uint64_40
+[iK, jK] = Index_vssa(elements, sets);
+Running IndexTest
+
+ Mesh created successfully!
+	 Number of elements: 64000
+	 Number of nodes   : 68921
+
+..........
+Done IndexTest
+__________
+
+  TimeResult with properties:
+
+            Name: 'IndexTest/Index_CPU_Vector_uint64_40'
+           Valid: 1
+         Samples: [5×7 table]
+    TestActivity: [10×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   24.811 seconds testing time.
+
+
+sets.nel = 40;
+sets.dTE = 'uint64';
+sets.dTN = 'single';
+[elements, ~] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 64000;
+sets.edof = 24;
+sets.sz = 300;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+elementsGPU = gpuArray(elements);
+
+%% Index_GPU_Vector_uint64_40
+[iKd, jKd] = Index_vpsa_opt(elementsGPU, sets);
+wait(d);
+Running IndexTest
+
+ Mesh created successfully!
+	 Number of elements: 64000
+	 Number of nodes   : 68921
+
+.........
+Done IndexTest
+__________
+
+  TimeResult with properties:
+
+            Name: 'IndexTest/Index_GPU_Vector_uint64_40'
+           Valid: 1
+         Samples: [4×7 table]
+    TestActivity: [9×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   0.39653 seconds testing time.
+
+
+sets.nel = 80;
+sets.dTE = 'uint32';
+sets.dTN = 'single';
+[elements, ~] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 512000;
+sets.sz = 36;
+sets.edof = 8;
+
+%% Index_CPU_Scalar_uint32_80
+[iK, jK] = Index_sssa(elements, sets);
+Running IndexTest
+
+ Mesh created successfully!
+	 Number of elements: 512000
+	 Number of nodes   : 531441
+
+.
+Done IndexTest
+__________
+
+  TimeResult with properties:
+
+            Name: 'IndexTest/Index_CPU_Scalar_uint32_80'
+           Valid: 1
+         Samples: [1×7 table]
+    TestActivity: [1×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   1.7478 seconds testing time.
+
+
+sets.nel = 80;
+sets.dTE = 'uint32';
+sets.dTN = 'single';
+[elements, ~] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 512000;
+sets.sz = 36;
+sets.edof = 8;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+elementsGPU = gpuArray(elements);
+
+%% Index_GPU_Scalar_uint32_80
+[iKd, jKd] = Index_spsa_opt(elementsGPU, sets);
+wait(d);
+Running IndexTest
+
+ Mesh created successfully!
+	 Number of elements: 512000
+	 Number of nodes   : 531441
+
+..........
+Done IndexTest
+__________
+
+  TimeResult with properties:
+
+            Name: 'IndexTest/Index_GPU_Scalar_uint32_80'
+           Valid: 1
+         Samples: [5×7 table]
+    TestActivity: [10×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   0.29675 seconds testing time.
+
+
+sets.nel = 80;
+sets.dTE = 'uint32';
+sets.dTN = 'single';
+[elements, ~] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 512000;
+sets.edof = 24;
+sets.sz = 300;
+
+%% Index_CPU_Vector_uint32_80
+[iK, jK] = Index_vssa(elements, sets);
+Running IndexTest
+
+ Mesh created successfully!
+	 Number of elements: 512000
+	 Number of nodes   : 531441
+
+.
+Done IndexTest
+__________
+
+  TimeResult with properties:
+
+            Name: 'IndexTest/Index_CPU_Vector_uint32_80'
+           Valid: 1
+         Samples: [1×7 table]
+    TestActivity: [1×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   12.5346 seconds testing time.
+
+
+sets.nel = 80;
+sets.dTE = 'uint32';
+sets.dTN = 'single';
+[elements, ~] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 512000;
+sets.edof = 24;
+sets.sz = 300;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+elementsGPU = gpuArray(elements);
+
+%% Index_GPU_Vector_uint32_80
+[iKd, jKd] = Index_vpsa_opt(elementsGPU, sets);
+wait(d);
+Running IndexTest
+
+ Mesh created successfully!
+	 Number of elements: 512000
+	 Number of nodes   : 531441
+
+.......... .......... .......... .........
+Done IndexTest
+__________
+
+  TimeResult with properties:
+
+            Name: 'IndexTest/Index_GPU_Vector_uint32_80'
+           Valid: 1
+         Samples: [34×7 table]
+    TestActivity: [39×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   1.9535 seconds testing time.
+
+
+sets.nel = 80;
+sets.dTE = 'uint64';
+sets.dTN = 'single';
+[elements, ~] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 512000;
+sets.sz = 36;
+sets.edof = 8;
+
+%% Index_CPU_Scalar_uint64_80
+[iK, jK] = Index_sssa(elements, sets);
+Running IndexTest
+
+ Mesh created successfully!
+	 Number of elements: 512000
+	 Number of nodes   : 531441
+
+.
+Done IndexTest
+__________
+
+  TimeResult with properties:
+
+            Name: 'IndexTest/Index_CPU_Scalar_uint64_80'
+           Valid: 1
+         Samples: [1×7 table]
+    TestActivity: [1×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   2.4697 seconds testing time.
+
+
+sets.nel = 80;
+sets.dTE = 'uint64';
+sets.dTN = 'single';
+[elements, ~] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 512000;
+sets.sz = 36;
+sets.edof = 8;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+elementsGPU = gpuArray(elements);
+
+%% Index_GPU_Scalar_uint64_80
+[iKd, jKd] = Index_spsa_opt(elementsGPU, sets);
+wait(d);
+Running IndexTest
+
+ Mesh created successfully!
+	 Number of elements: 512000
+	 Number of nodes   : 531441
+
+.......... .......... .......... .......... ..........
+.......... .......... .......... .........
+Done IndexTest
+__________
+
+  TimeResult with properties:
+
+            Name: 'IndexTest/Index_GPU_Scalar_uint64_80'
+           Valid: 1
+         Samples: [84×7 table]
+    TestActivity: [89×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   2.7216 seconds testing time.
+
+
+sets.nel = 80;
+sets.dTE = 'uint64';
+sets.dTN = 'single';
+[elements, ~] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 512000;
+sets.edof = 24;
+sets.sz = 300;
+
+%% Index_CPU_Vector_uint64_80
+[iK, jK] = Index_vssa(elements, sets);
+Running IndexTest
+
+ Mesh created successfully!
+	 Number of elements: 512000
+	 Number of nodes   : 531441
+
+.
+Done IndexTest
+__________
+
+  TimeResult with properties:
+
+            Name: 'IndexTest/Index_CPU_Vector_uint64_80'
+           Valid: 1
+         Samples: [1×7 table]
+    TestActivity: [1×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   19.2209 seconds testing time.
+
+
+sets.nel = 80;
+sets.dTE = 'uint64';
+sets.dTN = 'single';
+[elements, ~] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 512000;
+sets.edof = 24;
+sets.sz = 300;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+elementsGPU = gpuArray(elements);
+
+%% Index_GPU_Vector_uint64_80
+[iKd, jKd] = Index_vpsa_opt(elementsGPU, sets);
+wait(d);
+Running IndexTest
+
+ Mesh created successfully!
+	 Number of elements: 512000
+	 Number of nodes   : 531441
+
+.......... ..
+Done IndexTest
+__________
+
+  TimeResult with properties:
+
+            Name: 'IndexTest/Index_GPU_Vector_uint64_80'
+           Valid: 1
+         Samples: [7×7 table]
+    TestActivity: [12×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   0.90761 seconds testing time.
+
+
+sets.nel = 147;
+sets.dTE = 'uint32';
+sets.dTN = 'single';
+[elements, ~] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 3176523;
+sets.sz = 36;
+sets.edof = 8;
+
+%% Index_CPU_Scalar_uint32_147
+[iK, jK] = Index_sssa(elements, sets);
+Running IndexTest
+
+ Mesh created successfully!
+	 Number of elements: 3176523
+	 Number of nodes   : 3241792
+
+.
+Done IndexTest
+__________
+
+  TimeResult with properties:
+
+            Name: 'IndexTest/Index_CPU_Scalar_uint32_147'
+           Valid: 1
+         Samples: [1×7 table]
+    TestActivity: [1×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   9.6497 seconds testing time.
+
+
+sets.nel = 147;
+sets.dTE = 'uint32';
+sets.dTN = 'single';
+[elements, ~] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 3176523;
+sets.sz = 36;
+sets.edof = 8;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+elementsGPU = gpuArray(elements);
+
+%% Index_GPU_Scalar_uint32_147
+[iKd, jKd] = Index_spsa_opt(elementsGPU, sets);
+wait(d);
+Running IndexTest
+
+ Mesh created successfully!
+	 Number of elements: 3176523
+	 Number of nodes   : 3241792
+
+.......... .......... .......... ..
+Done IndexTest
+__________
+
+  TimeResult with properties:
+
+            Name: 'IndexTest/Index_GPU_Scalar_uint32_147'
+           Valid: 1
+         Samples: [27×7 table]
+    TestActivity: [32×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   1.4973 seconds testing time.
+
+
+sets.nel = 147;
+sets.dTE = 'uint32';
+sets.dTN = 'single';
+[elements, ~] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 3176523;
+sets.edof = 24;
+sets.sz = 300;
+
+%% Index_CPU_Vector_uint32_147
+[iK, jK] = Index_vssa(elements, sets);
+Running IndexTest
+
+ Mesh created successfully!
+	 Number of elements: 3176523
+	 Number of nodes   : 3241792
+
+.
+Done IndexTest
+__________
+
+  TimeResult with properties:
+
+            Name: 'IndexTest/Index_CPU_Vector_uint32_147'
+           Valid: 1
+         Samples: [1×7 table]
+    TestActivity: [1×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   76.9035 seconds testing time.
+
+
+sets.nel = 147;
+sets.dTE = 'uint32';
+sets.dTN = 'single';
+[elements, ~] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 3176523;
+sets.edof = 24;
+sets.sz = 300;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+elementsGPU = gpuArray(elements);
+
+%% Index_GPU_Vector_uint32_147
+[iKd, jKd] = Index_vpsa_opt(elementsGPU, sets);
+wait(d);
+Running IndexTest
+
+ Mesh created successfully!
+	 Number of elements: 3176523
+	 Number of nodes   : 3241792
+
+.........
+Done IndexTest
+__________
+
+  TimeResult with properties:
+
+            Name: 'IndexTest/Index_GPU_Vector_uint32_147'
+           Valid: 1
+         Samples: [4×7 table]
+    TestActivity: [9×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   1.8463 seconds testing time.
+
+
+sets.nel = 147;
+sets.dTE = 'uint64';
+sets.dTN = 'single';
+[elements, ~] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 3176523;
+sets.sz = 36;
+sets.edof = 8;
+
+%% Index_CPU_Scalar_uint64_147
+[iK, jK] = Index_sssa(elements, sets);
+Running IndexTest
+
+ Mesh created successfully!
+	 Number of elements: 3176523
+	 Number of nodes   : 3241792
+
+.
+Done IndexTest
+__________
+
+  TimeResult with properties:
+
+            Name: 'IndexTest/Index_CPU_Scalar_uint64_147'
+           Valid: 1
+         Samples: [1×7 table]
+    TestActivity: [1×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   15.9909 seconds testing time.
+
+
+sets.nel = 147;
+sets.dTE = 'uint64';
+sets.dTN = 'single';
+[elements, ~] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 3176523;
+sets.sz = 36;
+sets.edof = 8;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+elementsGPU = gpuArray(elements);
+
+%% Index_GPU_Scalar_uint64_147
+[iKd, jKd] = Index_spsa_opt(elementsGPU, sets);
+wait(d);
+Running IndexTest
+
+ Mesh created successfully!
+	 Number of elements: 3176523
+	 Number of nodes   : 3241792
+
+.........
+Done IndexTest
+__________
+
+  TimeResult with properties:
+
+            Name: 'IndexTest/Index_GPU_Scalar_uint64_147'
+           Valid: 1
+         Samples: [4×7 table]
+    TestActivity: [9×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   0.82442 seconds testing time.
+
+
+sets.nel = 147;
+sets.dTE = 'uint64';
+sets.dTN = 'single';
+[elements, ~] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 3176523;
+sets.edof = 24;
+sets.sz = 300;
+
+%% Index_CPU_Vector_uint64_147
+[iK, jK] = Index_vssa(elements, sets);
+Running IndexTest
+
+ Mesh created successfully!
+	 Number of elements: 3176523
+	 Number of nodes   : 3241792
+
+.
+Done IndexTest
+__________
+
+  TimeResult with properties:
+
+            Name: 'IndexTest/Index_CPU_Vector_uint64_147'
+           Valid: 1
+         Samples: [1×7 table]
+    TestActivity: [1×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   122.4697 seconds testing time.
+
+
+sets.nel = 147;
+sets.dTE = 'uint64';
+sets.dTN = 'single';
+[elements, ~] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 3176523;
+sets.edof = 24;
+sets.sz = 300;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+elementsGPU = gpuArray(elements);
+
+%% Index_GPU_Vector_uint64_147
+[iKd, jKd] = Index_vpsa_opt(elementsGPU, sets);
+wait(d);
+Running IndexTest
+
+ Mesh created successfully!
+	 Number of elements: 3176523
+	 Number of nodes   : 3241792
+
+.........
+Done IndexTest
+__________
+
+  TimeResult with properties:
+
+            Name: 'IndexTest/Index_GPU_Vector_uint64_147'
+           Valid: 1
+         Samples: [4×7 table]
+    TestActivity: [9×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   5.1311 seconds testing time.
+
+
+sets.nel = 160;
+sets.dTE = 'uint32';
+sets.dTN = 'single';
+[elements, ~] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 4096000;
+sets.sz = 36;
+sets.edof = 8;
+
+%% Index_CPU_Scalar_uint32_160
+[iK, jK] = Index_sssa(elements, sets);
+Running IndexTest
+
+ Mesh created successfully!
+	 Number of elements: 4096000
+	 Number of nodes   : 4173281
+
+.
+Done IndexTest
+__________
+
+  TimeResult with properties:
+
+            Name: 'IndexTest/Index_CPU_Scalar_uint32_160'
+           Valid: 1
+         Samples: [1×7 table]
+    TestActivity: [1×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   13.6604 seconds testing time.
+
+
+sets.nel = 160;
+sets.dTE = 'uint32';
+sets.dTN = 'single';
+[elements, ~] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 4096000;
+sets.sz = 36;
+sets.edof = 8;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+elementsGPU = gpuArray(elements);
+
+%% Index_GPU_Scalar_uint32_160
+[iKd, jKd] = Index_spsa_opt(elementsGPU, sets);
+wait(d);
+Running IndexTest
+
+ Mesh created successfully!
+	 Number of elements: 4096000
+	 Number of nodes   : 4173281
+
+.........
+Done IndexTest
+__________
+
+  TimeResult with properties:
+
+            Name: 'IndexTest/Index_GPU_Scalar_uint32_160'
+           Valid: 1
+         Samples: [4×7 table]
+    TestActivity: [9×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   0.53655 seconds testing time.
+
+
+sets.nel = 160;
+sets.dTE = 'uint32';
+sets.dTN = 'single';
+[elements, ~] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 4096000;
+sets.edof = 24;
+sets.sz = 300;
+
+%% Index_CPU_Vector_uint32_160
+[iK, jK] = Index_vssa(elements, sets);
+Running IndexTest
+
+ Mesh created successfully!
+	 Number of elements: 4096000
+	 Number of nodes   : 4173281
+
+.
+Done IndexTest
+__________
+
+  TimeResult with properties:
+
+            Name: 'IndexTest/Index_CPU_Vector_uint32_160'
+           Valid: 1
+         Samples: [1×7 table]
+    TestActivity: [1×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   101.5975 seconds testing time.
+
+
+sets.nel = 160;
+sets.dTE = 'uint32';
+sets.dTN = 'single';
+[elements, ~] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 4096000;
+sets.edof = 24;
+sets.sz = 300;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+elementsGPU = gpuArray(elements);
+
+%% Index_GPU_Vector_uint32_160
+[iKd, jKd] = Index_vpsa_opt(elementsGPU, sets);
+wait(d);
+Running IndexTest
+
+ Mesh created successfully!
+	 Number of elements: 4096000
+	 Number of nodes   : 4173281
+
+.........
+Done IndexTest
+__________
+
+  TimeResult with properties:
+
+            Name: 'IndexTest/Index_GPU_Vector_uint32_160'
+           Valid: 1
+         Samples: [4×7 table]
+    TestActivity: [9×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   2.8636 seconds testing time.
+
+
+sets.nel = 160;
+sets.dTE = 'uint64';
+sets.dTN = 'single';
+[elements, ~] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 4096000;
+sets.sz = 36;
+sets.edof = 8;
+
+%% Index_CPU_Scalar_uint64_160
+[iK, jK] = Index_sssa(elements, sets);
+Running IndexTest
+
+ Mesh created successfully!
+	 Number of elements: 4096000
+	 Number of nodes   : 4173281
+
+.
+Done IndexTest
+__________
+
+  TimeResult with properties:
+
+            Name: 'IndexTest/Index_CPU_Scalar_uint64_160'
+           Valid: 1
+         Samples: [1×7 table]
+    TestActivity: [1×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   20.0272 seconds testing time.
+
+
+sets.nel = 160;
+sets.dTE = 'uint64';
+sets.dTN = 'single';
+[elements, ~] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 4096000;
+sets.sz = 36;
+sets.edof = 8;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+elementsGPU = gpuArray(elements);
+
+%% Index_GPU_Scalar_uint64_160
+[iKd, jKd] = Index_spsa_opt(elementsGPU, sets);
+wait(d);
+Running IndexTest
+
+ Mesh created successfully!
+	 Number of elements: 4096000
+	 Number of nodes   : 4173281
+
+.......... .
+Done IndexTest
+__________
+
+  TimeResult with properties:
+
+            Name: 'IndexTest/Index_GPU_Scalar_uint64_160'
+           Valid: 1
+         Samples: [6×7 table]
+    TestActivity: [11×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   0.94118 seconds testing time.
+
+
+sets.nel = 160;
+sets.dTE = 'uint64';
+sets.dTN = 'single';
+[elements, ~] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 4096000;
+sets.edof = 24;
+sets.sz = 300;
+
+%% Index_CPU_Vector_uint64_160
+[iK, jK] = Index_vssa(elements, sets);
+Running IndexTest
+
+ Mesh created successfully!
+	 Number of elements: 4096000
+	 Number of nodes   : 4173281
+
+.
+Done IndexTest
+__________
+
+  TimeResult with properties:
+
+            Name: 'IndexTest/Index_CPU_Vector_uint64_160'
+           Valid: 1
+         Samples: [1×7 table]
+    TestActivity: [1×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   155.4695 seconds testing time.
+
+
+sets.nel = 160;
+sets.dTE = 'uint64';
+sets.dTN = 'single';
+[elements, ~] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 4096000;
+sets.edof = 24;
+sets.sz = 300;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+elementsGPU = gpuArray(elements);
+
+%% Index_GPU_Vector_uint64_160
+[iKd, jKd] = Index_vpsa_opt(elementsGPU, sets);
+wait(d);
+Running IndexTest
+
+ Mesh created successfully!
+	 Number of elements: 4096000
+	 Number of nodes   : 4173281
+
+
+================================================================================
+Error occurred in IndexTest/Index_GPU_Vector_uint64_160 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the
+    GPU,
+    use 'gpuDevice()'. If the problem persists, reset the GPU by calling
+    'gpuDevice(1)'.
+    
+    Error in Index_vpsa_opt (line 59)
+    jK  = zeros(sets.sz*sets.nel, 1, sets.dTE, 'gpuArray');     % Stores column
+    indices (initialized directly on GPU)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in IndexTest (line 15)
+    [iKd, jKd] = Index_vpsa_opt(elementsGPU, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+================================================================================
+Error occurred in IndexTest/Index_GPU_Vector_uint64_160 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the
+    GPU,
+    use 'gpuDevice()'. If the problem persists, reset the GPU by calling
+    'gpuDevice(1)'.
+    
+    Error in Index_vpsa_opt (line 59)
+    jK  = zeros(sets.sz*sets.nel, 1, sets.dTE, 'gpuArray');     % Stores column
+    indices (initialized directly on GPU)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in IndexTest (line 15)
+    [iKd, jKd] = Index_vpsa_opt(elementsGPU, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+================================================================================
+Error occurred in IndexTest/Index_GPU_Vector_uint64_160 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the
+    GPU,
+    use 'gpuDevice()'. If the problem persists, reset the GPU by calling
+    'gpuDevice(1)'.
+    
+    Error in Index_vpsa_opt (line 59)
+    jK  = zeros(sets.sz*sets.nel, 1, sets.dTE, 'gpuArray');     % Stores column
+    indices (initialized directly on GPU)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in IndexTest (line 15)
+    [iKd, jKd] = Index_vpsa_opt(elementsGPU, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+================================================================================
+Error occurred in IndexTest/Index_GPU_Vector_uint64_160 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the
+    GPU,
+    use 'gpuDevice()'. If the problem persists, reset the GPU by calling
+    'gpuDevice(1)'.
+    
+    Error in Index_vpsa_opt (line 59)
+    jK  = zeros(sets.sz*sets.nel, 1, sets.dTE, 'gpuArray');     % Stores column
+    indices (initialized directly on GPU)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in IndexTest (line 15)
+    [iKd, jKd] = Index_vpsa_opt(elementsGPU, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+================================================================================
+Error occurred in IndexTest/Index_GPU_Vector_uint64_160 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the
+    GPU,
+    use 'gpuDevice()'. If the problem persists, reset the GPU by calling
+    'gpuDevice(1)'.
+    
+    Error in Index_vpsa_opt (line 59)
+    jK  = zeros(sets.sz*sets.nel, 1, sets.dTE, 'gpuArray');     % Stores column
+    indices (initialized directly on GPU)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in IndexTest (line 15)
+    [iKd, jKd] = Index_vpsa_opt(elementsGPU, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+================================================================================
+Error occurred in IndexTest/Index_GPU_Vector_uint64_160 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the
+    GPU,
+    use 'gpuDevice()'. If the problem persists, reset the GPU by calling
+    'gpuDevice(1)'.
+    
+    Error in Index_vpsa_opt (line 59)
+    jK  = zeros(sets.sz*sets.nel, 1, sets.dTE, 'gpuArray');     % Stores column
+    indices (initialized directly on GPU)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in IndexTest (line 15)
+    [iKd, jKd] = Index_vpsa_opt(elementsGPU, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+================================================================================
+Error occurred in IndexTest/Index_GPU_Vector_uint64_160 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the
+    GPU,
+    use 'gpuDevice()'. If the problem persists, reset the GPU by calling
+    'gpuDevice(1)'.
+    
+    Error in Index_vpsa_opt (line 59)
+    jK  = zeros(sets.sz*sets.nel, 1, sets.dTE, 'gpuArray');     % Stores column
+    indices (initialized directly on GPU)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in IndexTest (line 15)
+    [iKd, jKd] = Index_vpsa_opt(elementsGPU, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+================================================================================
+Error occurred in IndexTest/Index_GPU_Vector_uint64_160 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the
+    GPU,
+    use 'gpuDevice()'. If the problem persists, reset the GPU by calling
+    'gpuDevice(1)'.
+    
+    Error in Index_vpsa_opt (line 59)
+    jK  = zeros(sets.sz*sets.nel, 1, sets.dTE, 'gpuArray');     % Stores column
+    indices (initialized directly on GPU)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in IndexTest (line 15)
+    [iKd, jKd] = Index_vpsa_opt(elementsGPU, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+================================================================================
+Error occurred in IndexTest/Index_GPU_Vector_uint64_160 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the
+    GPU,
+    use 'gpuDevice()'. If the problem persists, reset the GPU by calling
+    'gpuDevice(1)'.
+    
+    Error in Index_vpsa_opt (line 59)
+    jK  = zeros(sets.sz*sets.nel, 1, sets.dTE, 'gpuArray');     % Stores column
+    indices (initialized directly on GPU)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in IndexTest (line 15)
+    [iKd, jKd] = Index_vpsa_opt(elementsGPU, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+Done IndexTest
+__________
+
+Failure Summary:
+
+     Name                                   Failed  Incomplete  Reason(s)
+    ======================================================================
+     IndexTest/Index_GPU_Vector_uint64_160    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'IndexTest/Index_GPU_Vector_uint64_160'
+           Valid: 0
+         Samples: [4×7 table]
+    TestActivity: [9×12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   1.8785 seconds testing time.
+
+
+sets.nel = 185;
+sets.dTE = 'uint32';
+sets.dTN = 'single';
+[elements, ~] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 6331625;
+sets.sz = 36;
+sets.edof = 8;
+
+%% Index_CPU_Scalar_uint32_185
+[iK, jK] = Index_sssa(elements, sets);
+Running IndexTest
+
+ Mesh created successfully!
+	 Number of elements: 6331625
+	 Number of nodes   : 6434856
+
+.
+Done IndexTest
+__________
+
+  TimeResult with properties:
+
+            Name: 'IndexTest/Index_CPU_Scalar_uint32_185'
+           Valid: 1
+         Samples: [1×7 table]
+    TestActivity: [1×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   19.0535 seconds testing time.
+
+
+sets.nel = 185;
+sets.dTE = 'uint32';
+sets.dTN = 'single';
+[elements, ~] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 6331625;
+sets.sz = 36;
+sets.edof = 8;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+elementsGPU = gpuArray(elements);
+
+%% Index_GPU_Scalar_uint32_185
+[iKd, jKd] = Index_spsa_opt(elementsGPU, sets);
+wait(d);
+Running IndexTest
+
+ Mesh created successfully!
+	 Number of elements: 6331625
+	 Number of nodes   : 6434856
+
+.......... .......... .......... .......
+Done IndexTest
+__________
+
+  TimeResult with properties:
+
+            Name: 'IndexTest/Index_GPU_Scalar_uint32_185'
+           Valid: 1
+         Samples: [32×7 table]
+    TestActivity: [37×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   2.2961 seconds testing time.
+
+
+sets.nel = 185;
+sets.dTE = 'uint32';
+sets.dTN = 'single';
+[elements, ~] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 6331625;
+sets.edof = 24;
+sets.sz = 300;
+
+%% Index_CPU_Vector_uint32_185
+[iK, jK] = Index_vssa(elements, sets);
+Running IndexTest
+
+ Mesh created successfully!
+	 Number of elements: 6331625
+	 Number of nodes   : 6434856
+
+.
+Done IndexTest
+__________
+
+  TimeResult with properties:
+
+            Name: 'IndexTest/Index_CPU_Vector_uint32_185'
+           Valid: 1
+         Samples: [1×7 table]
+    TestActivity: [1×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   154.5728 seconds testing time.
+
+
+sets.nel = 185;
+sets.dTE = 'uint32';
+sets.dTN = 'single';
+[elements, ~] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 6331625;
+sets.edof = 24;
+sets.sz = 300;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+elementsGPU = gpuArray(elements);
+
+%% Index_GPU_Vector_uint32_185
+[iKd, jKd] = Index_vpsa_opt(elementsGPU, sets);
+wait(d);
+Running IndexTest
+
+ Mesh created successfully!
+	 Number of elements: 6331625
+	 Number of nodes   : 6434856
+
+.........
+Done IndexTest
+__________
+
+  TimeResult with properties:
+
+            Name: 'IndexTest/Index_GPU_Vector_uint32_185'
+           Valid: 1
+         Samples: [4×7 table]
+    TestActivity: [9×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   5.8491 seconds testing time.
+
+
+sets.nel = 185;
+sets.dTE = 'uint64';
+sets.dTN = 'single';
+[elements, ~] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 6331625;
+sets.sz = 36;
+sets.edof = 8;
+
+%% Index_CPU_Scalar_uint64_185
+[iK, jK] = Index_sssa(elements, sets);
+Running IndexTest
+
+ Mesh created successfully!
+	 Number of elements: 6331625
+	 Number of nodes   : 6434856
+
+.
+Done IndexTest
+__________
+
+  TimeResult with properties:
+
+            Name: 'IndexTest/Index_CPU_Scalar_uint64_185'
+           Valid: 1
+         Samples: [1×7 table]
+    TestActivity: [1×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   32.3904 seconds testing time.
+
+
+sets.nel = 185;
+sets.dTE = 'uint64';
+sets.dTN = 'single';
+[elements, ~] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 6331625;
+sets.sz = 36;
+sets.edof = 8;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+elementsGPU = gpuArray(elements);
+
+%% Index_GPU_Scalar_uint64_185
+[iKd, jKd] = Index_spsa_opt(elementsGPU, sets);
+wait(d);
+Running IndexTest
+
+ Mesh created successfully!
+	 Number of elements: 6331625
+	 Number of nodes   : 6434856
+
+.........
+Done IndexTest
+__________
+
+  TimeResult with properties:
+
+            Name: 'IndexTest/Index_GPU_Scalar_uint64_185'
+           Valid: 1
+         Samples: [4×7 table]
+    TestActivity: [9×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   1.335 seconds testing time.
+
+
+sets.nel = 185;
+sets.dTE = 'uint64';
+sets.dTN = 'single';
+[elements, ~] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 6331625;
+sets.edof = 24;
+sets.sz = 300;
+
+%% Index_CPU_Vector_uint64_185
+[iK, jK] = Index_vssa(elements, sets);
+Running IndexTest
+
+ Mesh created successfully!
+	 Number of elements: 6331625
+	 Number of nodes   : 6434856
+
+.
+Done IndexTest
+__________
+
+  TimeResult with properties:
+
+            Name: 'IndexTest/Index_CPU_Vector_uint64_185'
+           Valid: 1
+         Samples: [1×7 table]
+    TestActivity: [1×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   239.0844 seconds testing time.
+
+
+sets.nel = 185;
+sets.dTE = 'uint64';
+sets.dTN = 'single';
+[elements, ~] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 6331625;
+sets.edof = 24;
+sets.sz = 300;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+elementsGPU = gpuArray(elements);
+
+%% Index_GPU_Vector_uint64_185
+[iKd, jKd] = Index_vpsa_opt(elementsGPU, sets);
+wait(d);
+Running IndexTest
+
+ Mesh created successfully!
+	 Number of elements: 6331625
+	 Number of nodes   : 6434856
+
+
+================================================================================
+Error occurred in IndexTest/Index_GPU_Vector_uint64_185 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the
+    GPU,
+    use 'gpuDevice()'. If the problem persists, reset the GPU by calling
+    'gpuDevice(1)'.
+    
+    Error in Index_vpsa_opt (line 58)
+    iK  = zeros(sets.sz*sets.nel, 1, sets.dTE, 'gpuArray');     % Stores row
+    indices (initialized directly on GPU)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in IndexTest (line 15)
+    [iKd, jKd] = Index_vpsa_opt(elementsGPU, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+================================================================================
+Error occurred in IndexTest/Index_GPU_Vector_uint64_185 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the
+    GPU,
+    use 'gpuDevice()'. If the problem persists, reset the GPU by calling
+    'gpuDevice(1)'.
+    
+    Error in Index_vpsa_opt (line 58)
+    iK  = zeros(sets.sz*sets.nel, 1, sets.dTE, 'gpuArray');     % Stores row
+    indices (initialized directly on GPU)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in IndexTest (line 15)
+    [iKd, jKd] = Index_vpsa_opt(elementsGPU, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+================================================================================
+Error occurred in IndexTest/Index_GPU_Vector_uint64_185 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the
+    GPU,
+    use 'gpuDevice()'. If the problem persists, reset the GPU by calling
+    'gpuDevice(1)'.
+    
+    Error in Index_vpsa_opt (line 58)
+    iK  = zeros(sets.sz*sets.nel, 1, sets.dTE, 'gpuArray');     % Stores row
+    indices (initialized directly on GPU)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in IndexTest (line 15)
+    [iKd, jKd] = Index_vpsa_opt(elementsGPU, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+================================================================================
+Error occurred in IndexTest/Index_GPU_Vector_uint64_185 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the
+    GPU,
+    use 'gpuDevice()'. If the problem persists, reset the GPU by calling
+    'gpuDevice(1)'.
+    
+    Error in Index_vpsa_opt (line 58)
+    iK  = zeros(sets.sz*sets.nel, 1, sets.dTE, 'gpuArray');     % Stores row
+    indices (initialized directly on GPU)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in IndexTest (line 15)
+    [iKd, jKd] = Index_vpsa_opt(elementsGPU, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+================================================================================
+Error occurred in IndexTest/Index_GPU_Vector_uint64_185 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the
+    GPU,
+    use 'gpuDevice()'. If the problem persists, reset the GPU by calling
+    'gpuDevice(1)'.
+    
+    Error in Index_vpsa_opt (line 58)
+    iK  = zeros(sets.sz*sets.nel, 1, sets.dTE, 'gpuArray');     % Stores row
+    indices (initialized directly on GPU)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in IndexTest (line 15)
+    [iKd, jKd] = Index_vpsa_opt(elementsGPU, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+================================================================================
+Error occurred in IndexTest/Index_GPU_Vector_uint64_185 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the
+    GPU,
+    use 'gpuDevice()'. If the problem persists, reset the GPU by calling
+    'gpuDevice(1)'.
+    
+    Error in Index_vpsa_opt (line 58)
+    iK  = zeros(sets.sz*sets.nel, 1, sets.dTE, 'gpuArray');     % Stores row
+    indices (initialized directly on GPU)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in IndexTest (line 15)
+    [iKd, jKd] = Index_vpsa_opt(elementsGPU, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+================================================================================
+Error occurred in IndexTest/Index_GPU_Vector_uint64_185 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the
+    GPU,
+    use 'gpuDevice()'. If the problem persists, reset the GPU by calling
+    'gpuDevice(1)'.
+    
+    Error in Index_vpsa_opt (line 58)
+    iK  = zeros(sets.sz*sets.nel, 1, sets.dTE, 'gpuArray');     % Stores row
+    indices (initialized directly on GPU)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in IndexTest (line 15)
+    [iKd, jKd] = Index_vpsa_opt(elementsGPU, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+================================================================================
+Error occurred in IndexTest/Index_GPU_Vector_uint64_185 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the
+    GPU,
+    use 'gpuDevice()'. If the problem persists, reset the GPU by calling
+    'gpuDevice(1)'.
+    
+    Error in Index_vpsa_opt (line 58)
+    iK  = zeros(sets.sz*sets.nel, 1, sets.dTE, 'gpuArray');     % Stores row
+    indices (initialized directly on GPU)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in IndexTest (line 15)
+    [iKd, jKd] = Index_vpsa_opt(elementsGPU, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+================================================================================
+Error occurred in IndexTest/Index_GPU_Vector_uint64_185 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the
+    GPU,
+    use 'gpuDevice()'. If the problem persists, reset the GPU by calling
+    'gpuDevice(1)'.
+    
+    Error in Index_vpsa_opt (line 58)
+    iK  = zeros(sets.sz*sets.nel, 1, sets.dTE, 'gpuArray');     % Stores row
+    indices (initialized directly on GPU)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in IndexTest (line 15)
+    [iKd, jKd] = Index_vpsa_opt(elementsGPU, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+Done IndexTest
+__________
+
+Failure Summary:
+
+     Name                                   Failed  Incomplete  Reason(s)
+    ======================================================================
+     IndexTest/Index_GPU_Vector_uint64_185    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'IndexTest/Index_GPU_Vector_uint64_185'
+           Valid: 0
+         Samples: [4×7 table]
+    TestActivity: [9×12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   0.82351 seconds testing time.
+
+
+sets.nel = 289;
+sets.dTE = 'uint32';
+sets.dTN = 'single';
+[elements, ~] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 24137569;
+sets.sz = 36;
+sets.edof = 8;
+
+%% Index_CPU_Scalar_uint32_289
+[iK, jK] = Index_sssa(elements, sets);
+Running IndexTest
+
+ Mesh created successfully!
+	 Number of elements: 24137569
+	 Number of nodes   : 24389000
+
+.
+Done IndexTest
+__________
+
+  TimeResult with properties:
+
+            Name: 'IndexTest/Index_CPU_Scalar_uint32_289'
+           Valid: 1
+         Samples: [1×7 table]
+    TestActivity: [1×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   80.8068 seconds testing time.
+
+
+sets.nel = 289;
+sets.dTE = 'uint32';
+sets.dTN = 'single';
+[elements, ~] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 24137569;
+sets.sz = 36;
+sets.edof = 8;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+elementsGPU = gpuArray(elements);
+
+%% Index_GPU_Scalar_uint32_289
+[iKd, jKd] = Index_spsa_opt(elementsGPU, sets);
+wait(d);
+Running IndexTest
+
+ Mesh created successfully!
+	 Number of elements: 24137569
+	 Number of nodes   : 24389000
+
+.........
+Done IndexTest
+__________
+
+  TimeResult with properties:
+
+            Name: 'IndexTest/Index_GPU_Scalar_uint32_289'
+           Valid: 1
+         Samples: [4×7 table]
+    TestActivity: [9×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   3.4268 seconds testing time.
+
+
+sets.nel = 289;
+sets.dTE = 'uint32';
+sets.dTN = 'single';
+[elements, ~] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 24137569;
+sets.edof = 24;
+sets.sz = 300;
+
+%% Index_CPU_Vector_uint32_289
+[iK, jK] = Index_vssa(elements, sets);
+Running IndexTest
+
+ Mesh created successfully!
+	 Number of elements: 24137569
+	 Number of nodes   : 24389000
+
+.
+Done IndexTest
+__________
+
+  TimeResult with properties:
+
+            Name: 'IndexTest/Index_CPU_Vector_uint32_289'
+           Valid: 1
+         Samples: [1×7 table]
+    TestActivity: [1×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   580.0927 seconds testing time.
+
+
+sets.nel = 289;
+sets.dTE = 'uint32';
+sets.dTN = 'single';
+[elements, ~] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 24137569;
+sets.edof = 24;
+sets.sz = 300;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+elementsGPU = gpuArray(elements);
+
+%% Index_GPU_Vector_uint32_289
+[iKd, jKd] = Index_vpsa_opt(elementsGPU, sets);
+wait(d);
+Running IndexTest
+
+ Mesh created successfully!
+	 Number of elements: 24137569
+	 Number of nodes   : 24389000
+
+
+================================================================================
+Error occurred in IndexTest/Index_GPU_Vector_uint32_289 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in Index_vpsa_opt (line 58)
+    iK  = zeros(sets.sz*sets.nel, 1, sets.dTE, 'gpuArray');     % Stores row
+    indices (initialized directly on GPU)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in IndexTest (line 15)
+    [iKd, jKd] = Index_vpsa_opt(elementsGPU, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+================================================================================
+Error occurred in IndexTest/Index_GPU_Vector_uint32_289 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in Index_vpsa_opt (line 58)
+    iK  = zeros(sets.sz*sets.nel, 1, sets.dTE, 'gpuArray');     % Stores row
+    indices (initialized directly on GPU)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in IndexTest (line 15)
+    [iKd, jKd] = Index_vpsa_opt(elementsGPU, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+================================================================================
+Error occurred in IndexTest/Index_GPU_Vector_uint32_289 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in Index_vpsa_opt (line 58)
+    iK  = zeros(sets.sz*sets.nel, 1, sets.dTE, 'gpuArray');     % Stores row
+    indices (initialized directly on GPU)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in IndexTest (line 15)
+    [iKd, jKd] = Index_vpsa_opt(elementsGPU, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+================================================================================
+Error occurred in IndexTest/Index_GPU_Vector_uint32_289 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in Index_vpsa_opt (line 58)
+    iK  = zeros(sets.sz*sets.nel, 1, sets.dTE, 'gpuArray');     % Stores row
+    indices (initialized directly on GPU)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in IndexTest (line 15)
+    [iKd, jKd] = Index_vpsa_opt(elementsGPU, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+================================================================================
+Error occurred in IndexTest/Index_GPU_Vector_uint32_289 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in Index_vpsa_opt (line 58)
+    iK  = zeros(sets.sz*sets.nel, 1, sets.dTE, 'gpuArray');     % Stores row
+    indices (initialized directly on GPU)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in IndexTest (line 15)
+    [iKd, jKd] = Index_vpsa_opt(elementsGPU, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+================================================================================
+Error occurred in IndexTest/Index_GPU_Vector_uint32_289 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in Index_vpsa_opt (line 58)
+    iK  = zeros(sets.sz*sets.nel, 1, sets.dTE, 'gpuArray');     % Stores row
+    indices (initialized directly on GPU)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in IndexTest (line 15)
+    [iKd, jKd] = Index_vpsa_opt(elementsGPU, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+================================================================================
+Error occurred in IndexTest/Index_GPU_Vector_uint32_289 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in Index_vpsa_opt (line 58)
+    iK  = zeros(sets.sz*sets.nel, 1, sets.dTE, 'gpuArray');     % Stores row
+    indices (initialized directly on GPU)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in IndexTest (line 15)
+    [iKd, jKd] = Index_vpsa_opt(elementsGPU, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+================================================================================
+Error occurred in IndexTest/Index_GPU_Vector_uint32_289 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in Index_vpsa_opt (line 58)
+    iK  = zeros(sets.sz*sets.nel, 1, sets.dTE, 'gpuArray');     % Stores row
+    indices (initialized directly on GPU)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in IndexTest (line 15)
+    [iKd, jKd] = Index_vpsa_opt(elementsGPU, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+================================================================================
+Error occurred in IndexTest/Index_GPU_Vector_uint32_289 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in Index_vpsa_opt (line 58)
+    iK  = zeros(sets.sz*sets.nel, 1, sets.dTE, 'gpuArray');     % Stores row
+    indices (initialized directly on GPU)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in IndexTest (line 15)
+    [iKd, jKd] = Index_vpsa_opt(elementsGPU, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+Done IndexTest
+__________
+
+Failure Summary:
+
+     Name                                   Failed  Incomplete  Reason(s)
+    ======================================================================
+     IndexTest/Index_GPU_Vector_uint32_289    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'IndexTest/Index_GPU_Vector_uint32_289'
+           Valid: 0
+         Samples: [4×7 table]
+    TestActivity: [9×12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   1.5336 seconds testing time.
+
+
+sets.nel = 289;
+sets.dTE = 'uint64';
+sets.dTN = 'single';
+[elements, ~] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 24137569;
+sets.sz = 36;
+sets.edof = 8;
+
+%% Index_CPU_Scalar_uint64_289
+[iK, jK] = Index_sssa(elements, sets);
+Running IndexTest
+
+ Mesh created successfully!
+	 Number of elements: 24137569
+	 Number of nodes   : 24389000
+
+.
+Done IndexTest
+__________
+
+  TimeResult with properties:
+
+            Name: 'IndexTest/Index_CPU_Scalar_uint64_289'
+           Valid: 1
+         Samples: [1×7 table]
+    TestActivity: [1×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   123.8425 seconds testing time.
+
+
+sets.nel = 289;
+sets.dTE = 'uint64';
+sets.dTN = 'single';
+[elements, ~] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 24137569;
+sets.sz = 36;
+sets.edof = 8;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+elementsGPU = gpuArray(elements);
+
+%% Index_GPU_Scalar_uint64_289
+[iKd, jKd] = Index_spsa_opt(elementsGPU, sets);
+wait(d);
+Running IndexTest
+
+ Mesh created successfully!
+	 Number of elements: 24137569
+	 Number of nodes   : 24389000
+
+.........
+Done IndexTest
+__________
+
+  TimeResult with properties:
+
+            Name: 'IndexTest/Index_GPU_Scalar_uint64_289'
+           Valid: 1
+         Samples: [4×7 table]
+    TestActivity: [9×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   7.2365 seconds testing time.
+
+
+sets.nel = 289;
+sets.dTE = 'uint64';
+sets.dTN = 'single';
+[elements, ~] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 24137569;
+sets.edof = 24;
+sets.sz = 300;
+
+%% Index_CPU_Vector_uint64_289
+[iK, jK] = Index_vssa(elements, sets);
+Running IndexTest
+
+ Mesh created successfully!
+	 Number of elements: 24137569
+	 Number of nodes   : 24389000
+
+.
+Done IndexTest
+__________
+
+  TimeResult with properties:
+
+            Name: 'IndexTest/Index_CPU_Vector_uint64_289'
+           Valid: 1
+         Samples: [1×7 table]
+    TestActivity: [1×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   922.5132 seconds testing time.
+
+
+sets.nel = 289;
+sets.dTE = 'uint64';
+sets.dTN = 'single';
+[elements, ~] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 24137569;
+sets.edof = 24;
+sets.sz = 300;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+elementsGPU = gpuArray(elements);
+
+%% Index_GPU_Vector_uint64_289
+[iKd, jKd] = Index_vpsa_opt(elementsGPU, sets);
+wait(d);
+Running IndexTest
+
+ Mesh created successfully!
+	 Number of elements: 24137569
+	 Number of nodes   : 24389000
+
+
+================================================================================
+Error occurred in IndexTest/Index_GPU_Vector_uint64_289 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in Index_vpsa_opt (line 58)
+    iK  = zeros(sets.sz*sets.nel, 1, sets.dTE, 'gpuArray');     % Stores row
+    indices (initialized directly on GPU)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in IndexTest (line 15)
+    [iKd, jKd] = Index_vpsa_opt(elementsGPU, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+================================================================================
+Error occurred in IndexTest/Index_GPU_Vector_uint64_289 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in Index_vpsa_opt (line 58)
+    iK  = zeros(sets.sz*sets.nel, 1, sets.dTE, 'gpuArray');     % Stores row
+    indices (initialized directly on GPU)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in IndexTest (line 15)
+    [iKd, jKd] = Index_vpsa_opt(elementsGPU, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+================================================================================
+Error occurred in IndexTest/Index_GPU_Vector_uint64_289 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in Index_vpsa_opt (line 58)
+    iK  = zeros(sets.sz*sets.nel, 1, sets.dTE, 'gpuArray');     % Stores row
+    indices (initialized directly on GPU)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in IndexTest (line 15)
+    [iKd, jKd] = Index_vpsa_opt(elementsGPU, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+================================================================================
+Error occurred in IndexTest/Index_GPU_Vector_uint64_289 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in Index_vpsa_opt (line 58)
+    iK  = zeros(sets.sz*sets.nel, 1, sets.dTE, 'gpuArray');     % Stores row
+    indices (initialized directly on GPU)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in IndexTest (line 15)
+    [iKd, jKd] = Index_vpsa_opt(elementsGPU, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+================================================================================
+Error occurred in IndexTest/Index_GPU_Vector_uint64_289 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in Index_vpsa_opt (line 58)
+    iK  = zeros(sets.sz*sets.nel, 1, sets.dTE, 'gpuArray');     % Stores row
+    indices (initialized directly on GPU)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in IndexTest (line 15)
+    [iKd, jKd] = Index_vpsa_opt(elementsGPU, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+================================================================================
+Error occurred in IndexTest/Index_GPU_Vector_uint64_289 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in Index_vpsa_opt (line 58)
+    iK  = zeros(sets.sz*sets.nel, 1, sets.dTE, 'gpuArray');     % Stores row
+    indices (initialized directly on GPU)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in IndexTest (line 15)
+    [iKd, jKd] = Index_vpsa_opt(elementsGPU, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+================================================================================
+Error occurred in IndexTest/Index_GPU_Vector_uint64_289 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in Index_vpsa_opt (line 58)
+    iK  = zeros(sets.sz*sets.nel, 1, sets.dTE, 'gpuArray');     % Stores row
+    indices (initialized directly on GPU)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in IndexTest (line 15)
+    [iKd, jKd] = Index_vpsa_opt(elementsGPU, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+================================================================================
+Error occurred in IndexTest/Index_GPU_Vector_uint64_289 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in Index_vpsa_opt (line 58)
+    iK  = zeros(sets.sz*sets.nel, 1, sets.dTE, 'gpuArray');     % Stores row
+    indices (initialized directly on GPU)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in IndexTest (line 15)
+    [iKd, jKd] = Index_vpsa_opt(elementsGPU, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+================================================================================
+Error occurred in IndexTest/Index_GPU_Vector_uint64_289 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in Index_vpsa_opt (line 58)
+    iK  = zeros(sets.sz*sets.nel, 1, sets.dTE, 'gpuArray');     % Stores row
+    indices (initialized directly on GPU)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in IndexTest (line 15)
+    [iKd, jKd] = Index_vpsa_opt(elementsGPU, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+Done IndexTest
+__________
+
+Failure Summary:
+
+     Name                                   Failed  Incomplete  Reason(s)
+    ======================================================================
+     IndexTest/Index_GPU_Vector_uint64_289    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'IndexTest/Index_GPU_Vector_uint64_289'
+           Valid: 0
+         Samples: [4×7 table]
+    TestActivity: [9×12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   2.2567 seconds testing time.
+
+
+sets.nel = 320;
+sets.dTE = 'uint32';
+sets.dTN = 'single';
+[elements, ~] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 32768000;
+sets.sz = 36;
+sets.edof = 8;
+
+%% Index_CPU_Scalar_uint32_320
+[iK, jK] = Index_sssa(elements, sets);
+Running IndexTest
+
+ Mesh created successfully!
+	 Number of elements: 32768000
+	 Number of nodes   : 33076161
+
+.
+Done IndexTest
+__________
+
+  TimeResult with properties:
+
+            Name: 'IndexTest/Index_CPU_Scalar_uint32_320'
+           Valid: 1
+         Samples: [1×7 table]
+    TestActivity: [1×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   102.9753 seconds testing time.
+
+
+sets.nel = 320;
+sets.dTE = 'uint32';
+sets.dTN = 'single';
+[elements, ~] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 32768000;
+sets.sz = 36;
+sets.edof = 8;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+elementsGPU = gpuArray(elements);
+
+%% Index_GPU_Scalar_uint32_320
+[iKd, jKd] = Index_spsa_opt(elementsGPU, sets);
+wait(d);
+Running IndexTest
+
+ Mesh created successfully!
+	 Number of elements: 32768000
+	 Number of nodes   : 33076161
+
+.........
+Done IndexTest
+__________
+
+  TimeResult with properties:
+
+            Name: 'IndexTest/Index_GPU_Scalar_uint32_320'
+           Valid: 1
+         Samples: [4×7 table]
+    TestActivity: [9×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   4.1025 seconds testing time.
+
+
+sets.nel = 320;
+sets.dTE = 'uint32';
+sets.dTN = 'single';
+[elements, ~] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 32768000;
+sets.edof = 24;
+sets.sz = 300;
+
+%% Index_CPU_Vector_uint32_320
+[iK, jK] = Index_vssa(elements, sets);
+Running IndexTest
+
+ Mesh created successfully!
+	 Number of elements: 32768000
+	 Number of nodes   : 33076161
+
+.
+Done IndexTest
+__________
+
+  TimeResult with properties:
+
+            Name: 'IndexTest/Index_CPU_Vector_uint32_320'
+           Valid: 1
+         Samples: [1×7 table]
+    TestActivity: [1×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   795.3371 seconds testing time.
+
+
+sets.nel = 320;
+sets.dTE = 'uint32';
+sets.dTN = 'single';
+[elements, ~] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 32768000;
+sets.edof = 24;
+sets.sz = 300;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+elementsGPU = gpuArray(elements);
+
+%% Index_GPU_Vector_uint32_320
+[iKd, jKd] = Index_vpsa_opt(elementsGPU, sets);
+wait(d);
+Running IndexTest
+
+ Mesh created successfully!
+	 Number of elements: 32768000
+	 Number of nodes   : 33076161
+
+
+================================================================================
+Error occurred in IndexTest/Index_GPU_Vector_uint32_320 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in Index_vpsa_opt (line 58)
+    iK  = zeros(sets.sz*sets.nel, 1, sets.dTE, 'gpuArray');     % Stores row
+    indices (initialized directly on GPU)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in IndexTest (line 15)
+    [iKd, jKd] = Index_vpsa_opt(elementsGPU, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+================================================================================
+Error occurred in IndexTest/Index_GPU_Vector_uint32_320 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in Index_vpsa_opt (line 58)
+    iK  = zeros(sets.sz*sets.nel, 1, sets.dTE, 'gpuArray');     % Stores row
+    indices (initialized directly on GPU)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in IndexTest (line 15)
+    [iKd, jKd] = Index_vpsa_opt(elementsGPU, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+================================================================================
+Error occurred in IndexTest/Index_GPU_Vector_uint32_320 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in Index_vpsa_opt (line 58)
+    iK  = zeros(sets.sz*sets.nel, 1, sets.dTE, 'gpuArray');     % Stores row
+    indices (initialized directly on GPU)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in IndexTest (line 15)
+    [iKd, jKd] = Index_vpsa_opt(elementsGPU, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+================================================================================
+Error occurred in IndexTest/Index_GPU_Vector_uint32_320 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in Index_vpsa_opt (line 58)
+    iK  = zeros(sets.sz*sets.nel, 1, sets.dTE, 'gpuArray');     % Stores row
+    indices (initialized directly on GPU)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in IndexTest (line 15)
+    [iKd, jKd] = Index_vpsa_opt(elementsGPU, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+================================================================================
+Error occurred in IndexTest/Index_GPU_Vector_uint32_320 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in Index_vpsa_opt (line 58)
+    iK  = zeros(sets.sz*sets.nel, 1, sets.dTE, 'gpuArray');     % Stores row
+    indices (initialized directly on GPU)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in IndexTest (line 15)
+    [iKd, jKd] = Index_vpsa_opt(elementsGPU, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+================================================================================
+Error occurred in IndexTest/Index_GPU_Vector_uint32_320 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in Index_vpsa_opt (line 58)
+    iK  = zeros(sets.sz*sets.nel, 1, sets.dTE, 'gpuArray');     % Stores row
+    indices (initialized directly on GPU)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in IndexTest (line 15)
+    [iKd, jKd] = Index_vpsa_opt(elementsGPU, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+================================================================================
+Error occurred in IndexTest/Index_GPU_Vector_uint32_320 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in Index_vpsa_opt (line 58)
+    iK  = zeros(sets.sz*sets.nel, 1, sets.dTE, 'gpuArray');     % Stores row
+    indices (initialized directly on GPU)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in IndexTest (line 15)
+    [iKd, jKd] = Index_vpsa_opt(elementsGPU, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+================================================================================
+Error occurred in IndexTest/Index_GPU_Vector_uint32_320 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in Index_vpsa_opt (line 58)
+    iK  = zeros(sets.sz*sets.nel, 1, sets.dTE, 'gpuArray');     % Stores row
+    indices (initialized directly on GPU)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in IndexTest (line 15)
+    [iKd, jKd] = Index_vpsa_opt(elementsGPU, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+================================================================================
+Error occurred in IndexTest/Index_GPU_Vector_uint32_320 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in Index_vpsa_opt (line 58)
+    iK  = zeros(sets.sz*sets.nel, 1, sets.dTE, 'gpuArray');     % Stores row
+    indices (initialized directly on GPU)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in IndexTest (line 15)
+    [iKd, jKd] = Index_vpsa_opt(elementsGPU, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+Done IndexTest
+__________
+
+Failure Summary:
+
+     Name                                   Failed  Incomplete  Reason(s)
+    ======================================================================
+     IndexTest/Index_GPU_Vector_uint32_320    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'IndexTest/Index_GPU_Vector_uint32_320'
+           Valid: 0
+         Samples: [4×7 table]
+    TestActivity: [9×12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   1.6266 seconds testing time.
+
+
+sets.nel = 320;
+sets.dTE = 'uint64';
+sets.dTN = 'single';
+[elements, ~] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 32768000;
+sets.sz = 36;
+sets.edof = 8;
+
+%% Index_CPU_Scalar_uint64_320
+[iK, jK] = Index_sssa(elements, sets);
+Running IndexTest
+
+ Mesh created successfully!
+	 Number of elements: 32768000
+	 Number of nodes   : 33076161
+
+.
+Done IndexTest
+__________
+
+  TimeResult with properties:
+
+            Name: 'IndexTest/Index_CPU_Scalar_uint64_320'
+           Valid: 1
+         Samples: [1×7 table]
+    TestActivity: [1×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   159.2025 seconds testing time.
+
+
+sets.nel = 320;
+sets.dTE = 'uint64';
+sets.dTN = 'single';
+[elements, ~] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 32768000;
+sets.sz = 36;
+sets.edof = 8;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+elementsGPU = gpuArray(elements);
+
+%% Index_GPU_Scalar_uint64_320
+[iKd, jKd] = Index_spsa_opt(elementsGPU, sets);
+wait(d);
+Running IndexTest
+
+ Mesh created successfully!
+	 Number of elements: 32768000
+	 Number of nodes   : 33076161
+
+
+================================================================================
+Error occurred in IndexTest/Index_GPU_Scalar_uint64_320 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the
+    GPU,
+    use 'gpuDevice()'. If the problem persists, reset the GPU by calling
+    'gpuDevice(1)'.
+    
+    Error in Index_spsa_opt (line 60)
+    jK  = zeros(sets.sz*sets.nel, 1, sets.dTE, 'gpuArray');	% Stores column
+    indices (initialized directly on GPU)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in IndexTest (line 15)
+    [iKd, jKd] = Index_spsa_opt(elementsGPU, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+================================================================================
+Error occurred in IndexTest/Index_GPU_Scalar_uint64_320 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the
+    GPU,
+    use 'gpuDevice()'. If the problem persists, reset the GPU by calling
+    'gpuDevice(1)'.
+    
+    Error in Index_spsa_opt (line 60)
+    jK  = zeros(sets.sz*sets.nel, 1, sets.dTE, 'gpuArray');	% Stores column
+    indices (initialized directly on GPU)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in IndexTest (line 15)
+    [iKd, jKd] = Index_spsa_opt(elementsGPU, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+================================================================================
+Error occurred in IndexTest/Index_GPU_Scalar_uint64_320 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the
+    GPU,
+    use 'gpuDevice()'. If the problem persists, reset the GPU by calling
+    'gpuDevice(1)'.
+    
+    Error in Index_spsa_opt (line 60)
+    jK  = zeros(sets.sz*sets.nel, 1, sets.dTE, 'gpuArray');	% Stores column
+    indices (initialized directly on GPU)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in IndexTest (line 15)
+    [iKd, jKd] = Index_spsa_opt(elementsGPU, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+================================================================================
+Error occurred in IndexTest/Index_GPU_Scalar_uint64_320 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the
+    GPU,
+    use 'gpuDevice()'. If the problem persists, reset the GPU by calling
+    'gpuDevice(1)'.
+    
+    Error in Index_spsa_opt (line 60)
+    jK  = zeros(sets.sz*sets.nel, 1, sets.dTE, 'gpuArray');	% Stores column
+    indices (initialized directly on GPU)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in IndexTest (line 15)
+    [iKd, jKd] = Index_spsa_opt(elementsGPU, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+================================================================================
+Error occurred in IndexTest/Index_GPU_Scalar_uint64_320 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the
+    GPU,
+    use 'gpuDevice()'. If the problem persists, reset the GPU by calling
+    'gpuDevice(1)'.
+    
+    Error in Index_spsa_opt (line 60)
+    jK  = zeros(sets.sz*sets.nel, 1, sets.dTE, 'gpuArray');	% Stores column
+    indices (initialized directly on GPU)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in IndexTest (line 15)
+    [iKd, jKd] = Index_spsa_opt(elementsGPU, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+================================================================================
+Error occurred in IndexTest/Index_GPU_Scalar_uint64_320 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the
+    GPU,
+    use 'gpuDevice()'. If the problem persists, reset the GPU by calling
+    'gpuDevice(1)'.
+    
+    Error in Index_spsa_opt (line 60)
+    jK  = zeros(sets.sz*sets.nel, 1, sets.dTE, 'gpuArray');	% Stores column
+    indices (initialized directly on GPU)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in IndexTest (line 15)
+    [iKd, jKd] = Index_spsa_opt(elementsGPU, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+================================================================================
+Error occurred in IndexTest/Index_GPU_Scalar_uint64_320 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the
+    GPU,
+    use 'gpuDevice()'. If the problem persists, reset the GPU by calling
+    'gpuDevice(1)'.
+    
+    Error in Index_spsa_opt (line 60)
+    jK  = zeros(sets.sz*sets.nel, 1, sets.dTE, 'gpuArray');	% Stores column
+    indices (initialized directly on GPU)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in IndexTest (line 15)
+    [iKd, jKd] = Index_spsa_opt(elementsGPU, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+================================================================================
+Error occurred in IndexTest/Index_GPU_Scalar_uint64_320 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the
+    GPU,
+    use 'gpuDevice()'. If the problem persists, reset the GPU by calling
+    'gpuDevice(1)'.
+    
+    Error in Index_spsa_opt (line 60)
+    jK  = zeros(sets.sz*sets.nel, 1, sets.dTE, 'gpuArray');	% Stores column
+    indices (initialized directly on GPU)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in IndexTest (line 15)
+    [iKd, jKd] = Index_spsa_opt(elementsGPU, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+================================================================================
+Error occurred in IndexTest/Index_GPU_Scalar_uint64_320 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the
+    GPU,
+    use 'gpuDevice()'. If the problem persists, reset the GPU by calling
+    'gpuDevice(1)'.
+    
+    Error in Index_spsa_opt (line 60)
+    jK  = zeros(sets.sz*sets.nel, 1, sets.dTE, 'gpuArray');	% Stores column
+    indices (initialized directly on GPU)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in IndexTest (line 15)
+    [iKd, jKd] = Index_spsa_opt(elementsGPU, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+Done IndexTest
+__________
+
+Failure Summary:
+
+     Name                                   Failed  Incomplete  Reason(s)
+    ======================================================================
+     IndexTest/Index_GPU_Scalar_uint64_320    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'IndexTest/Index_GPU_Scalar_uint64_320'
+           Valid: 0
+         Samples: [4×7 table]
+    TestActivity: [9×12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   4.9343 seconds testing time.
+
+
+sets.nel = 320;
+sets.dTE = 'uint64';
+sets.dTN = 'single';
+[elements, ~] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 32768000;
+sets.edof = 24;
+sets.sz = 300;
+
+%% Index_CPU_Vector_uint64_320
+[iK, jK] = Index_vssa(elements, sets);
+Running IndexTest
+
+ Mesh created successfully!
+	 Number of elements: 32768000
+	 Number of nodes   : 33076161
+
+.
+Done IndexTest
+__________
+
+  TimeResult with properties:
+
+            Name: 'IndexTest/Index_CPU_Vector_uint64_320'
+           Valid: 1
+         Samples: [1×7 table]
+    TestActivity: [1×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   1267.2492 seconds testing time.
+
+
+sets.nel = 320;
+sets.dTE = 'uint64';
+sets.dTN = 'single';
+[elements, ~] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 32768000;
+sets.edof = 24;
+sets.sz = 300;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+elementsGPU = gpuArray(elements);
+
+%% Index_GPU_Vector_uint64_320
+[iKd, jKd] = Index_vpsa_opt(elementsGPU, sets);
+wait(d);
+Running IndexTest
+
+ Mesh created successfully!
+	 Number of elements: 32768000
+	 Number of nodes   : 33076161
+
+
+================================================================================
+Error occurred in IndexTest/Index_GPU_Vector_uint64_320 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in Index_vpsa_opt (line 58)
+    iK  = zeros(sets.sz*sets.nel, 1, sets.dTE, 'gpuArray');     % Stores row
+    indices (initialized directly on GPU)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in IndexTest (line 15)
+    [iKd, jKd] = Index_vpsa_opt(elementsGPU, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+================================================================================
+Error occurred in IndexTest/Index_GPU_Vector_uint64_320 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in Index_vpsa_opt (line 58)
+    iK  = zeros(sets.sz*sets.nel, 1, sets.dTE, 'gpuArray');     % Stores row
+    indices (initialized directly on GPU)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in IndexTest (line 15)
+    [iKd, jKd] = Index_vpsa_opt(elementsGPU, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+================================================================================
+Error occurred in IndexTest/Index_GPU_Vector_uint64_320 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in Index_vpsa_opt (line 58)
+    iK  = zeros(sets.sz*sets.nel, 1, sets.dTE, 'gpuArray');     % Stores row
+    indices (initialized directly on GPU)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in IndexTest (line 15)
+    [iKd, jKd] = Index_vpsa_opt(elementsGPU, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+================================================================================
+Error occurred in IndexTest/Index_GPU_Vector_uint64_320 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in Index_vpsa_opt (line 58)
+    iK  = zeros(sets.sz*sets.nel, 1, sets.dTE, 'gpuArray');     % Stores row
+    indices (initialized directly on GPU)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in IndexTest (line 15)
+    [iKd, jKd] = Index_vpsa_opt(elementsGPU, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+================================================================================
+Error occurred in IndexTest/Index_GPU_Vector_uint64_320 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in Index_vpsa_opt (line 58)
+    iK  = zeros(sets.sz*sets.nel, 1, sets.dTE, 'gpuArray');     % Stores row
+    indices (initialized directly on GPU)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in IndexTest (line 15)
+    [iKd, jKd] = Index_vpsa_opt(elementsGPU, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+================================================================================
+Error occurred in IndexTest/Index_GPU_Vector_uint64_320 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in Index_vpsa_opt (line 58)
+    iK  = zeros(sets.sz*sets.nel, 1, sets.dTE, 'gpuArray');     % Stores row
+    indices (initialized directly on GPU)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in IndexTest (line 15)
+    [iKd, jKd] = Index_vpsa_opt(elementsGPU, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+================================================================================
+Error occurred in IndexTest/Index_GPU_Vector_uint64_320 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in Index_vpsa_opt (line 58)
+    iK  = zeros(sets.sz*sets.nel, 1, sets.dTE, 'gpuArray');     % Stores row
+    indices (initialized directly on GPU)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in IndexTest (line 15)
+    [iKd, jKd] = Index_vpsa_opt(elementsGPU, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+================================================================================
+Error occurred in IndexTest/Index_GPU_Vector_uint64_320 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in Index_vpsa_opt (line 58)
+    iK  = zeros(sets.sz*sets.nel, 1, sets.dTE, 'gpuArray');     % Stores row
+    indices (initialized directly on GPU)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in IndexTest (line 15)
+    [iKd, jKd] = Index_vpsa_opt(elementsGPU, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+================================================================================
+Error occurred in IndexTest/Index_GPU_Vector_uint64_320 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in Index_vpsa_opt (line 58)
+    iK  = zeros(sets.sz*sets.nel, 1, sets.dTE, 'gpuArray');     % Stores row
+    indices (initialized directly on GPU)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in IndexTest (line 15)
+    [iKd, jKd] = Index_vpsa_opt(elementsGPU, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+Done IndexTest
+__________
+
+Failure Summary:
+
+     Name                                   Failed  Incomplete  Reason(s)
+    ======================================================================
+     IndexTest/Index_GPU_Vector_uint64_320    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'IndexTest/Index_GPU_Vector_uint64_320'
+           Valid: 0
+         Samples: [4×7 table]
+    TestActivity: [9×12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   2.4263 seconds testing time.
+
+
+sets.nel = 364;
+sets.dTE = 'uint32';
+sets.dTN = 'single';
+[elements, ~] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 48228544;
+sets.sz = 36;
+sets.edof = 8;
+
+%% Index_CPU_Scalar_uint32_364
+[iK, jK] = Index_sssa(elements, sets);
+Running IndexTest
+
+ Mesh created successfully!
+	 Number of elements: 48228544
+	 Number of nodes   : 48627125
+
+.
+Done IndexTest
+__________
+
+  TimeResult with properties:
+
+            Name: 'IndexTest/Index_CPU_Scalar_uint32_364'
+           Valid: 1
+         Samples: [1×7 table]
+    TestActivity: [1×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   159.9659 seconds testing time.
+
+
+sets.nel = 364;
+sets.dTE = 'uint32';
+sets.dTN = 'single';
+[elements, ~] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 48228544;
+sets.sz = 36;
+sets.edof = 8;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+elementsGPU = gpuArray(elements);
+
+%% Index_GPU_Scalar_uint32_364
+[iKd, jKd] = Index_spsa_opt(elementsGPU, sets);
+wait(d);
+Running IndexTest
+
+ Mesh created successfully!
+	 Number of elements: 48228544
+	 Number of nodes   : 48627125
+
+.........
+Done IndexTest
+__________
+
+  TimeResult with properties:
+
+            Name: 'IndexTest/Index_GPU_Scalar_uint32_364'
+           Valid: 1
+         Samples: [4×7 table]
+    TestActivity: [9×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   5.5959 seconds testing time.
+
+
+sets.nel = 364;
+sets.dTE = 'uint32';
+sets.dTN = 'single';
+[elements, ~] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 48228544;
+sets.edof = 24;
+sets.sz = 300;
+
+%% Index_CPU_Vector_uint32_364
+[iK, jK] = Index_vssa(elements, sets);
+Running IndexTest
+
+ Mesh created successfully!
+	 Number of elements: 48228544
+	 Number of nodes   : 48627125
+
+.
+Done IndexTest
+__________
+
+  TimeResult with properties:
+
+            Name: 'IndexTest/Index_CPU_Vector_uint32_364'
+           Valid: 1
+         Samples: [1×7 table]
+    TestActivity: [1×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   1198.7625 seconds testing time.
+
+
+sets.nel = 364;
+sets.dTE = 'uint32';
+sets.dTN = 'single';
+[elements, ~] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 48228544;
+sets.edof = 24;
+sets.sz = 300;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+elementsGPU = gpuArray(elements);
+
+%% Index_GPU_Vector_uint32_364
+[iKd, jKd] = Index_vpsa_opt(elementsGPU, sets);
+wait(d);
+Running IndexTest
+
+ Mesh created successfully!
+	 Number of elements: 48228544
+	 Number of nodes   : 48627125
+
+
+================================================================================
+Error occurred in IndexTest/Index_GPU_Vector_uint32_364 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in Index_vpsa_opt (line 58)
+    iK  = zeros(sets.sz*sets.nel, 1, sets.dTE, 'gpuArray');     % Stores row
+    indices (initialized directly on GPU)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in IndexTest (line 15)
+    [iKd, jKd] = Index_vpsa_opt(elementsGPU, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+================================================================================
+Error occurred in IndexTest/Index_GPU_Vector_uint32_364 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in Index_vpsa_opt (line 58)
+    iK  = zeros(sets.sz*sets.nel, 1, sets.dTE, 'gpuArray');     % Stores row
+    indices (initialized directly on GPU)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in IndexTest (line 15)
+    [iKd, jKd] = Index_vpsa_opt(elementsGPU, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+================================================================================
+Error occurred in IndexTest/Index_GPU_Vector_uint32_364 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in Index_vpsa_opt (line 58)
+    iK  = zeros(sets.sz*sets.nel, 1, sets.dTE, 'gpuArray');     % Stores row
+    indices (initialized directly on GPU)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in IndexTest (line 15)
+    [iKd, jKd] = Index_vpsa_opt(elementsGPU, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+================================================================================
+Error occurred in IndexTest/Index_GPU_Vector_uint32_364 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in Index_vpsa_opt (line 58)
+    iK  = zeros(sets.sz*sets.nel, 1, sets.dTE, 'gpuArray');     % Stores row
+    indices (initialized directly on GPU)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in IndexTest (line 15)
+    [iKd, jKd] = Index_vpsa_opt(elementsGPU, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+================================================================================
+Error occurred in IndexTest/Index_GPU_Vector_uint32_364 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in Index_vpsa_opt (line 58)
+    iK  = zeros(sets.sz*sets.nel, 1, sets.dTE, 'gpuArray');     % Stores row
+    indices (initialized directly on GPU)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in IndexTest (line 15)
+    [iKd, jKd] = Index_vpsa_opt(elementsGPU, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+================================================================================
+Error occurred in IndexTest/Index_GPU_Vector_uint32_364 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in Index_vpsa_opt (line 58)
+    iK  = zeros(sets.sz*sets.nel, 1, sets.dTE, 'gpuArray');     % Stores row
+    indices (initialized directly on GPU)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in IndexTest (line 15)
+    [iKd, jKd] = Index_vpsa_opt(elementsGPU, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+================================================================================
+Error occurred in IndexTest/Index_GPU_Vector_uint32_364 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in Index_vpsa_opt (line 58)
+    iK  = zeros(sets.sz*sets.nel, 1, sets.dTE, 'gpuArray');     % Stores row
+    indices (initialized directly on GPU)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in IndexTest (line 15)
+    [iKd, jKd] = Index_vpsa_opt(elementsGPU, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+================================================================================
+Error occurred in IndexTest/Index_GPU_Vector_uint32_364 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in Index_vpsa_opt (line 58)
+    iK  = zeros(sets.sz*sets.nel, 1, sets.dTE, 'gpuArray');     % Stores row
+    indices (initialized directly on GPU)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in IndexTest (line 15)
+    [iKd, jKd] = Index_vpsa_opt(elementsGPU, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+================================================================================
+Error occurred in IndexTest/Index_GPU_Vector_uint32_364 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in Index_vpsa_opt (line 58)
+    iK  = zeros(sets.sz*sets.nel, 1, sets.dTE, 'gpuArray');     % Stores row
+    indices (initialized directly on GPU)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in IndexTest (line 15)
+    [iKd, jKd] = Index_vpsa_opt(elementsGPU, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+Done IndexTest
+__________
+
+Failure Summary:
+
+     Name                                   Failed  Incomplete  Reason(s)
+    ======================================================================
+     IndexTest/Index_GPU_Vector_uint32_364    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'IndexTest/Index_GPU_Vector_uint32_364'
+           Valid: 0
+         Samples: [4×7 table]
+    TestActivity: [9×12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   2.3807 seconds testing time.
+
+
+sets.nel = 364;
+sets.dTE = 'uint64';
+sets.dTN = 'single';
+[elements, ~] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 48228544;
+sets.sz = 36;
+sets.edof = 8;
+
+%% Index_CPU_Scalar_uint64_364
+[iK, jK] = Index_sssa(elements, sets);
+Running IndexTest
+
+ Mesh created successfully!
+	 Number of elements: 48228544
+	 Number of nodes   : 48627125
+
+.
+Done IndexTest
+__________
+
+  TimeResult with properties:
+
+            Name: 'IndexTest/Index_CPU_Scalar_uint64_364'
+           Valid: 1
+         Samples: [1×7 table]
+    TestActivity: [1×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   225.2654 seconds testing time.
+
+
+sets.nel = 364;
+sets.dTE = 'uint64';
+sets.dTN = 'single';
+[elements, ~] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 48228544;
+sets.sz = 36;
+sets.edof = 8;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+elementsGPU = gpuArray(elements);
+
+%% Index_GPU_Scalar_uint64_364
+[iKd, jKd] = Index_spsa_opt(elementsGPU, sets);
+wait(d);
+Running IndexTest
+
+ Mesh created successfully!
+	 Number of elements: 48228544
+	 Number of nodes   : 48627125
+
+
+================================================================================
+Error occurred in IndexTest/Index_GPU_Scalar_uint64_364 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the
+    GPU,
+    use 'gpuDevice()'. If the problem persists, reset the GPU by calling
+    'gpuDevice(1)'.
+    
+    Error in Index_spsa_opt (line 59)
+    iK  = zeros(sets.sz*sets.nel, 1, sets.dTE, 'gpuArray');	% Stores row indices
+    (initialized directly on GPU)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in IndexTest (line 15)
+    [iKd, jKd] = Index_spsa_opt(elementsGPU, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+================================================================================
+Error occurred in IndexTest/Index_GPU_Scalar_uint64_364 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the
+    GPU,
+    use 'gpuDevice()'. If the problem persists, reset the GPU by calling
+    'gpuDevice(1)'.
+    
+    Error in Index_spsa_opt (line 59)
+    iK  = zeros(sets.sz*sets.nel, 1, sets.dTE, 'gpuArray');	% Stores row indices
+    (initialized directly on GPU)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in IndexTest (line 15)
+    [iKd, jKd] = Index_spsa_opt(elementsGPU, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+================================================================================
+Error occurred in IndexTest/Index_GPU_Scalar_uint64_364 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the
+    GPU,
+    use 'gpuDevice()'. If the problem persists, reset the GPU by calling
+    'gpuDevice(1)'.
+    
+    Error in Index_spsa_opt (line 59)
+    iK  = zeros(sets.sz*sets.nel, 1, sets.dTE, 'gpuArray');	% Stores row indices
+    (initialized directly on GPU)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in IndexTest (line 15)
+    [iKd, jKd] = Index_spsa_opt(elementsGPU, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+================================================================================
+Error occurred in IndexTest/Index_GPU_Scalar_uint64_364 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the
+    GPU,
+    use 'gpuDevice()'. If the problem persists, reset the GPU by calling
+    'gpuDevice(1)'.
+    
+    Error in Index_spsa_opt (line 59)
+    iK  = zeros(sets.sz*sets.nel, 1, sets.dTE, 'gpuArray');	% Stores row indices
+    (initialized directly on GPU)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in IndexTest (line 15)
+    [iKd, jKd] = Index_spsa_opt(elementsGPU, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+================================================================================
+Error occurred in IndexTest/Index_GPU_Scalar_uint64_364 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the
+    GPU,
+    use 'gpuDevice()'. If the problem persists, reset the GPU by calling
+    'gpuDevice(1)'.
+    
+    Error in Index_spsa_opt (line 59)
+    iK  = zeros(sets.sz*sets.nel, 1, sets.dTE, 'gpuArray');	% Stores row indices
+    (initialized directly on GPU)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in IndexTest (line 15)
+    [iKd, jKd] = Index_spsa_opt(elementsGPU, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+================================================================================
+Error occurred in IndexTest/Index_GPU_Scalar_uint64_364 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the
+    GPU,
+    use 'gpuDevice()'. If the problem persists, reset the GPU by calling
+    'gpuDevice(1)'.
+    
+    Error in Index_spsa_opt (line 59)
+    iK  = zeros(sets.sz*sets.nel, 1, sets.dTE, 'gpuArray');	% Stores row indices
+    (initialized directly on GPU)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in IndexTest (line 15)
+    [iKd, jKd] = Index_spsa_opt(elementsGPU, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+================================================================================
+Error occurred in IndexTest/Index_GPU_Scalar_uint64_364 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the
+    GPU,
+    use 'gpuDevice()'. If the problem persists, reset the GPU by calling
+    'gpuDevice(1)'.
+    
+    Error in Index_spsa_opt (line 59)
+    iK  = zeros(sets.sz*sets.nel, 1, sets.dTE, 'gpuArray');	% Stores row indices
+    (initialized directly on GPU)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in IndexTest (line 15)
+    [iKd, jKd] = Index_spsa_opt(elementsGPU, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+================================================================================
+Error occurred in IndexTest/Index_GPU_Scalar_uint64_364 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the
+    GPU,
+    use 'gpuDevice()'. If the problem persists, reset the GPU by calling
+    'gpuDevice(1)'.
+    
+    Error in Index_spsa_opt (line 59)
+    iK  = zeros(sets.sz*sets.nel, 1, sets.dTE, 'gpuArray');	% Stores row indices
+    (initialized directly on GPU)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in IndexTest (line 15)
+    [iKd, jKd] = Index_spsa_opt(elementsGPU, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+================================================================================
+Error occurred in IndexTest/Index_GPU_Scalar_uint64_364 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the
+    GPU,
+    use 'gpuDevice()'. If the problem persists, reset the GPU by calling
+    'gpuDevice(1)'.
+    
+    Error in Index_spsa_opt (line 59)
+    iK  = zeros(sets.sz*sets.nel, 1, sets.dTE, 'gpuArray');	% Stores row indices
+    (initialized directly on GPU)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in IndexTest (line 15)
+    [iKd, jKd] = Index_spsa_opt(elementsGPU, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+Done IndexTest
+__________
+
+Failure Summary:
+
+     Name                                   Failed  Incomplete  Reason(s)
+    ======================================================================
+     IndexTest/Index_GPU_Scalar_uint64_364    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'IndexTest/Index_GPU_Scalar_uint64_364'
+           Valid: 0
+         Samples: [4×7 table]
+    TestActivity: [9×12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   3.7943 seconds testing time.
+
+
+sets.nel = 364;
+sets.dTE = 'uint64';
+sets.dTN = 'single';
+[elements, ~] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 48228544;
+sets.edof = 24;
+sets.sz = 300;
+
+%% Index_CPU_Vector_uint64_364
+[iK, jK] = Index_vssa(elements, sets);
+Running IndexTest
+
+ Mesh created successfully!
+	 Number of elements: 48228544
+	 Number of nodes   : 48627125
+
