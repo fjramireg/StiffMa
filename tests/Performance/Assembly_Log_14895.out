@@ -1,0 +1,5092 @@
+=== START OF WORK ===
+Date and time: mié ago 12 11:18:14 EDT 2026
+Execution node: NODO-G3
+Job Directory: /exports/home/francisco.ramirez/StiffMa/tests/Performance
+==========================
+
+sets.nel = 10;
+sets.dTE = 'uint32';
+sets.dTN = 'single';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 1000;
+sets.nnodes = 1331;
+sets.sz = 36;
+sets.edof = 8;
+sets.tdofs = sets.nnodes * 1;
+c = 3.841000e+02;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+[iK, jK] = Index_spsa_opt(gpuArray(Mesh.elements), sets);
+Ke = eStiff_spsa_opt(gpuArray(Mesh.elements), gpuArray(Mesh.nodes), c, sets);
+wait(d);
+[iK, jK, Ke] = gather(iK, jK, Ke);
+
+%% Assembly_CPU_Scalar_single_10
+K = AssemblyStiffMa(iK, jK, Ke, sets);
+Running Assembly_Test
+
+ Mesh created successfully!
+	 Number of elements: 1000
+	 Number of nodes   : 1331
+
+.........
+================================================================================
+Assembly_Test/Assembly_CPU_Scalar_single_10 was filtered.
+    Test Diagnostic: The MeasuredTime should not be too close to the precision of the framework.
+================================================================================
+
+Done Assembly_Test
+__________
+
+Failure Summary:
+
+     Name                                         Failed  Incomplete  Reason(s)
+    ==========================================================================================
+     Assembly_Test/Assembly_CPU_Scalar_single_10              X       Filtered by assumption.
+  TimeResult with properties:
+
+            Name: 'Assembly_Test/Assembly_CPU_Scalar_single_10'
+           Valid: 0
+         Samples: [4×7 table]
+    TestActivity: [9×12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   0.44741 seconds testing time.
+
+
+sets.nel = 10;
+sets.dTE = 'uint32';
+sets.dTN = 'single';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 1000;
+sets.nnodes = 1331;
+sets.sz = 36;
+sets.edof = 8;
+sets.tdofs = sets.nnodes * 1;
+c = 3.841000e+02;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+[iK, jK] = Index_spsa_opt(gpuArray(Mesh.elements), sets);
+Ke = eStiff_spsa_opt(gpuArray(Mesh.elements), gpuArray(Mesh.nodes), c, sets);
+wait(d);
+
+%% Assembly_GPU_Scalar_single_10
+K = AssemblyStiffMa(iK, jK, Ke, sets);
+wait(d);
+Running Assembly_Test
+
+ Mesh created successfully!
+	 Number of elements: 1000
+	 Number of nodes   : 1331
+
+.........
+================================================================================
+Assembly_Test/Assembly_GPU_Scalar_single_10 was filtered.
+    Test Diagnostic: The MeasuredTime should not be too close to the precision of the framework.
+================================================================================
+
+Done Assembly_Test
+__________
+
+Failure Summary:
+
+     Name                                         Failed  Incomplete  Reason(s)
+    ==========================================================================================
+     Assembly_Test/Assembly_GPU_Scalar_single_10              X       Filtered by assumption.
+  TimeResult with properties:
+
+            Name: 'Assembly_Test/Assembly_GPU_Scalar_single_10'
+           Valid: 0
+         Samples: [4×7 table]
+    TestActivity: [9×12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   0.2336 seconds testing time.
+
+
+sets.nel = 10;
+sets.dTE = 'uint32';
+sets.dTN = 'single';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 1000;
+sets.nnodes = 1331;
+sets.sz = 300;
+sets.edof = 24;
+sets.tdofs = sets.nnodes * 3;
+MP.E = 200000000000;
+MP.nu = 3.000000e-01;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+[iK, jK] = Index_vpsa_opt(gpuArray(Mesh.elements), sets);
+Ke = eStiff_vpsa_opt(gpuArray(Mesh.elements), gpuArray(Mesh.nodes), MP, sets);
+wait(d);
+[iK, jK, Ke] = gather(iK, jK, Ke);
+
+%% Assembly_CPU_Vector_single_10
+K = AssemblyStiffMa(iK, jK, Ke, sets);
+Running Assembly_Test
+
+ Mesh created successfully!
+	 Number of elements: 1000
+	 Number of nodes   : 1331
+
+.......... ......
+Done Assembly_Test
+__________
+
+  TimeResult with properties:
+
+            Name: 'Assembly_Test/Assembly_CPU_Vector_single_10'
+           Valid: 1
+         Samples: [11×7 table]
+    TestActivity: [16×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   0.39122 seconds testing time.
+
+
+sets.nel = 10;
+sets.dTE = 'uint32';
+sets.dTN = 'single';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 1000;
+sets.nnodes = 1331;
+sets.sz = 300;
+sets.edof = 24;
+sets.tdofs = sets.nnodes * 3;
+MP.E = 200000000000;
+MP.nu = 3.000000e-01;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+[iK, jK] = Index_vpsa_opt(gpuArray(Mesh.elements), sets);
+Ke = eStiff_vpsa_opt(gpuArray(Mesh.elements), gpuArray(Mesh.nodes), MP, sets);
+wait(d);
+
+%% Assembly_GPU_Vector_single_10
+K = AssemblyStiffMa(iK, jK, Ke, sets);
+wait(d);
+Running Assembly_Test
+
+ Mesh created successfully!
+	 Number of elements: 1000
+	 Number of nodes   : 1331
+
+.........
+================================================================================
+Assembly_Test/Assembly_GPU_Vector_single_10 was filtered.
+    Test Diagnostic: The MeasuredTime should not be too close to the precision of the framework.
+================================================================================
+
+Done Assembly_Test
+__________
+
+Failure Summary:
+
+     Name                                         Failed  Incomplete  Reason(s)
+    ==========================================================================================
+     Assembly_Test/Assembly_GPU_Vector_single_10              X       Filtered by assumption.
+  TimeResult with properties:
+
+            Name: 'Assembly_Test/Assembly_GPU_Vector_single_10'
+           Valid: 0
+         Samples: [4×7 table]
+    TestActivity: [9×12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   0.25411 seconds testing time.
+
+
+sets.nel = 10;
+sets.dTE = 'uint32';
+sets.dTN = 'double';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 1000;
+sets.nnodes = 1331;
+sets.sz = 36;
+sets.edof = 8;
+sets.tdofs = sets.nnodes * 1;
+c = 3.841000e+02;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+[iK, jK] = Index_spsa_opt(gpuArray(Mesh.elements), sets);
+Ke = eStiff_spsa_opt(gpuArray(Mesh.elements), gpuArray(Mesh.nodes), c, sets);
+wait(d);
+[iK, jK, Ke] = gather(iK, jK, Ke);
+
+%% Assembly_CPU_Scalar_double_10
+K = AssemblyStiffMa(iK, jK, Ke, sets);
+Running Assembly_Test
+
+ Mesh created successfully!
+	 Number of elements: 1000
+	 Number of nodes   : 1331
+
+.........
+================================================================================
+Assembly_Test/Assembly_CPU_Scalar_double_10 was filtered.
+    Test Diagnostic: The MeasuredTime should not be too close to the precision of the framework.
+================================================================================
+
+Done Assembly_Test
+__________
+
+Failure Summary:
+
+     Name                                         Failed  Incomplete  Reason(s)
+    ==========================================================================================
+     Assembly_Test/Assembly_CPU_Scalar_double_10              X       Filtered by assumption.
+  TimeResult with properties:
+
+            Name: 'Assembly_Test/Assembly_CPU_Scalar_double_10'
+           Valid: 0
+         Samples: [4×7 table]
+    TestActivity: [9×12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   0.16583 seconds testing time.
+
+
+sets.nel = 10;
+sets.dTE = 'uint32';
+sets.dTN = 'double';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 1000;
+sets.nnodes = 1331;
+sets.sz = 36;
+sets.edof = 8;
+sets.tdofs = sets.nnodes * 1;
+c = 3.841000e+02;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+[iK, jK] = Index_spsa_opt(gpuArray(Mesh.elements), sets);
+Ke = eStiff_spsa_opt(gpuArray(Mesh.elements), gpuArray(Mesh.nodes), c, sets);
+wait(d);
+
+%% Assembly_GPU_Scalar_double_10
+K = AssemblyStiffMa(iK, jK, Ke, sets);
+wait(d);
+Running Assembly_Test
+
+ Mesh created successfully!
+	 Number of elements: 1000
+	 Number of nodes   : 1331
+
+.........
+================================================================================
+Assembly_Test/Assembly_GPU_Scalar_double_10 was filtered.
+    Test Diagnostic: The MeasuredTime should not be too close to the precision of the framework.
+================================================================================
+
+Done Assembly_Test
+__________
+
+Failure Summary:
+
+     Name                                         Failed  Incomplete  Reason(s)
+    ==========================================================================================
+     Assembly_Test/Assembly_GPU_Scalar_double_10              X       Filtered by assumption.
+  TimeResult with properties:
+
+            Name: 'Assembly_Test/Assembly_GPU_Scalar_double_10'
+           Valid: 0
+         Samples: [4×7 table]
+    TestActivity: [9×12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   0.15055 seconds testing time.
+
+
+sets.nel = 10;
+sets.dTE = 'uint32';
+sets.dTN = 'double';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 1000;
+sets.nnodes = 1331;
+sets.sz = 300;
+sets.edof = 24;
+sets.tdofs = sets.nnodes * 3;
+MP.E = 200000000000;
+MP.nu = 3.000000e-01;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+[iK, jK] = Index_vpsa_opt(gpuArray(Mesh.elements), sets);
+Ke = eStiff_vpsa_opt(gpuArray(Mesh.elements), gpuArray(Mesh.nodes), MP, sets);
+wait(d);
+[iK, jK, Ke] = gather(iK, jK, Ke);
+
+%% Assembly_CPU_Vector_double_10
+K = AssemblyStiffMa(iK, jK, Ke, sets);
+Running Assembly_Test
+
+ Mesh created successfully!
+	 Number of elements: 1000
+	 Number of nodes   : 1331
+
+.........
+Done Assembly_Test
+__________
+
+  TimeResult with properties:
+
+            Name: 'Assembly_Test/Assembly_CPU_Vector_double_10'
+           Valid: 1
+         Samples: [4×7 table]
+    TestActivity: [9×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   0.28973 seconds testing time.
+
+
+sets.nel = 10;
+sets.dTE = 'uint32';
+sets.dTN = 'double';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 1000;
+sets.nnodes = 1331;
+sets.sz = 300;
+sets.edof = 24;
+sets.tdofs = sets.nnodes * 3;
+MP.E = 200000000000;
+MP.nu = 3.000000e-01;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+[iK, jK] = Index_vpsa_opt(gpuArray(Mesh.elements), sets);
+Ke = eStiff_vpsa_opt(gpuArray(Mesh.elements), gpuArray(Mesh.nodes), MP, sets);
+wait(d);
+
+%% Assembly_GPU_Vector_double_10
+K = AssemblyStiffMa(iK, jK, Ke, sets);
+wait(d);
+Running Assembly_Test
+
+ Mesh created successfully!
+	 Number of elements: 1000
+	 Number of nodes   : 1331
+
+.........
+================================================================================
+Assembly_Test/Assembly_GPU_Vector_double_10 was filtered.
+    Test Diagnostic: The MeasuredTime should not be too close to the precision of the framework.
+================================================================================
+
+Done Assembly_Test
+__________
+
+Failure Summary:
+
+     Name                                         Failed  Incomplete  Reason(s)
+    ==========================================================================================
+     Assembly_Test/Assembly_GPU_Vector_double_10              X       Filtered by assumption.
+  TimeResult with properties:
+
+            Name: 'Assembly_Test/Assembly_GPU_Vector_double_10'
+           Valid: 0
+         Samples: [4×7 table]
+    TestActivity: [9×12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   0.31365 seconds testing time.
+
+
+sets.nel = 20;
+sets.dTE = 'uint32';
+sets.dTN = 'single';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 8000;
+sets.nnodes = 9261;
+sets.sz = 36;
+sets.edof = 8;
+sets.tdofs = sets.nnodes * 1;
+c = 3.841000e+02;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+[iK, jK] = Index_spsa_opt(gpuArray(Mesh.elements), sets);
+Ke = eStiff_spsa_opt(gpuArray(Mesh.elements), gpuArray(Mesh.nodes), c, sets);
+wait(d);
+[iK, jK, Ke] = gather(iK, jK, Ke);
+
+%% Assembly_CPU_Scalar_single_20
+K = AssemblyStiffMa(iK, jK, Ke, sets);
+Running Assembly_Test
+
+ Mesh created successfully!
+	 Number of elements: 8000
+	 Number of nodes   : 9261
+
+.........
+Done Assembly_Test
+__________
+
+  TimeResult with properties:
+
+            Name: 'Assembly_Test/Assembly_CPU_Scalar_single_20'
+           Valid: 1
+         Samples: [4×7 table]
+    TestActivity: [9×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   0.19873 seconds testing time.
+
+
+sets.nel = 20;
+sets.dTE = 'uint32';
+sets.dTN = 'single';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 8000;
+sets.nnodes = 9261;
+sets.sz = 36;
+sets.edof = 8;
+sets.tdofs = sets.nnodes * 1;
+c = 3.841000e+02;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+[iK, jK] = Index_spsa_opt(gpuArray(Mesh.elements), sets);
+Ke = eStiff_spsa_opt(gpuArray(Mesh.elements), gpuArray(Mesh.nodes), c, sets);
+wait(d);
+
+%% Assembly_GPU_Scalar_single_20
+K = AssemblyStiffMa(iK, jK, Ke, sets);
+wait(d);
+Running Assembly_Test
+
+ Mesh created successfully!
+	 Number of elements: 8000
+	 Number of nodes   : 9261
+
+.........
+================================================================================
+Assembly_Test/Assembly_GPU_Scalar_single_20 was filtered.
+    Test Diagnostic: The MeasuredTime should not be too close to the precision of the framework.
+================================================================================
+
+Done Assembly_Test
+__________
+
+Failure Summary:
+
+     Name                                         Failed  Incomplete  Reason(s)
+    ==========================================================================================
+     Assembly_Test/Assembly_GPU_Scalar_single_20              X       Filtered by assumption.
+  TimeResult with properties:
+
+            Name: 'Assembly_Test/Assembly_GPU_Scalar_single_20'
+           Valid: 0
+         Samples: [4×7 table]
+    TestActivity: [9×12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   0.15059 seconds testing time.
+
+
+sets.nel = 20;
+sets.dTE = 'uint32';
+sets.dTN = 'single';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 8000;
+sets.nnodes = 9261;
+sets.sz = 300;
+sets.edof = 24;
+sets.tdofs = sets.nnodes * 3;
+MP.E = 200000000000;
+MP.nu = 3.000000e-01;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+[iK, jK] = Index_vpsa_opt(gpuArray(Mesh.elements), sets);
+Ke = eStiff_vpsa_opt(gpuArray(Mesh.elements), gpuArray(Mesh.nodes), MP, sets);
+wait(d);
+[iK, jK, Ke] = gather(iK, jK, Ke);
+
+%% Assembly_CPU_Vector_single_20
+K = AssemblyStiffMa(iK, jK, Ke, sets);
+Running Assembly_Test
+
+ Mesh created successfully!
+	 Number of elements: 8000
+	 Number of nodes   : 9261
+
+..........
+Done Assembly_Test
+__________
+
+  TimeResult with properties:
+
+            Name: 'Assembly_Test/Assembly_CPU_Vector_single_20'
+           Valid: 1
+         Samples: [5×7 table]
+    TestActivity: [10×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   0.64475 seconds testing time.
+
+
+sets.nel = 20;
+sets.dTE = 'uint32';
+sets.dTN = 'single';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 8000;
+sets.nnodes = 9261;
+sets.sz = 300;
+sets.edof = 24;
+sets.tdofs = sets.nnodes * 3;
+MP.E = 200000000000;
+MP.nu = 3.000000e-01;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+[iK, jK] = Index_vpsa_opt(gpuArray(Mesh.elements), sets);
+Ke = eStiff_vpsa_opt(gpuArray(Mesh.elements), gpuArray(Mesh.nodes), MP, sets);
+wait(d);
+
+%% Assembly_GPU_Vector_single_20
+K = AssemblyStiffMa(iK, jK, Ke, sets);
+wait(d);
+Running Assembly_Test
+
+ Mesh created successfully!
+	 Number of elements: 8000
+	 Number of nodes   : 9261
+
+.........
+Done Assembly_Test
+__________
+
+  TimeResult with properties:
+
+            Name: 'Assembly_Test/Assembly_GPU_Vector_single_20'
+           Valid: 1
+         Samples: [4×7 table]
+    TestActivity: [9×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   0.2654 seconds testing time.
+
+
+sets.nel = 20;
+sets.dTE = 'uint32';
+sets.dTN = 'double';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 8000;
+sets.nnodes = 9261;
+sets.sz = 36;
+sets.edof = 8;
+sets.tdofs = sets.nnodes * 1;
+c = 3.841000e+02;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+[iK, jK] = Index_spsa_opt(gpuArray(Mesh.elements), sets);
+Ke = eStiff_spsa_opt(gpuArray(Mesh.elements), gpuArray(Mesh.nodes), c, sets);
+wait(d);
+[iK, jK, Ke] = gather(iK, jK, Ke);
+
+%% Assembly_CPU_Scalar_double_20
+K = AssemblyStiffMa(iK, jK, Ke, sets);
+Running Assembly_Test
+
+ Mesh created successfully!
+	 Number of elements: 8000
+	 Number of nodes   : 9261
+
+.........
+Done Assembly_Test
+__________
+
+  TimeResult with properties:
+
+            Name: 'Assembly_Test/Assembly_CPU_Scalar_double_20'
+           Valid: 1
+         Samples: [4×7 table]
+    TestActivity: [9×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   0.193 seconds testing time.
+
+
+sets.nel = 20;
+sets.dTE = 'uint32';
+sets.dTN = 'double';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 8000;
+sets.nnodes = 9261;
+sets.sz = 36;
+sets.edof = 8;
+sets.tdofs = sets.nnodes * 1;
+c = 3.841000e+02;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+[iK, jK] = Index_spsa_opt(gpuArray(Mesh.elements), sets);
+Ke = eStiff_spsa_opt(gpuArray(Mesh.elements), gpuArray(Mesh.nodes), c, sets);
+wait(d);
+
+%% Assembly_GPU_Scalar_double_20
+K = AssemblyStiffMa(iK, jK, Ke, sets);
+wait(d);
+Running Assembly_Test
+
+ Mesh created successfully!
+	 Number of elements: 8000
+	 Number of nodes   : 9261
+
+.........
+================================================================================
+Assembly_Test/Assembly_GPU_Scalar_double_20 was filtered.
+    Test Diagnostic: The MeasuredTime should not be too close to the precision of the framework.
+================================================================================
+
+Done Assembly_Test
+__________
+
+Failure Summary:
+
+     Name                                         Failed  Incomplete  Reason(s)
+    ==========================================================================================
+     Assembly_Test/Assembly_GPU_Scalar_double_20              X       Filtered by assumption.
+  TimeResult with properties:
+
+            Name: 'Assembly_Test/Assembly_GPU_Scalar_double_20'
+           Valid: 0
+         Samples: [4×7 table]
+    TestActivity: [9×12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   0.15431 seconds testing time.
+
+
+sets.nel = 20;
+sets.dTE = 'uint32';
+sets.dTN = 'double';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 8000;
+sets.nnodes = 9261;
+sets.sz = 300;
+sets.edof = 24;
+sets.tdofs = sets.nnodes * 3;
+MP.E = 200000000000;
+MP.nu = 3.000000e-01;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+[iK, jK] = Index_vpsa_opt(gpuArray(Mesh.elements), sets);
+Ke = eStiff_vpsa_opt(gpuArray(Mesh.elements), gpuArray(Mesh.nodes), MP, sets);
+wait(d);
+[iK, jK, Ke] = gather(iK, jK, Ke);
+
+%% Assembly_CPU_Vector_double_20
+K = AssemblyStiffMa(iK, jK, Ke, sets);
+Running Assembly_Test
+
+ Mesh created successfully!
+	 Number of elements: 8000
+	 Number of nodes   : 9261
+
+.........
+Done Assembly_Test
+__________
+
+  TimeResult with properties:
+
+            Name: 'Assembly_Test/Assembly_CPU_Vector_double_20'
+           Valid: 1
+         Samples: [4×7 table]
+    TestActivity: [9×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   0.63864 seconds testing time.
+
+
+sets.nel = 20;
+sets.dTE = 'uint32';
+sets.dTN = 'double';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 8000;
+sets.nnodes = 9261;
+sets.sz = 300;
+sets.edof = 24;
+sets.tdofs = sets.nnodes * 3;
+MP.E = 200000000000;
+MP.nu = 3.000000e-01;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+[iK, jK] = Index_vpsa_opt(gpuArray(Mesh.elements), sets);
+Ke = eStiff_vpsa_opt(gpuArray(Mesh.elements), gpuArray(Mesh.nodes), MP, sets);
+wait(d);
+
+%% Assembly_GPU_Vector_double_20
+K = AssemblyStiffMa(iK, jK, Ke, sets);
+wait(d);
+Running Assembly_Test
+
+ Mesh created successfully!
+	 Number of elements: 8000
+	 Number of nodes   : 9261
+
+.........
+Done Assembly_Test
+__________
+
+  TimeResult with properties:
+
+            Name: 'Assembly_Test/Assembly_GPU_Vector_double_20'
+           Valid: 1
+         Samples: [4×7 table]
+    TestActivity: [9×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   0.27678 seconds testing time.
+
+
+sets.nel = 40;
+sets.dTE = 'uint32';
+sets.dTN = 'single';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 64000;
+sets.nnodes = 68921;
+sets.sz = 36;
+sets.edof = 8;
+sets.tdofs = sets.nnodes * 1;
+c = 3.841000e+02;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+[iK, jK] = Index_spsa_opt(gpuArray(Mesh.elements), sets);
+Ke = eStiff_spsa_opt(gpuArray(Mesh.elements), gpuArray(Mesh.nodes), c, sets);
+wait(d);
+[iK, jK, Ke] = gather(iK, jK, Ke);
+
+%% Assembly_CPU_Scalar_single_40
+K = AssemblyStiffMa(iK, jK, Ke, sets);
+Running Assembly_Test
+
+ Mesh created successfully!
+	 Number of elements: 64000
+	 Number of nodes   : 68921
+
+.........
+Done Assembly_Test
+__________
+
+  TimeResult with properties:
+
+            Name: 'Assembly_Test/Assembly_CPU_Scalar_single_40'
+           Valid: 1
+         Samples: [4×7 table]
+    TestActivity: [9×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   0.57098 seconds testing time.
+
+
+sets.nel = 40;
+sets.dTE = 'uint32';
+sets.dTN = 'single';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 64000;
+sets.nnodes = 68921;
+sets.sz = 36;
+sets.edof = 8;
+sets.tdofs = sets.nnodes * 1;
+c = 3.841000e+02;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+[iK, jK] = Index_spsa_opt(gpuArray(Mesh.elements), sets);
+Ke = eStiff_spsa_opt(gpuArray(Mesh.elements), gpuArray(Mesh.nodes), c, sets);
+wait(d);
+
+%% Assembly_GPU_Scalar_single_40
+K = AssemblyStiffMa(iK, jK, Ke, sets);
+wait(d);
+Running Assembly_Test
+
+ Mesh created successfully!
+	 Number of elements: 64000
+	 Number of nodes   : 68921
+
+.........
+Done Assembly_Test
+__________
+
+  TimeResult with properties:
+
+            Name: 'Assembly_Test/Assembly_GPU_Scalar_single_40'
+           Valid: 1
+         Samples: [4×7 table]
+    TestActivity: [9×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   0.19657 seconds testing time.
+
+
+sets.nel = 40;
+sets.dTE = 'uint32';
+sets.dTN = 'single';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 64000;
+sets.nnodes = 68921;
+sets.sz = 300;
+sets.edof = 24;
+sets.tdofs = sets.nnodes * 3;
+MP.E = 200000000000;
+MP.nu = 3.000000e-01;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+[iK, jK] = Index_vpsa_opt(gpuArray(Mesh.elements), sets);
+Ke = eStiff_vpsa_opt(gpuArray(Mesh.elements), gpuArray(Mesh.nodes), MP, sets);
+wait(d);
+[iK, jK, Ke] = gather(iK, jK, Ke);
+
+%% Assembly_CPU_Vector_single_40
+K = AssemblyStiffMa(iK, jK, Ke, sets);
+Running Assembly_Test
+
+ Mesh created successfully!
+	 Number of elements: 64000
+	 Number of nodes   : 68921
+
+.........
+Done Assembly_Test
+__________
+
+  TimeResult with properties:
+
+            Name: 'Assembly_Test/Assembly_CPU_Vector_single_40'
+           Valid: 1
+         Samples: [4×7 table]
+    TestActivity: [9×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   7.6262 seconds testing time.
+
+
+sets.nel = 40;
+sets.dTE = 'uint32';
+sets.dTN = 'single';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 64000;
+sets.nnodes = 68921;
+sets.sz = 300;
+sets.edof = 24;
+sets.tdofs = sets.nnodes * 3;
+MP.E = 200000000000;
+MP.nu = 3.000000e-01;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+[iK, jK] = Index_vpsa_opt(gpuArray(Mesh.elements), sets);
+Ke = eStiff_vpsa_opt(gpuArray(Mesh.elements), gpuArray(Mesh.nodes), MP, sets);
+wait(d);
+
+%% Assembly_GPU_Vector_single_40
+K = AssemblyStiffMa(iK, jK, Ke, sets);
+wait(d);
+Running Assembly_Test
+
+ Mesh created successfully!
+	 Number of elements: 64000
+	 Number of nodes   : 68921
+
+.........
+Done Assembly_Test
+__________
+
+  TimeResult with properties:
+
+            Name: 'Assembly_Test/Assembly_GPU_Vector_single_40'
+           Valid: 1
+         Samples: [4×7 table]
+    TestActivity: [9×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   0.5586 seconds testing time.
+
+
+sets.nel = 40;
+sets.dTE = 'uint32';
+sets.dTN = 'double';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 64000;
+sets.nnodes = 68921;
+sets.sz = 36;
+sets.edof = 8;
+sets.tdofs = sets.nnodes * 1;
+c = 3.841000e+02;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+[iK, jK] = Index_spsa_opt(gpuArray(Mesh.elements), sets);
+Ke = eStiff_spsa_opt(gpuArray(Mesh.elements), gpuArray(Mesh.nodes), c, sets);
+wait(d);
+[iK, jK, Ke] = gather(iK, jK, Ke);
+
+%% Assembly_CPU_Scalar_double_40
+K = AssemblyStiffMa(iK, jK, Ke, sets);
+Running Assembly_Test
+
+ Mesh created successfully!
+	 Number of elements: 64000
+	 Number of nodes   : 68921
+
+.........
+Done Assembly_Test
+__________
+
+  TimeResult with properties:
+
+            Name: 'Assembly_Test/Assembly_CPU_Scalar_double_40'
+           Valid: 1
+         Samples: [4×7 table]
+    TestActivity: [9×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   0.54425 seconds testing time.
+
+
+sets.nel = 40;
+sets.dTE = 'uint32';
+sets.dTN = 'double';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 64000;
+sets.nnodes = 68921;
+sets.sz = 36;
+sets.edof = 8;
+sets.tdofs = sets.nnodes * 1;
+c = 3.841000e+02;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+[iK, jK] = Index_spsa_opt(gpuArray(Mesh.elements), sets);
+Ke = eStiff_spsa_opt(gpuArray(Mesh.elements), gpuArray(Mesh.nodes), c, sets);
+wait(d);
+
+%% Assembly_GPU_Scalar_double_40
+K = AssemblyStiffMa(iK, jK, Ke, sets);
+wait(d);
+Running Assembly_Test
+
+ Mesh created successfully!
+	 Number of elements: 64000
+	 Number of nodes   : 68921
+
+.........
+Done Assembly_Test
+__________
+
+  TimeResult with properties:
+
+            Name: 'Assembly_Test/Assembly_GPU_Scalar_double_40'
+           Valid: 1
+         Samples: [4×7 table]
+    TestActivity: [9×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   0.19939 seconds testing time.
+
+
+sets.nel = 40;
+sets.dTE = 'uint32';
+sets.dTN = 'double';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 64000;
+sets.nnodes = 68921;
+sets.sz = 300;
+sets.edof = 24;
+sets.tdofs = sets.nnodes * 3;
+MP.E = 200000000000;
+MP.nu = 3.000000e-01;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+[iK, jK] = Index_vpsa_opt(gpuArray(Mesh.elements), sets);
+Ke = eStiff_vpsa_opt(gpuArray(Mesh.elements), gpuArray(Mesh.nodes), MP, sets);
+wait(d);
+[iK, jK, Ke] = gather(iK, jK, Ke);
+
+%% Assembly_CPU_Vector_double_40
+K = AssemblyStiffMa(iK, jK, Ke, sets);
+Running Assembly_Test
+
+ Mesh created successfully!
+	 Number of elements: 64000
+	 Number of nodes   : 68921
+
+.........
+Done Assembly_Test
+__________
+
+  TimeResult with properties:
+
+            Name: 'Assembly_Test/Assembly_CPU_Vector_double_40'
+           Valid: 1
+         Samples: [4×7 table]
+    TestActivity: [9×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   7.7738 seconds testing time.
+
+
+sets.nel = 40;
+sets.dTE = 'uint32';
+sets.dTN = 'double';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 64000;
+sets.nnodes = 68921;
+sets.sz = 300;
+sets.edof = 24;
+sets.tdofs = sets.nnodes * 3;
+MP.E = 200000000000;
+MP.nu = 3.000000e-01;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+[iK, jK] = Index_vpsa_opt(gpuArray(Mesh.elements), sets);
+Ke = eStiff_vpsa_opt(gpuArray(Mesh.elements), gpuArray(Mesh.nodes), MP, sets);
+wait(d);
+
+%% Assembly_GPU_Vector_double_40
+K = AssemblyStiffMa(iK, jK, Ke, sets);
+wait(d);
+Running Assembly_Test
+
+ Mesh created successfully!
+	 Number of elements: 64000
+	 Number of nodes   : 68921
+
+.........
+Done Assembly_Test
+__________
+
+  TimeResult with properties:
+
+            Name: 'Assembly_Test/Assembly_GPU_Vector_double_40'
+           Valid: 1
+         Samples: [4×7 table]
+    TestActivity: [9×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   0.66051 seconds testing time.
+
+
+sets.nel = 80;
+sets.dTE = 'uint32';
+sets.dTN = 'single';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 512000;
+sets.nnodes = 531441;
+sets.sz = 36;
+sets.edof = 8;
+sets.tdofs = sets.nnodes * 1;
+c = 3.841000e+02;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+[iK, jK] = Index_spsa_opt(gpuArray(Mesh.elements), sets);
+Ke = eStiff_spsa_opt(gpuArray(Mesh.elements), gpuArray(Mesh.nodes), c, sets);
+wait(d);
+[iK, jK, Ke] = gather(iK, jK, Ke);
+
+%% Assembly_CPU_Scalar_single_80
+K = AssemblyStiffMa(iK, jK, Ke, sets);
+Running Assembly_Test
+
+ Mesh created successfully!
+	 Number of elements: 512000
+	 Number of nodes   : 531441
+
+.
+Done Assembly_Test
+__________
+
+  TimeResult with properties:
+
+            Name: 'Assembly_Test/Assembly_CPU_Scalar_single_80'
+           Valid: 1
+         Samples: [1×7 table]
+    TestActivity: [1×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   2.3901 seconds testing time.
+
+
+sets.nel = 80;
+sets.dTE = 'uint32';
+sets.dTN = 'single';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 512000;
+sets.nnodes = 531441;
+sets.sz = 36;
+sets.edof = 8;
+sets.tdofs = sets.nnodes * 1;
+c = 3.841000e+02;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+[iK, jK] = Index_spsa_opt(gpuArray(Mesh.elements), sets);
+Ke = eStiff_spsa_opt(gpuArray(Mesh.elements), gpuArray(Mesh.nodes), c, sets);
+wait(d);
+
+%% Assembly_GPU_Scalar_single_80
+K = AssemblyStiffMa(iK, jK, Ke, sets);
+wait(d);
+Running Assembly_Test
+
+ Mesh created successfully!
+	 Number of elements: 512000
+	 Number of nodes   : 531441
+
+.........
+Done Assembly_Test
+__________
+
+  TimeResult with properties:
+
+            Name: 'Assembly_Test/Assembly_GPU_Scalar_single_80'
+           Valid: 1
+         Samples: [4×7 table]
+    TestActivity: [9×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   0.47526 seconds testing time.
+
+
+sets.nel = 80;
+sets.dTE = 'uint32';
+sets.dTN = 'single';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 512000;
+sets.nnodes = 531441;
+sets.sz = 300;
+sets.edof = 24;
+sets.tdofs = sets.nnodes * 3;
+MP.E = 200000000000;
+MP.nu = 3.000000e-01;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+[iK, jK] = Index_vpsa_opt(gpuArray(Mesh.elements), sets);
+Ke = eStiff_vpsa_opt(gpuArray(Mesh.elements), gpuArray(Mesh.nodes), MP, sets);
+wait(d);
+[iK, jK, Ke] = gather(iK, jK, Ke);
+
+%% Assembly_CPU_Vector_single_80
+K = AssemblyStiffMa(iK, jK, Ke, sets);
+Running Assembly_Test
+
+ Mesh created successfully!
+	 Number of elements: 512000
+	 Number of nodes   : 531441
+
+.
+Done Assembly_Test
+__________
+
+  TimeResult with properties:
+
+            Name: 'Assembly_Test/Assembly_CPU_Vector_single_80'
+           Valid: 1
+         Samples: [1×7 table]
+    TestActivity: [1×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   9.3964 seconds testing time.
+
+
+sets.nel = 80;
+sets.dTE = 'uint32';
+sets.dTN = 'single';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 512000;
+sets.nnodes = 531441;
+sets.sz = 300;
+sets.edof = 24;
+sets.tdofs = sets.nnodes * 3;
+MP.E = 200000000000;
+MP.nu = 3.000000e-01;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+[iK, jK] = Index_vpsa_opt(gpuArray(Mesh.elements), sets);
+Ke = eStiff_vpsa_opt(gpuArray(Mesh.elements), gpuArray(Mesh.nodes), MP, sets);
+wait(d);
+
+%% Assembly_GPU_Vector_single_80
+K = AssemblyStiffMa(iK, jK, Ke, sets);
+wait(d);
+Running Assembly_Test
+
+ Mesh created successfully!
+	 Number of elements: 512000
+	 Number of nodes   : 531441
+
+.........
+Done Assembly_Test
+__________
+
+  TimeResult with properties:
+
+            Name: 'Assembly_Test/Assembly_GPU_Vector_single_80'
+           Valid: 1
+         Samples: [4×7 table]
+    TestActivity: [9×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   2.792 seconds testing time.
+
+
+sets.nel = 80;
+sets.dTE = 'uint32';
+sets.dTN = 'double';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 512000;
+sets.nnodes = 531441;
+sets.sz = 36;
+sets.edof = 8;
+sets.tdofs = sets.nnodes * 1;
+c = 3.841000e+02;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+[iK, jK] = Index_spsa_opt(gpuArray(Mesh.elements), sets);
+Ke = eStiff_spsa_opt(gpuArray(Mesh.elements), gpuArray(Mesh.nodes), c, sets);
+wait(d);
+[iK, jK, Ke] = gather(iK, jK, Ke);
+
+%% Assembly_CPU_Scalar_double_80
+K = AssemblyStiffMa(iK, jK, Ke, sets);
+Running Assembly_Test
+
+ Mesh created successfully!
+	 Number of elements: 512000
+	 Number of nodes   : 531441
+
+.
+Done Assembly_Test
+__________
+
+  TimeResult with properties:
+
+            Name: 'Assembly_Test/Assembly_CPU_Scalar_double_80'
+           Valid: 1
+         Samples: [1×7 table]
+    TestActivity: [1×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   2.2623 seconds testing time.
+
+
+sets.nel = 80;
+sets.dTE = 'uint32';
+sets.dTN = 'double';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 512000;
+sets.nnodes = 531441;
+sets.sz = 36;
+sets.edof = 8;
+sets.tdofs = sets.nnodes * 1;
+c = 3.841000e+02;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+[iK, jK] = Index_spsa_opt(gpuArray(Mesh.elements), sets);
+Ke = eStiff_spsa_opt(gpuArray(Mesh.elements), gpuArray(Mesh.nodes), c, sets);
+wait(d);
+
+%% Assembly_GPU_Scalar_double_80
+K = AssemblyStiffMa(iK, jK, Ke, sets);
+wait(d);
+Running Assembly_Test
+
+ Mesh created successfully!
+	 Number of elements: 512000
+	 Number of nodes   : 531441
+
+.........
+Done Assembly_Test
+__________
+
+  TimeResult with properties:
+
+            Name: 'Assembly_Test/Assembly_GPU_Scalar_double_80'
+           Valid: 1
+         Samples: [4×7 table]
+    TestActivity: [9×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   0.58919 seconds testing time.
+
+
+sets.nel = 80;
+sets.dTE = 'uint32';
+sets.dTN = 'double';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 512000;
+sets.nnodes = 531441;
+sets.sz = 300;
+sets.edof = 24;
+sets.tdofs = sets.nnodes * 3;
+MP.E = 200000000000;
+MP.nu = 3.000000e-01;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+[iK, jK] = Index_vpsa_opt(gpuArray(Mesh.elements), sets);
+Ke = eStiff_vpsa_opt(gpuArray(Mesh.elements), gpuArray(Mesh.nodes), MP, sets);
+wait(d);
+[iK, jK, Ke] = gather(iK, jK, Ke);
+
+%% Assembly_CPU_Vector_double_80
+K = AssemblyStiffMa(iK, jK, Ke, sets);
+Running Assembly_Test
+
+ Mesh created successfully!
+	 Number of elements: 512000
+	 Number of nodes   : 531441
+
+.
+Done Assembly_Test
+__________
+
+  TimeResult with properties:
+
+            Name: 'Assembly_Test/Assembly_CPU_Vector_double_80'
+           Valid: 1
+         Samples: [1×7 table]
+    TestActivity: [1×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   9.9413 seconds testing time.
+
+
+sets.nel = 80;
+sets.dTE = 'uint32';
+sets.dTN = 'double';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 512000;
+sets.nnodes = 531441;
+sets.sz = 300;
+sets.edof = 24;
+sets.tdofs = sets.nnodes * 3;
+MP.E = 200000000000;
+MP.nu = 3.000000e-01;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+[iK, jK] = Index_vpsa_opt(gpuArray(Mesh.elements), sets);
+Ke = eStiff_vpsa_opt(gpuArray(Mesh.elements), gpuArray(Mesh.nodes), MP, sets);
+wait(d);
+
+%% Assembly_GPU_Vector_double_80
+K = AssemblyStiffMa(iK, jK, Ke, sets);
+wait(d);
+Running Assembly_Test
+
+ Mesh created successfully!
+	 Number of elements: 512000
+	 Number of nodes   : 531441
+
+.........
+Done Assembly_Test
+__________
+
+  TimeResult with properties:
+
+            Name: 'Assembly_Test/Assembly_GPU_Vector_double_80'
+           Valid: 1
+         Samples: [4×7 table]
+    TestActivity: [9×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   3.7186 seconds testing time.
+
+
+sets.nel = 96;
+sets.dTE = 'uint32';
+sets.dTN = 'single';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 884736;
+sets.nnodes = 912673;
+sets.sz = 36;
+sets.edof = 8;
+sets.tdofs = sets.nnodes * 1;
+c = 3.841000e+02;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+[iK, jK] = Index_spsa_opt(gpuArray(Mesh.elements), sets);
+Ke = eStiff_spsa_opt(gpuArray(Mesh.elements), gpuArray(Mesh.nodes), c, sets);
+wait(d);
+[iK, jK, Ke] = gather(iK, jK, Ke);
+
+%% Assembly_CPU_Scalar_single_96
+K = AssemblyStiffMa(iK, jK, Ke, sets);
+Running Assembly_Test
+
+ Mesh created successfully!
+	 Number of elements: 884736
+	 Number of nodes   : 912673
+
+.
+Done Assembly_Test
+__________
+
+  TimeResult with properties:
+
+            Name: 'Assembly_Test/Assembly_CPU_Scalar_single_96'
+           Valid: 1
+         Samples: [1×7 table]
+    TestActivity: [1×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   2.1833 seconds testing time.
+
+
+sets.nel = 96;
+sets.dTE = 'uint32';
+sets.dTN = 'single';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 884736;
+sets.nnodes = 912673;
+sets.sz = 36;
+sets.edof = 8;
+sets.tdofs = sets.nnodes * 1;
+c = 3.841000e+02;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+[iK, jK] = Index_spsa_opt(gpuArray(Mesh.elements), sets);
+Ke = eStiff_spsa_opt(gpuArray(Mesh.elements), gpuArray(Mesh.nodes), c, sets);
+wait(d);
+
+%% Assembly_GPU_Scalar_single_96
+K = AssemblyStiffMa(iK, jK, Ke, sets);
+wait(d);
+Running Assembly_Test
+
+ Mesh created successfully!
+	 Number of elements: 884736
+	 Number of nodes   : 912673
+
+.........
+Done Assembly_Test
+__________
+
+  TimeResult with properties:
+
+            Name: 'Assembly_Test/Assembly_GPU_Scalar_single_96'
+           Valid: 1
+         Samples: [4×7 table]
+    TestActivity: [9×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   0.69532 seconds testing time.
+
+
+sets.nel = 96;
+sets.dTE = 'uint32';
+sets.dTN = 'single';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 884736;
+sets.nnodes = 912673;
+sets.sz = 300;
+sets.edof = 24;
+sets.tdofs = sets.nnodes * 3;
+MP.E = 200000000000;
+MP.nu = 3.000000e-01;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+[iK, jK] = Index_vpsa_opt(gpuArray(Mesh.elements), sets);
+Ke = eStiff_vpsa_opt(gpuArray(Mesh.elements), gpuArray(Mesh.nodes), MP, sets);
+wait(d);
+[iK, jK, Ke] = gather(iK, jK, Ke);
+
+%% Assembly_CPU_Vector_single_96
+K = AssemblyStiffMa(iK, jK, Ke, sets);
+Running Assembly_Test
+
+ Mesh created successfully!
+	 Number of elements: 884736
+	 Number of nodes   : 912673
+
+.
+Done Assembly_Test
+__________
+
+  TimeResult with properties:
+
+            Name: 'Assembly_Test/Assembly_CPU_Vector_single_96'
+           Valid: 1
+         Samples: [1×7 table]
+    TestActivity: [1×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   18.0716 seconds testing time.
+
+
+sets.nel = 96;
+sets.dTE = 'uint32';
+sets.dTN = 'single';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 884736;
+sets.nnodes = 912673;
+sets.sz = 300;
+sets.edof = 24;
+sets.tdofs = sets.nnodes * 3;
+MP.E = 200000000000;
+MP.nu = 3.000000e-01;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+[iK, jK] = Index_vpsa_opt(gpuArray(Mesh.elements), sets);
+Ke = eStiff_vpsa_opt(gpuArray(Mesh.elements), gpuArray(Mesh.nodes), MP, sets);
+wait(d);
+
+%% Assembly_GPU_Vector_single_96
+K = AssemblyStiffMa(iK, jK, Ke, sets);
+wait(d);
+Running Assembly_Test
+
+ Mesh created successfully!
+	 Number of elements: 884736
+	 Number of nodes   : 912673
+
+.........
+Done Assembly_Test
+__________
+
+  TimeResult with properties:
+
+            Name: 'Assembly_Test/Assembly_GPU_Vector_single_96'
+           Valid: 1
+         Samples: [4×7 table]
+    TestActivity: [9×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   5.0857 seconds testing time.
+
+
+sets.nel = 96;
+sets.dTE = 'uint32';
+sets.dTN = 'double';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 884736;
+sets.nnodes = 912673;
+sets.sz = 36;
+sets.edof = 8;
+sets.tdofs = sets.nnodes * 1;
+c = 3.841000e+02;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+[iK, jK] = Index_spsa_opt(gpuArray(Mesh.elements), sets);
+Ke = eStiff_spsa_opt(gpuArray(Mesh.elements), gpuArray(Mesh.nodes), c, sets);
+wait(d);
+[iK, jK, Ke] = gather(iK, jK, Ke);
+
+%% Assembly_CPU_Scalar_double_96
+K = AssemblyStiffMa(iK, jK, Ke, sets);
+Running Assembly_Test
+
+ Mesh created successfully!
+	 Number of elements: 884736
+	 Number of nodes   : 912673
+
+.
+Done Assembly_Test
+__________
+
+  TimeResult with properties:
+
+            Name: 'Assembly_Test/Assembly_CPU_Scalar_double_96'
+           Valid: 1
+         Samples: [1×7 table]
+    TestActivity: [1×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   2.2684 seconds testing time.
+
+
+sets.nel = 96;
+sets.dTE = 'uint32';
+sets.dTN = 'double';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 884736;
+sets.nnodes = 912673;
+sets.sz = 36;
+sets.edof = 8;
+sets.tdofs = sets.nnodes * 1;
+c = 3.841000e+02;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+[iK, jK] = Index_spsa_opt(gpuArray(Mesh.elements), sets);
+Ke = eStiff_spsa_opt(gpuArray(Mesh.elements), gpuArray(Mesh.nodes), c, sets);
+wait(d);
+
+%% Assembly_GPU_Scalar_double_96
+K = AssemblyStiffMa(iK, jK, Ke, sets);
+wait(d);
+Running Assembly_Test
+
+ Mesh created successfully!
+	 Number of elements: 884736
+	 Number of nodes   : 912673
+
+.........
+Done Assembly_Test
+__________
+
+  TimeResult with properties:
+
+            Name: 'Assembly_Test/Assembly_GPU_Scalar_double_96'
+           Valid: 1
+         Samples: [4×7 table]
+    TestActivity: [9×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   0.88889 seconds testing time.
+
+
+sets.nel = 96;
+sets.dTE = 'uint32';
+sets.dTN = 'double';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 884736;
+sets.nnodes = 912673;
+sets.sz = 300;
+sets.edof = 24;
+sets.tdofs = sets.nnodes * 3;
+MP.E = 200000000000;
+MP.nu = 3.000000e-01;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+[iK, jK] = Index_vpsa_opt(gpuArray(Mesh.elements), sets);
+Ke = eStiff_vpsa_opt(gpuArray(Mesh.elements), gpuArray(Mesh.nodes), MP, sets);
+wait(d);
+[iK, jK, Ke] = gather(iK, jK, Ke);
+
+%% Assembly_CPU_Vector_double_96
+K = AssemblyStiffMa(iK, jK, Ke, sets);
+Running Assembly_Test
+
+ Mesh created successfully!
+	 Number of elements: 884736
+	 Number of nodes   : 912673
+
+.
+Done Assembly_Test
+__________
+
+  TimeResult with properties:
+
+            Name: 'Assembly_Test/Assembly_CPU_Vector_double_96'
+           Valid: 1
+         Samples: [1×7 table]
+    TestActivity: [1×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   20.9442 seconds testing time.
+
+
+sets.nel = 96;
+sets.dTE = 'uint32';
+sets.dTN = 'double';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 884736;
+sets.nnodes = 912673;
+sets.sz = 300;
+sets.edof = 24;
+sets.tdofs = sets.nnodes * 3;
+MP.E = 200000000000;
+MP.nu = 3.000000e-01;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+[iK, jK] = Index_vpsa_opt(gpuArray(Mesh.elements), sets);
+Ke = eStiff_vpsa_opt(gpuArray(Mesh.elements), gpuArray(Mesh.nodes), MP, sets);
+wait(d);
+
+%% Assembly_GPU_Vector_double_96
+K = AssemblyStiffMa(iK, jK, Ke, sets);
+wait(d);
+Running Assembly_Test
+
+ Mesh created successfully!
+	 Number of elements: 884736
+	 Number of nodes   : 912673
+
+.
+================================================================================
+Error occurred in Assembly_Test/Assembly_GPU_Vector_double_96 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'MATLAB:nomem'
+    --------------
+    Error Details:
+    --------------
+    Out of memory.
+    
+    Error in AssemblyStiffMa (line 23)
+    K = sparse(iK, jK, Ke, sets.tdofs, sets.tdofs);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in Assembly_Test (line 21)
+    K = AssemblyStiffMa(iK, jK, Ke, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+..
+================================================================================
+Error occurred in Assembly_Test/Assembly_GPU_Vector_double_96 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'MATLAB:nomem'
+    --------------
+    Error Details:
+    --------------
+    Out of memory.
+    
+    Error in AssemblyStiffMa (line 23)
+    K = sparse(iK, jK, Ke, sets.tdofs, sets.tdofs);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in Assembly_Test (line 21)
+    K = AssemblyStiffMa(iK, jK, Ke, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+..
+================================================================================
+Error occurred in Assembly_Test/Assembly_GPU_Vector_double_96 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'MATLAB:nomem'
+    --------------
+    Error Details:
+    --------------
+    Out of memory.
+    
+    Error in AssemblyStiffMa (line 23)
+    K = sparse(iK, jK, Ke, sets.tdofs, sets.tdofs);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in Assembly_Test (line 21)
+    K = AssemblyStiffMa(iK, jK, Ke, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+..
+================================================================================
+Error occurred in Assembly_Test/Assembly_GPU_Vector_double_96 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'MATLAB:nomem'
+    --------------
+    Error Details:
+    --------------
+    Out of memory.
+    
+    Error in AssemblyStiffMa (line 23)
+    K = sparse(iK, jK, Ke, sets.tdofs, sets.tdofs);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in Assembly_Test (line 21)
+    K = AssemblyStiffMa(iK, jK, Ke, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+..
+Done Assembly_Test
+__________
+
+Failure Summary:
+
+     Name                                         Failed  Incomplete  Reason(s)
+    ============================================================================
+     Assembly_Test/Assembly_GPU_Vector_double_96    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'Assembly_Test/Assembly_GPU_Vector_double_96'
+           Valid: 0
+         Samples: [4×7 table]
+    TestActivity: [9×12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   4.6286 seconds testing time.
+
+
+sets.nel = 105;
+sets.dTE = 'uint32';
+sets.dTN = 'single';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 1157625;
+sets.nnodes = 1191016;
+sets.sz = 36;
+sets.edof = 8;
+sets.tdofs = sets.nnodes * 1;
+c = 3.841000e+02;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+[iK, jK] = Index_spsa_opt(gpuArray(Mesh.elements), sets);
+Ke = eStiff_spsa_opt(gpuArray(Mesh.elements), gpuArray(Mesh.nodes), c, sets);
+wait(d);
+[iK, jK, Ke] = gather(iK, jK, Ke);
+
+%% Assembly_CPU_Scalar_single_105
+K = AssemblyStiffMa(iK, jK, Ke, sets);
+Running Assembly_Test
+
+ Mesh created successfully!
+	 Number of elements: 1157625
+	 Number of nodes   : 1191016
+
+.
+Done Assembly_Test
+__________
+
+  TimeResult with properties:
+
+            Name: 'Assembly_Test/Assembly_CPU_Scalar_single_105'
+           Valid: 1
+         Samples: [1×7 table]
+    TestActivity: [1×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   2.8828 seconds testing time.
+
+
+sets.nel = 105;
+sets.dTE = 'uint32';
+sets.dTN = 'single';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 1157625;
+sets.nnodes = 1191016;
+sets.sz = 36;
+sets.edof = 8;
+sets.tdofs = sets.nnodes * 1;
+c = 3.841000e+02;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+[iK, jK] = Index_spsa_opt(gpuArray(Mesh.elements), sets);
+Ke = eStiff_spsa_opt(gpuArray(Mesh.elements), gpuArray(Mesh.nodes), c, sets);
+wait(d);
+
+%% Assembly_GPU_Scalar_single_105
+K = AssemblyStiffMa(iK, jK, Ke, sets);
+wait(d);
+Running Assembly_Test
+
+ Mesh created successfully!
+	 Number of elements: 1157625
+	 Number of nodes   : 1191016
+
+.........
+Done Assembly_Test
+__________
+
+  TimeResult with properties:
+
+            Name: 'Assembly_Test/Assembly_GPU_Scalar_single_105'
+           Valid: 1
+         Samples: [4×7 table]
+    TestActivity: [9×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   0.878 seconds testing time.
+
+
+sets.nel = 105;
+sets.dTE = 'uint32';
+sets.dTN = 'single';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 1157625;
+sets.nnodes = 1191016;
+sets.sz = 300;
+sets.edof = 24;
+sets.tdofs = sets.nnodes * 3;
+MP.E = 200000000000;
+MP.nu = 3.000000e-01;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+[iK, jK] = Index_vpsa_opt(gpuArray(Mesh.elements), sets);
+Ke = eStiff_vpsa_opt(gpuArray(Mesh.elements), gpuArray(Mesh.nodes), MP, sets);
+wait(d);
+[iK, jK, Ke] = gather(iK, jK, Ke);
+
+%% Assembly_CPU_Vector_single_105
+K = AssemblyStiffMa(iK, jK, Ke, sets);
+Running Assembly_Test
+
+ Mesh created successfully!
+	 Number of elements: 1157625
+	 Number of nodes   : 1191016
+
+.
+Done Assembly_Test
+__________
+
+  TimeResult with properties:
+
+            Name: 'Assembly_Test/Assembly_CPU_Vector_single_105'
+           Valid: 1
+         Samples: [1×7 table]
+    TestActivity: [1×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   18.9071 seconds testing time.
+
+
+sets.nel = 105;
+sets.dTE = 'uint32';
+sets.dTN = 'single';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 1157625;
+sets.nnodes = 1191016;
+sets.sz = 300;
+sets.edof = 24;
+sets.tdofs = sets.nnodes * 3;
+MP.E = 200000000000;
+MP.nu = 3.000000e-01;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+[iK, jK] = Index_vpsa_opt(gpuArray(Mesh.elements), sets);
+Ke = eStiff_vpsa_opt(gpuArray(Mesh.elements), gpuArray(Mesh.nodes), MP, sets);
+wait(d);
+
+%% Assembly_GPU_Vector_single_105
+K = AssemblyStiffMa(iK, jK, Ke, sets);
+wait(d);
+Running Assembly_Test
+
+ Mesh created successfully!
+	 Number of elements: 1157625
+	 Number of nodes   : 1191016
+
+.
+================================================================================
+Error occurred in Assembly_Test/Assembly_GPU_Vector_single_105 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'MATLAB:nomem'
+    --------------
+    Error Details:
+    --------------
+    Out of memory.
+    
+    Error in AssemblyStiffMa (line 23)
+    K = sparse(iK, jK, Ke, sets.tdofs, sets.tdofs);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in Assembly_Test (line 21)
+    K = AssemblyStiffMa(iK, jK, Ke, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+..
+================================================================================
+Error occurred in Assembly_Test/Assembly_GPU_Vector_single_105 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'MATLAB:nomem'
+    --------------
+    Error Details:
+    --------------
+    Out of memory.
+    
+    Error in AssemblyStiffMa (line 23)
+    K = sparse(iK, jK, Ke, sets.tdofs, sets.tdofs);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in Assembly_Test (line 21)
+    K = AssemblyStiffMa(iK, jK, Ke, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+..
+================================================================================
+Error occurred in Assembly_Test/Assembly_GPU_Vector_single_105 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'MATLAB:nomem'
+    --------------
+    Error Details:
+    --------------
+    Out of memory.
+    
+    Error in AssemblyStiffMa (line 23)
+    K = sparse(iK, jK, Ke, sets.tdofs, sets.tdofs);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in Assembly_Test (line 21)
+    K = AssemblyStiffMa(iK, jK, Ke, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+..
+================================================================================
+Error occurred in Assembly_Test/Assembly_GPU_Vector_single_105 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'MATLAB:nomem'
+    --------------
+    Error Details:
+    --------------
+    Out of memory.
+    
+    Error in AssemblyStiffMa (line 23)
+    K = sparse(iK, jK, Ke, sets.tdofs, sets.tdofs);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in Assembly_Test (line 21)
+    K = AssemblyStiffMa(iK, jK, Ke, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+..
+================================================================================
+Error occurred in Assembly_Test/Assembly_GPU_Vector_single_105 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'MATLAB:nomem'
+    --------------
+    Error Details:
+    --------------
+    Out of memory.
+    
+    Error in AssemblyStiffMa (line 23)
+    K = sparse(iK, jK, Ke, sets.tdofs, sets.tdofs);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in Assembly_Test (line 21)
+    K = AssemblyStiffMa(iK, jK, Ke, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+Done Assembly_Test
+__________
+
+Failure Summary:
+
+     Name                                          Failed  Incomplete  Reason(s)
+    =============================================================================
+     Assembly_Test/Assembly_GPU_Vector_single_105    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'Assembly_Test/Assembly_GPU_Vector_single_105'
+           Valid: 0
+         Samples: [5×7 table]
+    TestActivity: [10×12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   5.2644 seconds testing time.
+
+
+sets.nel = 105;
+sets.dTE = 'uint32';
+sets.dTN = 'double';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 1157625;
+sets.nnodes = 1191016;
+sets.sz = 36;
+sets.edof = 8;
+sets.tdofs = sets.nnodes * 1;
+c = 3.841000e+02;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+[iK, jK] = Index_spsa_opt(gpuArray(Mesh.elements), sets);
+Ke = eStiff_spsa_opt(gpuArray(Mesh.elements), gpuArray(Mesh.nodes), c, sets);
+wait(d);
+[iK, jK, Ke] = gather(iK, jK, Ke);
+
+%% Assembly_CPU_Scalar_double_105
+K = AssemblyStiffMa(iK, jK, Ke, sets);
+Running Assembly_Test
+
+ Mesh created successfully!
+	 Number of elements: 1157625
+	 Number of nodes   : 1191016
+
+.
+Done Assembly_Test
+__________
+
+  TimeResult with properties:
+
+            Name: 'Assembly_Test/Assembly_CPU_Scalar_double_105'
+           Valid: 1
+         Samples: [1×7 table]
+    TestActivity: [1×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   3.3544 seconds testing time.
+
+
+sets.nel = 105;
+sets.dTE = 'uint32';
+sets.dTN = 'double';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 1157625;
+sets.nnodes = 1191016;
+sets.sz = 36;
+sets.edof = 8;
+sets.tdofs = sets.nnodes * 1;
+c = 3.841000e+02;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+[iK, jK] = Index_spsa_opt(gpuArray(Mesh.elements), sets);
+Ke = eStiff_spsa_opt(gpuArray(Mesh.elements), gpuArray(Mesh.nodes), c, sets);
+wait(d);
+
+%% Assembly_GPU_Scalar_double_105
+K = AssemblyStiffMa(iK, jK, Ke, sets);
+wait(d);
+Running Assembly_Test
+
+ Mesh created successfully!
+	 Number of elements: 1157625
+	 Number of nodes   : 1191016
+
+.........
+Done Assembly_Test
+__________
+
+  TimeResult with properties:
+
+            Name: 'Assembly_Test/Assembly_GPU_Scalar_double_105'
+           Valid: 1
+         Samples: [4×7 table]
+    TestActivity: [9×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   1.1192 seconds testing time.
+
+
+sets.nel = 105;
+sets.dTE = 'uint32';
+sets.dTN = 'double';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 1157625;
+sets.nnodes = 1191016;
+sets.sz = 300;
+sets.edof = 24;
+sets.tdofs = sets.nnodes * 3;
+MP.E = 200000000000;
+MP.nu = 3.000000e-01;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+[iK, jK] = Index_vpsa_opt(gpuArray(Mesh.elements), sets);
+Ke = eStiff_vpsa_opt(gpuArray(Mesh.elements), gpuArray(Mesh.nodes), MP, sets);
+wait(d);
+[iK, jK, Ke] = gather(iK, jK, Ke);
+
+%% Assembly_CPU_Vector_double_105
+K = AssemblyStiffMa(iK, jK, Ke, sets);
+Running Assembly_Test
+
+ Mesh created successfully!
+	 Number of elements: 1157625
+	 Number of nodes   : 1191016
+
+.
+Done Assembly_Test
+__________
+
+  TimeResult with properties:
+
+            Name: 'Assembly_Test/Assembly_CPU_Vector_double_105'
+           Valid: 1
+         Samples: [1×7 table]
+    TestActivity: [1×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   22.956 seconds testing time.
+
+
+sets.nel = 105;
+sets.dTE = 'uint32';
+sets.dTN = 'double';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 1157625;
+sets.nnodes = 1191016;
+sets.sz = 300;
+sets.edof = 24;
+sets.tdofs = sets.nnodes * 3;
+MP.E = 200000000000;
+MP.nu = 3.000000e-01;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+[iK, jK] = Index_vpsa_opt(gpuArray(Mesh.elements), sets);
+Ke = eStiff_vpsa_opt(gpuArray(Mesh.elements), gpuArray(Mesh.nodes), MP, sets);
+wait(d);
+
+%% Assembly_GPU_Vector_double_105
+K = AssemblyStiffMa(iK, jK, Ke, sets);
+wait(d);
+Running Assembly_Test
+
+ Mesh created successfully!
+	 Number of elements: 1157625
+	 Number of nodes   : 1191016
+
+
+================================================================================
+Error occurred in Assembly_Test/Assembly_GPU_Vector_double_105 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'MATLAB:nomem'
+    --------------
+    Error Details:
+    --------------
+    Out of memory.
+    
+    Error in AssemblyStiffMa (line 23)
+    K = sparse(iK, jK, Ke, sets.tdofs, sets.tdofs);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in Assembly_Test (line 21)
+    K = AssemblyStiffMa(iK, jK, Ke, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+================================================================================
+Error occurred in Assembly_Test/Assembly_GPU_Vector_double_105 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'MATLAB:nomem'
+    --------------
+    Error Details:
+    --------------
+    Out of memory.
+    
+    Error in AssemblyStiffMa (line 23)
+    K = sparse(iK, jK, Ke, sets.tdofs, sets.tdofs);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in Assembly_Test (line 21)
+    K = AssemblyStiffMa(iK, jK, Ke, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+================================================================================
+Error occurred in Assembly_Test/Assembly_GPU_Vector_double_105 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'MATLAB:nomem'
+    --------------
+    Error Details:
+    --------------
+    Out of memory.
+    
+    Error in AssemblyStiffMa (line 23)
+    K = sparse(iK, jK, Ke, sets.tdofs, sets.tdofs);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in Assembly_Test (line 21)
+    K = AssemblyStiffMa(iK, jK, Ke, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+================================================================================
+Error occurred in Assembly_Test/Assembly_GPU_Vector_double_105 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'MATLAB:nomem'
+    --------------
+    Error Details:
+    --------------
+    Out of memory.
+    
+    Error in AssemblyStiffMa (line 23)
+    K = sparse(iK, jK, Ke, sets.tdofs, sets.tdofs);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in Assembly_Test (line 21)
+    K = AssemblyStiffMa(iK, jK, Ke, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+================================================================================
+Error occurred in Assembly_Test/Assembly_GPU_Vector_double_105 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'MATLAB:nomem'
+    --------------
+    Error Details:
+    --------------
+    Out of memory.
+    
+    Error in AssemblyStiffMa (line 23)
+    K = sparse(iK, jK, Ke, sets.tdofs, sets.tdofs);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in Assembly_Test (line 21)
+    K = AssemblyStiffMa(iK, jK, Ke, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+================================================================================
+Error occurred in Assembly_Test/Assembly_GPU_Vector_double_105 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'MATLAB:nomem'
+    --------------
+    Error Details:
+    --------------
+    Out of memory.
+    
+    Error in AssemblyStiffMa (line 23)
+    K = sparse(iK, jK, Ke, sets.tdofs, sets.tdofs);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in Assembly_Test (line 21)
+    K = AssemblyStiffMa(iK, jK, Ke, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+================================================================================
+Error occurred in Assembly_Test/Assembly_GPU_Vector_double_105 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'MATLAB:nomem'
+    --------------
+    Error Details:
+    --------------
+    Out of memory.
+    
+    Error in AssemblyStiffMa (line 23)
+    K = sparse(iK, jK, Ke, sets.tdofs, sets.tdofs);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in Assembly_Test (line 21)
+    K = AssemblyStiffMa(iK, jK, Ke, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+================================================================================
+Error occurred in Assembly_Test/Assembly_GPU_Vector_double_105 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'MATLAB:nomem'
+    --------------
+    Error Details:
+    --------------
+    Out of memory.
+    
+    Error in AssemblyStiffMa (line 23)
+    K = sparse(iK, jK, Ke, sets.tdofs, sets.tdofs);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in Assembly_Test (line 21)
+    K = AssemblyStiffMa(iK, jK, Ke, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+================================================================================
+Error occurred in Assembly_Test/Assembly_GPU_Vector_double_105 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'MATLAB:nomem'
+    --------------
+    Error Details:
+    --------------
+    Out of memory.
+    
+    Error in AssemblyStiffMa (line 23)
+    K = sparse(iK, jK, Ke, sets.tdofs, sets.tdofs);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in Assembly_Test (line 21)
+    K = AssemblyStiffMa(iK, jK, Ke, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+Done Assembly_Test
+__________
+
+Failure Summary:
+
+     Name                                          Failed  Incomplete  Reason(s)
+    =============================================================================
+     Assembly_Test/Assembly_GPU_Vector_double_105    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'Assembly_Test/Assembly_GPU_Vector_double_105'
+           Valid: 0
+         Samples: [4×7 table]
+    TestActivity: [9×12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   1.9206 seconds testing time.
+
+
+sets.nel = 160;
+sets.dTE = 'uint32';
+sets.dTN = 'single';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 4096000;
+sets.nnodes = 4173281;
+sets.sz = 36;
+sets.edof = 8;
+sets.tdofs = sets.nnodes * 1;
+c = 3.841000e+02;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+[iK, jK] = Index_spsa_opt(gpuArray(Mesh.elements), sets);
+Ke = eStiff_spsa_opt(gpuArray(Mesh.elements), gpuArray(Mesh.nodes), c, sets);
+wait(d);
+[iK, jK, Ke] = gather(iK, jK, Ke);
+
+%% Assembly_CPU_Scalar_single_160
+K = AssemblyStiffMa(iK, jK, Ke, sets);
+Running Assembly_Test
+
+ Mesh created successfully!
+	 Number of elements: 4096000
+	 Number of nodes   : 4173281
+
+.
+Done Assembly_Test
+__________
+
+  TimeResult with properties:
+
+            Name: 'Assembly_Test/Assembly_CPU_Scalar_single_160'
+           Valid: 1
+         Samples: [1×7 table]
+    TestActivity: [1×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   13.2599 seconds testing time.
+
+
+sets.nel = 160;
+sets.dTE = 'uint32';
+sets.dTN = 'single';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 4096000;
+sets.nnodes = 4173281;
+sets.sz = 36;
+sets.edof = 8;
+sets.tdofs = sets.nnodes * 1;
+c = 3.841000e+02;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+[iK, jK] = Index_spsa_opt(gpuArray(Mesh.elements), sets);
+Ke = eStiff_spsa_opt(gpuArray(Mesh.elements), gpuArray(Mesh.nodes), c, sets);
+wait(d);
+
+%% Assembly_GPU_Scalar_single_160
+K = AssemblyStiffMa(iK, jK, Ke, sets);
+wait(d);
+Running Assembly_Test
+
+ Mesh created successfully!
+	 Number of elements: 4096000
+	 Number of nodes   : 4173281
+
+.........
+Done Assembly_Test
+__________
+
+  TimeResult with properties:
+
+            Name: 'Assembly_Test/Assembly_GPU_Scalar_single_160'
+           Valid: 1
+         Samples: [4×7 table]
+    TestActivity: [9×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   2.7032 seconds testing time.
+
+
+sets.nel = 160;
+sets.dTE = 'uint32';
+sets.dTN = 'single';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 4096000;
+sets.nnodes = 4173281;
+sets.sz = 300;
+sets.edof = 24;
+sets.tdofs = sets.nnodes * 3;
+MP.E = 200000000000;
+MP.nu = 3.000000e-01;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+[iK, jK] = Index_vpsa_opt(gpuArray(Mesh.elements), sets);
+Ke = eStiff_vpsa_opt(gpuArray(Mesh.elements), gpuArray(Mesh.nodes), MP, sets);
+wait(d);
+[iK, jK, Ke] = gather(iK, jK, Ke);
+
+%% Assembly_CPU_Vector_single_160
+K = AssemblyStiffMa(iK, jK, Ke, sets);
+Running Assembly_Test
+
+ Mesh created successfully!
+	 Number of elements: 4096000
+	 Number of nodes   : 4173281
+
+.
+Done Assembly_Test
+__________
+
+  TimeResult with properties:
+
+            Name: 'Assembly_Test/Assembly_CPU_Vector_single_160'
+           Valid: 1
+         Samples: [1×7 table]
+    TestActivity: [1×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   86.9904 seconds testing time.
+
+
+sets.nel = 160;
+sets.dTE = 'uint32';
+sets.dTN = 'single';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 4096000;
+sets.nnodes = 4173281;
+sets.sz = 300;
+sets.edof = 24;
+sets.tdofs = sets.nnodes * 3;
+MP.E = 200000000000;
+MP.nu = 3.000000e-01;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+[iK, jK] = Index_vpsa_opt(gpuArray(Mesh.elements), sets);
+Ke = eStiff_vpsa_opt(gpuArray(Mesh.elements), gpuArray(Mesh.nodes), MP, sets);
+wait(d);
+
+%% Assembly_GPU_Vector_single_160
+K = AssemblyStiffMa(iK, jK, Ke, sets);
+wait(d);
+Running Assembly_Test
+
+ Mesh created successfully!
+	 Number of elements: 4096000
+	 Number of nodes   : 4173281
+
+
+================================================================================
+Error occurred in Assembly_Test/Assembly_GPU_Vector_single_160 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using sparse
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in AssemblyStiffMa (line 23)
+    K = sparse(iK, jK, Ke, sets.tdofs, sets.tdofs);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in Assembly_Test (line 21)
+    K = AssemblyStiffMa(iK, jK, Ke, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+================================================================================
+Error occurred in Assembly_Test/Assembly_GPU_Vector_single_160 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using sparse
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in AssemblyStiffMa (line 23)
+    K = sparse(iK, jK, Ke, sets.tdofs, sets.tdofs);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in Assembly_Test (line 21)
+    K = AssemblyStiffMa(iK, jK, Ke, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+================================================================================
+Error occurred in Assembly_Test/Assembly_GPU_Vector_single_160 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using sparse
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in AssemblyStiffMa (line 23)
+    K = sparse(iK, jK, Ke, sets.tdofs, sets.tdofs);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in Assembly_Test (line 21)
+    K = AssemblyStiffMa(iK, jK, Ke, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+================================================================================
+Error occurred in Assembly_Test/Assembly_GPU_Vector_single_160 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using sparse
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in AssemblyStiffMa (line 23)
+    K = sparse(iK, jK, Ke, sets.tdofs, sets.tdofs);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in Assembly_Test (line 21)
+    K = AssemblyStiffMa(iK, jK, Ke, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+================================================================================
+Error occurred in Assembly_Test/Assembly_GPU_Vector_single_160 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using sparse
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in AssemblyStiffMa (line 23)
+    K = sparse(iK, jK, Ke, sets.tdofs, sets.tdofs);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in Assembly_Test (line 21)
+    K = AssemblyStiffMa(iK, jK, Ke, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+================================================================================
+Error occurred in Assembly_Test/Assembly_GPU_Vector_single_160 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using sparse
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in AssemblyStiffMa (line 23)
+    K = sparse(iK, jK, Ke, sets.tdofs, sets.tdofs);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in Assembly_Test (line 21)
+    K = AssemblyStiffMa(iK, jK, Ke, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+================================================================================
+Error occurred in Assembly_Test/Assembly_GPU_Vector_single_160 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using sparse
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in AssemblyStiffMa (line 23)
+    K = sparse(iK, jK, Ke, sets.tdofs, sets.tdofs);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in Assembly_Test (line 21)
+    K = AssemblyStiffMa(iK, jK, Ke, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+================================================================================
+Error occurred in Assembly_Test/Assembly_GPU_Vector_single_160 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using sparse
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in AssemblyStiffMa (line 23)
+    K = sparse(iK, jK, Ke, sets.tdofs, sets.tdofs);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in Assembly_Test (line 21)
+    K = AssemblyStiffMa(iK, jK, Ke, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+================================================================================
+Error occurred in Assembly_Test/Assembly_GPU_Vector_single_160 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using sparse
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in AssemblyStiffMa (line 23)
+    K = sparse(iK, jK, Ke, sets.tdofs, sets.tdofs);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in Assembly_Test (line 21)
+    K = AssemblyStiffMa(iK, jK, Ke, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+Done Assembly_Test
+__________
+
+Failure Summary:
+
+     Name                                          Failed  Incomplete  Reason(s)
+    =============================================================================
+     Assembly_Test/Assembly_GPU_Vector_single_160    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'Assembly_Test/Assembly_GPU_Vector_single_160'
+           Valid: 0
+         Samples: [4×7 table]
+    TestActivity: [9×12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   1.2529 seconds testing time.
+
+
+sets.nel = 160;
+sets.dTE = 'uint32';
+sets.dTN = 'double';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 4096000;
+sets.nnodes = 4173281;
+sets.sz = 36;
+sets.edof = 8;
+sets.tdofs = sets.nnodes * 1;
+c = 3.841000e+02;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+[iK, jK] = Index_spsa_opt(gpuArray(Mesh.elements), sets);
+Ke = eStiff_spsa_opt(gpuArray(Mesh.elements), gpuArray(Mesh.nodes), c, sets);
+wait(d);
+[iK, jK, Ke] = gather(iK, jK, Ke);
+
+%% Assembly_CPU_Scalar_double_160
+K = AssemblyStiffMa(iK, jK, Ke, sets);
+Running Assembly_Test
+
+ Mesh created successfully!
+	 Number of elements: 4096000
+	 Number of nodes   : 4173281
+
+.
+Done Assembly_Test
+__________
+
+  TimeResult with properties:
+
+            Name: 'Assembly_Test/Assembly_CPU_Scalar_double_160'
+           Valid: 1
+         Samples: [1×7 table]
+    TestActivity: [1×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   16.6703 seconds testing time.
+
+
+sets.nel = 160;
+sets.dTE = 'uint32';
+sets.dTN = 'double';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 4096000;
+sets.nnodes = 4173281;
+sets.sz = 36;
+sets.edof = 8;
+sets.tdofs = sets.nnodes * 1;
+c = 3.841000e+02;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+[iK, jK] = Index_spsa_opt(gpuArray(Mesh.elements), sets);
+Ke = eStiff_spsa_opt(gpuArray(Mesh.elements), gpuArray(Mesh.nodes), c, sets);
+wait(d);
+
+%% Assembly_GPU_Scalar_double_160
+K = AssemblyStiffMa(iK, jK, Ke, sets);
+wait(d);
+Running Assembly_Test
+
+ Mesh created successfully!
+	 Number of elements: 4096000
+	 Number of nodes   : 4173281
+
+.........
+Done Assembly_Test
+__________
+
+  TimeResult with properties:
+
+            Name: 'Assembly_Test/Assembly_GPU_Scalar_double_160'
+           Valid: 1
+         Samples: [4×7 table]
+    TestActivity: [9×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   3.6256 seconds testing time.
+
+
+sets.nel = 160;
+sets.dTE = 'uint32';
+sets.dTN = 'double';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 4096000;
+sets.nnodes = 4173281;
+sets.sz = 300;
+sets.edof = 24;
+sets.tdofs = sets.nnodes * 3;
+MP.E = 200000000000;
+MP.nu = 3.000000e-01;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+[iK, jK] = Index_vpsa_opt(gpuArray(Mesh.elements), sets);
+Ke = eStiff_vpsa_opt(gpuArray(Mesh.elements), gpuArray(Mesh.nodes), MP, sets);
+wait(d);
+[iK, jK, Ke] = gather(iK, jK, Ke);
+
+%% Assembly_CPU_Vector_double_160
+K = AssemblyStiffMa(iK, jK, Ke, sets);
+Running Assembly_Test
+
+ Mesh created successfully!
+	 Number of elements: 4096000
+	 Number of nodes   : 4173281
+
+
+================================================================================
+Error occurred while setting up or tearing down Assembly_Test.
+As a result, all Assembly_Test tests failed and did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the
+    GPU,
+    use 'gpuDevice()'. If the problem persists, reset the GPU by calling
+    'gpuDevice(1)'.
+    
+    Error in eStiff_vpsa_opt (line 80)
+        zeros(sets.sz*sets.nel, 1, sets.dTN, 'gpuArray') ); % GPU code execution
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in Assembly_Test (line 17)
+    Ke = eStiff_vpsa_opt(gpuArray(Mesh.elements), gpuArray(Mesh.nodes), MP,
+    sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+
+Done Assembly_Test
+__________
+
+Failure Summary:
+
+     Name                                          Failed  Incomplete  Reason(s)
+    =============================================================================
+     Assembly_Test/Assembly_CPU_Vector_double_160    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'Assembly_Test/Assembly_CPU_Vector_double_160'
+           Valid: 0
+         Samples: [1×7 table]
+    TestActivity: [1×12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   0.4631 seconds testing time.
+
+
+sets.nel = 160;
+sets.dTE = 'uint32';
+sets.dTN = 'double';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 4096000;
+sets.nnodes = 4173281;
+sets.sz = 300;
+sets.edof = 24;
+sets.tdofs = sets.nnodes * 3;
+MP.E = 200000000000;
+MP.nu = 3.000000e-01;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+[iK, jK] = Index_vpsa_opt(gpuArray(Mesh.elements), sets);
+Ke = eStiff_vpsa_opt(gpuArray(Mesh.elements), gpuArray(Mesh.nodes), MP, sets);
+wait(d);
+
+%% Assembly_GPU_Vector_double_160
+K = AssemblyStiffMa(iK, jK, Ke, sets);
+wait(d);
+Running Assembly_Test
+
+ Mesh created successfully!
+	 Number of elements: 4096000
+	 Number of nodes   : 4173281
+
+
+================================================================================
+Error occurred while setting up or tearing down Assembly_Test.
+As a result, all Assembly_Test tests failed and did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the
+    GPU,
+    use 'gpuDevice()'. If the problem persists, reset the GPU by calling
+    'gpuDevice(1)'.
+    
+    Error in eStiff_vpsa_opt (line 80)
+        zeros(sets.sz*sets.nel, 1, sets.dTN, 'gpuArray') ); % GPU code execution
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in Assembly_Test (line 17)
+    Ke = eStiff_vpsa_opt(gpuArray(Mesh.elements), gpuArray(Mesh.nodes), MP,
+    sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+
+Done Assembly_Test
+__________
+
+Failure Summary:
+
+     Name                                          Failed  Incomplete  Reason(s)
+    =============================================================================
+     Assembly_Test/Assembly_GPU_Vector_double_160    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'Assembly_Test/Assembly_GPU_Vector_double_160'
+           Valid: 0
+         Samples: [0×7 table]
+    TestActivity: [1×12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   0.46019 seconds testing time.
+
+
+sets.nel = 195;
+sets.dTE = 'uint32';
+sets.dTN = 'single';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 7414875;
+sets.nnodes = 7529536;
+sets.sz = 36;
+sets.edof = 8;
+sets.tdofs = sets.nnodes * 1;
+c = 3.841000e+02;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+[iK, jK] = Index_spsa_opt(gpuArray(Mesh.elements), sets);
+Ke = eStiff_spsa_opt(gpuArray(Mesh.elements), gpuArray(Mesh.nodes), c, sets);
+wait(d);
+[iK, jK, Ke] = gather(iK, jK, Ke);
+
+%% Assembly_CPU_Scalar_single_195
+K = AssemblyStiffMa(iK, jK, Ke, sets);
+Running Assembly_Test
+
+ Mesh created successfully!
+	 Number of elements: 7414875
+	 Number of nodes   : 7529536
+
+.
+Done Assembly_Test
+__________
+
+  TimeResult with properties:
+
+            Name: 'Assembly_Test/Assembly_CPU_Scalar_single_195'
+           Valid: 1
+         Samples: [1×7 table]
+    TestActivity: [1×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   25.3683 seconds testing time.
+
+
+sets.nel = 195;
+sets.dTE = 'uint32';
+sets.dTN = 'single';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 7414875;
+sets.nnodes = 7529536;
+sets.sz = 36;
+sets.edof = 8;
+sets.tdofs = sets.nnodes * 1;
+c = 3.841000e+02;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+[iK, jK] = Index_spsa_opt(gpuArray(Mesh.elements), sets);
+Ke = eStiff_spsa_opt(gpuArray(Mesh.elements), gpuArray(Mesh.nodes), c, sets);
+wait(d);
+
+%% Assembly_GPU_Scalar_single_195
+K = AssemblyStiffMa(iK, jK, Ke, sets);
+wait(d);
+Running Assembly_Test
+
+ Mesh created successfully!
+	 Number of elements: 7414875
+	 Number of nodes   : 7529536
+
+.........
+Done Assembly_Test
+__________
+
+  TimeResult with properties:
+
+            Name: 'Assembly_Test/Assembly_GPU_Scalar_single_195'
+           Valid: 1
+         Samples: [4×7 table]
+    TestActivity: [9×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   5.1968 seconds testing time.
+
+
+sets.nel = 195;
+sets.dTE = 'uint32';
+sets.dTN = 'single';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 7414875;
+sets.nnodes = 7529536;
+sets.sz = 300;
+sets.edof = 24;
+sets.tdofs = sets.nnodes * 3;
+MP.E = 200000000000;
+MP.nu = 3.000000e-01;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+[iK, jK] = Index_vpsa_opt(gpuArray(Mesh.elements), sets);
+Ke = eStiff_vpsa_opt(gpuArray(Mesh.elements), gpuArray(Mesh.nodes), MP, sets);
+wait(d);
+[iK, jK, Ke] = gather(iK, jK, Ke);
+
+%% Assembly_CPU_Vector_single_195
+K = AssemblyStiffMa(iK, jK, Ke, sets);
+Running Assembly_Test
+
+ Mesh created successfully!
+	 Number of elements: 7414875
+	 Number of nodes   : 7529536
+
+
+================================================================================
+Error occurred while setting up or tearing down Assembly_Test.
+As a result, all Assembly_Test tests failed and did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in Index_vpsa_opt (line 58)
+    iK  = zeros(sets.sz*sets.nel, 1, sets.dTE, 'gpuArray');     % Stores row
+    indices (initialized directly on GPU)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in Assembly_Test (line 16)
+    [iK, jK] = Index_vpsa_opt(gpuArray(Mesh.elements), sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+
+Done Assembly_Test
+__________
+
+Failure Summary:
+
+     Name                                          Failed  Incomplete  Reason(s)
+    =============================================================================
+     Assembly_Test/Assembly_CPU_Vector_single_195    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'Assembly_Test/Assembly_CPU_Vector_single_195'
+           Valid: 0
+         Samples: [1×7 table]
+    TestActivity: [1×12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   0.27597 seconds testing time.
+
+
+sets.nel = 195;
+sets.dTE = 'uint32';
+sets.dTN = 'single';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 7414875;
+sets.nnodes = 7529536;
+sets.sz = 300;
+sets.edof = 24;
+sets.tdofs = sets.nnodes * 3;
+MP.E = 200000000000;
+MP.nu = 3.000000e-01;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+[iK, jK] = Index_vpsa_opt(gpuArray(Mesh.elements), sets);
+Ke = eStiff_vpsa_opt(gpuArray(Mesh.elements), gpuArray(Mesh.nodes), MP, sets);
+wait(d);
+
+%% Assembly_GPU_Vector_single_195
+K = AssemblyStiffMa(iK, jK, Ke, sets);
+wait(d);
+Running Assembly_Test
+
+ Mesh created successfully!
+	 Number of elements: 7414875
+	 Number of nodes   : 7529536
+
+
+================================================================================
+Error occurred while setting up or tearing down Assembly_Test.
+As a result, all Assembly_Test tests failed and did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in Index_vpsa_opt (line 58)
+    iK  = zeros(sets.sz*sets.nel, 1, sets.dTE, 'gpuArray');     % Stores row
+    indices (initialized directly on GPU)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in Assembly_Test (line 16)
+    [iK, jK] = Index_vpsa_opt(gpuArray(Mesh.elements), sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+
+Done Assembly_Test
+__________
+
+Failure Summary:
+
+     Name                                          Failed  Incomplete  Reason(s)
+    =============================================================================
+     Assembly_Test/Assembly_GPU_Vector_single_195    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'Assembly_Test/Assembly_GPU_Vector_single_195'
+           Valid: 0
+         Samples: [0×7 table]
+    TestActivity: [1×12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   0.27392 seconds testing time.
+
+
+sets.nel = 195;
+sets.dTE = 'uint32';
+sets.dTN = 'double';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 7414875;
+sets.nnodes = 7529536;
+sets.sz = 36;
+sets.edof = 8;
+sets.tdofs = sets.nnodes * 1;
+c = 3.841000e+02;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+[iK, jK] = Index_spsa_opt(gpuArray(Mesh.elements), sets);
+Ke = eStiff_spsa_opt(gpuArray(Mesh.elements), gpuArray(Mesh.nodes), c, sets);
+wait(d);
+[iK, jK, Ke] = gather(iK, jK, Ke);
+
+%% Assembly_CPU_Scalar_double_195
+K = AssemblyStiffMa(iK, jK, Ke, sets);
+Running Assembly_Test
+
+ Mesh created successfully!
+	 Number of elements: 7414875
+	 Number of nodes   : 7529536
+
+.
+Done Assembly_Test
+__________
+
+  TimeResult with properties:
+
+            Name: 'Assembly_Test/Assembly_CPU_Scalar_double_195'
+           Valid: 1
+         Samples: [1×7 table]
+    TestActivity: [1×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   24.4237 seconds testing time.
+
+
+sets.nel = 195;
+sets.dTE = 'uint32';
+sets.dTN = 'double';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 7414875;
+sets.nnodes = 7529536;
+sets.sz = 36;
+sets.edof = 8;
+sets.tdofs = sets.nnodes * 1;
+c = 3.841000e+02;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+[iK, jK] = Index_spsa_opt(gpuArray(Mesh.elements), sets);
+Ke = eStiff_spsa_opt(gpuArray(Mesh.elements), gpuArray(Mesh.nodes), c, sets);
+wait(d);
+
+%% Assembly_GPU_Scalar_double_195
+K = AssemblyStiffMa(iK, jK, Ke, sets);
+wait(d);
+Running Assembly_Test
+
+ Mesh created successfully!
+	 Number of elements: 7414875
+	 Number of nodes   : 7529536
+
+.
+================================================================================
+Error occurred in Assembly_Test/Assembly_GPU_Scalar_double_195 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'MATLAB:nomem'
+    --------------
+    Error Details:
+    --------------
+    Out of memory.
+    
+    Error in AssemblyStiffMa (line 23)
+    K = sparse(iK, jK, Ke, sets.tdofs, sets.tdofs);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in Assembly_Test (line 20)
+    K = AssemblyStiffMa(iK, jK, Ke, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+..
+================================================================================
+Error occurred in Assembly_Test/Assembly_GPU_Scalar_double_195 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'MATLAB:nomem'
+    --------------
+    Error Details:
+    --------------
+    Out of memory.
+    
+    Error in AssemblyStiffMa (line 23)
+    K = sparse(iK, jK, Ke, sets.tdofs, sets.tdofs);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in Assembly_Test (line 20)
+    K = AssemblyStiffMa(iK, jK, Ke, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+..
+================================================================================
+Error occurred in Assembly_Test/Assembly_GPU_Scalar_double_195 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'MATLAB:nomem'
+    --------------
+    Error Details:
+    --------------
+    Out of memory.
+    
+    Error in AssemblyStiffMa (line 23)
+    K = sparse(iK, jK, Ke, sets.tdofs, sets.tdofs);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in Assembly_Test (line 20)
+    K = AssemblyStiffMa(iK, jK, Ke, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+..
+================================================================================
+Error occurred in Assembly_Test/Assembly_GPU_Scalar_double_195 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'MATLAB:nomem'
+    --------------
+    Error Details:
+    --------------
+    Out of memory.
+    
+    Error in AssemblyStiffMa (line 23)
+    K = sparse(iK, jK, Ke, sets.tdofs, sets.tdofs);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in Assembly_Test (line 20)
+    K = AssemblyStiffMa(iK, jK, Ke, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+..
+================================================================================
+Error occurred in Assembly_Test/Assembly_GPU_Scalar_double_195 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'MATLAB:nomem'
+    --------------
+    Error Details:
+    --------------
+    Out of memory.
+    
+    Error in AssemblyStiffMa (line 23)
+    K = sparse(iK, jK, Ke, sets.tdofs, sets.tdofs);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in Assembly_Test (line 20)
+    K = AssemblyStiffMa(iK, jK, Ke, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+Done Assembly_Test
+__________
+
+Failure Summary:
+
+     Name                                          Failed  Incomplete  Reason(s)
+    =============================================================================
+     Assembly_Test/Assembly_GPU_Scalar_double_195    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'Assembly_Test/Assembly_GPU_Scalar_double_195'
+           Valid: 0
+         Samples: [5×7 table]
+    TestActivity: [10×12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   4.9945 seconds testing time.
+
+
+sets.nel = 195;
+sets.dTE = 'uint32';
+sets.dTN = 'double';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 7414875;
+sets.nnodes = 7529536;
+sets.sz = 300;
+sets.edof = 24;
+sets.tdofs = sets.nnodes * 3;
+MP.E = 200000000000;
+MP.nu = 3.000000e-01;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+[iK, jK] = Index_vpsa_opt(gpuArray(Mesh.elements), sets);
+Ke = eStiff_vpsa_opt(gpuArray(Mesh.elements), gpuArray(Mesh.nodes), MP, sets);
+wait(d);
+[iK, jK, Ke] = gather(iK, jK, Ke);
+
+%% Assembly_CPU_Vector_double_195
+K = AssemblyStiffMa(iK, jK, Ke, sets);
+Running Assembly_Test
+
+ Mesh created successfully!
+	 Number of elements: 7414875
+	 Number of nodes   : 7529536
+
+
+================================================================================
+Error occurred while setting up or tearing down Assembly_Test.
+As a result, all Assembly_Test tests failed and did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in Index_vpsa_opt (line 58)
+    iK  = zeros(sets.sz*sets.nel, 1, sets.dTE, 'gpuArray');     % Stores row
+    indices (initialized directly on GPU)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in Assembly_Test (line 16)
+    [iK, jK] = Index_vpsa_opt(gpuArray(Mesh.elements), sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+
+Done Assembly_Test
+__________
+
+Failure Summary:
+
+     Name                                          Failed  Incomplete  Reason(s)
+    =============================================================================
+     Assembly_Test/Assembly_CPU_Vector_double_195    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'Assembly_Test/Assembly_CPU_Vector_double_195'
+           Valid: 0
+         Samples: [1×7 table]
+    TestActivity: [1×12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   0.29377 seconds testing time.
+
+
+sets.nel = 195;
+sets.dTE = 'uint32';
+sets.dTN = 'double';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 7414875;
+sets.nnodes = 7529536;
+sets.sz = 300;
+sets.edof = 24;
+sets.tdofs = sets.nnodes * 3;
+MP.E = 200000000000;
+MP.nu = 3.000000e-01;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+[iK, jK] = Index_vpsa_opt(gpuArray(Mesh.elements), sets);
+Ke = eStiff_vpsa_opt(gpuArray(Mesh.elements), gpuArray(Mesh.nodes), MP, sets);
+wait(d);
+
+%% Assembly_GPU_Vector_double_195
+K = AssemblyStiffMa(iK, jK, Ke, sets);
+wait(d);
+Running Assembly_Test
+
+ Mesh created successfully!
+	 Number of elements: 7414875
+	 Number of nodes   : 7529536
+
+
+================================================================================
+Error occurred while setting up or tearing down Assembly_Test.
+As a result, all Assembly_Test tests failed and did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in Index_vpsa_opt (line 58)
+    iK  = zeros(sets.sz*sets.nel, 1, sets.dTE, 'gpuArray');     % Stores row
+    indices (initialized directly on GPU)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in Assembly_Test (line 16)
+    [iK, jK] = Index_vpsa_opt(gpuArray(Mesh.elements), sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+
+Done Assembly_Test
+__________
+
+Failure Summary:
+
+     Name                                          Failed  Incomplete  Reason(s)
+    =============================================================================
+     Assembly_Test/Assembly_GPU_Vector_double_195    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'Assembly_Test/Assembly_GPU_Vector_double_195'
+           Valid: 0
+         Samples: [0×7 table]
+    TestActivity: [1×12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   0.29708 seconds testing time.
+
+
+sets.nel = 211;
+sets.dTE = 'uint32';
+sets.dTN = 'single';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 9393931;
+sets.nnodes = 9528128;
+sets.sz = 36;
+sets.edof = 8;
+sets.tdofs = sets.nnodes * 1;
+c = 3.841000e+02;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+[iK, jK] = Index_spsa_opt(gpuArray(Mesh.elements), sets);
+Ke = eStiff_spsa_opt(gpuArray(Mesh.elements), gpuArray(Mesh.nodes), c, sets);
+wait(d);
+[iK, jK, Ke] = gather(iK, jK, Ke);
+
+%% Assembly_CPU_Scalar_single_211
+K = AssemblyStiffMa(iK, jK, Ke, sets);
+Running Assembly_Test
+
+ Mesh created successfully!
+	 Number of elements: 9393931
+	 Number of nodes   : 9528128
+
+.
+Done Assembly_Test
+__________
+
+  TimeResult with properties:
+
+            Name: 'Assembly_Test/Assembly_CPU_Scalar_single_211'
+           Valid: 1
+         Samples: [1×7 table]
+    TestActivity: [1×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   29.1329 seconds testing time.
+
+
+sets.nel = 211;
+sets.dTE = 'uint32';
+sets.dTN = 'single';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 9393931;
+sets.nnodes = 9528128;
+sets.sz = 36;
+sets.edof = 8;
+sets.tdofs = sets.nnodes * 1;
+c = 3.841000e+02;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+[iK, jK] = Index_spsa_opt(gpuArray(Mesh.elements), sets);
+Ke = eStiff_spsa_opt(gpuArray(Mesh.elements), gpuArray(Mesh.nodes), c, sets);
+wait(d);
+
+%% Assembly_GPU_Scalar_single_211
+K = AssemblyStiffMa(iK, jK, Ke, sets);
+wait(d);
+Running Assembly_Test
+
+ Mesh created successfully!
+	 Number of elements: 9393931
+	 Number of nodes   : 9528128
+
+.
+================================================================================
+Error occurred in Assembly_Test/Assembly_GPU_Scalar_single_211 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'MATLAB:nomem'
+    --------------
+    Error Details:
+    --------------
+    Out of memory.
+    
+    Error in AssemblyStiffMa (line 23)
+    K = sparse(iK, jK, Ke, sets.tdofs, sets.tdofs);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in Assembly_Test (line 20)
+    K = AssemblyStiffMa(iK, jK, Ke, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+..
+================================================================================
+Error occurred in Assembly_Test/Assembly_GPU_Scalar_single_211 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'MATLAB:nomem'
+    --------------
+    Error Details:
+    --------------
+    Out of memory.
+    
+    Error in AssemblyStiffMa (line 23)
+    K = sparse(iK, jK, Ke, sets.tdofs, sets.tdofs);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in Assembly_Test (line 20)
+    K = AssemblyStiffMa(iK, jK, Ke, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+..
+================================================================================
+Error occurred in Assembly_Test/Assembly_GPU_Scalar_single_211 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'MATLAB:nomem'
+    --------------
+    Error Details:
+    --------------
+    Out of memory.
+    
+    Error in AssemblyStiffMa (line 23)
+    K = sparse(iK, jK, Ke, sets.tdofs, sets.tdofs);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in Assembly_Test (line 20)
+    K = AssemblyStiffMa(iK, jK, Ke, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+..
+================================================================================
+Error occurred in Assembly_Test/Assembly_GPU_Scalar_single_211 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'MATLAB:nomem'
+    --------------
+    Error Details:
+    --------------
+    Out of memory.
+    
+    Error in AssemblyStiffMa (line 23)
+    K = sparse(iK, jK, Ke, sets.tdofs, sets.tdofs);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in Assembly_Test (line 20)
+    K = AssemblyStiffMa(iK, jK, Ke, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+..
+================================================================================
+Error occurred in Assembly_Test/Assembly_GPU_Scalar_single_211 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'MATLAB:nomem'
+    --------------
+    Error Details:
+    --------------
+    Out of memory.
+    
+    Error in AssemblyStiffMa (line 23)
+    K = sparse(iK, jK, Ke, sets.tdofs, sets.tdofs);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in Assembly_Test (line 20)
+    K = AssemblyStiffMa(iK, jK, Ke, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+Done Assembly_Test
+__________
+
+Failure Summary:
+
+     Name                                          Failed  Incomplete  Reason(s)
+    =============================================================================
+     Assembly_Test/Assembly_GPU_Scalar_single_211    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'Assembly_Test/Assembly_GPU_Scalar_single_211'
+           Valid: 0
+         Samples: [5×7 table]
+    TestActivity: [10×12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   4.7139 seconds testing time.
+
+
+sets.nel = 211;
+sets.dTE = 'uint32';
+sets.dTN = 'single';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 9393931;
+sets.nnodes = 9528128;
+sets.sz = 300;
+sets.edof = 24;
+sets.tdofs = sets.nnodes * 3;
+MP.E = 200000000000;
+MP.nu = 3.000000e-01;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+[iK, jK] = Index_vpsa_opt(gpuArray(Mesh.elements), sets);
+Ke = eStiff_vpsa_opt(gpuArray(Mesh.elements), gpuArray(Mesh.nodes), MP, sets);
+wait(d);
+[iK, jK, Ke] = gather(iK, jK, Ke);
+
+%% Assembly_CPU_Vector_single_211
+K = AssemblyStiffMa(iK, jK, Ke, sets);
+Running Assembly_Test
+
+ Mesh created successfully!
+	 Number of elements: 9393931
+	 Number of nodes   : 9528128
+
+
+================================================================================
+Error occurred while setting up or tearing down Assembly_Test.
+As a result, all Assembly_Test tests failed and did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in Index_vpsa_opt (line 58)
+    iK  = zeros(sets.sz*sets.nel, 1, sets.dTE, 'gpuArray');     % Stores row
+    indices (initialized directly on GPU)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in Assembly_Test (line 16)
+    [iK, jK] = Index_vpsa_opt(gpuArray(Mesh.elements), sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+
+Done Assembly_Test
+__________
+
+Failure Summary:
+
+     Name                                          Failed  Incomplete  Reason(s)
+    =============================================================================
+     Assembly_Test/Assembly_CPU_Vector_single_211    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'Assembly_Test/Assembly_CPU_Vector_single_211'
+           Valid: 0
+         Samples: [1×7 table]
+    TestActivity: [1×12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   0.33155 seconds testing time.
+
+
+sets.nel = 211;
+sets.dTE = 'uint32';
+sets.dTN = 'single';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 9393931;
+sets.nnodes = 9528128;
+sets.sz = 300;
+sets.edof = 24;
+sets.tdofs = sets.nnodes * 3;
+MP.E = 200000000000;
+MP.nu = 3.000000e-01;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+[iK, jK] = Index_vpsa_opt(gpuArray(Mesh.elements), sets);
+Ke = eStiff_vpsa_opt(gpuArray(Mesh.elements), gpuArray(Mesh.nodes), MP, sets);
+wait(d);
+
+%% Assembly_GPU_Vector_single_211
+K = AssemblyStiffMa(iK, jK, Ke, sets);
+wait(d);
+Running Assembly_Test
+
+ Mesh created successfully!
+	 Number of elements: 9393931
+	 Number of nodes   : 9528128
+
+
+================================================================================
+Error occurred while setting up or tearing down Assembly_Test.
+As a result, all Assembly_Test tests failed and did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in Index_vpsa_opt (line 58)
+    iK  = zeros(sets.sz*sets.nel, 1, sets.dTE, 'gpuArray');     % Stores row
+    indices (initialized directly on GPU)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in Assembly_Test (line 16)
+    [iK, jK] = Index_vpsa_opt(gpuArray(Mesh.elements), sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+
+Done Assembly_Test
+__________
+
+Failure Summary:
+
+     Name                                          Failed  Incomplete  Reason(s)
+    =============================================================================
+     Assembly_Test/Assembly_GPU_Vector_single_211    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'Assembly_Test/Assembly_GPU_Vector_single_211'
+           Valid: 0
+         Samples: [0×7 table]
+    TestActivity: [1×12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   0.32977 seconds testing time.
+
+
+sets.nel = 211;
+sets.dTE = 'uint32';
+sets.dTN = 'double';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 9393931;
+sets.nnodes = 9528128;
+sets.sz = 36;
+sets.edof = 8;
+sets.tdofs = sets.nnodes * 1;
+c = 3.841000e+02;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+[iK, jK] = Index_spsa_opt(gpuArray(Mesh.elements), sets);
+Ke = eStiff_spsa_opt(gpuArray(Mesh.elements), gpuArray(Mesh.nodes), c, sets);
+wait(d);
+[iK, jK, Ke] = gather(iK, jK, Ke);
+
+%% Assembly_CPU_Scalar_double_211
+K = AssemblyStiffMa(iK, jK, Ke, sets);
+Running Assembly_Test
+
+ Mesh created successfully!
+	 Number of elements: 9393931
+	 Number of nodes   : 9528128
+
+.
+Done Assembly_Test
+__________
+
+  TimeResult with properties:
+
+            Name: 'Assembly_Test/Assembly_CPU_Scalar_double_211'
+           Valid: 1
+         Samples: [1×7 table]
+    TestActivity: [1×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   27.3459 seconds testing time.
+
+
+sets.nel = 211;
+sets.dTE = 'uint32';
+sets.dTN = 'double';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 9393931;
+sets.nnodes = 9528128;
+sets.sz = 36;
+sets.edof = 8;
+sets.tdofs = sets.nnodes * 1;
+c = 3.841000e+02;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+[iK, jK] = Index_spsa_opt(gpuArray(Mesh.elements), sets);
+Ke = eStiff_spsa_opt(gpuArray(Mesh.elements), gpuArray(Mesh.nodes), c, sets);
+wait(d);
+
+%% Assembly_GPU_Scalar_double_211
+K = AssemblyStiffMa(iK, jK, Ke, sets);
+wait(d);
+Running Assembly_Test
+
+ Mesh created successfully!
+	 Number of elements: 9393931
+	 Number of nodes   : 9528128
+
+
+================================================================================
+Error occurred in Assembly_Test/Assembly_GPU_Scalar_double_211 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'MATLAB:nomem'
+    --------------
+    Error Details:
+    --------------
+    Out of memory.
+    
+    Error in AssemblyStiffMa (line 23)
+    K = sparse(iK, jK, Ke, sets.tdofs, sets.tdofs);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in Assembly_Test (line 20)
+    K = AssemblyStiffMa(iK, jK, Ke, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+================================================================================
+Error occurred in Assembly_Test/Assembly_GPU_Scalar_double_211 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'MATLAB:nomem'
+    --------------
+    Error Details:
+    --------------
+    Out of memory.
+    
+    Error in AssemblyStiffMa (line 23)
+    K = sparse(iK, jK, Ke, sets.tdofs, sets.tdofs);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in Assembly_Test (line 20)
+    K = AssemblyStiffMa(iK, jK, Ke, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+================================================================================
+Error occurred in Assembly_Test/Assembly_GPU_Scalar_double_211 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'MATLAB:nomem'
+    --------------
+    Error Details:
+    --------------
+    Out of memory.
+    
+    Error in AssemblyStiffMa (line 23)
+    K = sparse(iK, jK, Ke, sets.tdofs, sets.tdofs);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in Assembly_Test (line 20)
+    K = AssemblyStiffMa(iK, jK, Ke, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+================================================================================
+Error occurred in Assembly_Test/Assembly_GPU_Scalar_double_211 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'MATLAB:nomem'
+    --------------
+    Error Details:
+    --------------
+    Out of memory.
+    
+    Error in AssemblyStiffMa (line 23)
+    K = sparse(iK, jK, Ke, sets.tdofs, sets.tdofs);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in Assembly_Test (line 20)
+    K = AssemblyStiffMa(iK, jK, Ke, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+================================================================================
+Error occurred in Assembly_Test/Assembly_GPU_Scalar_double_211 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'MATLAB:nomem'
+    --------------
+    Error Details:
+    --------------
+    Out of memory.
+    
+    Error in AssemblyStiffMa (line 23)
+    K = sparse(iK, jK, Ke, sets.tdofs, sets.tdofs);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in Assembly_Test (line 20)
+    K = AssemblyStiffMa(iK, jK, Ke, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+================================================================================
+Error occurred in Assembly_Test/Assembly_GPU_Scalar_double_211 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'MATLAB:nomem'
+    --------------
+    Error Details:
+    --------------
+    Out of memory.
+    
+    Error in AssemblyStiffMa (line 23)
+    K = sparse(iK, jK, Ke, sets.tdofs, sets.tdofs);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in Assembly_Test (line 20)
+    K = AssemblyStiffMa(iK, jK, Ke, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+================================================================================
+Error occurred in Assembly_Test/Assembly_GPU_Scalar_double_211 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'MATLAB:nomem'
+    --------------
+    Error Details:
+    --------------
+    Out of memory.
+    
+    Error in AssemblyStiffMa (line 23)
+    K = sparse(iK, jK, Ke, sets.tdofs, sets.tdofs);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in Assembly_Test (line 20)
+    K = AssemblyStiffMa(iK, jK, Ke, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+================================================================================
+Error occurred in Assembly_Test/Assembly_GPU_Scalar_double_211 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'MATLAB:nomem'
+    --------------
+    Error Details:
+    --------------
+    Out of memory.
+    
+    Error in AssemblyStiffMa (line 23)
+    K = sparse(iK, jK, Ke, sets.tdofs, sets.tdofs);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in Assembly_Test (line 20)
+    K = AssemblyStiffMa(iK, jK, Ke, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+================================================================================
+Error occurred in Assembly_Test/Assembly_GPU_Scalar_double_211 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'MATLAB:nomem'
+    --------------
+    Error Details:
+    --------------
+    Out of memory.
+    
+    Error in AssemblyStiffMa (line 23)
+    K = sparse(iK, jK, Ke, sets.tdofs, sets.tdofs);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in Assembly_Test (line 20)
+    K = AssemblyStiffMa(iK, jK, Ke, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+Done Assembly_Test
+__________
+
+Failure Summary:
+
+     Name                                          Failed  Incomplete  Reason(s)
+    =============================================================================
+     Assembly_Test/Assembly_GPU_Scalar_double_211    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'Assembly_Test/Assembly_GPU_Scalar_double_211'
+           Valid: 0
+         Samples: [4×7 table]
+    TestActivity: [9×12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   1.9844 seconds testing time.
+
+
+sets.nel = 211;
+sets.dTE = 'uint32';
+sets.dTN = 'double';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 9393931;
+sets.nnodes = 9528128;
+sets.sz = 300;
+sets.edof = 24;
+sets.tdofs = sets.nnodes * 3;
+MP.E = 200000000000;
+MP.nu = 3.000000e-01;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+[iK, jK] = Index_vpsa_opt(gpuArray(Mesh.elements), sets);
+Ke = eStiff_vpsa_opt(gpuArray(Mesh.elements), gpuArray(Mesh.nodes), MP, sets);
+wait(d);
+[iK, jK, Ke] = gather(iK, jK, Ke);
+
+%% Assembly_CPU_Vector_double_211
+K = AssemblyStiffMa(iK, jK, Ke, sets);
+Running Assembly_Test
+
+ Mesh created successfully!
+	 Number of elements: 9393931
+	 Number of nodes   : 9528128
+
+
+================================================================================
+Error occurred while setting up or tearing down Assembly_Test.
+As a result, all Assembly_Test tests failed and did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in Index_vpsa_opt (line 58)
+    iK  = zeros(sets.sz*sets.nel, 1, sets.dTE, 'gpuArray');     % Stores row
+    indices (initialized directly on GPU)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in Assembly_Test (line 16)
+    [iK, jK] = Index_vpsa_opt(gpuArray(Mesh.elements), sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+
+Done Assembly_Test
+__________
+
+Failure Summary:
+
+     Name                                          Failed  Incomplete  Reason(s)
+    =============================================================================
+     Assembly_Test/Assembly_CPU_Vector_double_211    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'Assembly_Test/Assembly_CPU_Vector_double_211'
+           Valid: 0
+         Samples: [1×7 table]
+    TestActivity: [1×12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   0.35739 seconds testing time.
+
+
+sets.nel = 211;
+sets.dTE = 'uint32';
+sets.dTN = 'double';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 9393931;
+sets.nnodes = 9528128;
+sets.sz = 300;
+sets.edof = 24;
+sets.tdofs = sets.nnodes * 3;
+MP.E = 200000000000;
+MP.nu = 3.000000e-01;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+[iK, jK] = Index_vpsa_opt(gpuArray(Mesh.elements), sets);
+Ke = eStiff_vpsa_opt(gpuArray(Mesh.elements), gpuArray(Mesh.nodes), MP, sets);
+wait(d);
+
+%% Assembly_GPU_Vector_double_211
+K = AssemblyStiffMa(iK, jK, Ke, sets);
+wait(d);
+Running Assembly_Test
+
+ Mesh created successfully!
+	 Number of elements: 9393931
+	 Number of nodes   : 9528128
+
+
+================================================================================
+Error occurred while setting up or tearing down Assembly_Test.
+As a result, all Assembly_Test tests failed and did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in Index_vpsa_opt (line 58)
+    iK  = zeros(sets.sz*sets.nel, 1, sets.dTE, 'gpuArray');     % Stores row
+    indices (initialized directly on GPU)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in Assembly_Test (line 16)
+    [iK, jK] = Index_vpsa_opt(gpuArray(Mesh.elements), sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+
+Done Assembly_Test
+__________
+
+Failure Summary:
+
+     Name                                          Failed  Incomplete  Reason(s)
+    =============================================================================
+     Assembly_Test/Assembly_GPU_Vector_double_211    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'Assembly_Test/Assembly_GPU_Vector_double_211'
+           Valid: 0
+         Samples: [0×7 table]
+    TestActivity: [1×12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   0.35805 seconds testing time.
+
+
+sets.nel = 320;
+sets.dTE = 'uint32';
+sets.dTN = 'single';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 32768000;
+sets.nnodes = 33076161;
+sets.sz = 36;
+sets.edof = 8;
+sets.tdofs = sets.nnodes * 1;
+c = 3.841000e+02;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+[iK, jK] = Index_spsa_opt(gpuArray(Mesh.elements), sets);
+Ke = eStiff_spsa_opt(gpuArray(Mesh.elements), gpuArray(Mesh.nodes), c, sets);
+wait(d);
+[iK, jK, Ke] = gather(iK, jK, Ke);
+
+%% Assembly_CPU_Scalar_single_320
+K = AssemblyStiffMa(iK, jK, Ke, sets);
+Running Assembly_Test
+
+ Mesh created successfully!
+	 Number of elements: 32768000
+	 Number of nodes   : 33076161
+
+
+================================================================================
+Error occurred while setting up or tearing down Assembly_Test.
+As a result, all Assembly_Test tests failed and did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the
+    GPU,
+    use 'gpuDevice()'. If the problem persists, reset the GPU by calling
+    'gpuDevice(1)'.
+    
+    Error in eStiff_spsa_opt (line 70)
+    KE = feval(ker, elements, nodes, sets.nel, sets.nnodes, c,
+    zeros(sets.sz*sets.nel, 1, sets.dTN, 'gpuArray'));
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in Assembly_Test (line 16)
+    Ke = eStiff_spsa_opt(gpuArray(Mesh.elements), gpuArray(Mesh.nodes), c,
+    sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+
+Done Assembly_Test
+__________
+
+Failure Summary:
+
+     Name                                          Failed  Incomplete  Reason(s)
+    =============================================================================
+     Assembly_Test/Assembly_CPU_Scalar_single_320    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'Assembly_Test/Assembly_CPU_Scalar_single_320'
+           Valid: 0
+         Samples: [1×7 table]
+    TestActivity: [1×12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   1.2214 seconds testing time.
+
+
+sets.nel = 320;
+sets.dTE = 'uint32';
+sets.dTN = 'single';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 32768000;
+sets.nnodes = 33076161;
+sets.sz = 36;
+sets.edof = 8;
+sets.tdofs = sets.nnodes * 1;
+c = 3.841000e+02;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+[iK, jK] = Index_spsa_opt(gpuArray(Mesh.elements), sets);
+Ke = eStiff_spsa_opt(gpuArray(Mesh.elements), gpuArray(Mesh.nodes), c, sets);
+wait(d);
+
+%% Assembly_GPU_Scalar_single_320
+K = AssemblyStiffMa(iK, jK, Ke, sets);
+wait(d);
+Running Assembly_Test
+
+ Mesh created successfully!
+	 Number of elements: 32768000
+	 Number of nodes   : 33076161
+
+
+================================================================================
+Error occurred while setting up or tearing down Assembly_Test.
+As a result, all Assembly_Test tests failed and did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the
+    GPU,
+    use 'gpuDevice()'. If the problem persists, reset the GPU by calling
+    'gpuDevice(1)'.
+    
+    Error in eStiff_spsa_opt (line 70)
+    KE = feval(ker, elements, nodes, sets.nel, sets.nnodes, c,
+    zeros(sets.sz*sets.nel, 1, sets.dTN, 'gpuArray'));
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in Assembly_Test (line 16)
+    Ke = eStiff_spsa_opt(gpuArray(Mesh.elements), gpuArray(Mesh.nodes), c,
+    sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+
+Done Assembly_Test
+__________
+
+Failure Summary:
+
+     Name                                          Failed  Incomplete  Reason(s)
+    =============================================================================
+     Assembly_Test/Assembly_GPU_Scalar_single_320    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'Assembly_Test/Assembly_GPU_Scalar_single_320'
+           Valid: 0
+         Samples: [0×7 table]
+    TestActivity: [1×12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   1.2453 seconds testing time.
+
+
+sets.nel = 320;
+sets.dTE = 'uint32';
+sets.dTN = 'single';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 32768000;
+sets.nnodes = 33076161;
+sets.sz = 300;
+sets.edof = 24;
+sets.tdofs = sets.nnodes * 3;
+MP.E = 200000000000;
+MP.nu = 3.000000e-01;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+[iK, jK] = Index_vpsa_opt(gpuArray(Mesh.elements), sets);
+Ke = eStiff_vpsa_opt(gpuArray(Mesh.elements), gpuArray(Mesh.nodes), MP, sets);
+wait(d);
+[iK, jK, Ke] = gather(iK, jK, Ke);
+
+%% Assembly_CPU_Vector_single_320
+K = AssemblyStiffMa(iK, jK, Ke, sets);
+Running Assembly_Test
+
+ Mesh created successfully!
+	 Number of elements: 32768000
+	 Number of nodes   : 33076161
+
+
+================================================================================
+Error occurred while setting up or tearing down Assembly_Test.
+As a result, all Assembly_Test tests failed and did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in Index_vpsa_opt (line 58)
+    iK  = zeros(sets.sz*sets.nel, 1, sets.dTE, 'gpuArray');     % Stores row
+    indices (initialized directly on GPU)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in Assembly_Test (line 16)
+    [iK, jK] = Index_vpsa_opt(gpuArray(Mesh.elements), sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+
+Done Assembly_Test
+__________
+
+Failure Summary:
+
+     Name                                          Failed  Incomplete  Reason(s)
+    =============================================================================
+     Assembly_Test/Assembly_CPU_Vector_single_320    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'Assembly_Test/Assembly_CPU_Vector_single_320'
+           Valid: 0
+         Samples: [1×7 table]
+    TestActivity: [1×12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   1.038 seconds testing time.
+
+
+sets.nel = 320;
+sets.dTE = 'uint32';
+sets.dTN = 'single';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 32768000;
+sets.nnodes = 33076161;
+sets.sz = 300;
+sets.edof = 24;
+sets.tdofs = sets.nnodes * 3;
+MP.E = 200000000000;
+MP.nu = 3.000000e-01;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+[iK, jK] = Index_vpsa_opt(gpuArray(Mesh.elements), sets);
+Ke = eStiff_vpsa_opt(gpuArray(Mesh.elements), gpuArray(Mesh.nodes), MP, sets);
+wait(d);
+
+%% Assembly_GPU_Vector_single_320
+K = AssemblyStiffMa(iK, jK, Ke, sets);
+wait(d);
+Running Assembly_Test
+
+ Mesh created successfully!
+	 Number of elements: 32768000
+	 Number of nodes   : 33076161
+
+
+================================================================================
+Error occurred while setting up or tearing down Assembly_Test.
+As a result, all Assembly_Test tests failed and did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in Index_vpsa_opt (line 58)
+    iK  = zeros(sets.sz*sets.nel, 1, sets.dTE, 'gpuArray');     % Stores row
+    indices (initialized directly on GPU)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in Assembly_Test (line 16)
+    [iK, jK] = Index_vpsa_opt(gpuArray(Mesh.elements), sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+
+Done Assembly_Test
+__________
+
+Failure Summary:
+
+     Name                                          Failed  Incomplete  Reason(s)
+    =============================================================================
+     Assembly_Test/Assembly_GPU_Vector_single_320    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'Assembly_Test/Assembly_GPU_Vector_single_320'
+           Valid: 0
+         Samples: [0×7 table]
+    TestActivity: [1×12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   0.9446 seconds testing time.
+
+
+sets.nel = 320;
+sets.dTE = 'uint32';
+sets.dTN = 'double';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 32768000;
+sets.nnodes = 33076161;
+sets.sz = 36;
+sets.edof = 8;
+sets.tdofs = sets.nnodes * 1;
+c = 3.841000e+02;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+[iK, jK] = Index_spsa_opt(gpuArray(Mesh.elements), sets);
+Ke = eStiff_spsa_opt(gpuArray(Mesh.elements), gpuArray(Mesh.nodes), c, sets);
+wait(d);
+[iK, jK, Ke] = gather(iK, jK, Ke);
+
+%% Assembly_CPU_Scalar_double_320
+K = AssemblyStiffMa(iK, jK, Ke, sets);
+Running Assembly_Test
+
+ Mesh created successfully!
+	 Number of elements: 32768000
+	 Number of nodes   : 33076161
+
+
+================================================================================
+Error occurred while setting up or tearing down Assembly_Test.
+As a result, all Assembly_Test tests failed and did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the
+    GPU,
+    use 'gpuDevice()'. If the problem persists, reset the GPU by calling
+    'gpuDevice(1)'.
+    
+    Error in eStiff_spsa_opt (line 70)
+    KE = feval(ker, elements, nodes, sets.nel, sets.nnodes, c,
+    zeros(sets.sz*sets.nel, 1, sets.dTN, 'gpuArray'));
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in Assembly_Test (line 16)
+    Ke = eStiff_spsa_opt(gpuArray(Mesh.elements), gpuArray(Mesh.nodes), c,
+    sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+
+Done Assembly_Test
+__________
+
+Failure Summary:
+
+     Name                                          Failed  Incomplete  Reason(s)
+    =============================================================================
+     Assembly_Test/Assembly_CPU_Scalar_double_320    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'Assembly_Test/Assembly_CPU_Scalar_double_320'
+           Valid: 0
+         Samples: [1×7 table]
+    TestActivity: [1×12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   1.327 seconds testing time.
+
+
+sets.nel = 320;
+sets.dTE = 'uint32';
+sets.dTN = 'double';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 32768000;
+sets.nnodes = 33076161;
+sets.sz = 36;
+sets.edof = 8;
+sets.tdofs = sets.nnodes * 1;
+c = 3.841000e+02;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+[iK, jK] = Index_spsa_opt(gpuArray(Mesh.elements), sets);
+Ke = eStiff_spsa_opt(gpuArray(Mesh.elements), gpuArray(Mesh.nodes), c, sets);
+wait(d);
+
+%% Assembly_GPU_Scalar_double_320
+K = AssemblyStiffMa(iK, jK, Ke, sets);
+wait(d);
+Running Assembly_Test
+
+ Mesh created successfully!
+	 Number of elements: 32768000
+	 Number of nodes   : 33076161
+
+
+================================================================================
+Error occurred while setting up or tearing down Assembly_Test.
+As a result, all Assembly_Test tests failed and did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the
+    GPU,
+    use 'gpuDevice()'. If the problem persists, reset the GPU by calling
+    'gpuDevice(1)'.
+    
+    Error in eStiff_spsa_opt (line 70)
+    KE = feval(ker, elements, nodes, sets.nel, sets.nnodes, c,
+    zeros(sets.sz*sets.nel, 1, sets.dTN, 'gpuArray'));
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in Assembly_Test (line 16)
+    Ke = eStiff_spsa_opt(gpuArray(Mesh.elements), gpuArray(Mesh.nodes), c,
+    sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+
+Done Assembly_Test
+__________
+
+Failure Summary:
+
+     Name                                          Failed  Incomplete  Reason(s)
+    =============================================================================
+     Assembly_Test/Assembly_GPU_Scalar_double_320    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'Assembly_Test/Assembly_GPU_Scalar_double_320'
+           Valid: 0
+         Samples: [0×7 table]
+    TestActivity: [1×12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   1.3221 seconds testing time.
+
+
+sets.nel = 320;
+sets.dTE = 'uint32';
+sets.dTN = 'double';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 32768000;
+sets.nnodes = 33076161;
+sets.sz = 300;
+sets.edof = 24;
+sets.tdofs = sets.nnodes * 3;
+MP.E = 200000000000;
+MP.nu = 3.000000e-01;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+[iK, jK] = Index_vpsa_opt(gpuArray(Mesh.elements), sets);
+Ke = eStiff_vpsa_opt(gpuArray(Mesh.elements), gpuArray(Mesh.nodes), MP, sets);
+wait(d);
+[iK, jK, Ke] = gather(iK, jK, Ke);
+
+%% Assembly_CPU_Vector_double_320
+K = AssemblyStiffMa(iK, jK, Ke, sets);
+Running Assembly_Test
+
+ Mesh created successfully!
+	 Number of elements: 32768000
+	 Number of nodes   : 33076161
+
+
+================================================================================
+Error occurred while setting up or tearing down Assembly_Test.
+As a result, all Assembly_Test tests failed and did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in Index_vpsa_opt (line 58)
+    iK  = zeros(sets.sz*sets.nel, 1, sets.dTE, 'gpuArray');     % Stores row
+    indices (initialized directly on GPU)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in Assembly_Test (line 16)
+    [iK, jK] = Index_vpsa_opt(gpuArray(Mesh.elements), sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+
+Done Assembly_Test
+__________
+
+Failure Summary:
+
+     Name                                          Failed  Incomplete  Reason(s)
+    =============================================================================
+     Assembly_Test/Assembly_CPU_Vector_double_320    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'Assembly_Test/Assembly_CPU_Vector_double_320'
+           Valid: 0
+         Samples: [1×7 table]
+    TestActivity: [1×12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   1.0249 seconds testing time.
+
+
+sets.nel = 320;
+sets.dTE = 'uint32';
+sets.dTN = 'double';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 32768000;
+sets.nnodes = 33076161;
+sets.sz = 300;
+sets.edof = 24;
+sets.tdofs = sets.nnodes * 3;
+MP.E = 200000000000;
+MP.nu = 3.000000e-01;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+[iK, jK] = Index_vpsa_opt(gpuArray(Mesh.elements), sets);
+Ke = eStiff_vpsa_opt(gpuArray(Mesh.elements), gpuArray(Mesh.nodes), MP, sets);
+wait(d);
+
+%% Assembly_GPU_Vector_double_320
+K = AssemblyStiffMa(iK, jK, Ke, sets);
+wait(d);
+Running Assembly_Test
+
+ Mesh created successfully!
+	 Number of elements: 32768000
+	 Number of nodes   : 33076161
+
+
+================================================================================
+Error occurred while setting up or tearing down Assembly_Test.
+As a result, all Assembly_Test tests failed and did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in Index_vpsa_opt (line 58)
+    iK  = zeros(sets.sz*sets.nel, 1, sets.dTE, 'gpuArray');     % Stores row
+    indices (initialized directly on GPU)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in Assembly_Test (line 16)
+    [iK, jK] = Index_vpsa_opt(gpuArray(Mesh.elements), sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+
+Done Assembly_Test
+__________
+
+Failure Summary:
+
+     Name                                          Failed  Incomplete  Reason(s)
+    =============================================================================
+     Assembly_Test/Assembly_GPU_Vector_double_320    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'Assembly_Test/Assembly_GPU_Vector_double_320'
+           Valid: 0
+         Samples: [0×7 table]
+    TestActivity: [1×12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   1.0073 seconds testing time.
+
+
+
+A total of 80 time experiments was executed!
+Date and time at the beginning of the process: 	12-Aug-2026 11:18:32 
+Date and time at the end of the process: 	12-Aug-2026 11:26:59
+
+Elapsed time : 	00:08:27
+
+
+ans =
+
+  84×7 table
+
+                        Name                        SampleSize      Mean       StandardDeviation      Min        Median        Max   
+    ____________________________________________    __________    _________    _________________    ________    _________    ________
+
+    Assembly_Test/Assembly_CPU_Scalar_single_10          4        0.0011835       4.6393e-05        0.001151    0.0011655    0.001252
+    Assembly_Test/Assembly_GPU_Scalar_single_10          4        0.0018532       2.3386e-05        0.001827    0.0018525    0.001881
+    Assembly_Test/Assembly_CPU_Vector_single_10         11        0.0057339       0.00049766        0.005391     0.005618    0.007214
+    Assembly_Test/Assembly_GPU_Vector_single_10          4        0.0018847       1.3525e-05        0.001874     0.001881    0.001903
+    Assembly_Test/Assembly_CPU_Scalar_double_10          4        0.0011913        2.525e-05        0.001163     0.001191     0.00122
+    Assembly_Test/Assembly_GPU_Scalar_double_10          4        0.0013235        9.449e-05        0.001269      0.00128    0.001465
+    Assembly_Test/Assembly_CPU_Vector_double_10          4        0.0069362       4.0475e-05        0.006881     0.006944    0.006976
+    Assembly_Test/Assembly_GPU_Vector_double_10          4         0.001803       1.9408e-05        0.001776    0.0018085    0.001819
+    Assembly_Test/Assembly_CPU_Scalar_single_20          4         0.005715       9.8917e-05        0.005592    0.0057265    0.005815
+    Assembly_Test/Assembly_GPU_Scalar_single_20          4        0.0017243       1.5903e-05        0.001705     0.001725    0.001742
+    Assembly_Test/Assembly_CPU_Vector_single_20          5         0.040163         0.001666        0.038057     0.040634    0.041824
+    Assembly_Test/Assembly_GPU_Vector_single_20          4        0.0044237       1.8136e-05        0.004397    0.0044305    0.004437
+    Assembly_Test/Assembly_CPU_Scalar_double_20          4        0.0058645        0.0002133        0.005609    0.0058605    0.006128
+    Assembly_Test/Assembly_GPU_Scalar_double_20          4         0.001825       2.6771e-05        0.001797    0.0018225    0.001858
+    Assembly_Test/Assembly_CPU_Vector_double_20          4         0.045102        0.0012424        0.043271     0.045599    0.045941
+    Assembly_Test/Assembly_GPU_Vector_double_20          4        0.0053365       8.4713e-05        0.005231      0.00535    0.005415
+    Assembly_Test/Assembly_CPU_Scalar_single_40          4         0.045517       0.00067208        0.044957     0.045393    0.046325
+    Assembly_Test/Assembly_GPU_Scalar_single_40          4         0.005591       2.4372e-05        0.005567    0.0055925    0.005612
+    Assembly_Test/Assembly_CPU_Vector_single_40          4          0.80675         0.017776         0.78075      0.81292      0.8204
+    Assembly_Test/Assembly_GPU_Vector_single_40          4         0.033629       2.9262e-05        0.033595     0.033627    0.033665
+    Assembly_Test/Assembly_CPU_Scalar_double_40          4         0.045701       0.00092204        0.044408     0.045915    0.046566
+    Assembly_Test/Assembly_GPU_Scalar_double_40          4         0.006457       7.4386e-06        0.006452     0.006454    0.006468
+    Assembly_Test/Assembly_CPU_Vector_double_40          4          0.83388         0.023898         0.81281      0.83135        0.86
+    Assembly_Test/Assembly_GPU_Vector_double_40          4         0.043962       2.7264e-05         0.04393     0.043965    0.043988
+    Assembly_Test/Assembly_CPU_Scalar_single_80          1           2.2078                0          2.2078       2.2078      2.2078
+    Assembly_Test/Assembly_GPU_Scalar_single_80          4         0.033303       0.00043481        0.033067     0.033095    0.033955
+    Assembly_Test/Assembly_CPU_Vector_single_80          1           8.6259                0          8.6259       8.6259      8.6259
+    Assembly_Test/Assembly_GPU_Vector_single_80          4          0.26971       0.00012469         0.26958       0.2697     0.26985
+    Assembly_Test/Assembly_CPU_Scalar_double_80          1           2.0484                0          2.0484       2.0484      2.0484
+    Assembly_Test/Assembly_GPU_Scalar_double_80          4         0.042774       7.5712e-05        0.042678      0.04278    0.042858
+    Assembly_Test/Assembly_CPU_Vector_double_80          1           8.9653                0          8.9653       8.9653      8.9653
+    Assembly_Test/Assembly_GPU_Vector_double_80          4          0.36037       0.00035814         0.35997      0.36033     0.36083
+    Assembly_Test/Assembly_CPU_Scalar_single_96          1           1.9376                0          1.9376       1.9376      1.9376
+    Assembly_Test/Assembly_GPU_Scalar_single_96          4         0.056061       4.6707e-05        0.055999     0.056066    0.056112
+    Assembly_Test/Assembly_CPU_Vector_single_96          1           16.883                0          16.883       16.883      16.883
+    Assembly_Test/Assembly_GPU_Vector_single_96          4           0.5205        0.0016492         0.51829      0.52089     0.52193
+    Assembly_Test/Assembly_CPU_Scalar_double_96          1           1.9761                0          1.9761       1.9761      1.9761
+    Assembly_Test/Assembly_GPU_Scalar_double_96          4         0.072679       4.3246e-05        0.072632     0.072675    0.072736
+    Assembly_Test/Assembly_CPU_Vector_double_96          1           19.397                0          19.397       19.397      19.397
+    Assembly_Test/Assembly_GPU_Vector_double_96          2          0.70021        0.0074854         0.69492      0.70021      0.7055
+    Assembly_Test/Assembly_GPU_Vector_double_96          2              NaN              NaN             NaN          NaN         NaN
+    Assembly_Test/Assembly_CPU_Scalar_single_105         1           2.5652                0          2.5652       2.5652      2.5652
+    Assembly_Test/Assembly_GPU_Scalar_single_105         4          0.07322       5.2444e-05        0.073178     0.073204    0.073296
+    Assembly_Test/Assembly_CPU_Vector_single_105         1            17.36                0           17.36        17.36       17.36
+    Assembly_Test/Assembly_GPU_Vector_single_105         2           0.7133         0.014845          0.7028       0.7133     0.72379
+    Assembly_Test/Assembly_GPU_Vector_single_105         3              NaN              NaN             NaN          NaN         NaN
+    Assembly_Test/Assembly_CPU_Scalar_double_105         1            2.987                0           2.987        2.987       2.987
+    Assembly_Test/Assembly_GPU_Scalar_double_105         4         0.095513       0.00014463        0.095366     0.095505    0.095676
+    Assembly_Test/Assembly_CPU_Vector_double_105         1           20.909                0          20.909       20.909      20.909
+    Assembly_Test/Assembly_GPU_Vector_double_105         4              NaN              NaN             NaN          NaN         NaN
+    Assembly_Test/Assembly_CPU_Scalar_single_160         1           12.537                0          12.537       12.537      12.537
+    Assembly_Test/Assembly_GPU_Scalar_single_160         4            0.263       9.5786e-05         0.26286      0.26303     0.26307
+    Assembly_Test/Assembly_CPU_Vector_single_160         1           82.131                0          82.131       82.131      82.131
+    Assembly_Test/Assembly_GPU_Vector_single_160         4              NaN              NaN             NaN          NaN         NaN
+    Assembly_Test/Assembly_CPU_Scalar_double_160         1           15.696                0          15.696       15.696      15.696
+    Assembly_Test/Assembly_GPU_Scalar_double_160         4          0.34796       0.00021848         0.34774      0.34793     0.34823
+    Assembly_Test/Assembly_CPU_Vector_double_160         1              NaN              NaN             NaN          NaN         NaN
+    Assembly_Test/Assembly_GPU_Vector_double_160         0              NaN              NaN             NaN          NaN         NaN
+    Assembly_Test/Assembly_CPU_Scalar_single_195         1           24.146                0          24.146       24.146      24.146
+    Assembly_Test/Assembly_GPU_Scalar_single_195         4          0.53124        0.0015855         0.52959       0.5312     0.53299
+    Assembly_Test/Assembly_CPU_Vector_single_195         1              NaN              NaN             NaN          NaN         NaN
+    Assembly_Test/Assembly_GPU_Vector_single_195         0              NaN              NaN             NaN          NaN         NaN
+    Assembly_Test/Assembly_CPU_Scalar_double_195         1           22.712                0          22.712       22.712      22.712
+    Assembly_Test/Assembly_GPU_Scalar_double_195         2          0.72982         0.039936         0.70158      0.72982     0.75806
+    Assembly_Test/Assembly_GPU_Scalar_double_195         3              NaN              NaN             NaN          NaN         NaN
+    Assembly_Test/Assembly_CPU_Vector_double_195         1              NaN              NaN             NaN          NaN         NaN
+    Assembly_Test/Assembly_GPU_Vector_double_195         0              NaN              NaN             NaN          NaN         NaN
+    Assembly_Test/Assembly_CPU_Scalar_single_211         1           27.635                0          27.635       27.635      27.635
+    Assembly_Test/Assembly_GPU_Scalar_single_211         2          0.70324         0.014339          0.6931      0.70324     0.71338
+    Assembly_Test/Assembly_GPU_Scalar_single_211         3              NaN              NaN             NaN          NaN         NaN
+    Assembly_Test/Assembly_CPU_Vector_single_211         1              NaN              NaN             NaN          NaN         NaN
+    Assembly_Test/Assembly_GPU_Vector_single_211         0              NaN              NaN             NaN          NaN         NaN
+    Assembly_Test/Assembly_CPU_Scalar_double_211         1           25.207                0          25.207       25.207      25.207
+    Assembly_Test/Assembly_GPU_Scalar_double_211         4              NaN              NaN             NaN          NaN         NaN
+    Assembly_Test/Assembly_CPU_Vector_double_211         1              NaN              NaN             NaN          NaN         NaN
+    Assembly_Test/Assembly_GPU_Vector_double_211         0              NaN              NaN             NaN          NaN         NaN
+    Assembly_Test/Assembly_CPU_Scalar_single_320         1              NaN              NaN             NaN          NaN         NaN
+    Assembly_Test/Assembly_GPU_Scalar_single_320         0              NaN              NaN             NaN          NaN         NaN
+    Assembly_Test/Assembly_CPU_Vector_single_320         1              NaN              NaN             NaN          NaN         NaN
+    Assembly_Test/Assembly_GPU_Vector_single_320         0              NaN              NaN             NaN          NaN         NaN
+    Assembly_Test/Assembly_CPU_Scalar_double_320         1              NaN              NaN             NaN          NaN         NaN
+    Assembly_Test/Assembly_GPU_Scalar_double_320         0              NaN              NaN             NaN          NaN         NaN
+    Assembly_Test/Assembly_CPU_Vector_double_320         1              NaN              NaN             NaN          NaN         NaN
+    Assembly_Test/Assembly_GPU_Vector_double_320         0              NaN              NaN             NaN          NaN         NaN
+
