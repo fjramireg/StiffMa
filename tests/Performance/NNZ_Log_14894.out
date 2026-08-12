@@ -1,0 +1,4684 @@
+=== START OF WORK ===
+Date and time: jue ago  6 20:12:18 EDT 2026
+Execution node: NODO-G3
+Job Directory: /exports/home/francisco.ramirez/StiffMa/tests/Performance
+==========================
+
+sets.nel = 10;
+sets.dTE = 'uint32';
+sets.dTN = 'single';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 1000;
+sets.nnodes = 1331;
+sets.sz = 36;
+sets.edof = 8;
+c = 3.841000e+02;
+
+%% NNZ_CPU_Scalar_single_10
+Ke = eStiff_sssa(Mesh, c, sets);
+Running NNZ_Test
+
+ Mesh created successfully!
+	 Number of elements: 1000
+	 Number of nodes   : 1331
+
+.........
+Done NNZ_Test
+__________
+
+  TimeResult with properties:
+
+            Name: 'NNZ_Test/NNZ_CPU_Scalar_single_10'
+           Valid: 1
+         Samples: [4×7 table]
+    TestActivity: [9×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   3.9416 seconds testing time.
+
+
+sets.nel = 10;
+sets.dTE = 'uint32';
+sets.dTN = 'single';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 1000;
+sets.nnodes = 1331;
+sets.sz = 36;
+sets.edof = 8;
+c = 3.841000e+02;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+elementsGPU = gpuArray(Mesh.elements);
+nodesGPU = gpuArray(Mesh.nodes);
+
+%% NNZ_GPU_Scalar_single_10
+Ke = eStiff_spsa_opt(elementsGPU, nodesGPU, c, sets);
+wait(d);
+Running NNZ_Test
+
+ Mesh created successfully!
+	 Number of elements: 1000
+	 Number of nodes   : 1331
+
+.......... .......... .......... ......
+Done NNZ_Test
+__________
+
+  TimeResult with properties:
+
+            Name: 'NNZ_Test/NNZ_GPU_Scalar_single_10'
+           Valid: 1
+         Samples: [31×7 table]
+    TestActivity: [36×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   3.2081 seconds testing time.
+
+
+sets.nel = 10;
+sets.dTE = 'uint32';
+sets.dTN = 'single';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 1000;
+sets.nnodes = 1331;
+sets.sz = 300;
+sets.edof = 24;
+MP.E = 200000000000;
+MP.nu = 3.000000e-01;
+
+%% NNZ_CPU_Vector_single_10
+Ke = eStiff_vssa(Mesh, MP, sets);
+Running NNZ_Test
+
+ Mesh created successfully!
+	 Number of elements: 1000
+	 Number of nodes   : 1331
+
+.........
+Done NNZ_Test
+__________
+
+  TimeResult with properties:
+
+            Name: 'NNZ_Test/NNZ_CPU_Vector_single_10'
+           Valid: 1
+         Samples: [4×7 table]
+    TestActivity: [9×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   15.0413 seconds testing time.
+
+
+sets.nel = 10;
+sets.dTE = 'uint32';
+sets.dTN = 'single';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 1000;
+sets.nnodes = 1331;
+sets.sz = 300;
+sets.edof = 24;
+MP.E = 200000000000;
+MP.nu = 3.000000e-01;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+elementsGPU = gpuArray(Mesh.elements);
+nodesGPU = gpuArray(Mesh.nodes);
+
+%% NNZ_GPU_Vector_single_10
+Ke = eStiff_vpsa_opt(elementsGPU, nodesGPU, MP, sets);
+wait(d);
+Running NNZ_Test
+
+ Mesh created successfully!
+	 Number of elements: 1000
+	 Number of nodes   : 1331
+
+.........
+Done NNZ_Test
+__________
+
+  TimeResult with properties:
+
+            Name: 'NNZ_Test/NNZ_GPU_Vector_single_10'
+           Valid: 1
+         Samples: [4×7 table]
+    TestActivity: [9×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   1.5525 seconds testing time.
+
+
+sets.nel = 10;
+sets.dTE = 'uint32';
+sets.dTN = 'double';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 1000;
+sets.nnodes = 1331;
+sets.sz = 36;
+sets.edof = 8;
+c = 3.841000e+02;
+
+%% NNZ_CPU_Scalar_double_10
+Ke = eStiff_sssa(Mesh, c, sets);
+Running NNZ_Test
+
+ Mesh created successfully!
+	 Number of elements: 1000
+	 Number of nodes   : 1331
+
+.........
+Done NNZ_Test
+__________
+
+  TimeResult with properties:
+
+            Name: 'NNZ_Test/NNZ_CPU_Scalar_double_10'
+           Valid: 1
+         Samples: [4×7 table]
+    TestActivity: [9×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   1.215 seconds testing time.
+
+
+sets.nel = 10;
+sets.dTE = 'uint32';
+sets.dTN = 'double';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 1000;
+sets.nnodes = 1331;
+sets.sz = 36;
+sets.edof = 8;
+c = 3.841000e+02;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+elementsGPU = gpuArray(Mesh.elements);
+nodesGPU = gpuArray(Mesh.nodes);
+
+%% NNZ_GPU_Scalar_double_10
+Ke = eStiff_spsa_opt(elementsGPU, nodesGPU, c, sets);
+wait(d);
+Running NNZ_Test
+
+ Mesh created successfully!
+	 Number of elements: 1000
+	 Number of nodes   : 1331
+
+.........
+Done NNZ_Test
+__________
+
+  TimeResult with properties:
+
+            Name: 'NNZ_Test/NNZ_GPU_Scalar_double_10'
+           Valid: 1
+         Samples: [4×7 table]
+    TestActivity: [9×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   0.85113 seconds testing time.
+
+
+sets.nel = 10;
+sets.dTE = 'uint32';
+sets.dTN = 'double';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 1000;
+sets.nnodes = 1331;
+sets.sz = 300;
+sets.edof = 24;
+MP.E = 200000000000;
+MP.nu = 3.000000e-01;
+
+%% NNZ_CPU_Vector_double_10
+Ke = eStiff_vssa(Mesh, MP, sets);
+Running NNZ_Test
+
+ Mesh created successfully!
+	 Number of elements: 1000
+	 Number of nodes   : 1331
+
+.........
+Done NNZ_Test
+__________
+
+  TimeResult with properties:
+
+            Name: 'NNZ_Test/NNZ_CPU_Vector_double_10'
+           Valid: 1
+         Samples: [4×7 table]
+    TestActivity: [9×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   11.7783 seconds testing time.
+
+
+sets.nel = 10;
+sets.dTE = 'uint32';
+sets.dTN = 'double';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 1000;
+sets.nnodes = 1331;
+sets.sz = 300;
+sets.edof = 24;
+MP.E = 200000000000;
+MP.nu = 3.000000e-01;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+elementsGPU = gpuArray(Mesh.elements);
+nodesGPU = gpuArray(Mesh.nodes);
+
+%% NNZ_GPU_Vector_double_10
+Ke = eStiff_vpsa_opt(elementsGPU, nodesGPU, MP, sets);
+wait(d);
+Running NNZ_Test
+
+ Mesh created successfully!
+	 Number of elements: 1000
+	 Number of nodes   : 1331
+
+.........
+Done NNZ_Test
+__________
+
+  TimeResult with properties:
+
+            Name: 'NNZ_Test/NNZ_GPU_Vector_double_10'
+           Valid: 1
+         Samples: [4×7 table]
+    TestActivity: [9×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   1.613 seconds testing time.
+
+
+sets.nel = 20;
+sets.dTE = 'uint32';
+sets.dTN = 'single';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 8000;
+sets.nnodes = 9261;
+sets.sz = 36;
+sets.edof = 8;
+c = 3.841000e+02;
+
+%% NNZ_CPU_Scalar_single_20
+Ke = eStiff_sssa(Mesh, c, sets);
+Running NNZ_Test
+
+ Mesh created successfully!
+	 Number of elements: 8000
+	 Number of nodes   : 9261
+
+.........
+Done NNZ_Test
+__________
+
+  TimeResult with properties:
+
+            Name: 'NNZ_Test/NNZ_CPU_Scalar_single_20'
+           Valid: 1
+         Samples: [4×7 table]
+    TestActivity: [9×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   11.6854 seconds testing time.
+
+
+sets.nel = 20;
+sets.dTE = 'uint32';
+sets.dTN = 'single';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 8000;
+sets.nnodes = 9261;
+sets.sz = 36;
+sets.edof = 8;
+c = 3.841000e+02;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+elementsGPU = gpuArray(Mesh.elements);
+nodesGPU = gpuArray(Mesh.nodes);
+
+%% NNZ_GPU_Scalar_single_20
+Ke = eStiff_spsa_opt(elementsGPU, nodesGPU, c, sets);
+wait(d);
+Running NNZ_Test
+
+ Mesh created successfully!
+	 Number of elements: 8000
+	 Number of nodes   : 9261
+
+.........
+Done NNZ_Test
+__________
+
+  TimeResult with properties:
+
+            Name: 'NNZ_Test/NNZ_GPU_Scalar_single_20'
+           Valid: 1
+         Samples: [4×7 table]
+    TestActivity: [9×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   0.78357 seconds testing time.
+
+
+sets.nel = 20;
+sets.dTE = 'uint32';
+sets.dTN = 'single';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 8000;
+sets.nnodes = 9261;
+sets.sz = 300;
+sets.edof = 24;
+MP.E = 200000000000;
+MP.nu = 3.000000e-01;
+
+%% NNZ_CPU_Vector_single_20
+Ke = eStiff_vssa(Mesh, MP, sets);
+Running NNZ_Test
+
+ Mesh created successfully!
+	 Number of elements: 8000
+	 Number of nodes   : 9261
+
+.........
+Done NNZ_Test
+__________
+
+  TimeResult with properties:
+
+            Name: 'NNZ_Test/NNZ_CPU_Vector_single_20'
+           Valid: 1
+         Samples: [4×7 table]
+    TestActivity: [9×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   117.6058 seconds testing time.
+
+
+sets.nel = 20;
+sets.dTE = 'uint32';
+sets.dTN = 'single';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 8000;
+sets.nnodes = 9261;
+sets.sz = 300;
+sets.edof = 24;
+MP.E = 200000000000;
+MP.nu = 3.000000e-01;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+elementsGPU = gpuArray(Mesh.elements);
+nodesGPU = gpuArray(Mesh.nodes);
+
+%% NNZ_GPU_Vector_single_20
+Ke = eStiff_vpsa_opt(elementsGPU, nodesGPU, MP, sets);
+wait(d);
+Running NNZ_Test
+
+ Mesh created successfully!
+	 Number of elements: 8000
+	 Number of nodes   : 9261
+
+.........
+Done NNZ_Test
+__________
+
+  TimeResult with properties:
+
+            Name: 'NNZ_Test/NNZ_GPU_Vector_single_20'
+           Valid: 1
+         Samples: [4×7 table]
+    TestActivity: [9×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   1.4713 seconds testing time.
+
+
+sets.nel = 20;
+sets.dTE = 'uint32';
+sets.dTN = 'double';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 8000;
+sets.nnodes = 9261;
+sets.sz = 36;
+sets.edof = 8;
+c = 3.841000e+02;
+
+%% NNZ_CPU_Scalar_double_20
+Ke = eStiff_sssa(Mesh, c, sets);
+Running NNZ_Test
+
+ Mesh created successfully!
+	 Number of elements: 8000
+	 Number of nodes   : 9261
+
+.........
+Done NNZ_Test
+__________
+
+  TimeResult with properties:
+
+            Name: 'NNZ_Test/NNZ_CPU_Scalar_double_20'
+           Valid: 1
+         Samples: [4×7 table]
+    TestActivity: [9×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   8.0608 seconds testing time.
+
+
+sets.nel = 20;
+sets.dTE = 'uint32';
+sets.dTN = 'double';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 8000;
+sets.nnodes = 9261;
+sets.sz = 36;
+sets.edof = 8;
+c = 3.841000e+02;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+elementsGPU = gpuArray(Mesh.elements);
+nodesGPU = gpuArray(Mesh.nodes);
+
+%% NNZ_GPU_Scalar_double_20
+Ke = eStiff_spsa_opt(elementsGPU, nodesGPU, c, sets);
+wait(d);
+Running NNZ_Test
+
+ Mesh created successfully!
+	 Number of elements: 8000
+	 Number of nodes   : 9261
+
+.........
+Done NNZ_Test
+__________
+
+  TimeResult with properties:
+
+            Name: 'NNZ_Test/NNZ_GPU_Scalar_double_20'
+           Valid: 1
+         Samples: [4×7 table]
+    TestActivity: [9×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   0.74435 seconds testing time.
+
+
+sets.nel = 20;
+sets.dTE = 'uint32';
+sets.dTN = 'double';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 8000;
+sets.nnodes = 9261;
+sets.sz = 300;
+sets.edof = 24;
+MP.E = 200000000000;
+MP.nu = 3.000000e-01;
+
+%% NNZ_CPU_Vector_double_20
+Ke = eStiff_vssa(Mesh, MP, sets);
+Running NNZ_Test
+
+ Mesh created successfully!
+	 Number of elements: 8000
+	 Number of nodes   : 9261
+
+.........
+Done NNZ_Test
+__________
+
+  TimeResult with properties:
+
+            Name: 'NNZ_Test/NNZ_CPU_Vector_double_20'
+           Valid: 1
+         Samples: [4×7 table]
+    TestActivity: [9×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   92.1814 seconds testing time.
+
+
+sets.nel = 20;
+sets.dTE = 'uint32';
+sets.dTN = 'double';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 8000;
+sets.nnodes = 9261;
+sets.sz = 300;
+sets.edof = 24;
+MP.E = 200000000000;
+MP.nu = 3.000000e-01;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+elementsGPU = gpuArray(Mesh.elements);
+nodesGPU = gpuArray(Mesh.nodes);
+
+%% NNZ_GPU_Vector_double_20
+Ke = eStiff_vpsa_opt(elementsGPU, nodesGPU, MP, sets);
+wait(d);
+Running NNZ_Test
+
+ Mesh created successfully!
+	 Number of elements: 8000
+	 Number of nodes   : 9261
+
+.........
+Done NNZ_Test
+__________
+
+  TimeResult with properties:
+
+            Name: 'NNZ_Test/NNZ_GPU_Vector_double_20'
+           Valid: 1
+         Samples: [4×7 table]
+    TestActivity: [9×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   1.6431 seconds testing time.
+
+
+sets.nel = 40;
+sets.dTE = 'uint32';
+sets.dTN = 'single';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 64000;
+sets.nnodes = 68921;
+sets.sz = 36;
+sets.edof = 8;
+c = 3.841000e+02;
+
+%% NNZ_CPU_Scalar_single_40
+Ke = eStiff_sssa(Mesh, c, sets);
+Running NNZ_Test
+
+ Mesh created successfully!
+	 Number of elements: 64000
+	 Number of nodes   : 68921
+
+.........
+Done NNZ_Test
+__________
+
+  TimeResult with properties:
+
+            Name: 'NNZ_Test/NNZ_CPU_Scalar_single_40'
+           Valid: 1
+         Samples: [4×7 table]
+    TestActivity: [9×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   93.1796 seconds testing time.
+
+
+sets.nel = 40;
+sets.dTE = 'uint32';
+sets.dTN = 'single';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 64000;
+sets.nnodes = 68921;
+sets.sz = 36;
+sets.edof = 8;
+c = 3.841000e+02;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+elementsGPU = gpuArray(Mesh.elements);
+nodesGPU = gpuArray(Mesh.nodes);
+
+%% NNZ_GPU_Scalar_single_40
+Ke = eStiff_spsa_opt(elementsGPU, nodesGPU, c, sets);
+wait(d);
+Running NNZ_Test
+
+ Mesh created successfully!
+	 Number of elements: 64000
+	 Number of nodes   : 68921
+
+..........
+Done NNZ_Test
+__________
+
+  TimeResult with properties:
+
+            Name: 'NNZ_Test/NNZ_GPU_Scalar_single_40'
+           Valid: 1
+         Samples: [5×7 table]
+    TestActivity: [10×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   0.82691 seconds testing time.
+
+
+sets.nel = 40;
+sets.dTE = 'uint32';
+sets.dTN = 'single';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 64000;
+sets.nnodes = 68921;
+sets.sz = 300;
+sets.edof = 24;
+MP.E = 200000000000;
+MP.nu = 3.000000e-01;
+
+%% NNZ_CPU_Vector_single_40
+Ke = eStiff_vssa(Mesh, MP, sets);
+Running NNZ_Test
+
+ Mesh created successfully!
+	 Number of elements: 64000
+	 Number of nodes   : 68921
+
+.........
+Done NNZ_Test
+__________
+
+  TimeResult with properties:
+
+            Name: 'NNZ_Test/NNZ_CPU_Vector_single_40'
+           Valid: 1
+         Samples: [4×7 table]
+    TestActivity: [9×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   935.1659 seconds testing time.
+
+
+sets.nel = 40;
+sets.dTE = 'uint32';
+sets.dTN = 'single';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 64000;
+sets.nnodes = 68921;
+sets.sz = 300;
+sets.edof = 24;
+MP.E = 200000000000;
+MP.nu = 3.000000e-01;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+elementsGPU = gpuArray(Mesh.elements);
+nodesGPU = gpuArray(Mesh.nodes);
+
+%% NNZ_GPU_Vector_single_40
+Ke = eStiff_vpsa_opt(elementsGPU, nodesGPU, MP, sets);
+wait(d);
+Running NNZ_Test
+
+ Mesh created successfully!
+	 Number of elements: 64000
+	 Number of nodes   : 68921
+
+.........
+Done NNZ_Test
+__________
+
+  TimeResult with properties:
+
+            Name: 'NNZ_Test/NNZ_GPU_Vector_single_40'
+           Valid: 1
+         Samples: [4×7 table]
+    TestActivity: [9×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   1.6274 seconds testing time.
+
+
+sets.nel = 40;
+sets.dTE = 'uint32';
+sets.dTN = 'double';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 64000;
+sets.nnodes = 68921;
+sets.sz = 36;
+sets.edof = 8;
+c = 3.841000e+02;
+
+%% NNZ_CPU_Scalar_double_40
+Ke = eStiff_sssa(Mesh, c, sets);
+Running NNZ_Test
+
+ Mesh created successfully!
+	 Number of elements: 64000
+	 Number of nodes   : 68921
+
+.........
+Done NNZ_Test
+__________
+
+  TimeResult with properties:
+
+            Name: 'NNZ_Test/NNZ_CPU_Scalar_double_40'
+           Valid: 1
+         Samples: [4×7 table]
+    TestActivity: [9×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   64.4898 seconds testing time.
+
+
+sets.nel = 40;
+sets.dTE = 'uint32';
+sets.dTN = 'double';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 64000;
+sets.nnodes = 68921;
+sets.sz = 36;
+sets.edof = 8;
+c = 3.841000e+02;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+elementsGPU = gpuArray(Mesh.elements);
+nodesGPU = gpuArray(Mesh.nodes);
+
+%% NNZ_GPU_Scalar_double_40
+Ke = eStiff_spsa_opt(elementsGPU, nodesGPU, c, sets);
+wait(d);
+Running NNZ_Test
+
+ Mesh created successfully!
+	 Number of elements: 64000
+	 Number of nodes   : 68921
+
+.........
+Done NNZ_Test
+__________
+
+  TimeResult with properties:
+
+            Name: 'NNZ_Test/NNZ_GPU_Scalar_double_40'
+           Valid: 1
+         Samples: [4×7 table]
+    TestActivity: [9×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   0.82562 seconds testing time.
+
+
+sets.nel = 40;
+sets.dTE = 'uint32';
+sets.dTN = 'double';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 64000;
+sets.nnodes = 68921;
+sets.sz = 300;
+sets.edof = 24;
+MP.E = 200000000000;
+MP.nu = 3.000000e-01;
+
+%% NNZ_CPU_Vector_double_40
+Ke = eStiff_vssa(Mesh, MP, sets);
+Running NNZ_Test
+
+ Mesh created successfully!
+	 Number of elements: 64000
+	 Number of nodes   : 68921
+
+.........
+Done NNZ_Test
+__________
+
+  TimeResult with properties:
+
+            Name: 'NNZ_Test/NNZ_CPU_Vector_double_40'
+           Valid: 1
+         Samples: [4×7 table]
+    TestActivity: [9×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   729.6485 seconds testing time.
+
+
+sets.nel = 40;
+sets.dTE = 'uint32';
+sets.dTN = 'double';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 64000;
+sets.nnodes = 68921;
+sets.sz = 300;
+sets.edof = 24;
+MP.E = 200000000000;
+MP.nu = 3.000000e-01;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+elementsGPU = gpuArray(Mesh.elements);
+nodesGPU = gpuArray(Mesh.nodes);
+
+%% NNZ_GPU_Vector_double_40
+Ke = eStiff_vpsa_opt(elementsGPU, nodesGPU, MP, sets);
+wait(d);
+Running NNZ_Test
+
+ Mesh created successfully!
+	 Number of elements: 64000
+	 Number of nodes   : 68921
+
+.........
+Done NNZ_Test
+__________
+
+  TimeResult with properties:
+
+            Name: 'NNZ_Test/NNZ_GPU_Vector_double_40'
+           Valid: 1
+         Samples: [4×7 table]
+    TestActivity: [9×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   1.7613 seconds testing time.
+
+
+sets.nel = 80;
+sets.dTE = 'uint32';
+sets.dTN = 'single';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 512000;
+sets.nnodes = 531441;
+sets.sz = 36;
+sets.edof = 8;
+c = 3.841000e+02;
+
+%% NNZ_CPU_Scalar_single_80
+Ke = eStiff_sssa(Mesh, c, sets);
+Running NNZ_Test
+
+ Mesh created successfully!
+	 Number of elements: 512000
+	 Number of nodes   : 531441
+
+.
+Done NNZ_Test
+__________
+
+  TimeResult with properties:
+
+            Name: 'NNZ_Test/NNZ_CPU_Scalar_single_80'
+           Valid: 1
+         Samples: [1×7 table]
+    TestActivity: [1×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   82.8561 seconds testing time.
+
+
+sets.nel = 80;
+sets.dTE = 'uint32';
+sets.dTN = 'single';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 512000;
+sets.nnodes = 531441;
+sets.sz = 36;
+sets.edof = 8;
+c = 3.841000e+02;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+elementsGPU = gpuArray(Mesh.elements);
+nodesGPU = gpuArray(Mesh.nodes);
+
+%% NNZ_GPU_Scalar_single_80
+Ke = eStiff_spsa_opt(elementsGPU, nodesGPU, c, sets);
+wait(d);
+Running NNZ_Test
+
+ Mesh created successfully!
+	 Number of elements: 512000
+	 Number of nodes   : 531441
+
+.........
+Done NNZ_Test
+__________
+
+  TimeResult with properties:
+
+            Name: 'NNZ_Test/NNZ_GPU_Scalar_single_80'
+           Valid: 1
+         Samples: [4×7 table]
+    TestActivity: [9×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   0.82648 seconds testing time.
+
+
+sets.nel = 80;
+sets.dTE = 'uint32';
+sets.dTN = 'single';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 512000;
+sets.nnodes = 531441;
+sets.sz = 300;
+sets.edof = 24;
+MP.E = 200000000000;
+MP.nu = 3.000000e-01;
+
+%% NNZ_CPU_Vector_single_80
+Ke = eStiff_vssa(Mesh, MP, sets);
+Running NNZ_Test
+
+ Mesh created successfully!
+	 Number of elements: 512000
+	 Number of nodes   : 531441
+
+.
+Done NNZ_Test
+__________
+
+  TimeResult with properties:
+
+            Name: 'NNZ_Test/NNZ_CPU_Vector_single_80'
+           Valid: 1
+         Samples: [1×7 table]
+    TestActivity: [1×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   832.3753 seconds testing time.
+
+
+sets.nel = 80;
+sets.dTE = 'uint32';
+sets.dTN = 'single';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 512000;
+sets.nnodes = 531441;
+sets.sz = 300;
+sets.edof = 24;
+MP.E = 200000000000;
+MP.nu = 3.000000e-01;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+elementsGPU = gpuArray(Mesh.elements);
+nodesGPU = gpuArray(Mesh.nodes);
+
+%% NNZ_GPU_Vector_single_80
+Ke = eStiff_vpsa_opt(elementsGPU, nodesGPU, MP, sets);
+wait(d);
+Running NNZ_Test
+
+ Mesh created successfully!
+	 Number of elements: 512000
+	 Number of nodes   : 531441
+
+.........
+Done NNZ_Test
+__________
+
+  TimeResult with properties:
+
+            Name: 'NNZ_Test/NNZ_GPU_Vector_single_80'
+           Valid: 1
+         Samples: [4×7 table]
+    TestActivity: [9×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   2.2505 seconds testing time.
+
+
+sets.nel = 80;
+sets.dTE = 'uint32';
+sets.dTN = 'double';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 512000;
+sets.nnodes = 531441;
+sets.sz = 36;
+sets.edof = 8;
+c = 3.841000e+02;
+
+%% NNZ_CPU_Scalar_double_80
+Ke = eStiff_sssa(Mesh, c, sets);
+Running NNZ_Test
+
+ Mesh created successfully!
+	 Number of elements: 512000
+	 Number of nodes   : 531441
+
+.
+Done NNZ_Test
+__________
+
+  TimeResult with properties:
+
+            Name: 'NNZ_Test/NNZ_CPU_Scalar_double_80'
+           Valid: 1
+         Samples: [1×7 table]
+    TestActivity: [1×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   57.0413 seconds testing time.
+
+
+sets.nel = 80;
+sets.dTE = 'uint32';
+sets.dTN = 'double';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 512000;
+sets.nnodes = 531441;
+sets.sz = 36;
+sets.edof = 8;
+c = 3.841000e+02;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+elementsGPU = gpuArray(Mesh.elements);
+nodesGPU = gpuArray(Mesh.nodes);
+
+%% NNZ_GPU_Scalar_double_80
+Ke = eStiff_spsa_opt(elementsGPU, nodesGPU, c, sets);
+wait(d);
+Running NNZ_Test
+
+ Mesh created successfully!
+	 Number of elements: 512000
+	 Number of nodes   : 531441
+
+.......... ....
+Done NNZ_Test
+__________
+
+  TimeResult with properties:
+
+            Name: 'NNZ_Test/NNZ_GPU_Scalar_double_80'
+           Valid: 1
+         Samples: [9×7 table]
+    TestActivity: [14×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   1.6198 seconds testing time.
+
+
+sets.nel = 80;
+sets.dTE = 'uint32';
+sets.dTN = 'double';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 512000;
+sets.nnodes = 531441;
+sets.sz = 300;
+sets.edof = 24;
+MP.E = 200000000000;
+MP.nu = 3.000000e-01;
+
+%% NNZ_CPU_Vector_double_80
+Ke = eStiff_vssa(Mesh, MP, sets);
+Running NNZ_Test
+
+ Mesh created successfully!
+	 Number of elements: 512000
+	 Number of nodes   : 531441
+
+.
+Done NNZ_Test
+__________
+
+  TimeResult with properties:
+
+            Name: 'NNZ_Test/NNZ_CPU_Vector_double_80'
+           Valid: 1
+         Samples: [1×7 table]
+    TestActivity: [1×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   647.1749 seconds testing time.
+
+
+sets.nel = 80;
+sets.dTE = 'uint32';
+sets.dTN = 'double';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 512000;
+sets.nnodes = 531441;
+sets.sz = 300;
+sets.edof = 24;
+MP.E = 200000000000;
+MP.nu = 3.000000e-01;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+elementsGPU = gpuArray(Mesh.elements);
+nodesGPU = gpuArray(Mesh.nodes);
+
+%% NNZ_GPU_Vector_double_80
+Ke = eStiff_vpsa_opt(elementsGPU, nodesGPU, MP, sets);
+wait(d);
+Running NNZ_Test
+
+ Mesh created successfully!
+	 Number of elements: 512000
+	 Number of nodes   : 531441
+
+.........
+Done NNZ_Test
+__________
+
+  TimeResult with properties:
+
+            Name: 'NNZ_Test/NNZ_GPU_Vector_double_80'
+           Valid: 1
+         Samples: [4×7 table]
+    TestActivity: [9×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   2.7723 seconds testing time.
+
+
+sets.nel = 160;
+sets.dTE = 'uint32';
+sets.dTN = 'single';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 4096000;
+sets.nnodes = 4173281;
+sets.sz = 36;
+sets.edof = 8;
+c = 3.841000e+02;
+
+%% NNZ_CPU_Scalar_single_160
+Ke = eStiff_sssa(Mesh, c, sets);
+Running NNZ_Test
+
+ Mesh created successfully!
+	 Number of elements: 4096000
+	 Number of nodes   : 4173281
+
+.
+Done NNZ_Test
+__________
+
+  TimeResult with properties:
+
+            Name: 'NNZ_Test/NNZ_CPU_Scalar_single_160'
+           Valid: 1
+         Samples: [1×7 table]
+    TestActivity: [1×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   662.7389 seconds testing time.
+
+
+sets.nel = 160;
+sets.dTE = 'uint32';
+sets.dTN = 'single';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 4096000;
+sets.nnodes = 4173281;
+sets.sz = 36;
+sets.edof = 8;
+c = 3.841000e+02;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+elementsGPU = gpuArray(Mesh.elements);
+nodesGPU = gpuArray(Mesh.nodes);
+
+%% NNZ_GPU_Scalar_single_160
+Ke = eStiff_spsa_opt(elementsGPU, nodesGPU, c, sets);
+wait(d);
+Running NNZ_Test
+
+ Mesh created successfully!
+	 Number of elements: 4096000
+	 Number of nodes   : 4173281
+
+.........
+Done NNZ_Test
+__________
+
+  TimeResult with properties:
+
+            Name: 'NNZ_Test/NNZ_GPU_Scalar_single_160'
+           Valid: 1
+         Samples: [4×7 table]
+    TestActivity: [9×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   1.2088 seconds testing time.
+
+
+sets.nel = 160;
+sets.dTE = 'uint32';
+sets.dTN = 'single';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 4096000;
+sets.nnodes = 4173281;
+sets.sz = 300;
+sets.edof = 24;
+MP.E = 200000000000;
+MP.nu = 3.000000e-01;
+
+%% NNZ_CPU_Vector_single_160
+Ke = eStiff_vssa(Mesh, MP, sets);
+Running NNZ_Test
+
+ Mesh created successfully!
+	 Number of elements: 4096000
+	 Number of nodes   : 4173281
+
+.
+Done NNZ_Test
+__________
+
+  TimeResult with properties:
+
+            Name: 'NNZ_Test/NNZ_CPU_Vector_single_160'
+           Valid: 1
+         Samples: [1×7 table]
+    TestActivity: [1×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   6681.7013 seconds testing time.
+
+
+sets.nel = 160;
+sets.dTE = 'uint32';
+sets.dTN = 'single';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 4096000;
+sets.nnodes = 4173281;
+sets.sz = 300;
+sets.edof = 24;
+MP.E = 200000000000;
+MP.nu = 3.000000e-01;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+elementsGPU = gpuArray(Mesh.elements);
+nodesGPU = gpuArray(Mesh.nodes);
+
+%% NNZ_GPU_Vector_single_160
+Ke = eStiff_vpsa_opt(elementsGPU, nodesGPU, MP, sets);
+wait(d);
+Running NNZ_Test
+
+ Mesh created successfully!
+	 Number of elements: 4096000
+	 Number of nodes   : 4173281
+
+.........
+Done NNZ_Test
+__________
+
+  TimeResult with properties:
+
+            Name: 'NNZ_Test/NNZ_GPU_Vector_single_160'
+           Valid: 1
+         Samples: [4×7 table]
+    TestActivity: [9×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   8.5487 seconds testing time.
+
+
+sets.nel = 160;
+sets.dTE = 'uint32';
+sets.dTN = 'double';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 4096000;
+sets.nnodes = 4173281;
+sets.sz = 36;
+sets.edof = 8;
+c = 3.841000e+02;
+
+%% NNZ_CPU_Scalar_double_160
+Ke = eStiff_sssa(Mesh, c, sets);
+Running NNZ_Test
+
+ Mesh created successfully!
+	 Number of elements: 4096000
+	 Number of nodes   : 4173281
+
+.
+Done NNZ_Test
+__________
+
+  TimeResult with properties:
+
+            Name: 'NNZ_Test/NNZ_CPU_Scalar_double_160'
+           Valid: 1
+         Samples: [1×7 table]
+    TestActivity: [1×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   448.264 seconds testing time.
+
+
+sets.nel = 160;
+sets.dTE = 'uint32';
+sets.dTN = 'double';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 4096000;
+sets.nnodes = 4173281;
+sets.sz = 36;
+sets.edof = 8;
+c = 3.841000e+02;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+elementsGPU = gpuArray(Mesh.elements);
+nodesGPU = gpuArray(Mesh.nodes);
+
+%% NNZ_GPU_Scalar_double_160
+Ke = eStiff_spsa_opt(elementsGPU, nodesGPU, c, sets);
+wait(d);
+Running NNZ_Test
+
+ Mesh created successfully!
+	 Number of elements: 4096000
+	 Number of nodes   : 4173281
+
+.........
+Done NNZ_Test
+__________
+
+  TimeResult with properties:
+
+            Name: 'NNZ_Test/NNZ_GPU_Scalar_double_160'
+           Valid: 1
+         Samples: [4×7 table]
+    TestActivity: [9×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   2.148 seconds testing time.
+
+
+sets.nel = 160;
+sets.dTE = 'uint32';
+sets.dTN = 'double';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 4096000;
+sets.nnodes = 4173281;
+sets.sz = 300;
+sets.edof = 24;
+MP.E = 200000000000;
+MP.nu = 3.000000e-01;
+
+%% NNZ_CPU_Vector_double_160
+Ke = eStiff_vssa(Mesh, MP, sets);
+Running NNZ_Test
+
+ Mesh created successfully!
+	 Number of elements: 4096000
+	 Number of nodes   : 4173281
+
+.
+Done NNZ_Test
+__________
+
+  TimeResult with properties:
+
+            Name: 'NNZ_Test/NNZ_CPU_Vector_double_160'
+           Valid: 1
+         Samples: [1×7 table]
+    TestActivity: [1×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   5160.9734 seconds testing time.
+
+
+sets.nel = 160;
+sets.dTE = 'uint32';
+sets.dTN = 'double';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 4096000;
+sets.nnodes = 4173281;
+sets.sz = 300;
+sets.edof = 24;
+MP.E = 200000000000;
+MP.nu = 3.000000e-01;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+elementsGPU = gpuArray(Mesh.elements);
+nodesGPU = gpuArray(Mesh.nodes);
+
+%% NNZ_GPU_Vector_double_160
+Ke = eStiff_vpsa_opt(elementsGPU, nodesGPU, MP, sets);
+wait(d);
+Running NNZ_Test
+
+ Mesh created successfully!
+	 Number of elements: 4096000
+	 Number of nodes   : 4173281
+
+.........
+Done NNZ_Test
+__________
+
+  TimeResult with properties:
+
+            Name: 'NNZ_Test/NNZ_GPU_Vector_double_160'
+           Valid: 1
+         Samples: [4×7 table]
+    TestActivity: [9×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   12.2562 seconds testing time.
+
+
+sets.nel = 184;
+sets.dTE = 'uint32';
+sets.dTN = 'single';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 6229504;
+sets.nnodes = 6331625;
+sets.sz = 36;
+sets.edof = 8;
+c = 3.841000e+02;
+
+%% NNZ_CPU_Scalar_single_184
+Ke = eStiff_sssa(Mesh, c, sets);
+Running NNZ_Test
+
+ Mesh created successfully!
+	 Number of elements: 6229504
+	 Number of nodes   : 6331625
+
+.
+Done NNZ_Test
+__________
+
+  TimeResult with properties:
+
+            Name: 'NNZ_Test/NNZ_CPU_Scalar_single_184'
+           Valid: 1
+         Samples: [1×7 table]
+    TestActivity: [1×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   1007.4682 seconds testing time.
+
+
+sets.nel = 184;
+sets.dTE = 'uint32';
+sets.dTN = 'single';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 6229504;
+sets.nnodes = 6331625;
+sets.sz = 36;
+sets.edof = 8;
+c = 3.841000e+02;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+elementsGPU = gpuArray(Mesh.elements);
+nodesGPU = gpuArray(Mesh.nodes);
+
+%% NNZ_GPU_Scalar_single_184
+Ke = eStiff_spsa_opt(elementsGPU, nodesGPU, c, sets);
+wait(d);
+Running NNZ_Test
+
+ Mesh created successfully!
+	 Number of elements: 6229504
+	 Number of nodes   : 6331625
+
+.........
+Done NNZ_Test
+__________
+
+  TimeResult with properties:
+
+            Name: 'NNZ_Test/NNZ_GPU_Scalar_single_184'
+           Valid: 1
+         Samples: [4×7 table]
+    TestActivity: [9×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   1.2426 seconds testing time.
+
+
+sets.nel = 184;
+sets.dTE = 'uint32';
+sets.dTN = 'single';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 6229504;
+sets.nnodes = 6331625;
+sets.sz = 300;
+sets.edof = 24;
+MP.E = 200000000000;
+MP.nu = 3.000000e-01;
+
+%% NNZ_CPU_Vector_single_184
+Ke = eStiff_vssa(Mesh, MP, sets);
+Running NNZ_Test
+
+ Mesh created successfully!
+	 Number of elements: 6229504
+	 Number of nodes   : 6331625
+
+.
+Done NNZ_Test
+__________
+
+  TimeResult with properties:
+
+            Name: 'NNZ_Test/NNZ_CPU_Vector_single_184'
+           Valid: 1
+         Samples: [1×7 table]
+    TestActivity: [1×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   10099.3518 seconds testing time.
+
+
+sets.nel = 184;
+sets.dTE = 'uint32';
+sets.dTN = 'single';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 6229504;
+sets.nnodes = 6331625;
+sets.sz = 300;
+sets.edof = 24;
+MP.E = 200000000000;
+MP.nu = 3.000000e-01;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+elementsGPU = gpuArray(Mesh.elements);
+nodesGPU = gpuArray(Mesh.nodes);
+
+%% NNZ_GPU_Vector_single_184
+Ke = eStiff_vpsa_opt(elementsGPU, nodesGPU, MP, sets);
+wait(d);
+Running NNZ_Test
+
+ Mesh created successfully!
+	 Number of elements: 6229504
+	 Number of nodes   : 6331625
+
+.........
+Done NNZ_Test
+__________
+
+  TimeResult with properties:
+
+            Name: 'NNZ_Test/NNZ_GPU_Vector_single_184'
+           Valid: 1
+         Samples: [4×7 table]
+    TestActivity: [9×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   12.1228 seconds testing time.
+
+
+sets.nel = 184;
+sets.dTE = 'uint32';
+sets.dTN = 'double';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 6229504;
+sets.nnodes = 6331625;
+sets.sz = 36;
+sets.edof = 8;
+c = 3.841000e+02;
+
+%% NNZ_CPU_Scalar_double_184
+Ke = eStiff_sssa(Mesh, c, sets);
+Running NNZ_Test
+
+ Mesh created successfully!
+	 Number of elements: 6229504
+	 Number of nodes   : 6331625
+
+.
+Done NNZ_Test
+__________
+
+  TimeResult with properties:
+
+            Name: 'NNZ_Test/NNZ_CPU_Scalar_double_184'
+           Valid: 1
+         Samples: [1×7 table]
+    TestActivity: [1×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   685.4027 seconds testing time.
+
+
+sets.nel = 184;
+sets.dTE = 'uint32';
+sets.dTN = 'double';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 6229504;
+sets.nnodes = 6331625;
+sets.sz = 36;
+sets.edof = 8;
+c = 3.841000e+02;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+elementsGPU = gpuArray(Mesh.elements);
+nodesGPU = gpuArray(Mesh.nodes);
+
+%% NNZ_GPU_Scalar_double_184
+Ke = eStiff_spsa_opt(elementsGPU, nodesGPU, c, sets);
+wait(d);
+Running NNZ_Test
+
+ Mesh created successfully!
+	 Number of elements: 6229504
+	 Number of nodes   : 6331625
+
+.........
+Done NNZ_Test
+__________
+
+  TimeResult with properties:
+
+            Name: 'NNZ_Test/NNZ_GPU_Scalar_double_184'
+           Valid: 1
+         Samples: [4×7 table]
+    TestActivity: [9×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   2.8883 seconds testing time.
+
+
+sets.nel = 184;
+sets.dTE = 'uint32';
+sets.dTN = 'double';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 6229504;
+sets.nnodes = 6331625;
+sets.sz = 300;
+sets.edof = 24;
+MP.E = 200000000000;
+MP.nu = 3.000000e-01;
+
+%% NNZ_CPU_Vector_double_184
+Ke = eStiff_vssa(Mesh, MP, sets);
+Running NNZ_Test
+
+ Mesh created successfully!
+	 Number of elements: 6229504
+	 Number of nodes   : 6331625
+
+.
+Done NNZ_Test
+__________
+
+  TimeResult with properties:
+
+            Name: 'NNZ_Test/NNZ_CPU_Vector_double_184'
+           Valid: 1
+         Samples: [1×7 table]
+    TestActivity: [1×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   7821.2973 seconds testing time.
+
+
+sets.nel = 184;
+sets.dTE = 'uint32';
+sets.dTN = 'double';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 6229504;
+sets.nnodes = 6331625;
+sets.sz = 300;
+sets.edof = 24;
+MP.E = 200000000000;
+MP.nu = 3.000000e-01;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+elementsGPU = gpuArray(Mesh.elements);
+nodesGPU = gpuArray(Mesh.nodes);
+
+%% NNZ_GPU_Vector_double_184
+Ke = eStiff_vpsa_opt(elementsGPU, nodesGPU, MP, sets);
+wait(d);
+Running NNZ_Test
+
+ Mesh created successfully!
+	 Number of elements: 6229504
+	 Number of nodes   : 6331625
+
+.........
+Done NNZ_Test
+__________
+
+  TimeResult with properties:
+
+            Name: 'NNZ_Test/NNZ_GPU_Vector_double_184'
+           Valid: 1
+         Samples: [4×7 table]
+    TestActivity: [9×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   18.5268 seconds testing time.
+
+
+sets.nel = 192;
+sets.dTE = 'uint32';
+sets.dTN = 'single';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 7077888;
+sets.nnodes = 7189057;
+sets.sz = 36;
+sets.edof = 8;
+c = 3.841000e+02;
+
+%% NNZ_CPU_Scalar_single_192
+Ke = eStiff_sssa(Mesh, c, sets);
+Running NNZ_Test
+
+ Mesh created successfully!
+	 Number of elements: 7077888
+	 Number of nodes   : 7189057
+
+.
+Done NNZ_Test
+__________
+
+  TimeResult with properties:
+
+            Name: 'NNZ_Test/NNZ_CPU_Scalar_single_192'
+           Valid: 1
+         Samples: [1×7 table]
+    TestActivity: [1×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   1142.3858 seconds testing time.
+
+
+sets.nel = 192;
+sets.dTE = 'uint32';
+sets.dTN = 'single';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 7077888;
+sets.nnodes = 7189057;
+sets.sz = 36;
+sets.edof = 8;
+c = 3.841000e+02;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+elementsGPU = gpuArray(Mesh.elements);
+nodesGPU = gpuArray(Mesh.nodes);
+
+%% NNZ_GPU_Scalar_single_192
+Ke = eStiff_spsa_opt(elementsGPU, nodesGPU, c, sets);
+wait(d);
+Running NNZ_Test
+
+ Mesh created successfully!
+	 Number of elements: 7077888
+	 Number of nodes   : 7189057
+
+.........
+Done NNZ_Test
+__________
+
+  TimeResult with properties:
+
+            Name: 'NNZ_Test/NNZ_GPU_Scalar_single_192'
+           Valid: 1
+         Samples: [4×7 table]
+    TestActivity: [9×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   1.3399 seconds testing time.
+
+
+sets.nel = 192;
+sets.dTE = 'uint32';
+sets.dTN = 'single';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 7077888;
+sets.nnodes = 7189057;
+sets.sz = 300;
+sets.edof = 24;
+MP.E = 200000000000;
+MP.nu = 3.000000e-01;
+
+%% NNZ_CPU_Vector_single_192
+Ke = eStiff_vssa(Mesh, MP, sets);
+Running NNZ_Test
+
+ Mesh created successfully!
+	 Number of elements: 7077888
+	 Number of nodes   : 7189057
+
+.
+Done NNZ_Test
+__________
+
+  TimeResult with properties:
+
+            Name: 'NNZ_Test/NNZ_CPU_Vector_single_192'
+           Valid: 1
+         Samples: [1×7 table]
+    TestActivity: [1×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   11469.9093 seconds testing time.
+
+
+sets.nel = 192;
+sets.dTE = 'uint32';
+sets.dTN = 'single';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 7077888;
+sets.nnodes = 7189057;
+sets.sz = 300;
+sets.edof = 24;
+MP.E = 200000000000;
+MP.nu = 3.000000e-01;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+elementsGPU = gpuArray(Mesh.elements);
+nodesGPU = gpuArray(Mesh.nodes);
+
+%% NNZ_GPU_Vector_single_192
+Ke = eStiff_vpsa_opt(elementsGPU, nodesGPU, MP, sets);
+wait(d);
+Running NNZ_Test
+
+ Mesh created successfully!
+	 Number of elements: 7077888
+	 Number of nodes   : 7189057
+
+.........
+Done NNZ_Test
+__________
+
+  TimeResult with properties:
+
+            Name: 'NNZ_Test/NNZ_GPU_Vector_single_192'
+           Valid: 1
+         Samples: [4×7 table]
+    TestActivity: [9×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   13.7566 seconds testing time.
+
+
+sets.nel = 192;
+sets.dTE = 'uint32';
+sets.dTN = 'double';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 7077888;
+sets.nnodes = 7189057;
+sets.sz = 36;
+sets.edof = 8;
+c = 3.841000e+02;
+
+%% NNZ_CPU_Scalar_double_192
+Ke = eStiff_sssa(Mesh, c, sets);
+Running NNZ_Test
+
+ Mesh created successfully!
+	 Number of elements: 7077888
+	 Number of nodes   : 7189057
+
+.
+Done NNZ_Test
+__________
+
+  TimeResult with properties:
+
+            Name: 'NNZ_Test/NNZ_CPU_Scalar_double_192'
+           Valid: 1
+         Samples: [1×7 table]
+    TestActivity: [1×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   766.5108 seconds testing time.
+
+
+sets.nel = 192;
+sets.dTE = 'uint32';
+sets.dTN = 'double';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 7077888;
+sets.nnodes = 7189057;
+sets.sz = 36;
+sets.edof = 8;
+c = 3.841000e+02;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+elementsGPU = gpuArray(Mesh.elements);
+nodesGPU = gpuArray(Mesh.nodes);
+
+%% NNZ_GPU_Scalar_double_192
+Ke = eStiff_spsa_opt(elementsGPU, nodesGPU, c, sets);
+wait(d);
+Running NNZ_Test
+
+ Mesh created successfully!
+	 Number of elements: 7077888
+	 Number of nodes   : 7189057
+
+.........
+Done NNZ_Test
+__________
+
+  TimeResult with properties:
+
+            Name: 'NNZ_Test/NNZ_GPU_Scalar_double_192'
+           Valid: 1
+         Samples: [4×7 table]
+    TestActivity: [9×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   3.0683 seconds testing time.
+
+
+sets.nel = 192;
+sets.dTE = 'uint32';
+sets.dTN = 'double';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 7077888;
+sets.nnodes = 7189057;
+sets.sz = 300;
+sets.edof = 24;
+MP.E = 200000000000;
+MP.nu = 3.000000e-01;
+
+%% NNZ_CPU_Vector_double_192
+Ke = eStiff_vssa(Mesh, MP, sets);
+Running NNZ_Test
+
+ Mesh created successfully!
+	 Number of elements: 7077888
+	 Number of nodes   : 7189057
+
+.
+Done NNZ_Test
+__________
+
+  TimeResult with properties:
+
+            Name: 'NNZ_Test/NNZ_CPU_Vector_double_192'
+           Valid: 1
+         Samples: [1×7 table]
+    TestActivity: [1×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   8849.1545 seconds testing time.
+
+
+sets.nel = 192;
+sets.dTE = 'uint32';
+sets.dTN = 'double';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 7077888;
+sets.nnodes = 7189057;
+sets.sz = 300;
+sets.edof = 24;
+MP.E = 200000000000;
+MP.nu = 3.000000e-01;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+elementsGPU = gpuArray(Mesh.elements);
+nodesGPU = gpuArray(Mesh.nodes);
+
+%% NNZ_GPU_Vector_double_192
+Ke = eStiff_vpsa_opt(elementsGPU, nodesGPU, MP, sets);
+wait(d);
+Running NNZ_Test
+
+ Mesh created successfully!
+	 Number of elements: 7077888
+	 Number of nodes   : 7189057
+
+
+================================================================================
+Error occurred in NNZ_Test/NNZ_GPU_Vector_double_192 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the
+    GPU,
+    use 'gpuDevice()'. If the problem persists, reset the GPU by calling
+    'gpuDevice(1)'.
+    
+    Error in eStiff_vpsa_opt (line 80)
+        zeros(sets.sz*sets.nel, 1, sets.dTN, 'gpuArray') ); % GPU code execution
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in NNZ_Test (line 19)
+    Ke = eStiff_vpsa_opt(elementsGPU, nodesGPU, MP, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+================================================================================
+Error occurred in NNZ_Test/NNZ_GPU_Vector_double_192 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the
+    GPU,
+    use 'gpuDevice()'. If the problem persists, reset the GPU by calling
+    'gpuDevice(1)'.
+    
+    Error in eStiff_vpsa_opt (line 80)
+        zeros(sets.sz*sets.nel, 1, sets.dTN, 'gpuArray') ); % GPU code execution
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in NNZ_Test (line 19)
+    Ke = eStiff_vpsa_opt(elementsGPU, nodesGPU, MP, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+================================================================================
+Error occurred in NNZ_Test/NNZ_GPU_Vector_double_192 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the
+    GPU,
+    use 'gpuDevice()'. If the problem persists, reset the GPU by calling
+    'gpuDevice(1)'.
+    
+    Error in eStiff_vpsa_opt (line 80)
+        zeros(sets.sz*sets.nel, 1, sets.dTN, 'gpuArray') ); % GPU code execution
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in NNZ_Test (line 19)
+    Ke = eStiff_vpsa_opt(elementsGPU, nodesGPU, MP, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+================================================================================
+Error occurred in NNZ_Test/NNZ_GPU_Vector_double_192 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the
+    GPU,
+    use 'gpuDevice()'. If the problem persists, reset the GPU by calling
+    'gpuDevice(1)'.
+    
+    Error in eStiff_vpsa_opt (line 80)
+        zeros(sets.sz*sets.nel, 1, sets.dTN, 'gpuArray') ); % GPU code execution
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in NNZ_Test (line 19)
+    Ke = eStiff_vpsa_opt(elementsGPU, nodesGPU, MP, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+================================================================================
+Error occurred in NNZ_Test/NNZ_GPU_Vector_double_192 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the
+    GPU,
+    use 'gpuDevice()'. If the problem persists, reset the GPU by calling
+    'gpuDevice(1)'.
+    
+    Error in eStiff_vpsa_opt (line 80)
+        zeros(sets.sz*sets.nel, 1, sets.dTN, 'gpuArray') ); % GPU code execution
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in NNZ_Test (line 19)
+    Ke = eStiff_vpsa_opt(elementsGPU, nodesGPU, MP, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+================================================================================
+Error occurred in NNZ_Test/NNZ_GPU_Vector_double_192 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the
+    GPU,
+    use 'gpuDevice()'. If the problem persists, reset the GPU by calling
+    'gpuDevice(1)'.
+    
+    Error in eStiff_vpsa_opt (line 80)
+        zeros(sets.sz*sets.nel, 1, sets.dTN, 'gpuArray') ); % GPU code execution
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in NNZ_Test (line 19)
+    Ke = eStiff_vpsa_opt(elementsGPU, nodesGPU, MP, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+================================================================================
+Error occurred in NNZ_Test/NNZ_GPU_Vector_double_192 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the
+    GPU,
+    use 'gpuDevice()'. If the problem persists, reset the GPU by calling
+    'gpuDevice(1)'.
+    
+    Error in eStiff_vpsa_opt (line 80)
+        zeros(sets.sz*sets.nel, 1, sets.dTN, 'gpuArray') ); % GPU code execution
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in NNZ_Test (line 19)
+    Ke = eStiff_vpsa_opt(elementsGPU, nodesGPU, MP, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+================================================================================
+Error occurred in NNZ_Test/NNZ_GPU_Vector_double_192 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the
+    GPU,
+    use 'gpuDevice()'. If the problem persists, reset the GPU by calling
+    'gpuDevice(1)'.
+    
+    Error in eStiff_vpsa_opt (line 80)
+        zeros(sets.sz*sets.nel, 1, sets.dTN, 'gpuArray') ); % GPU code execution
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in NNZ_Test (line 19)
+    Ke = eStiff_vpsa_opt(elementsGPU, nodesGPU, MP, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+================================================================================
+Error occurred in NNZ_Test/NNZ_GPU_Vector_double_192 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the
+    GPU,
+    use 'gpuDevice()'. If the problem persists, reset the GPU by calling
+    'gpuDevice(1)'.
+    
+    Error in eStiff_vpsa_opt (line 80)
+        zeros(sets.sz*sets.nel, 1, sets.dTN, 'gpuArray') ); % GPU code execution
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in NNZ_Test (line 19)
+    Ke = eStiff_vpsa_opt(elementsGPU, nodesGPU, MP, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+Done NNZ_Test
+__________
+
+Failure Summary:
+
+     Name                                Failed  Incomplete  Reason(s)
+    ===================================================================
+     NNZ_Test/NNZ_GPU_Vector_double_192    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'NNZ_Test/NNZ_GPU_Vector_double_192'
+           Valid: 0
+         Samples: [4×7 table]
+    TestActivity: [9×12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   2.1398 seconds testing time.
+
+
+sets.nel = 320;
+sets.dTE = 'uint32';
+sets.dTN = 'single';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 32768000;
+sets.nnodes = 33076161;
+sets.sz = 36;
+sets.edof = 8;
+c = 3.841000e+02;
+
+%% NNZ_CPU_Scalar_single_320
+Ke = eStiff_sssa(Mesh, c, sets);
+Running NNZ_Test
+
+ Mesh created successfully!
+	 Number of elements: 32768000
+	 Number of nodes   : 33076161
+
+.
+Done NNZ_Test
+__________
+
+  TimeResult with properties:
+
+            Name: 'NNZ_Test/NNZ_CPU_Scalar_single_320'
+           Valid: 1
+         Samples: [1×7 table]
+    TestActivity: [1×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   5329.5622 seconds testing time.
+
+
+sets.nel = 320;
+sets.dTE = 'uint32';
+sets.dTN = 'single';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 32768000;
+sets.nnodes = 33076161;
+sets.sz = 36;
+sets.edof = 8;
+c = 3.841000e+02;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+elementsGPU = gpuArray(Mesh.elements);
+nodesGPU = gpuArray(Mesh.nodes);
+
+%% NNZ_GPU_Scalar_single_320
+Ke = eStiff_spsa_opt(elementsGPU, nodesGPU, c, sets);
+wait(d);
+Running NNZ_Test
+
+ Mesh created successfully!
+	 Number of elements: 32768000
+	 Number of nodes   : 33076161
+
+.........
+Done NNZ_Test
+__________
+
+  TimeResult with properties:
+
+            Name: 'NNZ_Test/NNZ_GPU_Scalar_single_320'
+           Valid: 1
+         Samples: [4×7 table]
+    TestActivity: [9×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   4.0402 seconds testing time.
+
+
+sets.nel = 320;
+sets.dTE = 'uint32';
+sets.dTN = 'single';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 32768000;
+sets.nnodes = 33076161;
+sets.sz = 300;
+sets.edof = 24;
+MP.E = 200000000000;
+MP.nu = 3.000000e-01;
+
+%% NNZ_CPU_Vector_single_320
+Ke = eStiff_vssa(Mesh, MP, sets);
+Running NNZ_Test
+
+ Mesh created successfully!
+	 Number of elements: 32768000
+	 Number of nodes   : 33076161
+
+.
+Done NNZ_Test
+__________
+
+  TimeResult with properties:
+
+            Name: 'NNZ_Test/NNZ_CPU_Vector_single_320'
+           Valid: 1
+         Samples: [1×7 table]
+    TestActivity: [1×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   53046.8202 seconds testing time.
+
+
+sets.nel = 320;
+sets.dTE = 'uint32';
+sets.dTN = 'single';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 32768000;
+sets.nnodes = 33076161;
+sets.sz = 300;
+sets.edof = 24;
+MP.E = 200000000000;
+MP.nu = 3.000000e-01;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+elementsGPU = gpuArray(Mesh.elements);
+nodesGPU = gpuArray(Mesh.nodes);
+
+%% NNZ_GPU_Vector_single_320
+Ke = eStiff_vpsa_opt(elementsGPU, nodesGPU, MP, sets);
+wait(d);
+Running NNZ_Test
+
+ Mesh created successfully!
+	 Number of elements: 32768000
+	 Number of nodes   : 33076161
+
+
+================================================================================
+Error occurred in NNZ_Test/NNZ_GPU_Vector_single_320 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in eStiff_vpsa_opt (line 80)
+        zeros(sets.sz*sets.nel, 1, sets.dTN, 'gpuArray') ); % GPU code execution
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in NNZ_Test (line 19)
+    Ke = eStiff_vpsa_opt(elementsGPU, nodesGPU, MP, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+================================================================================
+Error occurred in NNZ_Test/NNZ_GPU_Vector_single_320 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in eStiff_vpsa_opt (line 80)
+        zeros(sets.sz*sets.nel, 1, sets.dTN, 'gpuArray') ); % GPU code execution
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in NNZ_Test (line 19)
+    Ke = eStiff_vpsa_opt(elementsGPU, nodesGPU, MP, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+================================================================================
+Error occurred in NNZ_Test/NNZ_GPU_Vector_single_320 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in eStiff_vpsa_opt (line 80)
+        zeros(sets.sz*sets.nel, 1, sets.dTN, 'gpuArray') ); % GPU code execution
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in NNZ_Test (line 19)
+    Ke = eStiff_vpsa_opt(elementsGPU, nodesGPU, MP, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+================================================================================
+Error occurred in NNZ_Test/NNZ_GPU_Vector_single_320 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in eStiff_vpsa_opt (line 80)
+        zeros(sets.sz*sets.nel, 1, sets.dTN, 'gpuArray') ); % GPU code execution
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in NNZ_Test (line 19)
+    Ke = eStiff_vpsa_opt(elementsGPU, nodesGPU, MP, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+================================================================================
+Error occurred in NNZ_Test/NNZ_GPU_Vector_single_320 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in eStiff_vpsa_opt (line 80)
+        zeros(sets.sz*sets.nel, 1, sets.dTN, 'gpuArray') ); % GPU code execution
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in NNZ_Test (line 19)
+    Ke = eStiff_vpsa_opt(elementsGPU, nodesGPU, MP, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+================================================================================
+Error occurred in NNZ_Test/NNZ_GPU_Vector_single_320 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in eStiff_vpsa_opt (line 80)
+        zeros(sets.sz*sets.nel, 1, sets.dTN, 'gpuArray') ); % GPU code execution
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in NNZ_Test (line 19)
+    Ke = eStiff_vpsa_opt(elementsGPU, nodesGPU, MP, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+================================================================================
+Error occurred in NNZ_Test/NNZ_GPU_Vector_single_320 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in eStiff_vpsa_opt (line 80)
+        zeros(sets.sz*sets.nel, 1, sets.dTN, 'gpuArray') ); % GPU code execution
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in NNZ_Test (line 19)
+    Ke = eStiff_vpsa_opt(elementsGPU, nodesGPU, MP, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+================================================================================
+Error occurred in NNZ_Test/NNZ_GPU_Vector_single_320 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in eStiff_vpsa_opt (line 80)
+        zeros(sets.sz*sets.nel, 1, sets.dTN, 'gpuArray') ); % GPU code execution
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in NNZ_Test (line 19)
+    Ke = eStiff_vpsa_opt(elementsGPU, nodesGPU, MP, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+================================================================================
+Error occurred in NNZ_Test/NNZ_GPU_Vector_single_320 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in eStiff_vpsa_opt (line 80)
+        zeros(sets.sz*sets.nel, 1, sets.dTN, 'gpuArray') ); % GPU code execution
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in NNZ_Test (line 19)
+    Ke = eStiff_vpsa_opt(elementsGPU, nodesGPU, MP, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+Done NNZ_Test
+__________
+
+Failure Summary:
+
+     Name                                Failed  Incomplete  Reason(s)
+    ===================================================================
+     NNZ_Test/NNZ_GPU_Vector_single_320    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'NNZ_Test/NNZ_GPU_Vector_single_320'
+           Valid: 0
+         Samples: [4×7 table]
+    TestActivity: [9×12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   3.0248 seconds testing time.
+
+
+sets.nel = 320;
+sets.dTE = 'uint32';
+sets.dTN = 'double';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 32768000;
+sets.nnodes = 33076161;
+sets.sz = 36;
+sets.edof = 8;
+c = 3.841000e+02;
+
+%% NNZ_CPU_Scalar_double_320
+Ke = eStiff_sssa(Mesh, c, sets);
+Running NNZ_Test
+
+ Mesh created successfully!
+	 Number of elements: 32768000
+	 Number of nodes   : 33076161
+
+.
+Done NNZ_Test
+__________
+
+  TimeResult with properties:
+
+            Name: 'NNZ_Test/NNZ_CPU_Scalar_double_320'
+           Valid: 1
+         Samples: [1×7 table]
+    TestActivity: [1×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   3551.1765 seconds testing time.
+
+
+sets.nel = 320;
+sets.dTE = 'uint32';
+sets.dTN = 'double';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 32768000;
+sets.nnodes = 33076161;
+sets.sz = 36;
+sets.edof = 8;
+c = 3.841000e+02;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+elementsGPU = gpuArray(Mesh.elements);
+nodesGPU = gpuArray(Mesh.nodes);
+
+%% NNZ_GPU_Scalar_double_320
+Ke = eStiff_spsa_opt(elementsGPU, nodesGPU, c, sets);
+wait(d);
+Running NNZ_Test
+
+ Mesh created successfully!
+	 Number of elements: 32768000
+	 Number of nodes   : 33076161
+
+.........
+Done NNZ_Test
+__________
+
+  TimeResult with properties:
+
+            Name: 'NNZ_Test/NNZ_GPU_Scalar_double_320'
+           Valid: 1
+         Samples: [4×7 table]
+    TestActivity: [9×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   10.7161 seconds testing time.
+
+
+sets.nel = 320;
+sets.dTE = 'uint32';
+sets.dTN = 'double';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 32768000;
+sets.nnodes = 33076161;
+sets.sz = 300;
+sets.edof = 24;
+MP.E = 200000000000;
+MP.nu = 3.000000e-01;
+
+%% NNZ_CPU_Vector_double_320
+Ke = eStiff_vssa(Mesh, MP, sets);
+Running NNZ_Test
+
+ Mesh created successfully!
+	 Number of elements: 32768000
+	 Number of nodes   : 33076161
+
+.
+Done NNZ_Test
+__________
+
+  TimeResult with properties:
+
+            Name: 'NNZ_Test/NNZ_CPU_Vector_double_320'
+           Valid: 1
+         Samples: [1×7 table]
+    TestActivity: [1×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   41471.6738 seconds testing time.
+
+
+sets.nel = 320;
+sets.dTE = 'uint32';
+sets.dTN = 'double';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 32768000;
+sets.nnodes = 33076161;
+sets.sz = 300;
+sets.edof = 24;
+MP.E = 200000000000;
+MP.nu = 3.000000e-01;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+elementsGPU = gpuArray(Mesh.elements);
+nodesGPU = gpuArray(Mesh.nodes);
+
+%% NNZ_GPU_Vector_double_320
+Ke = eStiff_vpsa_opt(elementsGPU, nodesGPU, MP, sets);
+wait(d);
+Running NNZ_Test
+
+ Mesh created successfully!
+	 Number of elements: 32768000
+	 Number of nodes   : 33076161
+
+
+================================================================================
+Error occurred in NNZ_Test/NNZ_GPU_Vector_double_320 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in eStiff_vpsa_opt (line 80)
+        zeros(sets.sz*sets.nel, 1, sets.dTN, 'gpuArray') ); % GPU code execution
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in NNZ_Test (line 19)
+    Ke = eStiff_vpsa_opt(elementsGPU, nodesGPU, MP, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+================================================================================
+Error occurred in NNZ_Test/NNZ_GPU_Vector_double_320 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in eStiff_vpsa_opt (line 80)
+        zeros(sets.sz*sets.nel, 1, sets.dTN, 'gpuArray') ); % GPU code execution
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in NNZ_Test (line 19)
+    Ke = eStiff_vpsa_opt(elementsGPU, nodesGPU, MP, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+================================================================================
+Error occurred in NNZ_Test/NNZ_GPU_Vector_double_320 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in eStiff_vpsa_opt (line 80)
+        zeros(sets.sz*sets.nel, 1, sets.dTN, 'gpuArray') ); % GPU code execution
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in NNZ_Test (line 19)
+    Ke = eStiff_vpsa_opt(elementsGPU, nodesGPU, MP, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+================================================================================
+Error occurred in NNZ_Test/NNZ_GPU_Vector_double_320 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in eStiff_vpsa_opt (line 80)
+        zeros(sets.sz*sets.nel, 1, sets.dTN, 'gpuArray') ); % GPU code execution
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in NNZ_Test (line 19)
+    Ke = eStiff_vpsa_opt(elementsGPU, nodesGPU, MP, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+================================================================================
+Error occurred in NNZ_Test/NNZ_GPU_Vector_double_320 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in eStiff_vpsa_opt (line 80)
+        zeros(sets.sz*sets.nel, 1, sets.dTN, 'gpuArray') ); % GPU code execution
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in NNZ_Test (line 19)
+    Ke = eStiff_vpsa_opt(elementsGPU, nodesGPU, MP, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+================================================================================
+Error occurred in NNZ_Test/NNZ_GPU_Vector_double_320 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in eStiff_vpsa_opt (line 80)
+        zeros(sets.sz*sets.nel, 1, sets.dTN, 'gpuArray') ); % GPU code execution
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in NNZ_Test (line 19)
+    Ke = eStiff_vpsa_opt(elementsGPU, nodesGPU, MP, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+================================================================================
+Error occurred in NNZ_Test/NNZ_GPU_Vector_double_320 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in eStiff_vpsa_opt (line 80)
+        zeros(sets.sz*sets.nel, 1, sets.dTN, 'gpuArray') ); % GPU code execution
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in NNZ_Test (line 19)
+    Ke = eStiff_vpsa_opt(elementsGPU, nodesGPU, MP, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+================================================================================
+Error occurred in NNZ_Test/NNZ_GPU_Vector_double_320 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in eStiff_vpsa_opt (line 80)
+        zeros(sets.sz*sets.nel, 1, sets.dTN, 'gpuArray') ); % GPU code execution
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in NNZ_Test (line 19)
+    Ke = eStiff_vpsa_opt(elementsGPU, nodesGPU, MP, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+================================================================================
+Error occurred in NNZ_Test/NNZ_GPU_Vector_double_320 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in eStiff_vpsa_opt (line 80)
+        zeros(sets.sz*sets.nel, 1, sets.dTN, 'gpuArray') ); % GPU code execution
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in NNZ_Test (line 19)
+    Ke = eStiff_vpsa_opt(elementsGPU, nodesGPU, MP, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+Done NNZ_Test
+__________
+
+Failure Summary:
+
+     Name                                Failed  Incomplete  Reason(s)
+    ===================================================================
+     NNZ_Test/NNZ_GPU_Vector_double_320    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'NNZ_Test/NNZ_GPU_Vector_double_320'
+           Valid: 0
+         Samples: [4×7 table]
+    TestActivity: [9×12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   3.7471 seconds testing time.
+
+
+sets.nel = 355;
+sets.dTE = 'uint32';
+sets.dTN = 'single';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 44738875;
+sets.nnodes = 45118016;
+sets.sz = 36;
+sets.edof = 8;
+c = 3.841000e+02;
+
+%% NNZ_CPU_Scalar_single_355
+Ke = eStiff_sssa(Mesh, c, sets);
+Running NNZ_Test
+
+ Mesh created successfully!
+	 Number of elements: 44738875
+	 Number of nodes   : 45118016
+
+.
+Done NNZ_Test
+__________
+
+  TimeResult with properties:
+
+            Name: 'NNZ_Test/NNZ_CPU_Scalar_single_355'
+           Valid: 1
+         Samples: [1×7 table]
+    TestActivity: [1×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   7249.7517 seconds testing time.
+
+
+sets.nel = 355;
+sets.dTE = 'uint32';
+sets.dTN = 'single';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 44738875;
+sets.nnodes = 45118016;
+sets.sz = 36;
+sets.edof = 8;
+c = 3.841000e+02;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+elementsGPU = gpuArray(Mesh.elements);
+nodesGPU = gpuArray(Mesh.nodes);
+
+%% NNZ_GPU_Scalar_single_355
+Ke = eStiff_spsa_opt(elementsGPU, nodesGPU, c, sets);
+wait(d);
+Running NNZ_Test
+
+ Mesh created successfully!
+	 Number of elements: 44738875
+	 Number of nodes   : 45118016
+
+.........
+Done NNZ_Test
+__________
+
+  TimeResult with properties:
+
+            Name: 'NNZ_Test/NNZ_GPU_Scalar_single_355'
+           Valid: 1
+         Samples: [4×7 table]
+    TestActivity: [9×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   4.4593 seconds testing time.
+
+
+sets.nel = 355;
+sets.dTE = 'uint32';
+sets.dTN = 'single';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 44738875;
+sets.nnodes = 45118016;
+sets.sz = 300;
+sets.edof = 24;
+MP.E = 200000000000;
+MP.nu = 3.000000e-01;
+
+%% NNZ_CPU_Vector_single_355
+Ke = eStiff_vssa(Mesh, MP, sets);
+Running NNZ_Test
+
+ Mesh created successfully!
+	 Number of elements: 44738875
+	 Number of nodes   : 45118016
+
+.
+Done NNZ_Test
+__________
+
+  TimeResult with properties:
+
+            Name: 'NNZ_Test/NNZ_CPU_Vector_single_355'
+           Valid: 1
+         Samples: [1×7 table]
+    TestActivity: [1×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   72252.9157 seconds testing time.
+
+
+sets.nel = 355;
+sets.dTE = 'uint32';
+sets.dTN = 'single';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 44738875;
+sets.nnodes = 45118016;
+sets.sz = 300;
+sets.edof = 24;
+MP.E = 200000000000;
+MP.nu = 3.000000e-01;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+elementsGPU = gpuArray(Mesh.elements);
+nodesGPU = gpuArray(Mesh.nodes);
+
+%% NNZ_GPU_Vector_single_355
+Ke = eStiff_vpsa_opt(elementsGPU, nodesGPU, MP, sets);
+wait(d);
+Running NNZ_Test
+
+ Mesh created successfully!
+	 Number of elements: 44738875
+	 Number of nodes   : 45118016
+
+
+================================================================================
+Error occurred in NNZ_Test/NNZ_GPU_Vector_single_355 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in eStiff_vpsa_opt (line 80)
+        zeros(sets.sz*sets.nel, 1, sets.dTN, 'gpuArray') ); % GPU code execution
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in NNZ_Test (line 19)
+    Ke = eStiff_vpsa_opt(elementsGPU, nodesGPU, MP, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+================================================================================
+Error occurred in NNZ_Test/NNZ_GPU_Vector_single_355 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in eStiff_vpsa_opt (line 80)
+        zeros(sets.sz*sets.nel, 1, sets.dTN, 'gpuArray') ); % GPU code execution
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in NNZ_Test (line 19)
+    Ke = eStiff_vpsa_opt(elementsGPU, nodesGPU, MP, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+================================================================================
+Error occurred in NNZ_Test/NNZ_GPU_Vector_single_355 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in eStiff_vpsa_opt (line 80)
+        zeros(sets.sz*sets.nel, 1, sets.dTN, 'gpuArray') ); % GPU code execution
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in NNZ_Test (line 19)
+    Ke = eStiff_vpsa_opt(elementsGPU, nodesGPU, MP, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+================================================================================
+Error occurred in NNZ_Test/NNZ_GPU_Vector_single_355 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in eStiff_vpsa_opt (line 80)
+        zeros(sets.sz*sets.nel, 1, sets.dTN, 'gpuArray') ); % GPU code execution
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in NNZ_Test (line 19)
+    Ke = eStiff_vpsa_opt(elementsGPU, nodesGPU, MP, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+================================================================================
+Error occurred in NNZ_Test/NNZ_GPU_Vector_single_355 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in eStiff_vpsa_opt (line 80)
+        zeros(sets.sz*sets.nel, 1, sets.dTN, 'gpuArray') ); % GPU code execution
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in NNZ_Test (line 19)
+    Ke = eStiff_vpsa_opt(elementsGPU, nodesGPU, MP, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+================================================================================
+Error occurred in NNZ_Test/NNZ_GPU_Vector_single_355 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in eStiff_vpsa_opt (line 80)
+        zeros(sets.sz*sets.nel, 1, sets.dTN, 'gpuArray') ); % GPU code execution
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in NNZ_Test (line 19)
+    Ke = eStiff_vpsa_opt(elementsGPU, nodesGPU, MP, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+================================================================================
+Error occurred in NNZ_Test/NNZ_GPU_Vector_single_355 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in eStiff_vpsa_opt (line 80)
+        zeros(sets.sz*sets.nel, 1, sets.dTN, 'gpuArray') ); % GPU code execution
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in NNZ_Test (line 19)
+    Ke = eStiff_vpsa_opt(elementsGPU, nodesGPU, MP, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+================================================================================
+Error occurred in NNZ_Test/NNZ_GPU_Vector_single_355 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in eStiff_vpsa_opt (line 80)
+        zeros(sets.sz*sets.nel, 1, sets.dTN, 'gpuArray') ); % GPU code execution
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in NNZ_Test (line 19)
+    Ke = eStiff_vpsa_opt(elementsGPU, nodesGPU, MP, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+================================================================================
+Error occurred in NNZ_Test/NNZ_GPU_Vector_single_355 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in eStiff_vpsa_opt (line 80)
+        zeros(sets.sz*sets.nel, 1, sets.dTN, 'gpuArray') ); % GPU code execution
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in NNZ_Test (line 19)
+    Ke = eStiff_vpsa_opt(elementsGPU, nodesGPU, MP, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+Done NNZ_Test
+__________
+
+Failure Summary:
+
+     Name                                Failed  Incomplete  Reason(s)
+    ===================================================================
+     NNZ_Test/NNZ_GPU_Vector_single_355    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'NNZ_Test/NNZ_GPU_Vector_single_355'
+           Valid: 0
+         Samples: [4×7 table]
+    TestActivity: [9×12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   2.895 seconds testing time.
+
+
+sets.nel = 355;
+sets.dTE = 'uint32';
+sets.dTN = 'double';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 44738875;
+sets.nnodes = 45118016;
+sets.sz = 36;
+sets.edof = 8;
+c = 3.841000e+02;
+
+%% NNZ_CPU_Scalar_double_355
+Ke = eStiff_sssa(Mesh, c, sets);
+Running NNZ_Test
+
+ Mesh created successfully!
+	 Number of elements: 44738875
+	 Number of nodes   : 45118016
+
+.
+Done NNZ_Test
+__________
+
+  TimeResult with properties:
+
+            Name: 'NNZ_Test/NNZ_CPU_Scalar_double_355'
+           Valid: 1
+         Samples: [1×7 table]
+    TestActivity: [1×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   4839.0934 seconds testing time.
+
+
+sets.nel = 355;
+sets.dTE = 'uint32';
+sets.dTN = 'double';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 44738875;
+sets.nnodes = 45118016;
+sets.sz = 36;
+sets.edof = 8;
+c = 3.841000e+02;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+elementsGPU = gpuArray(Mesh.elements);
+nodesGPU = gpuArray(Mesh.nodes);
+
+%% NNZ_GPU_Scalar_double_355
+Ke = eStiff_spsa_opt(elementsGPU, nodesGPU, c, sets);
+wait(d);
+Running NNZ_Test
+
+ Mesh created successfully!
+	 Number of elements: 44738875
+	 Number of nodes   : 45118016
+
+.........
+Done NNZ_Test
+__________
+
+  TimeResult with properties:
+
+            Name: 'NNZ_Test/NNZ_GPU_Scalar_double_355'
+           Valid: 1
+         Samples: [4×7 table]
+    TestActivity: [9×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   14.3159 seconds testing time.
+
+
+sets.nel = 355;
+sets.dTE = 'uint32';
+sets.dTN = 'double';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 44738875;
+sets.nnodes = 45118016;
+sets.sz = 300;
+sets.edof = 24;
+MP.E = 200000000000;
+MP.nu = 3.000000e-01;
+
+%% NNZ_CPU_Vector_double_355
+Ke = eStiff_vssa(Mesh, MP, sets);
+Running NNZ_Test
+
+ Mesh created successfully!
+	 Number of elements: 44738875
+	 Number of nodes   : 45118016
+
+.
+Done NNZ_Test
+__________
+
+  TimeResult with properties:
+
+            Name: 'NNZ_Test/NNZ_CPU_Vector_double_355'
+           Valid: 1
+         Samples: [1×7 table]
+    TestActivity: [1×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   56226.743 seconds testing time.
+
+
+sets.nel = 355;
+sets.dTE = 'uint32';
+sets.dTN = 'double';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 44738875;
+sets.nnodes = 45118016;
+sets.sz = 300;
+sets.edof = 24;
+MP.E = 200000000000;
+MP.nu = 3.000000e-01;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+elementsGPU = gpuArray(Mesh.elements);
+nodesGPU = gpuArray(Mesh.nodes);
+
+%% NNZ_GPU_Vector_double_355
+Ke = eStiff_vpsa_opt(elementsGPU, nodesGPU, MP, sets);
+wait(d);
+Running NNZ_Test
+
+ Mesh created successfully!
+	 Number of elements: 44738875
+	 Number of nodes   : 45118016
+
+
+================================================================================
+Error occurred in NNZ_Test/NNZ_GPU_Vector_double_355 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in eStiff_vpsa_opt (line 80)
+        zeros(sets.sz*sets.nel, 1, sets.dTN, 'gpuArray') ); % GPU code execution
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in NNZ_Test (line 19)
+    Ke = eStiff_vpsa_opt(elementsGPU, nodesGPU, MP, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+================================================================================
+Error occurred in NNZ_Test/NNZ_GPU_Vector_double_355 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in eStiff_vpsa_opt (line 80)
+        zeros(sets.sz*sets.nel, 1, sets.dTN, 'gpuArray') ); % GPU code execution
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in NNZ_Test (line 19)
+    Ke = eStiff_vpsa_opt(elementsGPU, nodesGPU, MP, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+================================================================================
+Error occurred in NNZ_Test/NNZ_GPU_Vector_double_355 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in eStiff_vpsa_opt (line 80)
+        zeros(sets.sz*sets.nel, 1, sets.dTN, 'gpuArray') ); % GPU code execution
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in NNZ_Test (line 19)
+    Ke = eStiff_vpsa_opt(elementsGPU, nodesGPU, MP, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+================================================================================
+Error occurred in NNZ_Test/NNZ_GPU_Vector_double_355 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in eStiff_vpsa_opt (line 80)
+        zeros(sets.sz*sets.nel, 1, sets.dTN, 'gpuArray') ); % GPU code execution
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in NNZ_Test (line 19)
+    Ke = eStiff_vpsa_opt(elementsGPU, nodesGPU, MP, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+================================================================================
+Error occurred in NNZ_Test/NNZ_GPU_Vector_double_355 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in eStiff_vpsa_opt (line 80)
+        zeros(sets.sz*sets.nel, 1, sets.dTN, 'gpuArray') ); % GPU code execution
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in NNZ_Test (line 19)
+    Ke = eStiff_vpsa_opt(elementsGPU, nodesGPU, MP, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+================================================================================
+Error occurred in NNZ_Test/NNZ_GPU_Vector_double_355 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in eStiff_vpsa_opt (line 80)
+        zeros(sets.sz*sets.nel, 1, sets.dTN, 'gpuArray') ); % GPU code execution
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in NNZ_Test (line 19)
+    Ke = eStiff_vpsa_opt(elementsGPU, nodesGPU, MP, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+================================================================================
+Error occurred in NNZ_Test/NNZ_GPU_Vector_double_355 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in eStiff_vpsa_opt (line 80)
+        zeros(sets.sz*sets.nel, 1, sets.dTN, 'gpuArray') ); % GPU code execution
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in NNZ_Test (line 19)
+    Ke = eStiff_vpsa_opt(elementsGPU, nodesGPU, MP, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+================================================================================
+Error occurred in NNZ_Test/NNZ_GPU_Vector_double_355 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in eStiff_vpsa_opt (line 80)
+        zeros(sets.sz*sets.nel, 1, sets.dTN, 'gpuArray') ); % GPU code execution
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in NNZ_Test (line 19)
+    Ke = eStiff_vpsa_opt(elementsGPU, nodesGPU, MP, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+================================================================================
+Error occurred in NNZ_Test/NNZ_GPU_Vector_double_355 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in eStiff_vpsa_opt (line 80)
+        zeros(sets.sz*sets.nel, 1, sets.dTN, 'gpuArray') ); % GPU code execution
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in NNZ_Test (line 19)
+    Ke = eStiff_vpsa_opt(elementsGPU, nodesGPU, MP, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+Done NNZ_Test
+__________
+
+Failure Summary:
+
+     Name                                Failed  Incomplete  Reason(s)
+    ===================================================================
+     NNZ_Test/NNZ_GPU_Vector_double_355    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'NNZ_Test/NNZ_GPU_Vector_double_355'
+           Valid: 0
+         Samples: [4×7 table]
+    TestActivity: [9×12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   2.966 seconds testing time.
+
+
+sets.nel = 390;
+sets.dTE = 'uint32';
+sets.dTN = 'single';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 59319000;
+sets.nnodes = 59776471;
+sets.sz = 36;
+sets.edof = 8;
+c = 3.841000e+02;
+
+%% NNZ_CPU_Scalar_single_390
+Ke = eStiff_sssa(Mesh, c, sets);
+Running NNZ_Test
+
+ Mesh created successfully!
+	 Number of elements: 59319000
+	 Number of nodes   : 59776471
+
+.
+Done NNZ_Test
+__________
+
+  TimeResult with properties:
+
+            Name: 'NNZ_Test/NNZ_CPU_Scalar_single_390'
+           Valid: 1
+         Samples: [1×7 table]
+    TestActivity: [1×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   9617.4918 seconds testing time.
+
+
+sets.nel = 390;
+sets.dTE = 'uint32';
+sets.dTN = 'single';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 59319000;
+sets.nnodes = 59776471;
+sets.sz = 36;
+sets.edof = 8;
+c = 3.841000e+02;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+elementsGPU = gpuArray(Mesh.elements);
+nodesGPU = gpuArray(Mesh.nodes);
+
+%% NNZ_GPU_Scalar_single_390
+Ke = eStiff_spsa_opt(elementsGPU, nodesGPU, c, sets);
+wait(d);
+Running NNZ_Test
+
+ Mesh created successfully!
+	 Number of elements: 59319000
+	 Number of nodes   : 59776471
+
+.........
+Done NNZ_Test
+__________
+
+  TimeResult with properties:
+
+            Name: 'NNZ_Test/NNZ_GPU_Scalar_single_390'
+           Valid: 1
+         Samples: [4×7 table]
+    TestActivity: [9×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   4.665 seconds testing time.
+
+
+sets.nel = 390;
+sets.dTE = 'uint32';
+sets.dTN = 'single';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 59319000;
+sets.nnodes = 59776471;
+sets.sz = 300;
+sets.edof = 24;
+MP.E = 200000000000;
+MP.nu = 3.000000e-01;
+
+%% NNZ_CPU_Vector_single_390
+Ke = eStiff_vssa(Mesh, MP, sets);
+Running NNZ_Test
+
+ Mesh created successfully!
+	 Number of elements: 59319000
+	 Number of nodes   : 59776471
+
+.
+Done NNZ_Test
+__________
+
+  TimeResult with properties:
+
+            Name: 'NNZ_Test/NNZ_CPU_Vector_single_390'
+           Valid: 1
+         Samples: [1×7 table]
+    TestActivity: [1×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   94729.5499 seconds testing time.
+
+
+sets.nel = 390;
+sets.dTE = 'uint32';
+sets.dTN = 'single';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 59319000;
+sets.nnodes = 59776471;
+sets.sz = 300;
+sets.edof = 24;
+MP.E = 200000000000;
+MP.nu = 3.000000e-01;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+elementsGPU = gpuArray(Mesh.elements);
+nodesGPU = gpuArray(Mesh.nodes);
+
+%% NNZ_GPU_Vector_single_390
+Ke = eStiff_vpsa_opt(elementsGPU, nodesGPU, MP, sets);
+wait(d);
+Running NNZ_Test
+
+ Mesh created successfully!
+	 Number of elements: 59319000
+	 Number of nodes   : 59776471
+
+
+================================================================================
+Error occurred in NNZ_Test/NNZ_GPU_Vector_single_390 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in eStiff_vpsa_opt (line 80)
+        zeros(sets.sz*sets.nel, 1, sets.dTN, 'gpuArray') ); % GPU code execution
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in NNZ_Test (line 19)
+    Ke = eStiff_vpsa_opt(elementsGPU, nodesGPU, MP, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+================================================================================
+Error occurred in NNZ_Test/NNZ_GPU_Vector_single_390 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in eStiff_vpsa_opt (line 80)
+        zeros(sets.sz*sets.nel, 1, sets.dTN, 'gpuArray') ); % GPU code execution
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in NNZ_Test (line 19)
+    Ke = eStiff_vpsa_opt(elementsGPU, nodesGPU, MP, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+================================================================================
+Error occurred in NNZ_Test/NNZ_GPU_Vector_single_390 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in eStiff_vpsa_opt (line 80)
+        zeros(sets.sz*sets.nel, 1, sets.dTN, 'gpuArray') ); % GPU code execution
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in NNZ_Test (line 19)
+    Ke = eStiff_vpsa_opt(elementsGPU, nodesGPU, MP, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+================================================================================
+Error occurred in NNZ_Test/NNZ_GPU_Vector_single_390 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in eStiff_vpsa_opt (line 80)
+        zeros(sets.sz*sets.nel, 1, sets.dTN, 'gpuArray') ); % GPU code execution
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in NNZ_Test (line 19)
+    Ke = eStiff_vpsa_opt(elementsGPU, nodesGPU, MP, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+================================================================================
+Error occurred in NNZ_Test/NNZ_GPU_Vector_single_390 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in eStiff_vpsa_opt (line 80)
+        zeros(sets.sz*sets.nel, 1, sets.dTN, 'gpuArray') ); % GPU code execution
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in NNZ_Test (line 19)
+    Ke = eStiff_vpsa_opt(elementsGPU, nodesGPU, MP, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+================================================================================
+Error occurred in NNZ_Test/NNZ_GPU_Vector_single_390 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in eStiff_vpsa_opt (line 80)
+        zeros(sets.sz*sets.nel, 1, sets.dTN, 'gpuArray') ); % GPU code execution
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in NNZ_Test (line 19)
+    Ke = eStiff_vpsa_opt(elementsGPU, nodesGPU, MP, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+================================================================================
+Error occurred in NNZ_Test/NNZ_GPU_Vector_single_390 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in eStiff_vpsa_opt (line 80)
+        zeros(sets.sz*sets.nel, 1, sets.dTN, 'gpuArray') ); % GPU code execution
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in NNZ_Test (line 19)
+    Ke = eStiff_vpsa_opt(elementsGPU, nodesGPU, MP, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+================================================================================
+Error occurred in NNZ_Test/NNZ_GPU_Vector_single_390 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in eStiff_vpsa_opt (line 80)
+        zeros(sets.sz*sets.nel, 1, sets.dTN, 'gpuArray') ); % GPU code execution
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in NNZ_Test (line 19)
+    Ke = eStiff_vpsa_opt(elementsGPU, nodesGPU, MP, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+================================================================================
+Error occurred in NNZ_Test/NNZ_GPU_Vector_single_390 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in eStiff_vpsa_opt (line 80)
+        zeros(sets.sz*sets.nel, 1, sets.dTN, 'gpuArray') ); % GPU code execution
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in NNZ_Test (line 19)
+    Ke = eStiff_vpsa_opt(elementsGPU, nodesGPU, MP, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+Done NNZ_Test
+__________
+
+Failure Summary:
+
+     Name                                Failed  Incomplete  Reason(s)
+    ===================================================================
+     NNZ_Test/NNZ_GPU_Vector_single_390    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'NNZ_Test/NNZ_GPU_Vector_single_390'
+           Valid: 0
+         Samples: [4×7 table]
+    TestActivity: [9×12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   2.8967 seconds testing time.
+
+
+sets.nel = 390;
+sets.dTE = 'uint32';
+sets.dTN = 'double';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 59319000;
+sets.nnodes = 59776471;
+sets.sz = 36;
+sets.edof = 8;
+c = 3.841000e+02;
+
+%% NNZ_CPU_Scalar_double_390
+Ke = eStiff_sssa(Mesh, c, sets);
+Running NNZ_Test
+
+ Mesh created successfully!
+	 Number of elements: 59319000
+	 Number of nodes   : 59776471
+
+.
+Done NNZ_Test
+__________
+
+  TimeResult with properties:
+
+            Name: 'NNZ_Test/NNZ_CPU_Scalar_double_390'
+           Valid: 1
+         Samples: [1×7 table]
+    TestActivity: [1×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   6283.0446 seconds testing time.
+
+
+sets.nel = 390;
+sets.dTE = 'uint32';
+sets.dTN = 'double';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 59319000;
+sets.nnodes = 59776471;
+sets.sz = 36;
+sets.edof = 8;
+c = 3.841000e+02;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+elementsGPU = gpuArray(Mesh.elements);
+nodesGPU = gpuArray(Mesh.nodes);
+
+%% NNZ_GPU_Scalar_double_390
+Ke = eStiff_spsa_opt(elementsGPU, nodesGPU, c, sets);
+wait(d);
+Running NNZ_Test
+
+ Mesh created successfully!
+	 Number of elements: 59319000
+	 Number of nodes   : 59776471
+
+
+================================================================================
+Error occurred in NNZ_Test/NNZ_GPU_Scalar_double_390 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the
+    GPU,
+    use 'gpuDevice()'. If the problem persists, reset the GPU by calling
+    'gpuDevice(1)'.
+    
+    Error in eStiff_spsa_opt (line 70)
+    KE = feval(ker, elements, nodes, sets.nel, sets.nnodes, c,
+    zeros(sets.sz*sets.nel, 1, sets.dTN, 'gpuArray'));
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in NNZ_Test (line 18)
+    Ke = eStiff_spsa_opt(elementsGPU, nodesGPU, c, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+================================================================================
+Error occurred in NNZ_Test/NNZ_GPU_Scalar_double_390 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the
+    GPU,
+    use 'gpuDevice()'. If the problem persists, reset the GPU by calling
+    'gpuDevice(1)'.
+    
+    Error in eStiff_spsa_opt (line 70)
+    KE = feval(ker, elements, nodes, sets.nel, sets.nnodes, c,
+    zeros(sets.sz*sets.nel, 1, sets.dTN, 'gpuArray'));
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in NNZ_Test (line 18)
+    Ke = eStiff_spsa_opt(elementsGPU, nodesGPU, c, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+================================================================================
+Error occurred in NNZ_Test/NNZ_GPU_Scalar_double_390 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the
+    GPU,
+    use 'gpuDevice()'. If the problem persists, reset the GPU by calling
+    'gpuDevice(1)'.
+    
+    Error in eStiff_spsa_opt (line 70)
+    KE = feval(ker, elements, nodes, sets.nel, sets.nnodes, c,
+    zeros(sets.sz*sets.nel, 1, sets.dTN, 'gpuArray'));
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in NNZ_Test (line 18)
+    Ke = eStiff_spsa_opt(elementsGPU, nodesGPU, c, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+================================================================================
+Error occurred in NNZ_Test/NNZ_GPU_Scalar_double_390 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the
+    GPU,
+    use 'gpuDevice()'. If the problem persists, reset the GPU by calling
+    'gpuDevice(1)'.
+    
+    Error in eStiff_spsa_opt (line 70)
+    KE = feval(ker, elements, nodes, sets.nel, sets.nnodes, c,
+    zeros(sets.sz*sets.nel, 1, sets.dTN, 'gpuArray'));
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in NNZ_Test (line 18)
+    Ke = eStiff_spsa_opt(elementsGPU, nodesGPU, c, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+================================================================================
+Error occurred in NNZ_Test/NNZ_GPU_Scalar_double_390 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the
+    GPU,
+    use 'gpuDevice()'. If the problem persists, reset the GPU by calling
+    'gpuDevice(1)'.
+    
+    Error in eStiff_spsa_opt (line 70)
+    KE = feval(ker, elements, nodes, sets.nel, sets.nnodes, c,
+    zeros(sets.sz*sets.nel, 1, sets.dTN, 'gpuArray'));
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in NNZ_Test (line 18)
+    Ke = eStiff_spsa_opt(elementsGPU, nodesGPU, c, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+================================================================================
+Error occurred in NNZ_Test/NNZ_GPU_Scalar_double_390 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the
+    GPU,
+    use 'gpuDevice()'. If the problem persists, reset the GPU by calling
+    'gpuDevice(1)'.
+    
+    Error in eStiff_spsa_opt (line 70)
+    KE = feval(ker, elements, nodes, sets.nel, sets.nnodes, c,
+    zeros(sets.sz*sets.nel, 1, sets.dTN, 'gpuArray'));
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in NNZ_Test (line 18)
+    Ke = eStiff_spsa_opt(elementsGPU, nodesGPU, c, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+================================================================================
+Error occurred in NNZ_Test/NNZ_GPU_Scalar_double_390 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the
+    GPU,
+    use 'gpuDevice()'. If the problem persists, reset the GPU by calling
+    'gpuDevice(1)'.
+    
+    Error in eStiff_spsa_opt (line 70)
+    KE = feval(ker, elements, nodes, sets.nel, sets.nnodes, c,
+    zeros(sets.sz*sets.nel, 1, sets.dTN, 'gpuArray'));
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in NNZ_Test (line 18)
+    Ke = eStiff_spsa_opt(elementsGPU, nodesGPU, c, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+================================================================================
+Error occurred in NNZ_Test/NNZ_GPU_Scalar_double_390 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the
+    GPU,
+    use 'gpuDevice()'. If the problem persists, reset the GPU by calling
+    'gpuDevice(1)'.
+    
+    Error in eStiff_spsa_opt (line 70)
+    KE = feval(ker, elements, nodes, sets.nel, sets.nnodes, c,
+    zeros(sets.sz*sets.nel, 1, sets.dTN, 'gpuArray'));
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in NNZ_Test (line 18)
+    Ke = eStiff_spsa_opt(elementsGPU, nodesGPU, c, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+================================================================================
+Error occurred in NNZ_Test/NNZ_GPU_Scalar_double_390 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:OOM'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Out of memory on device. To view more detail about available memory on the
+    GPU,
+    use 'gpuDevice()'. If the problem persists, reset the GPU by calling
+    'gpuDevice(1)'.
+    
+    Error in eStiff_spsa_opt (line 70)
+    KE = feval(ker, elements, nodes, sets.nel, sets.nnodes, c,
+    zeros(sets.sz*sets.nel, 1, sets.dTN, 'gpuArray'));
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in NNZ_Test (line 18)
+    Ke = eStiff_spsa_opt(elementsGPU, nodesGPU, c, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+Done NNZ_Test
+__________
+
+Failure Summary:
+
+     Name                                Failed  Incomplete  Reason(s)
+    ===================================================================
+     NNZ_Test/NNZ_GPU_Scalar_double_390    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'NNZ_Test/NNZ_GPU_Scalar_double_390'
+           Valid: 0
+         Samples: [4×7 table]
+    TestActivity: [9×12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   2.4275 seconds testing time.
+
+
+sets.nel = 390;
+sets.dTE = 'uint32';
+sets.dTN = 'double';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 59319000;
+sets.nnodes = 59776471;
+sets.sz = 300;
+sets.edof = 24;
+MP.E = 200000000000;
+MP.nu = 3.000000e-01;
+
+%% NNZ_CPU_Vector_double_390
+Ke = eStiff_vssa(Mesh, MP, sets);
+Running NNZ_Test
+
+ Mesh created successfully!
+	 Number of elements: 59319000
+	 Number of nodes   : 59776471
+
+.
+Done NNZ_Test
+__________
+
+  TimeResult with properties:
+
+            Name: 'NNZ_Test/NNZ_CPU_Vector_double_390'
+           Valid: 1
+         Samples: [1×7 table]
+    TestActivity: [1×12 table]
+
+Totals:
+   1 Valid, 0 Invalid.
+   72934.7419 seconds testing time.
+
+
+sets.nel = 390;
+sets.dTE = 'uint32';
+sets.dTN = 'double';
+[Mesh.elements, Mesh.nodes] = CreateMesh2(sets.nel,sets.nel,sets.nel,sets);
+sets.nel = 59319000;
+sets.nnodes = 59776471;
+sets.sz = 300;
+sets.edof = 24;
+MP.E = 200000000000;
+MP.nu = 3.000000e-01;
+d = gpuDevice;
+sets.tbs = d.MaxThreadsPerBlock;
+sets.numSMs   = d.MultiprocessorCount;
+sets.WarpSize = d.SIMDWidth;
+elementsGPU = gpuArray(Mesh.elements);
+nodesGPU = gpuArray(Mesh.nodes);
+
+%% NNZ_GPU_Vector_double_390
+Ke = eStiff_vpsa_opt(elementsGPU, nodesGPU, MP, sets);
+wait(d);
+Running NNZ_Test
+
+ Mesh created successfully!
+	 Number of elements: 59319000
+	 Number of nodes   : 59776471
+
+
+================================================================================
+Error occurred in NNZ_Test/NNZ_GPU_Vector_double_390 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in eStiff_vpsa_opt (line 80)
+        zeros(sets.sz*sets.nel, 1, sets.dTN, 'gpuArray') ); % GPU code execution
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in NNZ_Test (line 19)
+    Ke = eStiff_vpsa_opt(elementsGPU, nodesGPU, MP, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+================================================================================
+Error occurred in NNZ_Test/NNZ_GPU_Vector_double_390 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in eStiff_vpsa_opt (line 80)
+        zeros(sets.sz*sets.nel, 1, sets.dTN, 'gpuArray') ); % GPU code execution
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in NNZ_Test (line 19)
+    Ke = eStiff_vpsa_opt(elementsGPU, nodesGPU, MP, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+================================================================================
+Error occurred in NNZ_Test/NNZ_GPU_Vector_double_390 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in eStiff_vpsa_opt (line 80)
+        zeros(sets.sz*sets.nel, 1, sets.dTN, 'gpuArray') ); % GPU code execution
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in NNZ_Test (line 19)
+    Ke = eStiff_vpsa_opt(elementsGPU, nodesGPU, MP, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+================================================================================
+Error occurred in NNZ_Test/NNZ_GPU_Vector_double_390 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in eStiff_vpsa_opt (line 80)
+        zeros(sets.sz*sets.nel, 1, sets.dTN, 'gpuArray') ); % GPU code execution
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in NNZ_Test (line 19)
+    Ke = eStiff_vpsa_opt(elementsGPU, nodesGPU, MP, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+================================================================================
+Error occurred in NNZ_Test/NNZ_GPU_Vector_double_390 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in eStiff_vpsa_opt (line 80)
+        zeros(sets.sz*sets.nel, 1, sets.dTN, 'gpuArray') ); % GPU code execution
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in NNZ_Test (line 19)
+    Ke = eStiff_vpsa_opt(elementsGPU, nodesGPU, MP, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+================================================================================
+Error occurred in NNZ_Test/NNZ_GPU_Vector_double_390 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in eStiff_vpsa_opt (line 80)
+        zeros(sets.sz*sets.nel, 1, sets.dTN, 'gpuArray') ); % GPU code execution
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in NNZ_Test (line 19)
+    Ke = eStiff_vpsa_opt(elementsGPU, nodesGPU, MP, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+================================================================================
+Error occurred in NNZ_Test/NNZ_GPU_Vector_double_390 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in eStiff_vpsa_opt (line 80)
+        zeros(sets.sz*sets.nel, 1, sets.dTN, 'gpuArray') ); % GPU code execution
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in NNZ_Test (line 19)
+    Ke = eStiff_vpsa_opt(elementsGPU, nodesGPU, MP, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+================================================================================
+Error occurred in NNZ_Test/NNZ_GPU_Vector_double_390 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in eStiff_vpsa_opt (line 80)
+        zeros(sets.sz*sets.nel, 1, sets.dTN, 'gpuArray') ); % GPU code execution
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in NNZ_Test (line 19)
+    Ke = eStiff_vpsa_opt(elementsGPU, nodesGPU, MP, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+================================================================================
+Error occurred in NNZ_Test/NNZ_GPU_Vector_double_390 and it did not run to completion.
+    ---------
+    Error ID:
+    ---------
+    'parallel:gpu:array:pmaxsize'
+    --------------
+    Error Details:
+    --------------
+    Error using zeros
+    Maximum variable size allowed on the device is exceeded.
+    
+    Error in eStiff_vpsa_opt (line 80)
+        zeros(sets.sz*sets.nel, 1, sets.dTN, 'gpuArray') ); % GPU code execution
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    Error in NNZ_Test (line 19)
+    Ke = eStiff_vpsa_opt(elementsGPU, nodesGPU, MP, sets);
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+================================================================================
+.
+Done NNZ_Test
+__________
+
+Failure Summary:
+
+     Name                                Failed  Incomplete  Reason(s)
+    ===================================================================
+     NNZ_Test/NNZ_GPU_Vector_double_390    X         X       Errored.
+  TimeResult with properties:
+
+            Name: 'NNZ_Test/NNZ_GPU_Vector_double_390'
+           Valid: 0
+         Samples: [4×7 table]
+    TestActivity: [9×12 table]
+
+Totals:
+   0 Valid, 1 Invalid.
+   3.3499 seconds testing time.
+
+
+
+A total of 80 time experiments was executed!
+Date and time at the beginning of the process: 	06-Aug-2026 20:12:44 
+Date and time at the end of the process: 	12-Aug-2026 11:18:01
+Elapsed time : 	135:05:17
+
+
+ans =
+
+  80×7 table
+
+                   Name                   SampleSize      Mean      StandardDeviation      Min        Median       Max   
+    __________________________________    __________    ________    _________________    ________    ________    ________
+
+    NNZ_Test/NNZ_CPU_Scalar_single_10          4         0.16197        0.0015196         0.16049     0.16173     0.16394
+    NNZ_Test/NNZ_GPU_Scalar_single_10         31        0.075682         0.012378        0.068545    0.072839     0.12898
+    NNZ_Test/NNZ_CPU_Vector_single_10          4          1.6392         0.018321          1.6205      1.6368      1.6626
+    NNZ_Test/NNZ_GPU_Vector_single_10          4         0.16056        0.0019347         0.15885     0.16014     0.16311
+    NNZ_Test/NNZ_CPU_Scalar_double_10          4         0.11426        0.0013385         0.11303     0.11424     0.11552
+    NNZ_Test/NNZ_GPU_Scalar_double_10          4        0.081302         0.002406        0.078858    0.080866    0.084619
+    NNZ_Test/NNZ_CPU_Vector_double_10          4          1.2749         0.017367          1.2582       1.271      1.2993
+    NNZ_Test/NNZ_GPU_Vector_double_10          4         0.16565        0.0029796         0.16188     0.16592     0.16888
+    NNZ_Test/NNZ_CPU_Scalar_single_20          4          1.2727        0.0054418          1.2649      1.2748      1.2765
+    NNZ_Test/NNZ_GPU_Scalar_single_20          4        0.077014        0.0013962        0.075623     0.07699    0.078455
+    NNZ_Test/NNZ_CPU_Vector_single_20          4          13.099          0.14293           12.93      13.093       13.28
+    NNZ_Test/NNZ_GPU_Vector_single_20          4         0.15502        0.0039113         0.15024     0.15544     0.15897
+    NNZ_Test/NNZ_CPU_Scalar_double_20          4         0.87737         0.011504          0.8667     0.87475     0.89327
+    NNZ_Test/NNZ_GPU_Scalar_double_20          4        0.075082        0.0021754        0.073101    0.074549    0.078128
+    NNZ_Test/NNZ_CPU_Vector_double_20          4          10.266          0.18167          10.101      10.223      10.518
+    NNZ_Test/NNZ_GPU_Vector_double_20          4         0.16764         0.006498         0.16201     0.16598     0.17656
+    NNZ_Test/NNZ_CPU_Scalar_single_40          4          10.343          0.02698          10.306      10.351      10.367
+    NNZ_Test/NNZ_GPU_Scalar_single_40          5        0.073628        0.0035057        0.071813    0.072178    0.079883
+    NNZ_Test/NNZ_CPU_Vector_single_40          4          103.86          0.36315          103.51      103.78      104.35
+    NNZ_Test/NNZ_GPU_Vector_single_40          4         0.16814        0.0018328         0.16706     0.16732     0.17087
+    NNZ_Test/NNZ_CPU_Scalar_double_40          4          7.1172          0.11087          6.9807      7.1202      7.2476
+    NNZ_Test/NNZ_GPU_Scalar_double_40          4        0.078606        0.0014247        0.077106    0.078462    0.080395
+    NNZ_Test/NNZ_CPU_Vector_double_40          4          81.119          0.57267          80.686      80.914      81.963
+    NNZ_Test/NNZ_GPU_Vector_double_40          4         0.18884       0.00096179          0.1876     0.18892     0.18992
+    NNZ_Test/NNZ_CPU_Scalar_single_80          1          82.809                0          82.809      82.809      82.809
+    NNZ_Test/NNZ_GPU_Scalar_single_80          4        0.078367        0.0026907        0.074646    0.078903    0.081015
+    NNZ_Test/NNZ_CPU_Vector_single_80          1          832.33                0          832.33      832.33      832.33
+    NNZ_Test/NNZ_GPU_Vector_single_80          4         0.23659         0.001619         0.23456     0.23667     0.23847
+    NNZ_Test/NNZ_CPU_Scalar_double_80          1          56.995                0          56.995      56.995      56.995
+    NNZ_Test/NNZ_GPU_Scalar_double_80          9         0.10797        0.0082661        0.097668     0.10815     0.12662
+    NNZ_Test/NNZ_CPU_Vector_double_80          1          647.08                0          647.08      647.08      647.08
+    NNZ_Test/NNZ_GPU_Vector_double_80          4         0.28839       0.00091898         0.28766     0.28809     0.28973
+    NNZ_Test/NNZ_CPU_Scalar_single_160         1          662.29                0          662.29      662.29      662.29
+    NNZ_Test/NNZ_GPU_Scalar_single_160         4        0.085946        0.0025219        0.083378    0.085532    0.089343
+    NNZ_Test/NNZ_CPU_Vector_single_160         1          6681.3                0          6681.3      6681.3      6681.3
+    NNZ_Test/NNZ_GPU_Vector_single_160         4         0.89076        0.0031761         0.88798     0.89005     0.89496
+    NNZ_Test/NNZ_CPU_Scalar_double_160         1          448.03                0          448.03      448.03      448.03
+    NNZ_Test/NNZ_GPU_Scalar_double_160         4         0.17484       0.00080379         0.17389     0.17481     0.17586
+    NNZ_Test/NNZ_CPU_Vector_double_160         1          5160.7                0          5160.7      5160.7      5160.7
+    NNZ_Test/NNZ_GPU_Vector_double_160         4          1.3185        0.0040009          1.3134      1.3188      1.3229
+    NNZ_Test/NNZ_CPU_Scalar_single_184         1            1007                0            1007        1007        1007
+    NNZ_Test/NNZ_GPU_Scalar_single_184         4        0.091063        0.0016117        0.089613    0.090906    0.092827
+    NNZ_Test/NNZ_CPU_Vector_single_184         1           10099                0           10099       10099       10099
+    NNZ_Test/NNZ_GPU_Vector_single_184         4          1.2784        0.0035215          1.2747      1.2788      1.2815
+    NNZ_Test/NNZ_CPU_Scalar_double_184         1          685.08                0          685.08      685.08      685.08
+    NNZ_Test/NNZ_GPU_Scalar_double_184         4         0.22742        0.0030674         0.22432     0.22691     0.23153
+    NNZ_Test/NNZ_CPU_Vector_double_184         1          7820.8                0          7820.8      7820.8      7820.8
+    NNZ_Test/NNZ_GPU_Vector_double_184         4          2.0139        0.0015304          2.0116      2.0145      2.0149
+    NNZ_Test/NNZ_CPU_Scalar_single_192         1            1142                0            1142        1142        1142
+    NNZ_Test/NNZ_GPU_Scalar_single_192         4        0.090062        0.0016381        0.088286    0.089926    0.092109
+    NNZ_Test/NNZ_CPU_Vector_single_192         1           11470                0           11470       11470       11470
+    NNZ_Test/NNZ_GPU_Vector_single_192         4           1.462        0.0013781          1.4601      1.4624      1.4632
+    NNZ_Test/NNZ_CPU_Scalar_double_192         1          766.05                0          766.05      766.05      766.05
+    NNZ_Test/NNZ_GPU_Scalar_double_192         4         0.25014        0.0013437         0.24911     0.24967     0.25212
+    NNZ_Test/NNZ_CPU_Vector_double_192         1          8848.6                0          8848.6      8848.6      8848.6
+    NNZ_Test/NNZ_GPU_Vector_double_192         4             NaN              NaN             NaN         NaN         NaN
+    NNZ_Test/NNZ_CPU_Scalar_single_320         1          5328.1                0          5328.1      5328.1      5328.1
+    NNZ_Test/NNZ_GPU_Scalar_single_320         4         0.15349        0.0018871         0.15151     0.15343     0.15558
+    NNZ_Test/NNZ_CPU_Vector_single_320         1           53046                0           53046       53046       53046
+    NNZ_Test/NNZ_GPU_Vector_single_320         4             NaN              NaN             NaN         NaN         NaN
+    NNZ_Test/NNZ_CPU_Scalar_double_320         1          3549.9                0          3549.9      3549.9      3549.9
+    NNZ_Test/NNZ_GPU_Scalar_double_320         4          1.0105        0.0079365          0.9997      1.0124      1.0174
+    NNZ_Test/NNZ_CPU_Vector_double_320         1           41470                0           41470       41470       41470
+    NNZ_Test/NNZ_GPU_Vector_double_320         4             NaN              NaN             NaN         NaN         NaN
+    NNZ_Test/NNZ_CPU_Scalar_single_355         1          7247.4                0          7247.4      7247.4      7247.4
+    NNZ_Test/NNZ_GPU_Scalar_single_355         4          0.2387       0.00044525         0.23828     0.23868     0.23915
+    NNZ_Test/NNZ_CPU_Vector_single_355         1           72251                0           72251       72251       72251
+    NNZ_Test/NNZ_GPU_Vector_single_355         4             NaN              NaN             NaN         NaN         NaN
+    NNZ_Test/NNZ_CPU_Scalar_double_355         1          4837.6                0          4837.6      4837.6      4837.6
+    NNZ_Test/NNZ_GPU_Scalar_double_355         4          1.3939        0.0022677          1.3918       1.394       1.396
+    NNZ_Test/NNZ_CPU_Vector_double_355         1           56225                0           56225       56225       56225
+    NNZ_Test/NNZ_GPU_Vector_double_355         4             NaN              NaN             NaN         NaN         NaN
+    NNZ_Test/NNZ_CPU_Scalar_single_390         1          9615.5                0          9615.5      9615.5      9615.5
+    NNZ_Test/NNZ_GPU_Scalar_single_390         4         0.35102        0.0018391         0.34844     0.35161     0.35241
+    NNZ_Test/NNZ_CPU_Vector_single_390         1           94728                0           94728       94728       94728
+    NNZ_Test/NNZ_GPU_Vector_single_390         4             NaN              NaN             NaN         NaN         NaN
+    NNZ_Test/NNZ_CPU_Scalar_double_390         1          6281.6                0          6281.6      6281.6      6281.6
+    NNZ_Test/NNZ_GPU_Scalar_double_390         4             NaN              NaN             NaN         NaN         NaN
+    NNZ_Test/NNZ_CPU_Vector_double_390         1           72933                0           72933       72933       72933
+    NNZ_Test/NNZ_GPU_Vector_double_390         4             NaN              NaN             NaN         NaN         NaN
+

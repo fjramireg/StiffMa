@@ -1,1 +1,3 @@
 /var/spool/slurm/d/job14893/slurm_script: línea 32: 419744 Killed                  matlab -batch 'runIndexTest2026'
+To https://github.com/fjramireg/StiffMa.git
+   6f5c5fb..ae37338  master -> master
